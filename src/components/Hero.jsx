@@ -62,6 +62,7 @@ const Hero = ({ onOpenQuiz }) => {
           alt="Digital Presence Infrastructure" 
           className="w-full h-full object-cover opacity-30 mix-blend-screen scale-110"
           style={{ filter: 'grayscale(0.5) brightness(0.7)' }}
+          fetchPriority="high"
         />
         {/* Overlay para profundidade e contraste */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-90"></div>
