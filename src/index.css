@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-heading antialiased selection:bg-accent selection:text-white;
+    overflow-x: hidden;
+    cursor: none; /* Hide default cursor */
+  }
+  
+  a, button, [role="button"], input, select, textarea {
+    cursor: none; /* Ensure no pointer cursor appears */
+  }
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  mix-blend-mode: overlay;
+}
+
+/* Custom GSAP Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  z-index: 999999;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.custom-cursor.hovering {
+  width: 80px;
+  height: 80px;
+}
+
+.custom-cursor .cursor-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-cursor.hovering .cursor-text {
+  opacity: 1;
+}
+
+/* Magnetic Button Utility */
+.magnetic-btn {
+  @apply relative overflow-hidden transition-transform duration-300 inline-flex items-center justify-center;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.magnetic-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Utilities for GSAP / Layout */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Giant typography clip */
+.text-clip-reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Desativação Completa do Cursor Customizado em Telas Touch / Celular */
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  body, a, button, [role="button"], input, select, textarea {
+    cursor: auto !important;
+  }
+}
+
+/* Efeito de Pulsação do Botão do WhatsApp */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
