@@ -32,11 +32,11 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   }, []);
 
   const mainLinks = [
-    { label: 'COMUNICAÇÃO',       href: '/pilares',      action: 'pilares' },
-    { label: 'NOSSA HISTÓRIA',    href: '/historia',     action: 'historia' },
-    { label: 'CASES',             href: '/cases' },
-    { label: 'BLOG',              href: '/blog' },
-    { label: 'AVALIAR ESTRUTURA', href: '/diagnostico',  action: 'quiz' },
+    { label: 'GOOGLE MEU NEGÓCIO', href: '/servicos/google-meu-negocio' },
+    { label: 'WEBSITE',            href: '/servicos/criacao-de-site' },
+    { label: 'SEO / TRÁFEGO',      href: '/servicos/seo' },
+    { label: 'AUTOMAÇÃO DIGITAL',  href: '/servicos/automacao' },
+    { label: 'AVALIAR ESTRUTURA',  href: '/diagnostico', action: 'quiz' },
   ];
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
       {/* Logo fixa sobre o conteúdo */}
       <div className={`fixed top-0 left-0 z-[101] px-6 py-6 md:px-12 md:py-8 pointer-events-none transition-all duration-300 ${isOpen ? 'opacity-0' : isVisible ? 'opacity-100' : 'opacity-0 -translate-y-4'}`}>
         <div className="pointer-events-auto cursor-pointer flex items-center">
-          <img src="/logo.svg" alt="One Thank Digital" className="h-12 md:h-16 object-contain" />
+          <a href="/"><img src="/logo.svg" alt="One Thank Digital" className="h-12 md:h-16 object-contain" /></a>
         </div>
       </div>
 
@@ -96,7 +96,7 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
       >
         {/* Logo dentro do overlay (versão para fundo branco) */}
         <div className="absolute top-0 left-0 px-6 py-6 md:px-12 md:py-8">
-          <img src="/logowhite.svg" alt="One Thank Digital" className="h-12 md:h-16 object-contain" />
+          <a href="/"><img src="/logowhite.svg" alt="One Thank Digital" className="h-12 md:h-16 object-contain" /></a>
         </div>
 
         {/* Links principais */}
@@ -130,7 +130,7 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
                       toggleMenu();
                     }
                   }}
-                  className="block font-heading font-bold text-[2.5rem] md:text-[6rem] lg:text-[7rem] leading-[1.1] md:leading-[1.0] py-2 uppercase tracking-tighter hover:text-accent transition-colors cursor-pointer"
+                  className="block font-heading font-bold text-[2.5rem] md:text-[4.5rem] lg:text-[5.5rem] leading-[1.1] md:leading-[1.0] py-2 uppercase tracking-tighter hover:text-accent transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>

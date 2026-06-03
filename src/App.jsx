@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
 import Hero from './components/Hero';
+import ServicosCards from './components/ServicosCards';
 import HorizontalScroll from './components/HorizontalScroll';
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
@@ -20,6 +21,11 @@ const CasesPage = lazy(() => import('./pages/CasesPage'));
 const PrivacidadePage = lazy(() => import('./pages/PrivacidadePage'));
 const TermosPage = lazy(() => import('./pages/TermosPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+
+const ServicosGMN = lazy(() => import('./pages/ServicosGMN'));
+const ServicosSite = lazy(() => import('./pages/ServicosSite'));
+const ServicosSEO = lazy(() => import('./pages/ServicosSEO'));
+const ServicosAutomacao = lazy(() => import('./pages/ServicosAutomacao'));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -142,6 +148,62 @@ function App() {
     );
   }
 
+  if (currentPath === '/servicos/google-meu-negocio' || currentPath === '/servicos/google-meu-negocio/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <ServicosGMN />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath === '/servicos/criacao-de-sites' || currentPath === '/servicos/criacao-de-sites/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <ServicosSite />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath === '/servicos/seo-trafego-organico' || currentPath === '/servicos/seo-trafego-organico/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <ServicosSEO />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath === '/servicos/automacao-digital' || currentPath === '/servicos/automacao-digital/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <ServicosAutomacao />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
   if (currentPath === '/blog' || currentPath === '/blog/') {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
@@ -224,6 +286,7 @@ function App() {
       />
       <main className="w-full flex flex-col">
         <Hero onOpenQuiz={handleOpenQuiz} />
+        <ServicosCards />
         {/* <div id="features" className="bg-white">
           <Features />
         </div> */}

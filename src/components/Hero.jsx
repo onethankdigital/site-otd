@@ -75,7 +75,7 @@ const Hero = ({ onOpenQuiz }) => {
             ref={text1Ref}
             className="font-heading font-bold text-[8vw] md:text-[6vw] leading-[1] uppercase tracking-tighter text-center"
           >
-            Sua empresa existe.
+            COMUNICAÇÃO QUE APARECE.
           </h1>
         </div>
         <div style={{ perspective: '1000px' }}>
@@ -83,9 +83,28 @@ const Hero = ({ onOpenQuiz }) => {
             ref={text2Ref}
             className="font-drama italic text-[6vw] md:text-[5vw] leading-[1] text-center mt-2 px-4"
           >
-            Tem clientes que não te encontram. Ainda.
+            Visibilidade que vende. <br />Automação que não para.
           </p>
         </div>
+
+        <p style={{
+  fontSize: '11px',
+  color: 'rgba(255,255,255,0)',
+  maxWidth: '600px',
+  margin: '0 auto',
+  textAlign: 'center',
+  lineHeight: '1',
+  height: '1px',
+  overflow: 'hidden',
+  position: 'absolute',
+  pointerEvents: 'none'
+}}>
+A One Thank Digital estrutura a presença digital completa da sua 
+empresa — do Google Maps ao site, do SEO orgânico à automação de 
+WhatsApp — para que escritórios contábeis, clínicas e empresas B2B 
+em Santo André e ABC Paulista sejam encontrados, entendidos e 
+escolhidos antes do concorrente.
+</p>
 
         <div 
           ref={buttonRef}

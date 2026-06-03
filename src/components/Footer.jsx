@@ -17,10 +17,8 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
 
     .fdiv { height: 2px; background: linear-gradient(to right,#D42B2B 20%,#111); margin-bottom: clamp(48px,6vw,80px); }
 
-    .fg { display: grid; grid-template-columns: 1fr auto 1fr; gap: clamp(32px,5vw,80px); margin-bottom: clamp(64px,8vw,100px); }
-    .fg > div:nth-child(1) { justify-self: start; }
-    .fg > div:nth-child(2) { justify-self: center; }
-    .fg > div:nth-child(3) { justify-self: end; width: 100%; max-width: 280px; }
+    .fg { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(24px,4vw,60px); margin-bottom: clamp(64px,8vw,100px); }
+    .fg > div:last-child { justify-self: end; width: 100%; max-width: 280px; }
     .fc-title { font-size: clamp(14px, 1.2vw, 18px); letter-spacing: 3px; text-transform: uppercase; color: #D42B2B; font-weight: 700; margin-bottom: 28px; }
     .flinks { list-style: none; display: flex; flex-direction: column; gap: 18px; }
     .flinks a { font-size: clamp(18px, 1.5vw, 24px); color: #999; text-decoration: none; transition: all 0.2s; display: flex; align-items: center; gap: 10px; font-weight: 500; }
@@ -51,9 +49,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
       .fb { flex-direction: column; align-items: flex-start; }
       .fb-stmt { text-align: left; }
       .fg { grid-template-columns: 1fr 1fr; }
-      .fg > div:nth-child(1) { justify-self: stretch; }
-      .fg > div:nth-child(2) { justify-self: stretch; }
-      .fg > div:nth-child(3) { justify-self: stretch; max-width: none; }
+      .fg > div { justify-self: stretch; max-width: none; }
     }
     @media (max-width: 540px) {
       .fg { grid-template-columns: 1fr; }
@@ -69,6 +65,13 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     { label: "Nossa História", href: "/historia", onClick: (e) => { e.preventDefault(); onOpenHistoria?.(); } },
     { label: "FAQ", href: "#protocol" },
     { label: "Avaliar Estrutura", href: "/diagnostico", onClick: (e) => { e.preventDefault(); onOpenQuiz?.(); } },
+  ];
+
+  const servicosLinks = [
+    { label: "Google Meu Negócio", href: "/servicos/google-meu-negocio" },
+    { label: "Otimização SEO", href: "/servicos/seo" },
+    { label: "Criação de Sites", href: "/servicos/criacao-de-site" },
+    { label: "Automações", href: "/servicos/automacao" },
   ];
 
   const contentLinks = [
@@ -119,7 +122,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
 
           <div className="fb">
             <div className="fb-logo">
-              <img src="/logo.svg" alt="One Thank Digital" />
+              <a href="/"><img src="/logo.svg" alt="One Thank Digital" /></a>
               <div className="fb-tag">Presença digital estruturada.</div>
             </div>
             <div className="fb-stmt" aria-hidden="true">
@@ -137,6 +140,20 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
                 {navLinks.map((l, i) => (
                   <li key={i}>
                     <a href={l.href} onClick={l.onClick}>
+                      <span className="farr">→</span>
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="fc-title">Serviços</div>
+              <ul className="flinks">
+                {servicosLinks.map((l, i) => (
+                  <li key={`srv-${i}`}>
+                    <a href={l.href}>
                       <span className="farr">→</span>
                       {l.label}
                     </a>
@@ -171,9 +188,8 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
           </div>
 
           <div className="fbot">
-            <div className="fstat">
-              <div className="fdot" />
-              System Online
+            <div className="fstat" style={{ fontSize: '15px', color: '#D42B2B', fontWeight: '600', letterSpacing: '1px' }}>
+              📞 (11) 97867-9090
             </div>
             <div className="floc">Rua Monte Casseros, 281 - Centro, Santo André - SP</div>
             <div className="fcopy">© 2026 One Thank Digital.</div>
