@@ -162,7 +162,7 @@ function App() {
     );
   }
 
-  if (currentPath === '/servicos/criacao-de-sites' || currentPath === '/servicos/criacao-de-sites/') {
+  if (currentPath === '/servicos/criacao-de-sites' || currentPath === '/servicos/criacao-de-sites/' || currentPath === '/servicos/criacao-de-site' || currentPath === '/servicos/criacao-de-site/') {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
@@ -176,7 +176,7 @@ function App() {
     );
   }
 
-  if (currentPath === '/servicos/seo-trafego-organico' || currentPath === '/servicos/seo-trafego-organico/') {
+  if (currentPath === '/servicos/seo-trafego-organico' || currentPath === '/servicos/seo-trafego-organico/' || currentPath === '/servicos/seo' || currentPath === '/servicos/seo/') {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
@@ -190,7 +190,7 @@ function App() {
     );
   }
 
-  if (currentPath === '/servicos/automacao-digital' || currentPath === '/servicos/automacao-digital/') {
+  if (currentPath === '/servicos/automacao-digital' || currentPath === '/servicos/automacao-digital/' || currentPath === '/servicos/automacao' || currentPath === '/servicos/automacao/') {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
