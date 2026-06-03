@@ -4,11 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
 import Hero from './components/Hero';
-import ServicosCards from './components/ServicosCards';
-import HorizontalScroll from './components/HorizontalScroll';
-import Philosophy from './components/Philosophy';
-import Protocol from './components/Protocol';
-import Footer from './components/Footer';
+const ServicosCards = lazy(() => import('./components/ServicosCards'));
+const HorizontalScroll = lazy(() => import('./components/HorizontalScroll'));
+const Philosophy = lazy(() => import('./components/Philosophy'));
+const Protocol = lazy(() => import('./components/Protocol'));
+const Footer = lazy(() => import('./components/Footer'));
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -286,23 +286,27 @@ function App() {
       />
       <main className="w-full flex flex-col">
         <Hero onOpenQuiz={handleOpenQuiz} />
-        <ServicosCards />
-        {/* <div id="features" className="bg-white">
-          <Features />
-        </div> */}
-        <HorizontalScroll 
+        <Suspense fallback={<div className="min-h-screen bg-black"></div>}>
+          <ServicosCards />
+          {/* <div id="features" className="bg-white">
+            <Features />
+          </div> */}
+          <HorizontalScroll 
+            onOpenQuiz={handleOpenQuiz} 
+            onOpenPilares={handleOpenPilares}
+            onOpenHistoria={handleOpenHistoria}
+          />
+          <Philosophy onOpenQuiz={handleOpenQuiz} />
+          <Protocol onOpenQuiz={handleOpenQuiz} />
+        </Suspense>
+      </main>
+      <Suspense fallback={null}>
+        <Footer 
           onOpenQuiz={handleOpenQuiz} 
           onOpenPilares={handleOpenPilares}
           onOpenHistoria={handleOpenHistoria}
         />
-        <Philosophy onOpenQuiz={handleOpenQuiz} />
-        <Protocol onOpenQuiz={handleOpenQuiz} />
-      </main>
-      <Footer 
-        onOpenQuiz={handleOpenQuiz} 
-        onOpenPilares={handleOpenPilares}
-        onOpenHistoria={handleOpenHistoria}
-      />
+      </Suspense>
       <WhatsAppButton />
     </div>
   );
