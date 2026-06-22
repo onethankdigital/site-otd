@@ -29,7 +29,7 @@ export default function Historia({ onClose, onOpenQuiz }) {
     {
       number: "05",
       title: "A Identidade",
-      text: "No meio do movimento\nentendemos quem somos.\nNão somos agência.\nSomos comunicação com estrutura.",
+      text: "No meio do movimento\nentendemos quem somos.\nSomos presença.\nSomos comunicação com estrutura.",
     },
     {
       number: "06",

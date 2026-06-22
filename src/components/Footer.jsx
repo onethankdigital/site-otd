@@ -126,7 +126,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
               <div className="fb-tag">Presença digital estruturada.</div>
             </div>
             <div className="fb-stmt" aria-hidden="true">
-              NÃO SOMOS AGÊNCIA.<br />
+              SOMOS PRESENÇA.<br />
               <em>SOMOS COMUNICAÇÃO.</em>
             </div>
           </div>

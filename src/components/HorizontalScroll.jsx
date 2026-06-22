@@ -25,7 +25,7 @@ const panelsData = [
   },
   {
     id: '03',
-    title: 'NÃO SOMOS AGÊNCIA.',
+    title: 'SOMOS PRESENÇA.',
     subtitle: 'SOMOS COMUNICAÇÃO.',
     desc: 'Comunicação é estrutura.\nEstrutura é posicionamento.\nPosicionamento é resultado.',
     videoColor: 'bg-[#050505]',

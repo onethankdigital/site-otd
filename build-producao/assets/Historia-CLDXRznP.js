@@ -271,7 +271,7 @@ Construímos processos.
 Automatizamos o que travava.
 O negócio começou a se mover sozinho.`},{number:`05`,title:`A Identidade`,text:`No meio do movimento
 entendemos quem somos.
-Não somos agência.
+Somos presença.
 Somos comunicação com estrutura.`},{number:`06`,title:`O Valor`,text:`Hoje entregamos o que aprendemos.
 Cada pilar que estruturamos para você
 é um pilar que estruturamos em nós primeiro.`}].map((e,t)=>(0,i.jsxs)(`div`,{className:`timeline-step`,children:[(0,i.jsx)(`div`,{className:`step-left`,children:(0,i.jsx)(`div`,{className:`step-dot`,children:(0,i.jsx)(`span`,{className:`step-number`,children:e.number})})}),(0,i.jsxs)(`div`,{className:`step-right`,children:[(0,i.jsxs)(`div`,{className:`step-title-wrap`,children:[(0,i.jsx)(`div`,{className:`step-line`}),(0,i.jsx)(`div`,{className:`step-title`,children:e.title})]}),(0,i.jsx)(`p`,{className:`step-text`,children:e.text})]})]},t))}),(0,i.jsxs)(`div`,{className:`historia-cta`,children:[(0,i.jsxs)(`div`,{children:[(0,i.jsx)(`div`,{className:`cta-label`,children:`Diagnóstico Gratuito`}),(0,i.jsxs)(`div`,{className:`cta-title`,children:[`SUA EMPRESA`,(0,i.jsx)(`br`,{}),`ESTÁ PRONTA PARA`,(0,i.jsx)(`br`,{}),(0,i.jsx)(`em`,{children:`O PRÓXIMO PASSO?`})]})]}),(0,i.jsx)(`button`,{className:`btn-cta`,onClick:()=>{e&&e(),t&&t()},children:`AVALIAR MINHA ESTRUTURA →`})]})]})]})]})}export{a as default};
