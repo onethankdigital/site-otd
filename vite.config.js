@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
+import { resolve } from 'path'
 import { blogPosts } from './src/data/blogPosts.js'
 
 const paths = [
@@ -14,6 +15,9 @@ const paths = [
   '/cases',
   '/privacidade',
   '/termos',
+  '/automacoes-inteligentes',
+  '/desenvolvimento-web-premium',
+  '/seo-local',
   ...blogPosts.map(post => `/blog/${post.slug}`)
 ]
 
@@ -29,7 +33,15 @@ export default defineConfig({
     })
   ],
   build: {
-    modulePreload: false
+    modulePreload: false,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        automacoes: resolve(__dirname, 'automacoes-inteligentes/index.html'),
+        web: resolve(__dirname, 'desenvolvimento-web-premium/index.html'),
+        seo: resolve(__dirname, 'seo-local/index.html')
+      }
+    }
   }
 })
 

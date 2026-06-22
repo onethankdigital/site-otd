@@ -1,4 +1,4 @@
-import{r as e,t}from"./jsx-runtime-BOY_dY-B.js";import{t as n}from"./react-CaZqsTFt.js";var r=e(n(),1),i=t();function a({onClose:e,onOpenQuiz:t}){return(0,r.useEffect)(()=>{document.title=`Nossa História e Filosofia | One Thank Digital`},[]),(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(`style`,{children:`
+import{r as e,t}from"./jsx-runtime-kxeFmgq_.js";import{t as n}from"./react-t6MS7ObK.js";var r=e(n(),1),i=t();function a({onClose:e,onOpenQuiz:t}){return(0,r.useEffect)(()=>{document.title=`Nossa História e Filosofia | One Thank Digital`},[]),(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(`style`,{children:`
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

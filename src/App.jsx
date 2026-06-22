@@ -162,7 +162,14 @@ function App() {
     );
   }
 
-  if (currentPath === '/servicos/criacao-de-sites' || currentPath === '/servicos/criacao-de-sites/' || currentPath === '/servicos/criacao-de-site' || currentPath === '/servicos/criacao-de-site/') {
+  if (
+    currentPath === '/servicos/criacao-de-sites' ||
+    currentPath === '/servicos/criacao-de-sites/' ||
+    currentPath === '/servicos/criacao-de-site' ||
+    currentPath === '/servicos/criacao-de-site/' ||
+    currentPath === '/desenvolvimento-web-premium' ||
+    currentPath === '/desenvolvimento-web-premium/'
+  ) {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
@@ -176,7 +183,14 @@ function App() {
     );
   }
 
-  if (currentPath === '/servicos/seo-trafego-organico' || currentPath === '/servicos/seo-trafego-organico/' || currentPath === '/servicos/seo' || currentPath === '/servicos/seo/') {
+  if (
+    currentPath === '/servicos/seo-trafego-organico' ||
+    currentPath === '/servicos/seo-trafego-organico/' ||
+    currentPath === '/servicos/seo' ||
+    currentPath === '/servicos/seo/' ||
+    currentPath === '/seo-local' ||
+    currentPath === '/seo-local/'
+  ) {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
@@ -190,7 +204,14 @@ function App() {
     );
   }
 
-  if (currentPath === '/servicos/automacao-digital' || currentPath === '/servicos/automacao-digital/' || currentPath === '/servicos/automacao' || currentPath === '/servicos/automacao/') {
+  if (
+    currentPath === '/servicos/automacao-digital' ||
+    currentPath === '/servicos/automacao-digital/' ||
+    currentPath === '/servicos/automacao' ||
+    currentPath === '/servicos/automacao/' ||
+    currentPath === '/automacoes-inteligentes' ||
+    currentPath === '/automacoes-inteligentes/'
+  ) {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
