@@ -65,3 +65,13 @@ Use `react-helmet-async` (`<Helmet>`) inside each page component for per-route `
 - `vite.config.js` imports `blogPosts.js` at build time — keep that file's export shape stable
 - `modulePreload: false` is intentional (PageSpeed optimization); do not remove it
 - Performance target: PageSpeed ≥ 90 mobile / 95 desktop — validate after adding heavy dependencies
+
+## Histórico de Atualizações
+
+### 22/06/2026 - Otimização de SEO & AEO (Local)
+- **Arquivo:** `index.html`
+- **Alterações:**
+  - **Fallback Semântico:** Injetado bloco `<main aria-hidden="true" style="display: none;">` com hierarquia semântica estruturada para crawlers de IA/LLMs (SearchGPT, Claude, etc.) e buscadores tradicionais.
+  - **Geo Meta Tags:** Adição de metatags geográficas (`geo.region`, `geo.placename`, `geo.position` e `ICBM`) direcionando a relevância local para Santo André/Grande ABC.
+  - **Schema JSON-LD Composto:** Estruturação avançada combinando `LocalBusiness`, `ProfessionalService` e `hasOfferCatalog` para catalogar os 4 principais pilares de serviço da OTD.
+  - **Sitemap Link:** Vinculação do arquivo `sitemap.xml` no `<head>`.
