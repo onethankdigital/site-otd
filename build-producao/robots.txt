@@ -1,4 +1,60 @@
-User-agent: *
+# ═══════════════════════════════════════
+# CRAWLERS DE IA — LIBERAR ACESSO TOTAL
+# ═══════════════════════════════════════
+User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.onethank.com.br/sitemap.xml
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# ═══════════════════════════════════════
+# TODOS OS OUTROS CRAWLERS
+# ═══════════════════════════════════════
+User-agent: *
+
+# BLOQUEAR — WordPress legado
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-login.php
+Disallow: /feed/
+Disallow: /comments/
+Disallow: /?p=
+Disallow: /?s=
+Disallow: /tag/
+Disallow: /author/
+Disallow: /page/
+
+# BLOQUEAR — Portfólio e posts falsos
+Disallow: /portfolio/
+Disallow: /portfolio-grid/
+Disallow: /how-to-make-your-ios-13-compatible/
+Disallow: /how-to-make-website-wcag-compliant/
+Disallow: /tackling-the-changes-of-retail-industry/
+Disallow: /you-have-a-great-business-idea-2/
+Disallow: /non-sit-libero-viverra-mollis-non-ligula-tincidunt-congue-porta-attention-simply/
+Disallow: /transforming-challenges-into/
+Disallow: /free-advertising-for-your-online/
+Disallow: /blog/presenca-digital-estruturada
+
+# LIBERAR — Páginas reais do site React
+Allow: /
+Allow: /servicos/
+Allow: /diagnostico
+Allow: /pilares
+Allow: /cases
+Allow: /nossa-historia
+Allow: /termos
+Allow: /privacidade
+Allow: /sitemap.xml
+
+Sitemap: https://onethank.com.br/sitemap.xml

@@ -23,8 +23,9 @@ export default defineConfig({
   plugins: [
     react(),
     Sitemap({
-      hostname: 'https://www.onethank.com.br',
-      dynamicRoutes: paths
+      hostname: 'https://onethank.com.br',
+      dynamicRoutes: paths,
+      generateRobotsTxt: false
     })
   ],
   build: {

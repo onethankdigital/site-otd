@@ -4,7 +4,6 @@
     <!-- Google Tag Manager (Lazy Loaded) -->
     <script>
       window.dataLayer = window.dataLayer || [];
-
       function loadGTM() {
         if (window.gtmLoaded) return;
         window.gtmLoaded = true;
@@ -14,70 +13,173 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-WX72X49Q');
       }
-
       const activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
       activityEvents.forEach(function(event) {
         window.addEventListener(event, loadGTM, { passive: true, once: true });
       });
-
       setTimeout(loadGTM, 4000);
     </script>
     <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>One Thank Digital | Somos Comunicação</title>
     
-    <!-- SEO Meta Tags básicas -->
-    <meta name="description" content="Somos a One Thank Digital. Uma agência de comunicação focada em estruturação digital, tráfego altamente qualificado, automações inteligentes e websites premium de alto impacto." />
+    <title>Agência de Marketing Digital em Santo André | One Thank Digital</title>
+    
+    <!-- Preload Estratégico de Assets -->
+    <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/noise.svg" type="image/svg+xml" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Agência de marketing digital e comunicação no Grande ABC. Estruturamos sua presença digital com sites premium, SEO, Google Meu Negócio e automações." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://onethank.com.br/" />
+
+    <!-- Geo Meta Tags (Sinalizador do Local Pack) -->
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="Santo André" />
+    <meta name="geo.position" content="-23.6594;-46.5290" />
+    <meta name="ICBM" content="-23.6594, -46.5290" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://onethank.com.br/" />
-    <meta property="og:title" content="One Thank Digital | Somos Comunicação" />
-    <meta property="og:description" content="Sua empresa existe. Tem clientes que não te encontram. Ainda. Conheça a One Thank Digital e mude isso." />
+    <meta property="og:title" content="Agência de Marketing Digital em Santo André | One Thank Digital" />
+    <meta property="og:description" content="Agência de marketing digital e comunicação. Sua presença digital estruturada no Grande ABC." />
     <meta property="og:image" content="https://onethank.com.br/hero-bg.webp" />
+    <meta property="og:locale" content="pt_BR" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://onethank.com.br/" />
-    <meta property="twitter:title" content="One Thank Digital | Somos Comunicação" />
-    <meta property="twitter:description" content="Sua empresa existe. Tem clientes que não te encontram. Ainda." />
+    <meta property="twitter:title" content="Agência de Marketing Digital em Santo André | One Thank Digital" />
+    <meta property="twitter:description" content="Agência de marketing digital e comunicação. Sua presença digital estruturada no Grande ABC." />
     <meta property="twitter:image" content="https://onethank.com.br/hero-bg.webp" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Composto (LocalBusiness + ProfessionalService + hasOfferCatalog para AEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
+      "additionalType": "ProfessionalService",
+      "@id": "https://onethank.com.br/#organization",
       "name": "One Thank Digital",
       "image": "https://onethank.com.br/hero-bg.webp",
-      "@id": "https://onethank.com.br/#organization",
       "url": "https://onethank.com.br/",
+      "telephone": "+5511978679090",
+      "priceRange": "$$",
+      "description": "Agência de marketing digital em Santo André e no Grande ABC Paulista. Estruturação digital, sites premium de alto impacto, SEO, tráfego pago e automações inteligentes para empresas B2B.",
+      "slogan": "Somos agência. Somos comunicação.",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Rua Monte Casseros, 281 - Centro",
+        "addressLocality": "Santo André",
+        "addressRegion": "SP",
+        "postalCode": "09015-020",
         "addressCountry": "BR"
       },
-      "description": "Somos uma agência de comunicação premium focada em estruturação digital, tráfego qualificado, automações inteligentes e websites de altíssimo impacto.",
-      "sameAs": []
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.6594,
+        "longitude": -46.5290
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Santo André" },
+        { "@type": "City", "name": "São Bernardo do Campo" },
+        { "@type": "City", "name": "São Caetano do Sul" },
+        { "@type": "City", "name": "Diadema" },
+        { "@type": "City", "name": "Mauá" },
+        { "@type": "City", "name": "São Paulo" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "16"
+      },
+      "sameAs": [
+        "https://www.instagram.com/onethankdigital/",
+        "https://www.facebook.com/onethankdigital",
+        "https://www.linkedin.com/company/one-thank-digital"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo de Serviços One Thank Digital",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Criação de Sites Premium",
+              "description": "Desenvolvimento de aplicações web de alto impacto, rápidas e otimizadas para conversão."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Otimização de Google Meu Negócio (GMN)",
+              "description": "Posicionamento estratégico no Local Pack e mapas para dominar buscas regionais no Grande ABC."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO Local e Tráfego Orgânico",
+              "description": "Estruturação semântica e arquitetura de conteúdo para indexação no Google, Bing e motores de IA."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automações Inteligentes de Processos",
+              "description": "Integração de sistemas, CRMs e APIs via n8n para otimização de atendimento e fluxos comerciais."
+            }
+          }
+        ]
+      }
     }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://grainy-gradients.vercel.app" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <script type="module" crossorigin src="/assets/index-BR94G3-r.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DvL3Zqmt.css">
+    
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <script type="module" crossorigin src="/assets/index-B1MYQgIq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CmPwtPQ3.css">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX72X49Q"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div id="root"></div>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX72X49Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <div id="root">
+      <!-- Camada AEO Injetada para Crawlers e LLMs -->
+      <main aria-hidden="true" style="display: none;">
+        <h1>Agência de Marketing Digital em Santo André | One Thank Digital</h1>
+        <h2>Somos Agência. Somos Comunicação.</h2>
+        <p>A One Thank Digital estrutura os canais de atração e a infraestrutura de tecnologia para empresas no Grande ABC Paulista e São Paulo.</p>
+        
+        <h3>Nossas Soluções Corporativas:</h3>
+        <ul>
+          <li><strong>Desenvolvimento Web:</strong> Criação de sites institucionais rápidos, Landing Pages de alta conversão e e-commerce personalizados.</li>
+          <li><strong>Google Meu Negócio:</strong> Gestão de perfil, SEO local e estratégias de reputação para liderar buscas locais.</li>
+          <li><strong>Otimização para Mecanismos de Busca (SEO/AEO):</strong> Engenharia semântica focada em buscas tradicionais e motores de resposta de Inteligência Artificial.</li>
+          <li><strong>Automações de Sistemas:</strong> Integrações via n8n, Supabase e automação de fluxos de CRM.</li>
+        </ul>
+        
+        <span>Contato: +55 11 97867-9090 | Endereço: Rua Monte Casseros, 281 - Centro, Santo André - SP</span>
+      </main>
+    </div>
+
   </body>
 </html>
