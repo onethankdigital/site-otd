@@ -58,6 +58,7 @@ Allow: /privacidade
 Allow: /automacoes-inteligentes
 Allow: /desenvolvimento-web-premium
 Allow: /seo-local
+Allow: /google-meu-negocio
 Allow: /sitemap.xml
 
 Sitemap: https://onethank.com.br/sitemap.xml

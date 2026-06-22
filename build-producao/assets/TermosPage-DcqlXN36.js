@@ -1,4 +1,4 @@
-import{t as e}from"./jsx-runtime-kxeFmgq_.js";var t=e();function n(){return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(`style`,{children:`
+import{t as e}from"./jsx-runtime-BOg02Zln.js";var t=e();function n(){return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(`style`,{children:`
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap');
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 

@@ -26,6 +26,7 @@ const ServicosGMN = lazy(() => import('./pages/ServicosGMN'));
 const ServicosSite = lazy(() => import('./pages/ServicosSite'));
 const ServicosSEO = lazy(() => import('./pages/ServicosSEO'));
 const ServicosAutomacao = lazy(() => import('./pages/ServicosAutomacao'));
+const GoogleMeuNegocio = lazy(() => import('./pages/GoogleMeuNegocio'));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,6 +157,20 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <ServicosGMN />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath === '/google-meu-negocio' || currentPath === '/google-meu-negocio/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <GoogleMeuNegocio />
         </Suspense>
         <WhatsAppButton />
       </div>

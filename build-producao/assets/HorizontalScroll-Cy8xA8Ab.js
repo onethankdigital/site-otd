@@ -1,4 +1,4 @@
-import{r as e,t}from"./jsx-runtime-kxeFmgq_.js";import{t as n}from"./react-t6MS7ObK.js";import{t as r}from"./gsap-YCsZx0dm.js";import{t as i}from"./ScrollTrigger-D9JldhSy.js";var a=e(n(),1),o=t();r.registerPlugin(i);var s=[{id:`01`,title:`NÃO É FALTA DE CLIENTE.`,subtitle:`É FALTA DE ESTRUTURA.`,desc:`Todo dia, pessoas procuram nas maiores
+import{r as e,t}from"./jsx-runtime-BOg02Zln.js";import{t as n}from"./react-tXVM_ry1.js";import{t as r}from"./gsap-CRL1L5VO.js";import{t as i}from"./ScrollTrigger-nFOdj0e1.js";var a=e(n(),1),o=t();r.registerPlugin(i);var s=[{id:`01`,title:`NÃO É FALTA DE CLIENTE.`,subtitle:`É FALTA DE ESTRUTURA.`,desc:`Todo dia, pessoas procuram nas maiores
 plataformas digitais e sociais exatamente
 o que sua empresa oferece.
 E encontram o concorrente.

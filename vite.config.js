@@ -18,6 +18,7 @@ const paths = [
   '/automacoes-inteligentes',
   '/desenvolvimento-web-premium',
   '/seo-local',
+  '/google-meu-negocio',
   ...blogPosts.map(post => `/blog/${post.slug}`)
 ]
 
@@ -39,7 +40,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         automacoes: resolve(__dirname, 'automacoes-inteligentes/index.html'),
         web: resolve(__dirname, 'desenvolvimento-web-premium/index.html'),
-        seo: resolve(__dirname, 'seo-local/index.html')
+        seo: resolve(__dirname, 'seo-local/index.html'),
+        gmn: resolve(__dirname, 'google-meu-negocio/index.html')
       }
     }
   }
