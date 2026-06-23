@@ -1,4 +1,4 @@
-import{r as e,t}from"./jsx-runtime-BOg02Zln.js";import{t as n}from"./react-tXVM_ry1.js";import{n as r,t as i}from"./Navbar-BkKOgaS9.js";import a from"./Footer-DlRGXfze.js";var o=e(n(),1),s=t();function c(){let[e,t]=(0,o.useState)(null);(0,o.useEffect)(()=>{document.title=`Otimização de Google Meu Negócio em Santo André | One Thank Digital`,window.scrollTo(0,0)},[]);let n=n=>{t(e===n?null:n)};return(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(`style`,{children:`
+import{r as e,t}from"./jsx-runtime-BOg02Zln.js";import{t as n}from"./react-tXVM_ry1.js";import{n as r,t as i}from"./Navbar-B6yOq8qc.js";import a from"./Footer-CDFpjNX0.js";var o=e(n(),1),s=t();function c(){let[e,t]=(0,o.useState)(null);(0,o.useEffect)(()=>{document.title=`Otimização de Google Meu Negócio em Santo André | One Thank Digital`,window.scrollTo(0,0)},[]);let n=n=>{t(e===n?null:n)};return(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(`style`,{children:`
         .lp-wrap {
           background: #000000;
           min-height: 100vh;

@@ -32,10 +32,10 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   }, []);
 
   const mainLinks = [
-    { label: 'GOOGLE MEU NEGÓCIO', href: '/servicos/google-meu-negocio' },
-    { label: 'WEBSITE',            href: '/servicos/criacao-de-site' },
-    { label: 'SEO / TRÁFEGO',      href: '/servicos/seo' },
-    { label: 'AUTOMAÇÃO DIGITAL',  href: '/servicos/automacao' },
+    { label: 'GOOGLE MEU NEGÓCIO', href: '/google-meu-negocio' },
+    { label: 'WEBSITE',            href: '/desenvolvimento-web-premium' },
+    { label: 'SEO / TRÁFEGO',      href: '/seo-local' },
+    { label: 'AUTOMAÇÃO DIGITAL',  href: '/automacoes-inteligentes' },
     { label: 'AVALIAR ESTRUTURA',  href: '/diagnostico', action: 'quiz' },
   ];
 
