@@ -371,19 +371,62 @@ export default function Quiz({ onClose }) {
     }, 300);
   }
 
+  async function handleInitialSubmit() {
+    if (!formData.nome || !formData.telefone || !formData.email) return;
+
+    const payload = {
+      submission_type: "initial_capture",
+      lead_info: {
+        nome: formData.nome,
+        whatsapp: formData.telefone,
+        email: formData.email,
+        empresa: formData.nome_gmn || "Não informado",
+        site: formData.site || "Não informado"
+      },
+      diagnostico: {
+        score_bruto: totalScore,
+        score_percentual: (totalScore / 40) * 100
+      },
+      utm_source: utmSource || "direto"
+    };
+
+    fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch((err) => console.error("Initial capture error:", err));
+
+    setPhase("sched");
+  }
+
   async function handleSubmit() {
     if (!formData.nome || !formData.telefone || !formData.email) return;
     if (!schedData.date || !schedData.time) return;
     setSubmitting(true);
     try {
-      const payload = buildPayload({ formData, schedData, answers, scores, totalScore, diagnosis, utmSource });
+      const dataIso = `${schedData.date}T${schedData.time}:00`;
+      const dataStr = schedData.date.split("-").reverse().join("/");
+      const horaStr = schedData.time;
+
+      const payload = {
+        submission_type: "calendar_booking",
+        lead_info: {
+          email: formData.email
+        },
+        agendamento: {
+          data_hora_iso: dataIso,
+          data_formatada: dataStr,
+          hora_formatada: horaStr
+        }
+      };
+
       await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
     } catch (e) {
-      console.error("Webhook error:", e);
+      console.error("Booking error:", e);
     }
     setSubmitting(false);
     setPhase("done");
@@ -516,6 +559,12 @@ export default function Quiz({ onClose }) {
       to { opacity: 1; transform: translateY(0); }
     }
     .fade-up { animation: fadeUp 0.4s ease forwards; }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.6; }
+    }
 
     .intro-title {
       font-family: 'Bebas Neue', sans-serif;
@@ -929,27 +978,36 @@ export default function Quiz({ onClose }) {
               Diagnóstico Concluído
             </div>
 
-            {/* Arc gauge */}
-            <div style={{ position: "relative", display: "inline-block", marginBottom: 12 }}>
-              <svg width="220" height="120" viewBox="0 0 200 110">
-                <path d="M 15 100 A 85 85 0 0 1 185 100" fill="none" stroke="#1a1a1a" strokeWidth="12" strokeLinecap="round" />
-                <path d="M 15 100 A 85 85 0 0 1 185 100" fill="none" stroke={diagnosis.color} strokeWidth="12"
-                  strokeLinecap="round"
-                  strokeDasharray={`${(totalScore / TOTAL_MAX) * 267} 267`}
-                  style={{ transition: "stroke-dasharray 1.4s cubic-bezier(.4,0,.2,1)" }}
-                />
-              </svg>
-              <div style={{ position: "absolute", bottom: 8, left: "50%", transform: "translateX(-50%)", whiteSpace: "nowrap" }}>
-                <div style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  fontSize: 34,
-                  letterSpacing: 2,
-                  color: "#ffffff",
-                  textShadow: "0 2px 10px rgba(0,0,0,0.9), 0 0 15px rgba(255,255,255,0.15)"
-                }}>
-                  {diagnosis.title}
-                </div>
-              </div>
+            {/* Status Estético / Loader de Processamento */}
+            <div style={{
+              margin: "32px auto 40px",
+              padding: "24px 32px",
+              background: "#161616",
+              border: "1px solid #222",
+              borderRadius: "16px",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "16px",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
+            }}>
+              <div style={{
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                background: "#22c55e",
+                animation: "pulse 1.8s infinite ease-in-out",
+                boxShadow: "0 0 12px #22c55e",
+                flexShrink: 0
+              }}></div>
+              <span style={{
+                fontSize: "15px",
+                fontWeight: "600",
+                color: "#22c55e",
+                letterSpacing: "1px",
+                textTransform: "uppercase"
+              }}>
+                Análise de Estrutura Concluída. Relatório Gerado com Sucesso.
+              </span>
             </div>
 
             <p style={{ fontSize: 18, color: "#e0e0e0", lineHeight: 1.7, maxWidth: 520, margin: "16px auto 32px" }}>
@@ -1159,9 +1217,9 @@ export default function Quiz({ onClose }) {
                 letterSpacing: "2.5px",
               }}
               disabled={!formData.nome || !formData.telefone || !formData.email}
-              onClick={() => setPhase("sched")}
+              onClick={handleInitialSubmit}
             >
-              AGENDAR MINHA CALL →
+              VER HORÁRIOS DISPONÍVEIS →
             </button>
           </div>
         )}
@@ -1239,6 +1297,15 @@ export default function Quiz({ onClose }) {
           <div className="card fade-up" style={{ textAlign: "center" }}>
             <div className="done-icon">🎯</div>
             <div className="done-title">TUDO CERTO, {formData.nome.split(" ")[0].toUpperCase()}!</div>
+            <div style={{
+              fontSize: "20px",
+              fontWeight: "600",
+              color: BRAND.text,
+              margin: "12px 0 24px",
+              letterSpacing: "0.5px"
+            }}>
+              Sua Nota: <span style={{ color: BRAND.red, fontSize: "28px", fontWeight: "bold", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px" }}>{Math.round((totalScore / 40) * 100)}%</span>
+            </div>
             <p className="done-sub">
               Sua avaliação foi registrada. <br />
               Nos vemos na call em:
