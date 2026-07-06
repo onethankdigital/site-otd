@@ -68,10 +68,10 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
   ];
 
   const servicosLinks = [
-    { label: "Google Meu Negócio", href: "/google-meu-negocio" },
-    { label: "Otimização SEO", href: "/seo-local" },
-    { label: "Criação de Sites", href: "/desenvolvimento-web-premium" },
-    { label: "Automações", href: "/automacoes-inteligentes" },
+    { label: "Google Meu Negócio", href: "/servicos/google-meu-negocio" },
+    { label: "Otimização SEO", href: "/servicos/seo-trafego-organico" },
+    { label: "Criação de Sites", href: "/servicos/criacao-de-sites" },
+    { label: "Automações", href: "/servicos/automacao-digital" },
   ];
 
   const contentLinks = [
