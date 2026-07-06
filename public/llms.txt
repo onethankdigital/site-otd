@@ -1,0 +1,12 @@
+# One Thank Digital
+
+> Braço de tecnologia especializado em automação de processos, CRM, desenvolvimento de plataformas premium e estratégias avançadas de SEO com foco exclusivo no mercado B2B e posicionamento geolocalizado no ABC Paulista.
+
+## Serviços Oficiais
+
+As URLs abaixo representam a matriz atual de soluções analíticas entregues em produção. Todos os links utilizam caminhos limpos e protocolo seguro:
+
+- [Google Meu Negócio](https://onethank.com.br/servicos/google-meu-negocio) Otimização e posicionamento de perfis locais para domínio de busca em mapas.
+- [Criação de Sites](https://onethank.com.br/servicos/criacao-de-sites) Desenvolvimento técnico de sites institucionais estáticos, rápidos e otimizados para conversão.
+- [SEO e Tráfego Orgânico](https://onethank.com.br/servicos/seo-trafego-organico) Estruturação de rankeamento semântico de alta performance para aquisição de clientes sem dependência de tráfego pago.
+- [Automação Digital](https://onethank.com.br/servicos/automacao-digital) Implementação de funis de atendimento via WhatsApp Business e integração estrutural com plataformas de CRM.
