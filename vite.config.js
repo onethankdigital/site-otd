@@ -2,15 +2,31 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
 import Prerender from '@prerenderer/rollup-plugin'
-import { resolve, dirname } from 'path'
+import { resolve } from 'path'
 import { fileURLToPath } from 'url'
+import { dirname } from 'path'
 
 const _filename = fileURLToPath(import.meta.url)
 const _dirname = dirname(_filename)
 
-// Matriz MECE Oficial e Definitiva - One Thank Digital
-const officialPaths = [
+// 1. Rotas completas para o sitemap do Google Search Console
+const sitemapPaths = [
   '/',
+  '/diagnostico',
+  '/pilares',
+  '/historia',
+  '/cases',
+  '/blog',
+  '/servicos/google-meu-negocio',
+  '/servicos/criacao-de-sites',
+  '/servicos/seo-trafego-organico',
+  '/servicos/automacao-digital',
+  '/privacidade',
+  '/termos'
+]
+
+// 2. Subrotas para pré-renderização estática (sem a '/' para evitar conflito de escrita)
+const prerenderPaths = [
   '/diagnostico',
   '/pilares',
   '/historia',
@@ -29,19 +45,18 @@ export default defineConfig({
   plugins: [
     react(),
     
-    // Geração do sitemap.xml com os 4 pilares e páginas institucionais
     Sitemap({
       hostname: 'https://www.onethank.com.br',
-      dynamicRoutes: officialPaths
+      dynamicRoutes: sitemapPaths
     }),
 
-    // Pré-renderização: Geração física de pastas e arquivos index.html
     Prerender({
       staticDir: resolve(_dirname, 'dist'),
-      routes: officialPaths
+      routes: prerenderPaths
     })
   ],
   build: {
     modulePreload: false
   }
 })
+
