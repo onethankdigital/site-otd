@@ -7,7 +7,6 @@ export default function ServicosSite() {
   const [activeFaq, setActiveFaq] = useState(null);
 
   useEffect(() => {
-    document.title = "Criação de Sites | One Thank Digital";
     window.scrollTo(0, 0);
   }, []);
 
@@ -530,9 +529,19 @@ export default function ServicosSite() {
                 "@type": "Service",
                 "name": "Criação de Sites B2B",
                 "provider": {
-                  "@type": "Organization",
-                  "name": "One Thank Digital"
+                  "@type": "LocalBusiness",
+                  "name": "One Thank Digital",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Santo André",
+                    "addressRegion": "SP"
+                  }
                 },
+                "areaServed": [
+                  { "@type": "City", "name": "Santo André" },
+                  { "@type": "City", "name": "São Bernardo do Campo" },
+                  { "@type": "City", "name": "São Caetano do Sul" }
+                ],
                 "offers": {
                   "@type": "Offer",
                   "priceSpecification": {

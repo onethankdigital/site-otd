@@ -7,7 +7,6 @@ export default function ServicosSEO() {
   const [activeFaq, setActiveFaq] = useState(null);
 
   useEffect(() => {
-    document.title = "SEO e Tráfego Orgânico | One Thank Digital";
     window.scrollTo(0, 0);
   }, []);
 
@@ -505,7 +504,7 @@ export default function ServicosSEO() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>SEO e Tráfego Orgânico para Empresas B2B no ABC Paulista | One Thank Digital</title>
+          <title>SEO e Tráfego Orgânico B2B no ABC | One Thank Digital</title>
           <meta name="description" content="Rankeamento orgânico no Google e AI Overview para escritórios contábeis, clínicas e empresas B2B em Santo André. Sem depender de anúncio pago. Resultados duradouros." />
           <meta property="og:title" content="SEO Orgânico para Empresas B2B no ABC | One Thank Digital" />
           <meta property="og:description" content="Apareça no Google e no AI Overview sem pagar por clique. SEO local para empresas B2B em Santo André e ABC Paulista." />
@@ -530,9 +529,19 @@ export default function ServicosSEO() {
                 "@type": "Service",
                 "name": "SEO e Tráfego Orgânico B2B",
                 "provider": {
-                  "@type": "Organization",
-                  "name": "One Thank Digital"
+                  "@type": "LocalBusiness",
+                  "name": "One Thank Digital",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Santo André",
+                    "addressRegion": "SP"
+                  }
                 },
+                "areaServed": [
+                  { "@type": "City", "name": "Santo André" },
+                  { "@type": "City", "name": "São Bernardo do Campo" },
+                  { "@type": "City", "name": "São Caetano do Sul" }
+                ],
                 "offers": {
                   "@type": "Offer",
                   "priceSpecification": {

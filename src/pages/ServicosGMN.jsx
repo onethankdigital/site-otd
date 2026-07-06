@@ -7,7 +7,6 @@ export default function ServicosGMN() {
   const [activeFaq, setActiveFaq] = useState(null);
 
   useEffect(() => {
-    document.title = "Google Meu Negócio | One Thank Digital";
     window.scrollTo(0, 0);
   }, []);
 
@@ -528,11 +527,21 @@ export default function ServicosGMN() {
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "Otimização Google Meu Negócio B2B",
+                "name": "Otimização de Google Meu Negócio B2B",
                 "provider": {
-                  "@type": "Organization",
-                  "name": "One Thank Digital"
+                  "@type": "LocalBusiness",
+                  "name": "One Thank Digital",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Santo André",
+                    "addressRegion": "SP"
+                  }
                 },
+                "areaServed": [
+                  { "@type": "City", "name": "Santo André" },
+                  { "@type": "City", "name": "São Bernardo do Campo" },
+                  { "@type": "City", "name": "São Caetano do Sul" }
+                ],
                 "offers": {
                   "@type": "Offer",
                   "priceSpecification": {
