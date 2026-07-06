@@ -21,6 +21,7 @@ const sitemapPaths = [
   '/servicos/criacao-de-sites',
   '/servicos/seo-trafego-organico',
   '/servicos/automacao-digital',
+  '/insights/como-organizar-leads-whatsapp-no-crm',
   '/privacidade',
   '/termos'
 ]
@@ -36,6 +37,7 @@ const prerenderPaths = [
   '/servicos/criacao-de-sites',
   '/servicos/seo-trafego-organico',
   '/servicos/automacao-digital',
+  '/insights/como-organizar-leads-whatsapp-no-crm',
   '/privacidade',
   '/termos'
 ]

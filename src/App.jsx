@@ -27,6 +27,7 @@ const ServicosSite = lazy(() => import('./pages/ServicosSite'));
 const ServicosSEO = lazy(() => import('./pages/ServicosSEO'));
 const ServicosAutomacao = lazy(() => import('./pages/ServicosAutomacao'));
 const GoogleMeuNegocio = lazy(() => import('./pages/GoogleMeuNegocio'));
+const InsightWhatsAppCRM = lazy(() => import('./pages/InsightWhatsAppCRM'));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -304,6 +305,24 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <TermosPage />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/insights/como-organizar-leads-whatsapp-no-crm' ||
+    currentPath === '/insights/como-organizar-leads-whatsapp-no-crm/' ||
+    currentPath.startsWith('/insights/')
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <InsightWhatsAppCRM />
         </Suspense>
         <WhatsAppButton />
       </div>
