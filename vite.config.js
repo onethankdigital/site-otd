@@ -5,14 +5,17 @@ import Prerender from '@prerenderer/rollup-plugin'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const _filename = fileURLToPath(import.meta.url)
+const _dirname = dirname(_filename)
 
-// Matriz MECE de caminhos reais e ativos na Agência One Thank Digital
+// Matriz MECE Oficial e Definitiva - One Thank Digital
 const officialPaths = [
+  '/',
   '/diagnostico',
   '/pilares',
   '/historia',
+  '/cases',
+  '/blog',
   '/servicos/google-meu-negocio',
   '/servicos/criacao-de-sites',
   '/servicos/seo-trafego-organico',
@@ -26,15 +29,15 @@ export default defineConfig({
   plugins: [
     react(),
     
-    // Gerador de Índice Semântico Real para o Googlebot e AEO
+    // Geração do sitemap.xml com os 4 pilares e páginas institucionais
     Sitemap({
       hostname: 'https://www.onethank.com.br',
       dynamicRoutes: officialPaths
     }),
 
-    // Pré-renderização Estática: Transforma rotas dinâmicas em HTML físico
+    // Pré-renderização: Geração física de pastas e arquivos index.html
     Prerender({
-      staticDir: resolve(__dirname, 'dist'),
+      staticDir: resolve(_dirname, 'dist'),
       routes: officialPaths
     })
   ],
