@@ -1,49 +1,44 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
-import { resolve } from 'path'
-import { blogPosts } from './src/data/blogPosts.js'
+import Prerender from '@prerenderer/rollup-plugin'
+import { resolve, dirname } from 'path'
+import { fileURLToPath } from 'url'
 
-const paths = [
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+// Matriz MECE de caminhos reais e ativos na Agência One Thank Digital
+const officialPaths = [
   '/diagnostico',
-  '/quiz',
   '/pilares',
-  '/4-pilares',
   '/historia',
-  '/nossa-historia',
-  '/blog',
-  '/cases',
+  '/servicos/google-meu-negocio',
+  '/servicos/criacao-de-sites',
+  '/servicos/seo-trafego-organico',
+  '/servicos/automacao-digital',
   '/privacidade',
-  '/termos',
-  '/automacoes-inteligentes',
-  '/desenvolvimento-web-premium',
-  '/seo-local',
-  '/google-meu-negocio',
-  ...blogPosts.map(post => `/blog/${post.slug}`)
+  '/termos'
 ]
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/',
   plugins: [
     react(),
+    
+    // Gerador de Índice Semântico Real para o Googlebot e AEO
     Sitemap({
-      hostname: 'https://onethank.com.br',
-      dynamicRoutes: paths,
-      generateRobotsTxt: false
+      hostname: 'https://www.onethank.com.br',
+      dynamicRoutes: officialPaths
+    }),
+
+    // Pré-renderização Estática: Transforma rotas dinâmicas em HTML físico
+    Prerender({
+      staticDir: resolve(__dirname, 'dist'),
+      routes: officialPaths
     })
   ],
   build: {
-    modulePreload: false,
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        automacoes: resolve(__dirname, 'automacoes-inteligentes/index.html'),
-        web: resolve(__dirname, 'desenvolvimento-web-premium/index.html'),
-        seo: resolve(__dirname, 'seo-local/index.html'),
-        gmn: resolve(__dirname, 'google-meu-negocio/index.html')
-      }
-    }
+    modulePreload: false
   }
 })
-
