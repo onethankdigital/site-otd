@@ -38,7 +38,7 @@ const STANDALONE_ARTICLES = [
     categoria: "Automação",
     categorySlug: "automacao-crm",
     slug: "como-organizar-leads-whatsapp-no-crm",
-    imagem: "/Blog/artigo-07-leads-whatsapp.jpg",
+    imagem: "/Blog/artigo-07-leads-whatsapp-crm.webp",
     titulo: "Como Organizar os Leads do WhatsApp no CRM de Forma Automática",
     meta: "Leitura de 4 min • Automação • One Thank Digital",
     lead: "Organizar leads do WhatsApp no CRM de forma automática exige três componentes: uma conexão oficial via API entre o número comercial e o CRM, regras de captura que registram a origem e os dados do contato no primeiro toque, e a criação automática da oportunidade no funil de vendas.",
