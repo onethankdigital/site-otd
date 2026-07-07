@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
-import Hero from './components/Hero';
+const Hero = lazy(() => import('./components/Hero'));
 const ServicosCards = lazy(() => import('./components/ServicosCards'));
 const HorizontalScroll = lazy(() => import('./components/HorizontalScroll'));
 const Philosophy = lazy(() => import('./components/Philosophy'));
@@ -391,8 +391,8 @@ function App() {
         onOpenHistoria={handleOpenHistoria}
       />
       <main className="w-full flex flex-col">
-        <Hero onOpenQuiz={handleOpenQuiz} />
         <Suspense fallback={<div className="min-h-screen bg-black"></div>}>
+          <Hero onOpenQuiz={handleOpenQuiz} />
           <ServicosCards />
           {/* <div id="features" className="bg-white">
             <Features />

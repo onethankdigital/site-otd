@@ -22,7 +22,7 @@ export default function BlogPostPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
     if (post) {
-      document.title = `${post.titulo} | Blog One Thank Digital`;
+      document.title = `${post.titulo} | Insights One Thank Digital`;
     }
   }, [slug, post]);
 
@@ -263,12 +263,12 @@ export default function BlogPostPage() {
         <div className="article-wrap">
           <nav className="article-nav">
             <a href="/" className="nav-logo">ONE THANK <span>DIGITAL</span></a>
-            <button className="btn-back-blog" onClick={goBack}>← Voltar ao Blog</button>
+            <button className="btn-back-blog" onClick={goBack}>← Voltar aos Insights</button>
           </nav>
           <div className="not-found" style={{ paddingTop: 120 }}>
             <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 80, color: "#D42B2B" }}>404</div>
             <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 32, color: "#0a0a0a", marginBottom: 16 }}>ARTIGO NÃO ENCONTRADO</div>
-            <button className="btn-back-blog" onClick={goBack} style={{ marginTop: 8 }}>← Voltar ao Blog</button>
+            <button className="btn-back-blog" onClick={goBack} style={{ marginTop: 8 }}>← Voltar aos Insights</button>
           </div>
         </div>
       </>
@@ -283,7 +283,7 @@ export default function BlogPostPage() {
         {/* NAVBAR */}
         <nav className="article-nav">
           <a href="/" className="nav-logo">ONE THANK <span>DIGITAL</span></a>
-          <button className="btn-back-blog" onClick={goBack}>← Voltar ao Blog</button>
+          <button className="btn-back-blog" onClick={goBack}>← Voltar aos Insights</button>
         </nav>
 
         {/* HERO */}

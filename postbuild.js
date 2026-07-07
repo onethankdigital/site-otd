@@ -23,19 +23,31 @@ function processDirectory(dir) {
       
       // Remover a tag canônica padrão da home que fica duplicada
       const targetTag = '<link rel="canonical" href="https://onethank.com.br/" data-rh="true">';
-      const originalHtml = html;
       html = html.replace(targetTag, '');
       
-      if (html !== originalHtml) {
-        fs.writeFileSync(filePath, html, 'utf-8');
-        console.log(`Cleaned up duplicate canonical in ${filePath}`);
+      // Injetar preconnects para Google Fonts no head
+      const preconnects = `
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>`;
+      html = html.replace('</head>', preconnects);
+      
+      // Se for a Pillar Page, injetar o preload da imagem hero
+      if (normalizedPath.includes(path.normalize('guia/automacao-digital/index.html'))) {
+        const preloadHero = `
+    <link rel="preload" as="image" href="/hero-automacao-digital.webp" type="image/webp">
+  </head>`;
+        html = html.replace('</head>', preloadHero);
       }
+      
+      fs.writeFileSync(filePath, html, 'utf-8');
+      console.log(`Optimized static HTML in ${filePath}`);
     }
   }
 }
 
-console.log('Running post-build duplicate canonical cleanup...');
+console.log('Running post-build duplicate canonical cleanup and optimization...');
 if (fs.existsSync(distDir)) {
   processDirectory(distDir);
 }
-console.log('Post-build cleanup finished.');
+console.log('Post-build cleanup and optimization finished.');

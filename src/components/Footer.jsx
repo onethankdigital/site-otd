@@ -81,7 +81,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
 
   const contentLinks = [
     { label: "Cases", href: "/cases", onClick: (e) => { e.preventDefault(); navigateTo("/cases"); } },
-    { label: "Blog", href: "/blog", onClick: (e) => { e.preventDefault(); navigateTo("/blog"); } },
+    { label: "Insights", href: "/blog", onClick: (e) => { e.preventDefault(); navigateTo("/blog"); } },
     { label: "Guias", href: "/guia", onClick: (e) => { e.preventDefault(); navigateTo("/guia"); } },
     { label: "Contato", href: "mailto:contato@onethank.com.br" },
   ];

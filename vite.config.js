@@ -64,7 +64,22 @@ export default defineConfig({
     })
   ],
   build: {
-    modulePreload: false
+    modulePreload: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('gsap')) {
+              return 'vendor-gsap';
+            }
+            if (id.includes('react-dom') || id.includes('react/')) {
+              return 'vendor-react';
+            }
+            return 'vendor-others';
+          }
+        }
+      }
+    }
   }
 })
 

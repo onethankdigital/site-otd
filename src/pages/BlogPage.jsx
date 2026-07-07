@@ -45,7 +45,7 @@ export default function Blog() {
   const [activecat, setActivecat] = useState("Todos");
 
   useEffect(() => {
-    document.title = "Blog | One Thank Digital - Somos Comunicação";
+    document.title = "Insights | One Thank Digital - Somos Comunicação";
   }, []);
 
   const featured = POSTS.find(p => p.featured);
@@ -382,7 +382,7 @@ export default function Blog() {
             <div>
               <div className="blog-eyebrow">// Conteúdo OTD</div>
               <h1 className="blog-title">
-                BLOG<br /><em>Estrutura.</em>
+                INSIGHTS<br /><em>Estrutura.</em>
               </h1>
             </div>
             <p className="blog-tagline">
