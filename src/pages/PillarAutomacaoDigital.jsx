@@ -477,8 +477,8 @@ export default function PillarAutomacaoDigital() {
             <img 
               src="/hero-automacao-digital.webp" 
               alt="Gestor acompanhando dashboard de automação digital com WhatsApp conectado ao CRM em ambiente corporativo"
-              width="2752"
-              height="1536"
+              width="1600"
+              height="893"
               loading="eager"
               className="pillar-hero-img"
             />

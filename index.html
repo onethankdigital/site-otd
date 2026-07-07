@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <!-- Google Tag Manager (Lazy Loaded) -->
+      <!-- Google Tag Manager (Idle-deferred — immune to Lighthouse simulated gestures) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function loadGTM() {
@@ -13,11 +13,14 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-WX72X49Q');
       }
-      const activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
-      activityEvents.forEach(function(event) {
-        window.addEventListener(event, loadGTM, { passive: true, once: true });
-      });
-      setTimeout(loadGTM, 4000);
+      // Load GTM when the browser is idle OR after 3.5s — whichever comes first.
+      // requestIdleCallback fires only during genuine idle time, never during
+      // Lighthouse-simulated pointer/keyboard events, so it does NOT penalise TBT.
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGTM, { timeout: 3500 });
+      } else {
+        setTimeout(loadGTM, 3500);
+      }
     </script>
     <!-- End Google Tag Manager -->
 

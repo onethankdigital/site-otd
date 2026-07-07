@@ -244,7 +244,7 @@ function App() {
     );
   }
 
-  if (currentPath === '/blog' || currentPath === '/blog/') {
+  if (currentPath === '/insights' || currentPath === '/insights/') {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
         <CustomCursor />
@@ -256,6 +256,12 @@ function App() {
         <WhatsAppButton />
       </div>
     );
+  }
+
+  // /blog redirect: SPA-side redirect to /insights (HTTP 301 handled in .htaccess)
+  if (currentPath === '/blog' || currentPath === '/blog/') {
+    window.location.replace('/insights');
+    return null;
   }
 
   if (currentPath.startsWith('/blog/')) {
