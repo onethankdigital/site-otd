@@ -561,7 +561,15 @@ export default function ServicosAutomacao() {
             <div className="lp-label">// AUTOMAÇÃO DE ATENDIMENTO E CRM PARA WHATSAPP BUSINESS</div>
             <h1 className="lp-h1">AUTOMAÇÃO DIGITAL DE WHATSAPP E CRM PARA EMPRESAS B2B EM SANTO ANDRÉ</h1>
             <p className="lp-intro">
-              A One Thank Digital implementa automação de WhatsApp, CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia, sem depender do seu horário ou da sua equipe.
+              A One Thank Digital implementa automação de WhatsApp, CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia, sem depender do seu horário ou da sua equipe. Quer entender o método a fundo antes de conversar? <a 
+                href="/guia/automacao-digital" 
+                className="text-accent underline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.history.pushState({}, '', '/guia/automacao-digital');
+                  window.dispatchEvent(new PopStateEvent('popstate'));
+                }}
+              >Leia o guia completo</a>.
             </p>
           </div>
         </section>

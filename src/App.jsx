@@ -27,7 +27,9 @@ const ServicosSite = lazy(() => import('./pages/ServicosSite'));
 const ServicosSEO = lazy(() => import('./pages/ServicosSEO'));
 const ServicosAutomacao = lazy(() => import('./pages/ServicosAutomacao'));
 const GoogleMeuNegocio = lazy(() => import('./pages/GoogleMeuNegocio'));
-const InsightWhatsAppCRM = lazy(() => import('./pages/InsightWhatsAppCRM'));
+import InsightWhatsAppCRM from './pages/InsightWhatsAppCRM';
+import PillarAutomacaoDigital from './pages/PillarAutomacaoDigital';
+import CategoriaInsights from './pages/CategoriaInsights';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -305,6 +307,37 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <TermosPage />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/guia/automacao-digital' ||
+    currentPath === '/guia/automacao-digital/'
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <PillarAutomacaoDigital />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath.startsWith('/insights/categoria/')) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <CategoriaInsights />
         </Suspense>
         <WhatsAppButton />
       </div>

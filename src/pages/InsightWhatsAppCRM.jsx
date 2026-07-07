@@ -14,6 +14,11 @@ export default function InsightWhatsAppCRM() {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
+  const navigateTo = (path) => {
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
+
   const FAQS = [
     {
       q: "A conexão com o WhatsApp pelo CRM tem risco de banimento do número?",
@@ -31,7 +36,7 @@ export default function InsightWhatsAppCRM() {
 
   const styles = `
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .insight-wrap *, .insight-wrap *::before, .insight-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     .insight-wrap {
       background: #080808;
@@ -375,7 +380,7 @@ export default function InsightWhatsAppCRM() {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Automação & CRM",
-                  "item": "https://onethank.com.br/servicos/automacao-digital"
+                  "item": "https://onethank.com.br/insights/categoria/automacao-crm"
                 },
                 {
                   "@type": "ListItem",
@@ -390,16 +395,26 @@ export default function InsightWhatsAppCRM() {
       </Helmet>
 
       <Navbar
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => navigateTo('/diagnostico')}
+        onOpenPilares={() => navigateTo('/pilares')}
+        onOpenHistoria={() => navigateTo('/historia')}
       />
 
       <div className="insight-wrap">
         {/* HERO */}
         <header className="insight-hero">
           <div className="insight-hero-inner">
-            <div className="insight-tag">Cluster B2B // Automação & CRM</div>
+            <a 
+              href="/insights/categoria/automacao-crm" 
+              className="insight-tag"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo('/insights/categoria/automacao-crm');
+              }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
+            >
+              Cluster B2B // Automação & CRM
+            </a>
             <h1 className="insight-h1">Como Organizar os Leads do WhatsApp no CRM de Forma Automática</h1>
             <div className="insight-meta">
               Por <span>One Thank Digital</span> • Leitura de 4 min • Estratégia B2B
@@ -466,7 +481,14 @@ export default function InsightWhatsAppCRM() {
               Com as três camadas ativas, o cenário se inverte: o CRM deixa de ser um formulário que ninguém preenche e vira o retrato fiel da operação comercial. O gestor enxerga o pipeline em tempo real, o follow-up acontece em minutos e cada real investido em tráfego tem um contrato — ou a ausência dele — rastreável na ponta.
             </p>
             <p>
-              Para entender como desenhar e implementar essa conexão sob medida na sua estrutura atual, conheça a <a href="https://onethank.com.br/servicos/automacao-digital" className="insight-link">arquitetura de automação comercial da One Thank Digital</a>.
+              Para entender como desenhar e implementar essa conexão sob medida na sua estrutura atual, leia o <a 
+                href="/guia/automacao-digital" 
+                className="insight-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateTo('/guia/automacao-digital');
+                }}
+              >guia completo de automação digital da OTD</a>.
             </p>
           </section>
 
@@ -497,7 +519,14 @@ export default function InsightWhatsAppCRM() {
             <p className="insight-cta-sub">
               Faça um diagnóstico gratuito da sua estrutura e veja como sincronizar o seu WhatsApp Business diretamente ao seu CRM — com cada lead organizado, rastreado e sem perda de conversas ou histórico comercial.
             </p>
-            <a href="/diagnostico" className="insight-cta-btn">
+            <a 
+              href="/diagnostico" 
+              className="insight-cta-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateTo('/diagnostico');
+              }}
+            >
               SOLICITAR DIAGNÓSTICO TÉCNICO →
             </a>
           </div>
@@ -505,9 +534,9 @@ export default function InsightWhatsAppCRM() {
       </div>
 
       <Footer
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => navigateTo('/diagnostico')}
+        onOpenPilares={() => navigateTo('/pilares')}
+        onOpenHistoria={() => navigateTo('/historia')}
       />
     </>
   );
