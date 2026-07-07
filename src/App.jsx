@@ -30,6 +30,7 @@ const GoogleMeuNegocio = lazy(() => import('./pages/GoogleMeuNegocio'));
 import InsightWhatsAppCRM from './pages/InsightWhatsAppCRM';
 import PillarAutomacaoDigital from './pages/PillarAutomacaoDigital';
 import CategoriaInsights from './pages/CategoriaInsights';
+import GuiaListagem from './pages/GuiaListagem';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -307,6 +308,23 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <TermosPage />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/guia' ||
+    currentPath === '/guia/'
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <GuiaListagem />
         </Suspense>
         <WhatsAppButton />
       </div>

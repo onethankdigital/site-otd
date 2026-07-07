@@ -67,16 +67,22 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     { label: "Avaliar Estrutura", href: "/diagnostico", onClick: (e) => { e.preventDefault(); onOpenQuiz?.(); } },
   ];
 
+  const navigateTo = (path) => {
+    window.history.pushState({}, '', path);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
+
   const servicosLinks = [
-    { label: "Google Meu Negócio", href: "/servicos/google-meu-negocio" },
-    { label: "Otimização SEO", href: "/servicos/seo-trafego-organico" },
-    { label: "Criação de Sites", href: "/servicos/criacao-de-sites" },
-    { label: "Automações", href: "/servicos/automacao-digital" },
+    { label: "Google Meu Negócio", href: "/servicos/google-meu-negocio", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/google-meu-negocio"); } },
+    { label: "Otimização SEO", href: "/servicos/seo-trafego-organico", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/seo-trafego-organico"); } },
+    { label: "Criação de Sites", href: "/servicos/criacao-de-sites", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/criacao-de-sites"); } },
+    { label: "Automações", href: "/servicos/automacao-digital", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/automacao-digital"); } },
   ];
 
   const contentLinks = [
-    { label: "Cases", href: "/cases" },
-    { label: "Blog", href: "/blog" },
+    { label: "Cases", href: "/cases", onClick: (e) => { e.preventDefault(); navigateTo("/cases"); } },
+    { label: "Blog", href: "/blog", onClick: (e) => { e.preventDefault(); navigateTo("/blog"); } },
+    { label: "Guias", href: "/guia", onClick: (e) => { e.preventDefault(); navigateTo("/guia"); } },
     { label: "Contato", href: "mailto:contato@onethank.com.br" },
   ];
 
@@ -122,7 +128,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
 
           <div className="fb">
             <div className="fb-logo">
-              <a href="/"><img src="/logo.svg" alt="One Thank Digital" /></a>
+              <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }}><img src="/logo.svg" alt="One Thank Digital" /></a>
               <div className="fb-tag">Presença digital estruturada.</div>
             </div>
             <div className="fb-stmt" aria-hidden="true">
@@ -153,7 +159,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
               <ul className="flinks">
                 {servicosLinks.map((l, i) => (
                   <li key={`srv-${i}`}>
-                    <a href={l.href}>
+                    <a href={l.href} onClick={l.onClick}>
                       <span className="farr">→</span>
                       {l.label}
                     </a>

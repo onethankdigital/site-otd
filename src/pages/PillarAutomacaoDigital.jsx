@@ -116,6 +116,31 @@ export default function PillarAutomacaoDigital() {
       padding: 0 24px;
     }
 
+    .pillar-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 24px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .pillar-breadcrumb a {
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pillar-breadcrumb a:hover {
+      color: #ffffff;
+    }
+    .pillar-breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.15);
+    }
+    .pillar-breadcrumb-current {
+      color: #e0040b;
+      font-weight: 500;
+    }
+
     .pillar-hero-img {
       width: 100%;
       height: auto;
@@ -290,6 +315,31 @@ export default function PillarAutomacaoDigital() {
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(224,4,11,0.3);
     }
+
+    /* DIAGRAMAS RESPONSIVOS */
+    .svg-desktop {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin: 36px auto;
+    }
+    .svg-mobile {
+      display: none;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin: 36px auto;
+    }
+
+    @media (max-width: 768px) {
+      .svg-desktop {
+        display: none;
+      }
+      .svg-mobile {
+        display: block;
+      }
+    }
   `;
 
   return (
@@ -354,7 +404,7 @@ export default function PillarAutomacaoDigital() {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Guias",
-                  "item": "https://onethank.com.br/blog"
+                  "item": "https://onethank.com.br/guia"
                 },
                 {
                   "@type": "ListItem",
@@ -388,6 +438,29 @@ export default function PillarAutomacaoDigital() {
             >
               Categoria: Automação & CRM
             </a>
+            <nav className="pillar-breadcrumb" aria-label="Breadcrumbs">
+              <a 
+                href="/" 
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  navigateTo('/'); 
+                }}
+              >
+                Home
+              </a>
+              <span className="pillar-breadcrumb-sep">/</span>
+              <a 
+                href="/guia" 
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  navigateTo('/guia'); 
+                }}
+              >
+                Guias
+              </a>
+              <span className="pillar-breadcrumb-sep">/</span>
+              <span className="pillar-breadcrumb-current">Automação Digital</span>
+            </nav>
             <h1 className="pillar-h1">Automação Digital para Empresas B2B: O Guia Completo</h1>
             <div className="pillar-meta">
               Por <span>One Thank Digital</span> • Guia Técnico B2B • Leitura de 20 min
@@ -491,10 +564,115 @@ export default function PillarAutomacaoDigital() {
               A implantação de uma infraestrutura robusta de automação exige o alinhamento de quatro componentes fundamentais. Cada um atua como uma engrenagem que conecta a atração de novos clientes à conversão final.
             </p>
 
+            {/* DIAGRAMA 1 - OS 4 COMPONENTES */}
+            <div className="svg-container">
+              {/* Desktop version */}
+              <svg className="svg-desktop" width="800" height="120" viewBox="0 0 800 120" role="img" aria-label="Diagrama dos quatro componentes da automação digital: conexão oficial, captura e organização, qualificação inteligente e gestão e mensuração">
+                <defs>
+                  <marker id="arrow-1" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 7 5 L 0 8.5 z" fill="#e0040b" />
+                  </marker>
+                </defs>
+                <rect x="5" y="15" width="170" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="90" y="45" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">1. Conexão Oficial</text>
+                <text x="90" y="70" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">API oficial da Meta</text>
+
+                <path d="M 175 60 L 205 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-1)" />
+
+                <rect x="210" y="15" width="170" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="295" y="45" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">2. Captura &amp; Org.</text>
+                <text x="295" y="70" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Dado nasce registrado</text>
+
+                <path d="M 380 60 L 410 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-1)" />
+
+                <rect x="415" y="15" width="170" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="500" y="45" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">3. Qualificação</text>
+                <text x="500" y="70" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Triagem por IA 24/7</text>
+
+                <path d="M 585 60 L 615 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-1)" />
+
+                <rect x="620" y="15" width="170" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="705" y="45" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">4. Gestão &amp; Mens.</text>
+                <text x="705" y="70" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Funil e ROI visíveis</text>
+              </svg>
+
+              {/* Mobile version */}
+              <svg className="svg-mobile" width="320" height="400" viewBox="0 0 320 400" role="img" aria-label="Diagrama dos quatro componentes da automação digital: conexão oficial, captura e organização, qualificação inteligente e gestão e mensuração">
+                <defs>
+                  <marker id="arrow-down-1" viewBox="0 0 10 10" refX="5" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 1.5 0 L 5 7 L 8.5 0 z" fill="#e0040b" />
+                  </marker>
+                </defs>
+                <rect x="10" y="10" width="300" height="70" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="38" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">1. Conexão Oficial</text>
+                <text x="160" y="58" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">API oficial da Meta</text>
+
+                <path d="M 160 80 L 160 100" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-1)" />
+
+                <rect x="10" y="110" width="300" height="70" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="138" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">2. Captura &amp; Organização</text>
+                <text x="160" y="158" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Dado nasce registrado</text>
+
+                <path d="M 160 180 L 160 200" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-1)" />
+
+                <rect x="10" y="210" width="300" height="70" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="238" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">3. Qualificação Inteligente</text>
+                <text x="160" y="258" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Triagem por IA 24/7</text>
+
+                <path d="M 160 280 L 160 300" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-1)" />
+
+                <rect x="10" y="310" width="300" height="70" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="338" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">4. Gestão &amp; Mensuração</text>
+                <text x="160" y="358" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Funil e ROI visíveis</text>
+              </svg>
+            </div>
+
             <h3>Componente 1: Conexão oficial (a fundação)</h3>
             <p>
               A grande maioria das empresas que começam a automatizar o WhatsApp recorre a soluções de "gambiarra" técnica: plataformas baratas baseadas em emulação de QR Code (WhatsApp Web). O cenário operacional gerado é caótico: o número cai constantemente, as sessões expiram sem aviso no meio de conversas importantes com tomadores de decisão e o risco de banimento por parte da Meta paira sobre a empresa como uma ameaça constante de perda do principal canal de vendas.
             </p>
+
+            {/* DIAGRAMA 2 - API OFICIAL VS. QR CODE */}
+            <div className="svg-container">
+              {/* Desktop version */}
+              <svg className="svg-desktop" width="800" height="240" viewBox="0 0 800 240" role="img" aria-label="Comparativo entre conexão por QR code e WhatsApp Cloud API oficial">
+                <rect x="5" y="10" width="380" height="220" rx="12" fill="rgba(255, 255, 255, 0.01)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="195" y="45" fill="#ff4d4d" fontSize="15px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Conexão por QR Code (Emulação)</text>
+                <line x1="25" y1="65" x2="365" y2="65" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
+                <text x="35" y="95" fill="#d5d5d5" fontSize="13px" fontFamily="system-ui, -apple-system, sans-serif">❌ Sessão cai constantemente sem aviso prévio</text>
+                <text x="35" y="125" fill="#d5d5d5" fontSize="13px" fontFamily="system-ui, -apple-system, sans-serif">❌ Risco elevado de bloqueio e banimento do número</text>
+                <text x="35" y="155" fill="#d5d5d5" fontSize="13px" fontFamily="system-ui, -apple-system, sans-serif">❌ Limite de apenas um atendimento simultâneo por vez</text>
+                <text x="35" y="185" fill="#d5d5d5" fontSize="13px" fontFamily="system-ui, -apple-system, sans-serif">❌ Dependência de um celular ligado 24/7 na internet</text>
+
+                <rect x="415" y="10" width="380" height="220" rx="12" fill="rgba(224, 4, 11, 0.02)" stroke="#e0040b" strokeWidth="1.5" />
+                <text x="605" y="45" fill="#e0040b" fontSize="15px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">WhatsApp Cloud API (Oficial)</text>
+                <line x1="435" y1="65" x2="775" y2="65" stroke="rgba(224,4,11,0.15)" strokeWidth="1" />
+                <text x="445" y="95" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Conexão ultraestável direta com servidores Meta</text>
+                <text x="445" y="125" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Número comercial protegido contra banimentos</text>
+                <text x="445" y="155" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Múltiplos atendentes simultâneos no mesmo número</text>
+                <text x="445" y="185" fill="#ffffff" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Funciona independente de aparelho celular físico</text>
+              </svg>
+
+              {/* Mobile version */}
+              <svg className="svg-mobile" width="320" height="440" viewBox="0 0 320 440" role="img" aria-label="Comparativo entre conexão por QR code e WhatsApp Cloud API oficial">
+                <rect x="10" y="5" width="300" height="205" rx="8" fill="rgba(255, 255, 255, 0.01)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="30" fill="#ff4d4d" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Conexão por QR Code (Emulação)</text>
+                <line x1="25" y1="45" x2="295" y2="45" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
+                <text x="25" y="70" fill="#d5d5d5" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif">❌ Sessão cai constantemente sem aviso</text>
+                <text x="25" y="100" fill="#d5d5d5" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif">❌ Risco elevado de banimento do número</text>
+                <text x="25" y="130" fill="#d5d5d5" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif">❌ Limite de uma sessão por vez no chat</text>
+                <text x="25" y="160" fill="#d5d5d5" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif">❌ Depende de celular ligado à internet</text>
+
+                <rect x="10" y="225" width="300" height="205" rx="8" fill="rgba(224, 4, 11, 0.02)" stroke="#e0040b" strokeWidth="1.5" />
+                <text x="160" y="250" fill="#e0040b" fontSize="13px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">WhatsApp Cloud API (Oficial)</text>
+                <line x1="25" y1="265" x2="295" y2="265" stroke="rgba(224,4,11,0.15)" strokeWidth="1" />
+                <text x="25" y="290" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Conexão estável direta nos servidores Meta</text>
+                <text x="25" y="320" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Número comercial 100% protegido</text>
+                <text x="25" y="350" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Múltiplos atendentes simultâneos no número</text>
+                <text x="25" y="380" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif">✓ Independente de qualquer celular ligado</text>
+              </svg>
+            </div>
+
             <p>
               A conexão oficial utiliza a <a 
                 href="https://developers.facebook.com/docs/whatsapp/cloud-api" 
@@ -514,6 +692,84 @@ export default function PillarAutomacaoDigital() {
             <p>
               A camada de captura atua como um ouvinte de webhooks. No milissegundo em que o lead envia a primeira mensagem, o middleware (n8n ou Make) intercepta o evento, extrai as informações do perfil público do WhatsApp, cruza com as UTMs de marketing acumuladas nos cookies de navegação e formata um payload de dados limpo. Em seguida, essa automação faz uma chamada à API do CRM para criar ou atualizar o lead de forma silenciosa.
             </p>
+
+            {/* DIAGRAMA 3 - A JORNADA DO LEAD */}
+            <div className="svg-container">
+              {/* Desktop version */}
+              <svg className="svg-desktop" width="800" height="120" viewBox="0 0 800 120" role="img" aria-label="Fluxo do lead: do clique no anúncio até o vendedor, com captura automática de origem e dados">
+                <defs>
+                  <marker id="arrow-3" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 7 5 L 0 8.5 z" fill="#e0040b" />
+                  </marker>
+                </defs>
+                <rect x="5" y="15" width="130" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="70" y="48" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">1. Clique no</text>
+                <text x="70" y="68" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">anúncio</text>
+
+                <path d="M 135 60 L 155 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-3)" />
+
+                <rect x="160" y="15" width="130" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="225" y="48" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">2. Mensagem</text>
+                <text x="225" y="68" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">no WhatsApp</text>
+
+                <path d="M 290 60 L 310 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-3)" />
+
+                <rect x="315" y="15" width="170" height="90" rx="8" fill="rgba(224, 4, 11, 0.04)" stroke="#e0040b" strokeWidth="2" />
+                <text x="400" y="43" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">3. Captura Automática</text>
+                <text x="400" y="63" fill="#e0040b" fontSize="10px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Origem + dados do lead</text>
+                <text x="400" y="80" fill="#a0a0a0" fontSize="9px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">sem digitação manual</text>
+
+                <path d="M 485 60 L 505 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-3)" />
+
+                <rect x="510" y="15" width="130" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="575" y="48" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">4. Card criado</text>
+                <text x="575" y="68" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">no CRM (triagem)</text>
+
+                <path d="M 640 60 L 660 60" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-3)" />
+
+                <rect x="665" y="15" width="130" height="90" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="730" y="48" fill="#ffffff" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">5. Vendedor</text>
+                <text x="730" y="68" fill="#a0a0a0" fontSize="11px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">negocia e fecha</text>
+              </svg>
+
+              {/* Mobile version */}
+              <svg className="svg-mobile" width="320" height="450" viewBox="0 0 320 450" role="img" aria-label="Fluxo do lead: do clique no anúncio até o vendedor, com captura automática de origem e dados">
+                <defs>
+                  <marker id="arrow-down-3" viewBox="0 0 10 10" refX="5" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 1.5 0 L 5 7 L 8.5 0 z" fill="#e0040b" />
+                  </marker>
+                </defs>
+                <rect x="10" y="10" width="300" height="60" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="35" fill="#ffffff" fontSize="12px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">1. Clique no anúncio</text>
+                <text x="160" y="50" fill="#a0a0a0" fontSize="10px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Marketing pago ou orgânico</text>
+
+                <path d="M 160 70 L 160 85" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-3)" />
+
+                <rect x="10" y="95" width="300" height="60" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="120" fill="#ffffff" fontSize="12px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">2. Mensagem no WhatsApp comercial</text>
+                <text x="160" y="135" fill="#a0a0a0" fontSize="10px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Iniciativa de contato do cliente</text>
+
+                <path d="M 160 155 L 160 170" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-3)" />
+
+                <rect x="10" y="180" width="300" height="80" rx="8" fill="rgba(224, 4, 11, 0.04)" stroke="#e0040b" strokeWidth="2" />
+                <text x="160" y="210" fill="#ffffff" fontSize="12px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">3. Captura Automática (Destaque)</text>
+                <text x="160" y="230" fill="#e0040b" fontSize="11px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Origem (UTMs) + dados do contato</text>
+                <text x="160" y="245" fill="#a0a0a0" fontSize="9px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">salvos automaticamente no banco de dados</text>
+
+                <path d="M 160 260 L 160 275" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-3)" />
+
+                <rect x="10" y="285" width="300" height="60" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="310" fill="#ffffff" fontSize="12px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">4. Card criado no CRM (Kanban)</text>
+                <text x="160" y="325" fill="#a0a0a0" fontSize="10px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Oportunidade na etapa de Triagem</text>
+
+                <path d="M 160 345 L 160 360" stroke="#e0040b" strokeWidth="2" markerEnd="url(#arrow-down-3)" />
+
+                <rect x="10" y="370" width="300" height="60" rx="8" fill="rgba(255, 255, 255, 0.02)" stroke="#3a3a3a" strokeWidth="1.5" />
+                <text x="160" y="395" fill="#ffffff" fontSize="12px" fontWeight="bold" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">5. Vendedor assume e negocia</text>
+                <text x="160" y="410" fill="#a0a0a0" fontSize="10px" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle">Foco na negociação humanizada e fechamento</text>
+              </svg>
+            </div>
+
             <p>
               Isso significa que a informação comercial nasce estruturada no primeiro toque. O vendedor abre a tela do CRM e encontra um novo card de negociação criado no estágio de triagem do Kanban, preenchido automaticamente com nome, celular, histórico de origem (UTMs) e sem qualquer necessidade de digitação ou cadastro manual. A operação comercial ganha rastreabilidade absoluta e elimina o retrabalho de entrada de dados.
             </p>

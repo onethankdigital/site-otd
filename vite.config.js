@@ -22,6 +22,7 @@ const sitemapPaths = [
   '/servicos/seo-trafego-organico',
   '/servicos/automacao-digital',
   '/insights/como-organizar-leads-whatsapp-no-crm',
+  '/guia',
   '/guia/automacao-digital',
   '/insights/categoria/automacao-crm',
   '/privacidade',
@@ -40,6 +41,7 @@ const prerenderPaths = [
   '/servicos/seo-trafego-organico',
   '/servicos/automacao-digital',
   '/insights/como-organizar-leads-whatsapp-no-crm',
+  '/guia',
   '/guia/automacao-digital',
   '/insights/categoria/automacao-crm',
   '/privacidade',
@@ -52,7 +54,7 @@ export default defineConfig({
     react(),
     
     Sitemap({
-      hostname: 'https://www.onethank.com.br',
+      hostname: 'https://onethank.com.br',
       dynamicRoutes: sitemapPaths
     }),
 

@@ -34,6 +34,17 @@ const CATEGORY_MAP = {
 
 const STANDALONE_ARTICLES = [
   {
+    id: 102,
+    categoria: "Automação",
+    categorySlug: "automacao-crm",
+    slug: "guia-automacao-digital",
+    imagem: "/hero-automacao-digital.webp",
+    titulo: "Automação Digital para Empresas B2B: O Guia Completo",
+    meta: "Guia Técnico • Automação • One Thank Digital",
+    lead: "Como estruturar a automação digital da sua empresa para gerar leads qualificados: WhatsApp integrado ao CRM, qualificação com IA e dados organizados sem trabalho manual.",
+    path: "/guia/automacao-digital/"
+  },
+  {
     id: 101,
     categoria: "Automação",
     categorySlug: "automacao-crm",
