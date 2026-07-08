@@ -476,6 +476,35 @@ export default function InsightAutomacaoComercial() {
             Se você pesquisou "automação comercial" pensando em sistemas de caixa, balcão ou emissão de nota no varejo, este não é o artigo — e vale dizer isso logo, porque o termo carrega essa confusão no Brasil. Aqui, automação comercial é outra coisa: é a camada de tecnologia que trabalha na frente de vendas de empresas de serviços e negócios B2B, garantindo que cada pessoa que demonstra interesse seja atendida na hora, registrada com origem rastreada e conduzida pelo funil sem depender da memória ou da boa vontade de quem estava disponível naquele momento. É a diferença entre uma operação comercial que funciona por esforço e uma que funciona por estrutura.
           </p>
 
+          <div style={{
+            background: 'rgba(224,4,11,0.06)',
+            border: '1px solid rgba(224,4,11,0.25)',
+            borderRadius: 12,
+            padding: '20px 24px',
+            margin: '32px 0'
+          }}>
+            <div style={{
+              fontSize: 12,
+              fontWeight: 700,
+              color: '#e0040b',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              marginBottom: 8
+            }}>
+              // Hub de Especialidade OTD
+            </div>
+            <div style={{ fontSize: 16, color: '#e5e5e5', lineHeight: 1.6 }}>
+              Para aprofundar sua estratégia com nossa metodologia completa, acesse o nosso pilar definitivo de{' '}
+              <a 
+                href="/guia/automacao-digital"
+                onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
+                style={{ color: '#e0040b', fontWeight: 600, textDecoration: 'underline' }}
+              >
+                Automação Digital para Empresas B2B (Guia Completo)
+              </a>.
+            </div>
+          </div>
+
           <section className="insight-section">
             <h2>O que é automação comercial (e o que ela não é)</h2>
             <p>

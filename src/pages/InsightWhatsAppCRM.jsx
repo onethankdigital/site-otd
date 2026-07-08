@@ -432,6 +432,35 @@ export default function InsightWhatsAppCRM() {
             Investir em um software de CRM de última geração não resolve o problema comercial se o seu time de vendas continua fechando negócios exclusivamente pelo WhatsApp. O maior gargalo de empresas em crescimento é a <strong>desconexão entre a conversa e o controle</strong>: o lead chega, o vendedor atende pelo celular, a negociação avança — mas nada disso aparece no CRM. Você tem a ferramenta certa e, mesmo assim, não consegue enxergar a própria operação.
           </p>
 
+          <div style={{
+            background: 'rgba(224,4,11,0.06)',
+            border: '1px solid rgba(224,4,11,0.25)',
+            borderRadius: 12,
+            padding: '20px 24px',
+            margin: '32px 0'
+          }}>
+            <div style={{
+              fontSize: 12,
+              fontWeight: 700,
+              color: '#e0040b',
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              marginBottom: 8
+            }}>
+              // Hub de Especialidade OTD
+            </div>
+            <div style={{ fontSize: 16, color: '#e5e5e5', lineHeight: 1.6 }}>
+              Para aprofundar sua estratégia com nossa metodologia completa, acesse o nosso pilar definitivo de{' '}
+              <a 
+                href="/guia/automacao-digital"
+                onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
+                style={{ color: '#e0040b', fontWeight: 600, textDecoration: 'underline' }}
+              >
+                Automação Digital para Empresas B2B (Guia Completo)
+              </a>.
+            </div>
+          </div>
+
           <section className="insight-section">
             <h2>O Problema: o CRM Vazio e o WhatsApp Sobrecarregado</h2>
             <p>
