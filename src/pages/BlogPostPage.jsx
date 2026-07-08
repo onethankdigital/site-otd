@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getPostBySlug } from "../data/blogPosts";
 
 const CAT_COLORS = {
@@ -10,7 +10,6 @@ const CAT_COLORS = {
 };
 
 function getSlugFromPath() {
-  // /blog/:slug
   const parts = window.location.pathname.split("/");
   return parts[parts.length - 1] || "";
 }
@@ -18,6 +17,7 @@ function getSlugFromPath() {
 export default function BlogPostPage() {
   const slug = getSlugFromPath();
   const post = getPostBySlug(slug);
+  const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -27,6 +27,84 @@ export default function BlogPostPage() {
   }, [slug, post]);
 
   const catColor = post ? (CAT_COLORS[post.categoria] || "#D42B2B") : "#D42B2B";
+
+  // Gerar Schemas JSON-LD automáticos para o Satélite
+  const schemas = post
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.titulo,
+          description: post.lead,
+          datePublished: "2026-07-08T08:00:00+00:00",
+          dateModified: "2026-07-08T08:00:00+00:00",
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://onethank.com.br/blog/${post.slug}`,
+          },
+          author: {
+            "@type": "Organization",
+            name: "One Thank Digital",
+            url: "https://onethank.com.br",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "One Thank Digital",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://onethank.com.br/logo.svg",
+            },
+          },
+          image: `https://onethank.com.br${post.imagem}`,
+        },
+        ...(post.faq && post.faq.length > 0
+          ? [
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: post.faq.map((item) => ({
+                  "@type": "Question",
+                  name: item.pergunta,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.resposta,
+                  },
+                })),
+              },
+            ]
+          : []),
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://onethank.com.br",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Insights",
+              item: "https://onethank.com.br/insights",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: post.categoria,
+              item: "https://onethank.com.br/insights",
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              name: post.titulo,
+              item: `https://onethank.com.br/blog/${post.slug}`,
+            },
+          ],
+        },
+      ]
+    : [];
 
   const styles = `
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap');
@@ -103,6 +181,32 @@ export default function BlogPostPage() {
       position: relative; z-index: 1;
     }
 
+    /* BREADCRUMB */
+    .satellite-breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 24px;
+    }
+    .satellite-breadcrumb a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .satellite-breadcrumb a:hover {
+      color: #fff;
+    }
+    .satellite-breadcrumb-sep {
+      color: #555;
+    }
+    .satellite-breadcrumb-current {
+      color: #D42B2B;
+      font-weight: 600;
+    }
+
     .article-cat {
       display: inline-flex;
       align-items: center;
@@ -118,34 +222,47 @@ export default function BlogPostPage() {
 
     .article-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(40px, 6vw, 80px);
-      line-height: 1.0;
+      font-size: clamp(36px,5vw,64px);
+      line-height: 1.05;
       letter-spacing: 1px;
       color: #ffffff;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .article-meta {
       font-size: 13px;
-      color: #999;
+      color: #888;
       letter-spacing: 0.5px;
     }
 
     /* BODY */
     .article-body {
-      max-width: 860px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: clamp(48px,6vw,80px) clamp(24px,5vw,48px);
+      padding: 64px clamp(24px,4vw,32px) 96px;
+    }
+
+    /* CALLOUT DE RESPOSTA DIRETA (AEO) */
+    .satellite-callout {
+      background: #fdf2f2;
+      border-left: 4px solid #D42B2B;
+      padding: 24px 28px;
+      border-radius: 0 12px 12px 0;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      font-weight: 500;
+      margin-bottom: 36px;
     }
 
     .article-lead {
-      font-size: clamp(17px,1.5vw,21px);
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 48px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid #f0f0f0;
+      font-size: clamp(18px,1.8vw,22px);
+      line-height: 1.7;
+      color: #1a1a1a;
       font-weight: 400;
+      margin-bottom: 48px;
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 40px;
     }
 
     .article-section {
@@ -166,6 +283,77 @@ export default function BlogPostPage() {
       line-height: 1.9;
       color: #444;
       white-space: pre-line;
+    }
+
+    /* HUB & SPOKE CONNECTION BOX */
+    .satellite-hub-link {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 40px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .satellite-hub-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #D42B2B;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .satellite-hub-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .satellite-hub-text a {
+      color: #D42B2B;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* FAQ ACORDEÃO */
+    .satellite-faq-section {
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 2px solid #111;
+    }
+    .satellite-faq-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px,3.5vw,42px);
+      color: #111;
+      margin-bottom: 32px;
+    }
+    .satellite-faq-item {
+      border-bottom: 1px solid #eaeaea;
+    }
+    .satellite-faq-q {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 17px;
+      color: #1a1a1a;
+      gap: 16px;
+    }
+    .satellite-faq-q:hover {
+      color: #D42B2B;
+    }
+    .satellite-faq-icon {
+      font-size: 22px;
+      color: #D42B2B;
+      transition: transform 0.25s ease;
+    }
+    .satellite-faq-a {
+      padding-bottom: 20px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #555;
     }
 
     /* CTA */
@@ -244,16 +432,13 @@ export default function BlogPostPage() {
   `;
 
   function goBack() {
-    window.history.pushState({}, "", "/blog");
+    window.history.pushState({}, "", "/insights");
     window.dispatchEvent(new PopStateEvent("popstate"));
   }
 
   function goQuiz() {
-    window.history.pushState({}, "", "/");
+    window.history.pushState({}, "", "/diagnostico");
     window.dispatchEvent(new PopStateEvent("popstate"));
-    setTimeout(() => {
-      window.dispatchEvent(new CustomEvent("openQuiz"));
-    }, 100);
   }
 
   if (!post) {
@@ -277,6 +462,12 @@ export default function BlogPostPage() {
 
   return (
     <>
+      {schemas && schemas.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+        />
+      )}
       <style>{styles}</style>
       <div className="article-wrap">
 
@@ -289,6 +480,17 @@ export default function BlogPostPage() {
         {/* HERO */}
         <div className="article-hero">
           <div className="article-hero-inner">
+            {/* 4-Level Breadcrumb */}
+            <nav className="satellite-breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span className="satellite-breadcrumb-sep">&gt;</span>
+              <a href="/insights">Insights</a>
+              <span className="satellite-breadcrumb-sep">&gt;</span>
+              <span>{post.categoria}</span>
+              <span className="satellite-breadcrumb-sep">&gt;</span>
+              <span className="satellite-breadcrumb-current">{post.titulo}</span>
+            </nav>
+
             <div
               className="article-cat"
               style={{
@@ -318,7 +520,25 @@ export default function BlogPostPage() {
         {/* BODY */}
         <div className="article-body">
 
+          {/* SATELLITE DIRECT CALLOUT (AEO) */}
+          {post.callout && (
+            <div className="satellite-callout">
+              {post.callout}
+            </div>
+          )}
+
           <p className="article-lead">{post.lead}</p>
+
+          {/* HUB & SPOKE PILLAR CONNECTION BOX (UPPER) */}
+          {post.pillarUrl && post.pillarText && (
+            <div className="satellite-hub-link">
+              <div className="satellite-hub-title">// Hub de Especialidade OTD</div>
+              <div className="satellite-hub-text">
+                Para aprofundar sua estratégia com nossa metodologia completa, conheça o guia ou serviço de{" "}
+                <a href={post.pillarUrl}>{post.pillarText}</a>.
+              </div>
+            </div>
+          )}
 
           {post.secoes.map((sec, i) => (
             <div className="article-section" key={i}>
@@ -327,10 +547,45 @@ export default function BlogPostPage() {
             </div>
           ))}
 
-          {/* CTA */}
+          {/* FAQ ACORDEÃO E TEXTO INTEGRAL PARA SEO */}
+          {post.faq && post.faq.length > 0 && (
+            <section className="satellite-faq-section">
+              <h2 className="satellite-faq-title">Perguntas frequentes</h2>
+              <div>
+                {post.faq.map((item, index) => {
+                  const isOpen = openFaq === index;
+                  return (
+                    <div className="satellite-faq-item" key={index}>
+                      <div
+                        className="satellite-faq-q"
+                        onClick={() => setOpenFaq(isOpen ? null : index)}
+                      >
+                        <span>{item.pergunta}</span>
+                        <span className="satellite-faq-icon">
+                          {isOpen ? "−" : "+"}
+                        </span>
+                      </div>
+                      <div
+                        className="satellite-faq-a"
+                        style={{ display: isOpen ? "block" : "block" }}
+                      >
+                        {item.resposta}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* CTA DO CLUSTER */}
           <div className="article-cta">
-            <div className="cta-title">{post.cta}</div>
-            <p className="cta-sub">{post.ctaSub} — gratuito, em 5 minutos.</p>
+            <div className="cta-title">
+              {post.cta || "QUER SABER COMO ESTÁ A ESTRUTURA DIGITAL DA SUA EMPRESA HOJE?"}
+            </div>
+            <p className="cta-sub">
+              {post.ctaSub || "Faça nosso diagnóstico digital gratuito e descubra seus principais gargalos e como resolvê-los."}
+            </p>
             <button className="cta-btn" onClick={goQuiz}>
               FAZER O DIAGNÓSTICO GRATUITO →
             </button>
