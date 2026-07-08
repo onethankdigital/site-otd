@@ -27,6 +27,8 @@ const sitemapPaths = [
   '/guia',
   '/guia/automacao-digital',
   '/guia/google-meu-negocio',
+  '/guia/desenvolvimento-web',
+  '/guia/seo-trafego-organico',
   '/insights/categoria/automacao-crm',
   '/privacidade',
   '/termos'
@@ -49,6 +51,8 @@ const prerenderPaths = [
   '/guia',
   '/guia/automacao-digital',
   '/guia/google-meu-negocio',
+  '/guia/desenvolvimento-web',
+  '/guia/seo-trafego-organico',
   '/insights/categoria/automacao-crm',
   '/privacidade',
   '/termos'

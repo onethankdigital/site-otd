@@ -32,6 +32,8 @@ import InsightAutomacaoProcessos from './pages/InsightAutomacaoProcessos';
 import InsightAutomacaoComercial from './pages/InsightAutomacaoComercial';
 import PillarAutomacaoDigital from './pages/PillarAutomacaoDigital';
 import PillarGoogleMeuNegocio from './pages/PillarGoogleMeuNegocio';
+import PillarDesenvolvimentoWeb from './pages/PillarDesenvolvimentoWeb';
+import PillarSEOTrafego from './pages/PillarSEOTrafego';
 import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
 
@@ -368,6 +370,40 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <PillarGoogleMeuNegocio />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/guia/desenvolvimento-web' ||
+    currentPath === '/guia/desenvolvimento-web/'
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <PillarDesenvolvimentoWeb />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/guia/seo-trafego-organico' ||
+    currentPath === '/guia/seo-trafego-organico/'
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <PillarSEOTrafego />
         </Suspense>
         <WhatsAppButton />
       </div>

@@ -40,9 +40,9 @@ export default function GuiaListagem() {
       title: "Arquitetura Web & Criação de Sites B2B de Alta Conversão",
       excerpt: "O manual definitivo de Core Web Vitals, estrutura AEO para Inteligências Artificiais e design executivo para captação corporativa.",
       imagem: "/Blog/artigo-03-site-vs-instagram.jpg",
-      readTime: "Lançamento no trimestre",
-      path: "/servicos/criacao-de-sites",
-      status: "embreve"
+      readTime: "19 min de leitura",
+      path: "/guia/desenvolvimento-web",
+      status: "ativo"
     },
     {
       id: 4,
@@ -50,9 +50,9 @@ export default function GuiaListagem() {
       title: "Posicionamento Orgânico no Google e Estratégias de SEO B2B",
       excerpt: "Como construir autoridade semântica, conquistar palavras-chave de fundo de funil e integrar tráfego orgânico com campanhas pagas.",
       imagem: "/Blog/artigo-05-seo-vs-trafego-pago.jpg",
-      readTime: "Lançamento no trimestre",
-      path: "/servicos/seo-trafego-organico",
-      status: "embreve"
+      readTime: "21 min de leitura",
+      path: "/guia/seo-trafego-organico",
+      status: "ativo"
     }
   ];
 
