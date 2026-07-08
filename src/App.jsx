@@ -460,8 +460,7 @@ function App() {
 
   if (
     currentPath === '/insights/como-organizar-leads-whatsapp-no-crm' ||
-    currentPath === '/insights/como-organizar-leads-whatsapp-no-crm/' ||
-    currentPath.startsWith('/insights/')
+    currentPath === '/insights/como-organizar-leads-whatsapp-no-crm/'
   ) {
     return (
       <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
@@ -470,6 +469,20 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <InsightWhatsAppCRM />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath.startsWith('/insights/') || currentPath.startsWith('/blog/')) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <BlogPostPage />
         </Suspense>
         <WhatsAppButton />
       </div>

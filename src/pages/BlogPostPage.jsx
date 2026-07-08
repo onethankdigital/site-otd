@@ -10,7 +10,8 @@ const CAT_COLORS = {
 };
 
 function getSlugFromPath() {
-  const parts = window.location.pathname.split("/");
+  const cleanPath = window.location.pathname.replace(/\/$/, "");
+  const parts = cleanPath.split("/");
   return parts[parts.length - 1] || "";
 }
 
