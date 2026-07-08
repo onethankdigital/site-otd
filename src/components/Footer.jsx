@@ -60,10 +60,34 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     }
   `;
 
+  const scrollToProtocol = () => {
+    let attempts = 0;
+    const tryScroll = () => {
+      const el = document.getElementById('protocol');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      } else if (attempts < 15) {
+        attempts++;
+        setTimeout(tryScroll, 100);
+      }
+    };
+    tryScroll();
+  };
+
   const navLinks = [
     { label: "Os 4 Pilares", href: "/pilares", onClick: (e) => { e.preventDefault(); onOpenPilares?.(); } },
     { label: "Nossa História", href: "/historia", onClick: (e) => { e.preventDefault(); onOpenHistoria?.(); } },
-    { label: "FAQ", href: "#protocol" },
+    { 
+      label: "FAQ", 
+      href: "/#protocol", 
+      onClick: (e) => { 
+        e.preventDefault(); 
+        if (window.location.pathname !== '/' && window.location.pathname !== '') {
+          navigateTo('/');
+        }
+        scrollToProtocol();
+      } 
+    },
     { label: "Avaliar Estrutura", href: "/diagnostico", onClick: (e) => { e.preventDefault(); onOpenQuiz?.(); } },
   ];
 
