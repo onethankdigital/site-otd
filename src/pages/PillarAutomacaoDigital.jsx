@@ -589,8 +589,12 @@ export default function PillarAutomacaoDigital() {
               <li><strong>O Objetivo Real:</strong> Eliminar gargalos invisíveis de orquestração, mitigar o erro humano em tarefas repetitivas e aumentar a velocidade de entrega do serviço.</li>
             </ul>
             <p>
-              {/* LINK FUTURO: /insights/automacao-de-processos-para-empresas */}
-              Para entender o passo a passo da implementação dessa engrenagem em seus departamentos internos, conheça os detalhes de automação de processos para empresas: como implementar em qualquer setor.
+              Para entender o passo a passo da implementação dessa engrenagem em seus departamentos internos, conheça os detalhes de{' '}
+              <a
+                href="/insights/automacao-de-processos-para-empresas"
+                className="pillar-link"
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/automacao-de-processos-para-empresas'); }}
+              >automação de processos para empresas: como implementar em qualquer setor</a>.
             </p>
 
             <p>

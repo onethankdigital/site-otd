@@ -4,18 +4,47 @@ import { blogPosts } from "../data/blogPosts";
 const CATEGORIES = ["Todos", "GMN", "Website", "SEO", "Automação", "OTD"];
 
 // Mapeia dados do blogPosts para o formato interno do componente
-const POSTS = blogPosts.map((p, i) => ({
-  id: p.id,
-  featured: i === 0,
-  category: p.categoria,
-  date: "Mai 2026",
-  title: p.titulo,
-  excerpt: p.lead.slice(0, 140) + "...",
-  imagem: p.imagem,
-  readTime: p.meta.split(" ")[0] + " " + p.meta.split(" ")[1],
-  slug: p.slug,
-  comingSoon: false,
-}));
+const POSTS = [
+  {
+    id: 103,
+    featured: false,
+    category: "Automação",
+    date: "Jul 2026",
+    title: "Automação de Processos para Empresas: Como Implementar em Qualquer Setor",
+    excerpt: "Entenda o que é automação de processos, a diferença para a automação comercial e o passo a passo para implementar nos bastidores...",
+    imagem: "/hero-automacao-processos.webp",
+    readTime: "10 min",
+    slug: "automacao-de-processos-para-empresas",
+    path: "/insights/automacao-de-processos-para-empresas",
+    comingSoon: false,
+  },
+  {
+    id: 101,
+    featured: false,
+    category: "Automação",
+    date: "Jul 2026",
+    title: "Como Organizar os Leads do WhatsApp no CRM de Forma Automática",
+    excerpt: "Organizar leads do WhatsApp no CRM de forma automática exige três componentes: conexão oficial via API, regras de captura e criação automática...",
+    imagem: "/Blog/artigo-07-leads-whatsapp-crm.webp",
+    readTime: "4 min",
+    slug: "como-organizar-leads-whatsapp-no-crm",
+    path: "/insights/como-organizar-leads-whatsapp-no-crm",
+    comingSoon: false,
+  },
+  ...blogPosts.map((p, i) => ({
+    id: p.id,
+    featured: i === 0,
+    category: p.categoria,
+    date: "Mai 2026",
+    title: p.titulo,
+    excerpt: p.lead.slice(0, 140) + "...",
+    imagem: p.imagem,
+    readTime: p.meta.split(" ")[0] + " " + p.meta.split(" ")[1],
+    slug: p.slug,
+    path: `/blog/${p.slug}`,
+    comingSoon: false,
+  }))
+];
 
 const CAT_COLORS = {
   GMN: "#D42B2B",
@@ -357,7 +386,9 @@ export default function Blog() {
   `;
 
   function navigate(slug) {
-    window.history.pushState({}, "", `/blog/${slug}`);
+    const post = POSTS.find(p => p.slug === slug);
+    const targetPath = (post && post.path) ? post.path : `/blog/${slug}`;
+    window.history.pushState({}, "", targetPath);
     window.dispatchEvent(new PopStateEvent("popstate"));
   }
 

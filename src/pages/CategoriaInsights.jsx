@@ -34,7 +34,7 @@ const CATEGORY_MAP = {
 
 const STANDALONE_ARTICLES = [
   {
-    id: 102,
+    id: 105,
     categoria: "Automação",
     categorySlug: "automacao-crm",
     slug: "guia-automacao-digital",
@@ -42,10 +42,10 @@ const STANDALONE_ARTICLES = [
     titulo: "Automação Digital para Empresas B2B: O Guia Completo",
     meta: "Guia Técnico • Automação • One Thank Digital",
     lead: "Como estruturar a automação digital da sua empresa para gerar leads qualificados: WhatsApp integrado ao CRM, qualificação com IA e dados organizados sem trabalho manual.",
-    path: "/guia/automacao-digital/"
+    path: "/guia/automacao-digital"
   },
   {
-    id: 101,
+    id: 104,
     categoria: "Automação",
     categorySlug: "automacao-crm",
     slug: "como-organizar-leads-whatsapp-no-crm",
@@ -54,6 +54,17 @@ const STANDALONE_ARTICLES = [
     meta: "Leitura de 4 min • Automação • One Thank Digital",
     lead: "Organizar leads do WhatsApp no CRM de forma automática exige três componentes: uma conexão oficial via API entre o número comercial e o CRM, regras de captura que registram a origem e os dados do contato no primeiro toque, e a criação automática da oportunidade no funil de vendas.",
     path: "/insights/como-organizar-leads-whatsapp-no-crm"
+  },
+  {
+    id: 103,
+    categoria: "Automação",
+    categorySlug: "automacao-crm",
+    slug: "automacao-de-processos-para-empresas",
+    imagem: "/hero-automacao-processos.webp",
+    titulo: "Automação de Processos para Empresas: Como Implementar em Qualquer Setor",
+    meta: "Leitura de 10 min • Automação • One Thank Digital",
+    lead: "Entenda o que é automação de processos, a diferença para a automação comercial e o passo a passo para implementar nos bastidores da sua empresa sem inchar a equipe.",
+    path: "/insights/automacao-de-processos-para-empresas"
   }
 ];
 
