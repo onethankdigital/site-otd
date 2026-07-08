@@ -21,7 +21,38 @@ export default function GuiaListagem() {
       excerpt: "Aprenda a estruturar seu processo comercial de ponta a ponta: do WhatsApp conectado ao CRM via API oficial até a triagem inteligente com IA.",
       imagem: "/hero-automacao-digital.webp",
       readTime: "20 min de leitura",
-      path: "/guia/automacao-digital/"
+      path: "/guia/automacao-digital",
+      status: "ativo"
+    },
+    {
+      id: 2,
+      tag: "Google Meu Negócio",
+      title: "SEO Local & Google Meu Negócio: Domínio no Google Maps (Guia Prático)",
+      excerpt: "Como estruturar o NAP semântico, gerenciar avaliações 5 estrelas em escala e posicionar sua empresa entre os 3 primeiros do Local Pack.",
+      imagem: "/Blog/artigo-02-gmn-guia-completo.jpg",
+      readTime: "18 min de leitura",
+      path: "/guia/google-meu-negocio",
+      status: "ativo"
+    },
+    {
+      id: 3,
+      tag: "Websites Premium",
+      title: "Arquitetura Web & Criação de Sites B2B de Alta Conversão",
+      excerpt: "O manual definitivo de Core Web Vitals, estrutura AEO para Inteligências Artificiais e design executivo para captação corporativa.",
+      imagem: "/Blog/artigo-03-site-vs-instagram.jpg",
+      readTime: "Lançamento no trimestre",
+      path: "/servicos/criacao-de-sites",
+      status: "embreve"
+    },
+    {
+      id: 4,
+      tag: "SEO & Tráfego",
+      title: "Posicionamento Orgânico no Google e Estratégias de SEO B2B",
+      excerpt: "Como construir autoridade semântica, conquistar palavras-chave de fundo de funil e integrar tráfego orgânico com campanhas pagas.",
+      imagem: "/Blog/artigo-05-seo-vs-trafego-pago.jpg",
+      readTime: "Lançamento no trimestre",
+      path: "/servicos/seo-trafego-organico",
+      status: "embreve"
     }
   ];
 
@@ -290,7 +321,7 @@ export default function GuiaListagem() {
                       navigateTo(guide.path);
                     }}
                   >
-                    Ler guia completo <span className="guia-card-btn-arrow">→</span>
+                    {guide.status === 'ativo' ? 'Ler guia completo' : 'Conhecer serviço do pilar'} <span className="guia-card-btn-arrow">→</span>
                   </a>
                 </div>
               </article>

@@ -26,6 +26,7 @@ const sitemapPaths = [
   '/insights/automacao-de-processos-para-empresas',
   '/guia',
   '/guia/automacao-digital',
+  '/guia/google-meu-negocio',
   '/insights/categoria/automacao-crm',
   '/privacidade',
   '/termos'
@@ -47,6 +48,7 @@ const prerenderPaths = [
   '/insights/automacao-de-processos-para-empresas',
   '/guia',
   '/guia/automacao-digital',
+  '/guia/google-meu-negocio',
   '/insights/categoria/automacao-crm',
   '/privacidade',
   '/termos'

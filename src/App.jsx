@@ -31,6 +31,7 @@ import InsightWhatsAppCRM from './pages/InsightWhatsAppCRM';
 import InsightAutomacaoProcessos from './pages/InsightAutomacaoProcessos';
 import InsightAutomacaoComercial from './pages/InsightAutomacaoComercial';
 import PillarAutomacaoDigital from './pages/PillarAutomacaoDigital';
+import PillarGoogleMeuNegocio from './pages/PillarGoogleMeuNegocio';
 import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
 
@@ -350,6 +351,23 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <PillarAutomacaoDigital />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/guia/google-meu-negocio' ||
+    currentPath === '/guia/google-meu-negocio/'
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <PillarGoogleMeuNegocio />
         </Suspense>
         <WhatsAppButton />
       </div>
