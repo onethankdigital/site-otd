@@ -12,8 +12,8 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     .fb { margin-bottom: clamp(48px,7vw,96px); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
     .fb-logo img { height: clamp(56px,7vw,90px); width: auto; display: block; margin-bottom: 16px; }
     .fb-tag { font-size: clamp(15px,1.2vw,18px); color: #999; letter-spacing: 2px; text-transform: uppercase; }
-    .fb-stmt { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px,3.5vw,56px); line-height: 1; letter-spacing: 1px; color: #1c1c1c; text-align: right; }
-    .fb-stmt em { color: #D42B2B; font-style: normal; }
+    .fb-stmt { font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px,3.5vw,56px); line-height: 1.1; letter-spacing: 1px; color: #f5f5f5; text-align: right; }
+    .fb-stmt .stmt-red { color: #e0040b; font-style: normal; }
 
     .fdiv { height: 2px; background: linear-gradient(to right,#D42B2B 20%,#111); margin-bottom: clamp(48px,6vw,80px); }
 
@@ -131,9 +131,10 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
               <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }}><img src="/logo.svg" alt="One Thank Digital" /></a>
               <div className="fb-tag">Presença digital estruturada.</div>
             </div>
-            <div className="fb-stmt" aria-hidden="true">
+            <div className="fb-stmt" aria-label="Somos Presença. Somos Comunicação. Somos Estrutura.">
               SOMOS PRESENÇA.<br />
-              <em>SOMOS COMUNICAÇÃO.</em>
+              SOMOS COMUNICAÇÃO.<br />
+              <span className="stmt-red">SOMOS ESTRUTURA.</span>
             </div>
           </div>
 

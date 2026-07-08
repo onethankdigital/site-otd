@@ -27,6 +27,7 @@ const panelsData = [
     id: '03',
     title: 'SOMOS PRESENÇA.',
     subtitle: 'SOMOS COMUNICAÇÃO.',
+    third: 'SOMOS ESTRUTURA.',
     desc: 'Comunicação é estrutura.\nEstrutura é posicionamento.\nPosicionamento é resultado.',
     videoColor: 'bg-[#050505]',
     visual: 'ekg',
@@ -113,7 +114,14 @@ const HorizontalScroll = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
                 )}
                 <h2 className="font-heading font-bold text-[3rem] md:text-[5vw] uppercase leading-[0.9] tracking-tighter max-w-4xl">
                   {panel.title} <br />
-                  <span className="text-accent">{panel.subtitle}</span>
+                  {panel.third ? (
+                    <>
+                      {panel.subtitle}<br />
+                      <span className="text-accent">{panel.third}</span>
+                    </>
+                  ) : (
+                    <span className="text-accent">{panel.subtitle}</span>
+                  )}
                 </h2>
 
                 <p className="font-mono text-base md:text-xl max-w-2xl mt-6 opacity-80 leading-relaxed border-l border-accent pl-6 whitespace-pre-line">
