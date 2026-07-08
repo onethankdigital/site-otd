@@ -25,6 +25,13 @@ function processDirectory(dir) {
       const targetTag = '<link rel="canonical" href="https://onethank.com.br/" data-rh="true">';
       html = html.replace(targetTag, '');
       
+      // Remover tag title e description padrão da home para que cada página tenha apenas o seu title/description específico
+      const defaultTitle = '<title data-rh="true">Agência de Marketing Digital em Santo André | One Thank Digital</title>';
+      html = html.replace(defaultTitle, '');
+      
+      const defaultDesc = '<meta name="description" content="Agência de marketing digital e comunicação no Grande ABC. Estruturamos sua presença digital com sites premium, SEO, Google Meu Negócio e automações." data-rh="true">';
+      html = html.replace(defaultDesc, '');
+      
       // Injetar preconnects para Google Fonts no head
       const preconnects = `
     <link rel="preconnect" href="https://fonts.googleapis.com">
