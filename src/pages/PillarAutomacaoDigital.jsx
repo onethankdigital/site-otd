@@ -29,6 +29,10 @@ export default function PillarAutomacaoDigital() {
     {
       q: "Quanto tempo leva para ver resultado?",
       a: "A captura e organização dos leads no funil do CRM geram resultados imediatos em controle operacional a partir do dia de ativação. Para a atração de leads orgânicos consistentes por meio das páginas e clusters de busca, o tempo estimado é de 3 a 6 meses de indexação."
+    },
+    {
+      q: "Qual a diferença entre automação comercial e automação de processos?",
+      a: "A automação comercial cuida da frente que gera receita: captura os leads que chegam pelos anúncios e pelo WhatsApp, organiza tudo no CRM e garante resposta rápida a quem procurou a empresa. A automação de processos cuida dos bastidores: os fluxos administrativos e operacionais que acontecem depois da venda, como emissão de documentos, integração entre sistemas e rotinas internas. Uma empresa escalável precisa das duas — a primeira para vender mais, a segunda para entregar bem sem inchar a equipe."
     }
   ];
 
@@ -531,7 +535,7 @@ export default function PillarAutomacaoDigital() {
             <h2>O que é Automação Digital e seu Papel Estratégico</h2>
             
             <p>
-              A automação digital no ecossistema de vendas corporativas é a implementação técnica de fluxos estruturados onde a tecnologia realiza o tráfego e a classificação das informações operacionais sem a necessidade de intervenção humana contínua. Em termos práticos, significa desenhar caminhos inteligentes para que os dados do lead nasçam integrados à infraestrutura de gestão comercial da organização, <strong>garantindo que nenhuma etapa da jornada de trabalho</strong> ocorra sem o devido registro seguro.
+              A automação digital no ecossistema de vendas corporativas é a implementação técnica de fluxos estruturados onde a tecnologia realiza o tráfego e a classificação das informações operacionais sem a necessidade de intervenção humana contínua. Em termos práticos, significa desenhar caminhos inteligentes para que os dados do lead nasçam integrados à infraestrutura de gestão comercial da organização, <strong>garantindo que nenhuma etapa da jornada comercial</strong> ocorra sem o devido registro.
             </p>
 
             <p>
@@ -556,7 +560,7 @@ export default function PillarAutomacaoDigital() {
             <h2>As Duas Vertentes da Eficiência: Automação Comercial vs. Automação de Processos</h2>
 
             <p>
-              A automação digital de uma operação B2B divide-se em duas grandes frentes que acionam alavancas financeiras distintas no P&amp;L da companhia: o <strong>Front-Office</strong> (geração de receita) e o <strong>Back-Office</strong> (preservação de margem). Uma empresa escalável necessita de ambas as engrenagens integradas para não criar um negócio que vende muito, mas implode na execução.
+              A automação digital de uma operação B2B divide-se em duas grandes frentes que acionam alavancas financeiras distintas no resultado financeiro da empresa: a <strong>frente comercial</strong> (a parte que gera receita) e os <strong>bastidores operacionais</strong> (a parte que protege a margem). Uma empresa escalável necessita de ambas as engrenagens integradas para não criar um negócio que vende muito, mas implode na execução.
             </p>
 
             <h3>1. Automação Comercial: Tração e Conversão de Demanda</h3>
@@ -564,7 +568,7 @@ export default function PillarAutomacaoDigital() {
               Esta vertente é responsável por garantir que nenhum centavo investido em marketing seja desperdiçado. Ela padroniza a porta de entrada da empresa, eliminando o trabalho braçal do time de vendas.
             </p>
             <ul className="pillar-list">
-              <li><strong>Escopo de Atuação:</strong> Interceptação de leads via webhooks, conexão com a WhatsApp Cloud API, enriquecimento de dados cadastrais, distribuição automatizada de contatos e triagem inicial preditiva.</li>
+              <li><strong>Escopo de Atuação:</strong> Captura automática dos leads no instante do primeiro contato, conexão oficial com o WhatsApp, enriquecimento de dados cadastrais, distribuição automatizada de contatos e triagem inicial preditiva.</li>
               <li><strong>O Objetivo Real:</strong> Reduzir o tempo de resposta para menos de <strong>5 minutos</strong> e centralizar a inteligência comercial no CRM, blindando os dados da empresa contra a rotatividade de funcionários.</li>
             </ul>
             <p>
@@ -581,16 +585,12 @@ export default function PillarAutomacaoDigital() {
               Esta vertente entra em ação nos bastidores operacionais, lidando com os fluxos pós-venda e administrativos. Ela garante que a empresa consiga absorver novos clientes sem inflar a folha de pagamento.
             </p>
             <ul className="pillar-list">
-              <li><strong>Escopo de Atuação:</strong> Passagem de bastão do comercial para o operacional, criação automática de projetos, conciliação financeira, emissão de notas fiscais por gatilhos de pagamento, sincronização de sistemas legados (ERPs) e esteiras de recursos humanos.</li>
+              <li><strong>Escopo de Atuação:</strong> Passagem de bastão do comercial para o operacional, criação automática de projetos, conciliação financeira, emissão de notas fiscais por gatilhos de pagamento, integração com os sistemas de gestão que a empresa já usa e rotinas de admissão e departamento pessoal.</li>
               <li><strong>O Objetivo Real:</strong> Eliminar gargalos invisíveis de orquestração, mitigar o erro humano em tarefas repetitivas e aumentar a velocidade de entrega do serviço.</li>
             </ul>
             <p>
-              Para entender o passo a passo da implementação dessa engrenagem em seus departamentos internos, conheça os detalhes de{' '}
-              <a
-                href="/servicos/automacao-digital"
-                className="pillar-link"
-                onClick={(e) => { e.preventDefault(); navigateTo('/servicos/automacao-digital'); }}
-              >automação de processos para empresas: como implementar em qualquer setor</a>.
+              {/* LINK FUTURO: /insights/automacao-de-processos-para-empresas */}
+              Para entender o passo a passo da implementação dessa engrenagem em seus departamentos internos, conheça os detalhes de automação de processos para empresas: como implementar em qualquer setor.
             </p>
 
             <p>
@@ -760,7 +760,7 @@ export default function PillarAutomacaoDigital() {
               Atualmente, quando um lead chega pelo WhatsApp comercial, o vendedor atende a conversa, mas só insere a oportunidade no CRM se sobrar tempo no final do dia — o que raramente acontece. Dados de prospecção essenciais se perdem nas conversas diárias, e o gestor comercial fica completamente cego, incapaz de saber se as campanhas de Google Ads ou Instagram estão gerando leads reais ou apenas contatos casuais sem valor de negócio.
             </p>
             <p>
-              A camada de captura atua como um ouvinte de webhooks. No milissegundo em que o lead envia a primeira mensagem, nossa <strong>camada de integração invisível</strong> intercepta o evento, organiza os dados de origem e abastece os sistemas centrais da empresa automaticamente. Em paralelo, as UTMs de marketing acumuladas nos cookies de navegação são cruzadas e formatadas em um payload limpo, que aciona a API do CRM para criar ou atualizar o lead de forma silenciosa.
+              A camada de captura funciona como um radar. No instante em que o lead envia a primeira mensagem, o sistema identifica o contato, reconhece qual anúncio ou campanha trouxe aquela pessoa e registra tudo automaticamente no CRM — sem que ninguém precise digitar nada. A informação nasce completa e organizada no primeiro toque.
             </p>
 
             {/* DIAGRAMA 3 - A JORNADA DO LEAD */}
