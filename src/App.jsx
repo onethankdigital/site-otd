@@ -29,6 +29,7 @@ const ServicosAutomacao = lazy(() => import('./pages/ServicosAutomacao'));
 const GoogleMeuNegocio = lazy(() => import('./pages/GoogleMeuNegocio'));
 import InsightWhatsAppCRM from './pages/InsightWhatsAppCRM';
 import InsightAutomacaoProcessos from './pages/InsightAutomacaoProcessos';
+import InsightAutomacaoComercial from './pages/InsightAutomacaoComercial';
 import PillarAutomacaoDigital from './pages/PillarAutomacaoDigital';
 import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
@@ -363,6 +364,23 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <CategoriaInsights />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (
+    currentPath === '/insights/automacao-comercial-o-que-e' ||
+    currentPath === '/insights/automacao-comercial-o-que-e/'
+  ) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <InsightAutomacaoComercial />
         </Suspense>
         <WhatsAppButton />
       </div>

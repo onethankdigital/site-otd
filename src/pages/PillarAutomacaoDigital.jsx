@@ -579,6 +579,14 @@ export default function PillarAutomacaoDigital() {
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/como-organizar-leads-whatsapp-no-crm'); }}
               >Manual de Automação Comercial: Como Organizar os Leads do WhatsApp no CRM</a>.
             </p>
+            <p>
+              Para entender essa vertente em profundidade — o que é, o que não é e por onde começar —, veja o guia de{' '}
+              <a
+                href="/insights/automacao-comercial-o-que-e"
+                className="pillar-link"
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/automacao-comercial-o-que-e'); }}
+              >automação comercial: o que é e como implementar</a>.
+            </p>
 
             <h3>2. Automação de Processos: Eficiência e Proteção de Margem</h3>
             <p>

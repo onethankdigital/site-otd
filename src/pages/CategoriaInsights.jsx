@@ -45,6 +45,17 @@ const STANDALONE_ARTICLES = [
     path: "/guia/automacao-digital"
   },
   {
+    id: 106,
+    categoria: "Automação",
+    categorySlug: "automacao-crm",
+    slug: "automacao-comercial-o-que-e",
+    imagem: "/hero-automacao-comercial.webp",
+    titulo: "Automação Comercial: O Que É, O Que Não É e Como Implementar",
+    meta: "Leitura de 10 min • Automação • One Thank Digital",
+    lead: "Entenda o que é automação comercial (e por que não é automação de PDV), como ela captura e organiza cada oportunidade de venda e por onde começar a implementar.",
+    path: "/insights/automacao-comercial-o-que-e"
+  },
+  {
     id: 104,
     categoria: "Automação",
     categorySlug: "automacao-crm",

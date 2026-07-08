@@ -6,6 +6,19 @@ const CATEGORIES = ["Todos", "GMN", "Website", "SEO", "Automação", "OTD"];
 // Mapeia dados do blogPosts para o formato interno do componente
 const POSTS = [
   {
+    id: 104,
+    featured: false,
+    category: "Automação",
+    date: "Jul 2026",
+    title: "Automação Comercial: O Que É, O Que Não É e Como Implementar",
+    excerpt: "Entenda o que é automação comercial (e por que não é automação de PDV), como ela captura e organiza cada oportunidade de venda e por onde começar a implementar.",
+    imagem: "/hero-automacao-comercial.webp",
+    readTime: "10 min",
+    slug: "automacao-comercial-o-que-e",
+    path: "/insights/automacao-comercial-o-que-e",
+    comingSoon: false,
+  },
+  {
     id: 103,
     featured: false,
     category: "Automação",
