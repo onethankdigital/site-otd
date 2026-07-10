@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Historia({ onClose, onOpenQuiz }) {
   useEffect(() => {
@@ -301,6 +302,9 @@ export default function Historia({ onClose, onOpenQuiz }) {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/historia" />
+      </Helmet>
       <style>{styles}</style>
       <div className="historia-wrap">
 

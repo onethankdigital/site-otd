@@ -474,7 +474,7 @@ export default function PillarDesenvolvimentoWeb() {
             <nav className="web-breadcrumb" aria-label="Breadcrumb">
               <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }}>Home</a>
               <span className="web-breadcrumb-sep">&gt;</span>
-              <a href="/guia" onClick={(e) => { e.preventDefault(); navigateTo('/guia'); }}>Guias Práticos</a>
+              <a href="/guia/" onClick={(e) => { e.preventDefault(); navigateTo('/guia'); }}>Guias Práticos</a>
               <span className="web-breadcrumb-sep">&gt;</span>
               <span>Criação de Sites B2B</span>
             </nav>
@@ -584,7 +584,7 @@ export default function PillarDesenvolvimentoWeb() {
             </div>
             <div className="web-spokes-grid">
               <a
-                href="/insights/site-ou-instagram-qual-mais-importante"
+                href="/insights/site-ou-instagram-qual-mais-importante/"
                 className="web-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/site-ou-instagram-qual-mais-importante'); }}
               >
@@ -596,7 +596,7 @@ export default function PillarDesenvolvimentoWeb() {
               </a>
 
               <a
-                href="/insights/por-que-site-nao-aparece-google"
+                href="/insights/por-que-site-nao-aparece-google/"
                 className="web-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/por-que-site-nao-aparece-google'); }}
               >
@@ -608,7 +608,7 @@ export default function PillarDesenvolvimentoWeb() {
               </a>
 
               <a
-                href="/insights/4-pilares-empresa-encontrada-online"
+                href="/insights/4-pilares-empresa-encontrada-online/"
                 className="web-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/4-pilares-empresa-encontrada-online'); }}
               >
@@ -655,14 +655,14 @@ export default function PillarDesenvolvimentoWeb() {
             </p>
             <div className="web-cta-buttons">
               <a
-                href="/diagnostico"
+                href="/diagnostico/"
                 className="btn-red"
                 onClick={(e) => { e.preventDefault(); navigateTo('/diagnostico'); }}
               >
                 Fazer Diagnóstico Gratuito →
               </a>
               <a
-                href="/servicos/criacao-de-sites"
+                href="/servicos/criacao-de-sites/"
                 className="btn-outline"
                 onClick={(e) => { e.preventDefault(); navigateTo('/servicos/criacao-de-sites'); }}
               >

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Privacidade() {
   const css = `
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap');
@@ -35,6 +37,9 @@ export default function Privacidade() {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/privacidade/" />
+      </Helmet>
       <style>{css}</style>
       <div className="pw">
 

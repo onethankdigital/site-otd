@@ -474,7 +474,7 @@ export default function PillarSEOTrafego() {
             <nav className="seo-breadcrumb" aria-label="Breadcrumb">
               <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }}>Home</a>
               <span className="seo-breadcrumb-sep">&gt;</span>
-              <a href="/guia" onClick={(e) => { e.preventDefault(); navigateTo('/guia'); }}>Guias Práticos</a>
+              <a href="/guia/" onClick={(e) => { e.preventDefault(); navigateTo('/guia'); }}>Guias Práticos</a>
               <span className="seo-breadcrumb-sep">&gt;</span>
               <span>SEO & Tráfego Orgânico</span>
             </nav>
@@ -580,7 +580,7 @@ export default function PillarSEOTrafego() {
             </div>
             <div className="seo-spokes-grid">
               <a
-                href="/insights/seo-organico-vs-trafego-pago"
+                href="/insights/seo-organico-vs-trafego-pago/"
                 className="seo-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/seo-organico-vs-trafego-pago'); }}
               >
@@ -592,7 +592,7 @@ export default function PillarSEOTrafego() {
               </a>
 
               <a
-                href="/insights/concorrente-aparece-antes-no-google"
+                href="/insights/concorrente-aparece-antes-no-google/"
                 className="seo-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/concorrente-aparece-antes-no-google'); }}
               >
@@ -604,7 +604,7 @@ export default function PillarSEOTrafego() {
               </a>
 
               <a
-                href="/insights/presenca-digital-estruturada"
+                href="/insights/presenca-digital-estruturada/"
                 className="seo-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/presenca-digital-estruturada'); }}
               >
@@ -651,14 +651,14 @@ export default function PillarSEOTrafego() {
             </p>
             <div className="seo-cta-buttons">
               <a
-                href="/diagnostico"
+                href="/diagnostico/"
                 className="btn-red"
                 onClick={(e) => { e.preventDefault(); navigateTo('/diagnostico'); }}
               >
                 Fazer Diagnóstico Gratuito →
               </a>
               <a
-                href="/servicos/seo-trafego-organico"
+                href="/servicos/seo-trafego-organico/"
                 className="btn-outline"
                 onClick={(e) => { e.preventDefault(); navigateTo('/servicos/seo-trafego-organico'); }}
               >

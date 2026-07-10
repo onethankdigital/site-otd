@@ -474,7 +474,7 @@ export default function PillarGoogleMeuNegocio() {
             <nav className="gmn-breadcrumb" aria-label="Breadcrumb">
               <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('/'); }}>Home</a>
               <span className="gmn-breadcrumb-sep">&gt;</span>
-              <a href="/guia" onClick={(e) => { e.preventDefault(); navigateTo('/guia'); }}>Guias Práticos</a>
+              <a href="/guia/" onClick={(e) => { e.preventDefault(); navigateTo('/guia'); }}>Guias Práticos</a>
               <span className="gmn-breadcrumb-sep">&gt;</span>
               <span>Google Meu Negócio & SEO Local</span>
             </nav>
@@ -580,7 +580,7 @@ export default function PillarGoogleMeuNegocio() {
             </div>
             <div className="gmn-spokes-grid">
               <a
-                href="/insights/empresa-nao-aparece-google-maps"
+                href="/insights/empresa-nao-aparece-google-maps/"
                 className="gmn-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/empresa-nao-aparece-google-maps'); }}
               >
@@ -592,7 +592,7 @@ export default function PillarGoogleMeuNegocio() {
               </a>
 
               <a
-                href="/insights/google-meu-negocio-guia-completo-2026"
+                href="/insights/google-meu-negocio-guia-completo-2026/"
                 className="gmn-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/google-meu-negocio-guia-completo-2026'); }}
               >
@@ -604,7 +604,7 @@ export default function PillarGoogleMeuNegocio() {
               </a>
 
               <a
-                href="/insights/concorrente-aparece-antes-no-google"
+                href="/insights/concorrente-aparece-antes-no-google/"
                 className="gmn-spoke-card"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/concorrente-aparece-antes-no-google'); }}
               >
@@ -651,14 +651,14 @@ export default function PillarGoogleMeuNegocio() {
             </p>
             <div className="gmn-cta-buttons">
               <a
-                href="/diagnostico"
+                href="/diagnostico/"
                 className="btn-red"
                 onClick={(e) => { e.preventDefault(); navigateTo('/diagnostico'); }}
               >
                 Fazer Diagnóstico Gratuito →
               </a>
               <a
-                href="/servicos/google-meu-negocio"
+                href="/servicos/google-meu-negocio/"
                 className="btn-outline"
                 onClick={(e) => { e.preventDefault(); navigateTo('/servicos/google-meu-negocio'); }}
               >

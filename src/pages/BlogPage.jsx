@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { blogPosts } from "../data/blogPosts";
+import { Helmet } from "react-helmet-async";
 
 const CATEGORIES = ["Todos", "GMN", "Website", "SEO", "Automação", "OTD"];
 
@@ -407,6 +408,9 @@ export default function Blog() {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/insights/" />
+      </Helmet>
       <style>{styles}</style>
       <div className="blog-wrap">
 

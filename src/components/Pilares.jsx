@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const PILLARS = [
   {
@@ -339,6 +340,9 @@ export default function Pilares({ onOpenQuiz, onClose }) {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/pilares" />
+      </Helmet>
       <style>{styles}</style>
       <div className="pilares-wrap">
         {/* NAVBAR OVERLAY (Logo & Menu) */}

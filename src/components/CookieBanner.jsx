@@ -142,7 +142,7 @@ export default function CookieBanner() {
             <div className="ck-title">Este site usa cookies</div>
             <div className="ck-desc">
               Utilizamos cookies para melhorar sua experiência e analisar o tráfego. Saiba mais na nossa{" "}
-              <a href="/privacidade">Política de Privacidade</a>.
+              <a href="/privacidade/">Política de Privacidade</a>.
             </div>
           </div>
           <div className="ck-actions">

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Termos() {
   const css = `
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap');
@@ -30,6 +32,9 @@ export default function Termos() {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/termos/" />
+      </Helmet>
       <style>{css}</style>
       <div className="tw">
 
@@ -105,7 +110,7 @@ export default function Termos() {
           <div className="doc-section">
             <h2 className="doc-h2">8. COOKIES</h2>
             <p className="doc-p">
-              Este site utiliza cookies para melhorar a experiência do usuário e analisar o tráfego. Ao continuar navegando, você concorda com o uso de cookies conforme nossa <a href="/privacidade" style={{color:"#D42B2B",textDecoration:"none"}}>Política de Privacidade</a>.
+              Este site utiliza cookies para melhorar a experiência do usuário e analisar o tráfego. Ao continuar navegando, você concorda com o uso de cookies conforme nossa <a href="/privacidade/" style={{color:"#D42B2B",textDecoration:"none"}}>Política de Privacidade</a>.
             </p>
           </div>
 

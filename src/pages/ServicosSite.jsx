@@ -509,7 +509,7 @@ export default function ServicosSite() {
           <meta property="og:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="Site que converte visitantes em clientes. Mobile-first, SEO técnico e rápido para empresas B2B no ABC Paulista." />
           <meta property="og:url" content="https://onethank.com.br/servicos/criacao-de-sites" />
-          <link rel="canonical" href="https://onethank.com.br/servicos/criacao-de-sites" />
+          <link rel="canonical" href="https://onethank.com.br/servicos/criacao-de-sites/" />
           <script type="application/ld+json">
             {JSON.stringify([
               {
@@ -631,10 +631,10 @@ export default function ServicosSite() {
             </div>
 
             <p className="lp-internal-link">
-              Um site bem estruturado potencializa o <a href="/servicos/google-meu-negocio">Google Meu Negócio</a> e é a base para o <a href="/servicos/seo-trafego-organico">rankeamento orgânico</a> da sua empresa.
+              Um site bem estruturado potencializa o <a href="/servicos/google-meu-negocio/">Google Meu Negócio</a> e é a base para o <a href="/servicos/seo-trafego-organico/">rankeamento orgânico</a> da sua empresa.
             </p>
             <div style={{ textAlign: 'center', marginTop: '64px' }}>
-              <a href="/diagnostico" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+              <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
             </div>
           </div>
         </section>
@@ -678,9 +678,9 @@ export default function ServicosSite() {
             <div className="lp-other-services">
               <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
               <div className="lp-other-services-list">
-                <a href="/servicos/google-meu-negocio" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>
-                <a href="/servicos/seo-trafego-organico" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
-                <a href="/servicos/automacao-digital" className="lp-other-services-btn">AUTOMAÇÃO E CRM</a>
+                <a href="/servicos/google-meu-negocio/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>
+                <a href="/servicos/seo-trafego-organico/" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
+                <a href="/servicos/automacao-digital/" className="lp-other-services-btn">AUTOMAÇÃO E CRM</a>
               </div>
             </div>
           </div>
@@ -691,7 +691,7 @@ export default function ServicosSite() {
           <div className="lp-container">
             <h2 className="lp-cases-title">NÃO ACREDITE APENAS NA <span>NOSSA PALAVRA.</span></h2>
             <div className="lp-cases-desc">Veja o padrão técnico dos projetos, sites e posicionamentos que já entregamos para escritórios, clínicas e indústrias do ABC Paulista.</div>
-            <a href="/cases" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
+            <a href="/cases/" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
           </div>
         </section>
 
@@ -727,7 +727,7 @@ export default function ServicosSite() {
             <div className="lp-cta-text">
               PRONTO PARA ESTRUTURAR <br /><em>O SEU SITE PROFISSIONAL</em>
             </div>
-            <a href="/diagnostico" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+            <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
           </div>
         </section>
       </div>

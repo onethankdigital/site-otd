@@ -509,7 +509,7 @@ export default function ServicosAutomacao() {
           <meta property="og:title" content="Automação Digital para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="WhatsApp e CRM automatizados para nunca mais perder lead fora do horário. Para escritórios, clínicas e B2B no ABC Paulista." />
           <meta property="og:url" content="https://onethank.com.br/servicos/automacao-digital" />
-          <link rel="canonical" href="https://onethank.com.br/servicos/automacao-digital" />
+          <link rel="canonical" href="https://onethank.com.br/servicos/automacao-digital/" />
           <script type="application/ld+json">
             {JSON.stringify([
               {
@@ -562,7 +562,7 @@ export default function ServicosAutomacao() {
             <h1 className="lp-h1">AUTOMAÇÃO DIGITAL DE WHATSAPP E CRM PARA EMPRESAS B2B EM SANTO ANDRÉ</h1>
             <p className="lp-intro">
               A One Thank Digital implementa automação de WhatsApp, CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia, sem depender do seu horário ou da sua equipe. Quer entender o método a fundo antes de conversar? <a 
-                href="/guia/automacao-digital" 
+                href="/guia/automacao-digital/" 
                 className="text-accent underline"
                 onClick={(e) => {
                   e.preventDefault();
@@ -639,10 +639,10 @@ export default function ServicosAutomacao() {
             </div>
 
             <p className="lp-internal-link">
-              A automação é mais poderosa quando integrada ao seu <a href="/servicos/criacao-de-sites">site</a> e ao <a href="/servicos/google-meu-negocio">Google Meu Negócio</a> — capturando e convertendo leads em todo o funil.
+              A automação é mais poderosa quando integrada ao seu <a href="/servicos/criacao-de-sites/">site</a> e ao <a href="/servicos/google-meu-negocio/">Google Meu Negócio</a> — capturando e convertendo leads em todo o funil.
             </p>
             <div style={{ textAlign: 'center', marginTop: '64px' }}>
-              <a href="/diagnostico" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+              <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
             </div>
           </div>
         </section>
@@ -686,9 +686,9 @@ export default function ServicosAutomacao() {
             <div className="lp-other-services">
               <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
               <div className="lp-other-services-list">
-                <a href="/servicos/google-meu-negocio" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>
-                <a href="/servicos/criacao-de-sites" className="lp-other-services-btn">CRIAÇÃO DE SITES</a>
-                <a href="/servicos/seo-trafego-organico" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
+                <a href="/servicos/google-meu-negocio/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>
+                <a href="/servicos/criacao-de-sites/" className="lp-other-services-btn">CRIAÇÃO DE SITES</a>
+                <a href="/servicos/seo-trafego-organico/" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
               </div>
             </div>
           </div>
@@ -699,7 +699,7 @@ export default function ServicosAutomacao() {
           <div className="lp-container">
             <h2 className="lp-cases-title">NÃO ACREDITE APENAS NA <span>NOSSA PALAVRA.</span></h2>
             <div className="lp-cases-desc">Veja o padrão técnico dos projetos e sistemas que já entregamos para escritórios, clínicas e empresas do ABC Paulista.</div>
-            <a href="/cases" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
+            <a href="/cases/" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
           </div>
         </section>
 
@@ -735,7 +735,7 @@ export default function ServicosAutomacao() {
             <div className="lp-cta-text">
               PRONTO PARA ESTRUTURAR <br /><em>A SUA AUTOMAÇÃO DIGITAL</em>
             </div>
-            <a href="/diagnostico" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+            <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
           </div>
         </section>
       </div>

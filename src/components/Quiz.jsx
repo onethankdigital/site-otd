@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 const BRAND = {
   red: "#D42B2B",
@@ -864,6 +865,9 @@ export default function Quiz({ onClose }) {
 
   return (
     <div style={{ position: "fixed", inset: 0, zIndex: 9999, overflowY: "auto", background: "#080808" }}>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/diagnostico" />
+      </Helmet>
       <style>{styles}</style>
       <div className="noise" />
       <div className="grid-bg" />

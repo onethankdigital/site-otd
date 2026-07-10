@@ -509,7 +509,7 @@ export default function ServicosGMN() {
           <meta property="og:title" content="Google Meu Negócio para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="Apareça no Google Maps quando seu cliente decide. Perfil verificado e otimizado para Santo André e ABC Paulista." />
           <meta property="og:url" content="https://onethank.com.br/servicos/google-meu-negocio" />
-          <link rel="canonical" href="https://onethank.com.br/servicos/google-meu-negocio" />
+          <link rel="canonical" href="https://onethank.com.br/servicos/google-meu-negocio/" />
           <script type="application/ld+json">
             {JSON.stringify([
               {
@@ -631,10 +631,10 @@ export default function ServicosGMN() {
             </div>
 
             <p className="lp-internal-link">
-              O Google Meu Negócio é mais eficiente quando combinado com um <a href="/servicos/criacao-de-sites">site profissional</a> e <a href="/servicos/seo-trafego-organico">SEO orgânico</a> estruturados.
+              O Google Meu Negócio é mais eficiente quando combinado com um <a href="/servicos/criacao-de-sites/">site profissional</a> e <a href="/servicos/seo-trafego-organico/">SEO orgânico</a> estruturados.
             </p>
             <div style={{ textAlign: 'center', marginTop: '64px' }}>
-              <a href="/diagnostico" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+              <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
             </div>
           </div>
         </section>
@@ -678,9 +678,9 @@ export default function ServicosGMN() {
             <div className="lp-other-services">
               <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
               <div className="lp-other-services-list">
-                <a href="/servicos/criacao-de-sites" className="lp-other-services-btn">CRIAÇÃO DE SITES</a>
-                <a href="/servicos/seo-trafego-organico" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
-                <a href="/servicos/automacao-digital" className="lp-other-services-btn">AUTOMAÇÃO E CRM</a>
+                <a href="/servicos/criacao-de-sites/" className="lp-other-services-btn">CRIAÇÃO DE SITES</a>
+                <a href="/servicos/seo-trafego-organico/" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
+                <a href="/servicos/automacao-digital/" className="lp-other-services-btn">AUTOMAÇÃO E CRM</a>
               </div>
             </div>
           </div>
@@ -691,7 +691,7 @@ export default function ServicosGMN() {
           <div className="lp-container">
             <h2 className="lp-cases-title">NÃO ACREDITE APENAS NA <span>NOSSA PALAVRA.</span></h2>
             <div className="lp-cases-desc">Veja o padrão técnico dos projetos e posicionamentos que já entregamos para escritórios, clínicas e empresas do ABC Paulista.</div>
-            <a href="/cases" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
+            <a href="/cases/" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
           </div>
         </section>
 
@@ -727,7 +727,7 @@ export default function ServicosGMN() {
             <div className="lp-cta-text">
               PRONTO PARA ESTRUTURAR <br /><em>O SEU GOOGLE MEU NEGÓCIO</em>
             </div>
-            <a href="/diagnostico" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+            <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
           </div>
         </section>
       </div>

@@ -283,7 +283,7 @@ export default function InsightAutomacaoProcessos() {
       <Helmet>
         <title>Automação de Processos: O Que É e Como Implementar | One Thank Digital</title>
         <meta name="description" content="Entenda o que é automação de processos, a diferença para a automação comercial e o passo a passo para implementar nos bastidores da sua empresa sem inchar a equipe." />
-        <link rel="canonical" href="https://onethank.com.br/insights/automacao-de-processos-para-empresas" />
+        <link rel="canonical" href="https://onethank.com.br/insights/automacao-de-processos-para-empresas/" />
         <meta property="og:title" content="Automação de Processos: O Que É e Como Implementar | One Thank Digital" />
         <meta property="og:description" content="Entenda o que é automação de processos, a diferença para a automação comercial e o passo a passo para implementar nos bastidores da sua empresa sem inchar a equipe." />
         <meta property="og:url" content="https://onethank.com.br/insights/automacao-de-processos-para-empresas" />
@@ -375,7 +375,7 @@ export default function InsightAutomacaoProcessos() {
         <header className="insight-hero">
           <div className="insight-hero-inner">
             <a 
-              href="/insights/categoria/automacao-crm" 
+              href="/insights/categoria/automacao-crm/" 
               className="insight-tag"
               onClick={(e) => {
                 e.preventDefault();
@@ -431,7 +431,7 @@ export default function InsightAutomacaoProcessos() {
             <div style={{ fontSize: 16, color: '#e5e5e5', lineHeight: 1.6 }}>
               Para aprofundar sua estratégia com nossa metodologia completa, acesse o nosso pilar definitivo de{' '}
               <a 
-                href="/guia/automacao-digital"
+                href="/guia/automacao-digital/"
                 onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
                 style={{ color: '#e0040b', fontWeight: 600, textDecoration: 'underline' }}
               >
@@ -466,7 +466,7 @@ export default function InsightAutomacaoProcessos() {
             </p>
             <p>
               A <strong>automação comercial</strong> atua antes e durante a venda. É ela que captura o lead que clicou no anúncio, registra a origem de cada contato, responde na hora e organiza as oportunidades no funil. O objetivo dela é claro: não deixar nenhuma oportunidade escapar. Ela é a porta de entrada da receita — e por isso costuma ser o primeiro investimento de quem está estruturando a operação, como mostramos na nossa <a 
-                href="/guia/automacao-digital" 
+                href="/guia/automacao-digital/" 
                 className="insight-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -489,7 +489,7 @@ export default function InsightAutomacaoProcessos() {
             </p>
             <p>
               <strong>1. A passagem de bastão da venda para a operação.</strong> No fluxo manual, o vendedor fecha o negócio e precisa avisar alguém — por mensagem, e-mail ou na conversa de corredor. Quando esquece, o cliente novo fica dias sem retorno e a primeira impressão já nasce ruim. Automatizado: no momento em que a oportunidade é marcada como ganha no CRM, o sistema cria o projeto, notifica a equipe responsável e dispara a mensagem de boas-vindas ao cliente. Assim como os leads precisam nascer registrados no CRM — algo que detalhamos no guia de <a 
-                href="/insights/como-organizar-leads-whatsapp-no-crm" 
+                href="/insights/como-organizar-leads-whatsapp-no-crm/" 
                 className="insight-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -521,7 +521,7 @@ export default function InsightAutomacaoProcessos() {
             </p>
             <p>
               <strong>Passo 2: Elimine antes de automatizar.</strong> Todo processo desenhado revela etapas que existem por herança, não por necessidade — a aprovação que ninguém lê, o relatório que ninguém abre, o dado pedido duas vezes. Automatizar um processo ineficiente só faz a ineficiência rodar mais rápido. Primeiro enxugue; depois automatize o que sobrou — exatamente como alertamos na seção de erros comuns do nosso guia sobre <a 
-                href="/guia/automacao-digital" 
+                href="/guia/automacao-digital/" 
                 className="insight-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -587,7 +587,7 @@ export default function InsightAutomacaoProcessos() {
               Faça o nosso diagnóstico digital completo de forma gratuita. Analisamos seus processos comerciais e operacionais e geramos um relatório técnico imediato identificando seus principais gargalos e como resolvê-los.
             </p>
             <a 
-              href="/diagnostico" 
+              href="/diagnostico/" 
               className="insight-cta-btn"
               onClick={(e) => {
                 e.preventDefault();

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const SECTORS = ["Todos", "Jurídico", "Financeiro", "Saúde", "E-commerce", "Educação", "Esporte", "Website"];
 
@@ -463,6 +464,9 @@ export default function Cases() {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/cases/" />
+      </Helmet>
       <style>{styles}</style>
       <div className="cases-wrap">
 

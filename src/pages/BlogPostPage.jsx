@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPostBySlug } from "../data/blogPosts";
+import { Helmet } from "react-helmet-async";
 
 const CAT_COLORS = {
   GMN: "#D42B2B",
@@ -463,6 +464,9 @@ export default function BlogPostPage() {
 
   return (
     <>
+      <Helmet>
+        <link rel="canonical" href={`https://onethank.com.br/insights/${post.slug}/`} />
+      </Helmet>
       {schemas && schemas.length > 0 && (
         <script
           type="application/ld+json"
@@ -485,7 +489,7 @@ export default function BlogPostPage() {
             <nav className="satellite-breadcrumb" aria-label="Breadcrumb">
               <a href="/">Home</a>
               <span className="satellite-breadcrumb-sep">&gt;</span>
-              <a href="/insights">Insights</a>
+              <a href="/insights/">Insights</a>
               <span className="satellite-breadcrumb-sep">&gt;</span>
               <span>{post.categoria}</span>
               <span className="satellite-breadcrumb-sep">&gt;</span>

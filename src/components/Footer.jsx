@@ -225,8 +225,8 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
             <div className="floc">Rua Monte Casseros, 281 - Centro, Santo André - SP</div>
             <div className="fcopy">© 2026 One Thank Digital.</div>
             <div className="fleg">
-              <a href="/termos">Termos</a>
-              <a href="/privacidade">Privacidade</a>
+              <a href="/termos/">Termos</a>
+              <a href="/privacidade/">Privacidade</a>
             </div>
           </div>
 

@@ -3,30 +3,31 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
-const Hero = lazy(() => import('./components/Hero'));
-const ServicosCards = lazy(() => import('./components/ServicosCards'));
-const HorizontalScroll = lazy(() => import('./components/HorizontalScroll'));
-const Philosophy = lazy(() => import('./components/Philosophy'));
-const Protocol = lazy(() => import('./components/Protocol'));
-const Footer = lazy(() => import('./components/Footer'));
+import Hero from './components/Hero';
+import ServicosCards from './components/ServicosCards';
+import HorizontalScroll from './components/HorizontalScroll';
+import Philosophy from './components/Philosophy';
+import Protocol from './components/Protocol';
+import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 
-// Componentes secundários carregados sob demanda para melhorar drasticamente a performance de carregamento no celular
-const Quiz = lazy(() => import('./components/Quiz'));
-const Pilares = lazy(() => import('./components/Pilares'));
-const Historia = lazy(() => import('./components/Historia'));
-const BlogPage = lazy(() => import('./pages/BlogPage'));
-const CasesPage = lazy(() => import('./pages/CasesPage'));
-const PrivacidadePage = lazy(() => import('./pages/PrivacidadePage'));
-const TermosPage = lazy(() => import('./pages/TermosPage'));
+// Componentes secundários
+import Quiz from './components/Quiz';
+import Pilares from './components/Pilares';
+import Historia from './components/Historia';
+import BlogPage from './pages/BlogPage';
+import CasesPage from './pages/CasesPage';
+import PrivacidadePage from './pages/PrivacidadePage';
+import TermosPage from './pages/TermosPage';
 import BlogPostPage from './pages/BlogPostPage';
+import { Helmet } from 'react-helmet-async';
 
-const ServicosGMN = lazy(() => import('./pages/ServicosGMN'));
-const ServicosSite = lazy(() => import('./pages/ServicosSite'));
-const ServicosSEO = lazy(() => import('./pages/ServicosSEO'));
-const ServicosAutomacao = lazy(() => import('./pages/ServicosAutomacao'));
-const GoogleMeuNegocio = lazy(() => import('./pages/GoogleMeuNegocio'));
+import ServicosGMN from './pages/ServicosGMN';
+import ServicosSite from './pages/ServicosSite';
+import ServicosSEO from './pages/ServicosSEO';
+import ServicosAutomacao from './pages/ServicosAutomacao';
+import GoogleMeuNegocio from './pages/GoogleMeuNegocio';
 import InsightWhatsAppCRM from './pages/InsightWhatsAppCRM';
 import InsightAutomacaoProcessos from './pages/InsightAutomacaoProcessos';
 import InsightAutomacaoComercial from './pages/InsightAutomacaoComercial';
@@ -489,6 +490,9 @@ function App() {
 
   return (
     <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden text-white">
+      <Helmet>
+        <link rel="canonical" href="https://onethank.com.br/" />
+      </Helmet>
       <CustomCursor />
       <CookieBanner />
       <div className="noise-overlay"></div>

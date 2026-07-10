@@ -315,7 +315,7 @@ export default function InsightAutomacaoComercial() {
       <Helmet>
         <title>Automação Comercial: O Que É e Como Implementar | One Thank Digital</title>
         <meta name="description" content="Entenda o que é automação comercial (e por que não é automação de PDV), como ela captura e organiza cada oportunidade de venda e por onde começar a implementar." />
-        <link rel="canonical" href="https://onethank.com.br/insights/automacao-comercial-o-que-e" />
+        <link rel="canonical" href="https://onethank.com.br/insights/automacao-comercial-o-que-e/" />
         <meta property="og:title" content="Automação Comercial: O Que É e Como Implementar | One Thank Digital" />
         <meta property="og:description" content="Entenda o que é automação comercial (e por que não é automação de PDV), como ela captura e organiza cada oportunidade de venda e por onde começar a implementar." />
         <meta property="og:url" content="https://onethank.com.br/insights/automacao-comercial-o-que-e" />
@@ -417,7 +417,7 @@ export default function InsightAutomacaoComercial() {
               </a>
               <span className="insight-breadcrumb-sep">&gt;</span>
               <a 
-                href="/insights" 
+                href="/insights/" 
                 onClick={(e) => { 
                   e.preventDefault(); 
                   navigateTo('/insights'); 
@@ -427,7 +427,7 @@ export default function InsightAutomacaoComercial() {
               </a>
               <span className="insight-breadcrumb-sep">&gt;</span>
               <a 
-                href="/insights/categoria/automacao-crm" 
+                href="/insights/categoria/automacao-crm/" 
                 onClick={(e) => { 
                   e.preventDefault(); 
                   navigateTo('/insights/categoria/automacao-crm'); 
@@ -440,7 +440,7 @@ export default function InsightAutomacaoComercial() {
             </nav>
 
             <a 
-              href="/insights/categoria/automacao-crm" 
+              href="/insights/categoria/automacao-crm/" 
               className="insight-tag"
               onClick={(e) => {
                 e.preventDefault();
@@ -496,7 +496,7 @@ export default function InsightAutomacaoComercial() {
             <div style={{ fontSize: 16, color: '#e5e5e5', lineHeight: 1.6 }}>
               Para aprofundar sua estratégia com nossa metodologia completa, acesse o nosso pilar definitivo de{' '}
               <a 
-                href="/guia/automacao-digital"
+                href="/guia/automacao-digital/"
                 onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
                 style={{ color: '#e0040b', fontWeight: 600, textDecoration: 'underline' }}
               >
@@ -532,7 +532,7 @@ export default function InsightAutomacaoComercial() {
             <p>
               Todo negócio escalável tem duas frentes de automação trabalhando em momentos diferentes. A automação comercial atua antes e durante a venda — é ela que garante que as oportunidades entrem. A automação de processos assume depois que o contrato é fechado — é ela que garante que a empresa consiga entregar sem inchar a equipe, cuidando dos fluxos administrativos e operacionais dos bastidores, como explicamos em detalhe no guia de{' '}
               <a 
-                href="/insights/automacao-de-processos-para-empresas" 
+                href="/insights/automacao-de-processos-para-empresas/" 
                 className="insight-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/automacao-de-processos-para-empresas'); }}
               >automação de processos para empresas</a>.
@@ -540,7 +540,7 @@ export default function InsightAutomacaoComercial() {
             <p>
               A régua é simples: tarefas para conquistar o cliente pertencem à automação comercial; tarefas para atender e manter o cliente pertencem à automação de processos. Empresas que automatizam só a venda criam um gargalo novo na entrega; empresas que automatizam só a operação continuam perdendo oportunidades na porta de entrada. As duas engrenagens compõem a mesma{' '}
               <a 
-                href="/guia/automacao-digital" 
+                href="/guia/automacao-digital/" 
                 className="insight-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
               >estrutura de automação digital</a>{' '}
@@ -559,7 +559,7 @@ export default function InsightAutomacaoComercial() {
             <p>
               <strong>3. Na organização do funil.</strong> Cada conversa vira um card no painel de negociações, preenchido automaticamente com nome, telefone e histórico — sem depender de alguém "passar para a planilha depois". A empresa se torna dona da sua base de contatos, como detalhamos no guia de{' '}
               <a 
-                href="/insights/como-organizar-leads-whatsapp-no-crm" 
+                href="/insights/como-organizar-leads-whatsapp-no-crm/" 
                 className="insight-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/como-organizar-leads-whatsapp-no-crm'); }}
               >organização de leads do WhatsApp no CRM</a>, em vez de deixá-la presa no celular de cada atendente.
@@ -581,7 +581,7 @@ export default function InsightAutomacaoComercial() {
             <p>
               A implantação segue a mesma lógica de fundação que rege qualquer estrutura de automação digital: primeiro o diagnóstico (mapear por onde os contatos chegam e onde se perdem), depois a base técnica (o CRM configurado com o funil da empresa), em seguida a conexão oficial do WhatsApp (a fundação que protege o número e permite integrações), e só então os fluxos de captura, triagem e mensuração. Pular etapas é o erro mais comum — e o mais caro. O passo a passo completo dessa ordem de implantação, com os erros a evitar em cada fase, está no nosso guia completo de{' '}
               <a 
-                href="/guia/automacao-digital" 
+                href="/guia/automacao-digital/" 
                 className="insight-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
               >automação digital para empresas B2B</a>.
@@ -618,7 +618,7 @@ export default function InsightAutomacaoComercial() {
               Faça o nosso diagnóstico digital completo de forma gratuita. Analisamos seus processos comerciais e geramos um relatório técnico imediato identificando seus principais gargalos e como resolvê-los.
             </p>
             <a 
-              href="/diagnostico" 
+              href="/diagnostico/" 
               className="insight-cta-btn"
               onClick={(e) => {
                 e.preventDefault();

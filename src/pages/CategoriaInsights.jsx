@@ -312,7 +312,7 @@ export default function CategoriaInsights() {
       <Helmet>
         <title>{`Artigos de ${categoryInfo.name} | Insights One Thank Digital`}</title>
         <meta name="description" content={categoryInfo.description} />
-        <link rel="canonical" href={`https://onethank.com.br/insights/categoria/${slug}`} />
+        <link rel="canonical" href={`https://onethank.com.br/insights/categoria/${slug}/`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -398,7 +398,7 @@ export default function CategoriaInsights() {
             <div className="cat-empty">
               <p>Nenhum artigo encontrado nesta categoria.</p>
               <a 
-                href="/blog" 
+                href="/blog/" 
                 className="cat-empty-btn"
                 onClick={(e) => {
                   e.preventDefault();

@@ -381,7 +381,7 @@ export default function PillarAutomacaoDigital() {
       <Helmet>
         <title>Automação Digital B2B: Guia Completo | One Thank Digital</title>
         <meta name="description" content="Como estruturar a automação digital da sua empresa para gerar leads qualificados: WhatsApp integrado ao CRM, qualificação com IA e dados organizados sem trabalho manual." />
-        <link rel="canonical" href="https://onethank.com.br/guia/automacao-digital" />
+        <link rel="canonical" href="https://onethank.com.br/guia/automacao-digital/" />
         <link rel="preload" as="image" href="/hero-automacao-digital.webp" type="image/webp" />
         
         <script type="application/ld+json">
@@ -462,7 +462,7 @@ export default function PillarAutomacaoDigital() {
         <header className="pillar-hero">
           <div className="pillar-hero-inner">
             <a 
-              href="/insights/categoria/automacao-crm" 
+              href="/insights/categoria/automacao-crm/" 
               className="pillar-tag"
               onClick={(e) => {
                 e.preventDefault();
@@ -483,7 +483,7 @@ export default function PillarAutomacaoDigital() {
               </a>
               <span className="pillar-breadcrumb-sep">/</span>
               <a 
-                href="/guia" 
+                href="/guia/" 
                 onClick={(e) => { 
                   e.preventDefault(); 
                   navigateTo('/guia'); 
@@ -574,7 +574,7 @@ export default function PillarAutomacaoDigital() {
             <p>
               Para aprofundar na engenharia de aquisição de clientes, acesse o nosso{' '}
               <a
-                href="/insights/como-organizar-leads-whatsapp-no-crm"
+                href="/insights/como-organizar-leads-whatsapp-no-crm/"
                 className="pillar-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/como-organizar-leads-whatsapp-no-crm'); }}
               >Manual de Automação Comercial: Como Organizar os Leads do WhatsApp no CRM</a>.
@@ -582,7 +582,7 @@ export default function PillarAutomacaoDigital() {
             <p>
               Para entender essa vertente em profundidade — o que é, o que não é e por onde começar —, veja o guia de{' '}
               <a
-                href="/insights/automacao-comercial-o-que-e"
+                href="/insights/automacao-comercial-o-que-e/"
                 className="pillar-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/automacao-comercial-o-que-e'); }}
               >automação comercial: o que é e como implementar</a>.
@@ -599,7 +599,7 @@ export default function PillarAutomacaoDigital() {
             <p>
               Para entender o passo a passo da implementação dessa engrenagem em seus departamentos internos, conheça os detalhes de{' '}
               <a
-                href="/insights/automacao-de-processos-para-empresas"
+                href="/insights/automacao-de-processos-para-empresas/"
                 className="pillar-link"
                 onClick={(e) => { e.preventDefault(); navigateTo('/insights/automacao-de-processos-para-empresas'); }}
               >automação de processos para empresas: como implementar em qualquer setor</a>.
@@ -621,7 +621,7 @@ export default function PillarAutomacaoDigital() {
             </p>
             <p>
               Para resolver esse gargalo, estruturar um fluxo que transfira tudo automaticamente é o único caminho seguro. Você pode aprender detalhadamente <a 
-                href="/insights/como-organizar-leads-whatsapp-no-crm" 
+                href="/insights/como-organizar-leads-whatsapp-no-crm/" 
                 className="pillar-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -970,7 +970,7 @@ export default function PillarAutomacaoDigital() {
 
             <p>
               Para saber como desenhar essa infraestrutura sob medida para a sua operação, <a 
-                href="/servicos/automacao-digital" 
+                href="/servicos/automacao-digital/" 
                 className="pillar-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -1013,7 +1013,7 @@ export default function PillarAutomacaoDigital() {
                 Faça o nosso diagnóstico digital completo de forma gratuita. Analisamos seus processos comerciais e geramos um relatório técnico imediato identificando seus principais gargalos e como resolvê-los.
               </p>
               <a 
-                href="/diagnostico" 
+                href="/diagnostico/" 
                 className="pillar-cta-btn"
                 onClick={(e) => {
                   e.preventDefault();

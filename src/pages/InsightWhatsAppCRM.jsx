@@ -316,7 +316,7 @@ export default function InsightWhatsAppCRM() {
       <Helmet>
         <title>Como Organizar Leads do WhatsApp no CRM Automaticamente | One Thank Digital</title>
         <meta name="description" content="Organizar leads do WhatsApp no CRM de forma automática exige conexão oficial via API, regras de captura no primeiro toque e criação automática no funil." />
-        <link rel="canonical" href="https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm" />
+        <link rel="canonical" href="https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm/" />
         <meta property="og:title" content="Como Organizar Leads do WhatsApp no CRM Automaticamente | One Thank Digital" />
         <meta property="og:description" content="Organizar leads do WhatsApp no CRM de forma automática exige conexão oficial via API, regras de captura no primeiro toque e criação automática no funil." />
         <meta property="og:url" content="https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm" />
@@ -405,7 +405,7 @@ export default function InsightWhatsAppCRM() {
         <header className="insight-hero">
           <div className="insight-hero-inner">
             <a 
-              href="/insights/categoria/automacao-crm" 
+              href="/insights/categoria/automacao-crm/" 
               className="insight-tag"
               onClick={(e) => {
                 e.preventDefault();
@@ -452,7 +452,7 @@ export default function InsightWhatsAppCRM() {
             <div style={{ fontSize: 16, color: '#e5e5e5', lineHeight: 1.6 }}>
               Para aprofundar sua estratégia com nossa metodologia completa, acesse o nosso pilar definitivo de{' '}
               <a 
-                href="/guia/automacao-digital"
+                href="/guia/automacao-digital/"
                 onClick={(e) => { e.preventDefault(); navigateTo('/guia/automacao-digital'); }}
                 style={{ color: '#e0040b', fontWeight: 600, textDecoration: 'underline' }}
               >
@@ -511,7 +511,7 @@ export default function InsightWhatsAppCRM() {
             </p>
             <p>
               Para entender como desenhar e implementar essa conexão sob medida na sua estrutura atual, leia o <a 
-                href="/guia/automacao-digital" 
+                href="/guia/automacao-digital/" 
                 className="insight-link"
                 onClick={(e) => {
                   e.preventDefault();
@@ -549,7 +549,7 @@ export default function InsightWhatsAppCRM() {
               Faça um diagnóstico gratuito da sua estrutura e veja como sincronizar o seu WhatsApp Business diretamente ao seu CRM — com cada lead organizado, rastreado e sem perda de conversas ou histórico comercial.
             </p>
             <a 
-              href="/diagnostico" 
+              href="/diagnostico/" 
               className="insight-cta-btn"
               onClick={(e) => {
                 e.preventDefault();

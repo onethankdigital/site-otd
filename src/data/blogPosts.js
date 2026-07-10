@@ -11,8 +11,8 @@ export const blogPosts = [
     meta: "5 min de leitura · GMN · One Thank Digital",
     lead: "Você já pesquisou o nome do seu próprio negócio no Google e ficou surpreso ao não encontrá-lo? Ou pior — encontrou um concorrente seu na sua frente? Esse é um problema mais comum do que parece, e a solução é mais simples do que você imagina.",
     callout: "Se a sua empresa não aparece no Google Maps ou no Local Pack (os 3 primeiros resultados no mapa), você está invisível para clientes locais no momento exato de compra. Resolver isso exige verificação ativa do perfil, categoria principal precisa, fotos georreferenciadas e recorrência de avaliações no Google Meu Negócio.",
-    pillarUrl: "/servicos/google-meu-negocio",
-    pillarText: "Posicionamento Estratégico no Google Meu Negócio (SEO Local)",
+    pillarUrl: "/guia/google-meu-negocio/",
+    pillarText: "SEO Local e Google Meu Negócio",
     secoes: [
       {
         titulo: "O que é o Google Meu Negócio e por que ele importa",
@@ -58,8 +58,8 @@ export const blogPosts = [
     meta: "7 min de leitura · GMN · One Thank Digital",
     lead: "O Google Meu Negócio é a ferramenta de marketing mais poderosa e gratuita disponível para pequenas e médias empresas. Neste guia, você vai aprender tudo o que precisa para dominar o posicionamento local em 2026.",
     callout: "Em 2026, o Google Meu Negócio (Perfil da Empresa no Google) funciona como a principal vitrine comercial de negócios locais. Dominar o Local Pack exige preenchimento 100% semântico, estratégia ativa de reviews, posts semanais e consistência nos dados de NAP (Nome, Endereço e Telefone).",
-    pillarUrl: "/servicos/google-meu-negocio",
-    pillarText: "Otimização e Gestão de Google Meu Negócio no Grande ABC",
+    pillarUrl: "/guia/google-meu-negocio/",
+    pillarText: "SEO Local e Google Meu Negócio",
     secoes: [
       {
         titulo: "Por que o GMN é mais importante do que seu site em buscas locais",
@@ -109,8 +109,8 @@ export const blogPosts = [
     meta: "5 min de leitura · Website · One Thank Digital",
     lead: "Essa é uma das dúvidas mais frequentes entre empresários que estão estruturando sua presença digital. A resposta direta: você precisa dos dois, mas por razões completamente diferentes.",
     callout: "O Instagram é um canal alugado de relacionamento e descoberta, sujeito às mudanças de algoritmo. O Site Premium é o seu ativo proprietário de conversão, credibilidade e ranqueamento no Google. Negócios maduros usam as redes sociais para gerar atenção e o site para fechar contratos.",
-    pillarUrl: "/servicos/criacao-de-sites",
-    pillarText: "Criação de Sites Premium e de Alta Conversão",
+    pillarUrl: "/guia/desenvolvimento-web/",
+    pillarText: "Arquitetura Web e Criação de Sites B2B",
     secoes: [
       {
         titulo: "O que cada canal faz de verdade",
@@ -152,8 +152,8 @@ export const blogPosts = [
     meta: "6 min de leitura · Website · One Thank Digital",
     lead: "Ter um site bonito e não aparecer no Google é como abrir uma loja em um beco sem saída. O problema raramente é o design — é a estrutura técnica e estratégica que a maioria dos sites ignora completamente.",
     callout: "O Google não indexa páginas automaticamente apenas porque foram publicadas. Para aparecer nas buscas, um site exige submissão técnica de sitemap, velocidade otimizada (Core Web Vitals), arquitetura semântica mobile-first e conteúdo relevante que responda às intenções de busca do usuário.",
-    pillarUrl: "/servicos/criacao-de-sites",
-    pillarText: "Desenvolvimento de Aplicações Web Otimizadas para o Google",
+    pillarUrl: "/guia/desenvolvimento-web/",
+    pillarText: "Arquitetura Web e Criação de Sites B2B",
     secoes: [
       {
         titulo: "O Google não indexa sites automaticamente",
@@ -195,8 +195,8 @@ export const blogPosts = [
     meta: "6 min de leitura · SEO & Tráfego · One Thank Digital",
     lead: "Essa é a pergunta que mais recebo de empresários que querem crescer no digital mas não sabem por onde começar. A resposta não é uma coisa ou outra — é entender quando cada estratégia faz sentido para o momento do seu negócio.",
     callout: "Tráfego pago gera tração imediata e fluxo de caixa de curto prazo, enquanto o SEO orgânico constrói autoridade patrimonial e diminui o Custo de Aquisição de Clientes (CAC) no médio e longo prazo. Empresas inteligentes combinam ambas as estratégias em paralelo.",
-    pillarUrl: "/servicos/seo-trafego-organico",
-    pillarText: "Estratégias de SEO e Tráfego Orgânico OTD",
+    pillarUrl: "/guia/seo-trafego-organico/",
+    pillarText: "Estratégias de SEO B2B",
     secoes: [
       {
         titulo: "O que é SEO orgânico na prática",
@@ -238,8 +238,8 @@ export const blogPosts = [
     meta: "5 min de leitura · SEO & Tráfego · One Thank Digital",
     lead: "Se você já pesquisou o serviço que oferece e viu um concorrente aparecer antes de você no Google, saiba: não é sorte e não é injustiça. É uma combinação de fatores técnicos e estratégicos que você também pode dominar.",
     callout: "Aparecer antes da concorrência no Google depende do tripé de SEO Técnico, Autoridade Semântica e Sinais de Experiência do Usuário. Concorrentes líderes investem em páginas rápidas, perfis verificados do Google Meu Negócio e conteúdo arquitetado para intenção de busca.",
-    pillarUrl: "/servicos/seo-trafego-organico",
-    pillarText: "Consultoria em SEO e Posicionamento no Google",
+    pillarUrl: "/guia/seo-trafego-organico/",
+    pillarText: "Estratégias de SEO B2B",
     secoes: [
       {
         titulo: "Como o Google decide quem aparece primeiro",
@@ -281,7 +281,7 @@ export const blogPosts = [
     meta: "5 min de leitura · Automação · One Thank Digital",
     lead: "Existe um dado que muda a forma como empresários enxergam o atendimento pelo WhatsApp: responder um lead em até 5 minutos aumenta em 21 vezes a chance de conversão. Após 30 minutos, essa chance cai 80%.",
     callout: "Responder uma oportunidade no WhatsApp nos primeiros 5 minutos multiplica as chances de conversão da sua equipe. Automatizar o acolhimento inicial, a triagem e o registro no CRM garante que nenhum lead esfrie à noite ou nos fins de semana.",
-    pillarUrl: "/guia/automacao-digital",
+    pillarUrl: "/guia/automacao-digital/",
     pillarText: "Guia Completo de Automação Digital e Comercial B2B",
     secoes: [
       {
@@ -324,7 +324,7 @@ export const blogPosts = [
     meta: "6 min de leitura · Automação · One Thank Digital",
     lead: "Se você gerencia seus clientes e leads pelo WhatsApp, por e-mail ou por planilhas, este artigo é para você. CRM não é ferramenta de empresa grande — é o sistema que separa empresas que crescem de forma controlada das que perdem o controle.",
     callout: "CRM (Customer Relationship Management) é o painel nervoso de uma empresa escalável: ele centraliza o histórico de conversas, a origem de cada lead e as etapas de negociação do funil, impedindo que o patrimônio comercial fique preso no celular pessoal de funcionários.",
-    pillarUrl: "/guia/automacao-digital",
+    pillarUrl: "/guia/automacao-digital/",
     pillarText: "Estruturação de CRM e Automação de Vendas B2B",
     secoes: [
       {
@@ -367,8 +367,8 @@ export const blogPosts = [
     meta: "5 min de leitura · OTD · One Thank Digital",
     lead: "O tagline da One Thank Digital é 'Presença digital estruturada'. Mas o que isso significa na prática, no dia a dia de uma empresa real? Este artigo explica a filosofia por trás da nossa metodologia.",
     callout: "Presença digital é ter contas nas redes sociais; Presença Digital Estruturada é fazer com que Google Meu Negócio, Website Premium, Tráfego Orgânico e Automação de Vendas trabalhem de forma sincronizada como um motor previsível de receita.",
-    pillarUrl: "/pilares",
-    pillarText: "Conheça os 4 Pilares da Metodologia One Thank Digital",
+    pillarUrl: "/guia/automacao-digital/",
+    pillarText: "Automação Digital para Empresas B2B",
     secoes: [
       {
         titulo: "A diferença entre presença e estrutura",
@@ -410,8 +410,8 @@ export const blogPosts = [
     meta: "6 min de leitura · OTD · One Thank Digital",
     lead: "Existe uma lógica clara por trás das empresas que são encontradas no Google, geram contatos constantemente e convertem bem. Não é sorte nem investimento alto — é a presença dos 4 pilares fundamentais da estrutura digital.",
     callout: "Os 4 Pilares inegociáveis para dominância digital são: Google Meu Negócio (inteligência local), Website de Alto Impacto (conversão), SEO & Tráfego (alcance) e Automação Comercial (velocidade e CRM). Nenhum pilar funciona isoladamente.",
-    pillarUrl: "/pilares",
-    pillarText: "Metodologia dos 4 Pilares OTD",
+    pillarUrl: "/guia/automacao-digital/",
+    pillarText: "Automação Digital para Empresas B2B",
     secoes: [
       {
         titulo: "Por que 1 pilar sozinho não funciona",
