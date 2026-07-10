@@ -453,6 +453,15 @@ export default function PillarDesenvolvimentoWeb() {
       <Helmet>
         <title>Arquitetura Web & Criação de Sites B2B de Alta Conversão | Guia Prático OTD</title>
         <meta name="description" content="Manual prático de arquitetura web B2B, Core Web Vitals, AEO (Answer Engine Optimization para IAs) e design executivo para empresas que buscam escalabilidade." />
+        <meta property="og:title" content="Arquitetura Web & Criação de Sites B2B | Guia Prático OTD" />
+        <meta property="og:description" content="Manual prático de arquitetura web B2B, Core Web Vitals, AEO e design executivo para empresas." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://onethank.com.br/guia/desenvolvimento-web/" />
+        <meta property="og:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Arquitetura Web & Criação de Sites B2B | Guia Prático OTD" />
+        <meta property="twitter:description" content="Manual prático de arquitetura web B2B, Core Web Vitals, AEO e design executivo para empresas." />
+        <meta property="twitter:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
         <link rel="canonical" href="https://onethank.com.br/guia/desenvolvimento-web/" />
         <script type="application/ld+json">
           {JSON.stringify(schemas)}

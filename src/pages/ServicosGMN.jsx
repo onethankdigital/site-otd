@@ -508,7 +508,13 @@ export default function ServicosGMN() {
           <meta name="description" content="Otimização de Google Meu Negócio para escritórios contábeis, clínicas e empresas B2B no ABC Paulista. Apareça no Google Maps antes do concorrente. Perfil verificado, avaliações e posts semanais." />
           <meta property="og:title" content="Google Meu Negócio para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="Apareça no Google Maps quando seu cliente decide. Perfil verificado e otimizado para Santo André e ABC Paulista." />
-          <meta property="og:url" content="https://onethank.com.br/servicos/google-meu-negocio" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://onethank.com.br/servicos/google-meu-negocio/" />
+          <meta property="og:image" content="https://onethank.com.br/hero-google-meu-negocio.webp" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:title" content="Google Meu Negócio para Empresas B2B | One Thank Digital" />
+          <meta property="twitter:description" content="Apareça no Google Maps quando seu cliente decide. Perfil verificado e otimizado para Santo André e ABC Paulista." />
+          <meta property="twitter:image" content="https://onethank.com.br/hero-google-meu-negocio.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/google-meu-negocio/" />
           <script type="application/ld+json">
             {JSON.stringify([

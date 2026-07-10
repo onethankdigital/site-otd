@@ -508,7 +508,13 @@ export default function ServicosSite() {
           <meta name="description" content="Sites de alta conversão para escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista. Mobile-first, SEO desde o dia 1, performance acima de 90 no PageSpeed." />
           <meta property="og:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="Site que converte visitantes em clientes. Mobile-first, SEO técnico e rápido para empresas B2B no ABC Paulista." />
-          <meta property="og:url" content="https://onethank.com.br/servicos/criacao-de-sites" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://onethank.com.br/servicos/criacao-de-sites/" />
+          <meta property="og:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
+          <meta property="twitter:description" content="Site que converte visitantes em clientes. Mobile-first, SEO técnico e rápido para empresas B2B no ABC Paulista." />
+          <meta property="twitter:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/criacao-de-sites/" />
           <script type="application/ld+json">
             {JSON.stringify([

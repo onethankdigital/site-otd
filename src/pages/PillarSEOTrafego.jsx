@@ -453,6 +453,15 @@ export default function PillarSEOTrafego() {
       <Helmet>
         <title>Posicionamento Orgânico no Google e Estratégias de SEO B2B | Guia Prático OTD</title>
         <meta name="description" content="Guia prático definitivo de SEO B2B, palavras-chave de fundo de funil, autoridade semântica e sinergia inteligente entre tráfego orgânico e mídia paga." />
+        <meta property="og:title" content="Posicionamento Orgânico no Google e Estratégias de SEO B2B | Guia Prático OTD" />
+        <meta property="og:description" content="Guia prático de SEO B2B, palavras-chave de fundo de funil e autoridade semântica." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://onethank.com.br/guia/seo-trafego-organico/" />
+        <meta property="og:image" content="https://onethank.com.br/hero-seo-organico.webp" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Posicionamento Orgânico no Google e Estratégias de SEO B2B | Guia Prático OTD" />
+        <meta property="twitter:description" content="Guia prático de SEO B2B, palavras-chave de fundo de funil e autoridade semântica." />
+        <meta property="twitter:image" content="https://onethank.com.br/hero-seo-organico.webp" />
         <link rel="canonical" href="https://onethank.com.br/guia/seo-trafego-organico/" />
         <script type="application/ld+json">
           {JSON.stringify(schemas)}

@@ -508,7 +508,13 @@ export default function ServicosAutomacao() {
           <meta name="description" content="Automação de WhatsApp, CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B em Santo André. Atendimento 24h sem depender do seu horário." />
           <meta property="og:title" content="Automação Digital para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="WhatsApp e CRM automatizados para nunca mais perder lead fora do horário. Para escritórios, clínicas e B2B no ABC Paulista." />
-          <meta property="og:url" content="https://onethank.com.br/servicos/automacao-digital" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://onethank.com.br/servicos/automacao-digital/" />
+          <meta property="og:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:title" content="Automação Digital para Empresas B2B | One Thank Digital" />
+          <meta property="twitter:description" content="WhatsApp e CRM automatizados para nunca mais perder lead fora do horário. Para escritórios, clínicas e B2B no ABC Paulista." />
+          <meta property="twitter:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/automacao-digital/" />
           <script type="application/ld+json">
             {JSON.stringify([

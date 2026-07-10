@@ -453,6 +453,15 @@ export default function PillarGoogleMeuNegocio() {
       <Helmet>
         <title>SEO Local & Google Meu Negócio: Domínio no Google Maps | Guia Prático OTD</title>
         <meta name="description" content="Manual técnico e prático de SEO Local e Google Meu Negócio para posicionar sua empresa entre os 3 primeiros do Local Pack no Google Maps em 2026." />
+        <meta property="og:title" content="SEO Local & Google Meu Negócio: Domínio no Google Maps | Guia Prático OTD" />
+        <meta property="og:description" content="Manual técnico de SEO Local e Google Meu Negócio para posicionar sua empresa no Local Pack." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://onethank.com.br/guia/google-meu-negocio/" />
+        <meta property="og:image" content="https://onethank.com.br/hero-google-meu-negocio.webp" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="SEO Local & Google Meu Negócio: Domínio no Google Maps | Guia Prático OTD" />
+        <meta property="twitter:description" content="Manual técnico de SEO Local e Google Meu Negócio para posicionar sua empresa no Local Pack." />
+        <meta property="twitter:image" content="https://onethank.com.br/hero-google-meu-negocio.webp" />
         <link rel="canonical" href="https://onethank.com.br/guia/google-meu-negocio/" />
         <script type="application/ld+json">
           {JSON.stringify(schemas)}

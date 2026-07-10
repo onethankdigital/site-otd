@@ -508,7 +508,13 @@ export default function ServicosSEO() {
           <meta name="description" content="Rankeamento orgânico no Google e AI Overview para escritórios contábeis, clínicas e empresas B2B em Santo André. Sem depender de anúncio pago. Resultados duradouros." />
           <meta property="og:title" content="SEO Orgânico para Empresas B2B no ABC | One Thank Digital" />
           <meta property="og:description" content="Apareça no Google e no AI Overview sem pagar por clique. SEO local para empresas B2B em Santo André e ABC Paulista." />
-          <meta property="og:url" content="https://onethank.com.br/servicos/seo-trafego-organico" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://onethank.com.br/servicos/seo-trafego-organico/" />
+          <meta property="og:image" content="https://onethank.com.br/hero-seo-organico.webp" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:title" content="SEO Orgânico para Empresas B2B no ABC | One Thank Digital" />
+          <meta property="twitter:description" content="Apareça no Google e no AI Overview sem pagar por clique. SEO local para empresas B2B em Santo André e ABC Paulista." />
+          <meta property="twitter:image" content="https://onethank.com.br/hero-seo-organico.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/seo-trafego-organico/" />
           <script type="application/ld+json">
             {JSON.stringify([

@@ -381,6 +381,15 @@ export default function PillarAutomacaoDigital() {
       <Helmet>
         <title>Automação Digital B2B: Guia Completo | One Thank Digital</title>
         <meta name="description" content="Como estruturar a automação digital da sua empresa para gerar leads qualificados: WhatsApp integrado ao CRM, qualificação com IA e dados organizados sem trabalho manual." />
+        <meta property="og:title" content="Automação Digital B2B: Guia Completo | One Thank Digital" />
+        <meta property="og:description" content="Como estruturar a automação digital da sua empresa para gerar leads qualificados: WhatsApp integrado ao CRM, qualificação com IA e dados organizados." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://onethank.com.br/guia/automacao-digital/" />
+        <meta property="og:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Automação Digital B2B: Guia Completo | One Thank Digital" />
+        <meta property="twitter:description" content="Como estruturar a automação digital da sua empresa para gerar leads qualificados: WhatsApp integrado ao CRM e IA." />
+        <meta property="twitter:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
         <link rel="canonical" href="https://onethank.com.br/guia/automacao-digital/" />
         <link rel="preload" as="image" href="/hero-automacao-digital.webp" type="image/webp" />
         
