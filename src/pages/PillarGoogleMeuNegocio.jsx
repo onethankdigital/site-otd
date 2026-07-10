@@ -580,9 +580,9 @@ export default function PillarGoogleMeuNegocio() {
             </div>
             <div className="gmn-spokes-grid">
               <a
-                href="/blog/empresa-nao-aparece-google-maps"
+                href="/insights/empresa-nao-aparece-google-maps"
                 className="gmn-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/empresa-nao-aparece-google-maps'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/empresa-nao-aparece-google-maps'); }}
               >
                 <div>
                   <div className="gmn-spoke-tag">Diagnóstico Rápido</div>
@@ -592,9 +592,9 @@ export default function PillarGoogleMeuNegocio() {
               </a>
 
               <a
-                href="/blog/google-meu-negocio-guia-completo-2026"
+                href="/insights/google-meu-negocio-guia-completo-2026"
                 className="gmn-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/google-meu-negocio-guia-completo-2026'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/google-meu-negocio-guia-completo-2026'); }}
               >
                 <div>
                   <div className="gmn-spoke-tag">Guia de Bolso</div>
@@ -604,9 +604,9 @@ export default function PillarGoogleMeuNegocio() {
               </a>
 
               <a
-                href="/blog/concorrente-aparece-antes-no-google"
+                href="/insights/concorrente-aparece-antes-no-google"
                 className="gmn-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/concorrente-aparece-antes-no-google'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/concorrente-aparece-antes-no-google'); }}
               >
                 <div>
                   <div className="gmn-spoke-tag">Análise Competitiva</div>

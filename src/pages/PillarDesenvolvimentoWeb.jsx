@@ -584,9 +584,9 @@ export default function PillarDesenvolvimentoWeb() {
             </div>
             <div className="web-spokes-grid">
               <a
-                href="/blog/site-ou-instagram-qual-mais-importante"
+                href="/insights/site-ou-instagram-qual-mais-importante"
                 className="web-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/site-ou-instagram-qual-mais-importante'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/site-ou-instagram-qual-mais-importante'); }}
               >
                 <div>
                   <div className="web-spoke-tag">Estratégia de Canais</div>
@@ -596,9 +596,9 @@ export default function PillarDesenvolvimentoWeb() {
               </a>
 
               <a
-                href="/blog/por-que-site-nao-aparece-google"
+                href="/insights/por-que-site-nao-aparece-google"
                 className="web-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/por-que-site-nao-aparece-google'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/por-que-site-nao-aparece-google'); }}
               >
                 <div>
                   <div className="web-spoke-tag">Auditoria Técnica</div>
@@ -608,9 +608,9 @@ export default function PillarDesenvolvimentoWeb() {
               </a>
 
               <a
-                href="/blog/4-pilares-empresa-encontrada-online"
+                href="/insights/4-pilares-empresa-encontrada-online"
                 className="web-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/4-pilares-empresa-encontrada-online'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/4-pilares-empresa-encontrada-online'); }}
               >
                 <div>
                   <div className="web-spoke-tag">Metodologia OTD</div>

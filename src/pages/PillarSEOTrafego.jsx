@@ -580,9 +580,9 @@ export default function PillarSEOTrafego() {
             </div>
             <div className="seo-spokes-grid">
               <a
-                href="/blog/seo-organico-vs-trafego-pago"
+                href="/insights/seo-organico-vs-trafego-pago"
                 className="seo-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/seo-organico-vs-trafego-pago'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/seo-organico-vs-trafego-pago'); }}
               >
                 <div>
                   <div className="seo-spoke-tag">Estratégia de Investimento</div>
@@ -592,9 +592,9 @@ export default function PillarSEOTrafego() {
               </a>
 
               <a
-                href="/blog/concorrente-aparece-antes-no-google"
+                href="/insights/concorrente-aparece-antes-no-google"
                 className="seo-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/concorrente-aparece-antes-no-google'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/concorrente-aparece-antes-no-google'); }}
               >
                 <div>
                   <div className="seo-spoke-tag">Inteligência Competitiva</div>
@@ -604,9 +604,9 @@ export default function PillarSEOTrafego() {
               </a>
 
               <a
-                href="/blog/presenca-digital-estruturada"
+                href="/insights/presenca-digital-estruturada"
                 className="seo-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/blog/presenca-digital-estruturada'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/insights/presenca-digital-estruturada'); }}
               >
                 <div>
                   <div className="seo-spoke-tag">Filosofia OTD</div>

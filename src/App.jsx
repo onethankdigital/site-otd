@@ -20,7 +20,7 @@ const BlogPage = lazy(() => import('./pages/BlogPage'));
 const CasesPage = lazy(() => import('./pages/CasesPage'));
 const PrivacidadePage = lazy(() => import('./pages/PrivacidadePage'));
 const TermosPage = lazy(() => import('./pages/TermosPage'));
-const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+import BlogPostPage from './pages/BlogPostPage';
 
 const ServicosGMN = lazy(() => import('./pages/ServicosGMN'));
 const ServicosSite = lazy(() => import('./pages/ServicosSite'));
@@ -481,9 +481,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
-          <BlogPostPage />
-        </Suspense>
+        <BlogPostPage />
         <WhatsAppButton />
       </div>
     );
