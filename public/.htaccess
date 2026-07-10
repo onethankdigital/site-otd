@@ -1,5 +1,6 @@
-﻿# Redirect /blog (listing only) -> /insights with 301
-Redirect 301 /blog /insights
+# Redirecionamentos 301 legados (/blog -> /insights) com ancoragem de regex para evitar prefix-matching e barras duplas
+RedirectMatch 301 ^/blog/?$ /insights/
+RedirectMatch 301 ^/blog/([a-zA-Z0-9\-]+)/?$ /insights/$1/
 
 # Enable rewrite engine for SPA routing
 <IfModule mod_rewrite.c>
