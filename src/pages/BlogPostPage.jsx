@@ -544,7 +544,7 @@ export default function BlogPostPage() {
           {post.secoes.map((sec, i) => (
             <div className="article-section" key={i}>
               <h2>{sec.titulo}</h2>
-              <p>{sec.corpo}</p>
+              <p dangerouslySetInnerHTML={{ __html: sec.corpo }} />
             </div>
           ))}
 

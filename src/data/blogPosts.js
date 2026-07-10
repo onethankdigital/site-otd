@@ -24,7 +24,7 @@ export const blogPosts = [
       },
       {
         titulo: "O que fazer agora — passo a passo",
-        corpo: "1. Acesse business.google.com e reivindique ou crie seu perfil.\n2. Complete 100% das informações: nome, endereço, telefone, site, horário e categoria principal.\n3. Faça a verificação pelo código que o Google envia (carta, SMS ou e-mail).\n4. Adicione pelo menos 10 fotos profissionais: fachada, interior, equipe e produtos/serviços.\n5. Responda todas as avaliações existentes — positivas e negativas.\n6. Publique um post no perfil apresentando sua empresa.",
+        corpo: "1. Acesse business.google.com e reivindique ou crie seu perfil.\n2. Complete 100% das informações: nome, endereço, telefone, site, horário e categoria principal.\n3. Faça a verificação pelo código que o Google envia (carta, SMS ou e-mail).\n4. Adicione pelo menos 10 fotos profissionais: fachada, interior, equipe e produtos/serviços.\n5. Responda todas as avaliações existentes — positivas e negativas.\n6. Publique um post no perfil apresentando sua empresa. O passo a passo completo para dominar o Local Pack está no nosso <a href=\"/guia/google-meu-negocio\">guia prático de SEO local e Google Meu Negócio</a>.",
       },
       {
         titulo: "Quanto tempo leva para aparecer?",
@@ -71,7 +71,7 @@ export const blogPosts = [
       },
       {
         titulo: "A estratégia de avaliações que poucos usam",
-        corpo: "Empresas com mais avaliações positivas aparecem antes — isso todo mundo sabe. Mas o que poucos sabem é que a velocidade com que você recebe novas avaliações importa tanto quanto a quantidade.\n\nO que funciona: após cada atendimento bem-sucedido, envie uma mensagem simples pelo WhatsApp com o link direto para avaliação. Taxa de conversão média: 30 a 40% dos clientes satisfeitos avaliam quando pedido diretamente.",
+        corpo: "Empresas com mais avaliações positivas aparecem antes — isso todo mundo sabe. Mas o que poucos sabem é que a velocidade com que você recebe novas avaliações importa tanto quanto a quantidade.\n\nO que funciona: após cada atendimento bem-sucedido, envie uma mensagem simples pelo WhatsApp com o link direto para avaliação. Taxa de conversão média: 30 a 40% dos clientes satisfeitos avaliam quando pedido diretamente. Para aprofundar na estrutura semântica do NAP e na gestão de avaliações em escala, consulte o <a href=\"/guia/google-meu-negocio\">guia completo de domínio no Google Maps</a>.",
       },
       {
         titulo: "Publicações no GMN: o segredo dos perfis que aparecem sempre",
@@ -118,7 +118,7 @@ export const blogPosts = [
       },
       {
         titulo: "O risco de construir sua casa em terreno alugado",
-        corpo: "O Instagram não é seu. Se a plataforma mudar o algoritmo (como faz com frequência), o alcance cai. Se sua conta for suspensa ou invadida, você perde todo o histórico e acesso aos clientes.\n\nO site é o único ativo digital que você possui de verdade. O domínio é seu, o conteúdo é seu, o tráfego é seu.",
+        corpo: "O Instagram não é seu. Se a plataforma mudar o algoritmo (como faz com frequência), o alcance cai. Se sua conta for suspensa ou invadida, você perde todo o histórico e acesso aos clientes.\n\nO site é o único ativo digital que você possui de verdade. O domínio é seu, o conteúdo é seu, o tráfego é seu. A arquitetura técnica que transforma um site em ativo de conversão está no nosso <a href=\"/guia/desenvolvimento-web\">guia de arquitetura web e criação de sites B2B</a>.",
       },
       {
         titulo: "A jornada real de compra de um cliente B2B ou de serviços",
@@ -161,7 +161,7 @@ export const blogPosts = [
       },
       {
         titulo: "Os 6 erros técnicos que fazem sites sumirem do Google",
-        corpo: "• Meta tags ausentes ou duplicadas: o Google não sabe do que se trata cada página\n• Site lento: acima de 3 segundos de carregamento, o Google penaliza o ranqueamento\n• Sem versão mobile: desde 2019 o Google usa mobile-first indexing\n• Links quebrados: sinalizam site abandonado ou mal mantido\n• Sem HTTPS: site sem certificado SSL é marcado como 'não seguro'\n• Conteúdo duplicado: páginas com textos iguais se canibalizam no ranqueamento",
+        corpo: "• Meta tags ausentes ou duplicadas: o Google não sabe do que se trata cada página\n• Site lento: acima de 3 segundos de carregamento, o Google penaliza o ranqueamento\n• Sem versão mobile: desde 2019 o Google usa mobile-first indexing\n• Links quebrados: sinalizam site abandonado ou mal mantido\n• Sem HTTPS: site sem certificado SSL é marcado como 'não seguro'\n• Conteúdo duplicado: páginas com textos iguais se canibalizam no ranqueamento. Core Web Vitals, estrutura AEO e os fundamentos técnicos de um site encontrável estão reunidos no <a href=\"/guia/desenvolvimento-web\">guia de arquitetura web de alta conversão</a>.",
       },
       {
         titulo: "O problema do site bonito sem conteúdo",
@@ -212,7 +212,7 @@ export const blogPosts = [
       },
       {
         titulo: "O erro que mais vejo: escolher um e abandonar o outro",
-        corpo: "Empresas que focam só em SEO ficam vulneráveis à demora. Empresas que focam só em Ads ficam reféns do orçamento.\n\nA estratégia inteligente é usar o tráfego pago para gerar resultado imediato enquanto o SEO orgânico é construído em paralelo.",
+        corpo: "Empresas que focam só em SEO ficam vulneráveis à demora. Empresas que focam só em Ads ficam reféns do orçamento.\n\nA estratégia inteligente é usar o tráfego pago para gerar resultado imediato enquanto o SEO orgânico é construído em paralelo. Como integrar tráfego orgânico e campanhas pagas sem canibalizar resultados é o tema do nosso <a href=\"/guia/seo-trafego-organico\">guia de estratégias de SEO B2B</a>.",
       },
     ],
     faq: [
@@ -251,7 +251,7 @@ export const blogPosts = [
       },
       {
         titulo: "O fator tempo: autoridade não se compra, se constrói",
-        corpo: "Um site com 3 anos de conteúdo consistente tem uma vantagem real sobre um site novo. Mas isso não significa que você não possa competir — significa que quanto antes você começar, mais cedo vai colher os resultados.",
+        corpo: "Um site com 3 anos de conteúdo consistente tem uma vantagem real sobre um site novo. Mas isso não significa que você não possa competir — significa que quanto antes você começar, mais cedo vai colher os resultados. A construção de autoridade semântica que separa quem aparece de quem é ignorado está detalhada no nosso <a href=\"/guia/seo-trafego-organico\">guia de posicionamento orgânico e SEO B2B</a>.",
       },
       {
         titulo: "Por onde começar para virar o jogo",
@@ -294,7 +294,7 @@ export const blogPosts = [
       },
       {
         titulo: "A solução: automação de primeiro atendimento",
-        corpo: "Um fluxo simples e eficiente:\n• Lead envia mensagem\n• Resposta automática em segundos confirma o recebimento e apresenta a empresa\n• Mensagem direciona para agendamento ou coleta dados básicos\n• Atendente humano assume com contexto já estruturado\n\nResultado: lead tratado profissionalmente desde o primeiro segundo, mesmo fora do horário comercial.",
+        corpo: "Um fluxo simples e eficiente:\n• Lead envia mensagem\n• Resposta automática em segundos confirma o recebimento e apresenta a empresa\n• Mensagem direciona para agendamento ou coleta dados básicos\n• Atendente humano assume com contexto já estruturado\n\nResultado: lead tratado profissionalmente desde o primeiro segundo, mesmo fora do horário comercial. A estrutura técnica que garante resposta imediata a qualquer hora está no nosso <a href=\"/guia/automacao-digital\">guia completo de automação digital</a>.",
       },
       {
         titulo: "WhatsApp Business vs automação profissional",
@@ -333,7 +333,7 @@ export const blogPosts = [
       },
       {
         titulo: "O problema do WhatsApp como CRM",
-        corpo: "O WhatsApp foi criado para conversas, não para gestão de negócios. Quando você usa ele como CRM:\n\n• Leads se perdem nas conversas\n• Você esquece de fazer follow-up\n• Não tem visão do funil\n• Quando alguém da equipe sai, o histórico vai junto\n• Impossível medir taxa de conversão ou ticket médio",
+        corpo: "O WhatsApp foi criado para conversas, não para gestão de negócios. Quando você usa ele como CRM:\n\n• Leads se perdem nas conversas\n• Você esquece de fazer follow-up\n• Não tem visão do funil\n• Quando alguém da equipe sai, o histórico vai junto\n• Impossível medir taxa de conversão ou ticket médio\n\nComo conectar o WhatsApp ao CRM e fazer o dado nascer registrado é o tema do <a href=\"/guia/automacao-digital\">guia de automação digital para empresas B2B</a>.",
       },
       {
         titulo: "O que muda com um CRM",
@@ -376,7 +376,7 @@ export const blogPosts = [
       },
       {
         titulo: "Por que a maioria das empresas não converte no digital",
-        corpo: "O problema não costuma ser falta de presença — é falta de estrutura entre os canais.\n\nAlguém vê um post no Instagram, vai ao site, não encontra o que procura facilmente, manda mensagem no WhatsApp, aguarda horas por resposta, desiste.\n\nCada ruptura nessa jornada é uma oportunidade perdida.",
+        corpo: "O problema não costuma ser falta de presença — é falta de estrutura entre os canais.\n\nAlguém vê um post no Instagram, vai ao site, não encontra o que procura facilmente, manda mensagem no WhatsApp, aguarda horas por resposta, desiste.\n\nCada ruptura nessa jornada é uma oportunidade perdida. A camada de Estrutura — a que faz tudo funcionar sem depender do improviso diário — está detalhada no nosso <a href=\"/guia/automacao-digital\">guia completo de automação digital para empresas B2B</a>.",
       },
       {
         titulo: "Os 4 pilares da estrutura digital OTD",
@@ -431,7 +431,7 @@ export const blogPosts = [
       },
       {
         titulo: "Pilar 4: Automação",
-        corpo: "Garantir que nenhum lead seja perdido e que a operação funcione além do horário comercial.\n\nCRM, WhatsApp automatizado, agendamento online e fluxos de nutrição transformam uma operação reativa em uma máquina de relacionamento que trabalha 24 horas.",
+        corpo: "Garantir que nenhum lead seja perdido e que a operação funcione além do horário comercial.\n\nCRM, WhatsApp automatizado, agendamento online e fluxos de nutrição transformam uma operação reativa em uma máquina de relacionamento que trabalha 24 horas. O pilar da estrutura comercial automatizada tem um manual próprio: o <a href=\"/guia/automacao-digital\">guia de automação digital para empresas B2B</a>.",
       },
       {
         titulo: "Como avaliar sua estrutura hoje",
