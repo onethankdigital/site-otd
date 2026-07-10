@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const distDir = './dist';
+const EXPECTED_SITEMAP_URLS = 31; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
 
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
@@ -75,15 +76,23 @@ if (fs.existsSync(distDir)) {
       const locMatch = block.match(/<loc>(.*?)<\/loc>/);
       if (locMatch) {
         let loc = locMatch[1];
-        // Enforce trailing slash (except for root which already has it)
-        if (!loc.endsWith('/') && !loc.match(/\.\w+$/)) {
-          loc = loc + '/';
+        
+        // Normalize for comparison: strip trailing slash
+        let normalizedKey = loc.endsWith('/') ? loc.slice(0, -1) : loc;
+        
+        // Ignore 404 page if it gets picked up by plugin's filesystem scan
+        if (normalizedKey.endsWith('/404') || normalizedKey.endsWith('404.html')) {
+          continue;
         }
+        
         // Keep first occurrence (freshest lastmod), skip duplicates
-        if (!seen.has(loc)) {
+        if (!seen.has(normalizedKey)) {
+          // Enforce trailing slash for the final XML output
+          let finalLoc = normalizedKey + '/';
+          
           // Rewrite the block with the normalized loc
-          const normalizedBlock = block.replace(/<loc>.*?<\/loc>/, `<loc>${loc}</loc>`);
-          seen.set(loc, normalizedBlock);
+          const normalizedBlock = block.replace(/<loc>.*?<\/loc>/, `<loc>${finalLoc}</loc>`);
+          seen.set(normalizedKey, normalizedBlock);
         }
       }
     }
@@ -95,6 +104,10 @@ if (fs.existsSync(distDir)) {
     
     fs.writeFileSync(sitemapPath, header + deduped + footer, 'utf-8');
     console.log(`Optimized sitemap.xml: ${seen.size} unique URLs (deduplicated from ${urlBlocks.length}).`);
+    
+    if (seen.size !== EXPECTED_SITEMAP_URLS) {
+      throw new Error(`Sitemap dedup validation failed: Expected exactly ${EXPECTED_SITEMAP_URLS} URLs, but got ${seen.size}`);
+    }
   }
 }
 console.log('Post-build cleanup and optimization finished.');

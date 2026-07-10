@@ -1,6 +1,18 @@
-# Redirecionamentos 301 legados (/blog -> /insights) com ancoragem de regex para evitar prefix-matching e barras duplas
+# Redirecionamentos 301 legados e de alias (devem vir antes do ErrorDocument e mod_rewrite)
 RedirectMatch 301 ^/blog/?$ /insights/
 RedirectMatch 301 ^/blog/([a-zA-Z0-9\-]+)/?$ /insights/$1/
+RedirectMatch 301 ^/quiz/?$ /diagnostico/
+RedirectMatch 301 ^/4-pilares/?$ /pilares/
+RedirectMatch 301 ^/nossa-historia/?$ /historia/
+RedirectMatch 301 ^/google-meu-negocio/?$ /servicos/google-meu-negocio/
+RedirectMatch 301 ^/servicos/criacao-de-site/?$ /servicos/criacao-de-sites/
+RedirectMatch 301 ^/desenvolvimento-web-premium/?$ /servicos/criacao-de-sites/
+RedirectMatch 301 ^/servicos/seo/?$ /servicos/seo-trafego-organico/
+RedirectMatch 301 ^/seo-local/?$ /servicos/seo-trafego-organico/
+RedirectMatch 301 ^/servicos/automacao/?$ /servicos/automacao-digital/
+RedirectMatch 301 ^/automacoes-inteligentes/?$ /servicos/automacao-digital/
+
+ErrorDocument 404 /404.html
 
 # Enable rewrite engine for SPA routing
 <IfModule mod_rewrite.c>
@@ -11,9 +23,6 @@ RedirectMatch 301 ^/blog/([a-zA-Z0-9\-]+)/?$ /insights/$1/
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
-
-  # SPA fallback
-  RewriteRule ^ index.html [L]
 </IfModule>
 
 # Cache static assets
