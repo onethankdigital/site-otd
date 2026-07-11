@@ -454,8 +454,16 @@ export const blogPosts = [
   },
 ];
 
+export const isPostPublished = (p) => {
+  if (!p.publishDate) return true;
+  const today = new Date().toISOString().slice(0, 10);
+  return p.publishDate <= today;
+};
+
+export const getPublishedPosts = () => blogPosts.filter(isPostPublished);
+
 export const getPostBySlug = (slug) =>
-  blogPosts.find((p) => p.slug === slug) || null;
+  blogPosts.find((p) => p.slug === slug && isPostPublished(p)) || null;
 
 export const getPostsByCategoria = (categoria) =>
-  blogPosts.filter((p) => p.categoria === categoria);
+  blogPosts.filter((p) => p.categoria === categoria && isPostPublished(p));

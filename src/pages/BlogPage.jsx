@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { blogPosts } from "../data/blogPosts";
+import { getPublishedPosts } from "../data/blogPosts";
 import { Helmet } from "react-helmet-async";
 
 const CATEGORIES = ["Todos", "GMN", "Website", "SEO", "Automação", "OTD"];
@@ -45,7 +45,7 @@ const POSTS = [
     path: "/insights/como-organizar-leads-whatsapp-no-crm",
     comingSoon: false,
   },
-  ...blogPosts.map((p) => ({
+  ...getPublishedPosts().map((p) => ({
     id: p.id,
     featured: false,
     category: p.categoria,
