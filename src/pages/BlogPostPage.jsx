@@ -414,17 +414,15 @@ export default function BlogPostPage() {
     /* FOOTER */
     .article-footer {
       background: #080808;
-      padding: 40px clamp(24px,5vw,96px);
+      padding: 48px clamp(24px,5vw,96px);
       text-align: center;
       margin-top: 80px;
+      border-top: 1px solid #141414;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .footer-brand {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 18px;
-      letter-spacing: 2px;
-      color: #555;
-    }
-    .footer-brand span { color: #D42B2B; }
 
     /* 404 */
     .not-found {
@@ -603,9 +601,11 @@ export default function BlogPostPage() {
             <div className="cta-title">
               {post.cta || "QUER SABER COMO ESTÁ A ESTRUTURA DIGITAL DA SUA EMPRESA HOJE?"}
             </div>
-            <p className="cta-sub">
-              {post.ctaSub || "Faça nosso diagnóstico digital gratuito e descubra seus principais gargalos e como resolvê-los."}
-            </p>
+            {post.ctaSub &&
+              post.ctaSub !== "Faça o diagnóstico gratuito" &&
+              post.ctaSub !== "Faça o diagnóstico gratuito." && (
+                <p className="cta-sub">{post.ctaSub}</p>
+              )}
             <button className="cta-btn" onClick={goQuiz}>
               FAZER O DIAGNÓSTICO GRATUITO →
             </button>
@@ -615,8 +615,16 @@ export default function BlogPostPage() {
 
         {/* FOOTER */}
         <div className="article-footer">
-          <div className="footer-brand">ONE THANK <span>DIGITAL</span></div>
-          <div style={{ fontSize: 13, color: "#444", marginTop: 8 }}>Presença digital estruturada.</div>
+          <a href="/" style={{ textDecoration: "none", display: "block" }}>
+            <img
+              src="/logo.svg"
+              alt="One Thank Digital"
+              style={{ height: "48px", width: "auto", objectFit: "contain", margin: "0 auto 16px", display: "block" }}
+            />
+          </a>
+          <div style={{ fontSize: "14px", color: "#ffffff", fontWeight: 500, letterSpacing: "0.5px" }}>
+            Somos Presença. Somos Comunicação. Somos Estrutura.
+          </div>
         </div>
 
       </div>
