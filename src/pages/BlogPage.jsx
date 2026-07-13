@@ -65,6 +65,7 @@ const CAT_COLORS = {
   Website: "#1a56db",
   SEO: "#0e9f6e",
   Automação: "#7e3af2",
+  "Automação & CRM": "#7e3af2",
   OTD: "#D42B2B",
 };
 
@@ -501,9 +502,8 @@ export default function Blog() {
                     <span
                       className="cat-tag"
                       style={{
-                        background: `${CAT_COLORS[post.category]}12`,
-                        color: CAT_COLORS[post.category],
-                        fontSize: 9,
+                        background: `${CAT_COLORS[post.category] || "#7e3af2"}18`,
+                        color: CAT_COLORS[post.category] || "#7e3af2",
                       }}
                     >
                       {post.category}

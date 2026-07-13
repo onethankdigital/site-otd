@@ -457,7 +457,7 @@ export const blogPosts = [
     imagem: "/Blog/leads-qualificados-crm-organizado-automacao.webp",
     imagemAlt: "Quadro de vendas holográfico com leads sendo triados automaticamente em colunas sobre mesa de escritório ao amanhecer, com xícara de café ao lado, representando o funil organizado antes do expediente começar",
     slug: "leads-fora-do-horario-como-atender-24h",
-    categoria: "Automação & CRM",
+    categoria: "Automação",
     titulo: "Como Capturar e Triar Leads no WhatsApp Fora do Horário Comercial (Sem Atendente Humano)",
     meta: "8 min de leitura · Automação & CRM · One Thank Digital",
     lead: "São 21h47 de uma terça-feira. O sócio de um escritório de contabilidade acabou de sair de uma reunião tensa com um cliente insatisfeito com o contador atual. Ele pega o celular, pesquisa \"contabilidade para empresas de serviços\", encontra três opções e envia mensagem no WhatsApp das três.\n\nDuas respondem na manhã seguinte, depois das 9h. Uma responde em 40 segundos, faz três perguntas inteligentes, entende o regime tributário dele e agenda uma conversa para o dia seguinte às 10h — com o resumo do caso já na mesa do sócio comercial.\n\nNão é difícil prever quem tem a maior probabilidade de fechar o contrato.\n\nEsse cenário não é hipotético. É a rotina de qualquer empresa B2B que depende de captação digital. E o dado mais incômodo é este: boa parte das decisões de compra começa fora do horário comercial — à noite, no fim de semana, no feriado — exatamente quando o decisor finalmente tem tempo para resolver o que vem adiando há semanas.\n\nSe a sua empresa só responde das 8h às 18h, você não está apenas demorando para responder. Você está entregando seus melhores leads ao concorrente que estruturou o atendimento 24/7.",
