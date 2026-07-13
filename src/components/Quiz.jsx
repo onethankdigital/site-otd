@@ -397,6 +397,13 @@ export default function Quiz({ onClose }) {
       body: JSON.stringify(payload),
     }).catch((err) => console.error("Initial capture error:", err));
 
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "lead_diagnostico",
+      score_total: totalScore,
+      nivel: diagnosis?.title || "Não avaliado",
+    });
+
     setPhase("sched");
   }
 
@@ -425,6 +432,12 @@ export default function Quiz({ onClose }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
+      });
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "agendamento_concluido",
+        score_total: totalScore,
       });
     } catch (e) {
       console.error("Booking error:", e);

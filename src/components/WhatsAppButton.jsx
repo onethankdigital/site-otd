@@ -6,6 +6,13 @@ const WhatsAppButton = () => {
       href="https://wa.me/5511978679090"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'click_whatsapp',
+          page_path: window.location.pathname,
+        });
+      }}
       className="fixed bottom-28 right-6 md:right-12 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:bg-[#128C7E] hover:scale-105 transition-all duration-300 animate-whatsapp-pulse"
       aria-label="Fale conosco no WhatsApp"
     >
