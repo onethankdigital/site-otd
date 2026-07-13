@@ -16,7 +16,7 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "O que é o Google Meu Negócio e por que ele importa",
-        corpo: "O Google Meu Negócio (GMN) é o perfil gratuito que sua empresa pode criar diretamente no Google. É ele que aparece no Google Maps, no painel lateral das pesquisas e nos resultados locais quando alguém busca por 'advogado perto de mim' ou 'clínica odontológica em Santo André'.\n\nSe você não tem esse perfil configurado corretamente, sua empresa simplesmente não existe para quem está procurando agora.",
+        corpo: "O Google Meu Negócio (GMN) é o <strong><a href=\"https://support.google.com/business/answer/3038177\" target=\"_blank\" rel=\"noopener\">perfil gratuito e oficial que sua empresa pode criar no Google</a></strong>. É ele que aparece no Google Maps, no painel lateral das pesquisas e nos resultados locais quando alguém busca por 'advogado perto de mim' ou 'clínica odontológica em Santo André'.\n\nSe você não tem esse perfil configurado corretamente, sua empresa simplesmente não existe para quem está procurando agora.",
       },
       {
         titulo: "Os 5 motivos mais comuns para não aparecer",
@@ -24,11 +24,11 @@ export const blogPosts = [
       },
       {
         titulo: "O que fazer agora — passo a passo",
-        corpo: "1. Acesse business.google.com e reivindique ou crie seu perfil.\n2. Complete 100% das informações: nome, endereço, telefone, site, horário e categoria principal.\n3. Faça a verificação pelo código que o Google envia (carta, SMS ou e-mail).\n4. Adicione pelo menos 10 fotos profissionais: fachada, interior, equipe e produtos/serviços.\n5. Responda todas as avaliações existentes — positivas e negativas.\n6. Publique um post no perfil apresentando sua empresa. O passo a passo completo para dominar o Local Pack está no nosso <a href=\"/guia/google-meu-negocio\">guia prático de SEO local e Google Meu Negócio</a>.",
+        corpo: "1. Acesse business.google.com e reivindique ou crie seu perfil.\n2. Complete 100% das informações: nome, endereço, telefone, site, horário e categoria principal.\n3. Faça a verificação pelo código que o Google envia (carta, SMS ou e-mail).\n4. Adicione pelo menos 10 fotos profissionais: fachada, interior, equipe e produtos/serviços.\n5. Responda todas as avaliações existentes — positivas e negativas.\n6. Publique um post no perfil apresentando sua empresa. O passo a passo completo para dominar o Local Pack está no nosso <strong><a href=\"/guia/google-meu-negocio/\">guia prático de SEO local e Google Meu Negócio</a></strong>.",
       },
       {
         titulo: "Quanto tempo leva para aparecer?",
-        corpo: "Após a verificação, o Google pode levar de 3 a 7 dias para indexar completamente o perfil. Mas perfis bem preenchidos com fotos e avaliações começam a ganhar posições em buscas locais em 2 a 4 semanas.\n\nEmpresa que mantém o perfil ativo — com posts regulares e respostas a avaliações — tende a aparecer consistentemente acima de concorrentes inativos.",
+        corpo: "Após a verificação, o Google pode levar de 3 a 7 dias para indexar completamente o perfil. Mas perfis bem preenchidos com fotos e avaliações começam a ganhar posições em buscas locais em 2 a 4 semanas.\n\nEmpresa que mantém o perfil ativo — com posts regulares e respostas a avaliações — tende a aparecer consistentemente acima de concorrentes inativos. Para aprofundar na estratégia avançada, confira também nosso <strong><a href=\"/insights/google-meu-negocio-guia-completo-2026\">guia completo do Google Meu Negócio para 2026</a></strong>.",
       },
     ],
     faq: [
@@ -63,7 +63,7 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "Por que o GMN é mais importante do que seu site em buscas locais",
-        corpo: "Quando alguém pesquisa 'escritório de contabilidade em São Paulo', o que aparece primeiro não é o site de ninguém. É o mapa com três empresas em destaque — o chamado 'pacote local' ou '3-pack' do Google.\n\nEstar entre esses três é o equivalente digital de ter a melhor localização em uma rua comercial movimentada. E para chegar lá, o GMN é o caminho.",
+        corpo: "Quando alguém pesquisa 'escritório de contabilidade em São Paulo', o que aparece primeiro não é o site de ninguém. É o mapa com três empresas em destaque — o chamado 'pacote local' ou '3-pack' regido pelos <strong><a href=\"https://support.google.com/business/answer/7091\" target=\"_blank\" rel=\"noopener\">fatores oficiais de ranqueamento local do Google</a></strong>.\n\nEstar entre esses três é o equivalente digital de ter a melhor localização em uma rua comercial movimentada. E para chegar lá, o GMN é o caminho.",
       },
       {
         titulo: "Estrutura de um perfil GMN completo",
@@ -71,7 +71,7 @@ export const blogPosts = [
       },
       {
         titulo: "A estratégia de avaliações que poucos usam",
-        corpo: "Empresas com mais avaliações positivas aparecem antes — isso todo mundo sabe. Mas o que poucos sabem é que a velocidade com que você recebe novas avaliações importa tanto quanto a quantidade.\n\nO que funciona: após cada atendimento bem-sucedido, envie uma mensagem simples pelo WhatsApp com o link direto para avaliação. Taxa de conversão média: 30 a 40% dos clientes satisfeitos avaliam quando pedido diretamente. Para aprofundar na estrutura semântica do NAP e na gestão de avaliações em escala, consulte o <a href=\"/guia/google-meu-negocio\">guia completo de domínio no Google Maps</a>.",
+        corpo: "Empresas com mais avaliações positivas aparecem antes — isso todo mundo sabe. Mas o que poucos sabem é que a velocidade com que você recebe novas avaliações importa tanto quanto a quantidade.\n\nO que funciona: após cada atendimento bem-sucedido, envie uma mensagem simples pelo WhatsApp com o link direto para avaliação. Taxa de conversão média: 30 a 40% dos clientes satisfeitos avaliam quando pedido diretamente. Para aprofundar na estrutura semântica do NAP e na gestão de avaliações em escala, consulte o <strong><a href=\"/guia/google-meu-negocio/\">guia completo de domínio no Google Maps</a></strong>.",
       },
       {
         titulo: "Publicações no GMN: o segredo dos perfis que aparecem sempre",
@@ -79,7 +79,7 @@ export const blogPosts = [
       },
       {
         titulo: "Métricas para acompanhar todo mês",
-        corpo: "• Visualizações do perfil\n• Cliques para ligar\n• Cliques para ver o site\n• Solicitações de rotas\n• Número de avaliações recebidas\n\nO próprio GMN fornece esses dados gratuitamente na aba 'Insights'.",
+        corpo: "• Visualizações do perfil\n• Cliques para ligar\n• Cliques para ver o site\n• Solicitações de rotas\n• Número de avaliações recebidas\n\nO próprio GMN fornece esses dados gratuitamente na aba 'Insights'. Ou conte com o nosso serviço especializado em <strong><a href=\"/servicos/google-meu-negocio/\">otimização e gestão de Google Meu Negócio</a></strong>.",
       },
     ],
     faq: [
@@ -114,11 +114,11 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "O que cada canal faz de verdade",
-        corpo: "O Instagram é um canal de relacionamento e descoberta. As pessoas chegam até você pelo conteúdo, pelo algoritmo ou por indicação. É ótimo para construir audiência e gerar engajamento.\n\nO site é um ativo de conversão e credibilidade. Quando alguém já conhece sua empresa e quer confirmar se você é legítimo, vai ao site. Quando o Google quer ranquear sua empresa, analisa o site.",
+        corpo: "O Instagram é um canal de relacionamento e descoberta. As pessoas chegam até você pelo conteúdo, pelo algoritmo ou por indicação. É ótimo para construir audiência e gerar engajamento.\n\nO site é um ativo de conversão e credibilidade. Quando alguém já conhece sua empresa e quer confirmar se você é legítimo, vai ao site. E quando o Google quer <strong><a href=\"https://developers.google.com/search/docs/fundamentals/seo-starter-guide\" target=\"_blank\" rel=\"noopener\">ranquear sua empresa com autoridade orgânica</a></strong>, analisa o seu site próprio.",
       },
       {
         titulo: "O risco de construir sua casa em terreno alugado",
-        corpo: "O Instagram não é seu. Se a plataforma mudar o algoritmo (como faz com frequência), o alcance cai. Se sua conta for suspensa ou invadida, você perde todo o histórico e acesso aos clientes.\n\nO site é o único ativo digital que você possui de verdade. O domínio é seu, o conteúdo é seu, o tráfego é seu. A arquitetura técnica que transforma um site em ativo de conversão está no nosso <a href=\"/guia/desenvolvimento-web\">guia de arquitetura web e criação de sites B2B</a>.",
+        corpo: "O Instagram não é seu. Se a plataforma mudar o algoritmo (como faz com frequência), o alcance cai. Se sua conta for suspensa ou invadida, você perde todo o histórico e acesso aos clientes.\n\nO site é o único ativo digital que você possui de verdade. O domínio é seu, o conteúdo é seu, o tráfego é seu. A arquitetura técnica que transforma um site em ativo de conversão está no nosso <strong><a href=\"/guia/desenvolvimento-web/\">guia de arquitetura web e criação de sites B2B</a></strong>.",
       },
       {
         titulo: "A jornada real de compra de um cliente B2B ou de serviços",
@@ -126,7 +126,7 @@ export const blogPosts = [
       },
       {
         titulo: "Quando priorizar cada um",
-        corpo: "• Começando com orçamento zero: comece pelo Instagram e GMN para validar sua oferta\n• Empresa faturando e querendo escalar: o site profissional torna-se obrigatório — sem ele você perde conversão no tráfego pago e não constrói autoridade no Google\n• O cenário ideal: Instagram alimentando o relacionamento + Site convertendo e ranqueando no Google",
+        corpo: "• Começando com orçamento zero: comece pelo Instagram e GMN para validar sua oferta\n• Empresa faturando e querendo escalar: o site profissional torna-se obrigatório — sem ele você perde conversão no tráfego pago e precisa <strong><a href=\"/insights/por-que-site-nao-aparece-google\">garantir que seu site apareça no Google</a></strong>\n• O cenário ideal: Instagram alimentando o relacionamento + Site convertendo e ranqueando no Google",
       },
     ],
     faq: [
@@ -157,11 +157,11 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "O Google não indexa sites automaticamente",
-        corpo: "Um equívoco comum: 'criei o site, então o Google vai encontrar'. Não é assim que funciona.\n\nO Google usa robôs (chamados crawlers) para navegar pela internet e mapear páginas. Para que seu site seja encontrado rapidamente, você precisa submeter um sitemap ao Google Search Console — uma ferramenta gratuita do Google.",
+        corpo: "Um equívoco comum: 'criei o site, então o Google vai encontrar'. Não é assim que funciona.\n\nO Google usa robôs (chamados crawlers) para navegar pela internet e mapear páginas. Para que seu site seja encontrado rapidamente, você precisa submeter um sitemap ao <strong><a href=\"https://search.google.com/search-console/about\" target=\"_blank\" rel=\"noopener\">Google Search Console</a></strong> — uma ferramenta gratuita do Google.",
       },
       {
         titulo: "Os 6 erros técnicos que fazem sites sumirem do Google",
-        corpo: "• Meta tags ausentes ou duplicadas: o Google não sabe do que se trata cada página\n• Site lento: acima de 3 segundos de carregamento, o Google penaliza o ranqueamento\n• Sem versão mobile: desde 2019 o Google usa mobile-first indexing\n• Links quebrados: sinalizam site abandonado ou mal mantido\n• Sem HTTPS: site sem certificado SSL é marcado como 'não seguro'\n• Conteúdo duplicado: páginas com textos iguais se canibalizam no ranqueamento. Core Web Vitals, estrutura AEO e os fundamentos técnicos de um site encontrável estão reunidos no <a href=\"/guia/desenvolvimento-web\">guia de arquitetura web de alta conversão</a>.",
+        corpo: "• Meta tags ausentes ou duplicadas: o Google não sabe do que se trata cada página\n• Site lento: acima de 3 segundos de carregamento, o Google penaliza o ranqueamento\n• Sem versão mobile: desde 2019 o Google usa mobile-first indexing\n• Links quebrados: sinalizam site abandonado ou mal mantido\n• Sem HTTPS: site sem certificado SSL é marcado como 'não seguro'\n• Conteúdo duplicado: páginas com textos iguais se canibalizam no ranqueamento. Core Web Vitals, estrutura AEO e os fundamentos técnicos de um site encontrável estão reunidos no <strong><a href=\"/guia/desenvolvimento-web/\">guia de arquitetura web de alta conversão</a></strong>.",
       },
       {
         titulo: "O problema do site bonito sem conteúdo",
@@ -169,7 +169,7 @@ export const blogPosts = [
       },
       {
         titulo: "O que verificar no seu site hoje",
-        corpo: "1. Acesse Google Search Console e veja se seu site está verificado\n2. Pesquise no Google: site:seudominio.com.br e veja quantas páginas estão indexadas\n3. Teste a velocidade em pagespeed.web.dev — nota abaixo de 70 precisa de atenção\n4. Abra o site no celular e veja se tudo funciona bem\n5. Verifique se há algum plugin ou ferramenta de SEO instalada e configurada",
+        corpo: "1. Acesse Google Search Console e veja se seu site está verificado\n2. Pesquise no Google: site:seudominio.com.br e veja quantas páginas estão indexadas\n3. Teste a velocidade na ferramenta oficial <strong><a href=\"https://pagespeed.web.dev/\" target=\"_blank\" rel=\"noopener\">PageSpeed Insights</a></strong> — nota abaixo de 70 precisa de atenção\n4. Abra o site no celular e veja se tudo funciona bem\n5. Verifique se há algum plugin ou ferramenta de SEO configurada, ou consulte nosso serviço de <strong><a href=\"/servicos/criacao-de-sites/\">criação de sites de alta performance</a></strong>",
       },
     ],
     faq: [
@@ -200,7 +200,7 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "O que é SEO orgânico na prática",
-        corpo: "SEO (Search Engine Optimization) é o conjunto de técnicas que fazem seu site aparecer nos resultados naturais do Google — sem pagar por isso.\n\nOs resultados são duradouros: um artigo bem escrito e otimizado pode gerar visitas por anos. Mas o tempo de maturação é real: geralmente 3 a 6 meses para começar a ver resultados consistentes.",
+        corpo: "<strong><a href=\"https://developers.google.com/search/docs\" target=\"_blank\" rel=\"noopener\">SEO (Search Engine Optimization)</a></strong> é o conjunto de técnicas oficiais que fazem seu site aparecer nos resultados naturais do Google — sem pagar por clique.\n\nOs resultados são duradouros: um artigo bem escrito e otimizado pode gerar visitas por anos. Mas o tempo de maturação é real: geralmente 3 a 6 meses para começar a ver resultados consistentes.",
       },
       {
         titulo: "O que é tráfego pago na prática",
@@ -212,7 +212,7 @@ export const blogPosts = [
       },
       {
         titulo: "O erro que mais vejo: escolher um e abandonar o outro",
-        corpo: "Empresas que focam só em SEO ficam vulneráveis à demora. Empresas que focam só em Ads ficam reféns do orçamento.\n\nA estratégia inteligente é usar o tráfego pago para gerar resultado imediato enquanto o SEO orgânico é construído em paralelo. Como integrar tráfego orgânico e campanhas pagas sem canibalizar resultados é o tema do nosso <a href=\"/guia/seo-trafego-organico\">guia de estratégias de SEO B2B</a>.",
+        corpo: "Empresas que focam só em SEO ficam vulneráveis à demora. Empresas que focam só em Ads ficam reféns do orçamento.\n\nA estratégia inteligente é usar o tráfego pago para gerar resultado imediato enquanto o SEO orgânico é construído em paralelo. Como integrar tráfego orgânico e campanhas pagas sem canibalizar resultados é o tema do nosso <strong><a href=\"/guia/seo-trafego-organico/\">guia de estratégias de SEO B2B</a></strong> ou com nossa <strong><a href=\"/servicos/seo-trafego-organico/\">consultoria de SEO e tráfego orgânico</a></strong>.",
       },
     ],
     faq: [
@@ -243,7 +243,7 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "Como o Google decide quem aparece primeiro",
-        corpo: "O algoritmo do Google avalia centenas de fatores, mas os principais para negócios locais são:\n\n• Relevância: o conteúdo da página responde bem à pergunta pesquisada?\n• Autoridade: outros sites de qualidade linkam para o seu?\n• Experiência: o site é rápido, seguro e fácil de usar?\n• Localização: o negócio está fisicamente próximo de quem busca?\n• Histórico: o site tem conteúdo consistente e atualizado?",
+        corpo: "O algoritmo do Google avalia centenas de fatores regidos pelas <strong><a href=\"https://developers.google.com/search/docs/fundamentals/creating-helpful-content\" target=\"_blank\" rel=\"noopener\">diretrizes de qualidade e autoridade (E-E-A-T)</a></strong>, sendo os principais para negócios locais:\n\n• Relevância: o conteúdo da página responde bem à pergunta pesquisada?\n• Autoridade: outros sites de qualidade linkam para o seu?\n• Experiência: o site é rápido, seguro e fácil de usar?\n• Localização: o negócio está fisicamente próximo de quem busca?\n• Histórico: o site tem conteúdo consistente e atualizado?",
       },
       {
         titulo: "O que seu concorrente provavelmente faz diferente",
@@ -251,11 +251,11 @@ export const blogPosts = [
       },
       {
         titulo: "O fator tempo: autoridade não se compra, se constrói",
-        corpo: "Um site com 3 anos de conteúdo consistente tem uma vantagem real sobre um site novo. Mas isso não significa que você não possa competir — significa que quanto antes você começar, mais cedo vai colher os resultados. A construção de autoridade semântica que separa quem aparece de quem é ignorado está detalhada no nosso <a href=\"/guia/seo-trafego-organico\">guia de posicionamento orgânico e SEO B2B</a>.",
+        corpo: "Um site com 3 anos de conteúdo consistente tem uma vantagem real sobre um site novo. Mas isso não significa que você não possa competir — significa que quanto antes você começar, mais cedo vai colher os resultados. A construção de autoridade semântica que separa quem aparece de quem é ignorado está detalhada no nosso <strong><a href=\"/guia/seo-trafego-organico/\">guia de posicionamento orgânico e SEO B2B</a></strong>.",
       },
       {
         titulo: "Por onde começar para virar o jogo",
-        corpo: "1. Auditoria técnica do seu site: velocidade, mobile, indexação\n2. Otimização do GMN: completar, verificar, adicionar fotos e avaliações\n3. Pesquisa de palavras-chave: descobrir o que seus clientes pesquisam\n4. Produção de conteúdo: artigos que respondem às dúvidas do seu cliente ideal\n5. Estratégia de links: parcerias, diretórios e menções em outros sites",
+        corpo: "1. Auditoria técnica do seu site: velocidade, mobile, indexação\n2. Otimização do GMN: completar, verificar, adicionar fotos e avaliações\n3. Pesquisa de palavras-chave: descobrir o que seus clientes pesquisam\n4. Produção de conteúdo: artigos que respondem às dúvidas do seu cliente ideal\n5. Estratégia de links ou realize um <strong><a href=\"/diagnostico\">diagnóstico digital gratuito</a></strong> da sua estrutura atual",
       },
     ],
     faq: [
@@ -286,7 +286,7 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "O comportamento do lead no WhatsApp",
-        corpo: "Quando alguém manda uma mensagem para a sua empresa no WhatsApp, está em modo de decisão ativa. Acabou de pesquisar, comparou opções e escolheu entrar em contato com você.\n\nNesse momento, a pessoa também mandou mensagem para 2 ou 3 concorrentes. Quem responder primeiro tem vantagem real na negociação.",
+        corpo: "Quando alguém manda uma mensagem para a sua empresa no WhatsApp, está em modo de decisão ativa. Acabou de pesquisar, comparou opções e escolheu entrar em contato com você.\n\nConforme demonstrado pelo clássico <strong><a href=\"https://hbr.org/2011/03/the-short-life-of-online-sales-leads\" target=\"_blank\" rel=\"noopener\">estudo sobre tempo de resposta e conversão de leads</a></strong>, quem responder nos primeiros 5 minutos tem até 21 vezes mais chances de fechar negócio do que quem demora mais de 30 minutos.",
       },
       {
         titulo: "O custo invisível da demora",
@@ -294,11 +294,11 @@ export const blogPosts = [
       },
       {
         titulo: "A solução: automação de primeiro atendimento",
-        corpo: "Um fluxo simples e eficiente:\n• Lead envia mensagem\n• Resposta automática em segundos confirma o recebimento e apresenta a empresa\n• Mensagem direciona para agendamento ou coleta dados básicos\n• Atendente humano assume com contexto já estruturado\n\nResultado: lead tratado profissionalmente desde o primeiro segundo, mesmo fora do horário comercial. A estrutura técnica que garante resposta imediata a qualquer hora está no nosso <a href=\"/guia/automacao-digital\">guia completo de automação digital</a>.",
+        corpo: "Um fluxo simples e eficiente:\n• Lead envia mensagem\n• Resposta automática em segundos confirma o recebimento e apresenta a empresa\n• Mensagem direciona para agendamento ou coleta dados básicos\n• Atendente humano assume com contexto já estruturado\n\nResultado: lead tratado profissionalmente desde o primeiro segundo, mesmo fora do horário comercial. A estrutura técnica que garante resposta imediata a qualquer hora está no nosso <strong><a href=\"/guia/automacao-digital/\">guia completo de automação digital</a></strong>.",
       },
       {
         titulo: "WhatsApp Business vs automação profissional",
-        corpo: "O WhatsApp Business oferece respostas rápidas e mensagem de ausência — recursos básicos que resolvem parte do problema.\n\nPara operações que recebem mais de 20 mensagens por dia, a automação profissional (via Evolution API integrada a n8n) permite fluxos complexos: triagem por assunto, encaminhamento para atendente correto, integração com CRM e agenda.",
+        corpo: "O WhatsApp Business oferece respostas rápidas e mensagem de ausência — recursos básicos que resolvem parte do problema.\n\nPara operações que recebem mensagens constantes, a automação profissional permite fluxos completos: triagem por assunto, encaminhamento para atendente correto e registro no CRM. Veja também nosso artigo detalhado sobre <strong><a href=\"/insights/leads-fora-do-horario-como-atender-24h\">como capturar e triar leads 24h por dia sem atendente humano</a></strong>.",
       },
     ],
     faq: [
@@ -329,11 +329,11 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "CRM: o que é sem jargão técnico",
-        corpo: "CRM significa Customer Relationship Management — Gestão do Relacionamento com o Cliente.\n\nNa prática é um sistema que centraliza todas as informações sobre seus leads e clientes: de onde vieram, em qual etapa da negociação estão, qual foi o último contato e qual é o valor potencial de cada oportunidade.",
+        corpo: "CRM significa <strong><a href=\"https://hbr.org/topic/sales-and-marketing\" target=\"_blank\" rel=\"noopener\">Customer Relationship Management — Gestão do Relacionamento com o Cliente</a></strong>.\n\nNa prática é um sistema que centraliza todas as informações sobre seus leads e clientes: de onde vieram, em qual etapa da negociação estão, qual foi o último contato e qual é o valor potencial de cada oportunidade.",
       },
       {
         titulo: "O problema do WhatsApp como CRM",
-        corpo: "O WhatsApp foi criado para conversas, não para gestão de negócios. Quando você usa ele como CRM:\n\n• Leads se perdem nas conversas\n• Você esquece de fazer follow-up\n• Não tem visão do funil\n• Quando alguém da equipe sai, o histórico vai junto\n• Impossível medir taxa de conversão ou ticket médio\n\nComo conectar o WhatsApp ao CRM e fazer o dado nascer registrado é o tema do <a href=\"/guia/automacao-digital\">guia de automação digital para empresas B2B</a>.",
+        corpo: "O WhatsApp foi criado para conversas, não para gestão de negócios. Quando você usa ele como CRM:\n\n• Leads se perdem nas conversas\n• Você esquece de fazer follow-up\n• Não tem visão do funil\n• Quando alguém da equipe sai, o histórico vai junto\n• Impossível medir taxa de conversão ou ticket médio\n\nComo conectar o WhatsApp ao CRM e fazer o dado nascer registrado é o tema do <strong><a href=\"/guia/automacao-digital/\">guia de automação digital para empresas B2B</a></strong>.",
       },
       {
         titulo: "O que muda com um CRM",
@@ -341,7 +341,7 @@ export const blogPosts = [
       },
       {
         titulo: "Por onde começar: opções para PMEs brasileiras",
-        corpo: "Para empresas de 1 a 20 funcionários:\n\n• Bolten: CRM visual com Kanban, ideal para prestadores de serviço B2B\n• RD Station CRM: gratuito na versão básica\n• HubSpot: gratuito para até 1 milhão de contatos na versão free\n• Pipedrive: focado em vendas, interface muito intuitiva\n\nO melhor CRM é o que sua equipe vai usar.",
+        corpo: "Para empresas de 1 a 20 funcionários:\n\n• Bolten: CRM visual com Kanban, ideal para prestadores de serviço B2B\n• RD Station CRM: gratuito na versão básica\n• HubSpot: gratuito para até 1 milhão de contatos na versão free\n• Pipedrive: focado em vendas, interface muito intuitiva\n\nO melhor CRM é o que sua equipe vai usar. Aprenda na prática <strong><a href=\"/insights/como-organizar-leads-whatsapp-no-crm\">como organizar seus leads de WhatsApp dentro do CRM</a></strong>.",
       },
     ],
     faq: [
@@ -372,11 +372,11 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "A diferença entre presença e estrutura",
-        corpo: "Presença digital é estar nas plataformas: ter Instagram, site, WhatsApp Business, Google Meu Negócio.\n\nPresença digital estruturada é fazer essas plataformas trabalharem juntas, de forma integrada, com processos definidos e métricas acompanhadas.\n\nA maioria das empresas tem presença. Poucas têm estrutura.",
+        corpo: "Presença digital é estar nas plataformas: ter Instagram, site, WhatsApp Business, Google Meu Negócio.\n\nPresença digital estruturada, fundamentada em <strong><a href=\"https://hbr.org/topic/digital-transformation\" target=\"_blank\" rel=\"noopener\">metodologia de maturidade e transformação digital corporativa</a></strong>, é fazer essas plataformas trabalharem juntas, de forma integrada, com processos definidos e métricas acompanhadas.\n\nA maioria das empresas tem presença. Poucas têm estrutura.",
       },
       {
         titulo: "Por que a maioria das empresas não converte no digital",
-        corpo: "O problema não costuma ser falta de presença — é falta de estrutura entre os canais.\n\nAlguém vê um post no Instagram, vai ao site, não encontra o que procura facilmente, manda mensagem no WhatsApp, aguarda horas por resposta, desiste.\n\nCada ruptura nessa jornada é uma oportunidade perdida. A camada de Estrutura — a que faz tudo funcionar sem depender do improviso diário — está detalhada no nosso <a href=\"/guia/automacao-digital\">guia completo de automação digital para empresas B2B</a>.",
+        corpo: "O problema não costuma ser falta de presença — é falta de estrutura entre os canais.\n\nAlguém vê um post no Instagram, vai ao site, não encontra o que procura facilmente, manda mensagem no WhatsApp, aguarda horas por resposta, desiste.\n\nCada ruptura nessa jornada é uma oportunidade perdida. A camada de Estrutura — a que faz tudo funcionar sem depender do improviso diário — está detalhada no nosso <strong><a href=\"/guia/automacao-digital/\">guia completo de automação digital para empresas B2B</a></strong> e na nossa página de <strong><a href=\"/pilares\">conheça os 4 pilares estruturais da OTD</a></strong>.",
       },
       {
         titulo: "Os 4 pilares da estrutura digital OTD",
@@ -415,7 +415,7 @@ export const blogPosts = [
     secoes: [
       {
         titulo: "Por que 1 pilar sozinho não funciona",
-        corpo: "Uma empresa com site excelente mas sem GMN perde clientes locais. Uma empresa com GMN ótimo mas site sem CTA perde a conversão. Uma empresa com tráfego pago mas sem automação perde leads fora do horário comercial.\n\nOs pilares se complementam. A ausência de qualquer um cria um gargalo.",
+        corpo: "Conforme evidenciado por <strong><a href=\"https://www.thinkwithgoogle.com/intl/pt-br/\" target=\"_blank\" rel=\"noopener\">estudos do Think with Google sobre a jornada do consumidor</a></strong>, uma empresa com site excelente mas sem GMN perde clientes locais. Uma empresa com GMN ótimo mas site sem CTA perde a conversão. Uma empresa com tráfego pago mas sem automação perde leads fora do horário comercial.\n\nOs pilares se complementam. A ausência de qualquer um cria um gargalo.",
       },
       {
         titulo: "Pilar 1: Google Meu Negócio",
@@ -431,11 +431,11 @@ export const blogPosts = [
       },
       {
         titulo: "Pilar 4: Automação",
-        corpo: "Garantir que nenhum lead seja perdido e que a operação funcione além do horário comercial.\n\nCRM, WhatsApp automatizado, agendamento online e fluxos de nutrição transformam uma operação reativa em uma máquina de relacionamento que trabalha 24 horas. O pilar da estrutura comercial automatizada tem um manual próprio: o <a href=\"/guia/automacao-digital\">guia de automação digital para empresas B2B</a>.",
+        corpo: "Garantir que nenhum lead seja perdido e que a operação funcione além do horário comercial.\n\nCRM, WhatsApp automatizado, agendamento online e fluxos de nutrição transformam uma operação reativa em uma máquina de relacionamento que trabalha 24 horas. O pilar da estrutura comercial automatizada tem um manual próprio: o <strong><a href=\"/guia/automacao-digital/\">guia de automação digital para empresas B2B</a></strong>.",
       },
       {
         titulo: "Como avaliar sua estrutura hoje",
-        corpo: "A One Thank Digital criou um diagnóstico gratuito que avalia os 4 pilares em 20 perguntas. Em menos de 5 minutos, você descobre onde estão os gargalos que estão limitando seu crescimento.",
+        corpo: "A One Thank Digital criou um <strong><a href=\"/diagnostico\">diagnóstico gratuito da sua maturidade digital</a></strong> que avalia os 4 pilares em perguntas estratégicas. Em menos de 5 minutos, você descobre onde estão os gargalos que estão limitando seu crescimento.",
       },
     ],
     faq: [
