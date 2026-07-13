@@ -291,6 +291,16 @@ export default function BlogPostPage() {
       color: #444;
       white-space: pre-line;
     }
+    .article-section a, .article-lead a {
+      color: #D42B2B;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    .article-section a:hover, .article-lead a:hover {
+      color: #991b1b;
+    }
 
     /* HUB & SPOKE CONNECTION BOX */
     .satellite-hub-link {
