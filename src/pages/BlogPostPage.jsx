@@ -7,6 +7,7 @@ const CAT_COLORS = {
   Website: "#1a56db",
   SEO: "#0e9f6e",
   Automação: "#7e3af2",
+  "Automação & CRM": "#7e3af2",
   OTD: "#D42B2B",
 };
 
@@ -42,7 +43,7 @@ export default function BlogPostPage() {
           dateModified: "2026-07-08T08:00:00+00:00",
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": `https://onethank.com.br/blog/${post.slug}`,
+            "@id": `https://onethank.com.br/insights/${post.slug}`,
           },
           author: {
             "@type": "Organization",
@@ -101,7 +102,7 @@ export default function BlogPostPage() {
               "@type": "ListItem",
               position: 4,
               name: post.titulo,
-              item: `https://onethank.com.br/blog/${post.slug}`,
+              item: `https://onethank.com.br/insights/${post.slug}`,
             },
           ],
         },
@@ -465,7 +466,15 @@ export default function BlogPostPage() {
   return (
     <>
       <Helmet>
+        <title>{`${post.titulo} | Insights One Thank Digital`}</title>
         <link rel="canonical" href={`https://onethank.com.br/insights/${post.slug}/`} />
+        <meta property="og:title" content={`${post.titulo} | Insights One Thank Digital`} />
+        <meta property="og:description" content={post.lead.substring(0, 160)} />
+        <meta property="og:url" content={`https://onethank.com.br/insights/${post.slug}/`} />
+        {post.imagem && <meta property="og:image" content={`https://onethank.com.br${post.imagem}`} />}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={`${post.titulo} | Insights One Thank Digital`} />
+        {post.imagem && <meta property="twitter:image" content={`https://onethank.com.br${post.imagem}`} />}
       </Helmet>
       {schemas && schemas.length > 0 && (
         <script
@@ -516,7 +525,7 @@ export default function BlogPostPage() {
           <div style={{ width: "100%", height: 400, overflow: "hidden" }}>
             <img
               src={post.imagem}
-              alt={post.titulo}
+              alt={post.imagemAlt || post.titulo}
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />
           </div>

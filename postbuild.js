@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { blogPosts } from './src/data/blogPosts.js';
 
 const distDir = './dist';
-const EXPECTED_SITEMAP_URLS = 31; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
+const EXPECTED_SITEMAP_URLS = 32; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
 
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
@@ -45,6 +46,21 @@ function processDirectory(dir) {
     <link rel="preload" as="image" href="/hero-automacao-digital.webp" type="image/webp">
   </head>`;
         html = html.replace('</head>', preloadHero);
+      }
+
+      // Se for uma página de post do blog em /insights/<slug>/index.html, atualizar meta tags OG com dados específicos
+      for (const post of blogPosts) {
+        if (normalizedPath.includes(path.normalize(`insights/${post.slug}/index.html`))) {
+          const absImg = `https://onethank.com.br${post.imagem}`;
+          const absUrl = `https://onethank.com.br/insights/${post.slug}/`;
+          const ogTitle = `${post.titulo} | Insights One Thank Digital`;
+          html = html.replace(/<meta property="og:image" content="[^"]*">/g, `<meta property="og:image" content="${absImg}">`);
+          html = html.replace(/<meta property="twitter:image" content="[^"]*">/g, `<meta property="twitter:image" content="${absImg}">`);
+          html = html.replace(/<meta property="og:title" content="[^"]*">/g, `<meta property="og:title" content="${ogTitle}">`);
+          html = html.replace(/<meta property="twitter:title" content="[^"]*">/g, `<meta property="twitter:title" content="${ogTitle}">`);
+          html = html.replace(/<meta property="og:url" content="[^"]*">/g, `<meta property="og:url" content="${absUrl}">`);
+          break;
+        }
       }
       
       fs.writeFileSync(filePath, html, 'utf-8');
