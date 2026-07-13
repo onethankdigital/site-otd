@@ -127,17 +127,21 @@ export default function BlogPostPage() {
       border-bottom: 1px solid #1a1a1a;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 clamp(20px,4vw,64px);
-      height: 64px;
+      height: 72px;
     }
 
     .nav-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 20px;
-      letter-spacing: 2px;
-      color: #ffffff;
+      display: flex;
+      align-items: center;
       text-decoration: none;
     }
-    .nav-logo span { color: #D42B2B; }
+
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
 
     .btn-back-blog {
       display: inline-flex;
@@ -487,7 +491,9 @@ export default function BlogPostPage() {
 
         {/* NAVBAR */}
         <nav className="article-nav">
-          <a href="/" className="nav-logo">ONE THANK <span>DIGITAL</span></a>
+          <a href="/" className="nav-logo">
+            <img src="/logo.svg" alt="One Thank Digital" className="nav-logo-img" />
+          </a>
           <button className="btn-back-blog" onClick={goBack}>← Voltar aos Insights</button>
         </nav>
 
