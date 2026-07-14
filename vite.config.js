@@ -35,6 +35,7 @@ const sitemapPaths = [
   '/insights/o-que-e-crm-pequenas-empresas/',
   '/insights/4-pilares-empresa-encontrada-online/',
   '/insights/leads-fora-do-horario-como-atender-24h/',
+  '/insights/atendente-humano-vs-automacao-whatsapp-b2b/',
   '/guia/',
   '/guia/automacao-digital/',
   '/guia/google-meu-negocio/',
@@ -69,6 +70,7 @@ const prerenderPaths = [
   '/insights/o-que-e-crm-pequenas-empresas/',
   '/insights/4-pilares-empresa-encontrada-online/',
   '/insights/leads-fora-do-horario-como-atender-24h/',
+  '/insights/atendente-humano-vs-automacao-whatsapp-b2b/',
   '/guia/',
   '/guia/automacao-digital/',
   '/guia/google-meu-negocio/',
@@ -83,7 +85,7 @@ export default defineConfig({
   base: '/',
   plugins: [
     react(),
-    
+
     Sitemap({
       hostname: 'https://onethank.com.br',
       dynamicRoutes: sitemapPaths,

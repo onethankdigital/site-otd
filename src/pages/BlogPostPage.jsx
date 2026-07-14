@@ -595,7 +595,7 @@ export default function BlogPostPage() {
                       </div>
                       <div
                         className="satellite-faq-a"
-                        style={{ display: isOpen ? "block" : "block" }}
+                        style={{ display: isOpen ? "block" : "none" }}
                       >
                         {item.resposta}
                       </div>
