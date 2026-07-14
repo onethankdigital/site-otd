@@ -87,7 +87,7 @@ export const blogPosts = [
       },
       {
         titulo: "Frequência de Publicações, Sinais Comportamentais e Equação de Visibilidade",
-        corpo: "O dinamismo e a atividade de um negócio são percebidos pelo buscador por meio das interações geradas em postagens semanais e no processamento de sinais comportamentais. Recomenda-se manter uma cadência de publicações de uma a duas vezes por semana, o que mantém o perfil atualizado perante os consumidores locais. No entanto, deve-se atentar estritamente para a conformidade: a inclusão de números de telefone corporativos diretamente no texto descritivo dos posts acarreta a rejeição automatizada da publicação. O padrão aceito exige a utilização do botão de ação oficial do sistema direcionado ao canal de contato registrado. No setor hoteleiro, aplicam-se restrições adicionais que proíbem posts que façam referência direta a ofertas, cupons ou descontos para preservar a paridade de preços na plataforma.\n\nO engajamento em termos de velocidade de resposta é igualmente crucial. O proprietário deve enviar respostas comerciais profissionais a comentários e avaliações em um prazo limite de até 24 horas. Esse comportamento atua como um sinal positivo ao algoritmo de suporte local, oferecendo a oportunidade de injetar de forma natural termos contextuais adicionais do mercado.\n\n<div style=\"background: #0F1B2E; border: 1px solid #2DD4BF; border-left: 5px solid #2DD4BF; padding: 1.6rem; border-radius: 8px; margin: 2rem 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);\">\n  <div style=\"color: #2DD4BF; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;\">📐 MODELAGEM MATEMÁTICA E TRADUÇÃO COMERCIAL DA VISIBILIDADE LOCAL ($V$)</div>\n  <div style=\"background: #080E1A; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 1.15rem; color: #F8FAFC; text-align: center; margin-bottom: 1.2rem; border: 1px solid #1E293B;\">\n    V = w₁ · GBP + w₂ · R_rec + w₃ · UGC + w₄ · S_site\n  </div>\n  <div style=\"color: #E2E8F0; font-size: 0.95rem; line-height: 1.7;\">\n    <strong>Como cada variável dessa equação se transforma em faturamento no dia a dia da sua empresa:</strong><br />\n    • <strong style=\"color: #38BDF8;\">GBP (Integridade do Perfil &amp; NAP):</strong> A veracidade dos seus dados. Se o endereço ou horário estiverem desalinhados, você perde o clique de quem está a dois quarteirões querendo comprar agora.<br />\n    • <strong style=\"color: #38BDF8;\">R_rec (Recência das Avaliações):</strong> A velocidade em que chegam novas notas. Para 74% dos clientes e para o algoritmo, uma avaliação excelente de hoje vale 10 vezes mais do que uma nota dada há 8 meses.<br />\n    • <strong style=\"color: #38BDF8;\">UGC (Palavras-Chave dos Clientes):</strong> Quando o cliente escreve na avaliação <em>'a troca da bateria industrial foi super-rápida'</em>, o Google indexa os termos <em>'bateria industrial'</em> e <em>'rápido'</em>. O próprio cliente faz o seu SEO de graça.<br />\n    • <strong style=\"color: #38BDF8;\">S_site (Autoridade do Site Premium):</strong> O mapa gera o primeiro contato, mas é o carregamento instantâneo e a autoridade técnica do seu site corporativo próprio que fecham a venda e provam ao Google que sua empresa lidera o mercado regional.\n  </div>\n</div>",
+        corpo: "O dinamismo e a atividade de um negócio são percebidos pelo buscador por meio das interações geradas em postagens semanais e no processamento de sinais comportamentais. Recomenda-se manter uma cadência de publicações de uma a duas vezes por semana, o que mantém o perfil atualizado perante os consumidores locais. No entanto, deve-se atentar estritamente para a conformidade: a inclusão de números de telefone corporativos diretamente no texto descritivo dos posts acarreta a rejeição automatizada da publicação. O padrão aceito exige a utilização do botão de ação oficial do sistema direcionado ao canal de contato registrado. No setor hoteleiro, aplicam-se restrições adicionais que proíbem posts que façam referência direta a ofertas, cupons ou descontos para preservar a paridade de preços na plataforma.\n\nO engajamento em termos de velocidade de resposta é igualmente crucial. O proprietário deve enviar respostas comerciais profissionais a comentários e avaliações em um prazo limite de até 24 horas. Esse comportamento atua como um sinal positivo ao algoritmo de suporte local, oferecendo a oportunidade de injetar de forma natural termos contextuais adicionais do mercado.\n\n<div style=\"background: #0F1B2E; border: 1px solid #2DD4BF; border-left: 5px solid #2DD4BF; padding: 1.6rem; border-radius: 8px; margin: 2rem 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);\">\n  <div style=\"color: #2DD4BF; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;\">📐 MODELAGEM MATEMÁTICA E TRADUÇÃO COMERCIAL DA VISIBILIDADE LOCAL ($V$)</div>\n  <div style=\"background: #080E1A; padding: 1.2rem; border-radius: 10px; margin-bottom: 1.5rem; border: 1px solid #1E293B; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px;\">\n    <div style=\"background: #0F172A; border: 1px solid #38BDF8; border-radius: 8px; padding: 8px 12px; text-align: center; min-width: 110px;\">\n      <div style=\"font-size: 1.3rem;\">📍</div>\n      <div style=\"font-size: 0.75rem; font-weight: 700; color: #38BDF8; text-transform: uppercase;\">Dados NAP (GBP)</div>\n    </div>\n    <span style=\"color: #64748B; font-weight: 800; font-size: 1.1rem;\">+</span>\n    <div style=\"background: #0F172A; border: 1px solid #2DD4BF; border-radius: 8px; padding: 8px 12px; text-align: center; min-width: 110px;\">\n      <div style=\"font-size: 1.3rem;\">⭐</div>\n      <div style=\"font-size: 0.75rem; font-weight: 700; color: #2DD4BF; text-transform: uppercase;\">Recência ($R_{rec}$)</div>\n    </div>\n    <span style=\"color: #64748B; font-weight: 800; font-size: 1.1rem;\">+</span>\n    <div style=\"background: #0F172A; border: 1px solid #34D399; border-radius: 8px; padding: 8px 12px; text-align: center; min-width: 110px;\">\n      <div style=\"font-size: 1.3rem;\">💬</div>\n      <div style=\"font-size: 0.75rem; font-weight: 700; color: #34D399; text-transform: uppercase;\">Termos UGC</div>\n    </div>\n    <span style=\"color: #64748B; font-weight: 800; font-size: 1.1rem;\">+</span>\n    <div style=\"background: #0F172A; border: 1px solid #60A5FA; border-radius: 8px; padding: 8px 12px; text-align: center; min-width: 110px;\">\n      <div style=\"font-size: 1.3rem;\">⚡</div>\n      <div style=\"font-size: 0.75rem; font-weight: 700; color: #60A5FA; text-transform: uppercase;\">Site Premium</div>\n    </div>\n    <span style=\"color: #2DD4BF; font-weight: 800; font-size: 1.3rem; margin: 0 4px;\">=</span>\n    <div style=\"background: rgba(13, 148, 136, 0.2); border: 2px solid #2DD4BF; border-radius: 8px; padding: 10px 14px; text-align: center; min-width: 130px;\">\n      <div style=\"font-size: 1.4rem;\">🏆</div>\n      <div style=\"font-size: 0.8rem; font-weight: 800; color: #2DD4BF; text-transform: uppercase;\">Top 3 no Google</div>\n    </div>\n  </div>\n  <div style=\"color: #E2E8F0; font-size: 0.95rem; line-height: 1.7;\">\n    <strong>Como cada variável dessa equação se transforma em faturamento no dia a dia da sua empresa:</strong><br />\n    • <strong style=\"color: #38BDF8;\">GBP (Integridade do Perfil &amp; NAP):</strong> A veracidade dos seus dados. Se o endereço ou horário estiverem desalinhados, você perde o clique de quem está a dois quarteirões querendo comprar agora.<br />\n    • <strong style=\"color: #38BDF8;\">R_rec (Recência das Avaliações):</strong> A velocidade em que chegam novas notas. Para 74% dos clientes e para o algoritmo, uma avaliação excelente de hoje vale 10 vezes mais do que uma nota dada há 8 meses.<br />\n    • <strong style=\"color: #38BDF8;\">UGC (Palavras-Chave dos Clientes):</strong> Quando o cliente escreve na avaliação <em>'a troca da bateria industrial foi super-rápida'</em>, o Google indexa os termos <em>'bateria industrial'</em> e <em>'rápido'</em>. O próprio cliente faz o seu SEO de graça.<br />\n    • <strong style=\"color: #38BDF8;\">S_site (Autoridade do Site Premium):</strong> O mapa gera o primeiro contato, mas é o carregamento instantâneo e a autoridade técnica do seu site corporativo próprio que fecham a venda e provam ao Google que sua empresa lidera o mercado regional.\n  </div>\n</div>",
       },
       {
         titulo: "Métricas de Conversão e a Sinergia do Diagnóstico Digital",
@@ -382,8 +382,40 @@ A visibilidade local atua como outro pilar crucial de atração orgânica para n
     <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Modelagem Econômica do Retorno sobre Ativos Digitais ($V_{ad}$)</span>
     <span class="rounded bg-teal-500/10 px-2 py-0.5 text-xs text-teal-300 font-mono">OTD Analytics</span>
   </div>
-  <div class="my-6 rounded-xl bg-slate-950 p-4 text-center font-mono text-lg md:text-xl text-teal-300 shadow-inner border border-teal-500/20 overflow-x-auto">
-    V_{ad} = \frac{(T_{org} \times C_{tax} \times LTV) \times (1 + S_{prop})}{CAC_{org}}
+  <div class="my-6 flex flex-wrap items-center justify-center gap-2.5 md:gap-3.5 rounded-xl bg-slate-950 p-4 md:p-6 shadow-inner border border-teal-500/20">
+    <div class="flex flex-col items-center gap-2">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <div class="flex flex-col items-center rounded-xl border border-cyan-500/30 bg-slate-900/90 px-3 py-2 shadow min-w-[110px]">
+          <span class="text-xl mb-0.5">📈</span>
+          <span class="text-[11px] font-bold text-cyan-400 uppercase">Tráfego ($T_{org}$)</span>
+        </div>
+        <span class="text-sm font-bold text-slate-400">✕</span>
+        <div class="flex flex-col items-center rounded-xl border border-teal-500/30 bg-slate-900/90 px-3 py-2 shadow min-w-[110px]">
+          <span class="text-xl mb-0.5">🎯</span>
+          <span class="text-[11px] font-bold text-teal-400 uppercase">Conversão ($C_{tax}$)</span>
+        </div>
+        <span class="text-sm font-bold text-slate-400">✕</span>
+        <div class="flex flex-col items-center rounded-xl border border-emerald-500/30 bg-slate-900/90 px-3 py-2 shadow min-w-[110px]">
+          <span class="text-xl mb-0.5">💰</span>
+          <span class="text-[11px] font-bold text-emerald-400 uppercase">Contrato ($LTV$)</span>
+        </div>
+        <span class="text-sm font-bold text-slate-400">✕</span>
+        <div class="flex flex-col items-center rounded-xl border border-sky-500/30 bg-slate-900/90 px-3 py-2 shadow min-w-[110px]">
+          <span class="text-xl mb-0.5">🛡️</span>
+          <span class="text-[11px] font-bold text-sky-400 uppercase">Soberania ($1+S_{prop}$)</span>
+        </div>
+      </div>
+      <div class="w-full h-[2px] bg-teal-500/40 my-1 rounded-full"></div>
+      <div class="flex flex-col items-center rounded-xl border border-rose-500/40 bg-rose-950/30 px-4 py-2 shadow min-w-[160px]">
+        <span class="text-[11px] font-bold text-rose-300 uppercase flex items-center gap-1.5"><span class="text-lg">📉</span> Custo de Aquisição Baixo ($CAC_{org}$)</span>
+      </div>
+    </div>
+    <span class="text-xl font-black text-teal-400 mx-1">=</span>
+    <div class="flex flex-col items-center rounded-xl border-2 border-teal-400 bg-teal-950/40 px-4 py-3 shadow-xl animate-pulse min-w-[140px]">
+      <span class="text-2xl mb-1">🏛️</span>
+      <span class="text-xs font-black text-teal-300 uppercase tracking-wider">Patrimônio ($V_{ad}$)</span>
+      <span class="text-[11px] text-teal-200 font-bold">Multiplicação do Caixa</span>
+    </div>
   </div>
   <div class="mt-6 space-y-3 text-sm text-slate-300 border-t border-slate-800 pt-4">
     <p class="font-bold text-teal-400 text-base mb-2">💼 Traduzindo a matemática financeira para o caixa da sua empresa:</p>
@@ -453,41 +485,324 @@ Para obter um diagnóstico preciso acerca da estruturação de seus canais de at
     slug: "por-que-site-nao-aparece-google",
     categoria: "Website",
     titulo: "Por que seu site existe mas não aparece no Google",
-    meta: "6 min de leitura · Website · One Thank Digital",
+    meta: "7 min de leitura · Website · One Thank Digital",
     lead: "Ter um site bonito e não aparecer no Google é como abrir uma loja em um beco sem saída. O problema raramente é o design — é a estrutura técnica e estratégica que a maioria dos sites ignora completamente.",
-    callout: "O Google não indexa páginas automaticamente apenas porque foram publicadas. Para aparecer nas buscas, um site exige submissão técnica de sitemap, velocidade otimizada (Core Web Vitals), arquitetura semântica mobile-first e conteúdo relevante que responda às intenções de busca do usuário.",
+    callout: "Um dos equívocos estratégicos mais comuns entre tomadores de decisão é assumir que a publicação de uma página garante visibilidade no Google. A indexação exige superar as três etapas consecutivas da engenharia de busca (rastreamento, indexação e classificação), eliminar barreiras de carregamento que afugentam o Googlebot e configurar o sitemap oficial. Em 2026, dominar as AI Overviews depende de uma infraestrutura proprietária com Core Web Vitals < 1.5s e arquitetura semântica de alta intenção comercial.",
     pillarUrl: "/guia/desenvolvimento-web/",
     pillarText: "Arquitetura Web e Criação de Sites B2B",
     secoes: [
       {
-        titulo: "O Google não indexa sites automaticamente",
-        corpo: "Um equívoco comum: 'criei o site, então o Google vai encontrar'. Não é assim que funciona.\n\nO Google usa robôs (chamados crawlers) para navegar pela internet e mapear páginas. Para que seu site seja encontrado rapidamente, você precisa submeter um sitemap ao <strong><a href=\"https://search.google.com/search-console/about\" target=\"_blank\" rel=\"noopener\">Google Search Console</a></strong> — uma ferramenta gratuita do Google.",
+        titulo: "O Labirinto da Indexação: Por que Publicar Não Garante Visibilidade",
+        corpo: `Um dos equívocos estratégicos mais comuns entre diretores e tomadores de decisão é assumir que o término do desenvolvimento de uma página web resulta em sua disponibilização imediata nos buscadores. O Google opera sob uma engenharia sofisticada de processamento de dados dividida em três etapas consecutivas e interdependentes: rastreamento (crawling), indexação (indexing) e classificação (ranking).
+
+O robô de busca, conhecido como Googlebot, varre constantemente a rede em busca de novos caminhos e links. Se a infraestrutura técnica do domínio próprio apresentar barreiras lógicas ou lentidão severa, os robôs abandonam o carregamento, gerando invisibilidade orgânica imediata da marca.
+
+Para estabelecer a comunicação técnica inicial com o buscador, é imperativo estruturar e submeter o arquivo de mapeamento do site no <strong><a href="https://search.google.com/search-console/about" target="_blank" rel="noopener">Google Search Console</a></strong>, a plataforma de monitoramento oficial do Google. Sem essa ponte analítica, o tempo de descoberta de páginas comerciais importantes pode se estender por meses.
+
+Para negócios de alto nível que buscam capturar o público tomador de decisão corporativo B2B, a presença nas listagens orgânicas deve ser sustentada pelo desenvolvimento de uma plataforma proprietária focada em alta performance, investindo estrategicamente em <strong><a href="/servicos/criacao-de-sites/">criação de sites corporativos</a></strong> integrados às diretrizes oficiais de indexabilidade.`
       },
       {
-        titulo: "Os 6 erros técnicos que fazem sites sumirem do Google",
-        corpo: "• Meta tags ausentes ou duplicadas: o Google não sabe do que se trata cada página\n• Site lento: acima de 3 segundos de carregamento, o Google penaliza o ranqueamento\n• Sem versão mobile: desde 2019 o Google usa mobile-first indexing\n• Links quebrados: sinalizam site abandonado ou mal mantido\n• Sem HTTPS: site sem certificado SSL é marcado como 'não seguro'\n• Conteúdo duplicado: páginas com textos iguais se canibalizam no ranqueamento. Core Web Vitals, estrutura AEO e os fundamentos técnicos de um site encontrável estão reunidos no <strong><a href=\"/guia/desenvolvimento-web/\">guia de arquitetura web de alta conversão</a></strong>.",
+        titulo: "Anatomia dos Erros Técnicos de Sumiço e Modelagem Econômica do Prejuízo",
+        corpo: `Os motivos técnicos que forçam a invisibilidade orgânica de uma empresa decorrem, em sua totalidade, de falhas estruturais imperceptíveis para usuários leigos, mas impeditivas para os algoritmos de busca.
+
+<div class="my-8 overflow-x-auto rounded-xl border border-[#2DD4BF]/30 bg-[#0C1424] p-6 shadow-2xl">
+  <div class="mb-4 flex items-center gap-2 border-b border-[#2DD4BF]/20 pb-3">
+    <span class="flex h-3 w-3 rounded-full bg-[#2DD4BF]"></span>
+    <h4 class="text-sm font-bold uppercase tracking-wider text-[#2DD4BF]">Tabela de Engenharia: Anatomia dos Erros de Invisibilidade no Google</h4>
+  </div>
+  <table class="w-full text-left border-collapse text-sm text-slate-300">
+    <thead>
+      <tr class="border-b border-slate-700 bg-slate-900/60 text-slate-200">
+        <th class="p-3.5 font-semibold text-[#38bdf8]">Gargalo / Erro Técnico</th>
+        <th class="p-3.5 font-semibold text-slate-300">Como o Robô (Googlebot) Interpreta</th>
+        <th class="p-3.5 font-semibold text-rose-300">Prejuízo Direto no Caixa & Vendas</th>
+        <th class="p-3.5 font-semibold text-[#2DD4BF]">Solução de Engenharia OTD</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-800 font-normal">
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Meta Tags Ausentes ou Duplicadas</td>
+        <td class="p-3.5 text-slate-400">Página ambígua sem tema central. O robô descarta a prioridade de ranqueamento.</td>
+        <td class="p-3.5 text-rose-300/90">Sua página de serviço perde posições para concorrentes menores que possuem tags claras.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Injeção semântica canônica com title, description e microdados JSON-LD estruturados.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">Lentidão & Falha no Core Web Vitals (> 3s)</td>
+        <td class="p-3.5 text-slate-400">Servidor amador e código pesado. O Googlebot encerra a conexão (Timeout/Crawl Budget).</td>
+        <td class="p-3.5 text-rose-300/90">Taxa de abandono superior a 53%. O cliente clica, o site não abre e ele compra do vizinho.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Otimização extrema com pré-renderização estática, otimização de imagens (WebP) e CDN.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Arquitetura Não Mobile-First</td>
+        <td class="p-3.5 text-slate-400">Incompatível com o índice principal (Mobile-First Indexing). Penalização automática.</td>
+        <td class="p-3.5 text-rose-300/90">Queda drástica nas buscas feitas por celulares, que representam 80% do tráfego comercial.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Design responsivo nativo, layouts fluidos e testes em mais de 40 resoluções mobile.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">Links Quebrados (Erros 404) & Sem Redirecionamento 301</td>
+        <td class="p-3.5 text-slate-400">Beco sem saída e abandono estrutural. O robô remove o domínio dos índices de relevância.</td>
+        <td class="p-3.5 text-rose-300/90">Perda imediata de todo o histórico de tráfego e autoridade acumulada de anos anteriores.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Auditoria de rotas e aplicação rigorosa de redirecionamentos permanentes (301) na raiz.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Tag "noindex" Acidental ou Falta de SSL (HTTPS)</td>
+        <td class="p-3.5 text-slate-400">Ordem expressa para não rastrear ou site marcado como 'Não Seguro' e perigoso.</td>
+        <td class="p-3.5 text-rose-300/90">Sumiço de 100% das páginas nas buscas ou bloqueio por alerta vermelho no navegador.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Blindagem de deploy com verificação automatizada de cabeçalhos e certificado SSL militar.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-8 rounded-2xl border border-teal-500/30 bg-slate-900/90 p-6 shadow-2xl">
+  <div class="mb-4 flex items-center justify-between border-b border-teal-500/20 pb-3">
+    <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Modelagem Econômica do Custo de Invisibilidade ($P_{financeira}$)</span>
+    <span class="rounded bg-teal-500/10 px-2 py-0.5 text-xs text-teal-300 font-mono">OTD Analytics</span>
+  </div>
+  <div class="my-6 flex flex-wrap items-center justify-center gap-2 md:gap-3 rounded-xl bg-slate-950 p-4 md:p-6 shadow-inner border border-teal-500/20">
+    <div class="flex flex-col items-center rounded-xl border border-cyan-500/30 bg-slate-900/90 px-3.5 py-2.5 shadow-md min-w-[120px] hover:border-cyan-400 transition-colors">
+      <span class="text-2xl mb-1">🔍</span>
+      <span class="text-[11px] font-bold text-cyan-400 uppercase tracking-wide">Buscas Locais</span>
+      <span class="text-[10px] text-slate-400">Procura ($V_{pot} \cdot S_{ctr}$)</span>
+    </div>
+    <span class="text-base font-black text-rose-400/80">✕</span>
+    <div class="flex flex-col items-center rounded-xl border border-rose-500/30 bg-slate-900/90 px-3.5 py-2.5 shadow-md min-w-[120px] hover:border-rose-400 transition-colors">
+      <span class="text-2xl mb-1">🚫</span>
+      <span class="text-[11px] font-bold text-rose-400 uppercase tracking-wide">Bloqueio Google</span>
+      <span class="text-[10px] text-slate-400">Invisível ($1 - I_{idx}$)</span>
+    </div>
+    <span class="text-base font-black text-amber-400/80">+</span>
+    <div class="flex flex-col items-center rounded-xl border border-amber-500/30 bg-slate-900/90 px-3.5 py-2.5 shadow-md min-w-[120px] hover:border-amber-400 transition-colors">
+      <span class="text-2xl mb-1">⏳</span>
+      <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wide">Lentidão &gt; 3s</span>
+      <span class="text-[10px] text-slate-400">Abandono ($T \cdot R$)</span>
+    </div>
+    <span class="text-base font-black text-emerald-400/80">✕</span>
+    <div class="flex flex-col items-center rounded-xl border border-emerald-500/30 bg-slate-900/90 px-3.5 py-2.5 shadow-md min-w-[120px] hover:border-emerald-400 transition-colors">
+      <span class="text-2xl mb-1">💎</span>
+      <span class="text-[11px] font-bold text-emerald-400 uppercase tracking-wide">Contrato B2B</span>
+      <span class="text-[10px] text-slate-400">Valor ($C_{tax} \cdot LTV$)</span>
+    </div>
+    <span class="text-xl font-black text-teal-400">=</span>
+    <div class="flex flex-col items-center rounded-xl border-2 border-rose-500 bg-rose-950/40 px-4 py-3 shadow-xl animate-pulse min-w-[140px]">
+      <span class="text-2xl mb-1">📉</span>
+      <span class="text-xs font-black text-rose-300 uppercase tracking-wider">Prejuízo no Caixa ($P_{financeira}$)</span>
+      <span class="text-[11px] text-rose-200 font-bold">Fuga de Contratos / Ano</span>
+    </div>
+  </div>
+  <div class="mt-6 space-y-3 text-sm text-slate-300 border-t border-slate-800 pt-4">
+    <p class="font-bold text-teal-400 text-base mb-2">💼 Traduzindo o custo do sumiço digital para o faturamento da sua empresa:</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-cyan-400 block mb-1">🔍 $V_{pot} \times S_{ctr}$ (Procura Potencial Bloqueada):</strong>
+        <span>O volume real de clientes na sua cidade que pesquisam pelo seu serviço no Google, mas que não encontram sua marca na 1ª página.</span>
+      </div>
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-rose-400 block mb-1">🚫 $(1 - I_{idx})$ (Fator de Bloqueio de Indexação):</strong>
+        <span>Se o site tem erros técnicos ou tag noindex, 100% dessa demanda é multiplicada por zero para você e direcionada para o concorrente.</span>
+      </div>
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-amber-400 block mb-1">⏳ $T_{visitas} \times R_{lentidao}$ (Perda por Abandono):</strong>
+        <span>Clientes que até clicam no link do seu site, mas fecham a aba irritados antes de abrir por causa de servidores lentos (> 3 segundos).</span>
+      </div>
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-emerald-400 block mb-1">💰 $C_{taxa} \times LTV$ (O Dinheiro Deixado na Mesa):</strong>
+        <span>Multiplicando essa fuga de tráfego pela sua taxa de conversão e pelo Valor Vitalício de um contrato B2B ($LTV$), vemos o rombo financeiro.</span>
+      </div>
+    </div>
+    <div class="rounded-lg bg-rose-950/40 p-3.5 border border-rose-500/30 mt-2">
+      <strong class="text-rose-300 block mb-1">📉 Conclusão Executiva:</strong>
+      <span class="text-slate-200">Manter um site institucional "bonito no design, mas com engenharia amadora e invisível para o Google" custa à empresa <strong>dezenas ou centenas de milhares de reais em contratos perdidos</strong> todos os anos.</span>
+    </div>
+  </div>
+</div>`
       },
       {
-        titulo: "O problema do site bonito sem conteúdo",
-        corpo: "Sites institucionais com apenas 4 ou 5 páginas estáticas têm dificuldade enorme para ranquear — especialmente em mercados competitivos.\n\nO Google valoriza conteúdo relevante e atualizado. Empresas que publicam artigos e guias constroem autoridade ao longo do tempo.",
+        titulo: "O Check-up Técnico da Presença Web: Guia de Auditoria Executiva",
+        corpo: `A avaliação preventiva das métricas de infraestrutura evita que o domínio caia em descrédito algorítmico, mantendo o tráfego qualificado de buscas ativo e protegido.
+
+<div class="my-8 overflow-x-auto rounded-xl border border-[#38bdf8]/30 bg-[#0C1424] p-6 shadow-2xl">
+  <div class="mb-4 flex items-center gap-2 border-b border-[#38bdf8]/20 pb-3">
+    <span class="flex h-3 w-3 rounded-full bg-[#38bdf8]"></span>
+    <h4 class="text-sm font-bold uppercase tracking-wider text-[#38bdf8]">Guia de Auditoria: Check-up Técnico Executivo de Indexação</h4>
+  </div>
+  <table class="w-full text-left border-collapse text-sm text-slate-300">
+    <thead>
+      <tr class="border-b border-slate-700 bg-slate-900/60 text-slate-200">
+        <th class="p-3.5 font-semibold text-[#38bdf8]">Ferramenta & Indicador</th>
+        <th class="p-3.5 font-semibold text-slate-300">Métrica Ideal de Conformidade</th>
+        <th class="p-3.5 font-semibold text-rose-300">Risco da Falha no Algoritmo</th>
+        <th class="p-3.5 font-semibold text-[#2DD4BF]">Ação Corretiva Imediata</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-800 font-normal">
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Google Search Console (Sitemap XML)</td>
+        <td class="p-3.5 text-emerald-400 font-medium">Status 'Sucesso' com 100% das páginas canônicas indexadas.</td>
+        <td class="p-3.5 text-slate-400">Páginas comerciais desconhecidas pelo Google por meses.</td>
+        <td class="p-3.5 text-slate-300">Gerar sitemap dinâmico e submeter na aba 'Sitemaps' com inspeção manual na raiz.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200"><strong><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights (CWV)</a></strong></td>
+        <td class="p-3.5 text-emerald-400 font-medium">Nota > 90 (Verde) com LCP &lt; 1.5s e CLS zerado.</td>
+        <td class="p-3.5 text-slate-400">Perda de posições no ranking e fuga de tráfego mobile no primeiro segundo.</td>
+        <td class="p-3.5 text-slate-300">Eliminar scripts bloqueantes, converter imagens para WebP/AVIF e pré-renderizar HTML.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Inspeção de Domínio (site:seudominio.com)</td>
+        <td class="p-3.5 text-emerald-400 font-medium">Correspondência exata entre páginas ativas no site e links indexados.</td>
+        <td class="p-3.5 text-slate-400">Canibalização por links duplicados ou sumiço por falta de rastreamento.</td>
+        <td class="p-3.5 text-slate-300">Limpar URLs fantasma com meta tag noindex e consolidar canonicals.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">Certificado SSL & HTTPS Validados</td>
+        <td class="p-3.5 text-emerald-400 font-medium">Cadeia de certificados segura de grau militar sem avisos mistos.</td>
+        <td class="p-3.5 text-slate-400">Bloqueio pelo Chrome/Safari com alerta vermelho 'Site Não Seguro'.</td>
+        <td class="p-3.5 text-slate-300">Forçar redirecionamento HTTP ➔ HTTPS via servidor e renovar SSL automatizado.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="my-12 w-full overflow-hidden rounded-2xl border border-slate-800 bg-[#070D18] p-4 md:p-8 shadow-2xl">
+  <div class="mb-6 border-b border-slate-800 pb-4 text-center">
+    <span class="inline-block rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400">Engenharia de Indexação OTD</span>
+    <h4 class="mt-2 text-lg md:text-xl font-bold text-slate-100">O Rastreamento do Googlebot: O Bloqueio em Sites Amadores vs. A Via Expressa OTD</h4>
+  </div>
+  <div class="w-full overflow-x-auto">
+    <svg class="w-full min-w-[750px] max-w-[1100px] mx-auto h-auto" viewBox="0 0 1100 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad-block" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#450A0A" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0.4"/>
+        </linearGradient>
+        <linearGradient id="grad-express" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0E7490" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.35"/>
+        </linearGradient>
+        <linearGradient id="grad-top" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#059669" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#10B981" stop-opacity="0.45"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Fundo -->
+      <rect width="1100" height="640" rx="16" fill="#0A1120"/>
+
+      <!-- BLOCO ESQUERDO: SITE AMADOR / O BLOQUEIO DO GOOGLEBOT -->
+      <rect x="40" y="80" width="360" height="480" rx="14" fill="url(#grad-block)" stroke="#EF4444" stroke-width="2"/>
+      <rect x="65" y="65" width="220" height="30" rx="6" fill="#DC2626"/>
+      <text x="175" y="85" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">CRAWLING BLOQUEADO</text>
+      <text x="220" y="135" fill="#F8FAFC" font-family="sans-serif" font-size="19" font-weight="800" text-anchor="middle">SITE AMADOR / COM ERROS</text>
+      <text x="220" y="158" fill="#FCA5A5" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">O Labirinto da Invisibilidade no Google</text>
+
+      <rect x="65" y="190" width="310" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-opacity="0.5"/>
+      <text x="80" y="215" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">🚫 Tag "noindex" & Meta Ausentes</text>
+      <text x="80" y="235" fill="#FECACA" font-family="sans-serif" font-size="12">O robô do Googlebot é impedido de ler</text>
+      <text x="80" y="249" fill="#FECACA" font-family="sans-serif" font-size="12">a página ou não entende a intenção.</text>
+
+      <rect x="65" y="270" width="310" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-opacity="0.5"/>
+      <text x="80" y="295" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">⏳ Lentidão & Core Web Vitals > 3s</text>
+      <text x="80" y="315" fill="#FECACA" font-family="sans-serif" font-size="12">O Googlebot encerra por Timeout.</text>
+      <text x="80" y="329" fill="#FECACA" font-family="sans-serif" font-size="12">O cliente fecha a aba antes de carregar.</text>
+
+      <rect x="65" y="350" width="310" height="65" rx="8" fill="#1E293B" stroke="#EF4444" stroke-opacity="0.5"/>
+      <text x="80" y="375" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">💥 Links Quebrados (Erros 404)</text>
+      <text x="80" y="395" fill="#FECACA" font-family="sans-serif" font-size="12">Sem redirecionamento 301, o histórico</text>
+      <text x="80" y="409" fill="#FECACA" font-family="sans-serif" font-size="12">e a autoridade do domínio são zerados.</text>
+
+      <rect x="65" y="435" width="310" height="100" rx="8" fill="#450A0A" stroke="#DC2626" stroke-width="1.5"/>
+      <text x="220" y="462" fill="#FECACA" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">❌ RESULTADO: INVISIBILIDADE TOTAL</text>
+      <text x="80" y="488" fill="#F8FAFC" font-family="sans-serif" font-size="12">• Zero indexação em buscas comerciais</text>
+      <text x="80" y="508" fill="#F8FAFC" font-family="sans-serif" font-size="12">• Faturamento entregue ao concorrente</text>
+
+      <!-- SETA DIVISÓRIA -->
+      <path d="M 430 320 L 480 320" stroke="#38BDF8" stroke-width="4" stroke-dasharray="6 4" marker-end="url(#arrow-cyan)"/>
+      <rect x="435" y="285" width="40" height="24" rx="4" fill="#0F172A" stroke="#38BDF8"/>
+      <text x="455" y="301" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">VS</text>
+
+      <defs>
+        <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+        </marker>
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+        </marker>
+      </defs>
+
+      <!-- BLOCO DIREITO: A VIA EXPRESSA OTD -->
+      <rect x="490" y="80" width="570" height="480" rx="14" fill="url(#grad-express)" stroke="#2DD4BF" stroke-width="2.5"/>
+      <rect x="515" y="65" width="280" height="30" rx="6" fill="#0891B2"/>
+      <text x="655" y="85" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">VIA EXPRESSA DE INDEXAÇÃO OTD</text>
+      <text x="775" y="135" fill="#FFFFFF" font-family="sans-serif" font-size="20" font-weight="800" text-anchor="middle">WEBSITE PREMIUM OTD (ALTA PERFORMANCE)</text>
+      <text x="775" y="158" fill="#67E8F9" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Conformidade Absoluta com o Google Search Essentials</text>
+
+      <!-- SUB-BLOCO: ENGENHARIA -->
+      <rect x="515" y="190" width="260" height="225" rx="8" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.6"/>
+      <text x="645" y="220" fill="#67E8F9" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">⚡ Pilar 1: Engenharia</text>
+      <text x="530" y="250" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Sitemap XML & GSC Validados</text>
+      <text x="530" y="275" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Core Web Vitals Verde (< 1.5s)</text>
+      <text x="530" y="300" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Criptografia SSL e Segurança</text>
+      <text x="530" y="325" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Arquitetura Mobile-First Nata</text>
+      <text x="530" y="350" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Redirecionamentos 301 Ativos</text>
+      <text x="530" y="375" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Código Limpo sem Bloqueios</text>
+
+      <!-- SUB-BLOCO: SEO SEMÂNTICO -->
+      <rect x="785" y="190" width="250" height="225" rx="8" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.6"/>
+      <text x="910" y="220" fill="#67E8F9" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">🧠 Pilar 2: SEO Semântico</text>
+      <text x="800" y="250" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Páginas por Serviço Dedicadas</text>
+      <text x="800" y="275" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Microdados JSON-LD & Schema</text>
+      <text x="800" y="300" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Intenção Comercial Clara</text>
+      <text x="800" y="325" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Resumo AEO para AI Overviews</text>
+      <text x="800" y="350" fill="#E2E8F0" font-family="sans-serif" font-size="12">• FAQ Estruturado no Código</text>
+      <text x="800" y="375" fill="#E2E8F0" font-family="sans-serif" font-size="12">• Autoridade E-E-A-T Blindada</text>
+
+      <!-- CAIXA DE RESULTADO VERDE NO LADO DIREITO -->
+      <rect x="515" y="435" width="520" height="100" rx="8" fill="url(#grad-top)" stroke="#10B981" stroke-width="2"/>
+      <text x="775" y="465" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">🌟 RESULTADO: TOP 1 ORGÂNICO & AI OVERVIEWS</text>
+      <text x="775" y="490" fill="#D1FAE5" font-family="sans-serif" font-size="13" text-anchor="middle">O Googlebot indexa em tempo recorde (48 horas), recomendando sua empresa</text>
+      <text x="775" y="512" fill="#6EE7B7" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">como autoridade líder para fechar contratos B2B de alto valor na região.</text>
+
+    </svg>
+  </div>
+  <figcaption class="mt-4 text-center text-xs md:text-sm text-slate-400">
+    <strong class="text-cyan-400">Comparativo de Rastreamento & Indexação OTD:</strong> Enquanto sites amadores bloqueiam o Googlebot por lentidão e erros 404, a arquitetura web da One Thank Digital garante conformidade canônica para dominar as pesquisas orgânicas e de Inteligência Artificial.
+  </figcaption>
+</figure>`
       },
       {
-        titulo: "O que verificar no seu site hoje",
-        corpo: "1. Acesse Google Search Console e veja se seu site está verificado\n2. Pesquise no Google: site:seudominio.com.br e veja quantas páginas estão indexadas\n3. Teste a velocidade na ferramenta oficial <strong><a href=\"https://pagespeed.web.dev/\" target=\"_blank\" rel=\"noopener\">PageSpeed Insights</a></strong> — nota abaixo de 70 precisa de atenção\n4. Abra o site no celular e veja se tudo funciona bem\n5. Verifique se há algum plugin ou ferramenta de SEO configurada, ou consulte nosso serviço de <strong><a href=\"/servicos/criacao-de-sites/\">criação de sites de alta performance</a></strong>",
+        titulo: "O Funil Omnichannel e a Sinergia dos Ativos Sóbrios",
+        corpo: `Muitas empresas focam exclusivamente em mídias de alta interação, esquecendo-se de que a validação de credibilidade institucional ocorre nos canais próprios. Há uma clara diferença entre <a href="/insights/site-ou-instagram-qual-mais-importante"><strong>site próprio e Instagram na jornada B2B</strong></a>, onde o primeiro atua como o validador definitivo de legitimidade técnica de marca e porto de ancoragem dos dados de campanhas pagas de aquisição de tráfego, enquanto o segundo age apenas como vetor inicial de atração de atenção e reconhecimento dinâmico.
+
+A mesma lógica aplica-se à visibilidade geográfica regional. Quando há falhas de correspondência de informações de localização em portais ou no mapa, é imperativo acionar imediatamente os protocolos de correção para restabelecer a visibilidade, <a href="/insights/empresa-nao-aparece-google-maps"><strong>resolvendo o sumiço da empresa no Google Maps</strong></a>. Essa sinergia entre mapas locais, mídias de atração e plataforma institucional própria é o que de fato pavimenta o caminho de crescimento escalável da organização.
+
+Para líderes e diretores que desejam erradicar de forma definitiva a invisibilidade orgânica e posicionar seus negócios no topo das buscas qualificadas em São Paulo e no Grande ABC, realizar o <strong><a href="/diagnostico">Diagnóstico Digital</a></strong> de maturidade dos canais corporativos é o primeiro passo de governança mercadológica a ser tomado.`
       },
     ],
     faq: [
       {
-        pergunta: "Quanto tempo demora para um site novo aparecer no Google?",
-        resposta: "Após a submissão correta no Google Search Console, a indexação inicial costuma levar de 48 horas a 2 semanas. Já o ranqueamento competitivo orgânico leva de 3 a 6 meses de otimização contínua."
+        pergunta: "Quanto tempo demora para um site corporativo novo ser indexado pelo Google?",
+        resposta: "Após a configuração adequada de propriedade e submissão estruturada do Sitemap XML no Google Search Console, a indexação técnica inicial das páginas costuma levar de 48 horas a duas semanas. Já o ganho de posicionamento competitivo orgânico para as principais palavras-chave do segmento exige de três a seis meses de otimização contínua."
       },
       {
-        pergunta: "A velocidade do site afeta diretamente a posição no Google?",
-        resposta: "Sim. Os indicadores de Core Web Vitals (tempo de carregamento, estabilidade visual e tempo de resposta) são fatores oficiais de ranqueamento do Google."
+        pergunta: "Por que meu site institucional sumiu de repente das pesquisas após uma atualização técnica?",
+        resposta: "O sumiço repentino ocorre frequentemente devido à ativação acidental da tag robots \"noindex\" durante a publicação, ou por alterações de links que quebraram a hierarquia de indexação do site. Sem redirecionamentos de endereços do tipo 301, o robô do Googlebot interpreta as páginas antigas como inexistentes (erros 404), removendo o domínio das buscas."
+      },
+      {
+        pergunta: "Como a velocidade de carregamento (Core Web Vitals) afeta o ranqueamento orgânico e o faturamento?",
+        resposta: "O tempo de renderização técnica é um fator oficial de ranqueamento do Google. Portais que excedem o tempo de carregamento de três segundos sofrem penalizações de visibilidade. Além disso, o tempo excessivo de latência irrita o usuário, provocando o abandono imediato de potenciais compradores de alto valor e gerando perda de vendas qualificadas."
+      },
+      {
+        pergunta: "O que é a canibalização de conteúdo e de que forma ela gera invisibilidade técnica?",
+        resposta: "A canibalização ocorre quando um domínio apresenta múltiplos artigos ou páginas comerciais disputando exatamente a mesma palavra-chave local e intenção de busca do usuário. Diante da ambiguidade estrutural, o algoritmo divide a relevância do site próprio entre essas páginas concorrentes, enfraquecendo as posições de ambas e impedindo-as de alcançar o topo."
+      },
+      {
+        pergunta: "Sites amadores sem sitemaps ou tags estruturadas perdem relevância nas novas pesquisas por inteligência artificial (AI Overviews)?",
+        resposta: "Sim. Os geradores de respostas com Inteligência Artificial baseiam-se em bases de dados estruturadas com alta precisão técnica e semântica. Sites que carecem de marcações lógicas, sitemaps ativos e dados hierárquicos claros não conseguem alimentar essas APIs, sendo descartados do índice de respostas diretas para tomadores de decisão."
       }
     ],
-    cta: "Seu site está estruturado para ser encontrado?",
-    ctaSub: "",
+    cta: "Seu site está estruturado para ser encontrado ou está invisível no Google?",
+    ctaSub: "Descubra agora onde estão os gargalos técnicos da sua presença digital em poucos cliques.",
     ctaLink: "/quiz",
   },
   {
