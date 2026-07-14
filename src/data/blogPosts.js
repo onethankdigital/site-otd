@@ -872,25 +872,25 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
         corpo: `Para compreender a verdadeira eficiência de uma operação integrada que combina tração paga de curto prazo com consolidação orgânica de longo prazo, desenvolvemos a modelagem do Custo de Aquisição Híbrido ($CAC_{real}$):<br><br>
 <div style="background: #0F1B2E; border: 1px solid #2DD4BF; border-left: 5px solid #2DD4BF; padding: 1.6rem; border-radius: 8px; margin: 2rem 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);">
   <div style="color: #2DD4BF; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">📐 MODELAGEM ECONÔMICA DO CUSTO DE AQUISIÇÃO HÍBRIDO ($CAC_{real}$)</div>
-  <div style="background: #080E1A; padding: 1.5rem 1rem; border-radius: 10px; margin-bottom: 1.5rem; border: 1px solid #1E293B; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px;">
-    <div style="background: #0F172A; border: 1px solid #F87171; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">💸</div>
-      <div style="font-size: 0.72rem; font-weight: 700; color: #F87171; text-transform: uppercase; line-height: 1.25;">Orçamento Ads ($C_{ads}$)</div>
+  <div style="background: #080E1A; padding: 1.3rem 0.8rem; border-radius: 10px; margin-bottom: 1.5rem; border: 1px solid #1E293B; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px;">
+    <div style="background: #0F172A; border: 1px solid #F87171; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">💸</div>
+      <div style="font-size: 0.68rem; font-weight: 700; color: #F87171; text-transform: uppercase; line-height: 1.2;">Orçamento Ads ($C_{ads}$)</div>
     </div>
-    <span style="color: #64748B; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">+</span>
-    <div style="background: #0F172A; border: 1px solid #38BDF8; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">🏛️</div>
-      <div style="font-size: 0.72rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; line-height: 1.25;">Investimento SEO ($I_{seo}$)</div>
+    <span style="color: #64748B; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; width: 16px;">+</span>
+    <div style="background: #0F172A; border: 1px solid #38BDF8; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">🏛️</div>
+      <div style="font-size: 0.68rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; line-height: 1.2;">Investimento SEO ($I_{seo}$)</div>
     </div>
-    <span style="color: #64748B; font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center;">/</span>
-    <div style="background: #0F172A; border: 1px solid #34D399; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">📈</div>
-      <div style="font-size: 0.72rem; font-weight: 700; color: #34D399; text-transform: uppercase; line-height: 1.25;">Volume de Leads ($L_{total}$)</div>
+    <span style="color: #64748B; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; width: 16px;">/</span>
+    <div style="background: #0F172A; border: 1px solid #34D399; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">📈</div>
+      <div style="font-size: 0.68rem; font-weight: 700; color: #34D399; text-transform: uppercase; line-height: 1.2;">Volume de Leads ($L_{total}$)</div>
     </div>
-    <span style="color: #2DD4BF; font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center;">=</span>
-    <div style="background: rgba(13, 148, 136, 0.2); border: 2px solid #2DD4BF; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">💎</div>
-      <div style="font-size: 0.75rem; font-weight: 800; color: #2DD4BF; text-transform: uppercase; line-height: 1.25;">CAC Híbrido ($CAC_{real}$)</div>
+    <span style="color: #2DD4BF; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 16px;">=</span>
+    <div style="background: rgba(13, 148, 136, 0.2); border: 2px solid #2DD4BF; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">💎</div>
+      <div style="font-size: 0.72rem; font-weight: 800; color: #2DD4BF; text-transform: uppercase; line-height: 1.2;">CAC Híbrido ($CAC_{real}$)</div>
     </div>
   </div>
   <div style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.7;">
@@ -1102,25 +1102,25 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
         corpo: `Para desmistificar o que ocorre dentro dos servidores de processamento do Google, modelamos a Equação da Supremacia Orgânica ($I_{sup}$), demonstrando como os pilares técnicos se multiplicam para gerar a liderança incontestável nas buscas:<br><br>
 <div style="background: #0F1B2E; border: 1px solid #2DD4BF; border-left: 5px solid #2DD4BF; padding: 1.6rem; border-radius: 8px; margin: 2rem 0; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);">
   <div style="color: #2DD4BF; font-weight: 800; font-size: 1.05rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">📐 MODELAGEM ECONÔMICA DA SUPREMACIA ORGÂNICA ($I_{sup}$)</div>
-  <div style="background: #080E1A; padding: 1.5rem 1rem; border-radius: 10px; margin-bottom: 1.5rem; border: 1px solid #1E293B; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px;">
-    <div style="background: #0F172A; border: 1px solid #38BDF8; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">⚡</div>
-      <div style="font-size: 0.72rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; line-height: 1.25;">Core Web Vitals ($C_{wv}$)</div>
+  <div style="background: #080E1A; padding: 1.3rem 0.8rem; border-radius: 10px; margin-bottom: 1.5rem; border: 1px solid #1E293B; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px;">
+    <div style="background: #0F172A; border: 1px solid #38BDF8; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">⚡</div>
+      <div style="font-size: 0.68rem; font-weight: 700; color: #38BDF8; text-transform: uppercase; line-height: 1.2;">Core Web Vitals ($C_{wv}$)</div>
     </div>
-    <span style="color: #64748B; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">+</span>
-    <div style="background: #0F172A; border: 1px solid #34D399; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">🏛️</div>
-      <div style="font-size: 0.72rem; font-weight: 700; color: #34D399; text-transform: uppercase; line-height: 1.25;">Autoridade E-E-A-T ($A_{eat}$)</div>
+    <span style="color: #64748B; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; width: 16px;">+</span>
+    <div style="background: #0F172A; border: 1px solid #34D399; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">🏛️</div>
+      <div style="font-size: 0.68rem; font-weight: 700; color: #34D399; text-transform: uppercase; line-height: 1.2;">Autoridade E-E-A-T ($A_{eat}$)</div>
     </div>
-    <span style="color: #64748B; font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center;">✕</span>
-    <div style="background: #0F172A; border: 1px solid #FBBF24; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">📍</div>
-      <div style="font-size: 0.72rem; font-weight: 700; color: #FBBF24; text-transform: uppercase; line-height: 1.25;">Sinais Locais NAP ($S_{nap}$)</div>
+    <span style="color: #64748B; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; width: 16px;">✕</span>
+    <div style="background: #0F172A; border: 1px solid #FBBF24; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">📍</div>
+      <div style="font-size: 0.68rem; font-weight: 700; color: #FBBF24; text-transform: uppercase; line-height: 1.2;">Sinais Locais NAP ($S_{nap}$)</div>
     </div>
-    <span style="color: #2DD4BF; font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center;">=</span>
-    <div style="background: rgba(13, 148, 136, 0.2); border: 2px solid #2DD4BF; border-radius: 8px; width: 145px; height: 110px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 8px; box-sizing: border-box; text-align: center;">
-      <div style="font-size: 1.4rem; margin-bottom: 6px;">🏆</div>
-      <div style="font-size: 0.75rem; font-weight: 800; color: #2DD4BF; text-transform: uppercase; line-height: 1.25;">Supremacia ($I_{sup}$)</div>
+    <span style="color: #2DD4BF; font-weight: 800; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 16px;">=</span>
+    <div style="background: rgba(13, 148, 136, 0.2); border: 2px solid #2DD4BF; border-radius: 8px; width: 125px; height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px 6px; box-sizing: border-box; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 4px;">🏆</div>
+      <div style="font-size: 0.72rem; font-weight: 800; color: #2DD4BF; text-transform: uppercase; line-height: 1.2;">Supremacia ($I_{sup}$)</div>
     </div>
   </div>
   <div style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.7;">
