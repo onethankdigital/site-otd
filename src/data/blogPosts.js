@@ -126,41 +126,325 @@ export const blogPosts = [
     slug: "site-ou-instagram-qual-mais-importante",
     categoria: "Website",
     titulo: "Site ou Instagram: qual é o ativo digital mais importante para sua empresa",
-    meta: "5 min de leitura · Website · One Thank Digital",
+    meta: "7 min de leitura · Website · One Thank Digital",
     lead: "Essa é uma das dúvidas mais frequentes entre empresários que estão estruturando sua presença digital. A resposta direta: você precisa dos dois, mas por razões completamente diferentes.",
-    callout: "O Instagram é um canal alugado de relacionamento e descoberta, sujeito às mudanças de algoritmo. O Site Premium é o seu ativo proprietário de conversão, credibilidade e ranqueamento no Google. Negócios maduros usam as redes sociais para gerar atenção e o site para fechar contratos.",
+    callout: "A definição da arquitetura de canais de comunicação representa um dos pontos mais críticos na estruturação de negócios de alta performance. No ecossistema de marketing moderno, o Instagram atua primordialmente como uma plataforma dinâmica de descoberta e construção de relacionamento visual. Em contrapartida, o desenvolvimento focado na criação de sites corporativos de alta performance cria um ambiente proprietário blindado, projetado exclusivamente para guiar o tomador de decisão ao longo de um fluxo de persuasão planejado e fechar contratos comerciais de alto valor patrimonial.",
     pillarUrl: "/guia/desenvolvimento-web/",
     pillarText: "Arquitetura Web e Criação de Sites B2B",
     secoes: [
       {
-        titulo: "O que cada canal faz de verdade",
-        corpo: "O Instagram é um canal de relacionamento e descoberta. As pessoas chegam até você pelo conteúdo, pelo algoritmo ou por indicação. É ótimo para construir audiência e gerar engajamento.\n\nO site é um ativo de conversão e credibilidade. Quando alguém já conhece sua empresa e quer confirmar se você é legítimo, vai ao site. E quando o Google quer <strong><a href=\"https://developers.google.com/search/docs/fundamentals/seo-starter-guide\" target=\"_blank\" rel=\"noopener\">ranquear sua empresa com autoridade orgânica</a></strong>, analisa o seu site próprio.",
+        titulo: "A Dialética dos Canais Digitais: Atração de Atenção Versus Conversão Patrimonial",
+        corpo: `A definição da arquitetura de canais de comunicação representa um dos pontos mais críticos na estruturação de negócios de alta performance. Em mercados altamente competitivos, como o do Grande ABC Paulista e o da Região Metropolitana de São Paulo, a confusão conceitual entre canais de atração de tráfego e ativos de conversão patrimonial frequentemente resulta em alocação ineficiente de capital e perda sistemática de leads qualificados. A tese mercadológica central estabelece que a estagnação de vendas de muitas corporações não decorre de escassez de potenciais clientes, mas sim da ausência de uma estrutura digital integrada que conecte de forma eficiente as etapas de atração, conversão e relacionamento.
+
+No ecossistema de marketing moderno, o Instagram atua primordialmente como uma plataforma dinâmica de descoberta e construção de relacionamento. Caracterizado por um apelo visual instantâneo e capacidade de segmentação ativa de audiência, o canal destaca-se por atrair a atenção de usuários dispersos. Contudo, a efemeridade cronológica de suas publicações e a flutuação constante de seus algoritmos reduzem consideravelmente o controle de entrega orgânica por parte dos emissores. Em contrapartida, o desenvolvimento focado na <strong><a href="/servicos/criacao-de-sites/">criação de sites corporativos</a></strong> de alta performance cria um ambiente blindado contra ruídos competitivos, projetado exclusivamente para guiar o tomador de decisão ao longo de um fluxo de persuasão planejado.
+
+<div class="my-8 overflow-x-auto rounded-xl border border-[#2DD4BF]/30 bg-[#0C1424] p-6 shadow-2xl">
+  <div class="mb-4 flex items-center gap-2 border-b border-[#2DD4BF]/20 pb-3">
+    <span class="flex h-3 w-3 rounded-full bg-[#2DD4BF]"></span>
+    <h4 class="text-sm font-bold uppercase tracking-wider text-[#2DD4BF]">Tabela de Engenharia Patrimonial: Terreno Alugado vs. Ativo Proprietário</h4>
+  </div>
+  <table class="w-full text-left border-collapse text-sm text-slate-300">
+    <thead>
+      <tr class="border-b border-slate-700 bg-slate-900/60 text-slate-200">
+        <th class="p-3.5 font-semibold text-[#38bdf8]">Critério Técnico / Comercial</th>
+        <th class="p-3.5 font-semibold text-slate-300">Instagram / Redes Sociais</th>
+        <th class="p-3.5 font-semibold text-[#2DD4BF]">Site Premium (Ativo OTD)</th>
+        <th class="p-3.5 font-semibold text-emerald-400">Impacto no Patrimônio & Vendas</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-800 font-normal">
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Controle do Algoritmo & Alcance</td>
+        <td class="p-3.5 text-rose-300/90">Zero. Flutuação contínua e alcance orgânico caindo para menos de 3% da base.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">100% Proprietário. Você dita as regras, o fluxo de páginas e a taxa de captura de leads.</td>
+        <td class="p-3.5 text-slate-300">Estabilidade operacional sem depender de comprar anúncios cada vez mais caros no Meta Ads.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">Vida Útil do Conteúdo</td>
+        <td class="p-3.5 text-slate-400">24 horas (Stories) a 48 horas (Reels/Feed). Efêmero e disperso.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Perene (Anos). Páginas dedicadas por serviço continuam gerando leads 24/7.</td>
+        <td class="p-3.5 text-slate-300">Acúmulo de autoridade e tráfego orgânico crescente com custo marginal zero de manutenção.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Indexação em AI Overviews & Google</td>
+        <td class="p-3.5 text-slate-400">Inexistente. O Google não rastrea metatags profundas em posts de redes sociais.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Prioritária. Estruturado com Core Web Vitals e dados semânticos de alta precisão.</td>
+        <td class="p-3.5 text-slate-300">Sua marca aparece como resposta oficial recomendada pelas Inteligências Artificiais em 2026.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">Fechamento de Contratos > R$ 10.000</td>
+        <td class="p-3.5 text-rose-300/90">Baixo. Compradores corporativos não fecham negócios de alto tíquete por Direct.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Altíssimo. Valida idoneidade jurídica, cases detalhados, segurança SSL e portfólio.</td>
+        <td class="p-3.5 text-slate-300">Aumento substancial da taxa de conversão em clientes B2B e contratos de alto LTV.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">Soberania & Segurança Patrimonial</td>
+        <td class="p-3.5 text-rose-300/90">Risco severo. Bloqueios arbitrários, banimentos e invasões zeram sua carteira da noite para o dia.</td>
+        <td class="p-3.5 text-[#2DD4BF] font-medium">Blindagem Absoluta. Domínio próprio, servidor seguro, backup diário e criptografia SSL.</td>
+        <td class="p-3.5 text-slate-300">Soberania corporativa integral sobre o patrimônio de dados da sua empresa.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+A autoridade orgânica e a indexação prioritária nos buscadores dependem da conformidade técnica estabelecida pelas diretrizes do <strong><a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener">Google Search Essentials</a></strong>. O cumprimento rigoroso destas exigências — que incluem fatores como velocidade de carregamento, rastreabilidade de links e ausência de práticas de manipulação — assegura que a infraestrutura web própria seja interpretada pelos mecanismos de busca como uma fonte segura de informações. A conformidade com o <strong><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener">SEO Starter Guide do Google</a></strong> determina que a clareza arquitetônica e a relevância temática de conteúdo estruturado em landing pages constituem os pilares para que uma instituição conquiste relevância orgânica perante o mercado.
+
+Estudos contemporâneos de SEO local demonstram que a existência de uma página dedicada e semanticamente otimizada para cada serviço oferecido pela empresa (Dedicated Page for Each Service) desponta como o fator primordial de ranqueamento em busca orgânica e o segundo critério mais pesado para a visibilidade em sistemas de busca baseados em inteligência artificial (AI Search Visibility). Canais em redes de relacionamento carecem completamente de recursos para abrigar essa densidade de dados estruturados e metatags específicas, limitando drasticamente as chances de a marca ser listada como resposta direta para pesquisas de alta intenção comercial.`
       },
       {
-        titulo: "O risco de construir sua casa em terreno alugado",
-        corpo: "O Instagram não é seu. Se a plataforma mudar o algoritmo (como faz com frequência), o alcance cai. Se sua conta for suspensa ou invadida, você perde todo o histórico e acesso aos clientes.\n\nO site é o único ativo digital que você possui de verdade. O domínio é seu, o conteúdo é seu, o tráfego é seu. A arquitetura técnica que transforma um site em ativo de conversão está no nosso <strong><a href=\"/guia/desenvolvimento-web/\">guia de arquitetura web e criação de sites B2B</a></strong>.",
+        titulo: "O Risco Estratégico do Terreno Alugado e a Importância da Soberania de Dados",
+        corpo: `A decisão de limitar a infraestrutura digital de um empreendimento a uma plataforma terceirizada expõe o modelo de negócios a severas vulnerabilidades operacionais. Mídias sociais operam sob regimes de moderação automatizada de alta complexidade; a aplicação errônea de políticas de privacidade ou alterações nos termos de uso podem resultar em suspensões de contas de maneira unilateral e sem canais ágeis de suporte institucional. Ademais, a exposição a fraudes digitais e invasões cibernéticas ameaça a segurança das informações de clientes e pode paralisar totalmente a operação comercial da empresa.
+
+A propriedade de um domínio próprio e de um servidor web dedicado representa a soberania corporativa sobre o patrimônio informacional. No ambiente proprietário, a corporação exerce controle integral sobre a experiência do usuário, a segurança dos dados capturados e a implementação de códigos de acompanhamento analítico. Diante de problemas técnicos ou quedas repentinas de visibilidade na web, a posse do ecossistema proprietário viabiliza a execução de auditorias completas, facilitando a realização de um criterioso <strong><a href="/insights/por-que-site-nao-aparece-google/">diagnóstico de indexação e sumiço de sites no Google</a></strong> para a correção de falhas técnicas de rastreamento antes que ocorram prejuízos financeiros severos.`
       },
       {
-        titulo: "A jornada real de compra de um cliente B2B ou de serviços",
-        corpo: "Dificilmente uma empresa contrata um serviço de R$ 10 mil ou mais apenas pelo Instagram. A jornada típica:\n\n1. O cliente vê um anúncio ou indicação\n2. Acessa o Instagram para ver se a empresa existe e é ativa\n3. Vai ao site para confirmar credibilidade, ver portfólio, depoimentos e entender o processo\n4. Entra em contato pelo formulário ou WhatsApp do site",
+        titulo: "A Jornada de Compra Omnichannel B2B / High-Ticket e a Validação de Credibilidade",
+        corpo: `Em transações comerciais corporativas ou na prestação de serviços de alto valor com tíquetes expressivos que superam a barreira de dez mil reais, os processos de tomada de decisão não são motivados por impulsos emocionais momentâneos. Compradores B2B e diretores financeiros seguem ritos rigorosos de avaliação técnica e conformidade empresarial antes de estabelecer parcerias comerciais. A navegação em redes sociais funciona, por vezes, como um mecanismo preliminar de validação de atividade (confirmação de que a empresa opera e interage no mercado). Entretanto, a consolidação da confiança e a análise profunda do portfólio de projetos ocorrem obrigatoriamente no site oficial da instituição.
+
+<div class="my-8 overflow-x-auto rounded-xl border border-[#38bdf8]/30 bg-[#0C1424] p-6 shadow-2xl">
+  <div class="mb-4 flex items-center gap-2 border-b border-[#38bdf8]/20 pb-3">
+    <span class="flex h-3 w-3 rounded-full bg-[#38bdf8]"></span>
+    <h4 class="text-sm font-bold uppercase tracking-wider text-[#38bdf8]">Matriz da Jornada de Compra High-Ticket (> R$ 10.000): Etapas vs. Canais</h4>
+  </div>
+  <table class="w-full text-left border-collapse text-sm text-slate-300">
+    <thead>
+      <tr class="border-b border-slate-700 bg-slate-900/60 text-slate-200">
+        <th class="p-3.5 font-semibold text-[#38bdf8]">Etapa da Jornada de Compra</th>
+        <th class="p-3.5 font-semibold text-slate-300">Canal Prioritário</th>
+        <th class="p-3.5 font-semibold text-[#2DD4BF]">Função Psicológica & Ação do Comprador</th>
+        <th class="p-3.5 font-semibold text-emerald-400">Gargalo a Evitar</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-slate-800 font-normal">
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">1. Descoberta & Consciência</td>
+        <td class="p-3.5 text-amber-300 font-medium">Instagram / Reels / Meta Ads</td>
+        <td class="p-3.5 text-slate-300">O cliente identifica um problema ou vê um anúncio visual chamativo. Desperta a curiosidade inicial.</td>
+        <td class="p-3.5 text-slate-400">Tentar vender serviços complexos logo de cara no feed sem direcionar para o ecossistema próprio.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">2. Validação Preliminar de Atividade</td>
+        <td class="p-3.5 text-amber-300 font-medium">Perfil do Instagram / GMN</td>
+        <td class="p-3.5 text-slate-300">Verifica se a empresa está viva, postando regularmente e como atua localmente e visualmente.</td>
+        <td class="p-3.5 text-slate-400">Perfis abandonados ou sem dados básicos de NAP e link direto na bio para o site oficial.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors">
+        <td class="p-3.5 font-medium text-slate-200">3. Auditoria de Credibilidade & Risco</td>
+        <td class="p-3.5 text-[#2DD4BF] font-bold">Site Premium Corporativo</td>
+        <td class="p-3.5 text-slate-300">O tomador de decisão investiga portfólio, cases validados, metodologia, SSL e robustez institucional.</td>
+        <td class="p-3.5 text-rose-300 font-medium">Não ter site ou ter um site amador, lento e sem clareza, fazendo o cliente cancelar a contratação na hora.</td>
+      </tr>
+      <tr class="hover:bg-slate-800/40 transition-colors bg-slate-900/20">
+        <td class="p-3.5 font-medium text-slate-200">4. Fechamento Comercial & Contrato</td>
+        <td class="p-3.5 text-[#2DD4BF] font-bold">Formulário SSL / WhatsApp B2B</td>
+        <td class="p-3.5 text-slate-300">Agendamento de reunião executiva, envio de briefing e formalização jurídica do contrato high-ticket.</td>
+        <td class="p-3.5 text-slate-400">Demora no atendimento ou falta de rastreamento analítico das conversões originais.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="my-12 w-full overflow-hidden rounded-2xl border border-slate-800 bg-[#070D18] p-4 md:p-8 shadow-2xl">
+  <div class="mb-6 border-b border-slate-800 pb-4 text-center">
+    <span class="inline-block rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400">Engenharia de Conversão OTD</span>
+    <h4 class="mt-2 text-lg md:text-xl font-bold text-slate-100">O Funil Omnichannel High-Ticket: Da Atenção Social ao Fechamento B2B</h4>
+  </div>
+  <div class="w-full overflow-x-auto">
+    <svg class="w-full min-w-[750px] max-w-[1100px] mx-auto h-auto" viewBox="0 0 1100 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad-insta" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F58529" stop-opacity="0.25"/>
+          <stop offset="50%" stop-color="#DD2A7B" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#8134AF" stop-opacity="0.25"/>
+        </linearGradient>
+        <linearGradient id="grad-site" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0E7490" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.35"/>
+        </linearGradient>
+        <linearGradient id="grad-caixa" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#059669" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#10B981" stop-opacity="0.4"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Fundo Principal -->
+      <rect width="1100" height="640" rx="16" fill="#0A1120"/>
+
+      <!-- BLOCO 1: TOPO DO FUNIL - INSTAGRAM / REDES SOCIAIS -->
+      <rect x="40" y="80" width="300" height="480" rx="14" fill="url(#grad-insta)" stroke="#E1306C" stroke-width="2"/>
+      <rect x="60" y="65" width="160" height="30" rx="6" fill="#E1306C"/>
+      <text x="140" y="85" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">TOPO DO FUNIL (ATRAÇÃO)</text>
+      <text x="190" y="135" fill="#F8FAFC" font-family="sans-serif" font-size="18" font-weight="800" text-anchor="middle">INSTAGRAM / REELS</text>
+      <text x="190" y="158" fill="#F472B6" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Canal Alugado de Relacionamento</text>
+
+      <rect x="65" y="190" width="250" height="70" rx="8" fill="#1E293B" stroke="#E1306C" stroke-opacity="0.5"/>
+      <text x="80" y="215" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">Alcance & Curiosidade</text>
+      <text x="80" y="235" fill="#94A3B8" font-family="sans-serif" font-size="12">Gera atenção rápida, anúncios</text>
+      <text x="80" y="250" fill="#94A3B8" font-family="sans-serif" font-size="12">visuais e engajamento inicial.</text>
+
+      <rect x="65" y="280" width="250" height="70" rx="8" fill="#1E293B" stroke="#E1306C" stroke-opacity="0.5"/>
+      <text x="80" y="305" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">Validação de Atividade</text>
+      <text x="80" y="325" fill="#94A3B8" font-family="sans-serif" font-size="12">Mostra que a empresa opera</text>
+      <text x="80" y="340" fill="#94A3B8" font-family="sans-serif" font-size="12">e posta regularmente na rede.</text>
+
+      <!-- Alerta de Risco do Algoritmo -->
+      <rect x="65" y="375" width="250" height="155" rx="8" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="190" y="405" fill="#FCA5A5" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⚠️ GARGALO DO TERRENO ALUGADO</text>
+      <text x="80" y="430" fill="#FECACA" font-family="sans-serif" font-size="11">• Alcance orgânico restrito (&lt; 3%)</text>
+      <text x="80" y="450" fill="#FECACA" font-family="sans-serif" font-size="11">• Contratos &gt; R$ 10k não fecham</text>
+      <text x="80" y="470" fill="#FECACA" font-family="sans-serif" font-size="11">   apenas por Direct / Bio</text>
+      <text x="80" y="490" fill="#FECACA" font-family="sans-serif" font-size="11">• Risco permanente de bloqueios</text>
+      <text x="80" y="510" fill="#FECACA" font-family="sans-serif" font-size="11">   ou mudanças de algoritmo</text>
+
+      <!-- SETAS DE CONEXÃO E FLUXO OMNICHANNEL -->
+      <path d="M 340 320 L 390 320" stroke="#38BDF8" stroke-width="4" stroke-dasharray="6 4" marker-end="url(#arrow-cyan)"/>
+      <rect x="345" y="285" width="40" height="24" rx="4" fill="#0F172A" stroke="#38BDF8"/>
+      <text x="365" y="301" fill="#38BDF8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">LINK</text>
+
+      <defs>
+        <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+        </marker>
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+        </marker>
+      </defs>
+
+      <!-- BLOCO 2: O NÚCLEO PROPRIETÁRIO - SITE PREMIUM OTD -->
+      <rect x="400" y="80" width="340" height="480" rx="14" fill="url(#grad-site)" stroke="#2DD4BF" stroke-width="2.5"/>
+      <rect x="425" y="65" width="220" height="30" rx="6" fill="#0891B2"/>
+      <text x="535" y="85" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">NÚCLEO PROPRIETÁRIO (CONVERSÃO)</text>
+      <text x="570" y="135" fill="#FFFFFF" font-family="sans-serif" font-size="20" font-weight="800" text-anchor="middle">WEBSITE PREMIUM OTD</text>
+      <text x="570" y="158" fill="#67E8F9" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Ativo Soberano de Autoridade e Vendas</text>
+
+      <rect x="425" y="185" width="290" height="65" rx="8" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.6"/>
+      <text x="440" y="210" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="bold">🎯 Páginas Dedicadas por Serviço</text>
+      <text x="440" y="230" fill="#94A3B8" font-family="sans-serif" font-size="12">SEO Semântico de alta intenção comercial</text>
+      <text x="440" y="244" fill="#67E8F9" font-family="sans-serif" font-size="11" font-weight="semibold">Top 1 em AI Overviews & Busca Orgânica</text>
+
+      <rect x="425" y="265" width="290" height="65" rx="8" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.6"/>
+      <text x="440" y="290" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="bold">🛡️ Blindagem de Credibilidade B2B</text>
+      <text x="440" y="310" fill="#94A3B8" font-family="sans-serif" font-size="12">Cases validados, portfólio robusto, SSL</text>
+      <text x="440" y="324" fill="#67E8F9" font-family="sans-serif" font-size="11" font-weight="semibold">Aprova auditorias de Diretores Financeiros</text>
+
+      <rect x="425" y="345" width="290" height="65" rx="8" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.6"/>
+      <text x="440" y="370" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="bold">⚡ Core Web Vitals & Mobile-First</text>
+      <text x="440" y="390" fill="#94A3B8" font-family="sans-serif" font-size="12">Carregamento instantâneo &lt; 1.5s</text>
+      <text x="440" y="404" fill="#67E8F9" font-family="sans-serif" font-size="11" font-weight="semibold">Zero perda de leads por lentidão na página</text>
+
+      <rect x="425" y="425" width="290" height="110" rx="8" fill="#042F2E" stroke="#10B981" stroke-width="1.5"/>
+      <text x="570" y="450" fill="#6EE7B7" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">✓ SOBERANIA INTEGRAL DE DADOS</text>
+      <text x="440" y="472" fill="#D1FAE5" font-family="sans-serif" font-size="12">• Tráfego 100% seu sem pagar aluguel</text>
+      <text x="440" y="492" fill="#D1FAE5" font-family="sans-serif" font-size="12">• Rastreamento analítico ponta a ponta</text>
+      <text x="440" y="512" fill="#D1FAE5" font-family="sans-serif" font-size="12">• Patrimônio digital perene e escalável</text>
+
+      <!-- SETA PARA O CAIXA / RESULTADO COMERCIAL -->
+      <path d="M 740 320 L 790 320" stroke="#10B981" stroke-width="5" marker-end="url(#arrow-green)"/>
+      <rect x="745" y="285" width="40" height="24" rx="4" fill="#064E3B" stroke="#10B981"/>
+      <text x="765" y="301" fill="#10B981" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">LEAD</text>
+
+      <!-- BLOCO 3: FECHAMENTO & CAIXA DA EMPRESA -->
+      <rect x="800" y="80" width="260" height="480" rx="14" fill="url(#grad-caixa)" stroke="#10B981" stroke-width="2.5"/>
+      <rect x="820" y="65" width="180" height="30" rx="6" fill="#059669"/>
+      <text x="910" y="85" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">RESULTADO FINAL (CAIXA)</text>
+      <text x="930" y="145" fill="#FFFFFF" font-family="sans-serif" font-size="19" font-weight="800" text-anchor="middle">FECHAMENTO B2B</text>
+      <text x="930" y="168" fill="#A7F3D0" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle">Contratos High-Ticket & LTV</text>
+
+      <rect x="820" y="200" width="220" height="95" rx="8" fill="#064E3B" stroke="#34D399"/>
+      <text x="930" y="230" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">💰 CONTRATOS &gt; R$ 10.000</text>
+      <text x="930" y="255" fill="#D1FAE5" font-family="sans-serif" font-size="12" text-anchor="middle">Compradores corporativos validados</text>
+      <text x="930" y="275" fill="#6EE7B7" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Ciclo de Venda Mais Curto</text>
+
+      <rect x="820" y="315" width="220" height="95" rx="8" fill="#064E3B" stroke="#34D399"/>
+      <text x="930" y="345" fill="#FFFFFF" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">📈 LTV & RECORRÊNCIA</text>
+      <text x="930" y="370" fill="#D1FAE5" font-family="sans-serif" font-size="12" text-anchor="middle">Clientes retidos com autoridade</text>
+      <text x="930" y="390" fill="#6EE7B7" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Margem de Lucro Máxima</text>
+
+      <rect x="820" y="430" width="220" height="105" rx="8" fill="#022C22" stroke="#10B981" stroke-width="1.5"/>
+      <text x="930" y="458" fill="#34D399" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">🌟 EXPANSÃO PREVISÍVEL</text>
+      <text x="930" y="482" fill="#E2E8F0" font-family="sans-serif" font-size="11" text-anchor="middle">O Instagram atrai a audiência certa,</text>
+      <text x="930" y="498" fill="#E2E8F0" font-family="sans-serif" font-size="11" text-anchor="middle">e o Site Premium converte e retém</text>
+      <text x="930" y="516" fill="#10B981" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">sem depender de anúncios caros.</text>
+
+    </svg>
+  </div>
+  <figcaption class="mt-4 text-center text-xs md:text-sm text-slate-400">
+    <strong class="text-cyan-400">Engenharia de Canais Integrados OTD:</strong> Enquanto o Instagram atua como topo de funil para descoberta e relacionamento ágil, o Site Corporativo Premium consolida a credibilidade técnica e fecha transações B2B de alto valor patrimonial.
+  </figcaption>
+</figure>
+
+A visibilidade local atua como outro pilar crucial de atração orgânica para negócios com pontos físicos ou áreas de cobertura estruturadas. O correto alinhamento de informações de nome, endereço e contato telefônico (NAP) entre o site corporativo e as listagens locais no mapa do buscador mitiga falhas de indexação espacial, demonstrando ser de vital importância ao atuar em cenários de <strong><a href="/insights/empresa-nao-aparece-google-maps/">resolvendo o sumiço da empresa no Google Maps</a></strong>. Ao associar um perfil local otimizado a um site estruturado, o tráfego regional é capturado de forma sinérgica e direcionado para as páginas internas de conversão, onde os diferenciais da corporação são devidamente explorados sem ruídos concorrenciais.`
       },
       {
-        titulo: "Quando priorizar cada um",
-        corpo: "• Começando com orçamento zero: comece pelo Instagram e GMN para validar sua oferta\n• Empresa faturando e querendo escalar: o site profissional torna-se obrigatório — sem ele você perde conversão no tráfego pago e precisa <strong><a href=\"/insights/por-que-site-nao-aparece-google\">garantir que seu site apareça no Google</a></strong>\n• O cenário ideal: Instagram alimentando o relacionamento + Site convertendo e ranqueando no Google",
+        titulo: "Modelagem Econômica do Retorno sobre Ativos Digitais ($V_{ad}$) e Diretrizes de Alocação",
+        corpo: `<div class="my-8 rounded-2xl border border-teal-500/30 bg-slate-900/90 p-6 shadow-2xl">
+  <div class="mb-4 flex items-center justify-between border-b border-teal-500/20 pb-3">
+    <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Modelagem Econômica do Retorno sobre Ativos Digitais ($V_{ad}$)</span>
+    <span class="rounded bg-teal-500/10 px-2 py-0.5 text-xs text-teal-300 font-mono">OTD Analytics</span>
+  </div>
+  <div class="my-6 rounded-xl bg-slate-950 p-4 text-center font-mono text-lg md:text-xl text-teal-300 shadow-inner border border-teal-500/20 overflow-x-auto">
+    V_{ad} = \frac{(T_{org} \times C_{tax} \times LTV) \times (1 + S_{prop})}{CAC_{org}}
+  </div>
+  <div class="mt-6 space-y-3 text-sm text-slate-300 border-t border-slate-800 pt-4">
+    <p class="font-bold text-teal-400 text-base mb-2">💼 Traduzindo a matemática financeira para o caixa da sua empresa:</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-cyan-400 block mb-1">📈 $T_{org}$ (Tráfego Orgânico):</strong>
+        <span>Visitas diárias de clientes qualificados que chegam ao seu site de graça pelo Google, sem depender de comprar anúncios.</span>
+      </div>
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-teal-400 block mb-1">🎯 $C_{tax}$ (Taxa de Conversão):</strong>
+        <span>O poder de persuasão das suas landing pages para transformar o visitante curioso em reunião agendada no WhatsApp.</span>
+      </div>
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-emerald-400 block mb-1">💰 $LTV$ (Valor Vitalício do Cliente):</strong>
+        <span>O faturamento real e recorrente gerado por contratos corporativos B2B ou serviços que só fecham com quem tem credibilidade.</span>
+      </div>
+      <div class="rounded-lg bg-slate-800/60 p-3 border border-slate-700/50">
+        <strong class="text-sky-400 block mb-1">🛡️ $S_{prop}$ (Soberania Proprietária):</strong>
+        <span>A blindagem contra o risco de acordar amanhã com a rede social hackeada ou bloqueada e perder 100% dos contatos.</span>
+      </div>
+    </div>
+    <div class="rounded-lg bg-teal-950/40 p-3.5 border border-teal-500/30 mt-2">
+      <strong class="text-teal-300 block mb-1">📉 $CAC_{org}$ (Custo de Aquisição de Clientes — Divisor):</strong>
+      <span class="text-slate-200">Quanto menos sua empresa depende de alugar tráfego pago no Meta/Google Ads cada vez mais caros, menor é o seu custo de aquisição e <strong>exponencialmente maior é o valor patrimonial limpo ($V_{ad}$)</strong> que fica no caixa do negócio.</span>
+    </div>
+  </div>
+</div>
+
+A estruturação orçamentária para a construção de canais digitais deve obedecer de maneira estrita ao estágio operacional de maturidade da corporação no mercado:
+
+• <strong>Estágio Inicial de Validação com Restrição de Caixa:</strong> Startups ou profissionais liberais que iniciam operações comerciais com orçamento nulo encontram nas mídias de relacionamento gratuitas e nas ferramentas de perfil local ferramentas ágeis para atração inicial de leads rápidos de curto prazo.
+• <strong>Estágio de Expansão e Escala B2B:</strong> À medida que a organização consolida seu faturamento comercial e busca expandir sua carteira de clientes de maior tíquete, a migração para uma estrutura de <strong><a href="/servicos/criacao-de-sites/">criação de sites corporativos</a></strong> de alta conversão torna-se obrigatória para evitar a perda sistemática de conversões e otimizar campanhas de tráfego pago.
+• <strong>Cenário de Maturidade com Sinergia Integrada:</strong> A arquitetura ideal de comunicação prevê mídias de relacionamento atuando como canais complementares de geração de atenção rápida, enquanto o Website Premium centraliza a retenção, a análise métrica de dados, a conformidade de dados e o fechamento qualificado de vendas.
+
+Para obter um diagnóstico preciso acerca da estruturação de seus canais de atração, conversão e relacionamento, bem como identificar se a maturidade da infraestrutura digital atende às demandas do mercado corporativo, recomenda-se realizar o <strong><a href="/diagnostico">Diagnóstico Digital</a></strong> especializado de maturidade empresarial.`
       },
     ],
     faq: [
       {
-        pergunta: "Uma empresa prestadora de serviços pode viver apenas de Instagram?",
-        resposta: "Até certo ponto, sim. Porém, sem um site profissional, a empresa perde todo o tráfego de intenção de busca do Google e tem taxas de conversão menores em clientes corporativos B2B."
+        pergunta: "Uma empresa prestadora de serviços pode sobreviver de forma sustentável no mercado corporativo operando exclusivamente pelo Instagram?",
+        resposta: "Embora seja viável iniciar operações capturando atenção imediata pelo Instagram, a sustentabilidade de longo prazo é severamente comprometida sem uma estrutura institucional própria. A ausência de um site impossibilita a indexação em buscas de alta intenção e reduz drasticamente a taxa de conversão em negociações B2B estruturadas, que exigem maior validação de credibilidade patrimonial."
       },
       {
-        pergunta: "Qual é a principal função do site na jornada do cliente?",
-        resposta: "O site atua como validador de credibilidade institucional e capturador de leads qualificados, reunindo portfólio, diferenciais e chamadas para ação em um ambiente sem distrações."
+        pergunta: "Por que tomadores de decisão em contratos acima de R$ 10 mil exigem a apresentação de um site corporativo próprio?",
+        resposta: "Negociações corporativas de alto valor envolvem processos criteriosos de conformidade e análise de riscos. Um perfil em rede social não projeta a robustez técnica necessária. O site próprio profissional serve como o validador máximo de idoneidade, concentrando portfólios detalhados, cases de sucesso validados e documentações de conformidade institucional indispensáveis para mitigar o risco de contratação de fornecedores."
+      },
+      {
+        pergunta: "Como a perda de alcance orgânico e a queda de engajamento nas mídias sociais impactam o faturamento de empresas dependentes?",
+        resposta: "A dependência de mídias de terceiros sujeita a distribuição comercial a alterações unilaterais de algoritmos. Quando o alcance orgânico cai, a atração de leads cessa abruptamente, forçando a marca a elevar custos com mídia paga. Organizações resilientes evitam esse cenário estruturando o site próprio como núcleo de captação orgânica perene, garantindo tráfego previsível independentemente das regras das plataformas sociais."
+      },
+      {
+        pergunta: "Quais são as medidas fundamentais de segurança técnica para blindar os ativos digitais de uma corporação contra invasões cibernéticas?",
+        resposta: "Proteger o patrimônio digital exige migrar a infraestrutura comercial para ambientes controlados e soberanos. Diferente de redes sociais vulneráveis a engenharia social, o site corporativo premium permite a implementação de estruturas avançadas de criptografia SSL, firewalls de aplicação web e rotinas automatizadas de backup. Isso garante total segurança das informações de clientes e a continuidade operacional irrestrita do negócio."
+      },
+      {
+        pergunta: "Como o site institucional e o perfil local de buscas interagem de maneira sinérgica para maximizar o posicionamento orgânico?",
+        resposta: "O algoritmo de buscas locais prioriza marcas que demonstram alta autoridade e consistência técnica. Um site próprio bem estruturado alimenta os rastreadores do Google com dados estruturados claros, o que eleva a relevância geográfica do perfil local. Essa sinergia técnica maximiza a visibilidade nas pesquisas orgânicas e nos mapas, gerando um fluxo contínuo de atração e conversão local qualificada."
       }
     ],
     cta: "Sua empresa tem um site que converte ou apenas um cartão de visitas digital?",
-    ctaSub: "",
+    ctaSub: "Descubra agora onde estão os gargalos da sua estrutura digital e como blindar suas vendas no Google.",
     ctaLink: "/quiz",
   },
   {
