@@ -2125,6 +2125,7 @@ De nada adianta qualificar bem se a informação morre no chat. Cada conversa pr
     cta: "A One Thank Digital estrutura operações completas de captação e qualificação 24/7 no WhatsApp — com API oficial da Meta, IA conversacional com metodologia de vendas e integração total com o seu CRM. Tudo validado primeiro na nossa própria operação, antes de chegar ao seu negócio.",
     ctaSub: "Fale com a gente e receba um diagnóstico da sua estrutura de atendimento",
     ctaLink: "/diagnostico",
+  },
 ];
 
 export const isPostPublished = (p) => {
