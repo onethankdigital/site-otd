@@ -3,7 +3,7 @@ import path from 'path';
 import { blogPosts } from './src/data/blogPosts.js';
 
 const distDir = './dist';
-const EXPECTED_SITEMAP_URLS = 33; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
+const EXPECTED_SITEMAP_URLS = 32; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
 
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
