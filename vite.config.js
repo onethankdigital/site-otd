@@ -41,6 +41,7 @@ const sitemapPaths = [
   '/guia/desenvolvimento-web/',
   '/guia/seo-trafego-organico/',
   '/insights/categoria/automacao-crm/',
+  '/agencias/',
   '/privacidade/',
   '/termos/'
 ]
@@ -75,6 +76,7 @@ const prerenderPaths = [
   '/guia/desenvolvimento-web/',
   '/guia/seo-trafego-organico/',
   '/insights/categoria/automacao-crm/',
+  '/agencias/',
   '/privacidade/',
   '/termos/'
 ]

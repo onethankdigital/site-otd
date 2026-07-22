@@ -37,6 +37,7 @@ import PillarDesenvolvimentoWeb from './pages/PillarDesenvolvimentoWeb';
 import PillarSEOTrafego from './pages/PillarSEOTrafego';
 import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
+import AgenciasPage from './pages/AgenciasPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -320,6 +321,20 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <TermosPage />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath === '/agencias' || currentPath === '/agencias/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden text-white">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <AgenciasPage />
         </Suspense>
         <WhatsAppButton />
       </div>

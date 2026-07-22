@@ -51,15 +51,15 @@ const Hero = ({ onOpenQuiz }) => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden bg-background"
     >
       {/* Imagem de Fundo Estrutural (Rollback do Spline para Imagem Estática Premium) */}
       <div ref={bgRef} className="absolute inset-0 z-0">
-        <img 
-          src="/hero-bg.webp" 
-          alt="Digital Presence Infrastructure" 
+        <img
+          src="/hero-bg.webp"
+          alt="Digital Presence Infrastructure"
           className="w-full h-full object-cover opacity-30 mix-blend-screen scale-110"
           style={{ filter: 'grayscale(0.5) brightness(0.7)' }}
           fetchPriority="high"
@@ -69,23 +69,37 @@ const Hero = ({ onOpenQuiz }) => {
       </div>
 
       {/* Camada de Conteúdo (Hierarquia) */}
-      <div className="relative z-20 w-full flex flex-col items-center justify-center mix-blend-difference text-white pointer-events-none">
-        <div style={{ perspective: '1000px' }}>
+      <div className="relative z-20 w-full flex flex-col items-center justify-center px-6 max-w-5xl mx-auto mix-blend-difference text-white pointer-events-none">
+        
+        {/* Eyebrow */}
+        <div className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-80 mb-6 text-center">
+          TECNOLOGIA E ESTRUTURA DIGITAL · SANTO ANDRÉ, GRANDE ABC
+        </div>
+
+        {/* H1 (Line 1 - Space Grotesk Font) */}
+        <div style={{ perspective: '1000px' }} className="w-full">
           <h1 
             ref={text1Ref}
-            className="font-heading font-bold text-[8vw] md:text-[6vw] leading-[1] uppercase tracking-tighter text-center"
+            className="font-heading font-bold text-[8vw] md:text-[6vw] leading-[1] tracking-tighter text-center max-w-5xl mx-auto mb-2 uppercase"
           >
-            COMUNICAÇÃO QUE APARECE.
+            SOMOS TECNOLOGIA
           </h1>
         </div>
-        <div style={{ perspective: '1000px' }}>
+
+        {/* Big Italic Title (Line 2 - DM Serif Display Font) */}
+        <div style={{ perspective: '1000px' }} className="w-full">
           <p 
             ref={text2Ref}
-            className="font-drama italic text-[6vw] md:text-[5vw] leading-[1] text-center mt-2 px-4"
+            className="font-drama italic text-[6vw] md:text-[5vw] leading-[1.1] text-center max-w-4xl mx-auto mb-5 px-4"
           >
-            Visibilidade que vende. <br />Automação que não para.
+            por trás da presença digital <br />da sua empresa.
           </p>
         </div>
+
+        {/* Support Line */}
+        <p className="text-xs sm:text-sm md:text-base opacity-75 max-w-xl text-center leading-relaxed mb-6 px-4">
+          Para empresas do Grande ABC que precisam ser encontradas e não podem perder o contato que chega.
+        </p>
 
         <p style={{
   fontSize: '11px',
@@ -99,16 +113,17 @@ const Hero = ({ onOpenQuiz }) => {
   position: 'absolute',
   pointerEvents: 'none'
 }}>
-A One Thank Digital estrutura a presença digital completa da sua 
-empresa — do Google Maps ao site, do SEO orgânico à automação de 
-WhatsApp — para que escritórios contábeis, clínicas e empresas B2B 
-em Santo André e ABC Paulista sejam encontrados, entendidos e 
-escolhidos antes do concorrente.
+  A One Thank Digital estrutura a presença digital completa da sua 
+  empresa — do Google Maps ao site, do SEO orgânico à automação de 
+  WhatsApp — para que escritórios contábeis, clínicas e empresas B2B 
+  em Santo André e ABC Paulista sejam encontrados, entendidos e 
+  escolhidos antes do concorrente.
 </p>
 
+        {/* Button & Microcopy Container */}
         <div 
           ref={buttonRef}
-          className="pointer-events-auto mt-16 md:mt-24 inline-block"
+          className="pointer-events-auto mt-6 md:mt-8 flex flex-col items-center justify-center"
         >
           <button 
             onClick={onOpenQuiz}
@@ -116,6 +131,10 @@ escolhidos antes do concorrente.
           >
             AVALIAR MINHA ESTRUTURA
           </button>
+          
+          <span className="font-mono text-[9px] md:text-xs tracking-wider opacity-60 mt-3 text-center uppercase">
+            20 perguntas · 3 minutos · resultado na hora
+          </span>
         </div>
       </div>
 

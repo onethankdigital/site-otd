@@ -3,7 +3,7 @@ import path from 'path';
 import { blogPosts } from './src/data/blogPosts.js';
 
 const distDir = './dist';
-const EXPECTED_SITEMAP_URLS = 32; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
+const EXPECTED_SITEMAP_URLS = 33; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
 
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
@@ -27,10 +27,10 @@ function processDirectory(dir) {
       }
 
       // Remover tag title e description padrão da home para que cada página tenha apenas o seu title/description específico
-      const defaultTitle = '<title data-rh="true">Agência de Marketing Digital em Santo André | One Thank Digital</title>';
+      const defaultTitle = '<title data-rh="true">One Thank Digital | Tecnologia e Estrutura Digital em Santo André</title>';
       html = html.replace(defaultTitle, '');
 
-      const defaultDesc = '<meta name="description" content="Agência de marketing digital e comunicação no Grande ABC. Estruturamos sua presença digital com sites premium, SEO, Google Meu Negócio e automações." data-rh="true">';
+      const defaultDesc = '<meta name="description" content="Presença no Google, sites com estrutura de busca semântica e automação de atendimento para empresas do Grande ABC. Implementação e manutenção diretas, por quem executa." data-rh="true">';
       html = html.replace(defaultDesc, '');
 
       // Injetar preconnects para Google Fonts no head
