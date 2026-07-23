@@ -1,6 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { blogPosts } from './src/data/blogPosts.js';
+import PrerendererModule from '@prerenderer/prerenderer';
+import PuppeteerRendererModule from '@prerenderer/renderer-puppeteer';
+
+const Prerenderer = PrerendererModule.default || PrerendererModule;
+const PuppeteerRenderer = PuppeteerRendererModule.default || PuppeteerRendererModule;
 
 const distDir = './dist';
 const EXPECTED_SITEMAP_URLS = 33; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
@@ -126,4 +131,50 @@ if (fs.existsSync(distDir)) {
     }
   }
 }
-console.log('Post-build cleanup and optimization finished.');
+
+async function prerenderHomepage() {
+  console.log('Starting standalone pre-rendering for the homepage...');
+  const prerenderer = new Prerenderer({
+    staticDir: path.resolve(distDir),
+    renderer: new PuppeteerRenderer({
+      headless: true,
+      inject: { isPrerender: true },
+      injectProperty: '__PRERENDER_INJECTED',
+      skipThirdPartyRequests: true,
+      consoleHandler: (route, message) => {
+        console.log(`[Browser Console - ${route}] ${message.text()}`);
+      },
+      pageSetup: async (page, route) => {
+        page.on('requestfailed', request => {
+          console.log(`[Request Failed - ${route}] ${request.url()} - ${request.failure() ? request.failure().errorText : 'unknown'}`);
+        });
+      }
+    })
+  });
+
+  try {
+    await prerenderer.initialize();
+    const renderedRoutes = await prerenderer.renderRoutes(['/']);
+    let html = renderedRoutes[0].html.trim();
+    
+    // Clean up any duplicate canonical tags and write exactly one
+    html = html.replace(/<link rel="canonical"[^>]*>/g, '');
+    html = html.replace('</head>', '    <link rel="canonical" href="https://onethank.com.br/" />\n  </head>');
+
+    const outputPath = path.join(distDir, 'index.html');
+    fs.writeFileSync(outputPath, html, 'utf-8');
+    console.log(`Successfully pre-rendered homepage to ${outputPath} (${html.length} bytes).`);
+  } catch (err) {
+    console.error('Error pre-rendering homepage:', err);
+    throw err;
+  } finally {
+    await prerenderer.destroy();
+  }
+}
+
+prerenderHomepage().then(() => {
+  console.log('Post-build cleanup and optimization finished.');
+}).catch(err => {
+  console.error('Post-build failed:', err);
+  process.exit(1);
+});

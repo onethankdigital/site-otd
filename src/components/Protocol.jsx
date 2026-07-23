@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { shouldAnimate } from '../utils/animation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,8 @@ const Protocol = ({ onOpenQuiz }) => {
   const itemsRef = useRef([]);
 
   useLayoutEffect(() => {
+    if (!shouldAnimate()) return;
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headerRef.current,

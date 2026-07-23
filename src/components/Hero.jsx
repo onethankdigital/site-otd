@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
+import { shouldAnimate } from '../utils/animation';
 
 
 const Hero = ({ onOpenQuiz }) => {
@@ -17,6 +18,10 @@ const Hero = ({ onOpenQuiz }) => {
   }, []);
 
   useLayoutEffect(() => {
+    if (!shouldAnimate()) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       // Intro Animation
       gsap.fromTo(

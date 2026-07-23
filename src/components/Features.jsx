@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { MousePointer2, Activity } from 'lucide-react';
+import { shouldAnimate } from '../utils/animation';
 
 const DiagnosticShuffler = () => {
   const [cards, setCards] = useState([
@@ -83,6 +84,8 @@ const CursorScheduler = () => {
   const [active, setActive] = useState(false);
 
   useLayoutEffect(() => {
+    if (!shouldAnimate()) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
       

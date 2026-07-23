@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { shouldAnimate } from '../utils/animation';
 
 const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +41,10 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   ];
 
   useEffect(() => {
+    if (!shouldAnimate()) {
+      return;
+    }
+
     if (isOpen) {
       gsap.to(overlayRef.current, {
         yPercent: 100,

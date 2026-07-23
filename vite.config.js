@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Sitemap from 'vite-plugin-sitemap'
 import Prerender from '@prerenderer/rollup-plugin'
+import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
@@ -94,7 +95,13 @@ export default defineConfig({
 
     Prerender({
       staticDir: resolve(_dirname, 'dist'),
-      routes: prerenderPaths
+      routes: prerenderPaths,
+      renderer: new PuppeteerRenderer({
+        headless: true,
+        inject: { isPrerender: true },
+        injectProperty: '__PRERENDER_INJECTED',
+        skipThirdPartyRequests: true
+      })
     })
   ],
   build: {

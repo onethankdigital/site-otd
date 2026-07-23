@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { shouldAnimate } from '../utils/animation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,6 +12,8 @@ const Philosophy = ({ onOpenQuiz }) => {
   const bgRef = useRef(null);
 
   useLayoutEffect(() => {
+    if (!shouldAnimate()) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {

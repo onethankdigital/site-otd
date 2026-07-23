@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { shouldAnimate } from '../utils/animation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +64,8 @@ const HorizontalScroll = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   const wrapperRef = useRef(null);
 
   useLayoutEffect(() => {
+    if (!shouldAnimate()) return;
+
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray('.h-panel');
 

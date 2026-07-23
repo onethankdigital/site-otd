@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { shouldAnimate } from '../utils/animation';
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -7,6 +8,11 @@ const CustomCursor = () => {
   useEffect(() => {
     const cursor = cursorRef.current;
     if (!cursor) return;
+
+    if (!shouldAnimate()) {
+      cursor.style.display = 'none';
+      return;
+    }
 
     // Ignora completamente o cursor customizado em dispositivos mobile/touch
     const isMobile = window.matchMedia("(pointer: coarse)").matches || 
