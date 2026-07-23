@@ -340,15 +340,24 @@ const ServicosCards = () => {
           margin: 0 auto;
         }
 
-        .closing-question {
+        .closing-cascade {
           font-family: var(--font-heading, 'Bebas Neue', sans-serif);
-          font-size: clamp(28px, 3vw, 44px);
+          font-size: clamp(24px, 2.6vw, 40px);
           font-weight: 700;
           color: #ffffff;
-          line-height: 1.1;
-          letter-spacing: 1px;
+          line-height: 1.15;
+          letter-spacing: 0.5px;
           text-transform: uppercase;
-          margin: 4px 0 0;
+          text-align: center;
+          max-width: 900px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .closing-cascade-accent {
+          color: #E0040B;
         }
 
         .closing-desc {
@@ -356,8 +365,25 @@ const ServicosCards = () => {
           font-size: clamp(14px, 1.1vw, 16px);
           color: rgba(255,255,255,0.7);
           line-height: 1.7;
-          max-width: 620px;
-          margin: 4px auto 8px;
+          max-width: 560px;
+          margin: 8px auto 4px;
+        }
+
+        .closing-btn {
+          display: inline-block;
+          padding: 12px 40px;
+          background: #E0040B;
+          color: #ffffff;
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-weight: 700;
+          font-size: clamp(11px, 0.85vw, 14px);
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          margin-top: 4px;
         }
 
         .closing-social {
@@ -381,22 +407,6 @@ const ServicosCards = () => {
           color: #f0b429;
           font-size: 12px;
           line-height: 1;
-        }
-
-        .closing-btn {
-          display: inline-block;
-          padding: 14px 40px;
-          background: #E0040B;
-          color: #ffffff;
-          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
-          font-weight: 700;
-          font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          border: none;
-          cursor: pointer;
         }
 
         .closing-btn:hover {
@@ -423,7 +433,7 @@ const ServicosCards = () => {
           {/* Header */}
           <div className="servicos-eyebrow">IDENTIFIQUE O PROBLEMA</div>
           <div className="servicos-title">Por que seu cliente encontra o concorrente antes de você?</div>
-          <p className="servicos-intro">São quatro pontos de falha, e eles funcionam em sequência. Se o cliente não encontra sua empresa, o site não importa. Se o site não convence, o contato não chega. E se o contato chega e ninguém responde, ele vai para quem respondeu primeiro.</p>
+          <p className="servicos-intro">São quatro pontos de falha, e eles funcionam em sequência.</p>
 
           {/* Grid */}
           <div className="servicos-grid">
@@ -447,17 +457,16 @@ const ServicosCards = () => {
 
           {/* Bloco de Fechamento */}
           <div className="servicos-closing">
-            <p className="closing-cost">
-              Enquanto isso, o custo já está no seu caixa: aluguel, equipe e anúncio rodando enquanto o cliente encontra o concorrente.
-            </p>
-            <h3 className="closing-question">
-              Em qual desses quatro sua empresa está parando?
-            </h3>
+            <div className="closing-cascade">
+              <span>Se o cliente não encontra sua empresa, o site não importa.</span>
+              <span>Se o site não convence, o contato não chega.</span>
+              <span>E se o contato chega e ninguém responde, <span className="closing-cascade-accent">ele vai para quem respondeu primeiro.</span></span>
+            </div>
             <p className="closing-desc">
-              Responda 20 perguntas e receba o diagnóstico da sua estrutura nos quatro pilares: onde você está travado, o que isso está custando e um plano na ordem certa de resolver.
+              O diagnóstico aponta em qual desses elos sua estrutura para.
             </p>
             <a href="/diagnostico" className="closing-btn">
-              DESCOBRIR ONDE ESTOU PARANDO
+              DESCOBRIR AGORA
             </a>
             <div className="closing-microcopy">
               20 perguntas · 3 minutos · gratuito
