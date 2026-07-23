@@ -5,6 +5,7 @@ const SERVICOS = [
     number: '01',
     title: 'GOOGLE MEU NEGÓCIO',
     dor: 'Seu concorrente aparece no Maps. Você não.',
+    microTeste: 'busque no Google o que você vende + sua cidade. Sua empresa aparece no mapa?',
     descricao: 'Otimizamos sua presença local para você aparecer nas buscas do Google Maps quando o cliente decide.',
     link: '/servicos/google-meu-negocio',
     image: '/servico-google-maps.png',
@@ -20,7 +21,8 @@ const SERVICOS = [
     number: '02',
     title: 'WEBSITE PROFISSIONAL',
     dor: 'Seu site tem visitas mas não gera clientes.',
-    descricao: 'Sites de alta conversão que comunicam sua oferta e vendem 24 horas — com estrutura SEO desde o primeiro dia.',
+    microTeste: 'abra seu site pelo celular, no 4G, e conte os segundos até o conteúdo aparecer.',
+    descricao: 'Sites de alta conversão que comunicam sua oferta e vendem 24 horas — com estrutura de busca desde o primeiro dia.',
     link: '/servicos/criacao-de-sites',
     image: '/servico-website.png',
     imageAlt: 'Website profissional de alta conversão',
@@ -39,7 +41,8 @@ const SERVICOS = [
     number: '03',
     title: 'SEO + TRÁFEGO ORGÂNICO',
     dor: 'Você some do Google quando para de pagar anúncio.',
-    descricao: 'Rankeamento orgânico no Google e no AI Overview para sua empresa aparecer sem depender de investimento pago.',
+    microTeste: 'busque o que você vende e ignore os anúncios. Você aparece na primeira página?',
+    descricao: 'Rankeamento orgânico no Google e nos mecanismos de IA, sem depender de investimento pago.',
     link: '/servicos/seo-trafego-organico',
     image: '/servico-seo.png',
     imageAlt: 'SEO e tráfego orgânico no Google',
@@ -56,7 +59,8 @@ const SERVICOS = [
     number: '04',
     title: 'AUTOMAÇÃO DIGITAL',
     dor: 'Você perde leads que mandam mensagem fora do horário.',
-    descricao: 'WhatsApp, CRM e funil automatizados para seu negócio responder, qualificar e fechar clientes sozinho.',
+    microTeste: 'mande uma mensagem no WhatsApp da sua empresa hoje às 21h. Cronometre a resposta.',
+    descricao: 'WhatsApp, CRM e funil automatizados para responder, qualificar e não perder contato nenhum.',
     link: '/servicos/automacao-digital',
     image: '/servico-automacao.png',
     imageAlt: 'Automação digital de WhatsApp e CRM',
@@ -155,7 +159,7 @@ const ServicosCards = () => {
           font-family: var(--font-heading, 'Bebas Neue', sans-serif);
           font-size: clamp(80px, 9vw, 120px);
           line-height: 0.8;
-          color: rgba(255,255,255,0.04);
+          color: rgba(255,255,255,0.10);
           position: absolute;
           top: 12px;
           right: 20px;
@@ -165,7 +169,25 @@ const ServicosCards = () => {
         }
 
         .servico-card:hover .servico-ghost {
-          color: rgba(255,255,255,0.07);
+          color: rgba(255,255,255,0.14);
+        }
+
+        .servico-teste {
+          font-family: 'Space Mono', monospace;
+          font-size: 12px;
+          line-height: 1.6;
+          color: rgba(255,255,255,0.75);
+          border-left: 2px solid rgba(255,255,255,0.2);
+          padding-left: 12px;
+          margin-bottom: 14px;
+          position: relative;
+          z-index: 1;
+          text-align: left;
+        }
+
+        .servico-teste strong {
+          font-weight: 700;
+          letter-spacing: 1px;
         }
 
         .servico-icon {
@@ -291,7 +313,84 @@ const ServicosCards = () => {
             display: inline-block;
           }
 
+          .servico-teste {
+            align-self: stretch;
+            text-align: left;
+          }
 
+        }
+
+        /* --- CLOSING BLOCK --- */
+        .servicos-closing {
+          margin-top: 64px;
+          text-align: center;
+          padding-bottom: 48px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .closing-cost {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 15px;
+          color: rgba(255,255,255,0.55);
+          line-height: 1.6;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .closing-question {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(28px, 3vw, 44px);
+          font-weight: 700;
+          color: #ffffff;
+          line-height: 1.1;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin: 8px 0;
+        }
+
+        .closing-desc {
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(14px, 1.1vw, 16px);
+          color: rgba(255,255,255,0.7);
+          line-height: 1.7;
+          max-width: 620px;
+          margin: 0 auto 16px;
+        }
+
+        .closing-btn {
+          display: inline-block;
+          padding: 14px 40px;
+          background: #E0040B;
+          color: #ffffff;
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-weight: 700;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+        }
+
+        .closing-btn:hover {
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 0 0 30px rgba(224, 4, 11, 0.4);
+        }
+
+        .closing-btn:active {
+          transform: scale(0.98);
+        }
+
+        .closing-microcopy {
+          font-family: 'Space Mono', monospace;
+          font-size: 11px;
+          color: rgba(255,255,255,0.6);
+          letter-spacing: 1px;
+          text-transform: uppercase;
         }
       `}</style>
 
@@ -300,7 +399,7 @@ const ServicosCards = () => {
           {/* Header */}
           <div className="servicos-eyebrow">IDENTIFIQUE O PROBLEMA</div>
           <div className="servicos-title">Por que seu cliente encontra o concorrente antes de você?</div>
-          <p className="servicos-intro">Escritórios contábeis, clínicas e empresas B2B no ABC Paulista perdem clientes todos os dias não por falta de qualidade — mas por invisibilidade digital. São quatro pontos de falha que impedem sua empresa de ser encontrada, entendida e escolhida.</p>
+          <p className="servicos-intro">São quatro pontos de falha, e eles funcionam em sequência. Se o cliente não encontra sua empresa, o site não importa. Se o site não convence, o contato não chega. E se o contato chega e ninguém responde, ele vai para quem respondeu primeiro.</p>
 
           {/* Grid */}
           <div className="servicos-grid">
@@ -313,10 +412,32 @@ const ServicosCards = () => {
                 <div className="servico-icon">{s.icon}</div>
                 <div className="servico-name">{s.title}</div>
                 <div className="servico-dor">"{s.dor}"</div>
+                <div className="servico-teste">
+                  <strong>TESTE AGORA:</strong> {s.microTeste}
+                </div>
                 <div className="servico-desc">{s.descricao}</div>
-                <a href={s.link} className="servico-link">VER MAIS →</a>
+                <a href={s.link} className="servico-link">COMO FUNCIONA →</a>
               </div>
             ))}
+          </div>
+
+          {/* Bloco de Fechamento */}
+          <div className="servicos-closing">
+            <p className="closing-cost">
+              Enquanto isso, o custo já está no seu caixa: aluguel, equipe e anúncio rodando enquanto o cliente encontra o concorrente.
+            </p>
+            <h3 className="closing-question">
+              Em qual desses quatro sua empresa está parando?
+            </h3>
+            <p className="closing-desc">
+              Responda 20 perguntas e receba o diagnóstico da sua estrutura: onde você está travado, o que isso está custando e em que ordem resolver.
+            </p>
+            <a href="/diagnostico" className="closing-btn">
+              VER MEU DIAGNÓSTICO
+            </a>
+            <div className="closing-microcopy">
+              3 minutos · resultado na hora · sem custo
+            </div>
           </div>
         </div>
       </section>
