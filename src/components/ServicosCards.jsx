@@ -322,13 +322,13 @@ const ServicosCards = () => {
 
         /* --- CLOSING BLOCK --- */
         .servicos-closing {
-          margin-top: 64px;
+          margin-top: 48px;
           text-align: center;
           padding-bottom: 48px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 24px;
+          gap: 12px;
         }
 
         .closing-cost {
@@ -348,7 +348,7 @@ const ServicosCards = () => {
           line-height: 1.1;
           letter-spacing: 1px;
           text-transform: uppercase;
-          margin: 8px 0;
+          margin: 4px 0 0;
         }
 
         .closing-desc {
@@ -357,7 +357,30 @@ const ServicosCards = () => {
           color: rgba(255,255,255,0.7);
           line-height: 1.7;
           max-width: 620px;
-          margin: 0 auto 16px;
+          margin: 4px auto 8px;
+        }
+
+        .closing-social {
+          font-family: 'Space Mono', monospace;
+          font-size: 11px;
+          color: rgba(255,255,255,0.75);
+          letter-spacing: 0.5px;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          margin-top: 4px;
+          transition: opacity 0.2s ease;
+        }
+
+        .closing-social:hover {
+          opacity: 0.9;
+        }
+
+        .closing-star {
+          color: #f0b429;
+          font-size: 12px;
+          line-height: 1;
         }
 
         .closing-btn {
@@ -391,6 +414,7 @@ const ServicosCards = () => {
           color: rgba(255,255,255,0.6);
           letter-spacing: 1px;
           text-transform: uppercase;
+          margin-top: 2px;
         }
       `}</style>
 
@@ -430,14 +454,22 @@ const ServicosCards = () => {
               Em qual desses quatro sua empresa está parando?
             </h3>
             <p className="closing-desc">
-              Responda 20 perguntas e receba o diagnóstico da sua estrutura: onde você está travado, o que isso está custando e em que ordem resolver.
+              Responda 20 perguntas e receba o diagnóstico da sua estrutura nos quatro pilares: onde você está travado, o que isso está custando e um plano na ordem certa de resolver.
             </p>
             <a href="/diagnostico" className="closing-btn">
-              VER MEU DIAGNÓSTICO
+              DESCOBRIR ONDE ESTOU PARANDO
             </a>
             <div className="closing-microcopy">
-              3 minutos · resultado na hora · sem custo
+              20 perguntas · 3 minutos · gratuito
             </div>
+            <a
+              href="https://g.page/r/onethankdigital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="closing-social"
+            >
+              <span className="closing-star">★</span> 5,0 · 16 avaliações de empresas atendidas no Google
+            </a>
           </div>
         </div>
       </section>

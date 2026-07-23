@@ -120,7 +120,7 @@ const Hero = ({ onOpenQuiz }) => {
           </button>
           
           <span className="font-mono text-[9px] md:text-xs tracking-wider opacity-60 mt-3 text-center uppercase">
-            20 perguntas · 3 minutos · resultado na hora
+            20 perguntas · 3 minutos · gratuito
           </span>
         </div>
       </div>
