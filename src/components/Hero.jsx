@@ -106,24 +106,6 @@ const Hero = ({ onOpenQuiz }) => {
           Para empresas do Grande ABC que precisam ser encontradas e não podem perder o contato que chega.
         </p>
 
-        <p style={{
-  fontSize: '11px',
-  color: 'rgba(255,255,255,0)',
-  maxWidth: '600px',
-  margin: '0 auto',
-  textAlign: 'center',
-  lineHeight: '1',
-  height: '1px',
-  overflow: 'hidden',
-  position: 'absolute',
-  pointerEvents: 'none'
-}}>
-  A One Thank Digital estrutura a presença digital completa da sua 
-  empresa — do Google Maps ao site, do SEO orgânico à automação de 
-  WhatsApp — para que escritórios contábeis, clínicas e empresas B2B 
-  em Santo André e ABC Paulista sejam encontrados, entendidos e 
-  escolhidos antes do concorrente.
-</p>
 
         {/* Button & Microcopy Container */}
         <div 
