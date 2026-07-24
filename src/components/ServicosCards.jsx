@@ -356,17 +356,17 @@ const ServicosCards = () => {
           gap: 2px;
         }
 
-        .closing-cascade-accent {
-          color: #E0040B;
-        }
-
         .closing-desc {
-          font-family: 'DM Sans', sans-serif;
-          font-size: clamp(14px, 1.1vw, 16px);
-          color: rgba(255,255,255,0.7);
-          line-height: 1.7;
-          max-width: 560px;
-          margin: 8px auto 4px;
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(22px, 2.4vw, 36px);
+          font-weight: 700;
+          color: #ffffff;
+          line-height: 1.15;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          text-align: center;
+          max-width: 800px;
+          margin: 0 auto 8px;
         }
 
         .closing-social {
