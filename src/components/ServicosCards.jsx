@@ -369,23 +369,6 @@ const ServicosCards = () => {
           margin: 8px auto 4px;
         }
 
-        .closing-btn {
-          display: inline-block;
-          padding: 12px 40px;
-          background: #E0040B;
-          color: #ffffff;
-          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
-          font-weight: 700;
-          font-size: clamp(11px, 0.85vw, 14px);
-          text-transform: uppercase;
-          letter-spacing: 0.2em;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          border: none;
-          cursor: pointer;
-          margin-top: 4px;
-        }
-
         .closing-social {
           font-family: 'Space Mono', monospace;
           font-size: 11px;
@@ -409,14 +392,6 @@ const ServicosCards = () => {
           line-height: 1;
         }
 
-        .closing-btn:hover {
-          transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 0 30px rgba(224, 4, 11, 0.4);
-        }
-
-        .closing-btn:active {
-          transform: scale(0.98);
-        }
 
         .closing-microcopy {
           font-family: 'Space Mono', monospace;
@@ -460,12 +435,16 @@ const ServicosCards = () => {
             <div className="closing-cascade">
               <span>Se o cliente não encontra sua empresa, o site não importa.</span>
               <span>Se o site não convence, o contato não chega.</span>
-              <span>E se o contato chega e ninguém responde, <span className="closing-cascade-accent">ele vai para quem respondeu primeiro.</span></span>
+              <span>E se o contato chega e ninguém responde,</span>
+              <span className="closing-cascade-accent">ele vai para quem respondeu primeiro.</span>
             </div>
             <p className="closing-desc">
               O diagnóstico aponta em qual desses elos sua estrutura para.
             </p>
-            <a href="/diagnostico" className="closing-btn">
+            <a
+              href="/diagnostico"
+              className="px-6 py-3 md:px-10 md:py-4 bg-accent text-white font-heading font-bold text-xs md:text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(224,4,11,0.4)] active:scale-[0.98] inline-block"
+            >
               DESCOBRIR AGORA
             </a>
             <div className="closing-microcopy">
