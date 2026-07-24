@@ -406,9 +406,9 @@ const ServicosCards = () => {
       <section className="servicos-section">
         <div className="servicos-inner">
           {/* Header */}
-          <div className="servicos-eyebrow">IDENTIFIQUE O PROBLEMA</div>
-          <div className="servicos-title">Por que seu cliente encontra o concorrente antes de você?</div>
-          <p className="servicos-intro">São quatro pontos de falha, e eles funcionam em sequência.</p>
+          <div className="servicos-eyebrow">ESTRUTURA DIGITAL</div>
+          <div className="servicos-title">Não é comunicar mais. É estrutura que converte.</div>
+          <p className="servicos-intro">Cada pilar abaixo é um ponto de contato entre você e seu próximo cliente.</p>
 
           {/* Grid */}
           <div className="servicos-grid">
