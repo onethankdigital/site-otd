@@ -432,14 +432,8 @@ const ServicosCards = () => {
 
           {/* Bloco de Fechamento */}
           <div className="servicos-closing">
-            <div className="closing-cascade">
-              <span>Se o cliente não encontra sua empresa, o site não importa.</span>
-              <span>Se o site não convence, o contato não chega.</span>
-              <span>E se o contato chega e ninguém responde,</span>
-              <span className="closing-cascade-accent">ele vai para quem respondeu primeiro.</span>
-            </div>
             <p className="closing-desc">
-              O diagnóstico aponta em qual desses elos sua estrutura para.
+              O diagnóstico aponta em qual desses pilares a sua estrutura digital precisa ser atualizada.
             </p>
             <a
               href="/diagnostico"
