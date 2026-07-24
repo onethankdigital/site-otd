@@ -328,7 +328,9 @@ const ServicosCards = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
           gap: 12px;
+          width: 100%;
         }
 
         .closing-cost {
