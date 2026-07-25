@@ -324,7 +324,6 @@ const ServicosCards = () => {
         .servicos-closing {
           margin-top: 48px;
           text-align: center;
-          padding-bottom: 48px;
           display: flex;
           flex-direction: column;
           align-items: center;
