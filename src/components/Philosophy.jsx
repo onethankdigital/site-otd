@@ -96,7 +96,7 @@ const Philosophy = ({ onOpenQuiz }) => {
             
             <button
               onClick={onOpenQuiz}
-              className="magnetic-btn mt-16 md:mt-28 w-max text-sm md:text-base font-mono font-medium uppercase tracking-widest border border-white/20 px-8 py-4 hover:bg-white hover:text-accent transition-colors"
+              className="magnetic-btn mt-16 md:mt-28 w-max text-sm md:text-base font-mono font-medium uppercase tracking-widest bg-accent text-white px-8 py-4 hover:bg-white hover:text-accent transition-colors"
             >
               AVALIAR MINHA ESTRUTURA
             </button>
