@@ -64,10 +64,9 @@ export default function OneHub() {
         .font-display { font-family: 'Fraunces', serif; }
         .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
         .reveal.in { opacity: 1; transform: translateY(0); }
-        .chat-bubble { background:#fff; border-radius:18px; padding:10px 14px; font-size:13px; color:#4A453F; box-shadow:0 8px 24px -8px rgba(33,30,27,.18); border:1px solid #E4DDD0; }
-        .chat-bubble.sent { background:#BE212A; color:#fff; border:none; }
         .journey-line { position:absolute; top:32px; left:0; right:0; height:2px; background:repeating-linear-gradient(90deg, #D97757 0 8px, transparent 8px 16px); z-index:0; }
         body { font-family: 'Manrope', sans-serif; }
+        .hero-img { border-radius: 16px; box-shadow: 0 24px 64px -12px rgba(33,30,27,.18), 0 0 0 1px rgba(33,30,27,.06); }
       `}</style>
 
       {/* NAV */}
@@ -83,34 +82,46 @@ export default function OneHub() {
       </nav>
 
       {/* 1. HERO */}
-      <section className="relative z-10 px-6 md:px-16 pt-10 md:pt-16 pb-24 md:pb-32">
-        <div className="max-w-4xl">
-          <p className="font-display italic text-[#D97757] text-sm mb-5">
-            Ecossistema OneHub · CRM + WhatsApp + IA
-          </p>
-          <h1 className="font-display font-medium leading-[1.05] text-[42px] md:text-[68px]">
-            Seu WhatsApp vende.<br />
-            <span className="italic text-[#BE212A]">Só ninguém está cuidando dele.</span>
-          </h1>
-          <p className="mt-7 text-lg md:text-xl max-w-xl text-[#4A453F]">
-            OneHub transforma cada conversa em processo comercial — sem perder o tom humano.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-               className="px-7 py-3.5 rounded-full font-semibold text-white shadow-lg bg-[#BE212A]">
-              Testar o OneHub grátis
-            </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-               className="px-7 py-3.5 rounded-full font-semibold border-2 border-[#211E1B]">
-              Solicitar diagnóstico gratuito
-            </a>
-          </div>
-        </div>
+      <section className="relative z-10 px-6 md:px-16 pt-10 md:pt-16 pb-16 md:pb-24">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-20 max-w-7xl">
 
-        <div className="hidden md:block absolute right-16 top-24 w-72 space-y-3">
-          <div className="chat-bubble ml-auto w-fit max-w-[85%]">Olá! Vi o anúncio, quero saber mais sobre os planos.</div>
-          <div className="chat-bubble sent w-fit max-w-[85%]">Já te chamo Carlos! Um instante 👋</div>
-          <div className="chat-bubble w-fit max-w-[70%] opacity-60">visto às 14:32 · sem resposta há 2 dias</div>
+          {/* Coluna de texto — sempre primeiro no DOM (leitura) */}
+          <div className="flex-1 md:max-w-[52%]">
+            <p className="font-display italic text-[#D97757] text-sm mb-5">
+              Ecossistema OneHub · CRM + WhatsApp + IA
+            </p>
+            <h1 className="font-display font-medium leading-[1.05] text-[42px] md:text-[58px] lg:text-[68px]">
+              Seu WhatsApp vende.<br />
+              <span className="italic text-[#BE212A]">Só ninguém está cuidando dele.</span>
+            </h1>
+            <p className="mt-7 text-lg md:text-xl max-w-xl text-[#4A453F]">
+              OneHub transforma cada conversa em processo comercial — sem perder o tom humano.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
+                 className="px-7 py-3.5 rounded-full font-semibold text-white shadow-lg bg-[#BE212A]">
+                Testar o OneHub grátis
+              </a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
+                 className="px-7 py-3.5 rounded-full font-semibold border-2 border-[#211E1B]">
+                Solicitar diagnóstico gratuito
+              </a>
+            </div>
+          </div>
+
+          {/* Imagem protagonista — desktop: direita | mobile: abaixo */}
+          <div className="flex-1 mt-12 md:mt-0">
+            <img
+              src="/onehub-hero.webp"
+              alt="Interface do OneHub — CRM e automação de WhatsApp integrados"
+              className="hero-img w-full h-auto object-cover"
+              loading="eager"
+              decoding="async"
+              width="640"
+              height="480"
+            />
+          </div>
+
         </div>
       </section>
 
