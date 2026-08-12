@@ -38,6 +38,7 @@ import PillarSEOTrafego from './pages/PillarSEOTrafego';
 import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
 import AgenciasPage from './pages/AgenciasPage';
+import OneHub from './pages/OneHub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -335,6 +336,20 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <AgenciasPage />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  if (currentPath === '/onehub' || currentPath === '/onehub/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <OneHub />
         </Suspense>
         <WhatsAppButton />
       </div>
