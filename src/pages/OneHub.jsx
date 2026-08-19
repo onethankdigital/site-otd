@@ -1001,18 +1001,16 @@ export default function OneHub() {
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Coluna Esquerda: Apenas as Frases Essenciais */}
-            <div className="lg:col-span-5 text-left">
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
-                Não é CRM que ganhou WhatsApp.<br />
-                <span className="text-[#BE212A]">
+            {/* Coluna Esquerda: Frase de Alto Impacto com Espaçamento Generoso */}
+            <div className="lg:col-span-5 text-left flex flex-col justify-center">
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-white leading-tight space-y-6 sm:space-y-8">
+                <span className="block text-white">
+                  Não é CRM que ganhou WhatsApp.
+                </span>
+                <span className="block text-[#BE212A]">
                   É WhatsApp que ganhou cérebro.
                 </span>
               </h2>
-
-              <p className="mt-6 text-base sm:text-lg text-[#DED8CC] leading-relaxed">
-                O agente de IA não é um chatbot colado depois. É inteligência nativa em cada conversa — configurado sob medida para o escopo do seu negócio, do primeiro contato ao fechamento.
-              </p>
             </div>
 
             {/* Coluna Direita: Imagem Ampliada com Motion e Auras Neon */}
