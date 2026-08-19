@@ -988,20 +988,18 @@ export default function OneHub() {
         </section>
 
         {/* 7. DIFERENCIAL */}
-        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-28 md:py-44 text-center text-white overflow-hidden flex items-center justify-center min-h-[500px]">
-          {/* Background Full da Imagem com Fusão Superior/Inferior */}
+        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-24 md:py-36 text-center bg-[#211E1B] text-white overflow-hidden flex items-center justify-center min-h-[480px]">
+          {/* Background Full com Opacidade Sutil 0.12 (Marca d'água elegante) */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <img
               src="/onehub-whatsapp-brain.webp"
               alt="OneHub WhatsApp IA"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center opacity-[0.12]"
             />
-            {/* Camada de Contraste para Leitura Limpa */}
-            <div className="absolute inset-0 bg-[#1A1714]/65" />
             <div className="absolute inset-0 bg-gradient-to-b from-[#211E1B] via-transparent to-[#211E1B]" />
           </div>
 
-          {/* Somente as frases limpas, sem card */}
+          {/* Tipografia Limpa com Leitura Perfeita */}
           <div className="scene-diferencial-text relative z-10 max-w-3xl mx-auto">
             <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight">
               Não é CRM que ganhou WhatsApp.<br />
