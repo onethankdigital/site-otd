@@ -873,7 +873,7 @@ export default function OneHub() {
                   tag: "AUTOMAÇÃO & IA",
                   title: "Flow Essencial",
                   metric: "IA + Automação",
-                  color: "#10B981",
+                  color: "#F59E0B",
                   tagline: "Sua primeira camada de inteligência operacional.",
                   desc: "O agente de IA responde, qualifica e direciona leads automaticamente. Sua equipe foca no fechamento enquanto a máquina cuida da entrada.",
                   items: ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
@@ -884,7 +884,7 @@ export default function OneHub() {
                   tag: "ESCALA",
                   title: "Flow Pro",
                   metric: "Equipes + Ramificação",
-                  color: "#F59E0B",
+                  color: "#10B981",
                   tagline: "Automação de alto nível pra crescimento acelerado.",
                   desc: "Automações complexas com ramificações por segmento, roteamento inteligente e estrutura para equipes em crescimento sem perder controle.",
                   items: ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
@@ -907,13 +907,13 @@ export default function OneHub() {
                   key={i}
                   className={`relative flex flex-col justify-between rounded-3xl p-5 sm:p-6 transition-all duration-300 ${
                     plan.highlight
-                      ? "bg-[#1A1714]/95 backdrop-blur-xl border-2 border-[#10B981] shadow-[0_0_60px_rgba(16,185,129,0.15)]"
+                      ? "bg-[#1A1714]/95 backdrop-blur-xl border-2 border-[#F59E0B] shadow-[0_0_60px_rgba(245,158,11,0.15)]"
                       : "bg-[#1A1714] border border-[#3A352F] hover:border-[#5C554E]"
                   }`}
                 >
                   {/* Badge Recomendado */}
                   {plan.highlight && (
-                    <div className="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-[#10B981] text-white text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                    <div className="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-[#F59E0B] text-white text-[10px] font-bold uppercase tracking-wider shadow-lg">
                       Recomendado
                     </div>
                   )}
