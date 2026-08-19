@@ -988,8 +988,21 @@ export default function OneHub() {
         </section>
 
         {/* 7. DIFERENCIAL */}
-        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#211E1B] text-white overflow-hidden">
-          <div className="scene-diferencial-text max-w-3xl mx-auto">
+        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-28 md:py-44 text-center text-white overflow-hidden flex items-center justify-center min-h-[500px]">
+          {/* Background Full da Imagem com Fusão Superior/Inferior */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <img
+              src="/onehub-whatsapp-brain.webp"
+              alt="OneHub WhatsApp IA"
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Camada de Contraste para Leitura Limpa */}
+            <div className="absolute inset-0 bg-[#1A1714]/65" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#211E1B] via-transparent to-[#211E1B]" />
+          </div>
+
+          {/* Somente as frases limpas, sem card */}
+          <div className="scene-diferencial-text relative z-10 max-w-3xl mx-auto">
             <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight">
               Não é CRM que ganhou WhatsApp.<br />
               <span className="text-[#BE212A]">É WhatsApp que ganhou cérebro.</span>
