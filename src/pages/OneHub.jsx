@@ -755,28 +755,93 @@ export default function OneHub() {
         {/* DEMONSTRAÇÃO INTERATIVA DO FLUXO */}
         <OneHubMotionSection />
 
-        {/* 5. PRA QUEM É */}
-        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 border-b border-[#E4DDD0]/60">
+        {/* 5. QUALIFICAÇÃO & SEGMENTOS (PRA QUEM É) */}
+        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#FAF7F2] border-b border-[#E4DDD0]/60">
           <div className="max-w-7xl mx-auto">
-            <div className="max-w-2xl mb-10">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">Segmentos</span>
-              <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#211E1B]">
-                Para quem o OneHub foi desenhado
+            
+            {/* Cabeçalho Editorial & Diagnóstico */}
+            <div className="max-w-3xl mb-12">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">
+                QUALIFICAÇÃO & SEGMENTOS
+              </span>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
+                Desenhado para operações onde cada lead perdido <span className="text-[#BE212A]">custa caro.</span>
               </h2>
+              <p className="mt-4 text-base sm:text-lg text-[#5C554E] leading-relaxed">
+                Se a sua equipe atende clientes no WhatsApp todos os dias, mas você não tem previsibilidade do valor exato em aberto nas propostas... essa estrutura foi feita para o seu negócio.
+              </p>
             </div>
 
+            {/* Grid dos 3 Segmentos de Alto Impacto com Badges de Resultado */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                ["Operações B2B", "Negociam com outras empresas, ciclo de venda consultivo e múltiplos pontos de contato."],
-                ["Prestadores de Serviço", "Dependem de follow-up rigoroso, agendamentos rápidos e relacionamento ativo."],
-                ["Vendas High-Ticket", "Cada lead perdido representa um alto custo de oportunidade e receita que não volta."],
-              ].map(([title, desc], i) => (
-                <div key={i} className="p-7 rounded-2xl bg-[#211E1B] text-[#FAF7F2]">
-                  <h3 className="font-display font-medium text-lg mb-2 text-[#D97757]">{title}</h3>
-                  <p className="text-sm text-[#C9C3B8] leading-relaxed">{desc}</p>
+                {
+                  title: "Operações B2B & Consultivas",
+                  scenario: "Empresas que vendem para outras empresas, com ciclo consultivo, múltiplos decisores e necessidade de histórico impecável.",
+                  solution: "Atribuição direta ao Closer responsável (ex: Juliana Prado), protegendo a carteira comercial e eliminando conversas perdidas.",
+                  badges: ["✓ Roteamento por Carteira", "✓ Funil P&L Visível"],
+                },
+                {
+                  title: "Prestadores de Serviço & Soluções",
+                  scenario: "Empresas com alto volume de contatos diários que dependem de agendamento ágil e resposta imediata.",
+                  solution: "A IA atende o cliente pelo nome (ex: Marcos), faz a qualificação preliminar em < 3s e transfere o lead quente ao vendedor sem fila de espera.",
+                  badges: ["✓ Triagem IA < 3s", "✓ Agendamento Automático"],
+                },
+                {
+                  title: "Vendas High-Ticket & Ticket Médio/Alto",
+                  scenario: "Negócios onde cada cliente vale R$ 10k+ e um único atendimento esquecido representa prejuízo direto no fim do mês.",
+                  solution: "Notificações de follow-up que não escapam, histórico unificado e mensuração de receita real por campanha via Meta API.",
+                  badges: ["✓ Follow-up Blindado", "✓ ROAS Rastreado"],
+                },
+              ].map((s, i) => (
+                <div key={i} className="p-7 rounded-2xl bg-[#211E1B] text-[#FAF7F2] border border-[#3A352F] shadow-md flex flex-col justify-between">
+                  <div>
+                    {/* Badges de Resultado no Topo */}
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {s.badges.map((b, j) => (
+                        <span key={j} className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#10B981]/20 text-[#10B981] border border-[#10B981]/30">
+                          {b}
+                        </span>
+                      ))}
+                    </div>
+
+                    <h3 className="font-display font-medium text-xl mb-3 text-white">
+                      {s.title}
+                    </h3>
+                    <p className="text-xs text-[#94A3B8] mb-3 leading-relaxed italic border-b border-[#3A352F] pb-3">
+                      &ldquo;{s.scenario}&rdquo;
+                    </p>
+                    <p className="text-xs sm:text-sm text-[#C9C3B8] leading-relaxed">
+                      <strong className="text-[#FF334B] font-semibold">Como o OneHub atua:</strong> {s.solution}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* Banner de Inversão de Autoridade — Para quem o OneHub NÃO é */}
+            <div className="mt-12 p-6 sm:p-7 rounded-2xl bg-[#211E1B] border border-[#3A352F] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#BE212A]/20 border border-[#BE212A]/40 text-[#FF334B] flex items-center justify-center font-bold text-lg shrink-0">
+                  🚫
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white mb-1">Para quem o OneHub NÃO foi feito:</h4>
+                  <p className="text-xs sm:text-sm text-[#C9C3B8] leading-relaxed max-w-3xl">
+                    Não trabalhamos com disparadores de spam em massa, números não oficiais ou robôs de bloqueio sem conformidade. O OneHub é construído com engenharia séria sobre a Meta Cloud API Oficial para empresas que prezam por governança comercial e segurança.
+                  </p>
+                </div>
+              </div>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="px-6 py-3.5 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-xs sm:text-sm transition-all shrink-0 whitespace-nowrap shadow-md active:scale-[0.99]"
+              >
+                Validar meu perfil comercial →
+              </a>
+            </div>
+
           </div>
         </section>
 
