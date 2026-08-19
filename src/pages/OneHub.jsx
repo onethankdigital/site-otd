@@ -26,7 +26,7 @@ export default function OneHub() {
       const tlHero = gsap.timeline({ defaults: { ease: "power2.out" } });
       tlHero.from(".nav-anim", { y: -15, autoAlpha: 0, duration: 0.6 })
             .from(".hero-anim", { y: 25, autoAlpha: 0, duration: 0.8, stagger: 0.12 }, "-=0.3")
-            .from(".hero-bg-anim", { autoAlpha: 0, scale: 1.03, duration: 1.2 }, "-=0.6");
+            .from(".hero-bg-anim", { autoAlpha: 0, scale: 1.02, duration: 1.2 }, "-=0.6");
 
       // CENA 2: Situação & Problema (Sóbrio)
       gsap.fromTo(".scene-problema-title", 
@@ -147,10 +147,10 @@ export default function OneHub() {
           .gsap-reveal, .nav-anim, .hero-anim, .hero-bg-anim { will-change: transform, opacity; }
         `}</style>
 
-        {/* 1. HERO SECTION COM BACKGROUND FULL E OPACIDADE CLARA */}
-        <section className="hero-section relative z-10 overflow-hidden min-h-[620px] sm:min-h-[680px] md:min-h-[760px] flex flex-col justify-between border-b border-[#E4DDD0]/60 bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-28">
+        {/* 1. HERO SECTION COM BACKGROUND FULL NÍTIDO E CONTEÚDO */}
+        <section className="hero-section relative z-10 overflow-hidden min-h-[640px] sm:min-h-[720px] md:min-h-[820px] flex flex-col justify-between border-b border-[#E4DDD0]/60 bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24">
           
-          {/* Imagem de Fundo Full-Bleed com Opacidade Clara */}
+          {/* Imagem de Fundo Full-Bleed em Alta Visibilidade (Caos à esquerda + CRM à direita) */}
           <div className="hero-bg-anim absolute inset-0 w-full h-full z-0 pointer-events-none">
             <img
               src="/onehub-transformacao-caos-ao-crm.webp"
@@ -160,38 +160,38 @@ export default function OneHub() {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover object-center md:object-right opacity-30 md:opacity-40"
+              className="w-full h-full object-cover object-center opacity-70 md:opacity-80"
             />
-            {/* Gradientes claros garantindo 100% de contraste e legibilidade do texto */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 to-[#FAF7F2]/50 md:to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-[#FAF7F2]/70" />
+            {/* Máscara suave apenas na área do texto da esquerda para garantir 100% de legibilidade */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/95 via-[#FAF7F2]/65 to-transparent max-w-4xl" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2]/70 via-transparent to-[#FAF7F2]/40" />
           </div>
 
-          {/* Header Integrado sem Faixa Branca e sem Botão */}
-          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full mb-8 sm:mb-12">
-            <a href="/onehub" className="nav-anim inline-block">
+          {/* Header Alinhado: Logo 48px na Esquerda + TAG no Lado Direito */}
+          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full flex items-center justify-between gap-4 mb-8 sm:mb-12">
+            <a href="/onehub" className="nav-anim inline-block flex-shrink-0">
               <img
                 src="/logo-onehub-black.svg"
                 alt="OneHub Logo"
                 width={180}
-                height={60}
+                height={48}
                 loading="eager"
                 decoding="async"
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </a>
+
+            {/* TAG alinhada no lado direito do Header */}
+            <div className="nav-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF]/90 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
+              <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
+            </div>
           </div>
 
           {/* Conteúdo de Texto por Cima */}
-          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full">
-            <div className="max-w-3xl">
+          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full my-auto">
+            <div className="max-w-2xl">
               
-              {/* Eyebrow */}
-              <div className="hero-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF]/90 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide mb-5 sm:mb-6 backdrop-blur-sm shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
-                <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
-              </div>
-
               {/* H1 em 2 linhas (2ª em vermelho #BE212A) */}
               <h1 className="hero-anim font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[62px] leading-[1.12] text-[#211E1B] tracking-tight drop-shadow-sm">
                 Seu WhatsApp recebe cliente o dia todo.<br />
@@ -199,7 +199,7 @@ export default function OneHub() {
               </h1>
 
               {/* Subtítulo */}
-              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#3A352F] leading-relaxed max-w-2xl font-normal">
+              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#2D2A26] leading-relaxed max-w-2xl font-normal">
                 O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
               </p>
 
@@ -213,7 +213,7 @@ export default function OneHub() {
                 >
                   Quero meus 14 dias assistidos — grátis
                 </a>
-                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#5C554E] font-medium">
+                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#4A453F] font-medium">
                   Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
                 </p>
               </div>
