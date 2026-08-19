@@ -349,8 +349,8 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 2. O PREÇO DO QUE VOCÊ NÃO VÊ (DARK EDITORIAL — PAS COPY) */}
-        <section className="scene-problema relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#211E1B] text-[#FAF7F2] overflow-hidden">
+        {/* 2. O PREÇO DO QUE VOCÊ NÃO VÊ (DARK EDITORIAL — PAS COPY COM RESPIRO SUPERIOR) */}
+        <section className="scene-problema relative z-10 px-5 sm:px-8 md:px-12 pt-28 pb-20 md:pt-40 md:pb-28 bg-[#211E1B] text-[#FAF7F2] overflow-hidden">
 
           {/* Background Full-Bleed: Silhueta do Caos no WhatsApp */}
           <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
@@ -654,10 +654,10 @@ export default function OneHub() {
 
               </div>
 
-              {/* Bloco de CTA — 14 Dias Assistidos Grátis */}
-              <div className="relative z-20 mt-8 sm:mt-10 p-6 sm:p-7 rounded-2xl bg-[#2C2822] border border-[#3A352F] flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
+              {/* Bloco de CTA — 14 Dias Assistidos Grátis (Banner Padronizado) */}
+              <div className="relative z-20 mt-8 sm:mt-10 p-6 sm:p-7 rounded-2xl bg-[#1A1714] border border-[#3A352F] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                 <div>
-                  <h4 className="text-lg sm:text-xl font-bold text-white mb-1">
+                  <h4 className="text-base sm:text-lg font-bold text-white mb-1">
                     Pronto para estruturar esse ecossistema na sua empresa?
                   </h4>
                   <p className="text-xs sm:text-sm text-[#C9C3B8]">
@@ -669,9 +669,9 @@ export default function OneHub() {
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-7 py-3.5 rounded-xl font-bold text-white text-sm sm:text-base bg-[#BE212A] hover:bg-[#A61B23] transition-all shadow-md active:scale-[0.99] flex-shrink-0 whitespace-nowrap"
+                  className="px-6 py-3.5 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-xs sm:text-sm transition-all shrink-0 whitespace-nowrap shadow-md active:scale-[0.99]"
                 >
-                  Quero meus 14 dias assistidos — grátis
+                  Quero meus 14 dias assistidos — grátis →
                 </a>
               </div>
 
@@ -915,11 +915,13 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 6. JORNADA DE EVOLUÇÃO — PREMIUM CARDS */}
-        <section className="scene-jornada relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
+        {/* 6. JORNADA DE EVOLUÇÃO — PREMIUM CARDS (TRANSIÇÃO VISUAL MARCADA) */}
+        <section className="scene-jornada relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F0EAE1] border-b border-[#E4DDD0]">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl mb-12">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">Maturação</span>
+              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">
+                ESTEIRA DE EVOLUÇÃO · MATURAÇÃO
+              </span>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
                 Comece onde você está.
               </h2>
@@ -1036,13 +1038,13 @@ export default function OneHub() {
               ))}
             </div>
 
-            {/* CTA — 14 Dias Assistidos */}
-            <div className="mt-12 p-7 sm:p-8 rounded-2xl bg-[#211E1B] border border-[#3A352F] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* CTA — 14 Dias Assistidos (Banner Padronizado) */}
+            <div className="mt-12 p-6 sm:p-7 rounded-2xl bg-[#1A1714] border border-[#3A352F] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h4 className="font-display font-medium text-xl sm:text-2xl text-white leading-snug">
+                <h4 className="font-display font-medium text-base sm:text-lg text-white leading-snug">
                   Não sabe qual nível é o seu? <span className="text-[#D97757]">A gente monta com você.</span>
                 </h4>
-                <p className="mt-2 text-xs sm:text-sm text-[#C9C3B8] max-w-2xl leading-relaxed">
+                <p className="mt-1.5 text-xs sm:text-sm text-[#C9C3B8] max-w-2xl leading-relaxed">
                   14 dias de acompanhamento assistido, sem custo, sem cartão, sem fidelidade. Montamos a operação juntos e você decide se faz sentido.
                 </p>
               </div>
@@ -1050,7 +1052,7 @@ export default function OneHub() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noreferrer"
-                className="px-7 py-4 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-sm sm:text-base transition-all shrink-0 whitespace-nowrap shadow-lg active:scale-[0.98]"
+                className="px-6 py-3.5 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-xs sm:text-sm transition-all shrink-0 whitespace-nowrap shadow-md active:scale-[0.99]"
               >
                 Quero meus 14 dias — grátis →
               </a>
