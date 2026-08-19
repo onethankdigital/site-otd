@@ -347,7 +347,7 @@ export default function OneHub() {
             <div className="scene-teto-text max-w-4xl mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#BE212A]/10 border border-[#BE212A]/20 text-[#BE212A] text-xs font-bold uppercase tracking-widest mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#BE212A] animate-ping" />
-                O ECOSSISTEMA DO ONEHUB
+                OPERAÇÃO NA PRÁTICA
               </div>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[48px] leading-[1.15] text-[#211E1B] tracking-tight">
                 Do caos no WhatsApp à{" "}
