@@ -903,24 +903,21 @@ export default function OneHub() {
                   key={i}
                   className={`relative flex flex-col justify-between rounded-3xl p-5 sm:p-6 transition-all duration-300 ${
                     plan.highlight
-                      ? "bg-[#1A1714]/95 backdrop-blur-xl border-2 border-[#BE212A] shadow-[0_0_60px_rgba(190,33,42,0.2)]"
+                      ? "bg-[#1A1714]/95 backdrop-blur-xl border-2 border-[#10B981] shadow-[0_0_60px_rgba(16,185,129,0.15)]"
                       : "bg-[#1A1714] border border-[#3A352F] hover:border-[#5C554E]"
                   }`}
                 >
                   {/* Badge Recomendado */}
                   {plan.highlight && (
-                    <div className="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-[#BE212A] text-white text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                    <div className="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-[#10B981] text-white text-[10px] font-bold uppercase tracking-wider shadow-lg">
                       Recomendado
                     </div>
                   )}
 
                   <div>
-                    {/* Header — Tag + Título + Badge (Estilo Pop-up) */}
+                    {/* Header — Título + Badge (Estilo Pop-up) */}
                     <div className="flex items-center justify-between gap-2 pb-3 border-b border-[#3A352F] mb-4">
                       <div>
-                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block mb-0.5">
-                          {plan.tag}
-                        </span>
                         <h3 className="font-display font-bold text-lg sm:text-xl text-white">
                           {plan.title}
                         </h3>
