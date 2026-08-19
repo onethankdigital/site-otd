@@ -22,11 +22,11 @@ export default function OneHub() {
 
     // 1. DESKTOP & REDUCED MOTION (Sóbrio, editorial e fluido)
     mm.add("(min-width: 769px) and (prefers-reduced-motion: no-preference)", () => {
-      // Entrada sutil do Hero Text & Cockpit
+      // Entrada sutil do Hero Text & Background
       const tlHero = gsap.timeline({ defaults: { ease: "power2.out" } });
       tlHero.from(".nav-anim", { y: -15, autoAlpha: 0, duration: 0.6 })
             .from(".hero-anim", { y: 25, autoAlpha: 0, duration: 0.8, stagger: 0.12 }, "-=0.3")
-            .from(".hero-cockpit-anim", { y: 35, autoAlpha: 0, duration: 0.9 }, "-=0.4");
+            .from(".hero-bg-anim", { autoAlpha: 0, scale: 1.03, duration: 1.2 }, "-=0.6");
 
       // CENA 2: Situação & Problema (Sóbrio)
       gsap.fromTo(".scene-problema-title", 
@@ -103,7 +103,6 @@ export default function OneHub() {
     mm.add("(max-width: 768px), (prefers-reduced-motion: reduce)", () => {
       gsap.from(".nav-anim", { autoAlpha: 0, duration: 0.4 });
       gsap.from(".hero-anim", { autoAlpha: 0, y: 15, duration: 0.5, stagger: 0.08 });
-      gsap.from(".hero-cockpit-anim", { autoAlpha: 0, y: 20, duration: 0.6, delay: 0.2 });
 
       gsap.utils.toArray(".gsap-reveal, .card-problema, .camada-card, .journey-card").forEach(el => {
         gsap.fromTo(el, 
@@ -133,67 +132,74 @@ export default function OneHub() {
         <meta property="og:url" content="https://onethank.com.br/onehub" />
         <meta property="og:title" content="OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA" />
         <meta property="og:description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
-        <meta property="og:image" content="https://onethank.com.br/onehub-hero.webp" />
+        <meta property="og:image" content="https://onethank.com.br/onehub-transformacao-caos-ao-crm.webp" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://onethank.com.br/onehub" />
         <meta property="twitter:title" content="OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA" />
         <meta property="twitter:description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
-        <meta property="twitter:image" content="https://onethank.com.br/onehub-hero.webp" />
+        <meta property="twitter:image" content="https://onethank.com.br/onehub-transformacao-caos-ao-crm.webp" />
       </Helmet>
 
       <div ref={container} className="bg-[#FAF7F2] text-[#211E1B] font-sans overflow-x-hidden selection:bg-[#BE212A] selection:text-white">
         <style>{`
           .font-display { font-family: 'Fraunces', 'DM Serif Display', Georgia, serif; letter-spacing: -0.015em; }
           .journey-line { position:absolute; top:32px; left:0; right:0; height:2px; background:repeating-linear-gradient(90deg, #D97757 0 8px, transparent 8px 16px); z-index:0; }
-          .gsap-reveal, .nav-anim, .hero-anim, .hero-cockpit-anim { will-change: transform, opacity; }
+          .gsap-reveal, .nav-anim, .hero-anim, .hero-bg-anim { will-change: transform, opacity; }
         `}</style>
 
-        {/* 0. NAVEGAÇÃO EDITORIAL */}
-        <header className="w-full border-b border-[#E4DDD0]/80 bg-[#FAF7F2]/90 backdrop-blur-md sticky top-0 z-30">
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <a href="/onehub" className="nav-anim flex items-center gap-2">
-                <span className="font-display font-semibold text-2xl tracking-tight text-[#211E1B]">
-                  One<span className="text-[#BE212A]">Hub</span>
-                </span>
-              </a>
-            </div>
-            <span className="nav-anim hidden md:inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#736B63]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#D97757]"></span>
-              WhatsApp Oficial · CRM · Inteligência Artificial
-            </span>
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="nav-anim inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs md:text-sm font-semibold text-white bg-[#211E1B] hover:bg-[#BE212A] transition-colors"
-            >
-              Falar com Consultor
+        {/* 1. HERO SECTION COM BACKGROUND FULL E OPACIDADE CLARA */}
+        <section className="hero-section relative z-10 overflow-hidden min-h-[620px] sm:min-h-[680px] md:min-h-[760px] flex flex-col justify-between border-b border-[#E4DDD0]/60 bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-28">
+          
+          {/* Imagem de Fundo Full-Bleed com Opacidade Clara */}
+          <div className="hero-bg-anim absolute inset-0 w-full h-full z-0 pointer-events-none">
+            <img
+              src="/onehub-transformacao-caos-ao-crm.webp"
+              alt="Transformação OneHub: Do caos no WhatsApp à governança comercial no CRM"
+              width={2400}
+              height={1350}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-full object-cover object-center md:object-right opacity-30 md:opacity-40"
+            />
+            {/* Gradientes claros garantindo 100% de contraste e legibilidade do texto */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 to-[#FAF7F2]/50 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-[#FAF7F2]/70" />
+          </div>
+
+          {/* Header Integrado sem Faixa Branca e sem Botão */}
+          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full mb-8 sm:mb-12">
+            <a href="/onehub" className="nav-anim inline-block">
+              <img
+                src="/logo-onehub-black.svg"
+                alt="OneHub Logo"
+                width={180}
+                height={60}
+                loading="eager"
+                decoding="async"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </a>
           </div>
-        </header>
 
-        {/* 1. HERO SECTION (CRAFT EDITORIAL PREMIUM) */}
-        <section className="relative z-10 pt-8 pb-14 sm:pt-12 sm:pb-20 md:pt-16 md:pb-24 border-b border-[#E4DDD0]/60">
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
-            
-            {/* Bloco de Conteúdo */}
-            <div className="max-w-4xl">
+          {/* Conteúdo de Texto por Cima */}
+          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full">
+            <div className="max-w-3xl">
               
               {/* Eyebrow */}
-              <div className="hero-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF] border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide mb-5 sm:mb-6">
+              <div className="hero-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF]/90 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide mb-5 sm:mb-6 backdrop-blur-sm shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
                 <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
               </div>
 
               {/* H1 em 2 linhas (2ª em vermelho #BE212A) */}
-              <h1 className="hero-anim font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[62px] leading-[1.12] text-[#211E1B] tracking-tight">
+              <h1 className="hero-anim font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[62px] leading-[1.12] text-[#211E1B] tracking-tight drop-shadow-sm">
                 Seu WhatsApp recebe cliente o dia todo.<br />
                 <span className="text-[#BE212A]">E perde venda na bagunça.</span>
               </h1>
 
               {/* Subtítulo */}
-              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#4A453F] leading-relaxed max-w-3xl">
+              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#3A352F] leading-relaxed max-w-2xl font-normal">
                 O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
               </p>
 
@@ -203,45 +209,20 @@ export default function OneHub() {
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-bold text-white text-base sm:text-lg bg-[#BE212A] hover:bg-[#A61B23] transition-all shadow-sm active:scale-[0.99]"
+                  className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-bold text-white text-base sm:text-lg bg-[#BE212A] hover:bg-[#A61B23] transition-all shadow-md active:scale-[0.99]"
                 >
                   Quero meus 14 dias assistidos — grátis
                 </a>
-                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#736B63] font-normal">
+                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#5C554E] font-medium">
                   Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
                 </p>
               </div>
 
             </div>
-
-            {/* Visual: Cockpit Claro do Produto (Pipeline + Valores + Conversão) */}
-            <div className="hero-cockpit-anim mt-10 sm:mt-14 md:mt-16 relative rounded-2xl overflow-hidden border border-[#E4DDD0] bg-white shadow-[0_10px_35px_rgba(0,0,0,0.06)]">
-              <div className="bg-[#FAF7F2] border-b border-[#E4DDD0] px-4 py-2.5 flex items-center justify-between text-xs text-[#736B63]">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#E4DDD0]"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#E4DDD0]"></span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#E4DDD0]"></span>
-                </div>
-                <span className="font-medium">OneHub Cockpit Comercial · Painel em Tempo Real</span>
-                <span className="text-[#25D366] font-semibold flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] inline-block"></span>
-                  Meta Cloud Conectada
-                </span>
-              </div>
-
-              <img
-                src="/onehub-hero.webp"
-                alt="Cockpit OneHub: Pipeline comercial, gestão de atendentes e automação no WhatsApp Oficial"
-                width={2730}
-                height={1536}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="w-full h-auto object-cover object-top"
-              />
-            </div>
-
           </div>
+
+          {/* Espaçador inferior */}
+          <div className="relative z-10"></div>
         </section>
 
         {/* 2. SITUAÇÃO + PROBLEMA (DARK HÍBRIDO SÓBRIO) */}
