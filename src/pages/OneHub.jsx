@@ -147,10 +147,10 @@ export default function OneHub() {
           .gsap-reveal, .nav-anim, .hero-anim, .hero-bg-anim { will-change: transform, opacity; }
         `}</style>
 
-        {/* 1. HERO SECTION COM BACKGROUND FULL NÍTIDO E CONTEÚDO */}
+        {/* 1. HERO SECTION COM BACKGROUND FULL E OPACIDADE CLARA */}
         <section className="hero-section relative z-10 overflow-hidden min-h-[640px] sm:min-h-[720px] md:min-h-[820px] flex flex-col justify-between border-b border-[#E4DDD0]/60 bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24">
           
-          {/* Imagem de Fundo Full-Bleed em Alta Visibilidade (Caos à esquerda + CRM à direita) */}
+          {/* Imagem de Fundo Full-Bleed em Alta Visibilidade com Máscara Clara Equilibrada */}
           <div className="hero-bg-anim absolute inset-0 w-full h-full z-0 pointer-events-none">
             <img
               src="/onehub-transformacao-caos-ao-crm.webp"
@@ -160,35 +160,35 @@ export default function OneHub() {
               loading="eager"
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover object-center opacity-70 md:opacity-80"
+              className="w-full h-full object-cover object-center md:object-right opacity-50 md:opacity-60"
             />
-            {/* Máscara suave apenas na área do texto da esquerda para garantir 100% de legibilidade */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2]/95 via-[#FAF7F2]/65 to-transparent max-w-4xl" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2]/70 via-transparent to-[#FAF7F2]/40" />
+            {/* Máscara clara com transição suave que clareia o lado esquerdo sem escurecer o texto */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 to-[#FAF7F2]/30 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-transparent to-[#FAF7F2]/75" />
           </div>
 
-          {/* Header Alinhado: Logo 48px na Esquerda + TAG no Lado Direito */}
+          {/* Header Alinhado: Logo OneHub Ampliada + TAG no Lado Direito */}
           <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full flex items-center justify-between gap-4 mb-8 sm:mb-12">
             <a href="/onehub" className="nav-anim inline-block flex-shrink-0">
               <img
                 src="/logo-onehub-black.svg"
                 alt="OneHub Logo"
-                width={180}
-                height={48}
+                width={220}
+                height={58}
                 loading="eager"
                 decoding="async"
-                className="h-12 w-auto object-contain"
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </a>
 
             {/* TAG alinhada no lado direito do Header */}
-            <div className="nav-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF]/90 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm shadow-sm">
+            <div className="nav-anim inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EFE9DF]/95 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
               <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
             </div>
           </div>
 
-          {/* Conteúdo de Texto por Cima */}
+          {/* Conteúdo de Texto por Cima com Fundo Claro e Alto Contraste */}
           <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full my-auto">
             <div className="max-w-2xl">
               
@@ -199,7 +199,7 @@ export default function OneHub() {
               </h1>
 
               {/* Subtítulo */}
-              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#2D2A26] leading-relaxed max-w-2xl font-normal">
+              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#332F2A] leading-relaxed max-w-2xl font-normal">
                 O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
               </p>
 
@@ -213,7 +213,7 @@ export default function OneHub() {
                 >
                   Quero meus 14 dias assistidos — grátis
                 </a>
-                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#4A453F] font-medium">
+                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#5C554E] font-medium">
                   Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
                 </p>
               </div>
