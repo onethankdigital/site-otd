@@ -444,83 +444,81 @@ export default function OneHub() {
                   </div>
                 </div>
 
-                {/* Conector Central Glowing com Detalhe do Roteamento */}
-                <div className="hidden lg:flex lg:col-span-2 flex-col items-center justify-center gap-3 text-center">
-                  <div className="w-14 h-14 rounded-full bg-[#BE212A]/20 border border-[#BE212A] flex items-center justify-center text-[#FF334B] animate-pulse shadow-[0_0_20px_rgba(190,33,42,0.4)]">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {/* Conector Central Glowing (Apenas a Seta) */}
+                <div className="hidden lg:flex lg:col-span-1 flex-col items-center justify-center text-center">
+                  <div className="w-12 h-12 rounded-full bg-[#BE212A]/20 border border-[#BE212A] flex items-center justify-center text-[#FF334B] animate-pulse shadow-[0_0_20px_rgba(190,33,42,0.4)]">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>
-                  <div>
-                    <span className="text-[11px] font-mono font-bold text-[#10B981] block uppercase tracking-wider">
-                      ROTEAMENTO DIRETO
-                    </span>
-                    <span className="text-[10px] text-[#C9C3B8] block mt-0.5">
-                      Marcos (Lead) → Juliana Prado (Vendedor)
-                    </span>
-                  </div>
                 </div>
 
-                {/* Lado Direito (Camada 2): Dashboard do CRM OneHub Smart */}
-                <div className="lg:col-span-5">
+                {/* Lado Direito (Camada 2): Dashboard do CRM OneHub Smart (col-span-6 para máximo espaço) */}
+                <div className="lg:col-span-6">
                   <div className={`rounded-3xl p-5 sm:p-6 bg-[#211E1B] border transition-all duration-500 shadow-xl ${activePin === 3 ? "border-[#BE212A] shadow-[0_0_30px_rgba(190,33,42,0.3)]" : "border-[#3A352F]"}`}>
                     
-                    {/* Header da Dashboard — Renomeado para ONEHUB SMART */}
-                    <div className="flex items-center justify-between pb-4 border-b border-[#3A352F] mb-4">
-                      <div>
-                        <p className="text-xs font-mono font-bold text-[#BE212A] tracking-wider">ONEHUB SMART</p>
-                        <p className="text-sm font-bold text-white">Funil de Vendas em Tempo Real</p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-                        <span className="text-[11px] font-mono text-[#10B981] font-bold">100% ONLINE</span>
-                      </div>
+                    {/* Header da Dashboard — ONEHUB SMART (Sem "100% ONLINE") */}
+                    <div className="pb-4 border-b border-[#3A352F] mb-4">
+                      <p className="text-xs font-mono font-bold text-[#BE212A] tracking-wider">ONEHUB SMART</p>
+                      <p className="text-sm font-bold text-white mt-0.5">Funil de Vendas em Tempo Real</p>
                     </div>
 
-                    {/* Colunas do Funil Kanban com Roteamento ao Vendedor */}
+                    {/* Colunas do Funil Kanban */}
                     <div className="grid grid-cols-3 gap-2 sm:gap-3 text-xs">
                       
-                      {/* Coluna 1: Novos Leads (Mostra o Marcos roteado para a Juliana) */}
+                      {/* Coluna 1: Novos Leads (Sem Valores em R$, Apenas Triagem & Vendedor Alocado) */}
                       <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
-                        <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
+                        <div className="flex items-center justify-between mb-2.5 pb-1.5 border-b border-[#3A352F]">
                           <span className="font-bold text-slate-300 text-[11px]">Novos</span>
                           <span className="bg-[#BE212A] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">14</span>
                         </div>
                         
-                        {/* Lead Roteado em Destaque */}
+                        {/* Lead Roteado em Destaque (Sem R$) */}
                         <div className="bg-[#10B981]/15 p-2 rounded-lg border border-[#10B981]/40 mb-2">
                           <p className="font-bold text-white text-[11px]">Marcos • Construtora Alfa</p>
                           <p className="text-[10px] text-[#10B981] font-semibold mt-0.5">👤 Vendedor: Juliana Prado</p>
-                          <p className="text-[9px] text-slate-300 font-mono mt-0.5">R$ 45.000 • IA Triou</p>
+                          <span className="inline-block mt-1 px-1.5 py-0.5 rounded bg-[#10B981]/20 text-[#10B981] text-[9px] font-bold">
+                            IA Triou
+                          </span>
                         </div>
 
+                        {/* Segundo Lead Novo (Sem R$) */}
                         <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F]">
                           <p className="font-bold text-white text-[11px]">Grupo Beta</p>
-                          <p className="text-[10px] text-[#D97757]">R$ 28.000 • Fila #2</p>
+                          <p className="text-[10px] text-[#D97757] mt-0.5">Fila Comercial #2</p>
                         </div>
                       </div>
 
-                      {/* Coluna 2: Em Negociação */}
+                      {/* Coluna 2: Em Negociação (Propostas com Valores R$) */}
                       <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
-                        <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
+                        <div className="flex items-center justify-between mb-2.5 pb-1.5 border-b border-[#3A352F]">
                           <span className="font-bold text-slate-300 text-[11px]">Propostas</span>
                           <span className="bg-[#D97757] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">8</span>
                         </div>
+
                         <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F] mb-2">
                           <p className="font-bold text-white text-[11px]">Tech Solution</p>
-                          <p className="text-[10px] text-slate-300">R$ 42.000 • Aguarda</p>
+                          <p className="text-[11px] font-mono font-bold text-[#FF334B] mt-0.5">R$ 42.000</p>
+                          <p className="text-[9px] text-slate-400 mt-0.5">Em Negociação</p>
+                        </div>
+
+                        <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F]">
+                          <p className="font-bold text-white text-[11px]">Editora Soma</p>
+                          <p className="text-[11px] font-mono font-bold text-[#FF334B] mt-0.5">R$ 18.500</p>
+                          <p className="text-[9px] text-slate-400 mt-0.5">Proposta Enviada</p>
                         </div>
                       </div>
 
-                      {/* Coluna 3: Fechados */}
+                      {/* Coluna 3: Ganhos (Contratos Fechados com Valores R$) */}
                       <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
-                        <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
+                        <div className="flex items-center justify-between mb-2.5 pb-1.5 border-b border-[#3A352F]">
                           <span className="font-bold text-[#10B981] text-[11px]">Ganhos</span>
                           <span className="bg-[#10B981] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">22</span>
                         </div>
                         <div className="bg-[#10B981]/15 p-2 rounded-lg border border-[#10B981]/40">
                           <p className="font-bold text-[#10B981] text-[11px]">Contrato 089</p>
-                          <p className="text-[10px] text-white font-mono font-bold">R$ 65.000/mês</p>
+                          <p className="text-[11px] text-white font-mono font-bold mt-0.5">R$ 65.000/mês</p>
+                          <p className="text-[9px] text-[#10B981] font-semibold mt-0.5">✓ Fechado</p>
                         </div>
                       </div>
 
