@@ -676,7 +676,7 @@ export default function OneHub() {
                   className="w-full h-full object-contain rounded-2xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
                 />
 
-                {/* Hotspots Invisíveis & Anéis de Brilho Sutil sobre as Cúpulas (Sem Cobrir o Texto/Arte) */}
+                {/* Hotspots Invisíveis & Anéis de Brilho Sutil sobre as Cúpulas */}
                 {ecosystemMotors.map((m) => {
                   const isActive = activeMotor === m.id;
                   return (
@@ -698,33 +698,39 @@ export default function OneHub() {
                     </button>
                   );
                 })}
-              </div>
 
-              {/* Popover Card Flutuante (Pop-up Limpo com Informações do Motor) */}
-              {(() => {
-                const current = ecosystemMotors.find((m) => m.id === activeMotor) || ecosystemMotors[0];
-                return (
-                  <div className="mt-4 sm:mt-6 max-w-3xl mx-auto p-5 sm:p-7 rounded-2xl bg-[#2C2822]/95 backdrop-blur-md border border-[#BE212A] shadow-[0_0_40px_rgba(190,33,42,0.35)] transition-all duration-500">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#3A352F] mb-3">
-                      <div>
-                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block mb-0.5">
-                          {current.tag}
+                {/* Pop-up Flutuante Centralizado EXATAMENTE no Meio da Imagem */}
+                {activeMotor && (() => {
+                  const current = ecosystemMotors.find((m) => m.id === activeMotor) || ecosystemMotors[0];
+                  return (
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[80%] max-w-lg z-30 p-5 sm:p-7 rounded-3xl bg-[#1A1714]/95 backdrop-blur-xl border border-[#BE212A] shadow-[0_0_60px_rgba(190,33,42,0.6)] transition-all duration-300">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[#3A352F] mb-3">
+                        <div>
+                          <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-[#FF334B] font-bold block mb-0.5">
+                            {current.tag}
+                          </span>
+                          <h3 className="text-lg sm:text-2xl font-bold text-white">
+                            {current.name}
+                          </h3>
+                        </div>
+                        <span className="self-start sm:self-auto px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-[#BE212A] shadow-md shrink-0">
+                          {current.metric}
                         </span>
-                        <h3 className="text-lg sm:text-xl font-bold text-white">
-                          {current.name}
-                        </h3>
                       </div>
-                      <span className="self-start sm:self-auto px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-[#BE212A] shadow-sm">
-                        {current.metric}
-                      </span>
-                    </div>
 
-                    <p className="text-xs sm:text-sm text-[#C9C3B8] leading-relaxed">
-                      {current.desc}
-                    </p>
-                  </div>
-                );
-              })()}
+                      <p className="text-xs sm:text-sm text-[#C9C3B8] leading-relaxed mb-4">
+                        {current.desc}
+                      </p>
+
+                      <div className="pt-3 border-t border-[#3A352F] flex items-center justify-between text-[11px] font-mono text-slate-400">
+                        <span>⚡ Motor Operacional Ativo</span>
+                        <span className="text-[#10B981] font-bold">100% Integrado no OneHub</span>
+                      </div>
+                    </div>
+                  );
+                })()}
+
+              </div>
 
             </div>
 
