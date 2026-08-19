@@ -396,9 +396,13 @@ export default function OneHub() {
                     {/* Header do WhatsApp */}
                     <div className="flex items-center justify-between pb-4 border-b border-[#3A352F] mb-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-[#10B981]/20 border border-[#10B981]/40 flex items-center justify-center text-[#10B981] font-bold text-xs">
-                          Meta
-                        </div>
+                        <img
+                          src="/One Hub - Fundo Preto.svg"
+                          alt="OneHub Logo"
+                          width={40}
+                          height={40}
+                          className="w-10 h-10 rounded-full object-cover border border-[#3A352F] p-0.5 bg-black"
+                        />
                         <div>
                           <p className="text-sm font-bold text-white flex items-center gap-1.5">
                             OneHub Oficial
