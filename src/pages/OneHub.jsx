@@ -533,33 +533,24 @@ export default function OneHub() {
 
               </div>
 
-              {/* Explicação Dinâmica do Pin Ativo (Com Vocabulário Atualizado "Dados") */}
-              <div className="relative z-20 mt-8 p-5 sm:p-6 rounded-2xl bg-[#2C2822] border border-[#3A352F] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#BE212A] text-white flex items-center justify-center font-bold font-mono text-base flex-shrink-0">
-                    0{activePin}
-                  </div>
-                  <div>
-                    <h4 className="text-base font-bold text-white">
-                      {activePin === 1 && "Atendimento Imediato por IA com Coleta de Nome do Cliente"}
-                      {activePin === 2 && "Roteamento Direto para o Vendedor Responsável"}
-                      {activePin === 3 && "Dados de Vendas & Visão Financeira P&L"}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-[#C9C3B8]">
-                      {activePin === 1 && "A IA atende o cliente pelo nome (ex: Marcos), faz a triagem básica e descobre o tamanho da equipe antes de passar ao vendedor."}
-                      {activePin === 2 && "O lead qualificado entra direto no painel da vendedora alocada (ex: Juliana Prado), protegendo a carteira e eliminando a fila manual."}
-                      {activePin === 3 && "Acompanhe os Dados de conversão e saiba em tempo real quanto dinheiro está em aberto nas propostas."}
-                    </p>
-                  </div>
+              {/* Bloco de CTA — 14 Dias Assistidos Grátis */}
+              <div className="relative z-20 mt-8 sm:mt-10 p-6 sm:p-7 rounded-2xl bg-[#2C2822] border border-[#3A352F] flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-1">
+                    Pronto para estruturar essa engenharia na sua empresa?
+                  </h4>
+                  <p className="text-xs sm:text-sm text-[#C9C3B8]">
+                    Montamos toda a sua operação com você. Sem custo, sem cartão e sem fidelidade.
+                  </p>
                 </div>
 
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-2.5 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-xs sm:text-sm transition-all flex-shrink-0 whitespace-nowrap"
+                  className="px-7 py-3.5 rounded-xl font-bold text-white text-sm sm:text-base bg-[#BE212A] hover:bg-[#A61B23] transition-all shadow-md active:scale-[0.99] flex-shrink-0 whitespace-nowrap"
                 >
-                  Testar no meu negócio →
+                  Quero meus 14 dias assistidos — grátis
                 </a>
               </div>
 
