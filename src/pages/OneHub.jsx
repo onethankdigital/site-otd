@@ -859,44 +859,52 @@ export default function OneHub() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
                 {
-                  level: "01",
+                  tag: "ORGANIZAÇÃO",
                   title: "Smart",
+                  metric: "CRM + Funil",
                   tagline: "Fim do caos. Controle visual absoluto.",
+                  desc: "Sua empresa para de perder leads no WhatsApp. Todos os contatos centralizados, funil visível e follow-up que não escapa — mesmo sem automação.",
                   items: ["Centraliza contatos e tarefas", "Funil de vendas visível", "Follow-up estruturado"],
-                  ideal: "Ideal para primeiros passos na organização comercial.",
+                  connection: "Conecta: WhatsApp Business → CRM Visual",
                   highlight: false,
                 },
                 {
-                  level: "02",
+                  tag: "AUTOMAÇÃO & IA",
                   title: "Flow Essencial",
-                  tagline: "Sua primeira camada de automação e IA.",
+                  metric: "IA + Automação",
+                  tagline: "Sua primeira camada de inteligência operacional.",
+                  desc: "O agente de IA responde, qualifica e direciona leads automaticamente. Sua equipe foca no fechamento enquanto a máquina cuida da entrada.",
                   items: ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
-                  ideal: "Ideal para reduzir esforço manual sem perder organização.",
-                  highlight: false,
-                },
-                {
-                  level: "03",
-                  title: "Flow Pro",
-                  tagline: "Automação de alto nível pra crescimento acelerado.",
-                  items: ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
-                  ideal: "Ideal para operações já validadas que exigem tração.",
-                  highlight: false,
-                },
-                {
-                  level: "04",
-                  title: "Scale",
-                  tagline: "Inteligência, rastreabilidade e visão estratégica.",
-                  items: ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Módulo OneHub Social incluso"],
-                  ideal: "Ideal para alto volume, alta performance e gestão rigorosa.",
+                  connection: "Conecta: CRM → Agente IA → Atendimento Automático",
                   highlight: true,
+                },
+                {
+                  tag: "ESCALA",
+                  title: "Flow Pro",
+                  metric: "Equipes + Ramificação",
+                  tagline: "Automação de alto nível pra crescimento acelerado.",
+                  desc: "Automações complexas com ramificações por segmento, roteamento inteligente e estrutura para equipes em crescimento sem perder controle.",
+                  items: ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
+                  connection: "Conecta: Agente IA → Multi-Atendentes → Roteamento",
+                  highlight: false,
+                },
+                {
+                  tag: "INTELIGÊNCIA TOTAL",
+                  title: "Scale",
+                  metric: "Analytics + Social",
+                  tagline: "Rastreabilidade total e visão estratégica.",
+                  desc: "Dados reais para decidir — métricas de fechamento, conversões rastreadas via Meta API, atendimento consultivo e módulo Social incluso.",
+                  items: ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Módulo OneHub Social incluso"],
+                  connection: "Conecta: CRM → Meta API → Dashboards → Social",
+                  highlight: false,
                 },
               ].map((plan, i) => (
                 <div
                   key={i}
-                  className={`relative flex flex-col justify-between rounded-2xl p-6 sm:p-7 transition-all duration-300 ${
+                  className={`relative flex flex-col justify-between rounded-3xl p-5 sm:p-6 transition-all duration-300 ${
                     plan.highlight
-                      ? "bg-[#1A1714] border-2 border-[#BE212A] shadow-[0_0_40px_rgba(190,33,42,0.15)]"
-                      : "bg-[#211E1B] border border-[#3A352F] hover:border-[#5C554E]"
+                      ? "bg-[#1A1714]/95 backdrop-blur-xl border-2 border-[#BE212A] shadow-[0_0_60px_rgba(190,33,42,0.2)]"
+                      : "bg-[#1A1714] border border-[#3A352F] hover:border-[#5C554E]"
                   }`}
                 >
                   {/* Badge Recomendado */}
@@ -907,23 +915,33 @@ export default function OneHub() {
                   )}
 
                   <div>
-                    {/* Nível */}
-                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#5C554E] block mb-3">
-                      NÍVEL {plan.level}
-                    </span>
-
-                    {/* Título */}
-                    <h3 className="font-display font-semibold text-xl sm:text-2xl text-white mb-1">
-                      {plan.title}
-                    </h3>
+                    {/* Header — Tag + Título + Badge (Estilo Pop-up) */}
+                    <div className="flex items-center justify-between gap-2 pb-3 border-b border-[#3A352F] mb-4">
+                      <div>
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block mb-0.5">
+                          {plan.tag}
+                        </span>
+                        <h3 className="font-display font-bold text-lg sm:text-xl text-white">
+                          {plan.title}
+                        </h3>
+                      </div>
+                      <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold text-white bg-[#BE212A] shadow-md shrink-0 whitespace-nowrap">
+                        {plan.metric}
+                      </span>
+                    </div>
 
                     {/* Tagline */}
-                    <p className="text-xs italic text-[#D97757] mb-5">{plan.tagline}</p>
+                    <p className="text-xs italic text-[#D97757] mb-3">{plan.tagline}</p>
+
+                    {/* Descrição */}
+                    <p className="text-xs sm:text-sm text-[#C9C3B8] leading-relaxed mb-5">
+                      {plan.desc}
+                    </p>
 
                     {/* Features List */}
-                    <ul className="space-y-2.5 mb-6">
+                    <ul className="space-y-2 mb-5">
                       {plan.items.map((item, j) => (
-                        <li key={j} className="flex items-start gap-2 text-xs sm:text-sm text-[#C9C3B8] leading-relaxed">
+                        <li key={j} className="flex items-start gap-2 text-xs text-[#C9C3B8] leading-relaxed">
                           <span className="text-[#10B981] font-bold mt-0.5 shrink-0">✓</span>
                           {item}
                         </li>
@@ -931,10 +949,11 @@ export default function OneHub() {
                     </ul>
                   </div>
 
-                  {/* Rodapé — Perfil Ideal */}
-                  <p className="text-[11px] pt-4 border-t border-[#3A352F] text-[#736B63] leading-relaxed">
-                    {plan.ideal}
-                  </p>
+                  {/* Rodapé — Conexão do Negócio (Estilo Pop-up) */}
+                  <div className="pt-3 border-t border-[#3A352F] flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
+                    <span className="text-[#10B981]">⚡</span>
+                    <span>{plan.connection}</span>
+                  </div>
                 </div>
               ))}
             </div>
