@@ -148,7 +148,7 @@ export default function OneHub() {
         `}</style>
 
         {/* 1. HERO SECTION COM BACKGROUND FULL E OPACIDADE CLARA EQUILIBRADA */}
-        <section className="hero-section relative z-10 overflow-hidden min-h-[640px] sm:min-h-[720px] md:min-h-[820px] flex flex-col justify-between border-b border-[#E4DDD0]/60 bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24">
+        <section className="hero-section relative z-10 overflow-hidden min-h-[640px] sm:min-h-[720px] md:min-h-[820px] flex flex-col justify-between bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24">
           
           {/* Imagem de Fundo Full-Bleed em Alta Visibilidade */}
           <div className="hero-bg-anim absolute inset-0 w-full h-full z-0 pointer-events-none">
@@ -165,6 +165,8 @@ export default function OneHub() {
             {/* Máscara clara com transição suave que clareia o lado esquerdo sem escurecer o texto */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/85 to-[#FAF7F2]/20 md:to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2]/75 via-transparent to-[#FAF7F2]/60" />
+            {/* Transição Suave no Rodapé da Hero para o Carvão (#211E1B) da Seção 2 */}
+            <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 bg-gradient-to-b from-transparent via-[#211E1B]/50 to-[#211E1B] pointer-events-none" />
           </div>
 
           {/* Header Alinhado: Logo OneHub Ampliada */}
@@ -227,7 +229,25 @@ export default function OneHub() {
 
         {/* 2. O PREÇO DO QUE VOCÊ NÃO VÊ (DARK EDITORIAL — PAS COPY) */}
         <section className="scene-problema relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#211E1B] text-[#FAF7F2] overflow-hidden">
-          <div className="max-w-7xl mx-auto">
+
+          {/* Background Full-Bleed: Silhueta do Caos no WhatsApp */}
+          <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            <img
+              src="/whatsapp-caos.webp"
+              alt=""
+              aria-hidden="true"
+              width={2400}
+              height={1350}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-center opacity-[0.42]"
+            />
+            {/* Overlay suave mantendo a cobertura total do background */}
+            <div className="absolute inset-0 bg-[#211E1B]/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#211E1B]/80 via-transparent to-[#211E1B]/80" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto">
 
             {/* Cabeçalho */}
             <div className="scene-problema-title max-w-3xl mb-14 md:mb-18">
@@ -275,7 +295,7 @@ export default function OneHub() {
               ].map((card) => (
                 <div
                   key={card.num}
-                  className="card-problema group p-6 sm:p-7 rounded-2xl bg-[#2C2822] border border-[#3A352F] hover:border-[#BE212A]/40 transition-colors duration-300"
+                  className="card-problema group p-6 sm:p-7 rounded-2xl bg-[#1A1714] border border-[#2E2824] hover:border-[#BE212A]/40 transition-colors duration-300"
                 >
                   <span className="font-display text-3xl sm:text-4xl font-bold text-[#BE212A] block mb-3 leading-none">
                     {card.num}
@@ -286,7 +306,7 @@ export default function OneHub() {
                   <p className="text-sm sm:text-[15px] text-[#C9C3B8] leading-relaxed mb-4">
                     {card.desc}
                   </p>
-                  <div className="flex items-start gap-2 pt-4 border-t border-[#3A352F]">
+                  <div className="flex items-start gap-2 pt-4 border-t border-[#2E2824]">
                     <span className="w-2 h-2 rounded-full bg-[#BE212A] flex-shrink-0 mt-1" />
                     <p className="text-xs sm:text-sm font-semibold text-[#D97757]">
                       Impacto: {card.impact}
@@ -313,19 +333,109 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 3. IMPLICAÇÃO (LIGHT EDITORIAL) */}
-        <section className="scene-teto relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 border-b border-[#E4DDD0]/60">
-          <div className="scene-teto-text max-w-3xl mx-auto text-center">
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4A453F]">
-              Cada lead perdido no chat não é só uma mensagem sem resposta — é uma venda que foi pro concorrente que respondeu primeiro. Sem visibilidade do funil, toda decisão de crescimento vira palpite, não dado.
-            </p>
-            <p className="font-display font-medium text-2xl sm:text-3xl md:text-4xl mt-8 leading-snug text-[#211E1B]">
-              O aplicativo padrão não é uma ferramenta gratuita.<br />
-              É o <span className="text-[#BE212A]">teto de vidro</span> da sua operação.
-            </p>
-            <p className="mt-4 text-sm sm:text-base text-[#736B63]">
-              Você só não vê o preço até tentar crescer além dele.
-            </p>
+        {/* 3. A TRANSFORMAÇÃO OPERACIONAL — ANTES VS. DEPOIS (LIGHT EDITORIAL) */}
+        <section className="scene-teto relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
+          <div className="max-w-7xl mx-auto">
+
+            {/* Cabeçalho */}
+            <div className="scene-teto-text max-w-3xl mb-14 md:mb-18">
+              <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#BE212A] block mb-4">
+                A TRANSFORMAÇÃO OPERACIONAL
+              </span>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[44px] leading-[1.18] text-[#211E1B] tracking-tight">
+                Sua empresa não precisa de mais um canal.{" "}
+                <span className="text-[#BE212A] block sm:inline">
+                  Precisa de governança comercial.
+                </span>
+              </h2>
+              <p className="mt-5 text-base sm:text-lg text-[#5C554E] leading-relaxed max-w-2xl">
+                Veja a diferença entre operar o WhatsApp no improviso e ter a engenharia do OneHub acelerando suas vendas todos os dias.
+              </p>
+            </div>
+
+            {/* Grid Comparativo Antes vs Depois */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-12">
+              
+              {/* Coluna 1: Sem Governança (O Velho Jeito) */}
+              <div className="p-7 sm:p-9 rounded-3xl bg-[#EFE9DF] border border-[#E0D7C8] shadow-sm">
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#D8CFC0]">
+                  <span className="w-8 h-8 rounded-full bg-[#BE212A]/10 text-[#BE212A] flex items-center justify-center font-bold text-sm">
+                    ✕
+                  </span>
+                  <div>
+                    <h3 className="font-display font-bold text-lg sm:text-xl text-[#211E1B]">
+                      SEM GOVERNANÇA
+                    </h3>
+                    <p className="text-xs font-semibold text-[#8C8275] uppercase tracking-wider">
+                      Operação no Escuro
+                    </p>
+                  </div>
+                </div>
+
+                <ul className="space-y-4">
+                  {[
+                    "Conversas espalhadas em 3 ou 4 celulares individuais de vendedores",
+                    "Vendedor sai da empresa e leva a carteira de clientes junto",
+                    "Resposta em 2h a 5h — o lead esfria e fecha com o concorrente",
+                    "Nenhuma visão de quantas propostas estão paradas sem follow-up",
+                    "Faturamento oscila e você descobre a causa só no fim do mês",
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#4A453F] leading-relaxed">
+                      <span className="text-[#BE212A] font-bold mt-0.5 flex-shrink-0">✕</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Coluna 2: Com OneHub (Engenharia Comercial) */}
+              <div className="p-7 sm:p-9 rounded-3xl bg-white border-2 border-[#10B981]/30 shadow-md relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-[#10B981] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-xl">
+                  Engenharia OneHub
+                </div>
+
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E4DDD0]">
+                  <span className="w-8 h-8 rounded-full bg-[#10B981]/15 text-[#10B981] flex items-center justify-center font-bold text-sm">
+                    ✓
+                  </span>
+                  <div>
+                    <h3 className="font-display font-bold text-lg sm:text-xl text-[#211E1B]">
+                      COM ONEHUB
+                    </h3>
+                    <p className="text-xs font-semibold text-[#10B981] uppercase tracking-wider">
+                      Governança & Escala
+                    </p>
+                  </div>
+                </div>
+
+                <ul className="space-y-4">
+                  {[
+                    "1 Número Oficial (Meta Cloud API) com atendentes ilimitados",
+                    "Carteira 100% centralizada e protegida no painel da empresa",
+                    "IA qualifica e responde em 3 segundos (24 horas por dia)",
+                    "Funil Kanban em tempo real com alertas de oportunidade parada",
+                    "Previsibilidade de receita e métricas diárias por atendente",
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#211E1B] font-medium leading-relaxed">
+                      <span className="text-[#10B981] font-bold mt-0.5 flex-shrink-0">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+
+            {/* Card de Fechamento Editorial da Seção 3 */}
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#EFE9DF] border border-[#E0D7C8] text-center max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg font-medium text-[#211E1B] leading-relaxed">
+                💡 <span className="font-bold">&ldquo;O OneHub não substitui a sua equipe comercial.&rdquo;</span>{" "}
+                <span className="text-[#5C554E]">
+                  Ele elimina a burocracia do caminho para que seu time fale exclusivamente com quem já está pronto para comprar.
+                </span>
+              </p>
+            </div>
+
           </div>
         </section>
 
