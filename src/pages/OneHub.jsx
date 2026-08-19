@@ -949,10 +949,15 @@ export default function OneHub() {
                     </ul>
                   </div>
 
-                  {/* Rodapé — Conexão do Negócio (Estilo Pop-up) */}
-                  <div className="pt-3 border-t border-[#3A352F] flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
-                    <span className="text-[#10B981]">⚡</span>
-                    <span>{plan.connection}</span>
+                  {/* Rodapé — Tag + Conexão do Negócio (Alinhado na Base) */}
+                  <div className="mt-auto pt-4 border-t border-[#3A352F]">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block mb-1.5">
+                      {plan.tag}
+                    </span>
+                    <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
+                      <span className="text-[#10B981]">⚡</span>
+                      <span>{plan.connection}</span>
+                    </div>
                   </div>
                 </div>
               ))}
