@@ -225,37 +225,91 @@ export default function OneHub() {
           <div className="relative z-10"></div>
         </section>
 
-        {/* 2. SITUAÇÃO + PROBLEMA (DARK HÍBRIDO SÓBRIO) */}
-        <section className="scene-problema relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#211E1B] text-[#FAF7F2] overflow-hidden">
+        {/* 2. O PREÇO DO QUE VOCÊ NÃO VÊ (DARK EDITORIAL — PAS COPY) */}
+        <section className="scene-problema relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#211E1B] text-[#FAF7F2] overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="scene-problema-title max-w-3xl">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-3">
-                Diagnóstico Comercial
+
+            {/* Cabeçalho */}
+            <div className="scene-problema-title max-w-3xl mb-14 md:mb-18">
+              <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#BE212A] block mb-5">
+                O PREÇO DO QUE VOCÊ NÃO VÊ
               </span>
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight">
-                Muitas conversas.<br />Muito movimento.
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[46px] leading-[1.18] tracking-tight">
+                Você responde 50 mensagens por dia.{" "}
+                <span className="text-[#FAF7F2]/60">
+                  Quantas viram faturamento no fim do mês?
+                </span>
               </h2>
-              <p className="mt-5 text-base sm:text-lg md:text-xl text-[#C9C3B8] leading-relaxed">
-                O WhatsApp virou a porta de entrada do seu negócio. O problema é que ele nunca foi feito pra administrar operação comercial nenhuma.
-              </p>
-              <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[#D97757]">
-                Excelente canal de comunicação. Péssimo sistema de gestão.
+              <p className="mt-6 text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-2xl">
+                Seu time trabalha, o WhatsApp não para e parece produtividade. Mas sem funil, sem histórico centralizado e sem IA para qualificar quem tem dinheiro no bolso, você está apenas pagando hora extra para operar no escuro.
               </p>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Grid 2×2 de Cards Diagnóstico */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6 mb-12 lg:mb-16">
               {[
-                "Leads que se perdem no meio da rolagem de mensagens",
-                "Follow-ups que ficam pra depois — e o depois nunca chega",
-                "Nenhuma visão real de quantas oportunidades estão em aberto",
-                "Você (ou seu time) apagando incêndio, em vez de vender",
-              ].map((t, i) => (
-                <div key={i} className="card-problema p-6 rounded-2xl bg-[#2C2822] border border-[#3A352F]">
-                  <p className="font-display text-2xl font-bold mb-2 text-[#BE212A]">{`0${i + 1}`}</p>
-                  <p className="text-sm text-[#DED8CC] leading-relaxed">{t}</p>
+                {
+                  num: "01",
+                  title: "Resposta lenta mata o interesse",
+                  desc: "O lead entra com intenção de compra às 9h e só é respondido às 14h. Ele já fechou com o concorrente que atendeu em 2 minutos.",
+                  impact: "Perda de até 80% da intenção de compra.",
+                },
+                {
+                  num: "02",
+                  title: "Histórico zerado na volta do cliente",
+                  desc: "O contato retorna 3 semanas depois e ninguém sabe o que foi combinado. Ele percebe a falta de processo e desiste da negociação.",
+                  impact: "Destruição da autoridade comercial.",
+                },
+                {
+                  num: "03",
+                  title: "Funil de vendas invisível",
+                  desc: "Você tem centenas de conversas abertas, mas não sabe quantas são propostas ativas e quantas esfriaram há dias no celular de alguém.",
+                  impact: "Impossibilidade de prever receita.",
+                },
+                {
+                  num: "04",
+                  title: "Decisão na base do palpite",
+                  desc: "O faturamento oscila e você só descobre no fechamento contábil. Sem telemetria diária, toda reunião vira discussão sem fatos.",
+                  impact: "Gestão cega sem saber onde ajustar.",
+                },
+              ].map((card) => (
+                <div
+                  key={card.num}
+                  className="card-problema group p-6 sm:p-7 rounded-2xl bg-[#2C2822] border border-[#3A352F] hover:border-[#BE212A]/40 transition-colors duration-300"
+                >
+                  <span className="font-display text-3xl sm:text-4xl font-bold text-[#BE212A] block mb-3 leading-none">
+                    {card.num}
+                  </span>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#FAF7F2] mb-2 leading-snug">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm sm:text-[15px] text-[#C9C3B8] leading-relaxed mb-4">
+                    {card.desc}
+                  </p>
+                  <div className="flex items-start gap-2 pt-4 border-t border-[#3A352F]">
+                    <span className="w-2 h-2 rounded-full bg-[#BE212A] flex-shrink-0 mt-1" />
+                    <p className="text-xs sm:text-sm font-semibold text-[#D97757]">
+                      Impacto: {card.impact}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* Card de Autoridade + Ponte para a Solução */}
+            <div className="gsap-reveal p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#1A1714] border-l-4 border-[#BE212A]">
+              <p className="text-base sm:text-lg lg:text-xl font-bold text-[#FAF7F2] leading-relaxed mb-4">
+                <span className="text-xl sm:text-2xl mr-2">📊</span>
+                &ldquo;Empresas que demoram mais de 5 minutos para responder um lead perdem até 80% das chances de conversão.&rdquo;
+                <span className="block sm:inline text-sm sm:text-base font-normal text-[#94A3B8] ml-0 sm:ml-2 mt-1 sm:mt-0">
+                  — Harvard Business Review
+                </span>
+              </p>
+              <p className="text-sm sm:text-base text-[#D97757] font-semibold leading-relaxed">
+                O OneHub resolve essa equação: atendimento imediato com IA, distribuição automática e governança total em um único painel.
+              </p>
+            </div>
+
           </div>
         </section>
 
