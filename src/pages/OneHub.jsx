@@ -987,16 +987,48 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 7. DIFERENCIAL */}
-        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#211E1B] text-white overflow-hidden">
-          <div className="scene-diferencial-text max-w-3xl mx-auto">
-            <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight">
+        {/* 7. DIFERENCIAL — WHATSAPP COM CÉREBRO */}
+        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-24 md:py-36 text-center bg-[#1A1714] text-white overflow-hidden">
+          {/* Background Image com Overlays Gradientes para Fusão Suave */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <img
+              src="/onehub-whatsapp-brain.webp"
+              alt="OneHub IA Nativa WhatsApp"
+              className="w-full h-full object-cover object-center opacity-45 scale-105"
+            />
+            {/* Gradientes de Fusão Superior, Inferior e Radial */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#211E1B] via-transparent to-[#211E1B]" />
+            <div className="absolute inset-0 bg-[#1A1714]/40 backdrop-blur-[2px]" />
+          </div>
+
+          <div className="scene-diferencial-text relative z-10 max-w-3xl mx-auto p-8 sm:p-12 rounded-3xl bg-[#1A1714]/85 backdrop-blur-xl border border-[#3A352F] shadow-[0_0_80px_rgba(0,0,0,0.8)]">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#10B981] font-bold block mb-3">
+              ⚡ INTELIGÊNCIA ARTIFICIAL NATIVA
+            </span>
+            
+            <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight text-white">
               Não é CRM que ganhou WhatsApp.<br />
-              <span className="text-[#BE212A]">É WhatsApp que ganhou cérebro.</span>
+              <span className="text-[#FF334B] drop-shadow-[0_0_30px_rgba(255,51,75,0.4)]">
+                É WhatsApp que ganhou cérebro.
+              </span>
             </h2>
+
             <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-[#DED8CC] leading-relaxed">
               O agente de IA não é um chatbot colado depois. É inteligência nativa em cada conversa — configurado sob medida para o escopo do seu negócio, do primeiro contato ao fechamento.
             </p>
+
+            {/* Badges de Confirmação Técnica */}
+            <div className="mt-8 pt-6 border-t border-[#3A352F]/80 flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-[#C9C3B8]">
+              <span className="px-3 py-1.5 rounded-lg bg-[#211E1B] border border-[#3A352F]">
+                ✓ Treinado no seu catálogo & tom de voz
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-[#211E1B] border border-[#3A352F]">
+                ✓ Triagem em &lt; 3s sem filas
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-[#211E1B] border border-[#3A352F]">
+                ✓ 100% Meta Cloud API Oficial
+              </span>
+            </div>
           </div>
         </section>
 
