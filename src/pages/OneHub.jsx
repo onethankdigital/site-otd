@@ -334,42 +334,42 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 3. CANVAS INTERATIVO DO PRODUTO (CONCEITO A — ARQUITETURA 3D) */}
-        <section className="scene-teto relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#FAF7F2] border-b border-[#E4DDD0]/60 overflow-hidden">
+        {/* 3. CANVAS INTERATIVO DO PRODUTO (CONCEITO A — ARQUITETURA 3D FULL WIDTH) */}
+        <section className="scene-teto relative z-10 px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-[#FAF7F2] border-b border-[#E4DDD0]/60 overflow-hidden">
           
           {/* Luzes ambiente de acento */}
           <div className="absolute top-1/3 left-1/4 w-[500px] h-[300px] bg-[#BE212A]/5 blur-[140px] rounded-full pointer-events-none" />
           <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[280px] bg-[#D97757]/8 blur-[120px] rounded-full pointer-events-none" />
 
-          <div className="max-w-7xl mx-auto relative z-10">
+          <div className="max-w-[1440px] mx-auto relative z-10">
 
             {/* Cabeçalho Editorial */}
-            <div className="scene-teto-text max-w-3xl mb-12 md:mb-16">
+            <div className="scene-teto-text max-w-4xl mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#BE212A]/10 border border-[#BE212A]/20 text-[#BE212A] text-xs font-bold uppercase tracking-widest mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#BE212A] animate-ping" />
                 A ARQUITETURA DO ONEHUB
               </div>
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[44px] leading-[1.18] text-[#211E1B] tracking-tight">
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[48px] leading-[1.15] text-[#211E1B] tracking-tight">
                 Do caos no WhatsApp à{" "}
                 <span className="text-[#BE212A]">governança no CRM.</span>
               </h2>
-              <p className="mt-4 text-base sm:text-lg text-[#5C554E] leading-relaxed max-w-2xl">
-                Uma única engenharia conectando atendimento imediato por IA, distribuição de vendedores e controle total de receita em um painel unificado.
+              <p className="mt-4 text-base sm:text-lg text-[#5C554E] leading-relaxed max-w-3xl">
+                Uma única engenharia conectando atendimento imediato por IA, qualificação com nome do lead, distribuição direta para o vendedor e controle total de receita em um painel unificado.
               </p>
             </div>
 
-            {/* Palco do Canvas Interativo 3D em Camadas */}
-            <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] p-6 sm:p-10 md:p-14 overflow-hidden shadow-2xl">
+            {/* Palco do Canvas Interativo 3D em Camadas (100% de Largura Expandida) */}
+            <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] p-5 sm:p-8 md:p-12 lg:p-14 overflow-hidden shadow-2xl w-full">
               
-              {/* Grid de telemetria no fundo do palco */}
+              {/* Grid de fundo do palco */}
               <div className="absolute inset-0 bg-[radial-gradient(#3A352F_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none" />
 
               {/* Seletor de Pins / Hotspots no Topo do Palco */}
               <div className="relative z-20 flex flex-wrap items-center justify-center gap-3 mb-10">
                 {[
-                  { id: 1, label: "01. Triagem & IA 24/7", tag: "Atendimento Instantâneo" },
-                  { id: 2, label: "02. Roteamento Inteligente", tag: "Fila & Carteira Protegida" },
-                  { id: 3, label: "03. Funil & Telemetria P&L", tag: "Gestão Financeira ao Vivo" },
+                  { id: 1, label: "01. Triagem com Nome & IA 24/7", tag: "Atendimento Instantâneo" },
+                  { id: 2, label: "02. Roteamento Direto ao Vendedor", tag: "Fila & Carteira Protegida" },
+                  { id: 3, label: "03. Funil & Dados em Tempo Real", tag: "Gestão Financeira ao Vivo" },
                 ].map((pin) => (
                   <button
                     key={pin.id}
@@ -386,8 +386,8 @@ export default function OneHub() {
                 ))}
               </div>
 
-              {/* Área do Mockup Duplo (Celular + Desktop CRM) */}
-              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+              {/* Área do Mockup Duplo (Celular + Desktop CRM) com Mais Espaço */}
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center pt-2">
                 
                 {/* Lado Esquerdo (Camada 1): Mockup do Celular WhatsApp */}
                 <div className="lg:col-span-5 relative group">
@@ -412,11 +412,11 @@ export default function OneHub() {
                       </span>
                     </div>
 
-                    {/* Balões de Conversa Simulados */}
+                    {/* Balões de Conversa Simulados (Com Nome do Cliente & Roteamento) */}
                     <div className="space-y-3 font-sans text-xs sm:text-sm">
-                      <div className="bg-[#2C2822] text-[#E4DDD0] p-3.5 rounded-2xl rounded-tl-xs max-w-[85%] border border-[#3A352F]">
-                        <p className="text-[11px] font-bold text-[#D97757] mb-1">Novo Lead • 09:00:02</p>
-                        <p>&ldquo;Olá! Quero entender sobre a implantação do OneHub na minha empresa.&rdquo;</p>
+                      <div className="bg-[#2C2822] text-[#E4DDD0] p-3.5 rounded-2xl rounded-tl-xs max-w-[88%] border border-[#3A352F]">
+                        <p className="text-[11px] font-bold text-[#D97757] mb-1">Lead Entrada • 09:00:02</p>
+                        <p>&ldquo;Olá! Meu nome é <strong>Marcos</strong>, sou gestor da Construtora Alfa. Quero entender sobre o OneHub.&rdquo;</p>
                       </div>
 
                       <div className="bg-[#BE212A]/15 text-white p-3.5 rounded-2xl rounded-tr-xs ml-auto max-w-[90%] border border-[#BE212A]/40 shadow-sm">
@@ -426,42 +426,49 @@ export default function OneHub() {
                           </p>
                           <span className="text-[10px] font-mono text-white/80">3 seg</span>
                         </div>
-                        <p>&ldquo;Olá! Perfeito. Sou o assistente inteligente do OneHub. Qual é o tamanho da sua equipe comercial hoje?&rdquo;</p>
+                        <p>&ldquo;Olá, <strong>Marcos</strong>! Prazer. Sou a IA do OneHub. Para direcionar você ao especialista certo: qual é o tamanho da sua equipe comercial?&rdquo;</p>
                       </div>
 
-                      <div className="bg-[#2C2822] text-[#E4DDD0] p-3.5 rounded-2xl rounded-tl-xs max-w-[85%] border border-[#3A352F]">
+                      <div className="bg-[#2C2822] text-[#E4DDD0] p-3.5 rounded-2xl rounded-tl-xs max-w-[88%] border border-[#3A352F]">
                         <p>&ldquo;Temos 8 vendedores no WhatsApp.&rdquo;</p>
                       </div>
 
-                      <div className="bg-[#10B981]/15 text-white p-3.5 rounded-2xl rounded-tr-xs ml-auto max-w-[90%] border border-[#10B981]/40">
-                        <p className="text-[11px] font-bold text-[#10B981] mb-1">✅ Lead Qualificado → Fila Comercial</p>
-                        <p>&ldquo;Excelente! Encaminhando você agora para o nosso especialista em equipes acima de 5 vendedores.&rdquo;</p>
+                      <div className="bg-[#10B981]/15 text-white p-3.5 rounded-2xl rounded-tr-xs ml-auto max-w-[92%] border border-[#10B981]/40">
+                        <p className="text-[11px] font-bold text-[#10B981] mb-1">
+                          👤 Roteado Direto → Juliana Prado (SDR Senior)
+                        </p>
+                        <p>&ldquo;Perfeito, <strong>Marcos</strong>! Triagem concluída. Já transferi seu atendimento diretamente para a <strong>Juliana Prado</strong> no painel.&rdquo;</p>
                       </div>
                     </div>
 
                   </div>
                 </div>
 
-                {/* Conector Central Glowing (Desktop/Tablet) */}
-                <div className="hidden lg:flex lg:col-span-2 flex-col items-center justify-center gap-2 text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#BE212A]/20 border border-[#BE212A] flex items-center justify-center text-[#FF334B] animate-pulse">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {/* Conector Central Glowing com Detalhe do Roteamento */}
+                <div className="hidden lg:flex lg:col-span-2 flex-col items-center justify-center gap-3 text-center">
+                  <div className="w-14 h-14 rounded-full bg-[#BE212A]/20 border border-[#BE212A] flex items-center justify-center text-[#FF334B] animate-pulse shadow-[0_0_20px_rgba(190,33,42,0.4)]">
+                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-[#D97757] uppercase tracking-wider">
-                    Sincronização instantânea
-                  </span>
+                  <div>
+                    <span className="text-[11px] font-mono font-bold text-[#10B981] block uppercase tracking-wider">
+                      ROTEAMENTO DIRETO
+                    </span>
+                    <span className="text-[10px] text-[#C9C3B8] block mt-0.5">
+                      Marcos (Lead) → Juliana Prado (Vendedor)
+                    </span>
+                  </div>
                 </div>
 
-                {/* Lado Direito (Camada 2): Dashboard do CRM OneHub */}
+                {/* Lado Direito (Camada 2): Dashboard do CRM OneHub Smart */}
                 <div className="lg:col-span-5">
                   <div className={`rounded-3xl p-5 sm:p-6 bg-[#211E1B] border transition-all duration-500 shadow-xl ${activePin === 3 ? "border-[#BE212A] shadow-[0_0_30px_rgba(190,33,42,0.3)]" : "border-[#3A352F]"}`}>
                     
-                    {/* Header da Dashboard */}
+                    {/* Header da Dashboard — Renomeado para ONEHUB SMART */}
                     <div className="flex items-center justify-between pb-4 border-b border-[#3A352F] mb-4">
                       <div>
-                        <p className="text-xs font-mono font-bold text-[#D97757]">PAINEL ONEHUB COMMERCIAL</p>
+                        <p className="text-xs font-mono font-bold text-[#BE212A] tracking-wider">ONEHUB SMART</p>
                         <p className="text-sm font-bold text-white">Funil de Vendas em Tempo Real</p>
                       </div>
                       <div className="flex items-center gap-2">
@@ -470,19 +477,23 @@ export default function OneHub() {
                       </div>
                     </div>
 
-                    {/* Colunas do Funil Kanban */}
+                    {/* Colunas do Funil Kanban com Roteamento ao Vendedor */}
                     <div className="grid grid-cols-3 gap-2 sm:gap-3 text-xs">
                       
-                      {/* Coluna 1: Novos Leads */}
+                      {/* Coluna 1: Novos Leads (Mostra o Marcos roteado para a Juliana) */}
                       <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
                         <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
                           <span className="font-bold text-slate-300 text-[11px]">Novos</span>
                           <span className="bg-[#BE212A] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">14</span>
                         </div>
-                        <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F] mb-2">
-                          <p className="font-bold text-white text-[11px]">Empresa Alfa</p>
-                          <p className="text-[10px] text-[#D97757]">R$ 15.000 • IA Filtrou</p>
+                        
+                        {/* Lead Roteado em Destaque */}
+                        <div className="bg-[#10B981]/15 p-2 rounded-lg border border-[#10B981]/40 mb-2">
+                          <p className="font-bold text-white text-[11px]">Marcos • Construtora Alfa</p>
+                          <p className="text-[10px] text-[#10B981] font-semibold mt-0.5">👤 Vendedor: Juliana Prado</p>
+                          <p className="text-[9px] text-slate-300 font-mono mt-0.5">R$ 45.000 • IA Triou</p>
                         </div>
+
                         <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F]">
                           <p className="font-bold text-white text-[11px]">Grupo Beta</p>
                           <p className="text-[10px] text-[#D97757]">R$ 28.000 • Fila #2</p>
@@ -520,7 +531,7 @@ export default function OneHub() {
 
               </div>
 
-              {/* Explicação Dinâmica do Pin Ativo */}
+              {/* Explicação Dinâmica do Pin Ativo (Com Vocabulário Atualizado "Dados") */}
               <div className="relative z-20 mt-8 p-5 sm:p-6 rounded-2xl bg-[#2C2822] border border-[#3A352F] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#BE212A] text-white flex items-center justify-center font-bold font-mono text-base flex-shrink-0">
@@ -528,14 +539,14 @@ export default function OneHub() {
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-white">
-                      {activePin === 1 && "Atendimento Imediato com Agentes de IA 24/7"}
-                      {activePin === 2 && "Roteamento por Fila e Carteira Protegida"}
-                      {activePin === 3 && "Telemetria de Vendas & Visão Financeira P&L"}
+                      {activePin === 1 && "Atendimento Imediato por IA com Coleta de Nome do Cliente"}
+                      {activePin === 2 && "Roteamento Direto para o Vendedor Responsável"}
+                      {activePin === 3 && "Dados de Vendas & Visão Financeira P&L"}
                     </h4>
                     <p className="text-xs sm:text-sm text-[#C9C3B8]">
-                      {activePin === 1 && "A IA qualifica a intenção de compra em 3 segundos, impedindo que o lead esfrie ou procure o concorrente."}
-                      {activePin === 2 && "O lead é direcionado automaticamente para o vendedor responsável sem depender de repasse manual no celular."}
-                      {activePin === 3 && "Saiba exatamente quanto dinheiro está em aberto no funil e acompanhe a taxa de conversão em tempo real."}
+                      {activePin === 1 && "A IA atende o cliente pelo nome (ex: Marcos), faz a triagem básica e descobre o tamanho da equipe antes de passar ao vendedor."}
+                      {activePin === 2 && "O lead qualificado entra direto no painel da vendedora alocada (ex: Juliana Prado), protegendo a carteira e eliminando a fila manual."}
+                      {activePin === 3 && "Acompanhe os Dados de conversão e saiba em tempo real quanto dinheiro está em aberto nas propostas."}
                     </p>
                   </div>
                 </div>
@@ -546,7 +557,7 @@ export default function OneHub() {
                   rel="noreferrer"
                   className="px-5 py-2.5 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-xs sm:text-sm transition-all flex-shrink-0 whitespace-nowrap"
                 >
-                  Testar essa engenharia →
+                  Testar no meu negócio →
                 </a>
               </div>
 
@@ -555,9 +566,9 @@ export default function OneHub() {
             {/* Barra de Prova / Métricas na Base da Seção 3 */}
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
               {[
-                { val: "< 3 seg", title: "Primeira Resposta por IA", desc: "Triagem instantânea 24 horas por dia." },
-                { val: "100%", title: "Carteira da Empresa", desc: "Dados centralizados e protegidos no painel." },
-                { val: "+35%", title: "Conversão de Vendas", desc: "Aumento médio registrado no 1º mês." },
+                { val: "< 3 seg", title: "Primeira Resposta por IA", desc: "Triagem com nome do cliente 24/7." },
+                { val: "Direto", title: "Roteamento para Vendedor", desc: "Encaminhado para a carteira certa no OneHub Smart." },
+                { val: "Dados", title: "Visão em Tempo Real", desc: "Controle de conversão e propostas no painel." },
               ].map((m, i) => (
                 <div key={i} className="p-6 rounded-2xl bg-white border border-[#E4DDD0] shadow-sm text-center">
                   <p className="font-display text-3xl sm:text-4xl font-black text-[#BE212A] mb-1">{m.val}</p>
