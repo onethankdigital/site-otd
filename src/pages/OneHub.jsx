@@ -347,14 +347,14 @@ export default function OneHub() {
             <div className="scene-teto-text max-w-4xl mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#BE212A]/10 border border-[#BE212A]/20 text-[#BE212A] text-xs font-bold uppercase tracking-widest mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#BE212A] animate-ping" />
-                A ARQUITETURA DO ONEHUB
+                O ECOSSISTEMA DO ONEHUB
               </div>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[48px] leading-[1.15] text-[#211E1B] tracking-tight">
                 Do caos no WhatsApp à{" "}
                 <span className="text-[#BE212A]">governança no CRM.</span>
               </h2>
               <p className="mt-4 text-base sm:text-lg text-[#5C554E] leading-relaxed max-w-3xl">
-                Uma única engenharia conectando atendimento imediato por IA, qualificação com nome do lead, distribuição direta para o vendedor e controle total de receita em um painel unificado.
+                Um único ecossistema conectando atendimento imediato por IA, qualificação com nome do lead, distribuição direta para o vendedor e controle total de receita em um painel unificado.
               </p>
             </div>
 
@@ -537,7 +537,7 @@ export default function OneHub() {
               <div className="relative z-20 mt-8 sm:mt-10 p-6 sm:p-7 rounded-2xl bg-[#2C2822] border border-[#3A352F] flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
                 <div>
                   <h4 className="text-lg sm:text-xl font-bold text-white mb-1">
-                    Pronto para estruturar essa engenharia na sua empresa?
+                    Pronto para estruturar esse ecossistema na sua empresa?
                   </h4>
                   <p className="text-xs sm:text-sm text-[#C9C3B8]">
                     Montamos toda a sua operação com você. Sem custo, sem cartão e sem fidelidade.
@@ -578,7 +578,7 @@ export default function OneHub() {
         <section className="scene-solucao relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
           <div className="max-w-7xl mx-auto">
             <div className="scene-solucao-header max-w-2xl">
-              <p className="text-xs uppercase font-bold tracking-widest text-[#D97757] mb-2">A Arquitetura</p>
+              <p className="text-xs uppercase font-bold tracking-widest text-[#D97757] mb-2">O Ecossistema</p>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B]">
                 Apresentando o OneHub.
               </h2>
