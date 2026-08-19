@@ -644,7 +644,7 @@ export default function OneHub() {
               </p>
             </div>
 
-            {/* Seletores / Chips Rápidos para Alternar o Motor (Desktop + Mobile) */}
+            {/* Seletores / Chips Rápidos para Alternar o Motor (Desktop + Mobile — Sem Números) */}
             <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
               {ecosystemMotors.map((m) => (
                 <button
@@ -660,12 +660,12 @@ export default function OneHub() {
                     className="w-2 h-2 rounded-full"
                     style={{ backgroundColor: m.color }}
                   />
-                  0{m.id}. {m.name}
+                  {m.name}
                 </button>
               ))}
             </div>
 
-            {/* Palco 100% Full-Bleed do Diagrama 3D com Hotspots Flutuantes */}
+            {/* Palco 100% Full-Bleed do Diagrama 3D com Hotspots Limpos (Sem Números) */}
             <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.6)] mb-14 p-3 sm:p-6 md:p-8">
               
               {/* Moldura da Imagem 100% Full Container */}
@@ -676,7 +676,7 @@ export default function OneHub() {
                   className="w-full h-full object-contain rounded-2xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
                 />
 
-                {/* Hotspots Interativos Sobre as 5 Cúpulas de Vidro */}
+                {/* Hotspots Invisíveis & Anéis de Brilho Sutil sobre as Cúpulas (Sem Cobrir o Texto/Arte) */}
                 {ecosystemMotors.map((m) => {
                   const isActive = activeMotor === m.id;
                   return (
@@ -685,53 +685,34 @@ export default function OneHub() {
                       onClick={() => setActiveMotor(m.id)}
                       onMouseEnter={() => setActiveMotor(m.id)}
                       style={{ top: m.spot.top, left: m.spot.left }}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 group z-20 focus:outline-none"
+                      className="absolute -translate-x-1/2 -translate-y-1/2 group z-20 focus:outline-none w-24 h-24 sm:w-32 sm:h-32 rounded-full flex items-center justify-center cursor-pointer"
                     >
-                      {/* Anel Pulsante do Hotspot */}
-                      <div className="relative flex items-center justify-center">
-                        <span
-                          className={`absolute w-12 h-12 sm:w-16 sm:h-16 rounded-full animate-ping opacity-75 transition-all ${
-                            isActive ? "opacity-100 scale-125" : "opacity-40 group-hover:opacity-80"
-                          }`}
-                          style={{ backgroundColor: `${m.color}50` }}
-                        />
-                        <div
-                          className={`w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white font-mono font-bold text-xs sm:text-sm shadow-lg transition-all duration-300 ${
-                            isActive
-                              ? "scale-125 border-2 border-white shadow-[0_0_25px_rgba(255,255,255,0.8)]"
-                              : "border border-white/40 group-hover:scale-110"
-                          }`}
-                          style={{ backgroundColor: m.color }}
-                        >
-                          0{m.id}
-                        </div>
-                      </div>
+                      {/* Aura/Anel Sutil de Destaque Sem Números */}
+                      <span
+                        className={`w-full h-full rounded-full border-2 transition-all duration-300 ${
+                          isActive
+                            ? "border-[#BE212A] shadow-[0_0_35px_rgba(190,33,42,0.9)] bg-[#BE212A]/10 scale-105"
+                            : "border-transparent group-hover:border-white/40 group-hover:bg-white/5"
+                        }`}
+                      />
                     </button>
                   );
                 })}
               </div>
 
-              {/* Popover Card Flutuante (Exibe os Detalhes do Motor Ativo em Destaque) */}
+              {/* Popover Card Flutuante (Pop-up Limpo com Informações do Motor) */}
               {(() => {
                 const current = ecosystemMotors.find((m) => m.id === activeMotor) || ecosystemMotors[0];
                 return (
                   <div className="mt-4 sm:mt-6 max-w-3xl mx-auto p-5 sm:p-7 rounded-2xl bg-[#2C2822]/95 backdrop-blur-md border border-[#BE212A] shadow-[0_0_40px_rgba(190,33,42,0.35)] transition-all duration-500">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#3A352F] mb-3">
-                      <div className="flex items-center gap-3">
-                        <span
-                          className="w-9 h-9 rounded-xl flex items-center justify-center font-mono font-bold text-sm text-white shrink-0 shadow-md"
-                          style={{ backgroundColor: current.color }}
-                        >
-                          0{current.id}
+                      <div>
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block mb-0.5">
+                          {current.tag}
                         </span>
-                        <div>
-                          <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block">
-                            {current.tag}
-                          </span>
-                          <h3 className="text-lg sm:text-xl font-bold text-white">
-                            {current.name}
-                          </h3>
-                        </div>
+                        <h3 className="text-lg sm:text-xl font-bold text-white">
+                          {current.name}
+                        </h3>
                       </div>
                       <span className="self-start sm:self-auto px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-[#BE212A] shadow-sm">
                         {current.metric}
