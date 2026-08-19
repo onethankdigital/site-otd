@@ -556,17 +556,17 @@ export default function OneHub() {
 
             </div>
 
-            {/* Barra de Prova / Métricas na Base da Seção 3 */}
+            {/* Barra de Prova / Métricas na Base da Seção 3 (Cards Pretos) */}
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
               {[
                 { val: "< 3 seg", title: "Primeira Resposta por IA", desc: "Triagem com nome do cliente 24/7." },
                 { val: "Direto", title: "Roteamento para Vendedor", desc: "Encaminhado para a carteira certa no OneHub Smart." },
                 { val: "Dados", title: "Visão em Tempo Real", desc: "Controle de conversão e propostas no painel." },
               ].map((m, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-white border border-[#E4DDD0] shadow-sm text-center">
-                  <p className="font-display text-3xl sm:text-4xl font-black text-[#BE212A] mb-1">{m.val}</p>
-                  <p className="font-bold text-sm text-[#211E1B] mb-1">{m.title}</p>
-                  <p className="text-xs text-[#5C554E]">{m.desc}</p>
+                <div key={i} className="p-6 rounded-2xl bg-[#1A1714] border border-[#2E2824] shadow-md text-center">
+                  <p className="font-display text-3xl sm:text-4xl font-black text-[#BE212A] mb-1.5">{m.val}</p>
+                  <p className="font-bold text-sm text-white mb-1">{m.title}</p>
+                  <p className="text-xs text-[#C9C3B8]">{m.desc}</p>
                 </div>
               ))}
             </div>
