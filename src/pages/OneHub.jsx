@@ -862,6 +862,7 @@ export default function OneHub() {
                   tag: "ORGANIZAÇÃO",
                   title: "Smart",
                   metric: "CRM + Funil",
+                  color: "#BE212A",
                   tagline: "Fim do caos. Controle visual absoluto.",
                   desc: "Sua empresa para de perder leads no WhatsApp. Todos os contatos centralizados, funil visível e follow-up que não escapa — mesmo sem automação.",
                   items: ["Centraliza contatos e tarefas", "Funil de vendas visível", "Follow-up estruturado"],
@@ -872,6 +873,7 @@ export default function OneHub() {
                   tag: "AUTOMAÇÃO & IA",
                   title: "Flow Essencial",
                   metric: "IA + Automação",
+                  color: "#10B981",
                   tagline: "Sua primeira camada de inteligência operacional.",
                   desc: "O agente de IA responde, qualifica e direciona leads automaticamente. Sua equipe foca no fechamento enquanto a máquina cuida da entrada.",
                   items: ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
@@ -882,6 +884,7 @@ export default function OneHub() {
                   tag: "ESCALA",
                   title: "Flow Pro",
                   metric: "Equipes + Ramificação",
+                  color: "#F59E0B",
                   tagline: "Automação de alto nível pra crescimento acelerado.",
                   desc: "Automações complexas com ramificações por segmento, roteamento inteligente e estrutura para equipes em crescimento sem perder controle.",
                   items: ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
@@ -892,6 +895,7 @@ export default function OneHub() {
                   tag: "INTELIGÊNCIA TOTAL",
                   title: "Scale",
                   metric: "Analytics + Social",
+                  color: "#3B82F6",
                   tagline: "Rastreabilidade total e visão estratégica.",
                   desc: "Dados reais para decidir — métricas de fechamento, conversões rastreadas via Meta API, atendimento consultivo e módulo Social incluso.",
                   items: ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Módulo OneHub Social incluso"],
@@ -922,7 +926,7 @@ export default function OneHub() {
                           {plan.title}
                         </h3>
                       </div>
-                      <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold text-white bg-[#BE212A] shadow-md shrink-0 whitespace-nowrap">
+                      <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold text-white shadow-md shrink-0 whitespace-nowrap" style={{ backgroundColor: plan.color }}>
                         {plan.metric}
                       </span>
                     </div>
