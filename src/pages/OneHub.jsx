@@ -17,6 +17,55 @@ const WHATSAPP_LINK = "https://wa.me/5511978679090?text=Ol%C3%A1%2C%20gostaria%2
 export default function OneHub() {
   const container = useRef();
   const [activePin, setActivePin] = useState(1);
+  const [activeMotor, setActiveMotor] = useState(1);
+
+  const ecosystemMotors = [
+    {
+      id: 1,
+      name: "Agente IA",
+      tag: "Qualificação & Atendimento 24/7",
+      metric: "Atendimento em < 3 seg",
+      desc: "Qualificação automática com coleta do nome do cliente (ex: Marcos), porte da equipe e intenção antes de direcionar ao especialista.",
+      color: "#BE212A",
+      spot: { top: "18%", left: "50%" },
+    },
+    {
+      id: 2,
+      name: "Central de Atendimento",
+      tag: "Gestão & Qualidade Comercial",
+      metric: "98% Satisfação (NPS)",
+      desc: "Distribuição inteligente por filas de atendimento, acompanhamento de tempo de resposta e controle rigoroso de SLA da equipe.",
+      color: "#A855F7",
+      spot: { top: "35%", left: "15%" },
+    },
+    {
+      id: 3,
+      name: "CRM de Vendas",
+      tag: "Governança & Pipeline",
+      metric: "R$ 1.250.000 em Carteira",
+      desc: "Funil Kanban em tempo real no OneHub Smart, histórico unificado de conversas e carteira blindada diretamente com o vendedor responsável.",
+      color: "#D97757",
+      spot: { top: "35%", left: "85%" },
+    },
+    {
+      id: 4,
+      name: "Redes Sociais Omnichannel",
+      tag: "Captação Multicanal",
+      metric: "5 Canais Integrados",
+      desc: "Instagram, TikTok, LinkedIn, YouTube e Facebook direcionando todos os leads qualificados diretamente para a mesma fila de entrada.",
+      color: "#3B82F6",
+      spot: { top: "72%", left: "20%" },
+    },
+    {
+      id: 5,
+      name: "Conversões & Meta API",
+      tag: "Performance & Ads",
+      metric: "ROAS 4.6x Rastreado",
+      desc: "Conexão oficial Meta Cloud API (Verificada) com mensuração de faturamento real atribuído a cada campanha e anúncio veiculado.",
+      color: "#10B981",
+      spot: { top: "72%", left: "80%" },
+    },
+  ];
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
@@ -574,15 +623,15 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 4. SOLUÇÃO — O ECOSSISTEMA ONEHUB (DARK HIGH TECH STAGE) */}
+        {/* 4. SOLUÇÃO — O ECOSSISTEMA ONEHUB (DARK HIGH TECH INTERACTIVE 3D HUD) */}
         <section className="scene-solucao relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#211E1B] text-white border-b border-[#3A352F] overflow-hidden">
           {/* Luzes ambiente de acento */}
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#BE212A]/10 blur-[160px] rounded-full pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#BE212A]/10 blur-[170px] rounded-full pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10">
             
             {/* Cabeçalho Editorial */}
-            <div className="scene-solucao-header max-w-3xl mb-12 md:mb-16">
+            <div className="scene-solucao-header max-w-3xl mb-8 md:mb-12">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#BE212A]/15 border border-[#BE212A]/30 text-[#FF334B] text-xs font-bold uppercase tracking-widest mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
                 O ECOSSISTEMA ONEHUB
@@ -590,52 +639,112 @@ export default function OneHub() {
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight text-white">
                 5 Motores Conectados em um <span className="text-[#BE212A]">Hub Centralizador.</span>
               </h2>
-              <p className="mt-4 text-base sm:text-lg text-[#C9C3B8] leading-relaxed">
-                Esqueça ferramentas desconectadas. O OneHub unifica Atendimento por IA, CRM de Vendas, Rastreio de Conversões, Redes Sociais e Gestão de Equipe na mesma plataforma.
+              <p className="mt-3 text-base sm:text-lg text-[#C9C3B8] leading-relaxed">
+                Passe o mouse ou toque sobre as cúpulas de vidro para explorar os detalhes de cada motor em tempo real.
               </p>
             </div>
 
-            {/* Palco do Hub 3D */}
-            <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] p-6 sm:p-10 lg:p-12 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] mb-14">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
-                {/* Imagem em Destaque 3D */}
-                <div className="lg:col-span-7 relative group flex justify-center">
-                  <div className="relative rounded-2xl overflow-hidden border border-[#3A352F] shadow-[0_0_40px_rgba(190,33,42,0.25)] transition-transform duration-500 hover:scale-[1.01]">
-                    <img
-                      src="/onehub-ecossistema.webp"
-                      alt="Ecossistema 5 Motores OneHub"
-                      width={1024}
-                      height={1024}
-                      className="w-full h-auto object-cover max-w-[620px]"
-                    />
-                  </div>
-                </div>
+            {/* Seletores / Chips Rápidos para Alternar o Motor (Desktop + Mobile) */}
+            <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
+              {ecosystemMotors.map((m) => (
+                <button
+                  key={m.id}
+                  onClick={() => setActiveMotor(m.id)}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                    activeMotor === m.id
+                      ? "bg-[#BE212A] text-white shadow-[0_0_20px_rgba(190,33,42,0.4)] border border-[#FF334B]"
+                      : "bg-[#2C2822] text-[#C9C3B8] hover:text-white border border-[#3A352F]"
+                  }`}
+                >
+                  <span
+                    className="w-2 h-2 rounded-full"
+                    style={{ backgroundColor: m.color }}
+                  />
+                  0{m.id}. {m.name}
+                </button>
+              ))}
+            </div>
 
-                {/* Lista dos 5 Motores do Ecossistema */}
-                <div className="lg:col-span-5 space-y-3.5">
-                  {[
-                    { id: "01", name: "Agente IA", desc: "Qualificação automática, resposta humana em < 3s e atendimento 24/7.", color: "#BE212A" },
-                    { id: "02", name: "CRM de Vendas", desc: "Funil Kanban visível, histórico unificado e distribuição direta por vendedor.", color: "#D97757" },
-                    { id: "03", name: "Conversões & Meta API", desc: "Mensuração de anúncios com atribuição real de receita e métricas de ROAS.", color: "#10B981" },
-                    { id: "04", name: "Redes Sociais Omnichannel", desc: "Instagram, TikTok, LinkedIn e YouTube centralizados na mesma fila de entrada.", color: "#3B82F6" },
-                    { id: "05", name: "Central de Atendimento", desc: "Métricas de satisfação (NPS 98%), controle de fila e SLA da equipe comercial.", color: "#A855F7" },
-                  ].map((m) => (
-                    <div key={m.id} className="p-3.5 sm:p-4 rounded-xl bg-[#2C2822] border border-[#3A352F] flex items-start gap-3.5 transition-all hover:border-[#BE212A]/50">
-                      <span className="w-8 h-8 rounded-lg flex items-center justify-center font-mono font-bold text-xs text-white shrink-0" style={{ backgroundColor: `${m.color}30`, border: `1px solid ${m.color}60` }}>
-                        {m.id}
-                      </span>
-                      <div>
-                        <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                          {m.name}
-                        </h4>
-                        <p className="text-xs text-[#C9C3B8] mt-0.5 leading-relaxed">{m.desc}</p>
+            {/* Palco 100% Full-Bleed do Diagrama 3D com Hotspots Flutuantes */}
+            <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.6)] mb-14 p-3 sm:p-6 md:p-8">
+              
+              {/* Moldura da Imagem 100% Full Container */}
+              <div className="relative w-full aspect-square max-w-[900px] mx-auto flex items-center justify-center">
+                <img
+                  src="/onehub-ecossistema.webp"
+                  alt="Ecossistema 5 Motores OneHub 3D HUD"
+                  className="w-full h-full object-contain rounded-2xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
+                />
+
+                {/* Hotspots Interativos Sobre as 5 Cúpulas de Vidro */}
+                {ecosystemMotors.map((m) => {
+                  const isActive = activeMotor === m.id;
+                  return (
+                    <button
+                      key={m.id}
+                      onClick={() => setActiveMotor(m.id)}
+                      onMouseEnter={() => setActiveMotor(m.id)}
+                      style={{ top: m.spot.top, left: m.spot.left }}
+                      className="absolute -translate-x-1/2 -translate-y-1/2 group z-20 focus:outline-none"
+                    >
+                      {/* Anel Pulsante do Hotspot */}
+                      <div className="relative flex items-center justify-center">
+                        <span
+                          className={`absolute w-12 h-12 sm:w-16 sm:h-16 rounded-full animate-ping opacity-75 transition-all ${
+                            isActive ? "opacity-100 scale-125" : "opacity-40 group-hover:opacity-80"
+                          }`}
+                          style={{ backgroundColor: `${m.color}50` }}
+                        />
+                        <div
+                          className={`w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-white font-mono font-bold text-xs sm:text-sm shadow-lg transition-all duration-300 ${
+                            isActive
+                              ? "scale-125 border-2 border-white shadow-[0_0_25px_rgba(255,255,255,0.8)]"
+                              : "border border-white/40 group-hover:scale-110"
+                          }`}
+                          style={{ backgroundColor: m.color }}
+                        >
+                          0{m.id}
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-
+                    </button>
+                  );
+                })}
               </div>
+
+              {/* Popover Card Flutuante (Exibe os Detalhes do Motor Ativo em Destaque) */}
+              {(() => {
+                const current = ecosystemMotors.find((m) => m.id === activeMotor) || ecosystemMotors[0];
+                return (
+                  <div className="mt-4 sm:mt-6 max-w-3xl mx-auto p-5 sm:p-7 rounded-2xl bg-[#2C2822]/95 backdrop-blur-md border border-[#BE212A] shadow-[0_0_40px_rgba(190,33,42,0.35)] transition-all duration-500">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#3A352F] mb-3">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className="w-9 h-9 rounded-xl flex items-center justify-center font-mono font-bold text-sm text-white shrink-0 shadow-md"
+                          style={{ backgroundColor: current.color }}
+                        >
+                          0{current.id}
+                        </span>
+                        <div>
+                          <span className="text-[10px] font-mono uppercase tracking-wider text-[#FF334B] font-bold block">
+                            {current.tag}
+                          </span>
+                          <h3 className="text-lg sm:text-xl font-bold text-white">
+                            {current.name}
+                          </h3>
+                        </div>
+                      </div>
+                      <span className="self-start sm:self-auto px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-[#BE212A] shadow-sm">
+                        {current.metric}
+                      </span>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-[#C9C3B8] leading-relaxed">
+                      {current.desc}
+                    </p>
+                  </div>
+                );
+              })()}
+
             </div>
 
             {/* As 3 Camadas da Jornada de Implantação */}
