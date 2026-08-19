@@ -260,27 +260,14 @@ export default function OneHub() {
                 </h1>
 
                 {/* Subtítulo */}
-                <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg text-[#332F2A] leading-relaxed font-normal">
+                <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#332F2A] leading-relaxed font-normal">
                   O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
                 </p>
-
-                {/* Micro-Garantias */}
-                <div className="hero-anim mt-8 flex flex-wrap gap-4 text-xs font-mono text-[#5C554E]">
-                  <span className="flex items-center gap-1.5 bg-[#EFE9DF] px-3 py-1.5 rounded-lg border border-[#DDD5C7]">
-                    ✓ Sem Cartão de Crédito
-                  </span>
-                  <span className="flex items-center gap-1.5 bg-[#EFE9DF] px-3 py-1.5 rounded-lg border border-[#DDD5C7]">
-                    ✓ Onboarding Guiado em 48h
-                  </span>
-                  <span className="flex items-center gap-1.5 bg-[#EFE9DF] px-3 py-1.5 rounded-lg border border-[#DDD5C7]">
-                    ✓ 100% Meta Cloud API
-                  </span>
-                </div>
               </div>
 
-              {/* Coluna Direita: FORMULÁRIO PONTE (Inicia na altura do conteúdo e estende para a Seção 2) */}
-              <div className="lg:col-span-5 relative z-30 lg:-mb-36 lg:translate-y-4">
-                <div className="p-6 sm:p-8 rounded-3xl bg-[#1A1714] text-white border-2 border-[#BE212A] shadow-[0_25px_70px_rgba(0,0,0,0.6)] backdrop-blur-xl">
+              {/* Coluna Direita: FORMULÁRIO PONTE (Inicia na altura do CTA e estende profundamente para a Seção 2) */}
+              <div className="lg:col-span-5 relative z-30 lg:-mb-64 lg:translate-y-24 xl:translate-y-28 xl:-mb-72">
+                <div className="p-6 sm:p-8 rounded-3xl bg-[#1A1714] text-white border-2 border-[#BE212A] shadow-[0_25px_80px_rgba(0,0,0,0.7)] backdrop-blur-xl">
                   
                   {/* Header do Card */}
                   <div className="flex items-center justify-between gap-2 mb-2">
