@@ -752,8 +752,6 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* DEMONSTRAÇÃO INTERATIVA DO FLUXO */}
-        <OneHubMotionSection />
 
         {/* 5. QUALIFICAÇÃO & SEGMENTOS (PRA QUEM É) */}
         <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#FAF7F2] border-b border-[#E4DDD0]/60">
