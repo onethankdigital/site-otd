@@ -574,34 +574,85 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 4. SOLUÇÃO (LIGHT EDITORIAL EM 3 CAMADAS) */}
-        <section className="scene-solucao relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="scene-solucao-header max-w-2xl">
-              <p className="text-xs uppercase font-bold tracking-widest text-[#D97757] mb-2">O Ecossistema</p>
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B]">
-                Apresentando o OneHub.
+        {/* 4. SOLUÇÃO — O ECOSSISTEMA ONEHUB (DARK HIGH TECH STAGE) */}
+        <section className="scene-solucao relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#211E1B] text-white border-b border-[#3A352F] overflow-hidden">
+          {/* Luzes ambiente de acento */}
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#BE212A]/10 blur-[160px] rounded-full pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            
+            {/* Cabeçalho Editorial */}
+            <div className="scene-solucao-header max-w-3xl mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#BE212A]/15 border border-[#BE212A]/30 text-[#FF334B] text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
+                O ECOSSISTEMA ONEHUB
+              </div>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight text-white">
+                5 Motores Conectados em um <span className="text-[#BE212A]">Hub Centralizador.</span>
               </h2>
-              <p className="mt-2 text-base sm:text-lg text-[#4A453F]">Tecnologia aplicada à operação real.</p>
+              <p className="mt-4 text-base sm:text-lg text-[#C9C3B8] leading-relaxed">
+                Esqueça ferramentas desconectadas. O OneHub unifica Atendimento por IA, CRM de Vendas, Rastreio de Conversões, Redes Sociais e Gestão de Equipe na mesma plataforma.
+              </p>
             </div>
 
-            <p className="mt-8 font-display italic text-lg sm:text-xl md:text-2xl max-w-2xl text-[#211E1B]">
-              Primeiro organizamos. Depois automatizamos. Então escalamos com inteligência.
-            </p>
+            {/* Palco do Hub 3D */}
+            <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] p-6 sm:p-10 lg:p-12 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] mb-14">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                {/* Imagem em Destaque 3D */}
+                <div className="lg:col-span-7 relative group flex justify-center">
+                  <div className="relative rounded-2xl overflow-hidden border border-[#3A352F] shadow-[0_0_40px_rgba(190,33,42,0.25)] transition-transform duration-500 hover:scale-[1.01]">
+                    <img
+                      src="/onehub-ecossistema.webp"
+                      alt="Ecossistema 5 Motores OneHub"
+                      width={1024}
+                      height={1024}
+                      className="w-full h-auto object-cover max-w-[620px]"
+                    />
+                  </div>
+                </div>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Lista dos 5 Motores do Ecossistema */}
+                <div className="lg:col-span-5 space-y-3.5">
+                  {[
+                    { id: "01", name: "Agente IA", desc: "Qualificação automática, resposta humana em < 3s e atendimento 24/7.", color: "#BE212A" },
+                    { id: "02", name: "CRM de Vendas", desc: "Funil Kanban visível, histórico unificado e distribuição direta por vendedor.", color: "#D97757" },
+                    { id: "03", name: "Conversões & Meta API", desc: "Mensuração de anúncios com atribuição real de receita e métricas de ROAS.", color: "#10B981" },
+                    { id: "04", name: "Redes Sociais Omnichannel", desc: "Instagram, TikTok, LinkedIn e YouTube centralizados na mesma fila de entrada.", color: "#3B82F6" },
+                    { id: "05", name: "Central de Atendimento", desc: "Métricas de satisfação (NPS 98%), controle de fila e SLA da equipe comercial.", color: "#A855F7" },
+                  ].map((m) => (
+                    <div key={m.id} className="p-3.5 sm:p-4 rounded-xl bg-[#2C2822] border border-[#3A352F] flex items-start gap-3.5 transition-all hover:border-[#BE212A]/50">
+                      <span className="w-8 h-8 rounded-lg flex items-center justify-center font-mono font-bold text-xs text-white shrink-0" style={{ backgroundColor: `${m.color}30`, border: `1px solid ${m.color}60` }}>
+                        {m.id}
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                          {m.name}
+                        </h4>
+                        <p className="text-xs text-[#C9C3B8] mt-0.5 leading-relaxed">{m.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </div>
+
+            {/* As 3 Camadas da Jornada de Implantação */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 ["CAMADA 1", "Organização & CRM", "Fim do caos. Funil visível, histórico unificado e follow-up que não escapa mais."],
                 ["CAMADA 2", "Automação & IA", "Um agente de inteligência artificial cuidando das conversas que hoje ninguém no seu time tem tempo de responder."],
-                ["CAMADA 3", "Conversão & Escala", "Dado real para decidir — métricas de fechamento, tempo de resposta e previsão financeira."],
+                ["CAMADA 3", "Conversão & Escala", "Dados reais para decidir — métricas de fechamento, tempo de resposta e previsão financeira."],
               ].map(([tag, title, desc], i) => (
-                <div key={i} className="camada-card p-7 rounded-2xl bg-white border border-[#E4DDD0] shadow-sm">
+                <div key={i} className="camada-card p-7 rounded-2xl bg-[#1A1714] border border-[#3A352F] shadow-sm">
                   <span className="text-xs font-bold tracking-wider text-[#BE212A] block mb-2">{tag}</span>
-                  <h3 className="font-display font-medium text-xl mb-3 text-[#211E1B]">{title}</h3>
-                  <p className="text-sm text-[#4A453F] leading-relaxed">{desc}</p>
+                  <h3 className="font-display font-medium text-xl mb-3 text-white">{title}</h3>
+                  <p className="text-sm text-[#C9C3B8] leading-relaxed">{desc}</p>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
