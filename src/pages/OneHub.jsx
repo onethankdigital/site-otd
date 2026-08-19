@@ -987,12 +987,22 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 7. DIFERENCIAL — LAYOUT SPLIT EDITORIAL LIMPO */}
+        {/* 7. DIFERENCIAL — LAYOUT SPLIT COM IMAGEM AMPLIADA E MOTION DINÂMICO */}
         <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-32 bg-[#211E1B] text-white border-b border-[#3A352F]/60 overflow-hidden">
+          <style>{`
+            @keyframes floatBrain {
+              0%, 100% { transform: translateY(0px); }
+              50% { transform: translateY(-14px); }
+            }
+            .animate-float-brain {
+              animation: floatBrain 5.5s ease-in-out infinite;
+            }
+          `}</style>
+
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Coluna Esquerda: Apenas as Frases Essenciais */}
-            <div className="lg:col-span-6 text-left">
+            <div className="lg:col-span-5 text-left">
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
                 Não é CRM que ganhou WhatsApp.<br />
                 <span className="text-[#BE212A]">
@@ -1005,15 +1015,25 @@ export default function OneHub() {
               </p>
             </div>
 
-            {/* Coluna Direita: O Stage 3D da Imagem */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg rounded-3xl overflow-hidden border border-[#3A352F] shadow-[0_20px_60px_rgba(0,0,0,0.8)] bg-[#1A1714] group">
-                <img
-                  src="/onehub-whatsapp-brain.webp"
-                  alt="OneHub WhatsApp IA com Cérebro"
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/80 via-transparent to-transparent pointer-events-none" />
+            {/* Coluna Direita: Imagem Ampliada com Motion e Auras Neon */}
+            <div className="lg:col-span-7 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-2xl">
+                
+                {/* Auras de Luz Pulsante (Verde Meta e Carmim) */}
+                <div className="absolute -top-12 -right-12 w-80 h-80 rounded-full bg-[#10B981]/20 blur-3xl pointer-events-none animate-pulse" />
+                <div className="absolute -bottom-12 -left-12 w-80 h-80 rounded-full bg-[#BE212A]/25 blur-3xl pointer-events-none animate-pulse" style={{ animationDelay: '1.5s' }} />
+
+                {/* Stage 3D com Levitação e Glow Suave */}
+                <div className="animate-float-brain relative w-full rounded-3xl overflow-hidden border border-[#3A352F] shadow-[0_25px_70px_rgba(0,0,0,0.9)] bg-[#1A1714] group transition-transform duration-500 hover:scale-[1.02]">
+                  <img
+                    src="/onehub-whatsapp-brain.webp"
+                    alt="OneHub WhatsApp IA com Cérebro"
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Gradiente de Fusão na Base */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1714]/70 via-transparent to-transparent pointer-events-none" />
+                </div>
+
               </div>
             </div>
 
