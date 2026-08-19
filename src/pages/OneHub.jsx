@@ -843,54 +843,122 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 6. JORNADA DE EVOLUÇÃO */}
+        {/* 6. JORNADA DE EVOLUÇÃO — PREMIUM CARDS */}
         <section className="scene-jornada relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl mb-12">
               <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">Maturação</span>
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B]">
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
                 Comece onde você está.
               </h2>
-              <p className="mt-2 text-base sm:text-lg text-[#4A453F]">
+              <p className="mt-3 text-base sm:text-lg text-[#5C554E] leading-relaxed">
                 A evolução é natural — cada etapa resolve a dor da anterior, sem perder histórico, sem esfriar lead.
               </p>
             </div>
 
-            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="journey-line hidden lg:block" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
-                ["1", "Smart", "Fim do caos. Controle visual absoluto.",
-                  ["Centraliza contatos e tarefas", "Funil de vendas visível", "Follow-up estruturado"],
-                  "Ideal para primeiros passos na organização comercial.", false],
-                ["2", "Flow Essencial", "Sua primeira camada de automação e IA.",
-                  ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
-                  "Ideal para reduzir esforço manual sem perder organização.", false],
-                ["3", "Flow Pro", "Automação de alto nível pra crescimento acelerado.",
-                  ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
-                  "Ideal para operações já validadas que exigem tração.", false],
-                ["4", "Scale", "Inteligência, rastreabilidade e visão estratégica.",
-                  ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Módulo OneHub Social incluso"],
-                  "Ideal para alto volume, alta performance e gestão rigorosa.", true],
-              ].map(([n, title, tag, items, ideal, highlight], i) => (
-                <div key={i}
-                     className={`journey-card relative bg-white rounded-2xl p-6 shadow-sm ${highlight ? "border-2 border-[#BE212A]" : "border border-[#E4DDD0]"}`}>
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center font-display text-sm font-bold mb-4 bg-[#BE212A] text-white">{n}</div>
-                  <h3 className="font-display font-medium text-lg mb-1 text-[#211E1B]">{title}</h3>
-                  <p className="text-xs italic mb-4 text-[#D97757]">{tag}</p>
-                  <ul className="text-xs sm:text-sm space-y-2 text-[#4A453F]">
-                    {items.map((it, j) => <li key={j} className="flex items-start gap-1.5"><span className="text-[#BE212A] font-bold">·</span> {it}</li>)}
-                  </ul>
-                  <p className="text-xs mt-5 pt-4 border-t border-[#E4DDD0] text-[#736B63]">{ideal}</p>
+                {
+                  level: "01",
+                  title: "Smart",
+                  tagline: "Fim do caos. Controle visual absoluto.",
+                  items: ["Centraliza contatos e tarefas", "Funil de vendas visível", "Follow-up estruturado"],
+                  ideal: "Ideal para primeiros passos na organização comercial.",
+                  highlight: false,
+                },
+                {
+                  level: "02",
+                  title: "Flow Essencial",
+                  tagline: "Sua primeira camada de automação e IA.",
+                  items: ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
+                  ideal: "Ideal para reduzir esforço manual sem perder organização.",
+                  highlight: false,
+                },
+                {
+                  level: "03",
+                  title: "Flow Pro",
+                  tagline: "Automação de alto nível pra crescimento acelerado.",
+                  items: ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
+                  ideal: "Ideal para operações já validadas que exigem tração.",
+                  highlight: false,
+                },
+                {
+                  level: "04",
+                  title: "Scale",
+                  tagline: "Inteligência, rastreabilidade e visão estratégica.",
+                  items: ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Módulo OneHub Social incluso"],
+                  ideal: "Ideal para alto volume, alta performance e gestão rigorosa.",
+                  highlight: true,
+                },
+              ].map((plan, i) => (
+                <div
+                  key={i}
+                  className={`relative flex flex-col justify-between rounded-2xl p-6 sm:p-7 transition-all duration-300 ${
+                    plan.highlight
+                      ? "bg-[#1A1714] border-2 border-[#BE212A] shadow-[0_0_40px_rgba(190,33,42,0.15)]"
+                      : "bg-[#211E1B] border border-[#3A352F] hover:border-[#5C554E]"
+                  }`}
+                >
+                  {/* Badge Recomendado */}
+                  {plan.highlight && (
+                    <div className="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-[#BE212A] text-white text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                      Recomendado
+                    </div>
+                  )}
+
+                  <div>
+                    {/* Nível */}
+                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#5C554E] block mb-3">
+                      NÍVEL {plan.level}
+                    </span>
+
+                    {/* Título */}
+                    <h3 className="font-display font-semibold text-xl sm:text-2xl text-white mb-1">
+                      {plan.title}
+                    </h3>
+
+                    {/* Tagline */}
+                    <p className="text-xs italic text-[#D97757] mb-5">{plan.tagline}</p>
+
+                    {/* Features List */}
+                    <ul className="space-y-2.5 mb-6">
+                      {plan.items.map((item, j) => (
+                        <li key={j} className="flex items-start gap-2 text-xs sm:text-sm text-[#C9C3B8] leading-relaxed">
+                          <span className="text-[#10B981] font-bold mt-0.5 shrink-0">✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Rodapé — Perfil Ideal */}
+                  <p className="text-[11px] pt-4 border-t border-[#3A352F] text-[#736B63] leading-relaxed">
+                    {plan.ideal}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12 text-center">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-                 className="inline-flex px-8 py-3.5 rounded-xl font-semibold text-white bg-[#211E1B] hover:bg-[#BE212A] transition-colors">
-                Quero descobrir qual etapa é a minha
+            {/* CTA — 14 Dias Assistidos */}
+            <div className="mt-12 p-7 sm:p-8 rounded-2xl bg-[#211E1B] border border-[#3A352F] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h4 className="font-display font-medium text-xl sm:text-2xl text-white leading-snug">
+                  Não sabe qual nível é o seu? <span className="text-[#D97757]">A gente monta com você.</span>
+                </h4>
+                <p className="mt-2 text-xs sm:text-sm text-[#C9C3B8] max-w-2xl leading-relaxed">
+                  14 dias de acompanhamento assistido, sem custo, sem cartão, sem fidelidade. Montamos a operação juntos e você decide se faz sentido.
+                </p>
+              </div>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="px-7 py-4 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-sm sm:text-base transition-all shrink-0 whitespace-nowrap shadow-lg active:scale-[0.98]"
+              >
+                Quero meus 14 dias — grátis →
               </a>
             </div>
+
           </div>
         </section>
 
