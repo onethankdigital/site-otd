@@ -1,41 +1,123 @@
 // src/pages/OneHub.jsx
-// Rota sugerida: /onehub
-// Fontes: adicionar no index.html --
-// <link rel="preconnect" href="https://fonts.googleapis.com">
-// <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-//
-// CTAs SEM integração ainda — apontam pra wa.me. Trocar por fluxo real (form/n8n) depois do go-live.
+// Rota: /onehub
+// Direção Visual: Craft editorial premium (Sóbrio, tipografia forte, respiro, contraste intencional)
+// Paleta: Base marfim #FAF7F2, Texto carvão #211E1B, Vermelho #BE212A (CTA/acento), Terracota #D97757 (apoio)
 
 import { useEffect, useRef } from "react";
 import { Helmet } from 'react-helmet-async';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import OneHubMotionSection from "../components/OneHubMotionSection";
 
-const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Quero%20conhecer%20o%20OneHub"; // TODO: número real
+gsap.registerPlugin(ScrollTrigger);
 
-function useReveal() {
-  const ref = useRef(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && el.classList.add("in"),
-      { threshold: 0.15 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-  return ref;
-}
-
-function Reveal({ children, className = "", ...props }) {
-  const ref = useReveal();
-  return (
-    <div ref={ref} className={`reveal ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
+const WHATSAPP_LINK = "https://wa.me/5511978679090?text=Ol%C3%A1%2C%20gostaria%20de%20iniciar%20os%2014%20dias%20assistidos%20do%20OneHub.";
 
 export default function OneHub() {
+  const container = useRef();
+
+  useGSAP(() => {
+    let mm = gsap.matchMedia();
+
+    // 1. DESKTOP & REDUCED MOTION (Sóbrio, editorial e fluido)
+    mm.add("(min-width: 769px) and (prefers-reduced-motion: no-preference)", () => {
+      // Entrada sutil do Hero Text & Cockpit
+      const tlHero = gsap.timeline({ defaults: { ease: "power2.out" } });
+      tlHero.from(".nav-anim", { y: -15, autoAlpha: 0, duration: 0.6 })
+            .from(".hero-anim", { y: 25, autoAlpha: 0, duration: 0.8, stagger: 0.12 }, "-=0.3")
+            .from(".hero-cockpit-anim", { y: 35, autoAlpha: 0, duration: 0.9 }, "-=0.4");
+
+      // CENA 2: Situação & Problema (Sóbrio)
+      gsap.fromTo(".scene-problema-title", 
+        { autoAlpha: 0, y: 30 },
+        { 
+          autoAlpha: 1, y: 0, duration: 0.8, ease: "power2.out",
+          scrollTrigger: { trigger: ".scene-problema", start: "top 80%" }
+        }
+      );
+
+      gsap.utils.toArray(".card-problema").forEach((card, index) => {
+        gsap.fromTo(card, 
+          { autoAlpha: 0, y: 30 + index * 10 },
+          {
+            autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      });
+
+      // CENA 3: Teto de Vidro & Implicação
+      gsap.fromTo(".scene-teto-text",
+        { autoAlpha: 0.4, y: 20 },
+        {
+          autoAlpha: 1, y: 0, duration: 0.8, ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".scene-teto",
+            start: "top 80%"
+          }
+        }
+      );
+
+      // CENA 4: Solução em 3 Camadas
+      gsap.fromTo(".scene-solucao-header", 
+        { autoAlpha: 0, y: 30 },
+        {
+          autoAlpha: 1, y: 0, duration: 0.8, ease: "power2.out",
+          scrollTrigger: { trigger: ".scene-solucao", start: "top 80%" }
+        }
+      );
+
+      gsap.utils.toArray(".camada-card").forEach((card) => {
+        gsap.fromTo(card,
+          { autoAlpha: 0, y: 30 },
+          {
+            autoAlpha: 1, y: 0, duration: 0.6, ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      });
+
+      // CENA 5: Jornada
+      gsap.fromTo(".journey-card",
+        { autoAlpha: 0, y: 30 },
+        {
+          autoAlpha: 1, y: 0, duration: 0.7, stagger: 0.15, ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".scene-jornada",
+            start: "top 75%"
+          }
+        }
+      );
+    });
+
+    // 2. MOBILE E PREFERS-REDUCED-MOTION (Experiência Leve e Fluida)
+    mm.add("(max-width: 768px), (prefers-reduced-motion: reduce)", () => {
+      gsap.from(".nav-anim", { autoAlpha: 0, duration: 0.4 });
+      gsap.from(".hero-anim", { autoAlpha: 0, y: 15, duration: 0.5, stagger: 0.08 });
+      gsap.from(".hero-cockpit-anim", { autoAlpha: 0, y: 20, duration: 0.6, delay: 0.2 });
+
+      gsap.utils.toArray(".gsap-reveal, .card-problema, .camada-card, .journey-card").forEach(el => {
+        gsap.fromTo(el, 
+          { autoAlpha: 0, y: 15 },
+          {
+            autoAlpha: 1, y: 0, duration: 0.5, ease: "power2.out",
+            scrollTrigger: { trigger: el, start: "top 92%" }
+          }
+        );
+      });
+    });
+
+  }, { scope: container });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -43,246 +125,325 @@ export default function OneHub() {
   return (
     <>
       <Helmet>
-        <title>OneHub — CRM + WhatsApp + IA para Operações Comerciais | One Thank Digital</title>
-        <meta name="description" content="O OneHub transforma seu WhatsApp em operação comercial estruturada. CRM integrado, agente de IA e automações para fechar mais negócios sem contratar mais pessoas." />
+        <title>OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA | One Thank Digital</title>
+        <meta name="description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
         <link rel="canonical" href="https://onethank.com.br/onehub" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://onethank.com.br/onehub" />
-        <meta property="og:title" content="OneHub — CRM + WhatsApp + IA | One Thank Digital" />
-        <meta property="og:description" content="Transforme cada conversa em processo comercial. CRM nativo, agente de IA e automações no WhatsApp." />
-        <meta property="og:image" content="https://onethank.com.br/hero-bg.webp" />
+        <meta property="og:title" content="OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA" />
+        <meta property="og:description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
+        <meta property="og:image" content="https://onethank.com.br/onehub-hero.webp" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://onethank.com.br/onehub" />
-        <meta property="twitter:title" content="OneHub — CRM + WhatsApp + IA | One Thank Digital" />
-        <meta property="twitter:description" content="Transforme cada conversa em processo comercial. CRM nativo, agente de IA e automações no WhatsApp." />
-        <meta property="twitter:image" content="https://onethank.com.br/hero-bg.webp" />
+        <meta property="twitter:title" content="OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA" />
+        <meta property="twitter:description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
+        <meta property="twitter:image" content="https://onethank.com.br/onehub-hero.webp" />
       </Helmet>
 
-      <div className="bg-[#FAF7F2] text-[#211E1B] font-sans overflow-x-hidden">
-      <style>{`
-        .font-display { font-family: 'Fraunces', serif; }
-        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
-        .reveal.in { opacity: 1; transform: translateY(0); }
-        .journey-line { position:absolute; top:32px; left:0; right:0; height:2px; background:repeating-linear-gradient(90deg, #D97757 0 8px, transparent 8px 16px); z-index:0; }
-        body { font-family: 'Manrope', sans-serif; }
-        .hero-img { border-radius: 16px; box-shadow: 0 24px 64px -12px rgba(33,30,27,.18), 0 0 0 1px rgba(33,30,27,.06); }
-      `}</style>
+      <div ref={container} className="bg-[#FAF7F2] text-[#211E1B] font-sans overflow-x-hidden selection:bg-[#BE212A] selection:text-white">
+        <style>{`
+          .font-display { font-family: 'Fraunces', 'DM Serif Display', Georgia, serif; letter-spacing: -0.015em; }
+          .journey-line { position:absolute; top:32px; left:0; right:0; height:2px; background:repeating-linear-gradient(90deg, #D97757 0 8px, transparent 8px 16px); z-index:0; }
+          .gsap-reveal, .nav-anim, .hero-anim, .hero-cockpit-anim { will-change: transform, opacity; }
+        `}</style>
 
-      {/* NAV */}
-      <nav className="relative z-10 flex items-center justify-between px-6 md:px-16 py-6">
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#BE212A]" />
-          <span className="font-display text-xl tracking-tight">OneHub</span>
-        </div>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-           className="text-sm font-semibold px-5 py-2.5 rounded-full bg-[#211E1B] text-[#FAF7F2]">
-          Testar grátis
-        </a>
-      </nav>
-
-      {/* 1. HERO */}
-      <section className="relative z-10 overflow-hidden min-h-[520px] md:min-h-[620px] flex flex-col justify-end md:justify-center">
-
-        {/* Imagem de fundo — cobre a seção inteira */}
-        <img
-          src="/onehub-hero.webp"
-          alt="Interface do OneHub — CRM e automação de WhatsApp integrados"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          loading="eager"
-          decoding="async"
-        />
-
-        {/* Overlay gradiente — garante legibilidade do texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 to-[#FAF7F2]/10 md:to-transparent" />
-        {/* Overlay inferior em mobile para texto não disputar com a imagem */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF7F2]/80 via-transparent to-transparent md:hidden" />
-
-        {/* Conteúdo de texto — fica sobre a imagem */}
-        <div className="relative z-10 px-6 md:px-16 pt-14 pb-16 md:pt-20 md:pb-28 max-w-2xl">
-          <p className="font-display italic text-[#D97757] text-sm mb-5">
-            Ecossistema OneHub · CRM + WhatsApp + IA
-          </p>
-          <h1 className="font-display font-medium leading-[1.05] text-[42px] md:text-[58px] lg:text-[68px]">
-            Seu WhatsApp vende.<br />
-            <span className="italic text-[#BE212A]">Só ninguém está cuidando dele.</span>
-          </h1>
-          <p className="mt-7 text-lg md:text-xl max-w-xl text-[#4A453F]">
-            OneHub transforma cada conversa em processo comercial — sem perder o tom humano.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-               className="px-7 py-3.5 rounded-full font-semibold text-white shadow-lg bg-[#BE212A]">
-              Testar o OneHub grátis
-            </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-               className="px-7 py-3.5 rounded-full font-semibold border-2 border-[#211E1B]">
-              Solicitar diagnóstico gratuito
+        {/* 0. NAVEGAÇÃO EDITORIAL */}
+        <header className="w-full border-b border-[#E4DDD0]/80 bg-[#FAF7F2]/90 backdrop-blur-md sticky top-0 z-30">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <a href="/onehub" className="nav-anim flex items-center gap-2">
+                <span className="font-display font-semibold text-2xl tracking-tight text-[#211E1B]">
+                  One<span className="text-[#BE212A]">Hub</span>
+                </span>
+              </a>
+            </div>
+            <span className="nav-anim hidden md:inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#736B63]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D97757]"></span>
+              WhatsApp Oficial · CRM · Inteligência Artificial
+            </span>
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-anim inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs md:text-sm font-semibold text-white bg-[#211E1B] hover:bg-[#BE212A] transition-colors"
+            >
+              Falar com Consultor
             </a>
           </div>
-        </div>
+        </header>
 
-      </section>
+        {/* 1. HERO SECTION (CRAFT EDITORIAL PREMIUM) */}
+        <section className="relative z-10 pt-8 pb-14 sm:pt-12 sm:pb-20 md:pt-16 md:pb-24 border-b border-[#E4DDD0]/60">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
+            
+            {/* Bloco de Conteúdo */}
+            <div className="max-w-4xl">
+              
+              {/* Eyebrow */}
+              <div className="hero-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DF] border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide mb-5 sm:mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
+                <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
+              </div>
 
-      {/* 2. SITUAÇÃO + PROBLEMA */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-20 md:py-28 bg-[#211E1B] text-[#FAF7F2]">
-        <div className="max-w-3xl">
-          <h2 className="font-display italic text-3xl md:text-5xl leading-tight">
-            Muitas conversas.<br />Muito movimento.
-          </h2>
-          <p className="mt-6 text-lg md:text-xl text-[#C9C3B8]">
-            O WhatsApp virou a porta de entrada do seu negócio. O problema é que ele nunca foi feito
-            pra administrar operação comercial nenhuma.
-          </p>
-          <p className="mt-4 text-lg md:text-xl font-semibold text-[#D97757]">
-            Excelente canal de comunicação. Péssimo sistema de gestão.
-          </p>
-        </div>
-        <div className="mt-14 grid md:grid-cols-4 gap-5">
-          {[
-            "Leads que se perdem no meio da rolagem de mensagens",
-            "Follow-ups que ficam pra depois — e o depois nunca chega",
-            "Nenhuma visão real de quantas oportunidades estão em aberto",
-            "Você (ou seu time) apagando incêndio, em vez de vender",
-          ].map((t, i) => (
-            <div key={i} className="p-6 rounded-2xl bg-[#2C2822]">
-              <p className="font-display text-2xl mb-2 text-[#BE212A]">{`0${i + 1}`}</p>
-              <p className="text-sm text-[#DED8CC]">{t}</p>
+              {/* H1 em 2 linhas (2ª em vermelho #BE212A) */}
+              <h1 className="hero-anim font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[62px] leading-[1.12] text-[#211E1B] tracking-tight">
+                Seu WhatsApp recebe cliente o dia todo.<br />
+                <span className="text-[#BE212A]">E perde venda na bagunça.</span>
+              </h1>
+
+              {/* Subtítulo */}
+              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#4A453F] leading-relaxed max-w-3xl">
+                O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
+              </p>
+
+              {/* CTA Primário & Microcopy (Mobile First — Visível acima da dobra) */}
+              <div className="hero-anim mt-7 sm:mt-9 flex flex-col items-start">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-bold text-white text-base sm:text-lg bg-[#BE212A] hover:bg-[#A61B23] transition-all shadow-sm active:scale-[0.99]"
+                >
+                  Quero meus 14 dias assistidos — grátis
+                </a>
+                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#736B63] font-normal">
+                  Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
+                </p>
+              </div>
+
             </div>
-          ))}
-        </div>
-      </Reveal>
 
-      {/* 3. IMPLICAÇÃO */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-20 md:py-28">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-base md:text-lg leading-relaxed text-[#4A453F]">
-            Cada lead perdido no chat não é só uma mensagem sem resposta — é uma venda que foi pro
-            concorrente que respondeu primeiro. Sem visibilidade do funil, toda decisão de crescimento
-            vira palpite, não dado.
-          </p>
-          <p className="font-display italic text-2xl md:text-4xl mt-10 leading-snug">
-            O aplicativo padrão não é uma ferramenta gratuita.<br />
-            É o <span className="text-[#BE212A]">teto de vidro</span> da sua operação.
-          </p>
-          <p className="mt-6 text-base text-[#4A453F]">Você só não vê o preço até tentar crescer além dele.</p>
-        </div>
-      </Reveal>
+            {/* Visual: Cockpit Claro do Produto (Pipeline + Valores + Conversão) */}
+            <div className="hero-cockpit-anim mt-10 sm:mt-14 md:mt-16 relative rounded-2xl overflow-hidden border border-[#E4DDD0] bg-white shadow-[0_10px_35px_rgba(0,0,0,0.06)]">
+              <div className="bg-[#FAF7F2] border-b border-[#E4DDD0] px-4 py-2.5 flex items-center justify-between text-xs text-[#736B63]">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#E4DDD0]"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#E4DDD0]"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#E4DDD0]"></span>
+                </div>
+                <span className="font-medium">OneHub Cockpit Comercial · Painel em Tempo Real</span>
+                <span className="text-[#25D366] font-semibold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] inline-block"></span>
+                  Meta Cloud Conectada
+                </span>
+              </div>
 
-      {/* 4. SOLUÇÃO */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-20 md:py-28 bg-[#F3EEE5]">
-        <div className="max-w-2xl">
-          <p className="font-display italic text-[#D97757] text-sm mb-3">A solução</p>
-          <h2 className="font-display text-3xl md:text-5xl">Apresentando o OneHub.</h2>
-          <p className="mt-3 text-lg text-[#4A453F]">Tecnologia aplicada à operação real.</p>
-        </div>
-        <p className="mt-10 font-display italic text-xl md:text-2xl max-w-xl text-[#D97757]">
-          Primeiro organizamos. Depois automatizamos. Então escalamos com inteligência.
-        </p>
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {[
-            ["CAMADA 1", "Organização & CRM", "Fim do caos. Funil visível, follow-up que não escapa mais."],
-            ["CAMADA 2", "Automação & IA", "Um agente de inteligência artificial cuidando das conversas que hoje ninguém no seu time tem tempo de responder."],
-            ["CAMADA 3", "Conversão & Escala", "Dado real pra decidir — não achismo."],
-          ].map(([tag, title, desc], i) => (
-            <div key={i} className="p-7 rounded-2xl bg-white border border-[#E4DDD0] transition-transform hover:-translate-y-1.5 hover:shadow-xl">
-              <span className="text-xs font-bold tracking-wider text-[#BE212A]">{tag}</span>
-              <h3 className="font-display text-xl mt-2 mb-3">{title}</h3>
-              <p className="text-sm text-[#4A453F]">{desc}</p>
+              <img
+                src="/onehub-hero.webp"
+                alt="Cockpit OneHub: Pipeline comercial, gestão de atendentes e automação no WhatsApp Oficial"
+                width={2730}
+                height={1536}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="w-full h-auto object-cover object-top"
+              />
             </div>
-          ))}
-        </div>
-      </Reveal>
 
-      {/* 5. PRA QUEM É */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-20 md:py-28">
-        <h2 className="font-display text-3xl md:text-4xl mb-12">Pra quem o OneHub foi desenhado</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            ["Operações B2B", "Negociam com outras empresas, ciclo de venda mais longo e consultivo."],
-            ["Prestadores de serviço", "Dependem de follow-up rigoroso e relacionamento no WhatsApp."],
-            ["Vendas high-ticket", "Cada lead perdido representa um alto custo de oportunidade."],
-          ].map(([title, desc], i) => (
-            <div key={i} className="p-7 rounded-2xl bg-[#211E1B] text-[#FAF7F2]">
-              <h3 className="font-display text-lg mb-2 text-[#D97757]">{title}</h3>
-              <p className="text-sm text-[#C9C3B8]">{desc}</p>
+          </div>
+        </section>
+
+        {/* 2. SITUAÇÃO + PROBLEMA (DARK HÍBRIDO SÓBRIO) */}
+        <section className="scene-problema relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#211E1B] text-[#FAF7F2] overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div className="scene-problema-title max-w-3xl">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-3">
+                Diagnóstico Comercial
+              </span>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight">
+                Muitas conversas.<br />Muito movimento.
+              </h2>
+              <p className="mt-5 text-base sm:text-lg md:text-xl text-[#C9C3B8] leading-relaxed">
+                O WhatsApp virou a porta de entrada do seu negócio. O problema é que ele nunca foi feito pra administrar operação comercial nenhuma.
+              </p>
+              <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[#D97757]">
+                Excelente canal de comunicação. Péssimo sistema de gestão.
+              </p>
             </div>
-          ))}
-        </div>
-      </Reveal>
 
-      {/* 6. JORNADA */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-20 md:py-28 bg-[#F3EEE5]">
-        <div className="max-w-2xl mb-14">
-          <h2 className="font-display text-3xl md:text-5xl">Comece onde você está.</h2>
-          <p className="mt-3 text-lg text-[#4A453F]">
-            A evolução é natural — cada etapa resolve a dor da anterior, sem perder histórico, sem esfriar lead.
-          </p>
-        </div>
-        <div className="relative grid md:grid-cols-4 gap-6">
-          <div className="journey-line hidden md:block" />
-          {[
-            ["1", "Smart", "Fim do caos. Controle visual absoluto.",
-              ["Centraliza contatos e tarefas", "Funil de vendas visível", "Follow-up estruturado"],
-              "Ideal para primeiros passos na organização comercial.", false],
-            ["2", "Flow Essencial", "Sua primeira camada de automação e IA.",
-              ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
-              "Ideal para reduzir esforço manual sem perder organização.", false],
-            ["3", "Flow Pro", "Automação de alto nível pra crescimento acelerado.",
-              ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
-              "Ideal para operações já validadas.", false],
-            ["4", "Scale", "Inteligência, rastreabilidade e visão estratégica.",
-              ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Bônus: módulo OneHub Social"],
-              "Ideal para alto volume e gestão rigorosa.", true],
-          ].map(([n, title, tag, items, ideal, highlight], i) => (
-            <div key={i}
-                 className={`relative bg-white rounded-2xl p-6 transition-transform hover:-translate-y-1.5 hover:shadow-xl ${highlight ? "border-2 border-[#BE212A]" : "border border-[#E4DDD0]"}`}>
-              <div className="w-9 h-9 rounded-full flex items-center justify-center font-display text-sm font-semibold mb-4 bg-[#BE212A] text-white">{n}</div>
-              <h3 className="font-display text-lg mb-1">{title}</h3>
-              <p className="text-xs italic mb-3 text-[#D97757]">{tag}</p>
-              <ul className="text-sm space-y-1.5 text-[#4A453F]">
-                {items.map((it, j) => <li key={j}>· {it}</li>)}
-              </ul>
-              <p className="text-xs mt-4 pt-4 border-t border-[#E4DDD0] text-[#4A453F]">{ideal}</p>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                "Leads que se perdem no meio da rolagem de mensagens",
+                "Follow-ups que ficam pra depois — e o depois nunca chega",
+                "Nenhuma visão real de quantas oportunidades estão em aberto",
+                "Você (ou seu time) apagando incêndio, em vez de vender",
+              ].map((t, i) => (
+                <div key={i} className="card-problema p-6 rounded-2xl bg-[#2C2822] border border-[#3A352F]">
+                  <p className="font-display text-2xl font-bold mb-2 text-[#BE212A]">{`0${i + 1}`}</p>
+                  <p className="text-sm text-[#DED8CC] leading-relaxed">{t}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="mt-12 text-center">
-          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-             className="inline-block px-7 py-3.5 rounded-full font-semibold text-white bg-[#211E1B]">
-            Quero descobrir qual etapa é a minha
-          </a>
-        </div>
-      </Reveal>
+          </div>
+        </section>
 
-      {/* 7. DIFERENCIAL */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-24 md:py-32 text-center bg-[#BE212A] text-white">
-        <h2 className="font-display italic text-3xl md:text-5xl max-w-3xl mx-auto leading-tight">
-          Não é CRM que ganhou WhatsApp.<br />É WhatsApp que ganhou cérebro.
-        </h2>
-        <p className="mt-8 max-w-xl mx-auto text-base md:text-lg text-[#FBE2E1]">
-          O agente de IA não é um chatbot colado depois. É inteligência nativa em cada conversa —
-          configurado sob medida pro escopo do seu negócio, do primeiro "oi" até o fechamento.
-        </p>
-      </Reveal>
+        {/* 3. IMPLICAÇÃO (LIGHT EDITORIAL) */}
+        <section className="scene-teto relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 border-b border-[#E4DDD0]/60">
+          <div className="scene-teto-text max-w-3xl mx-auto text-center">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#4A453F]">
+              Cada lead perdido no chat não é só uma mensagem sem resposta — é uma venda que foi pro concorrente que respondeu primeiro. Sem visibilidade do funil, toda decisão de crescimento vira palpite, não dado.
+            </p>
+            <p className="font-display font-medium text-2xl sm:text-3xl md:text-4xl mt-8 leading-snug text-[#211E1B]">
+              O aplicativo padrão não é uma ferramenta gratuita.<br />
+              É o <span className="text-[#BE212A]">teto de vidro</span> da sua operação.
+            </p>
+            <p className="mt-4 text-sm sm:text-base text-[#736B63]">
+              Você só não vê o preço até tentar crescer além dele.
+            </p>
+          </div>
+        </section>
 
-      {/* 8. CTA FINAL */}
-      <Reveal className="relative z-10 px-6 md:px-16 py-24 md:py-32 text-center">
-        <h2 className="font-display text-3xl md:text-5xl max-w-2xl mx-auto">
-          Pare de apenas operar.<br />
-          <span className="italic text-[#BE212A]">Comece a escalar com inteligência.</span>
-        </h2>
-        <p className="mt-6 text-lg text-[#4A453F]">Dê o próximo passo na maturidade comercial da sua empresa.</p>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-           className="inline-block mt-10 px-9 py-4 rounded-full font-semibold text-white text-lg shadow-xl bg-[#BE212A]">
-          Solicitar Diagnóstico Consultivo Gratuito
-        </a>
-      </Reveal>
+        {/* 4. SOLUÇÃO (LIGHT EDITORIAL EM 3 CAMADAS) */}
+        <section className="scene-solucao relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
+          <div className="max-w-7xl mx-auto">
+            <div className="scene-solucao-header max-w-2xl">
+              <p className="text-xs uppercase font-bold tracking-widest text-[#D97757] mb-2">A Arquitetura</p>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B]">
+                Apresentando o OneHub.
+              </h2>
+              <p className="mt-2 text-base sm:text-lg text-[#4A453F]">Tecnologia aplicada à operação real.</p>
+            </div>
 
-      <footer className="relative z-10 px-6 md:px-16 py-8 border-t border-[#E4DDD0] text-center text-xs text-[#4A453F]">
-        OneHub — um ecossistema OTD · onethank.com.br/onehub
-      </footer>
-    </div>
+            <p className="mt-8 font-display italic text-lg sm:text-xl md:text-2xl max-w-2xl text-[#211E1B]">
+              Primeiro organizamos. Depois automatizamos. Então escalamos com inteligência.
+            </p>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                ["CAMADA 1", "Organização & CRM", "Fim do caos. Funil visível, histórico unificado e follow-up que não escapa mais."],
+                ["CAMADA 2", "Automação & IA", "Um agente de inteligência artificial cuidando das conversas que hoje ninguém no seu time tem tempo de responder."],
+                ["CAMADA 3", "Conversão & Escala", "Dado real para decidir — métricas de fechamento, tempo de resposta e previsão financeira."],
+              ].map(([tag, title, desc], i) => (
+                <div key={i} className="camada-card p-7 rounded-2xl bg-white border border-[#E4DDD0] shadow-sm">
+                  <span className="text-xs font-bold tracking-wider text-[#BE212A] block mb-2">{tag}</span>
+                  <h3 className="font-display font-medium text-xl mb-3 text-[#211E1B]">{title}</h3>
+                  <p className="text-sm text-[#4A453F] leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* DEMONSTRAÇÃO INTERATIVA DO FLUXO */}
+        <OneHubMotionSection />
+
+        {/* 5. PRA QUEM É */}
+        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 border-b border-[#E4DDD0]/60">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-2xl mb-10">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">Segmentos</span>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#211E1B]">
+                Para quem o OneHub foi desenhado
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                ["Operações B2B", "Negociam com outras empresas, ciclo de venda consultivo e múltiplos pontos de contato."],
+                ["Prestadores de Serviço", "Dependem de follow-up rigoroso, agendamentos rápidos e relacionamento ativo."],
+                ["Vendas High-Ticket", "Cada lead perdido representa um alto custo de oportunidade e receita que não volta."],
+              ].map(([title, desc], i) => (
+                <div key={i} className="p-7 rounded-2xl bg-[#211E1B] text-[#FAF7F2]">
+                  <h3 className="font-display font-medium text-lg mb-2 text-[#D97757]">{title}</h3>
+                  <p className="text-sm text-[#C9C3B8] leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 6. JORNADA DE EVOLUÇÃO */}
+        <section className="scene-jornada relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-2xl mb-12">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">Maturação</span>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B]">
+                Comece onde você está.
+              </h2>
+              <p className="mt-2 text-base sm:text-lg text-[#4A453F]">
+                A evolução é natural — cada etapa resolve a dor da anterior, sem perder histórico, sem esfriar lead.
+              </p>
+            </div>
+
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="journey-line hidden lg:block" />
+              {[
+                ["1", "Smart", "Fim do caos. Controle visual absoluto.",
+                  ["Centraliza contatos e tarefas", "Funil de vendas visível", "Follow-up estruturado"],
+                  "Ideal para primeiros passos na organização comercial.", false],
+                ["2", "Flow Essencial", "Sua primeira camada de automação e IA.",
+                  ["Tudo do Smart", "Um agente de IA nas conversas", "Automação de processos primários"],
+                  "Ideal para reduzir esforço manual sem perder organização.", false],
+                ["3", "Flow Pro", "Automação de alto nível pra crescimento acelerado.",
+                  ["Tudo do Flow Essencial", "Automações complexas e ramificadas", "Estrutura para equipes em expansão"],
+                  "Ideal para operações já validadas que exigem tração.", false],
+                ["4", "Scale", "Inteligência, rastreabilidade e visão estratégica.",
+                  ["Tudo do Flow Pro", "Analytics e conversões avançado", "Atendimento consultivo dedicado", "Módulo OneHub Social incluso"],
+                  "Ideal para alto volume, alta performance e gestão rigorosa.", true],
+              ].map(([n, title, tag, items, ideal, highlight], i) => (
+                <div key={i}
+                     className={`journey-card relative bg-white rounded-2xl p-6 shadow-sm ${highlight ? "border-2 border-[#BE212A]" : "border border-[#E4DDD0]"}`}>
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center font-display text-sm font-bold mb-4 bg-[#BE212A] text-white">{n}</div>
+                  <h3 className="font-display font-medium text-lg mb-1 text-[#211E1B]">{title}</h3>
+                  <p className="text-xs italic mb-4 text-[#D97757]">{tag}</p>
+                  <ul className="text-xs sm:text-sm space-y-2 text-[#4A453F]">
+                    {items.map((it, j) => <li key={j} className="flex items-start gap-1.5"><span className="text-[#BE212A] font-bold">·</span> {it}</li>)}
+                  </ul>
+                  <p className="text-xs mt-5 pt-4 border-t border-[#E4DDD0] text-[#736B63]">{ideal}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
+                 className="inline-flex px-8 py-3.5 rounded-xl font-semibold text-white bg-[#211E1B] hover:bg-[#BE212A] transition-colors">
+                Quero descobrir qual etapa é a minha
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. DIFERENCIAL */}
+        <section className="scene-diferencial relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#211E1B] text-white overflow-hidden">
+          <div className="scene-diferencial-text max-w-3xl mx-auto">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl leading-tight">
+              Não é CRM que ganhou WhatsApp.<br />
+              <span className="text-[#BE212A]">É WhatsApp que ganhou cérebro.</span>
+            </h2>
+            <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-[#DED8CC] leading-relaxed">
+              O agente de IA não é um chatbot colado depois. É inteligência nativa em cada conversa — configurado sob medida para o escopo do seu negócio, do primeiro contato ao fechamento.
+            </p>
+          </div>
+        </section>
+
+        {/* 8. CTA FINAL */}
+        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#FAF7F2]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
+              Pare de apenas operar.<br />
+              <span className="text-[#BE212A]">Comece a escalar com inteligência.</span>
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[#4A453F]">
+              Dê o próximo passo na maturidade comercial da sua empresa com 14 dias de acompanhamento assistido.
+            </p>
+            <div className="mt-8 flex flex-col items-center">
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
+                 className="inline-flex items-center justify-center px-9 py-4 rounded-xl font-bold text-white text-base sm:text-lg shadow-sm bg-[#BE212A] hover:bg-[#A61B23] transition-colors">
+                Quero meus 14 dias assistidos — grátis
+              </a>
+              <p className="mt-3 text-xs sm:text-sm text-[#736B63]">
+                Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="relative z-10 px-5 sm:px-8 md:px-12 py-8 border-t border-[#E4DDD0] text-center text-xs text-[#736B63]">
+          OneHub — um ecossistema One Thank Digital · onethank.com.br/onehub
+        </footer>
+      </div>
     </>
   );
 }
