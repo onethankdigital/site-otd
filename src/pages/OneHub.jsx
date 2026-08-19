@@ -3,7 +3,7 @@
 // Direção Visual: Craft editorial premium (Sóbrio, tipografia forte, respiro, contraste intencional)
 // Paleta: Base marfim #FAF7F2, Texto carvão #211E1B, Vermelho #BE212A (CTA/acento), Terracota #D97757 (apoio)
 
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Helmet } from 'react-helmet-async';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -16,6 +16,7 @@ const WHATSAPP_LINK = "https://wa.me/5511978679090?text=Ol%C3%A1%2C%20gostaria%2
 
 export default function OneHub() {
   const container = useRef();
+  const [activePin, setActivePin] = useState(1);
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
@@ -333,107 +334,237 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 3. A TRANSFORMAÇÃO OPERACIONAL — ANTES VS. DEPOIS (LIGHT EDITORIAL) */}
-        <section className="scene-teto relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#F4EFE6] border-b border-[#E4DDD0]/60">
-          <div className="max-w-7xl mx-auto">
+        {/* 3. CANVAS INTERATIVO DO PRODUTO (CONCEITO A — ARQUITETURA 3D) */}
+        <section className="scene-teto relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#FAF7F2] border-b border-[#E4DDD0]/60 overflow-hidden">
+          
+          {/* Luzes ambiente de acento */}
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[300px] bg-[#BE212A]/5 blur-[140px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[280px] bg-[#D97757]/8 blur-[120px] rounded-full pointer-events-none" />
 
-            {/* Cabeçalho */}
-            <div className="scene-teto-text max-w-3xl mb-14 md:mb-18">
-              <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#BE212A] block mb-4">
-                A TRANSFORMAÇÃO OPERACIONAL
-              </span>
+          <div className="max-w-7xl mx-auto relative z-10">
+
+            {/* Cabeçalho Editorial */}
+            <div className="scene-teto-text max-w-3xl mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#BE212A]/10 border border-[#BE212A]/20 text-[#BE212A] text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#BE212A] animate-ping" />
+                A ARQUITETURA DO ONEHUB
+              </div>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[44px] leading-[1.18] text-[#211E1B] tracking-tight">
-                Sua empresa não precisa de mais um canal.{" "}
-                <span className="text-[#BE212A] block sm:inline">
-                  Precisa de governança comercial.
-                </span>
+                Do caos no WhatsApp à{" "}
+                <span className="text-[#BE212A]">governança no CRM.</span>
               </h2>
-              <p className="mt-5 text-base sm:text-lg text-[#5C554E] leading-relaxed max-w-2xl">
-                Veja a diferença entre operar o WhatsApp no improviso e ter a engenharia do OneHub acelerando suas vendas todos os dias.
+              <p className="mt-4 text-base sm:text-lg text-[#5C554E] leading-relaxed max-w-2xl">
+                Uma única engenharia conectando atendimento imediato por IA, distribuição de vendedores e controle total de receita em um painel unificado.
               </p>
             </div>
 
-            {/* Grid Comparativo Antes vs Depois */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-12">
+            {/* Palco do Canvas Interativo 3D em Camadas */}
+            <div className="relative rounded-3xl bg-[#1A1714] border border-[#3A352F] p-6 sm:p-10 md:p-14 overflow-hidden shadow-2xl">
               
-              {/* Coluna 1: Sem Governança (O Velho Jeito) */}
-              <div className="p-7 sm:p-9 rounded-3xl bg-[#EFE9DF] border border-[#E0D7C8] shadow-sm">
-                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#D8CFC0]">
-                  <span className="w-8 h-8 rounded-full bg-[#BE212A]/10 text-[#BE212A] flex items-center justify-center font-bold text-sm">
-                    ✕
-                  </span>
-                  <div>
-                    <h3 className="font-display font-bold text-lg sm:text-xl text-[#211E1B]">
-                      SEM GOVERNANÇA
-                    </h3>
-                    <p className="text-xs font-semibold text-[#8C8275] uppercase tracking-wider">
-                      Operação no Escuro
-                    </p>
-                  </div>
-                </div>
+              {/* Grid de telemetria no fundo do palco */}
+              <div className="absolute inset-0 bg-[radial-gradient(#3A352F_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none" />
 
-                <ul className="space-y-4">
-                  {[
-                    "Conversas espalhadas em 3 ou 4 celulares individuais de vendedores",
-                    "Vendedor sai da empresa e leva a carteira de clientes junto",
-                    "Resposta em 2h a 5h — o lead esfria e fecha com o concorrente",
-                    "Nenhuma visão de quantas propostas estão paradas sem follow-up",
-                    "Faturamento oscila e você descobre a causa só no fim do mês",
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#4A453F] leading-relaxed">
-                      <span className="text-[#BE212A] font-bold mt-0.5 flex-shrink-0">✕</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Seletor de Pins / Hotspots no Topo do Palco */}
+              <div className="relative z-20 flex flex-wrap items-center justify-center gap-3 mb-10">
+                {[
+                  { id: 1, label: "01. Triagem & IA 24/7", tag: "Atendimento Instantâneo" },
+                  { id: 2, label: "02. Roteamento Inteligente", tag: "Fila & Carteira Protegida" },
+                  { id: 3, label: "03. Funil & Telemetria P&L", tag: "Gestão Financeira ao Vivo" },
+                ].map((pin) => (
+                  <button
+                    key={pin.id}
+                    onClick={() => setActivePin(pin.id)}
+                    className={`px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2.5 cursor-pointer ${
+                      activePin === pin.id
+                        ? "bg-[#BE212A] text-white shadow-lg shadow-[#BE212A]/30 scale-[1.02]"
+                        : "bg-[#2C2822] text-[#C9C3B8] hover:bg-[#3A352F] hover:text-white border border-[#3A352F]"
+                    }`}
+                  >
+                    <span className={`w-2.5 h-2.5 rounded-full ${activePin === pin.id ? "bg-white animate-pulse" : "bg-[#D97757]"}`} />
+                    <span>{pin.label}</span>
+                  </button>
+                ))}
               </div>
 
-              {/* Coluna 2: Com OneHub (Engenharia Comercial) */}
-              <div className="p-7 sm:p-9 rounded-3xl bg-white border-2 border-[#10B981]/30 shadow-md relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-[#10B981] text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-xl">
-                  Engenharia OneHub
+              {/* Área do Mockup Duplo (Celular + Desktop CRM) */}
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+                
+                {/* Lado Esquerdo (Camada 1): Mockup do Celular WhatsApp */}
+                <div className="lg:col-span-5 relative group">
+                  <div className={`rounded-3xl p-5 sm:p-6 bg-[#211E1B] border transition-all duration-500 shadow-xl ${activePin === 1 ? "border-[#BE212A] shadow-[0_0_30px_rgba(190,33,42,0.3)]" : "border-[#3A352F]"}`}>
+                    
+                    {/* Header do WhatsApp */}
+                    <div className="flex items-center justify-between pb-4 border-b border-[#3A352F] mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-[#10B981]/20 border border-[#10B981]/40 flex items-center justify-center text-[#10B981] font-bold text-xs">
+                          Meta
+                        </div>
+                        <div>
+                          <p className="text-sm font-bold text-white flex items-center gap-1.5">
+                            OneHub Oficial
+                            <span className="w-2 h-2 rounded-full bg-[#10B981]" />
+                          </p>
+                          <p className="text-[11px] text-[#94A3B8]">WhatsApp API Cloud (Oficial)</p>
+                        </div>
+                      </div>
+                      <span className="text-[10px] font-mono px-2 py-1 rounded bg-[#10B981]/15 text-[#10B981] font-bold">
+                        API VERIFICADA
+                      </span>
+                    </div>
+
+                    {/* Balões de Conversa Simulados */}
+                    <div className="space-y-3 font-sans text-xs sm:text-sm">
+                      <div className="bg-[#2C2822] text-[#E4DDD0] p-3.5 rounded-2xl rounded-tl-xs max-w-[85%] border border-[#3A352F]">
+                        <p className="text-[11px] font-bold text-[#D97757] mb-1">Novo Lead • 09:00:02</p>
+                        <p>&ldquo;Olá! Quero entender sobre a implantação do OneHub na minha empresa.&rdquo;</p>
+                      </div>
+
+                      <div className="bg-[#BE212A]/15 text-white p-3.5 rounded-2xl rounded-tr-xs ml-auto max-w-[90%] border border-[#BE212A]/40 shadow-sm">
+                        <div className="flex items-center justify-between mb-1">
+                          <p className="text-[11px] font-bold text-[#FF334B] flex items-center gap-1">
+                            🤖 Agente IA OneHub • 09:00:05
+                          </p>
+                          <span className="text-[10px] font-mono text-white/80">3 seg</span>
+                        </div>
+                        <p>&ldquo;Olá! Perfeito. Sou o assistente inteligente do OneHub. Qual é o tamanho da sua equipe comercial hoje?&rdquo;</p>
+                      </div>
+
+                      <div className="bg-[#2C2822] text-[#E4DDD0] p-3.5 rounded-2xl rounded-tl-xs max-w-[85%] border border-[#3A352F]">
+                        <p>&ldquo;Temos 8 vendedores no WhatsApp.&rdquo;</p>
+                      </div>
+
+                      <div className="bg-[#10B981]/15 text-white p-3.5 rounded-2xl rounded-tr-xs ml-auto max-w-[90%] border border-[#10B981]/40">
+                        <p className="text-[11px] font-bold text-[#10B981] mb-1">✅ Lead Qualificado → Fila Comercial</p>
+                        <p>&ldquo;Excelente! Encaminhando você agora para o nosso especialista em equipes acima de 5 vendedores.&rdquo;</p>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-[#E4DDD0]">
-                  <span className="w-8 h-8 rounded-full bg-[#10B981]/15 text-[#10B981] flex items-center justify-center font-bold text-sm">
-                    ✓
+                {/* Conector Central Glowing (Desktop/Tablet) */}
+                <div className="hidden lg:flex lg:col-span-2 flex-col items-center justify-center gap-2 text-center">
+                  <div className="w-12 h-12 rounded-full bg-[#BE212A]/20 border border-[#BE212A] flex items-center justify-center text-[#FF334B] animate-pulse">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-mono font-bold text-[#D97757] uppercase tracking-wider">
+                    Sincronização instantânea
                   </span>
+                </div>
+
+                {/* Lado Direito (Camada 2): Dashboard do CRM OneHub */}
+                <div className="lg:col-span-5">
+                  <div className={`rounded-3xl p-5 sm:p-6 bg-[#211E1B] border transition-all duration-500 shadow-xl ${activePin === 3 ? "border-[#BE212A] shadow-[0_0_30px_rgba(190,33,42,0.3)]" : "border-[#3A352F]"}`}>
+                    
+                    {/* Header da Dashboard */}
+                    <div className="flex items-center justify-between pb-4 border-b border-[#3A352F] mb-4">
+                      <div>
+                        <p className="text-xs font-mono font-bold text-[#D97757]">PAINEL ONEHUB COMMERCIAL</p>
+                        <p className="text-sm font-bold text-white">Funil de Vendas em Tempo Real</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
+                        <span className="text-[11px] font-mono text-[#10B981] font-bold">100% ONLINE</span>
+                      </div>
+                    </div>
+
+                    {/* Colunas do Funil Kanban */}
+                    <div className="grid grid-cols-3 gap-2 sm:gap-3 text-xs">
+                      
+                      {/* Coluna 1: Novos Leads */}
+                      <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
+                        <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
+                          <span className="font-bold text-slate-300 text-[11px]">Novos</span>
+                          <span className="bg-[#BE212A] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">14</span>
+                        </div>
+                        <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F] mb-2">
+                          <p className="font-bold text-white text-[11px]">Empresa Alfa</p>
+                          <p className="text-[10px] text-[#D97757]">R$ 15.000 • IA Filtrou</p>
+                        </div>
+                        <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F]">
+                          <p className="font-bold text-white text-[11px]">Grupo Beta</p>
+                          <p className="text-[10px] text-[#D97757]">R$ 28.000 • Fila #2</p>
+                        </div>
+                      </div>
+
+                      {/* Coluna 2: Em Negociação */}
+                      <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
+                        <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
+                          <span className="font-bold text-slate-300 text-[11px]">Propostas</span>
+                          <span className="bg-[#D97757] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">8</span>
+                        </div>
+                        <div className="bg-[#1A1714] p-2 rounded-lg border border-[#3A352F] mb-2">
+                          <p className="font-bold text-white text-[11px]">Tech Solution</p>
+                          <p className="text-[10px] text-slate-300">R$ 42.000 • Aguarda</p>
+                        </div>
+                      </div>
+
+                      {/* Coluna 3: Fechados */}
+                      <div className="bg-[#2C2822] p-2.5 rounded-xl border border-[#3A352F]">
+                        <div className="flex items-center justify-between mb-2 pb-1 border-b border-[#3A352F]">
+                          <span className="font-bold text-[#10B981] text-[11px]">Ganhos</span>
+                          <span className="bg-[#10B981] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">22</span>
+                        </div>
+                        <div className="bg-[#10B981]/15 p-2 rounded-lg border border-[#10B981]/40">
+                          <p className="font-bold text-[#10B981] text-[11px]">Contrato 089</p>
+                          <p className="text-[10px] text-white font-mono font-bold">R$ 65.000/mês</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Explicação Dinâmica do Pin Ativo */}
+              <div className="relative z-20 mt-8 p-5 sm:p-6 rounded-2xl bg-[#2C2822] border border-[#3A352F] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#BE212A] text-white flex items-center justify-center font-bold font-mono text-base flex-shrink-0">
+                    0{activePin}
+                  </div>
                   <div>
-                    <h3 className="font-display font-bold text-lg sm:text-xl text-[#211E1B]">
-                      COM ONEHUB
-                    </h3>
-                    <p className="text-xs font-semibold text-[#10B981] uppercase tracking-wider">
-                      Governança & Escala
+                    <h4 className="text-base font-bold text-white">
+                      {activePin === 1 && "Atendimento Imediato com Agentes de IA 24/7"}
+                      {activePin === 2 && "Roteamento por Fila e Carteira Protegida"}
+                      {activePin === 3 && "Telemetria de Vendas & Visão Financeira P&L"}
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#C9C3B8]">
+                      {activePin === 1 && "A IA qualifica a intenção de compra em 3 segundos, impedindo que o lead esfrie ou procure o concorrente."}
+                      {activePin === 2 && "O lead é direcionado automaticamente para o vendedor responsável sem depender de repasse manual no celular."}
+                      {activePin === 3 && "Saiba exatamente quanto dinheiro está em aberto no funil e acompanhe a taxa de conversão em tempo real."}
                     </p>
                   </div>
                 </div>
 
-                <ul className="space-y-4">
-                  {[
-                    "1 Número Oficial (Meta Cloud API) com atendentes ilimitados",
-                    "Carteira 100% centralizada e protegida no painel da empresa",
-                    "IA qualifica e responde em 3 segundos (24 horas por dia)",
-                    "Funil Kanban em tempo real com alertas de oportunidade parada",
-                    "Previsibilidade de receita e métricas diárias por atendente",
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-[#211E1B] font-medium leading-relaxed">
-                      <span className="text-[#10B981] font-bold mt-0.5 flex-shrink-0">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-5 py-2.5 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-xs sm:text-sm transition-all flex-shrink-0 whitespace-nowrap"
+                >
+                  Testar essa engenharia →
+                </a>
               </div>
 
             </div>
 
-            {/* Card de Fechamento Editorial da Seção 3 */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#EFE9DF] border border-[#E0D7C8] text-center max-w-4xl mx-auto">
-              <p className="text-base sm:text-lg font-medium text-[#211E1B] leading-relaxed">
-                💡 <span className="font-bold">&ldquo;O OneHub não substitui a sua equipe comercial.&rdquo;</span>{" "}
-                <span className="text-[#5C554E]">
-                  Ele elimina a burocracia do caminho para que seu time fale exclusivamente com quem já está pronto para comprar.
-                </span>
-              </p>
+            {/* Barra de Prova / Métricas na Base da Seção 3 */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
+              {[
+                { val: "< 3 seg", title: "Primeira Resposta por IA", desc: "Triagem instantânea 24 horas por dia." },
+                { val: "100%", title: "Carteira da Empresa", desc: "Dados centralizados e protegidos no painel." },
+                { val: "+35%", title: "Conversão de Vendas", desc: "Aumento médio registrado no 1º mês." },
+              ].map((m, i) => (
+                <div key={i} className="p-6 rounded-2xl bg-white border border-[#E4DDD0] shadow-sm text-center">
+                  <p className="font-display text-3xl sm:text-4xl font-black text-[#BE212A] mb-1">{m.val}</p>
+                  <p className="font-bold text-sm text-[#211E1B] mb-1">{m.title}</p>
+                  <p className="text-xs text-[#5C554E]">{m.desc}</p>
+                </div>
+              ))}
             </div>
 
           </div>
