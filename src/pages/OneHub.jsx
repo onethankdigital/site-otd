@@ -18,6 +18,7 @@ export default function OneHub() {
   const container = useRef();
   const [activePin, setActivePin] = useState(1);
   const [activeMotor, setActiveMotor] = useState(1);
+  const [openFaq, setOpenFaq] = useState(null);
 
   const ecosystemMotors = [
     {
@@ -1038,23 +1039,140 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 8. CTA FINAL */}
-        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#FAF7F2]">
+        {/* 8. FAQ & TIRA-DÚVIDAS ESTRATÉGICO */}
+        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#FAF7F2] border-b border-[#E4DDD0]/60">
+          <div className="max-w-4xl mx-auto">
+            
+            {/* Cabeçalho do FAQ */}
+            <div className="text-center mb-14">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">
+                TIRA-DÚVIDAS COMERCIAL
+              </span>
+              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
+                Perguntas Frequentes & Respostas Diretas
+              </h2>
+              <p className="mt-4 text-base sm:text-lg text-[#5C554E] max-w-2xl mx-auto leading-relaxed">
+                Tudo o que você precisa saber sobre a Meta Cloud API Oficial, integrações com ERPs, agentes de IA e segurança da sua operação.
+              </p>
+            </div>
+
+            {/* Lista de Perguntas e Respostas em Acordeão */}
+            <div className="space-y-4">
+              {[
+                {
+                  q: "O OneHub integra com ERPs e ferramentas como Bling, Tiny, HubSpot ou RD Station?",
+                  a: "Sim. O OneHub conta com webhooks abertos e integração nativa para conectar com ERPs como o Bling e Tiny (sincronizando status de faturamento, emissão de notas e pedidos) e CRMs de mercado (HubSpot, RD Station, Pipedrive). Quando uma venda é fechada ou uma etapa avança no WhatsApp, o ecossistema atualiza seus sistemas automaticamente sem retrabalho manual.",
+                },
+                {
+                  q: "Existe risco de o número de WhatsApp da minha empresa ser bloqueado ou banido pela Meta?",
+                  a: "Zero risco. O OneHub opera 100% sobre a Meta Cloud API Oficial (WhatsApp Business API). Nós não utilizamos conexões não-oficiais (emuladores de QR Code piratas ou disparadores de spam), garantindo total conformidade jurídica com as políticas da Meta, alta taxa de entrega e possibilidade de solicitar o selo de verificação verde oficial.",
+                },
+                {
+                  q: "Como a IA do OneHub aprende sobre meu negócio? Ela pode 'inventar' informações (alucinar) ou errar preços?",
+                  a: "Não. O agente de IA é treinado e parametrizado com base estrita no catálogo de produtos, tabela de preços e regras comerciais da sua empresa. Se um lead fizer uma pergunta fora do escopo ou solicitar uma condição personalizada, a IA transfere imediatamente o atendimento para um consultor humano da sua equipe, enviando um resumo detalhado da conversa.",
+                },
+                {
+                  q: "Quantos atendentes podem responder pelo mesmo número de WhatsApp simultaneamente?",
+                  a: "Quantos a sua empresa precisar. Toda a sua equipe de vendas, suporte e administrativo atende através do mesmo número oficial, com distribuição automática por carteira de clientes, filas por departamento e controle individual de permissões e métricas de desempenho.",
+                },
+                {
+                  q: "Como funciona o período de 14 dias de teste assistido?",
+                  a: "Não entregamos um login vazio para você tentar configurar sozinho. Um especialista da One Thank agenda uma sessão de onboarding dedicada com você, conecta seu WhatsApp oficial, estrutura seu funil de vendas e treina o agente de IA para a sua realidade. Não pedimos cartão de crédito e não há contrato de fidelidade.",
+                },
+                {
+                  q: "O que acontece com o histórico das conversas e os dados dos clientes (LGPD)?",
+                  a: "Todas as conversas, anexos, propostas e dados de clientes são armazenados em nuvem segura com criptografia ponta a ponta. A base pertence 100% à sua empresa — você nunca mais perde o histórico quando um funcionário sai da equipe, mantendo total governança comercial e conformidade com a LGPD.",
+                },
+              ].map((item, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+                      isOpen
+                        ? "bg-[#211E1B] text-white border-[#3A352F] shadow-lg"
+                        : "bg-white text-[#211E1B] border-[#E4DDD0] hover:border-[#D97757]/40 shadow-sm"
+                    }`}
+                  >
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                    >
+                      <span className="font-display font-medium text-base sm:text-lg leading-snug">
+                        {item.q}
+                      </span>
+                      <span
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 transition-transform duration-200 ${
+                          isOpen
+                            ? "bg-[#BE212A] text-white rotate-45"
+                            : "bg-[#FAF7F2] text-[#211E1B] border border-[#E4DDD0]"
+                        }`}
+                      >
+                        +
+                      </span>
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#C9C3B8] leading-relaxed border-t border-[#3A352F]/60">
+                        {item.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Dúvida adicional CTA */}
+            <div className="mt-12 text-center">
+              <p className="text-xs sm:text-sm text-[#736B63] mb-3">
+                Tem uma dúvida técnica ou arquitetura específica na sua empresa?
+              </p>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-xs sm:text-sm text-[#BE212A] hover:underline"
+              >
+                Falar diretamente com um especialista técnico via WhatsApp →
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        {/* 9. CTA FINAL */}
+        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#211E1B] text-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#10B981] font-bold block mb-3">
+              ⚡ ONBOARDING GUIADO & GRATUITO
+            </span>
+            <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-white leading-tight">
               Pare de apenas operar.<br />
-              <span className="text-[#BE212A]">Comece a escalar com inteligência.</span>
+              <span className="text-[#FF334B]">Comece a escalar com inteligência.</span>
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#4A453F]">
-              Dê o próximo passo na maturidade comercial da sua empresa com 14 dias de acompanhamento assistido.
+            <p className="mt-4 text-base sm:text-lg text-[#DED8CC] leading-relaxed max-w-2xl mx-auto">
+              Dê o próximo passo na maturidade comercial da sua empresa com 14 dias de acompanhamento assistido. Montamos a estrutura com você.
             </p>
+            
+            {/* Micro-Garantias */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-[#C9C3B8]">
+              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A1714] border border-[#3A352F]">
+                🛡️ Sem Cartão de Crédito
+              </span>
+              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A1714] border border-[#3A352F]">
+                ⚡ Setup em 48h com Especialista
+              </span>
+              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1A1714] border border-[#3A352F]">
+                🔒 100% Meta Cloud API Oficial
+              </span>
+            </div>
+
             <div className="mt-8 flex flex-col items-center">
               <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer"
-                 className="inline-flex items-center justify-center px-9 py-4 rounded-xl font-bold text-white text-base sm:text-lg shadow-sm bg-[#BE212A] hover:bg-[#A61B23] transition-colors">
-                Quero meus 14 dias assistidos — grátis
+                 className="inline-flex items-center justify-center px-9 py-4 rounded-xl font-bold text-white text-base sm:text-lg shadow-xl bg-[#BE212A] hover:bg-[#A61B23] transition-all hover:scale-105 active:scale-95">
+                Quero meus 14 dias assistidos — grátis →
               </a>
               <p className="mt-3 text-xs sm:text-sm text-[#736B63]">
-                Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
+                Sem custo, sem cartão, sem contrato de fidelidade.
               </p>
             </div>
           </div>
