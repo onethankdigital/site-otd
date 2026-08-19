@@ -14,11 +14,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WHATSAPP_LINK = "https://wa.me/5511978679090?text=Ol%C3%A1%2C%20gostaria%20de%20iniciar%20os%2014%20dias%20assistidos%20do%20OneHub.";
 
-export default function OneHub() {
-  const container = useRef();
-  const [activePin, setActivePin] = useState(1);
-  const [activeMotor, setActiveMotor] = useState(1);
-  const [openFaq, setOpenFaq] = useState(null);
+  const [formData, setFormData] = useState({ name: "", phone: "", company: "" });
+
+  const handleHeroSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.phone) return;
+    const msg = `Olá! Gostaria de iniciar os 14 dias assistidos do OneHub.\n\n👤 *Nome:* ${formData.name}\n📱 *WhatsApp:* ${formData.phone}\n🏢 *Empresa/Segmento:* ${formData.company || 'Não informado'}`;
+    window.open(`https://wa.me/5511978679090?text=${encodeURIComponent(msg)}`, "_blank");
+  };
 
   const ecosystemMotors = [
     {
@@ -198,11 +201,11 @@ export default function OneHub() {
           .gsap-reveal, .nav-anim, .hero-anim, .hero-bg-anim { will-change: transform, opacity; }
         `}</style>
 
-        {/* 1. HERO SECTION COM BACKGROUND FULL E OPACIDADE CLARA EQUILIBRADA */}
-        <section className="hero-section relative z-10 overflow-hidden min-h-[640px] sm:min-h-[720px] md:min-h-[820px] flex flex-col justify-between bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24">
+        {/* 1. HERO SECTION COM BACKGROUND FULL CLARO E FORMULÁRIO PONTE ENTRE SEÇÕES */}
+        <section className="hero-section relative z-20 bg-[#FAF7F2] pt-6 pb-16 sm:pt-8 sm:pb-24 md:pt-10 md:pb-28">
           
-          {/* Imagem de Fundo Full-Bleed em Alta Visibilidade */}
-          <div className="hero-bg-anim absolute inset-0 w-full h-full z-0 pointer-events-none">
+          {/* Imagem de Fundo Full-Bleed em Alta Visibilidade (Sem degradê escuro na base) */}
+          <div className="hero-bg-anim absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
             <img
               src="/onehub-transformacao-caos-ao-crm.webp"
               alt="Transformação OneHub: Do caos no WhatsApp à governança comercial no CRM"
@@ -213,11 +216,9 @@ export default function OneHub() {
               decoding="async"
               className="w-full h-full object-cover object-center md:object-right opacity-55 md:opacity-65"
             />
-            {/* Máscara clara com transição suave que clareia o lado esquerdo sem escurecer o texto */}
+            {/* Máscara clara suave para garantir contraste do texto */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/85 to-[#FAF7F2]/20 md:to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2]/75 via-transparent to-[#FAF7F2]/60" />
-            {/* Transição Suave no Rodapé da Hero para o Carvão (#211E1B) da Seção 2 */}
-            <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 bg-gradient-to-b from-transparent via-[#211E1B]/50 to-[#211E1B] pointer-events-none" />
           </div>
 
           {/* Header Alinhado: Logo OneHub Ampliada */}
@@ -235,47 +236,125 @@ export default function OneHub() {
             </a>
           </div>
 
-          {/* Conteúdo de Texto por Cima com TAG no Lado Esquerdo */}
-          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full my-auto">
-            <div className="max-w-2xl">
+          {/* Grid de 2 Colunas: Texto na Esquerda e Formulário Ponte na Direita */}
+          <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
               
-              {/* TAG / Eyebrow no Lado Esquerdo acima do H1 */}
-              <div className="hero-anim inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EFE9DF]/95 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
-                <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
+              {/* Coluna Esquerda: Proposta de Valor */}
+              <div className="lg:col-span-7 max-w-2xl">
+                {/* TAG / Eyebrow no Lado Esquerdo acima do H1 */}
+                <div className="hero-anim inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EFE9DF]/95 border border-[#DDD5C7] text-[#211E1B] text-xs sm:text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-[#D97757] flex-shrink-0" />
+                  <span>WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA</span>
+                </div>
+
+                {/* H1 em 2 linhas */}
+                <h1 className="hero-anim font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.12] text-[#211E1B] tracking-tight drop-shadow-sm">
+                  Seu WhatsApp recebe cliente o dia todo.<br />
+                  <span className="text-[#BE212A]">E perde venda na bagunça.</span>
+                </h1>
+
+                {/* Subtítulo */}
+                <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg text-[#332F2A] leading-relaxed font-normal">
+                  O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
+                </p>
+
+                {/* Micro-Garantias */}
+                <div className="hero-anim mt-8 flex flex-wrap gap-4 text-xs font-mono text-[#5C554E]">
+                  <span className="flex items-center gap-1.5 bg-[#EFE9DF] px-3 py-1.5 rounded-lg border border-[#DDD5C7]">
+                    ✓ Sem Cartão de Crédito
+                  </span>
+                  <span className="flex items-center gap-1.5 bg-[#EFE9DF] px-3 py-1.5 rounded-lg border border-[#DDD5C7]">
+                    ✓ Onboarding Guiado em 48h
+                  </span>
+                  <span className="flex items-center gap-1.5 bg-[#EFE9DF] px-3 py-1.5 rounded-lg border border-[#DDD5C7]">
+                    ✓ 100% Meta Cloud API
+                  </span>
+                </div>
               </div>
 
-              {/* H1 em 2 linhas (2ª em vermelho #BE212A) */}
-              <h1 className="hero-anim font-display font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[62px] leading-[1.12] text-[#211E1B] tracking-tight drop-shadow-sm">
-                Seu WhatsApp recebe cliente o dia todo.<br />
-                <span className="text-[#BE212A]">E perde venda na bagunça.</span>
-              </h1>
+              {/* Coluna Direita: FORMULÁRIO PONTE (Inicia na altura do conteúdo e estende para a Seção 2) */}
+              <div className="lg:col-span-5 relative z-30 lg:-mb-36 lg:translate-y-4">
+                <div className="p-6 sm:p-8 rounded-3xl bg-[#1A1714] text-white border-2 border-[#BE212A] shadow-[0_25px_70px_rgba(0,0,0,0.6)] backdrop-blur-xl">
+                  
+                  {/* Header do Card */}
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#FF334B] font-bold">
+                      ⚡ 14 DIAS ASSISTIDOS
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#10B981]/20 text-[#10B981] border border-[#10B981]/30">
+                      100% Grátis
+                    </span>
+                  </div>
 
-              {/* Subtítulo */}
-              <p className="hero-anim mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-[#332F2A] leading-relaxed max-w-2xl font-normal">
-                O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel. Nenhum lead esquecido — sem perder o tom humano.
-              </p>
+                  <h3 className="font-display font-medium text-xl sm:text-2xl text-white mb-2">
+                    Valide a operação na sua empresa
+                  </h3>
+                  <p className="text-xs text-[#94A3B8] mb-6 leading-relaxed">
+                    Preencha os dados abaixo para direcionar seu atendimento ao especialista:
+                  </p>
 
-              {/* CTA Primário & Microcopy (Mobile First — Visível acima da dobra) */}
-              <div className="hero-anim mt-7 sm:mt-9 flex flex-col items-start">
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl font-bold text-white text-base sm:text-lg bg-[#BE212A] hover:bg-[#A61B23] transition-all shadow-md active:scale-[0.99]"
-                >
-                  Quero meus 14 dias assistidos — grátis
-                </a>
-                <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#5C554E] font-medium">
-                  Montamos sua operação com você. Sem custo, sem cartão, sem fidelidade.
-                </p>
+                  {/* Formulário Interativo com Envio Direto ao WhatsApp */}
+                  <form onSubmit={handleHeroSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-[11px] font-mono uppercase text-[#C9C3B8] mb-1.5">
+                        Seu Nome *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Ex: Carlos Eduardo"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-[#211E1B] border border-[#3A352F] text-white text-sm placeholder-[#5C554E] focus:outline-none focus:border-[#BE212A] transition-colors"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-mono uppercase text-[#C9C3B8] mb-1.5">
+                        Seu WhatsApp com DDD *
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="(11) 99999-9999"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-[#211E1B] border border-[#3A352F] text-white text-sm placeholder-[#5C554E] focus:outline-none focus:border-[#BE212A] transition-colors"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-mono uppercase text-[#C9C3B8] mb-1.5">
+                        Nome da Empresa / Segmento
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Ex: Silva & Associados / B2B"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-[#211E1B] border border-[#3A352F] text-white text-sm placeholder-[#5C554E] focus:outline-none focus:border-[#BE212A] transition-colors"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full py-4 rounded-xl bg-[#BE212A] hover:bg-[#A61B23] text-white font-bold text-sm sm:text-base shadow-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer mt-2"
+                    >
+                      <span>Quero meus 14 dias assistidos</span>
+                      <span>→</span>
+                    </button>
+
+                    <p className="text-[10px] text-center text-[#736B63] mt-2 leading-relaxed">
+                      🔒 Redirecionamento seguro ao WhatsApp oficial. Sem custo, sem cartão.
+                    </p>
+                  </form>
+
+                </div>
               </div>
 
             </div>
           </div>
-
-          {/* Espaçador inferior */}
-          <div className="relative z-10"></div>
         </section>
 
         {/* 2. O PREÇO DO QUE VOCÊ NÃO VÊ (DARK EDITORIAL — PAS COPY) */}
