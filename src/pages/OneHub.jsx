@@ -14,6 +14,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WHATSAPP_LINK = "https://wa.me/5511978679090?text=Ol%C3%A1%2C%20gostaria%20de%20iniciar%20os%2014%20dias%20assistidos%20do%20OneHub.";
 
+export default function OneHub() {
+  const container = useRef();
+  const [activePin, setActivePin] = useState(1);
+  const [activeMotor, setActiveMotor] = useState(1);
+  const [openFaq, setOpenFaq] = useState(null);
   const [formData, setFormData] = useState({ name: "", phone: "", company: "" });
 
   const handleHeroSubmit = (e) => {
