@@ -469,8 +469,7 @@ export default function Historia({ onClose, onOpenQuiz }) {
                 <div className="robson-name">Robson Sant'Ana</div>
                 <div className="robson-role">Fundador e Estrategista Digital</div>
                 <p className="robson-quote">
-                  "Passei anos vendo empresas boas, com produtos reais, serem invisíveis no Google — não por falta de mérito, mas por falta de estrutura. 
-                  A One Thank existe para acabar com isso. Cada projeto que assumimos, assumimos como se fosse nosso."
+                  "Vi de perto empresas com produto excelente e equipe dedicada perdendo clientes para concorrentes piores — só porque não eram encontradas. O problema nunca foi o negócio. Foi a estrutura. A One Thank existe para resolver exatamente isso."
                 </p>
                 <div className="robson-tags">
                   <span>Santo André, SP</span>
