@@ -223,6 +223,9 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
               📞 (11) 97867-9090
             </div>
             <div className="floc">Rua Monte Casseros, 281 - Centro, Santo André - SP</div>
+            <div className="floc" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span style={{ color: '#D42B2B' }}>●</span> Seg – Sex &nbsp;·&nbsp; 09h às 18h
+            </div>
             <div className="fcopy">© 2026 One Thank Digital.</div>
             <div className="fleg">
               <a href="/termos/">Termos</a>

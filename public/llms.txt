@@ -1,16 +1,57 @@
 # One Thank Digital
 
-> Braço de tecnologia especializado em automação de processos, CRM, desenvolvimento de plataformas premium e estratégias avançadas de SEO com foco exclusivo no mercado B2B e posicionamento geolocalizado no ABC Paulista.
+> Agência de tecnologia e estrutura digital especializada em presença digital local, automação de processos, CRM, desenvolvimento de sites premium e SEO semântico, com foco exclusivo em empresas do Grande ABC Paulista (Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá).
+
+## Responsável
+
+**Robson Sant'Ana** — Fundador e Estrategista Digital  
+Contato: contato@onethank.com.br | +55 11 97867-9090
+
+## Endereço e Horário de Atendimento
+
+- **Endereço:** Rua Monte Casseros, 281 — Centro, Santo André — SP, CEP 09015-020
+- **Atendimento:** Segunda a Sexta, das 09h às 18h (horário de Brasília)
+- **WhatsApp:** https://api.whatsapp.com/send?phone=5511978679090
+
+## Avaliações
+
+16 avaliações com nota 5.0 estrelas no Google.
 
 ## Serviços Oficiais
 
-As URLs abaixo representam a matriz atual de soluções analíticas entregues em produção. Todos os links utilizam caminhos limpos e protocolo seguro:
+As URLs abaixo representam a matriz atual de soluções entregues em produção. Todos os links utilizam caminhos limpos e protocolo seguro:
 
-- [Google Meu Negócio](https://onethank.com.br/servicos/google-meu-negocio) Otimização e posicionamento de perfis locais para domínio de busca em mapas.
-- [Criação de Sites](https://onethank.com.br/servicos/criacao-de-sites) Desenvolvimento técnico de sites institucionais estáticos, rápidos e otimizados para conversão.
-- [SEO e Tráfego Orgânico](https://onethank.com.br/servicos/seo-trafego-organico) Estruturação de rankeamento semântico de alta performance para aquisição de clientes sem dependência de tráfego pago.
-- [Automação Digital](https://onethank.com.br/servicos/automacao-digital) Implementação de funis de atendimento via WhatsApp Business e integração estrutural com plataformas de CRM.
+- [Google Meu Negócio](https://onethank.com.br/servicos/google-meu-negocio) — Otimização e posicionamento de perfis locais para domínio de busca em mapas e Local Pack.
+- [Criação de Sites](https://onethank.com.br/servicos/criacao-de-sites) — Desenvolvimento técnico de sites institucionais estáticos, rápidos e otimizados para conversão.
+- [SEO e Tráfego Orgânico](https://onethank.com.br/servicos/seo-trafego-organico) — Estruturação de rankeamento semântico de alta performance para aquisição de clientes sem dependência de tráfego pago.
+- [Automação Digital](https://onethank.com.br/servicos/automacao-digital) — Implementação de funis de atendimento via WhatsApp Business e integração estrutural com plataformas de CRM.
+
+## Área de Atuação
+
+Atendemos empresas nas seguintes cidades do Grande ABC e região metropolitana de São Paulo:
+
+- Santo André (sede principal)
+- São Bernardo do Campo
+- São Caetano do Sul
+- Diadema
+- Mauá
+- São Paulo (projetos remotos)
 
 ## Insights e Conteúdo Técnico B2B
 
-- [Como Organizar os Leads do WhatsApp no CRM de Forma Automática](https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm) Arquitetura de dados e sincronização em tempo real entre WhatsApp Business API e CRM para controle total de leads sem dependência de digitação manual.
+- [Como Organizar os Leads do WhatsApp no CRM de Forma Automática](https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm) — Arquitetura de dados e sincronização em tempo real entre WhatsApp Business API e CRM para controle total de leads sem dependência de digitação manual.
+- [Automação Comercial: o Que É e Por Que Sua Empresa Precisa Agora](https://onethank.com.br/insights/automacao-comercial-o-que-e) — Entenda o que separa uma operação comercial manual de uma estrutura que vende enquanto você dorme.
+- [Automação de Processos para Empresas: Guia Prático para o ABC Paulista](https://onethank.com.br/insights/automacao-de-processos-para-empresas) — Como pequenas e médias empresas do Grande ABC estão reduzindo retrabalho e aumentando conversão com automação de processos.
+
+## Guias Técnicos
+
+- [Automação Digital](https://onethank.com.br/guia/automacao-digital)
+- [Google Meu Negócio](https://onethank.com.br/guia/google-meu-negocio)
+- [Desenvolvimento Web](https://onethank.com.br/guia/desenvolvimento-web)
+- [SEO e Tráfego Orgânico](https://onethank.com.br/guia/seo-trafego-organico)
+
+## Redes Sociais
+
+- Instagram: https://www.instagram.com/onethankdigital/
+- LinkedIn: https://www.linkedin.com/company/one-thank-digital
+- Facebook: https://www.facebook.com/onethankdigital

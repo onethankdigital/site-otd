@@ -9,6 +9,7 @@ import HorizontalScroll from './components/HorizontalScroll';
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
 import Footer from './components/Footer';
+import InsightsPreview from './components/InsightsPreview';
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -545,6 +546,7 @@ function App() {
           />
           <Philosophy onOpenQuiz={handleOpenQuiz} />
           <Protocol onOpenQuiz={handleOpenQuiz} />
+          <InsightsPreview navigateTo={(path) => { window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')); }} />
         </Suspense>
       </main>
       <Suspense fallback={null}>
