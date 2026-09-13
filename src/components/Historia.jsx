@@ -298,6 +298,103 @@ export default function Historia({ onClose, onOpenQuiz }) {
       .historia-cta { flex-direction: column; align-items: flex-start; }
       .btn-cta { width: 100%; text-align: center; padding: 18px; }
     }
+
+    /* ── ROBSON SECTION ── */
+    .robson-section {
+      margin-top: clamp(56px, 8vw, 96px);
+      margin-bottom: clamp(56px, 8vw, 96px);
+    }
+
+    .robson-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #D42B2B;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    .robson-card {
+      display: flex;
+      gap: clamp(32px, 5vw, 72px);
+      align-items: flex-start;
+      background: #fafafa;
+      border: 1px solid #ececec;
+      border-left: 4px solid #D42B2B;
+      border-radius: 12px;
+      padding: clamp(28px, 4vw, 56px);
+    }
+
+    .robson-photo-wrap {
+      flex-shrink: 0;
+      width: clamp(100px, 14vw, 180px);
+      height: clamp(100px, 14vw, 180px);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid #ececec;
+    }
+
+    .robson-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .robson-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .robson-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: 1px;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+
+    .robson-role {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #D42B2B;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .robson-quote {
+      font-size: clamp(17px, 1.4vw, 20px);
+      color: #555;
+      line-height: 1.7;
+      font-style: italic;
+      max-width: 640px;
+    }
+
+    .robson-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .robson-tags span {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #888;
+      background: #f0f0f0;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .robson-card { flex-direction: column; }
+      .robson-photo-wrap { width: 100px; height: 100px; }
+    }
   `;
 
   return (
@@ -359,6 +456,29 @@ export default function Historia({ onClose, onOpenQuiz }) {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* QUEM ESTÁ POR TRÁS */}
+          <div className="robson-section">
+            <div className="robson-eyebrow">// Quem está por trás</div>
+            <div className="robson-card">
+              <div className="robson-photo-wrap">
+                <img src="/robson-santana.jpg" alt="Robson Sant'Ana — Fundador da One Thank Digital" className="robson-photo" />
+              </div>
+              <div className="robson-content">
+                <div className="robson-name">Robson Sant'Ana</div>
+                <div className="robson-role">Fundador e Estrategista Digital</div>
+                <p className="robson-quote">
+                  "Passei anos vendo empresas boas, com produtos reais, serem invisíveis no Google — não por falta de mérito, mas por falta de estrutura. 
+                  A One Thank existe para acabar com isso. Cada projeto que assumimos, assumimos como se fosse nosso."
+                </p>
+                <div className="robson-tags">
+                  <span>Santo André, SP</span>
+                  <span>Grande ABC</span>
+                  <span>+5 anos em presença digital</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* CTA */}

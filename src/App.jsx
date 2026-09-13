@@ -9,6 +9,7 @@ import HorizontalScroll from './components/HorizontalScroll';
 import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
 import Footer from './components/Footer';
+import InsightsPreview from './components/InsightsPreview';
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -38,6 +39,7 @@ import PillarSEOTrafego from './pages/PillarSEOTrafego';
 import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
 import AgenciasPage from './pages/AgenciasPage';
+import OneHub from './pages/OneHub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -341,6 +343,20 @@ function App() {
     );
   }
 
+  if (currentPath === '/onehub' || currentPath === '/onehub/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <OneHub />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
   if (
     currentPath === '/guia' ||
     currentPath === '/guia/'
@@ -530,6 +546,7 @@ function App() {
           />
           <Philosophy onOpenQuiz={handleOpenQuiz} />
           <Protocol onOpenQuiz={handleOpenQuiz} />
+          <InsightsPreview navigateTo={(path) => { window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')); }} />
         </Suspense>
       </main>
       <Suspense fallback={null}>
