@@ -504,16 +504,16 @@ export default function ServicosSEO() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>SEO e Tráfego Orgânico B2B no ABC | One Thank Digital</title>
-          <meta name="description" content="Rankeamento orgânico no Google e AI Overview para escritórios contábeis, clínicas e empresas B2B em Santo André. Sem depender de anúncio pago. Resultados duradouros." />
-          <meta property="og:title" content="SEO Orgânico para Empresas B2B no ABC | One Thank Digital" />
-          <meta property="og:description" content="Apareça no Google e no AI Overview sem pagar por clique. SEO local para empresas B2B em Santo André e ABC Paulista." />
+          <title>SEO e Infraestrutura Digital B2B no ABC | One Thank Digital</title>
+          <meta name="description" content="Seu braço de tecnologia no Grande ABC. Infraestrutura digital e SEO estrutural para empresas que não podem perder clientes. Sem depender de anúncio pago." />
+          <meta property="og:title" content="SEO e Infraestrutura Digital para Empresas B2B | One Thank Digital" />
+          <meta property="og:description" content="Seu braço de tecnologia no Grande ABC. Infraestrutura digital e SEO estrutural para empresas que não podem perder clientes. Sem depender de anúncio pago." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://onethank.com.br/servicos/seo-trafego-organico/" />
           <meta property="og:image" content="https://onethank.com.br/hero-seo-organico.webp" />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:title" content="SEO Orgânico para Empresas B2B no ABC | One Thank Digital" />
-          <meta property="twitter:description" content="Apareça no Google e no AI Overview sem pagar por clique. SEO local para empresas B2B em Santo André e ABC Paulista." />
+          <meta property="twitter:title" content="SEO e Infraestrutura Digital para Empresas B2B | One Thank Digital" />
+          <meta property="twitter:description" content="Seu braço de tecnologia no Grande ABC. Infraestrutura digital e SEO estrutural para empresas que não podem perder clientes. Sem depender de anúncio pago." />
           <meta property="twitter:image" content="https://onethank.com.br/hero-seo-organico.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/seo-trafego-organico/" />
           <script type="application/ld+json">
@@ -564,10 +564,10 @@ export default function ServicosSEO() {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">// CONSULTORIA EM SEO E POSICIONAMENTO ORGÂNICO</div>
-            <h1 className="lp-h1">SEO E TRÁFEGO ORGÂNICO PARA EMPRESAS B2B NO ABC PAULISTA</h1>
+            <div className="lp-label">// SEU BRAÇO DE TECNOLOGIA: INFRAESTRUTURA E SEO ESTRUTURAL</div>
+            <h1 className="lp-h1">INFRAESTRUTURA DIGITAL E SEO PARA EMPRESAS B2B NO ABC PAULISTA</h1>
             <p className="lp-intro">
-              A One Thank Digital estrutura o rankeamento orgânico de escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista para aparecer no topo do Google e do AI Overview — sem depender de anúncio pago. Investimento único com resultado que cresce ao longo do tempo.
+              A One Thank Digital atua como seu braço de tecnologia, construindo a infraestrutura digital e o rankeamento orgânico de escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista para aparecer no topo do Google e do AI Overview — sem depender de anúncio pago. Investimento único com resultado que cresce ao longo do tempo.
             </p>
           </div>
         </section>

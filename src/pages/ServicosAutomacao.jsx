@@ -504,16 +504,16 @@ export default function ServicosAutomacao() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>Automação Digital de WhatsApp e CRM para Empresas B2B | One Thank Digital</title>
-          <meta name="description" content="Automação de WhatsApp, CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B em Santo André. Atendimento 24h sem depender do seu horário." />
-          <meta property="og:title" content="Automação Digital para Empresas B2B | One Thank Digital" />
-          <meta property="og:description" content="WhatsApp e CRM automatizados para nunca mais perder lead fora do horário. Para escritórios, clínicas e B2B no ABC Paulista." />
+          <title>Automação de Processos B2B e CRM | One Thank Digital</title>
+          <meta name="description" content="Seu braço de tecnologia no Grande ABC. Automação de processos B2B e integração de CRM para qualificação de leads 24h em escritórios e clínicas." />
+          <meta property="og:title" content="Automação de Processos B2B e CRM | One Thank Digital" />
+          <meta property="og:description" content="Seu braço de tecnologia no Grande ABC. Automação de processos B2B e integração de CRM para qualificação de leads 24h em escritórios e clínicas." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://onethank.com.br/servicos/automacao-digital/" />
           <meta property="og:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:title" content="Automação Digital para Empresas B2B | One Thank Digital" />
-          <meta property="twitter:description" content="WhatsApp e CRM automatizados para nunca mais perder lead fora do horário. Para escritórios, clínicas e B2B no ABC Paulista." />
+          <meta property="twitter:title" content="Automação de Processos B2B e CRM | One Thank Digital" />
+          <meta property="twitter:description" content="Seu braço de tecnologia no Grande ABC. Automação de processos B2B e integração de CRM para qualificação de leads 24h em escritórios e clínicas." />
           <meta property="twitter:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/automacao-digital/" />
           <script type="application/ld+json">
@@ -564,10 +564,10 @@ export default function ServicosAutomacao() {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">// AUTOMAÇÃO DE ATENDIMENTO E CRM PARA WHATSAPP BUSINESS</div>
-            <h1 className="lp-h1">AUTOMAÇÃO DIGITAL DE WHATSAPP E CRM PARA EMPRESAS B2B EM SANTO ANDRÉ</h1>
+            <div className="lp-label">// SEU BRAÇO DE TECNOLOGIA: AUTOMAÇÃO E CRM</div>
+            <h1 className="lp-h1">AUTOMAÇÃO DE PROCESSOS B2B E CRM PARA QUALIFICAÇÃO DE LEADS</h1>
             <p className="lp-intro">
-              A One Thank Digital implementa automação de WhatsApp, CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia, sem depender do seu horário ou da sua equipe. Quer entender o método a fundo antes de conversar? <a 
+              A One Thank Digital atua como seu braço de tecnologia, implementando automação de processos B2B, integração de CRM e funil de atendimento inteligente para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia. Quer entender o método a fundo antes de conversar? <a 
                 href="/guia/automacao-digital/" 
                 className="text-accent underline"
                 onClick={(e) => {
@@ -583,7 +583,7 @@ export default function ServicosAutomacao() {
         {/* DOR */}
         <section className="lp-dor-section">
           <div className="lp-container">
-            <h2 className="lp-section-title">O GARGALO DO ATENDIMENTO MANUAL NO WHATSAPP.</h2>
+            <h2 className="lp-section-title">O GARGALO DA FALTA DE AUTOMAÇÃO DE PROCESSOS B2B.</h2>
             <div className="lp-dor-list">
               <div className="lp-dor-item">
                 <div className="lp-dor-number">01</div>
@@ -625,7 +625,7 @@ export default function ServicosAutomacao() {
         {/* SOLUÇÃO */}
         <section className="lp-solucao-section">
           <div className="lp-container">
-            <h2 className="lp-section-title">COMO IMPLEMENTAMOS SUA AUTOMAÇÃO DIGITAL.</h2>
+            <h2 className="lp-section-title">COMO IMPLEMENTAMOS SUA AUTOMAÇÃO DE PROCESSOS B2B.</h2>
             <div className="lp-solucao-grid">
               <div className="lp-solucao-card">
                 <div className="lp-solucao-ghost">01</div>
