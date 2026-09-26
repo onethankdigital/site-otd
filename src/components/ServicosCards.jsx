@@ -259,13 +259,34 @@ const ServicosCards = () => {
           text-transform: uppercase;
           color: #E0040B;
           text-decoration: none;
-          position: relative;
-          z-index: 1;
           transition: letter-spacing 0.3s ease, opacity 0.3s ease;
           display: inline-block;
         }
 
-        .servico-link:hover {
+        /* Stretched link: o card inteiro vira área de toque (o link sozinho
+           tinha 20px de altura, abaixo do mínimo de 24px da WCAG 2.2 AA).
+           O ::after cobre o .servico-card, que já é position: relative. */
+        .servico-link::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 2;
+        }
+
+        /* Sem isto, no mobile o bloco "TESTE AGORA" (position + z-index) passava
+           à frente do ::after depois do hover e engolia o toque. O conteúdo do
+           card não tem nada clicável além do próprio link. */
+        .servico-card > *:not(.servico-link) {
+          pointer-events: none;
+        }
+
+        .servico-link:focus-visible {
+          outline: 2px solid #E0040B;
+          outline-offset: 4px;
+        }
+
+        .servico-link:hover,
+        .servico-card:hover .servico-link {
           letter-spacing: 3px;
           opacity: 0.8;
         }

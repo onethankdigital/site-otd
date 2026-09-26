@@ -87,7 +87,7 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
       <header className={`fixed top-0 left-0 w-full z-[100] px-6 py-6 md:px-12 md:py-8 flex justify-end items-center mix-blend-difference text-white pointer-events-none transition-all duration-300 ${isOpen ? 'opacity-100' : isVisible ? 'opacity-100' : 'opacity-0 -translate-y-4'}`}>
         <button
           onClick={toggleMenu}
-          className={`font-heading text-xl font-bold uppercase tracking-[0.1em] hover:text-accent transition-colors ${isOpen || isVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
+          className={`font-heading text-xl font-bold uppercase tracking-[0.1em] hover:text-accent transition-colors min-h-[44px] min-w-[44px] py-2 -my-2 ${isOpen || isVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </button>
