@@ -10,6 +10,13 @@ const PuppeteerRenderer = PuppeteerRendererModule.default || PuppeteerRendererMo
 const distDir = './dist';
 const EXPECTED_SITEMAP_URLS = 33; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
 
+// O Puppeteer executa o snippet inline do GTM durante o pré-render e grava no HTML
+// estático o <script src="gtm.js"> que ele injeta. No navegador, o snippet roda de novo
+// e injeta uma segunda tag → GTM duplicado. Remove a tag gravada; o snippet inline fica.
+function stripPrerenderedGtm(html) {
+  return html.replace(/<script[^>]*src="https:\/\/www\.googletagmanager\.com\/gtm\.js[^"]*"[^>]*><\/script>/g, '');
+}
+
 function processDirectory(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
@@ -21,13 +28,14 @@ function processDirectory(dir) {
       const normalizedPath = path.normalize(filePath);
       const rootIndexPath = path.normalize('dist/index.html');
       let html = fs.readFileSync(filePath, 'utf-8');
+      html = stripPrerenderedGtm(html);
 
       if (normalizedPath === rootIndexPath) {
         if (!html.includes('rel="canonical"')) {
           html = html.replace('</head>', '    <link rel="canonical" href="https://onethank.com.br/" />\n  </head>');
-          fs.writeFileSync(filePath, html, 'utf-8');
           console.log(`Injected homepage canonical in ${filePath}`);
         }
+        fs.writeFileSync(filePath, html, 'utf-8');
         continue;
       }
 
@@ -155,7 +163,7 @@ async function prerenderHomepage() {
   try {
     await prerenderer.initialize();
     const renderedRoutes = await prerenderer.renderRoutes(['/']);
-    let html = renderedRoutes[0].html.trim();
+    let html = stripPrerenderedGtm(renderedRoutes[0].html.trim());
     
     // Clean up any duplicate canonical tags and write exactly one
     html = html.replace(/<link rel="canonical"[^>]*>/g, '');
