@@ -40,6 +40,8 @@ import CategoriaInsights from './pages/CategoriaInsights';
 import GuiaListagem from './pages/GuiaListagem';
 import AgenciasPage from './pages/AgenciasPage';
 import OneHub from './pages/OneHub';
+import LandingPage from './pages/LandingPage';
+import { getLanding } from './data/landings';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -337,6 +339,22 @@ function App() {
         <div className="noise-overlay"></div>
         <Suspense fallback={null}>
           <AgenciasPage />
+        </Suspense>
+        <WhatsAppButton />
+      </div>
+    );
+  }
+
+  // Páginas de segmento (/segmentos/...) e de cidade (/atendimento/...)
+  const landing = getLanding(currentPath);
+  if (landing) {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CustomCursor />
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <Suspense fallback={null}>
+          <LandingPage landing={landing} />
         </Suspense>
         <WhatsAppButton />
       </div>

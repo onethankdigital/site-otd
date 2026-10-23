@@ -16,6 +16,7 @@ RedirectMatch 301 ^/insights/google-meu-negocio-guia-completo-2026/?$ /guia/goog
 # Pastas sem página própria: evitam a listagem "Index of" do Apache
 RedirectMatch 301 ^/servicos/?$ /
 RedirectMatch 301 ^/insights/categoria/?$ /insights/
+RedirectMatch 301 ^/(segmentos|atendimento)/?$ /
 
 # Restos do WordPress antigo (tema de demonstração): 410 avisa o Google que sumiram de vez
 RedirectMatch 301 ^/home(-4)?/?$ /

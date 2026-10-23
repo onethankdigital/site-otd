@@ -1,4 +1,5 @@
 import React from 'react';
+import { segmentos, cidades } from '../data/landings';
 
 export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
   const styles = `
@@ -35,6 +36,10 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     .soc-name { font-size: clamp(18px, 1.5vw, 24px); color: #999; transition: color 0.2s; font-weight: 500; }
     .soc-item:hover .soc-name { color: #fff; }
 
+    .fatende { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 24px 0; border-top: 1px solid #111; }
+    .fatende-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #D42B2B; font-weight: 700; margin-right: 4px; }
+    .fatende a { font-size: 14px; color: #777; text-decoration: none; transition: color 0.2s; }
+    .fatende a:hover { color: #fff; }
     .fbot { border-top: 1px solid #111; padding: 28px 0 36px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .fstat { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #888; letter-spacing: 2px; text-transform: uppercase; }
     .fdot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: blink 2s infinite; flex-shrink: 0; }
@@ -218,6 +223,13 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
               ))}
             </div>
           </div>
+
+          <nav className="fatende" aria-label="Segmentos e cidades atendidas">
+            <span className="fatende-title">Atendemos</span>
+            {[...segmentos, ...cidades].map((l) => (
+              <a key={l.path} href={l.path}>{l.nomeCurto}</a>
+            ))}
+          </nav>
 
           <div className="fbot">
             <div className="fstat" style={{ fontSize: '15px', color: '#D42B2B', fontWeight: '600', letterSpacing: '1px' }}>

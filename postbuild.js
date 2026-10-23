@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { blogPosts, getPublishedPosts } from './src/data/blogPosts.js';
+import { landings } from './src/data/landings.js';
 import PrerendererModule from '@prerenderer/prerenderer';
 import PuppeteerRendererModule from '@prerenderer/renderer-puppeteer';
 
@@ -11,7 +12,7 @@ const distDir = './dist';
 // Rotas fixas (páginas, guias e insights próprios) + artigos do blogPosts.js já publicados.
 // ATUALIZAR ROTAS_FIXAS AO ADICIONAR PÁGINAS QUE NÃO SEJAM ARTIGOS DO blogPosts.js
 const ROTAS_FIXAS = 23;
-const EXPECTED_SITEMAP_URLS = ROTAS_FIXAS + getPublishedPosts().length;
+const EXPECTED_SITEMAP_URLS = ROTAS_FIXAS + getPublishedPosts().length + landings.length;
 
 // O Puppeteer executa o snippet inline do GTM durante o pré-render e grava no HTML
 // estático o <script src="gtm.js"> que ele injeta. No navegador, o snippet roda de novo

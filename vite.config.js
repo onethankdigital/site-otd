@@ -7,6 +7,7 @@ import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import { blogPosts, isPostPublished } from './src/data/blogPosts.js'
+import { landings } from './src/data/landings.js'
 
 const _filename = fileURLToPath(import.meta.url)
 const _dirname = dirname(_filename)
@@ -15,9 +16,12 @@ const _dirname = dirname(_filename)
 // O deploy agendado (deploy.yml) refaz o build no dia para publicar sozinho.
 const rotasDeArtigos = blogPosts.map(p => `/insights/${p.slug}/`)
 const rotasPublicadas = blogPosts.filter(isPostPublished).map(p => `/insights/${p.slug}/`)
+// Páginas de segmento e de cidade (src/data/landings.js) entram junto com os artigos
+const rotasDeLandings = landings.map(l => l.path)
 const comArtigosPublicados = (rotas) => [
   ...rotas.filter(r => !rotasDeArtigos.includes(r)),
-  ...rotasPublicadas
+  ...rotasPublicadas,
+  ...rotasDeLandings
 ]
 
 // 1. Rotas completas para o sitemap do Google Search Console
