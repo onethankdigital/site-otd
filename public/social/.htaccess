@@ -1,0 +1,4 @@
+# Imagens dos posts de redes sociais: não indexar no Google
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
