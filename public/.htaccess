@@ -19,10 +19,21 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
+  # Apresentação comercial em PDF servida em URL limpa
+  RewriteRule ^apresentacao-one-thank-digital/?$ /apresentacao-one-thank-digital.pdf [L]
+
   # Serve static files as-is
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
+</IfModule>
+
+# Apresentação comercial: abrir no navegador (inline) e não indexar no Google
+<IfModule mod_headers.c>
+  <FilesMatch "^apresentacao-one-thank-digital\.pdf$">
+    Header set Content-Disposition "inline; filename=\"Apresentacao-One-Thank-Digital.pdf\""
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
 </IfModule>
 
 # Cache static assets
