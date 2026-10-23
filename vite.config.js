@@ -95,7 +95,9 @@ const prerenderPaths = [
   '/agencias/',
   '/privacidade/',
   '/termos/',
-  '/onehub/'
+  '/onehub/',
+  // Link da bio do Instagram: pré-renderizada, mas fora do sitemap (noindex)
+  '/links/'
 ]
 
 export default defineConfig({
@@ -106,6 +108,7 @@ export default defineConfig({
     Sitemap({
       hostname: 'https://onethank.com.br',
       dynamicRoutes: comArtigosPublicados(sitemapPaths),
+      exclude: ['/links', '/links/'],
       trailingSlash: true
     }),
 

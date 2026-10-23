@@ -57,6 +57,11 @@ function processDirectory(dir) {
   </head>`;
       html = html.replace('</head>', preconnects);
 
+      // Página do link da bio: fica só com o noindex da própria página
+      if (normalizedPath.includes(path.normalize('links/index.html'))) {
+        html = html.replace(/<meta name="robots" content="index, follow"\s*\/?>/, '');
+      }
+
       // Se for a Pillar Page, injetar o preload da imagem hero
       if (normalizedPath.includes(path.normalize('guia/automacao-digital/index.html'))) {
         const preloadHero = `

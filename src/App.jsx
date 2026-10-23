@@ -42,6 +42,7 @@ import AgenciasPage from './pages/AgenciasPage';
 import OneHub from './pages/OneHub';
 import LandingPage from './pages/LandingPage';
 import { getLanding } from './data/landings';
+import LinksPage from './pages/LinksPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -357,6 +358,17 @@ function App() {
           <LandingPage landing={landing} />
         </Suspense>
         <WhatsAppButton />
+      </div>
+    );
+  }
+
+  // Link da bio do Instagram (noindex, fora do sitemap)
+  if (currentPath === '/links' || currentPath === '/links/') {
+    return (
+      <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden">
+        <CookieBanner />
+        <div className="noise-overlay"></div>
+        <LinksPage />
       </div>
     );
   }
