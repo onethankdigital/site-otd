@@ -31,7 +31,7 @@ ErrorDocument 404 /404.html
 # Apresentação comercial: abrir no navegador (inline) e não indexar no Google
 <IfModule mod_headers.c>
   <FilesMatch "^apresentacao-one-thank-digital\.pdf$">
-    Header set Content-Disposition "inline; filename=\"Apresentacao-One-Thank-Digital.pdf\""
+    Header set Content-Disposition 'inline; filename="Apresentacao-One-Thank-Digital.pdf"'
     Header set X-Robots-Tag "noindex, nofollow"
   </FilesMatch>
 </IfModule>
