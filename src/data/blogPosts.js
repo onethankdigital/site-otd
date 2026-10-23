@@ -2733,8 +2733,8 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
     categoria: "Website",
     titulo: "Quanto custa um site profissional: o que define o investimento",
     metaDescricao: "O custo de um site depende do papel dele na sua operação. Veja os 4 níveis, do site de presença à plataforma integrada, e o que pesa em cada orçamento.",
-    publishDate: "2026-10-29",
-    dataPublicacao: "2026-10-29",
+    publishDate: "2026-10-27",
+    dataPublicacao: "2026-10-27",
     meta: "7 min de leitura · Website · One Thank Digital",
     lead: "Peça três orçamentos de site e você provavelmente vai receber três valores muito diferentes — às vezes com uma distância de dez vezes entre o menor e o maior. Isso não acontece porque alguém está errado, e sim porque cada fornecedor está imaginando um site diferente. Neste artigo você entende o que realmente define o investimento e como descobrir de qual nível de site a sua empresa precisa.",
     callout: "Resposta direta: o custo de um site profissional não é definido pelo número de páginas nem só pelo visual, e sim pela criticidade do site na estrutura da empresa — o quanto ele participa de atrair, convencer e atender clientes. Um site de presença, que apenas mostra quem você é, exige muito menos do que um site que gera oportunidades todos os dias ou que se integra ao CRM, à agenda e ao atendimento. Defina primeiro o papel do site; o orçamento vem depois.",
@@ -2789,6 +2789,308 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
       }
     ],
     cta: "Qual é o nível de site que a sua empresa precisa?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 14,
+    imagem: "/Blog/artigo-14-avaliacoes-google.webp",
+    slug: "como-pedir-avaliacoes-no-google",
+    categoria: "GMN",
+    titulo: "Como pedir avaliações no Google sem constranger o cliente",
+    metaDescricao: "Como pedir avaliações no Google do jeito certo: o melhor momento, modelos de mensagem para WhatsApp e o que as regras do Google proíbem.",
+    publishDate: "2026-11-03",
+    dataPublicacao: "2026-11-03",
+    meta: "6 min de leitura · GMN · One Thank Digital",
+    lead: "Quase todo empresário sabe que avaliações no Google trazem clientes. O difícil é pedir sem parecer insistente — e sem cair nas armadilhas que fazem o Google remover avaliações ou restringir o perfil. Neste artigo você vê quando pedir, como pedir (com modelos prontos para WhatsApp) e o que nunca fazer.",
+    callout: "Resposta direta: peça a avaliação logo depois de uma entrega bem-sucedida, com uma mensagem curta, pessoal e com o link direto do seu perfil. Peça a todos os clientes, e não só aos satisfeitos, e nunca ofereça desconto, brinde ou qualquer vantagem em troca. Regularidade vale mais do que volume: algumas avaliações novas por mês fortalecem o perfil mais do que uma campanha pontual.",
+    pillarUrl: "/guia/google-meu-negocio/",
+    pillarText: "SEO Local e Google Meu Negócio",
+    secoes: [
+      {
+        titulo: "Por que as avaliações pesam tanto",
+        corpo: `A <a href="https://support.google.com/business/answer/7091?hl=pt-BR" target="_blank" rel="noopener">documentação oficial do Google sobre classificação local</a> cita a quantidade e a nota das avaliações como parte do fator <strong>destaque</strong>, um dos três que definem quem aparece no mapa. Além disso, a avaliação é o que o cliente lê antes de ligar: é prova social no momento exato da decisão.<br><br>Existe um terceiro efeito, menos conhecido: quando o cliente descreve com as próprias palavras o serviço que contratou, o Google passa a associar o perfil a buscas mais específicas. Por isso, avaliações detalhadas valem mais do que cinco estrelas sem comentário.`
+      },
+      {
+        titulo: "O melhor momento para pedir",
+        corpo: `O pedido funciona melhor quando o cliente acabou de sentir o resultado:<br><br>• <strong>Logo após a entrega</strong> do serviço ou de uma etapa importante (o contrato registrado, o site no ar, a consulta concluída).<br>• <strong>Depois de um elogio espontâneo</strong> — se o cliente agradeceu no WhatsApp, é a hora natural de pedir.<br>• <strong>Em até 24 horas</strong> após o atendimento, enquanto a experiência ainda está fresca.<br><br>Evite pedir no meio de um problema em aberto ou junto com uma cobrança. E não pressione o cliente a avaliar ali mesmo, na sua frente.`
+      },
+      {
+        titulo: "Modelos de mensagem para WhatsApp",
+        corpo: `Pegue o link direto de avaliação no seu perfil (no painel do Google, botão <strong>"Pedir avaliações"</strong>) e adapte um destes modelos:<br><br><strong>Após a entrega:</strong><br><em>"Oi, [nome]! Que bom que deu tudo certo com [serviço]. Se puder, conta como foi a sua experiência com a gente no Google — leva menos de um minuto e ajuda muito outras empresas a nos encontrar: [link]. Obrigado pela confiança!"</em><br><br><strong>Depois de um elogio:</strong><br><em>"Fico muito feliz em saber, [nome]! Você se importaria de deixar esse comentário no nosso perfil do Google? [link]"</em><br><br><strong>Lembrete (uma única vez, alguns dias depois):</strong><br><em>"Oi, [nome], passando só para deixar o link de novo, caso ainda queira avaliar: [link]. Sem problema se não der!"</em><br><br>Repare: nenhum modelo sugere a nota, o texto ou oferece algo em troca. A pergunta é aberta — o cliente conta a experiência dele.`
+      },
+      {
+        titulo: "O que as regras do Google proíbem",
+        corpo: `As políticas de conteúdo do Google tratam como <strong>engajamento falso</strong> práticas que muita empresa faz sem saber que são proibidas:<br><br>• <strong>Oferecer incentivo</strong>: desconto, brinde, sorteio ou qualquer vantagem em troca de avaliação.<br>• <strong>Pedir só para quem está satisfeito</strong>: perguntar antes "de 0 a 10, quanto você nos recomenda?" e mandar o link apenas para quem deu nota alta. Essa prática, conhecida como filtragem de avaliações, é proibida.<br>• <strong>Avaliações de funcionários, parentes ou de você mesmo.</strong><br>• <strong>Oferecer algo para o cliente mudar ou apagar</strong> uma avaliação negativa.<br><br>As consequências vão da remoção das avaliações a avisos e restrições no perfil. Como as políticas mudam com frequência, consulte sempre a central de ajuda do Perfil da Empresa no Google.`
+      },
+      {
+        titulo: "Como transformar o pedido em rotina",
+        corpo: `O que funciona é processo, não campanha. Três passos simples:<br><br><strong>1. Defina o gatilho:</strong> qual momento da sua operação dispara o pedido (entrega, alta, conclusão do serviço).<br><strong>2. Defina o responsável:</strong> quem envia a mensagem, ou automatize o envio pelo CRM.<br><strong>3. Responda todas as avaliações em até 24 horas</strong>, inclusive as negativas, com educação e sem expor dados do cliente.<br><br>Quando o envio é automático, a cadência não depende da memória de ninguém. É o que fazemos com o <a href="/onehub/">OneHub</a>: a mensagem sai pelo WhatsApp oficial no momento certo, com o link do perfil. Para estruturar o seu perfil por completo, conheça o serviço de <a href="/servicos/google-meu-negocio/">Google Meu Negócio da One Thank Digital</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Posso oferecer desconto para quem avaliar minha empresa no Google?",
+        resposta: "Não. O Google proíbe oferecer qualquer incentivo em troca de avaliações — desconto, brinde, sorteio ou vantagem. A prática pode levar à remoção das avaliações e a restrições no perfil."
+      },
+      {
+        pergunta: "Posso pedir avaliação só para os clientes satisfeitos?",
+        resposta: "Não. Filtrar quem recebe o pedido (por exemplo, enviar o link apenas para quem deu nota alta em uma pesquisa) é tratado pelo Google como engajamento falso. Peça a todos os clientes."
+      },
+      {
+        pergunta: "Onde encontro o link direto para avaliação?",
+        resposta: "No painel do seu Perfil da Empresa no Google, pesquisando o nome da empresa logado na conta que gerencia o perfil, clique em \"Pedir avaliações\" e copie o link."
+      },
+      {
+        pergunta: "Quantas avaliações por mês são o ideal?",
+        resposta: "Não existe um número mágico. O que pesa é a regularidade: um fluxo constante de avaliações novas mostra que o negócio está ativo. Para a maioria das empresas de serviço, transformar o pedido em rotina após cada entrega já faz diferença."
+      },
+      {
+        pergunta: "Devo responder avaliações positivas também?",
+        resposta: "Sim. Responder todas as avaliações mostra que há gestão ativa no perfil e é um sinal de atenção ao cliente. Agradeça de forma pessoal e evite respostas idênticas para todos."
+      }
+    ],
+    cta: "Seu perfil no Google está trabalhando por você?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 15,
+    imagem: "/Blog/artigo-15-ia-chatgpt.webp",
+    slug: "como-aparecer-no-chatgpt-e-na-ia-do-google",
+    categoria: "SEO",
+    titulo: "Como aparecer nas respostas do ChatGPT e da IA do Google",
+    metaDescricao: "Guia prático para empresas locais serem citadas pelo ChatGPT e pelas respostas com IA do Google: perfil, site, dados estruturados e menções.",
+    publishDate: "2026-11-10",
+    dataPublicacao: "2026-11-10",
+    meta: "7 min de leitura · SEO · One Thank Digital",
+    lead: "Cada vez mais clientes perguntam direto para uma inteligência artificial: \"qual escritório de contabilidade em Santo André atende empresas de serviço?\". A IA responde com poucas indicações — e quem não aparece nessa lista simplesmente não é considerado. A boa notícia é que os sinais que levam uma empresa a ser citada são conhecidos e, em boa parte, já são os mesmos de um bom trabalho de presença no Google.",
+    callout: "Resposta direta: assistentes como o ChatGPT e as respostas com IA do Google recomendam empresas que conseguem confirmar em várias fontes. Para ser citado, sua empresa precisa de um Perfil da Empresa no Google completo e ativo, um site próprio rápido que responda com clareza às dúvidas do cliente, dados estruturados, informações idênticas em todos os cadastros e menções em sites confiáveis da região. Não existe atalho: existe consistência.",
+    pillarUrl: "/guia/seo-trafego-organico/",
+    pillarText: "SEO e Posicionamento Orgânico B2B",
+    secoes: [
+      {
+        titulo: "Como a IA escolhe quem indicar",
+        corpo: `Ferramentas de IA com busca não "inventam" empresas: elas consultam a web, cruzam fontes e resumem o que encontram. Na prática, tendem a indicar negócios que aparecem de forma <strong>consistente</strong> em vários lugares confiáveis — o próprio site, o perfil no Google, diretórios, avaliações, notícias e artigos.<br><br>Isso muda a lógica de visibilidade. Não basta ter uma página bem posicionada: a IA precisa conseguir <strong>confirmar</strong> quem você é, o que faz, onde atende e se os clientes aprovam. Quanto mais fácil for essa confirmação, maior a chance de a sua empresa entrar na resposta.`
+      },
+      {
+        titulo: "1. Perfil da Empresa no Google completo e ativo",
+        corpo: `Para buscas locais, o perfil no Google é a fonte mais forte de dados sobre a empresa. Preencha tudo: categoria principal precisa, serviços, área atendida, horário, fotos reais e descrição clara. Mantenha o perfil vivo com publicações e respostas às avaliações.<br><br>As avaliações contam duas vezes: como prova social e como texto que descreve o seu serviço com as palavras dos clientes. Veja <a href="/insights/como-pedir-avaliacoes-no-google/">como pedir avaliações sem constranger o cliente</a> e o <a href="/guia/google-meu-negocio/">guia completo de Google Meu Negócio</a>.`
+      },
+      {
+        titulo: "2. Um site que responde perguntas de verdade",
+        corpo: `A IA procura respostas claras. Páginas que explicam com objetividade o que a empresa faz, para quem, em que região e como funciona o serviço são muito mais fáceis de citar do que textos genéricos.<br><br>Boas práticas que fazem diferença:<br>• <strong>Uma página para cada serviço</strong>, com a resposta principal logo no início.<br>• <strong>Perguntas frequentes reais</strong>, escritas como o cliente pergunta.<br>• <strong>Conteúdo útil e assinado</strong>, mostrando quem é o especialista por trás da empresa.<br>• <strong>Velocidade e conteúdo legível sem depender de JavaScript</strong>, para que robôs consigam ler a página por completo.`
+      },
+      {
+        titulo: "3. Dados estruturados e informações idênticas em todo lugar",
+        corpo: `Dados estruturados (schema) são marcações no código que dizem aos buscadores, de forma inequívoca, o nome da empresa, o endereço, o telefone, a área atendida, os serviços e as perguntas frequentes. Eles ajudam a IA a entender e confirmar as informações.<br><br>Igualmente importante é a <strong>consistência</strong>: nome, endereço e telefone precisam ser exatamente iguais no site, no perfil do Google, nas redes sociais e nos diretórios. Divergências — um telefone antigo, um endereço abreviado de outro jeito — enfraquecem a confiança na informação.`
+      },
+      {
+        titulo: "4. Menções em sites confiáveis",
+        corpo: `Esse é o fator que a maioria das empresas ignora. Ser citado em portais de notícias da região, associações comerciais, entidades do setor, diretórios relevantes e artigos de parceiros é o que transforma "uma empresa com site" em "uma empresa reconhecida".<br><br>Caminhos práticos: cadastro em associações e diretórios locais, participação em eventos e entrevistas, artigos como especialista e conteúdos com dados próprios que a imprensa queira citar.`
+      },
+      {
+        titulo: "5. Deixe os robôs entrarem",
+        corpo: `Confira se o seu site não está bloqueando, sem querer, os robôs das ferramentas de busca com IA. O arquivo robots.txt deve permitir o acesso dos buscadores e das ferramentas em que você quer aparecer — a OpenAI, por exemplo, documenta os robôs que usa para a busca do ChatGPT.<br><br>Vale também cadastrar o site no <strong>Google Search Console</strong> e no <strong>Bing Webmaster Tools</strong>: o índice do Bing é usado por diversos assistentes, e os dois painéis mostram se as páginas estão sendo rastreadas e indexadas.`
+      },
+      {
+        titulo: "O que não funciona",
+        corpo: `Desconfie de promessas de "ranquear no ChatGPT" em poucos dias. Não há como pagar para ser citado nas respostas, e táticas como encher páginas de palavras-chave, criar avaliações falsas ou publicar dezenas de textos genéricos gerados em massa tendem a prejudicar a confiança na empresa.<br><br>O caminho é o mesmo de uma presença digital bem estruturada — só que agora com mais peso para clareza, consistência e reputação. É exatamente o trabalho de <a href="/servicos/seo-trafego-organico/">SEO e posicionamento orgânico da One Thank Digital</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Dá para pagar para aparecer nas respostas do ChatGPT?",
+        resposta: "Não existe forma de pagar para ser citado nas respostas orgânicas dos assistentes de IA. A citação depende de a empresa aparecer de forma consistente e confiável em várias fontes da web."
+      },
+      {
+        pergunta: "O SEO tradicional ainda importa com a chegada da IA?",
+        resposta: "Sim. As ferramentas de IA com busca se apoiam no conteúdo indexado da web. Site rápido, conteúdo claro, dados estruturados, perfil no Google completo e boas menções continuam sendo a base — agora com ainda mais peso."
+      },
+      {
+        pergunta: "Quanto tempo leva para minha empresa começar a ser citada pela IA?",
+        resposta: "Depende do ponto de partida e da concorrência. Ajustes de perfil, site e dados estruturados são rápidos; reputação e menções em outros sites são construídas ao longo de meses. Acompanhe pesquisando as perguntas que seus clientes fazem nas próprias ferramentas."
+      },
+      {
+        pergunta: "Preciso de um site ou o perfil no Google basta?",
+        resposta: "O perfil no Google é essencial para buscas locais, mas o site próprio é onde você explica os serviços com profundidade e responde às dúvidas. Os dois juntos dão à IA mais fontes para confirmar e citar a sua empresa."
+      }
+    ],
+    cta: "Sua empresa está pronta para ser encontrada pela IA?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 16,
+    imagem: "/Blog/artigo-16-gmn-advogados.webp",
+    slug: "google-meu-negocio-para-advogados",
+    categoria: "GMN",
+    titulo: "Google Meu Negócio para advogados: o que a OAB permite",
+    metaDescricao: "Como escritórios de advocacia podem usar o Perfil da Empresa no Google respeitando o Provimento 205/2021 da OAB: o que fazer, o que evitar e o sigilo.",
+    publishDate: "2026-11-17",
+    dataPublicacao: "2026-11-17",
+    meta: "7 min de leitura · GMN · One Thank Digital",
+    lead: "Quem procura um advogado hoje começa, quase sempre, por uma busca no Google — e o mapa com os escritórios da região aparece antes de qualquer site. Muitos escritórios, porém, deixam o perfil abandonado por receio das regras de publicidade da OAB. Este artigo mostra como ter um perfil completo e ativo dentro dos limites éticos da advocacia.",
+    callout: "Resposta direta: o Perfil da Empresa no Google é compatível com a publicidade informativa permitida pelo Provimento 205/2021 da OAB, desde que mantenha caráter discreto e sóbrio: nome real do escritório, áreas de atuação, endereço, horário, fotos sóbrias e conteúdo educativo. Evite preços como forma de captação, promessas de resultado, expressões de autoengrandecimento e menção a especialidade sem título que a comprove. Ao responder avaliações, preserve o sigilo profissional.",
+    pillarUrl: "/guia/google-meu-negocio/",
+    pillarText: "SEO Local e Google Meu Negócio",
+    secoes: [
+      {
+        titulo: "O que diz o Provimento 205/2021",
+        corpo: `O <strong>Provimento 205/2021</strong> do Conselho Federal da OAB regulamenta a publicidade e o marketing jurídico. A linha central é clara: a publicidade do advogado deve ser <strong>informativa, discreta e sóbria</strong>, sem captação de clientela ou mercantilização da profissão. O provimento admite o marketing de conteúdo e anúncios, inclusive pagos, desde que respeitados os limites do Estatuto e do Código de Ética.<br><br>O texto não trata do Google Meu Negócio pelo nome. Por isso, a regra prática é aplicar ao perfil os mesmos princípios que valem para o site e as redes sociais do escritório. Em caso de dúvida concreta, consulte a cartilha do Conselho Federal sobre o provimento ou o Tribunal de Ética da sua seccional — e confirme a versão vigente das normas, que passam por revisões.`
+      },
+      {
+        titulo: "Como montar o perfil dentro das regras",
+        corpo: `• <strong>Nome:</strong> use o nome real do escritório ou da sociedade, sem acrescentar palavras-chave como "advogado trabalhista barato" — isso fere tanto as diretrizes do Google quanto a sobriedade exigida pela OAB.<br>• <strong>Categoria:</strong> escolha a categoria que corresponde à atuação principal (por exemplo, escritório de advocacia ou a área específica).<br>• <strong>Descrição:</strong> informe as áreas de atuação de forma objetiva. Não use "o melhor", "o mais", "garantia de vitória" ou comparações com outros escritórios.<br>• <strong>Especialidade:</strong> só mencione especialização que possa ser comprovada por título.<br>• <strong>Fotos:</strong> fachada, recepção, equipe e ambiente de trabalho, com sobriedade.<br>• <strong>Serviços:</strong> descreva o que o escritório faz, sem valores de honorários como forma de atrair clientes.`
+      },
+      {
+        titulo: "Publicações: o que vale postar",
+        corpo: `As publicações do perfil funcionam muito bem para conteúdo educativo, que é exatamente o que o provimento incentiva:<br><br>• Explicações sobre mudanças na lei e prazos importantes.<br>• Perguntas frequentes da sua área ("o que fazer após uma demissão sem justa causa?").<br>• Avisos de horário, eventos, palestras e artigos publicados pelo escritório.<br><br>Evite publicações com tom de oferta ("consulte agora e ganhe"), casos de clientes que permitam identificação e qualquer promessa de resultado.`
+      },
+      {
+        titulo: "Avaliações e o sigilo profissional",
+        corpo: `O provimento não regulamenta avaliações de clientes de forma específica, mas o <strong>sigilo profissional</strong> se aplica integralmente às respostas. Esse é o ponto de maior risco para escritórios.<br><br>• <strong>Ao responder, nunca confirme</strong> que a pessoa é ou foi cliente, nem mencione detalhes do caso — mesmo que ela própria tenha contado na avaliação.<br>• Prefira respostas genéricas e cordiais: <em>"Agradecemos o seu comentário. Nosso compromisso é atuar com ética e atenção a cada pessoa que nos procura."</em><br>• Diante de uma crítica, não rebata com fatos do processo. Ofereça um canal reservado para conversa.<br><br>Ao pedir avaliações, siga também as regras do Google: sem incentivos e sem pedir apenas para quem ficou satisfeito. Veja <a href="/insights/como-pedir-avaliacoes-no-google/">como pedir avaliações do jeito certo</a>.`
+      },
+      {
+        titulo: "O que evitar a todo custo",
+        corpo: `☐ Palavras-chave no nome do perfil.<br>☐ Preço de honorários como chamariz.<br>☐ Promessas de resultado ou de prazo.<br>☐ Expressões de autoengrandecimento ("o melhor de Santo André").<br>☐ Especialidade sem título que a comprove.<br>☐ Respostas a avaliações que revelem informações de clientes.<br>☐ Pagamento para aparecer em rankings ou premiações.<br><br>Um perfil sóbrio, completo e ativo é, ao mesmo tempo, o que a OAB permite e o que transmite mais confiança a quem procura um advogado.`
+      },
+      {
+        titulo: "Como a One Thank Digital ajuda escritórios",
+        corpo: `A OTD estrutura a presença digital de escritórios de advocacia do Grande ABC com atenção às regras de publicidade da profissão: perfil no Google, site institucional e conteúdo educativo integrados. Conheça o serviço de <a href="/servicos/google-meu-negocio/">Google Meu Negócio</a> e o <a href="/guia/google-meu-negocio/">guia completo de SEO local</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Advogado pode ter perfil no Google Meu Negócio?",
+        resposta: "Sim. Um perfil com informações objetivas do escritório — nome, áreas de atuação, endereço, horário e contato — é compatível com a publicidade informativa permitida pelo Provimento 205/2021, desde que mantenha caráter discreto e sóbrio."
+      },
+      {
+        pergunta: "Escritório de advocacia pode pedir avaliações aos clientes?",
+        resposta: "O provimento não trata de avaliações de forma específica. Se o escritório optar por pedir, deve fazê-lo sem oferecer qualquer vantagem, sem pressão e sem selecionar apenas clientes satisfeitos, preservando sempre o sigilo profissional nas respostas."
+      },
+      {
+        pergunta: "Posso colocar o preço da consulta no perfil?",
+        resposta: "O Provimento 205/2021 veda a referência a valores de honorários como forma de captação de clientela. Por segurança, não divulgue valores no perfil."
+      },
+      {
+        pergunta: "Como responder a uma avaliação negativa sendo advogado?",
+        resposta: "Com cordialidade e sem revelar qualquer informação sobre o atendimento ou o caso — nem mesmo confirmar que a pessoa foi cliente. Ofereça um canal reservado para conversar. O sigilo profissional vale também nas respostas públicas."
+      }
+    ],
+    cta: "Seu escritório aparece para quem procura advogado na região?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 17,
+    imagem: "/Blog/artigo-17-whatsapp-banido.webp",
+    slug: "whatsapp-banido-como-evitar",
+    categoria: "Automação",
+    titulo: "WhatsApp banido: por que acontece e como proteger o número da empresa",
+    metaDescricao: "Por que o WhatsApp bane números de empresas, como pedir a análise do banimento e como proteger o número com o uso correto e a API oficial.",
+    publishDate: "2026-11-24",
+    dataPublicacao: "2026-11-24",
+    meta: "6 min de leitura · Automação · One Thank Digital",
+    lead: "Para muitas empresas, o número do WhatsApp é a principal porta de entrada de clientes. Quando ele é banido, a operação para: contatos somem, conversas em andamento se perdem e o comercial fica no escuro. Entender por que o banimento acontece é a melhor forma de evitar que aconteça com a sua empresa.",
+    callout: "Resposta direta: o WhatsApp bane números principalmente por uso de aplicativos não oficiais (versões modificadas ou ferramentas que simulam o app), envio de mensagens em massa para quem não autorizou e excesso de denúncias e bloqueios. Se o seu número for banido, use a opção de solicitar análise no próprio aplicativo o quanto antes. Para proteger a operação, use apenas o app oficial ou a API oficial da Meta e envie mensagens somente a quem deu permissão.",
+    pillarUrl: "/guia/automacao-digital/",
+    pillarText: "Automação Digital B2B",
+    secoes: [
+      {
+        titulo: "Os principais motivos de banimento",
+        corpo: `<strong>1. Aplicativos não oficiais.</strong> Versões modificadas do WhatsApp e ferramentas que "espelham" o aplicativo para automatizar envios violam os termos de serviço. Muitas prometem automação barata, mas colocam o número em risco permanente.<br><br><strong>2. Mensagens em massa sem permissão.</strong> Disparar a mesma mensagem para listas compradas ou contatos que nunca falaram com a empresa é tratado como spam.<br><br><strong>3. Denúncias e bloqueios.</strong> Quando muitas pessoas bloqueiam ou denunciam o número em pouco tempo, o sistema interpreta como comportamento abusivo.<br><br><strong>4. Uso excessivo de listas de transmissão</strong> e grupos criados com contatos que não pediram para participar.<br><br><strong>5. Comportamento de robô:</strong> muitos envios em sequência, em horários incomuns e com mensagens idênticas.`
+      },
+      {
+        titulo: "Fui banido. E agora?",
+        corpo: `<strong>1. Solicite a análise imediatamente.</strong> Na tela de aviso do próprio aplicativo há a opção de pedir revisão do banimento. Faça isso o quanto antes — casos antigos costumam ser mais difíceis de reverter.<br><br><strong>2. Explique com objetividade</strong> que se trata de uma empresa e como o número é usado, sem insistir em vários pedidos seguidos.<br><br><strong>3. Pare de usar qualquer ferramenta não oficial</strong> conectada ao número.<br><br><strong>4. Avise os clientes por outros canais</strong> (e-mail, site, redes sociais, perfil no Google) enquanto aguarda.<br><br>Para orientações atualizadas, consulte sempre a Central de Ajuda oficial do WhatsApp. E lembre-se: sem backup, as conversas não podem ser recuperadas.`
+      },
+      {
+        titulo: "Como proteger o número da empresa",
+        corpo: `• <strong>Use apenas o app oficial WhatsApp Business ou a API oficial da Meta.</strong> Nada de versões modificadas ou automações "sem API".<br>• <strong>Envie mensagens só para quem autorizou</strong> — clientes que falaram com você ou que se cadastraram para receber.<br>• <strong>Facilite a saída:</strong> quem não quer mais receber deve conseguir sair com facilidade. Isso reduz denúncias.<br>• <strong>Personalize e espace os envios</strong> em vez de disparar a mesma mensagem para centenas de pessoas.<br>• <strong>Ative o backup</strong> das conversas e mantenha a lista de contatos também fora do celular, de preferência em um CRM.<br>• <strong>Evite o número pessoal de vendedores</strong> para atender clientes da empresa: o histórico vai embora junto com o funcionário.`
+      },
+      {
+        titulo: "Por que a API oficial é o caminho mais seguro",
+        corpo: `Na API oficial, o número é vinculado ao portfólio empresarial da Meta e segue regras claras: conversas iniciadas pela empresa usam modelos de mensagem aprovados, e a qualidade da conta é monitorada. Enquanto você respeita o consentimento do cliente, o canal é estável — e o histórico fica centralizado, não preso a um celular.<br><br>Entenda as diferenças em <a href="/insights/whatsapp-business-api-oficial-ou-app/">WhatsApp Business API oficial ou app comum</a>. Na One Thank Digital, implantamos o <a href="/onehub/">OneHub</a>, que usa a API oficial com IA e CRM para escalar o atendimento sem colocar o número em risco.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "O banimento do WhatsApp é permanente?",
+        resposta: "Pode ser temporário ou permanente, dependendo da gravidade e da reincidência. Em todos os casos, o primeiro passo é solicitar a análise pelo próprio aplicativo o quanto antes."
+      },
+      {
+        pergunta: "Usar ferramenta de disparo pode banir meu número?",
+        resposta: "Sim. Ferramentas não oficiais que automatizam o envio pelo aplicativo violam os termos do WhatsApp e são uma das principais causas de banimento. Para enviar mensagens em escala, use a API oficial da Meta e apenas para contatos que autorizaram."
+      },
+      {
+        pergunta: "Consigo recuperar as conversas de um número banido?",
+        resposta: "Só se houver backup. Por causa da criptografia de ponta a ponta, mensagens sem backup não podem ser restauradas. Por isso vale manter o backup ativo e registrar os contatos e negociações em um CRM."
+      },
+      {
+        pergunta: "A API oficial também pode bloquear meu número?",
+        resposta: "Pode, se a conta violar as políticas — por exemplo, enviando mensagens sem consentimento ou acumulando denúncias. Mas as regras são claras e previsíveis, o que torna a API o caminho mais estável para empresas."
+      }
+    ],
+    cta: "O WhatsApp da sua empresa está protegido?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 18,
+    imagem: "/Blog/artigo-18-perfil-suspenso.webp",
+    slug: "perfil-google-suspenso-como-recuperar",
+    categoria: "GMN",
+    titulo: "Perfil do Google suspenso: como recuperar, passo a passo",
+    metaDescricao: "Seu Perfil da Empresa no Google foi suspenso? Entenda os motivos mais comuns, o que fazer antes de recorrer e como montar uma contestação com provas.",
+    publishDate: "2026-12-01",
+    dataPublicacao: "2026-12-01",
+    meta: "7 min de leitura · GMN · One Thank Digital",
+    lead: "Um dia o perfil está no mapa, com avaliações e ligações chegando. No outro, um e-mail avisa que ele foi suspenso — e a empresa some das buscas locais. A suspensão assusta, mas quase sempre tem causa identificável. O segredo é não agir no impulso: corrigir primeiro, recorrer com provas depois.",
+    callout: "Resposta direta: perfis costumam ser suspensos por informações que contrariam as diretrizes do Google — palavras-chave no nome, endereço que não é atendido presencialmente, muitas edições importantes de uma vez ou site que não corresponde à empresa. Para recuperar, leia o motivo informado, corrija o que estiver fora das diretrizes, reúna documentos que comprovem que a empresa é real e funciona no endereço, e só então envie a contestação pela ferramenta oficial do Google. Depois de enviar, não edite o perfil.",
+    pillarUrl: "/guia/google-meu-negocio/",
+    pillarText: "SEO Local e Google Meu Negócio",
+    secoes: [
+      {
+        titulo: "Os motivos mais comuns de suspensão",
+        corpo: `• <strong>Palavras-chave no nome:</strong> "Contabilidade Silva — Abertura de Empresa Santo André" em vez de apenas o nome real.<br>• <strong>Endereço inadequado:</strong> endereço virtual, caixa postal ou coworking sem estrutura de atendimento da própria empresa.<br>• <strong>Muitas edições de uma vez:</strong> mudar nome, endereço, telefone e categoria na mesma sessão pode disparar uma revisão automática.<br>• <strong>Site incompatível:</strong> link que leva para outra empresa, outro domínio ou apenas para uma rede social.<br>• <strong>Perfis duplicados</strong> para o mesmo endereço ou para áreas de atuação diferentes da mesma empresa.<br>• <strong>Categoria que não corresponde</strong> à atividade real.`
+      },
+      {
+        titulo: "Antes de recorrer: corrija primeiro",
+        corpo: `O erro mais comum é contestar na hora, sem mudar nada. Antes de enviar a contestação:<br><br><strong>1. Leia o motivo</strong> informado no e-mail ou no painel e a política relacionada.<br><strong>2. Revise o perfil inteiro</strong> com base nas diretrizes de representação de empresas do Google: nome real, endereço correto, categoria adequada, site da própria empresa.<br><strong>3. Corrija o que estiver fora das regras</strong> — e só isso. Não aproveite para fazer outras mudanças.<br><strong>4. Alinhe o site:</strong> nome, endereço e telefone iguais aos do perfil, no rodapé e na página de contato.`
+      },
+      {
+        titulo: "As provas que fortalecem a contestação",
+        corpo: `Reúna os documentos <strong>antes</strong> de abrir a contestação — algumas etapas têm tempo limitado para anexar provas:<br><br>• Cartão CNPJ e contrato social com o endereço.<br>• Conta de consumo (luz, água, internet) no nome da empresa e no endereço.<br>• Alvará de funcionamento, quando houver.<br>• Fotos da fachada com a identificação da empresa, da recepção e do ambiente de trabalho.<br>• Comprovante de que o site e o telefone pertencem à empresa.<br><br>Fotos e documentos coerentes entre si — mesmo nome, mesmo endereço — são o que convence a análise.`
+      },
+      {
+        titulo: "Como enviar a contestação",
+        corpo: `<strong>1.</strong> Acesse a contestação pelo aviso de suspensão no painel do perfil ou pelo e-mail recebido, logado na conta que gerencia o perfil.<br><strong>2.</strong> Selecione o perfil suspenso e confira o motivo indicado.<br><strong>3.</strong> Envie a contestação e anexe as provas assim que o formulário permitir.<br><strong>4.</strong> <strong>Não edite o perfil</strong> enquanto a análise estiver em andamento.<br><strong>5.</strong> Acompanhe o retorno pelo e-mail e pelo painel. Se for negado, revise novamente e use os caminhos de nova análise indicados pelo Google.<br><br>Como os fluxos mudam com frequência, siga sempre as instruções da central de ajuda do Perfil da Empresa no Google.`
+      },
+      {
+        titulo: "Como evitar uma nova suspensão",
+        corpo: `☐ Nome do perfil igual ao nome real da empresa.<br>☐ Endereço onde a empresa realmente atende — ou área de atuação, se o atendimento é no cliente.<br>☐ Mudanças importantes feitas aos poucos, nunca todas no mesmo dia.<br>☐ Site da própria empresa, com os mesmos dados do perfil.<br>☐ Um único perfil por local.<br><br>Um perfil bem estruturado desde o início raramente é suspenso. Conheça o serviço de <a href="/servicos/google-meu-negocio/">Google Meu Negócio da One Thank Digital</a> e veja também <a href="/insights/empresa-nao-aparece-google-maps/">por que uma empresa não aparece no Google Maps</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Quanto tempo o Google leva para analisar a contestação?",
+        resposta: "Varia de alguns dias a algumas semanas, conforme o caso e o volume de análises. Durante esse período, não edite o perfil e acompanhe o retorno pelo e-mail e pelo painel."
+      },
+      {
+        pergunta: "Perco as avaliações se o perfil for suspenso?",
+        resposta: "Enquanto o perfil está suspenso, ele deixa de aparecer nas buscas. Quando a suspensão é revertida, o perfil volta com o histórico. Em casos sem reversão, o histórico pode ser perdido — por isso vale prevenir."
+      },
+      {
+        pergunta: "Posso criar um perfil novo se o meu foi suspenso?",
+        resposta: "Não é recomendado. Criar um perfil duplicado para o mesmo negócio viola as diretrizes e pode agravar a situação. O caminho é corrigir e contestar o perfil original."
+      },
+      {
+        pergunta: "Escritório em coworking pode ter perfil no Google?",
+        resposta: "Depende da estrutura. Endereços sem atendimento presencial da própria empresa costumam ser recusados. Se o coworking oferece sala fixa, com identificação e atendimento no horário informado, a situação é diferente. Na dúvida, configure o perfil como empresa de área de atuação."
+      }
+    ],
+    cta: "Quer um perfil no Google estruturado para não ter surpresas?",
     ctaSub: "",
     ctaLink: "/diagnostico/",
   },
