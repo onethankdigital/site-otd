@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  # Publicação agendada: todo dia às 09:00 (Brasília) refaz o build se houver artigo com publishDate de hoje
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   web-deploy:
@@ -19,13 +23,27 @@ jobs:
         node-version: 20
         cache: 'npm'
         
+    - name: 📅 Verificar artigo agendado para hoje
+      id: agenda
+      run: |
+        if [ "${{ github.event_name }}" != "schedule" ]; then echo "publicar=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+        hoje=$(date -u +%F)
+        if grep -q "publishDate: \"$hoje\"" src/data/blogPosts.js; then
+          echo "Artigo agendado para $hoje encontrado."; echo "publicar=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "Nenhum artigo agendado para $hoje."; echo "publicar=false" >> "$GITHUB_OUTPUT"
+        fi
+
     - name: 📥 Install dependencies
+      if: steps.agenda.outputs.publicar == 'true'
       run: npm ci
       
     - name: 🏗️ Build website
+      if: steps.agenda.outputs.publicar == 'true'
       run: npm run build
       
     - name: 🚀 Sync files via FTP
+      if: steps.agenda.outputs.publicar == 'true'
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}

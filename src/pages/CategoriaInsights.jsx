@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { blogPosts } from '../data/blogPosts';
+import { getPublishedPosts } from '../data/blogPosts';
 
 const CATEGORY_MAP = {
   "automacao-crm": {
@@ -99,7 +99,7 @@ export default function CategoriaInsights() {
   };
 
   // Filtrar artigos da categoria a partir do blogPosts.js
-  const matchingBlogPosts = blogPosts
+  const matchingBlogPosts = getPublishedPosts()
     .filter(p => p.categoria === categoryInfo.categoryFilter)
     .map(p => ({
       id: p.id,

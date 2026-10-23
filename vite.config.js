@@ -6,9 +6,19 @@ import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
+import { blogPosts, isPostPublished } from './src/data/blogPosts.js'
 
 const _filename = fileURLToPath(import.meta.url)
 const _dirname = dirname(_filename)
+
+// Artigos do blogPosts.js entram no sitemap e no prerender só a partir da publishDate.
+// O deploy agendado (deploy.yml) refaz o build no dia para publicar sozinho.
+const rotasDeArtigos = blogPosts.map(p => `/insights/${p.slug}/`)
+const rotasPublicadas = blogPosts.filter(isPostPublished).map(p => `/insights/${p.slug}/`)
+const comArtigosPublicados = (rotas) => [
+  ...rotas.filter(r => !rotasDeArtigos.includes(r)),
+  ...rotasPublicadas
+]
 
 // 1. Rotas completas para o sitemap do Google Search Console
 const sitemapPaths = [
@@ -91,13 +101,13 @@ export default defineConfig({
 
     Sitemap({
       hostname: 'https://onethank.com.br',
-      dynamicRoutes: sitemapPaths,
+      dynamicRoutes: comArtigosPublicados(sitemapPaths),
       trailingSlash: true
     }),
 
     Prerender({
       staticDir: resolve(_dirname, 'dist'),
-      routes: prerenderPaths,
+      routes: comArtigosPublicados(prerenderPaths),
       renderer: new PuppeteerRenderer({
         headless: true,
         inject: { isPrerender: true },

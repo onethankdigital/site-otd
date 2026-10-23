@@ -2726,6 +2726,72 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
     ctaSub: "",
     ctaLink: "/diagnostico/",
   },
+  {
+    id: 13,
+    imagem: "/Blog/artigo-12-investimento-site.webp",
+    slug: "quanto-custa-um-site-profissional",
+    categoria: "Website",
+    titulo: "Quanto custa um site profissional: o que define o investimento",
+    metaDescricao: "O custo de um site depende do papel dele na sua operação. Veja os 4 níveis, do site de presença à plataforma integrada, e o que pesa em cada orçamento.",
+    publishDate: "2026-10-29",
+    dataPublicacao: "2026-10-29",
+    meta: "7 min de leitura · Website · One Thank Digital",
+    lead: "Peça três orçamentos de site e você provavelmente vai receber três valores muito diferentes — às vezes com uma distância de dez vezes entre o menor e o maior. Isso não acontece porque alguém está errado, e sim porque cada fornecedor está imaginando um site diferente. Neste artigo você entende o que realmente define o investimento e como descobrir de qual nível de site a sua empresa precisa.",
+    callout: "Resposta direta: o custo de um site profissional não é definido pelo número de páginas nem só pelo visual, e sim pela criticidade do site na estrutura da empresa — o quanto ele participa de atrair, convencer e atender clientes. Um site de presença, que apenas mostra quem você é, exige muito menos do que um site que gera oportunidades todos os dias ou que se integra ao CRM, à agenda e ao atendimento. Defina primeiro o papel do site; o orçamento vem depois.",
+    pillarUrl: "/guia/desenvolvimento-web/",
+    pillarText: "Arquitetura Web e Criação de Sites B2B",
+    secoes: [
+      {
+        titulo: "Por que os orçamentos de site variam tanto",
+        corpo: `Quando alguém diz "quero um site", pode estar falando de coisas muito diferentes: uma página com contato, um site institucional com uma página para cada serviço, uma máquina de captação de clientes ou um sistema em que o cliente agenda, paga e acompanha pedidos.<br><br>Na prática, o que encarece um projeto <strong>não é a quantidade de páginas nem o acabamento visual isolado</strong>. São a lógica por trás das páginas, as integrações com outros sistemas, o volume de conteúdo a produzir e o nível de exigência técnica — velocidade, segurança e estrutura para aparecer no Google.<br><br>Por isso, comparar orçamentos sem comparar escopos é comparar coisas diferentes. A pergunta certa não é "quanto custa um site", e sim "qual o papel do site na minha empresa".`
+      },
+      {
+        titulo: "Os 4 níveis de criticidade de um site",
+        corpo: `Na One Thank Digital classificamos os projetos pela <strong>criticidade do site na estrutura da empresa</strong>. Quanto mais o negócio depende do site para vender e operar, maior a exigência — e o investimento.<br><br><strong>Nível 1 — Presença.</strong> O site existe para dar credibilidade: quem você é, o que faz, como falar com você. Geralmente uma página única ou poucas seções, com WhatsApp, formulário e informações essenciais. Indicado para quem está começando ou precisa de um endereço digital confiável para enviar a clientes.<br><br><strong>Nível 2 — Institucional estratégico.</strong> Uma página para cada serviço, textos escritos para o seu público, estrutura de busca (SEO técnico e dados estruturados), ligação com o Google Meu Negócio e foco em velocidade no celular. Indicado para escritórios, clínicas e empresas B2B que precisam ser encontrados por quem pesquisa os seus serviços na região.<br><br><strong>Nível 3 — Geração de demanda.</strong> O site passa a ser um canal de vendas: guias e artigos, páginas por segmento ou cidade, medição de cada contato gerado, integração com WhatsApp e CRM e melhoria contínua com base nos dados. Indicado para empresas em que o site precisa trazer oportunidades toda semana.<br><br><strong>Nível 4 — Plataforma de operação.</strong> O site faz parte do funcionamento da empresa: área do cliente, agendamento, pagamentos, integração com ERP, diferentes perfis de acesso e regras de negócio próprias. Aqui o projeto se aproxima de um sistema, com exigências maiores de segurança, testes e evolução por etapas.`
+      },
+      {
+        titulo: "Os 8 fatores que definem o investimento",
+        corpo: `Dentro de cada nível, estes são os fatores que mais pesam no escopo:<br><br><strong>1. O papel do site no faturamento.</strong> Um site que só confirma credibilidade tem exigências diferentes de um site que é a principal fonte de clientes.<br><br><strong>2. Arquitetura, não número de páginas.</strong> Dez páginas iguais custam menos que quatro páginas com funções diferentes. O que conta é quantos modelos de página e fluxos precisam ser planejados.<br><br><strong>3. Conteúdo.</strong> Quem escreve os textos, quem produz fotos e vídeos e quantas páginas de conteúdo serão criadas. Texto pensado para busca e conversão é trabalho especializado — e um dos itens mais esquecidos nos orçamentos.<br><br><strong>4. Design sob medida ou modelo pronto.</strong> Modelos aceleram a entrega; o design sob medida traduz o posicionamento da marca e o caminho de decisão do seu cliente.<br><br><strong>5. Integrações.</strong> WhatsApp, CRM, agenda, ERP, meios de pagamento e automações. Cada integração exige configuração, testes e manutenção.<br><br><strong>6. Estrutura para busca.</strong> Velocidade no celular, SEO técnico, dados estruturados e organização do conteúdo para o Google e para as respostas de IA. É o que separa um site bonito de um site encontrável.<br><br><strong>7. Segurança, LGPD e regras do setor.</strong> Política de privacidade, consentimento de cookies, proteção de formulários e, em setores como advocacia e saúde, as regras de publicidade da OAB e do CFM.<br><br><strong>8. Continuidade.</strong> Hospedagem, domínio, certificado de segurança, manutenção, atualizações e evolução. Um site é um ativo vivo: o custo de mantê-lo precisa entrar na conta desde o início.`
+      },
+      {
+        titulo: "O custo escondido do site barato",
+        corpo: `Um site muito abaixo do mercado costuma economizar exatamente nos itens que não aparecem no primeiro dia:<br><br>• <strong>Lento no celular</strong>, que é onde a maioria dos seus clientes pesquisa.<br>• <strong>Sem estrutura de busca</strong>: o site existe, mas não aparece. Veja <a href="/insights/por-que-site-nao-aparece-google/">por que um site existe mas não aparece no Google</a>.<br>• <strong>Domínio ou acesso em nome de terceiros</strong>, deixando a empresa refém de quem fez.<br>• <strong>Plugins e temas sem atualização</strong>, que viram porta de entrada para invasões.<br>• <strong>Refação em um ou dois anos</strong>, quando o negócio cresce e o site não acompanha.<br><br>No fim, o site barato raramente é o mais econômico. O mais caro é o site que não traz cliente nenhum.`
+      },
+      {
+        titulo: "Perguntas para fazer antes de contratar",
+        corpo: `Use esta lista para comparar propostas de forma justa:<br><br>☐ O domínio e a hospedagem ficarão no nome da minha empresa?<br>☐ Terei acesso ao código ou ao painel do site?<br>☐ Quem produz os textos e as imagens?<br>☐ O site será otimizado para busca desde a entrega? O que exatamente está incluído?<br>☐ Qual a nota de velocidade esperada no celular (Google PageSpeed)?<br>☐ Integra com WhatsApp, CRM ou agenda?<br>☐ O que a manutenção mensal cobre, e o que fica de fora?<br>☐ Qual o prazo e quais são as etapas de aprovação?<br><br>Uma proposta séria responde a todas essas perguntas por escrito, com escopo, prazo e entregáveis claros.`
+      },
+      {
+        titulo: "Como a One Thank Digital define o seu projeto",
+        corpo: `Antes de falar em valores, fazemos um diagnóstico para entender o papel que o site precisa cumprir: quem é o seu cliente, como ele pesquisa, o que o convence e o que acontece depois do primeiro contato. Com isso definimos o nível de criticidade e montamos uma proposta com escopo, prazo e entregáveis — sem itens escondidos.<br><br>Nossos sites são desenvolvidos sob medida, com foco em velocidade no celular, estrutura de busca e integração com o atendimento. Conheça o serviço de <a href="/servicos/criacao-de-sites/">criação de sites profissionais para empresas B2B</a> e, se ainda estiver em dúvida sobre onde investir, leia <a href="/insights/site-ou-instagram-qual-mais-importante/">site ou Instagram: qual é o ativo digital mais importante</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Por que os orçamentos de site variam tanto entre fornecedores?",
+        resposta: "Porque cada fornecedor está orçando um escopo diferente. O que define o investimento é a criticidade do site na empresa — integrações, conteúdo, estrutura de busca, segurança e manutenção — e não o número de páginas. Compare propostas pelo que cada uma entrega, não só pelo valor final."
+      },
+      {
+        pergunta: "Vale a pena fazer um site barato para começar?",
+        resposta: "Vale quando o objetivo é apenas presença e você garante o essencial: domínio no nome da empresa, boa velocidade no celular e possibilidade de evoluir. Se o site precisa trazer clientes, economizar em estrutura de busca e conteúdo costuma sair mais caro, porque o site não aparece e precisa ser refeito."
+      },
+      {
+        pergunta: "Quanto tempo leva para fazer um site profissional?",
+        resposta: "Depende do nível. Um site de presença pode ficar pronto em poucas semanas; um site institucional estratégico ou de geração de demanda leva mais tempo por causa do conteúdo e da estrutura de busca; plataformas com integrações costumam ser entregues por etapas. Uma boa proposta informa o prazo de cada fase."
+      },
+      {
+        pergunta: "Preciso pagar manutenção mensal do site?",
+        resposta: "É recomendável. Hospedagem, domínio e certificado de segurança têm custo recorrente, e atualizações, backups, correções e pequenas evoluções mantêm o site seguro e rápido. Confira o que a manutenção inclui antes de contratar."
+      },
+      {
+        pergunta: "Meu site atual precisa ser refeito para aparecer no Google?",
+        resposta: "Nem sempre. Muitas vezes é possível corrigir a estrutura técnica, a velocidade e o conteúdo do site existente. Quando a base é muito limitada ou está presa a uma plataforma que impede essas melhorias, refazer passa a ser o caminho mais econômico. Um diagnóstico mostra qual é o caso."
+      }
+    ],
+    cta: "Qual é o nível de site que a sua empresa precisa?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
 ];
 
 export const isPostPublished = (p) => {
