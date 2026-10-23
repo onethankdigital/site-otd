@@ -682,6 +682,15 @@ export default function ServicosSEO() {
             </div>
 
             <div className="lp-other-services">
+              <div className="lp-other-services-title">APROFUNDE NO TEMA:</div>
+              <div className="lp-other-services-list">
+                <a href="/guia/seo-trafego-organico/" className="lp-other-services-btn">GUIA DE SEO B2B</a>
+                <a href="/insights/seo-organico-vs-trafego-pago/" className="lp-other-services-btn">SEO OU TRÁFEGO PAGO?</a>
+                <a href="/insights/concorrente-aparece-antes-no-google/" className="lp-other-services-btn">CONCORRENTE APARECE ANTES DE VOCÊ?</a>
+              </div>
+            </div>
+
+            <div className="lp-other-services">
               <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
               <div className="lp-other-services-list">
                 <a href="/servicos/google-meu-negocio/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>

@@ -682,6 +682,15 @@ export default function ServicosSite() {
             </div>
 
             <div className="lp-other-services">
+              <div className="lp-other-services-title">APROFUNDE NO TEMA:</div>
+              <div className="lp-other-services-list">
+                <a href="/guia/desenvolvimento-web/" className="lp-other-services-btn">GUIA DE SITES B2B</a>
+                <a href="/insights/por-que-site-nao-aparece-google/" className="lp-other-services-btn">SITE NÃO APARECE NO GOOGLE?</a>
+                <a href="/insights/site-ou-instagram-qual-mais-importante/" className="lp-other-services-btn">SITE OU INSTAGRAM?</a>
+              </div>
+            </div>
+
+            <div className="lp-other-services">
               <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
               <div className="lp-other-services-list">
                 <a href="/servicos/google-meu-negocio/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>

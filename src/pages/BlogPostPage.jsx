@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPostBySlug } from "../data/blogPosts";
+import { getPostBySlug, getPublishedPosts } from "../data/blogPosts";
 import { Helmet } from "react-helmet-async";
 
 const CAT_COLORS = {
@@ -9,6 +9,17 @@ const CAT_COLORS = {
   Automação: "#7e3af2",
   "Automação & CRM": "#7e3af2",
   OTD: "#D42B2B",
+};
+
+// Página de serviço de cada categoria: fecha o ciclo artigo → serviço do mesmo pilar
+const SERVICOS_POR_CATEGORIA = {
+  GMN: [{ href: "/servicos/google-meu-negocio/", texto: "Google Meu Negócio para empresas do Grande ABC" }],
+  Website: [{ href: "/servicos/criacao-de-sites/", texto: "Criação de sites profissionais para empresas B2B" }],
+  SEO: [{ href: "/servicos/seo-trafego-organico/", texto: "SEO e tráfego orgânico para empresas do ABC" }],
+  "Automação": [
+    { href: "/servicos/automacao-digital/", texto: "Automação de processos e CRM" },
+    { href: "/onehub/", texto: "OneHub: WhatsApp oficial com IA e CRM" },
+  ],
 };
 
 // Meta description: corta o lead em até 155 caracteres sem partir palavra
@@ -36,6 +47,10 @@ export default function BlogPostPage() {
   }, [slug, post]);
 
   const catColor = post ? (CAT_COLORS[post.categoria] || "#D42B2B") : "#D42B2B";
+  const servicosDoTema = post ? (SERVICOS_POR_CATEGORIA[post.categoria] || []) : [];
+  const artigosDoTema = post
+    ? getPublishedPosts().filter((p) => p.categoria === post.categoria && p.slug !== post.slug).slice(0, 3)
+    : [];
 
   // Gerar Schemas JSON-LD automáticos para o Satélite
   const schemas = post
@@ -45,8 +60,8 @@ export default function BlogPostPage() {
           "@type": "Article",
           headline: post.titulo,
           description: post.lead,
-          datePublished: "2026-07-08T08:00:00+00:00",
-          dateModified: "2026-07-08T08:00:00+00:00",
+          datePublished: `${post.dataPublicacao || "2026-07-08"}T08:00:00-03:00`,
+          dateModified: `${post.dataAtualizacao || post.dataPublicacao || "2026-07-08"}T08:00:00-03:00`,
           mainEntityOfPage: {
             "@type": "WebPage",
             "@id": `https://onethank.com.br/insights/${post.slug}`,
@@ -338,6 +353,34 @@ export default function BlogPostPage() {
       text-underline-offset: 4px;
     }
 
+    .satellite-related-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .satellite-related-list li {
+      font-size: 15px;
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+    .satellite-related-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #D42B2B;
+    }
+    .satellite-related-list a {
+      color: #111;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #D42B2B;
+      text-underline-offset: 4px;
+    }
+
     /* FAQ ACORDEÃO */
     .satellite-faq-section {
       margin-top: 64px;
@@ -485,10 +528,10 @@ export default function BlogPostPage() {
     <>
       <Helmet>
         <title>{`${post.titulo} | One Thank Digital`}</title>
-        <meta name="description" content={metaDescription(post.lead)} />
+        <meta name="description" content={metaDescription(post.metaDescricao || post.lead)} />
         <link rel="canonical" href={`https://onethank.com.br/insights/${post.slug}/`} />
         <meta property="og:title" content={`${post.titulo} | One Thank Digital`} />
-        <meta property="og:description" content={metaDescription(post.lead)} />
+        <meta property="og:description" content={metaDescription(post.metaDescricao || post.lead)} />
         <meta property="og:url" content={`https://onethank.com.br/insights/${post.slug}/`} />
         {post.imagem && <meta property="og:image" content={`https://onethank.com.br${post.imagem}`} />}
         <meta property="twitter:card" content="summary_large_image" />
@@ -611,6 +654,25 @@ export default function BlogPostPage() {
                 })}
               </div>
             </section>
+          )}
+
+          {/* CONTINUE NO TEMA: serviço do pilar + artigos da mesma categoria */}
+          {(servicosDoTema.length > 0 || artigosDoTema.length > 0) && (
+            <nav className="satellite-hub-link" aria-label="Continue no tema">
+              <div className="satellite-hub-title">// Continue no tema</div>
+              <ul className="satellite-related-list">
+                {servicosDoTema.map((s) => (
+                  <li key={s.href}>
+                    <a href={s.href}>{s.texto}</a>
+                  </li>
+                ))}
+                {artigosDoTema.map((p) => (
+                  <li key={p.slug}>
+                    <a href={`/insights/${p.slug}/`}>{p.titulo}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           )}
 
           {/* CTA DO CLUSTER */}

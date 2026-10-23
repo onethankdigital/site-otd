@@ -8,6 +8,8 @@ export const blogPosts = [
     slug: "empresa-nao-aparece-google-maps",
     categoria: "GMN",
     titulo: "Minha empresa não aparece no mapa do Google: Como resolver",
+    metaDescricao: "Sua empresa não aparece no Google Maps? Veja os 5 motivos mais comuns, os 3 fatores que o Google usa para ordenar o mapa e o passo a passo para resolver.",
+    dataAtualizacao: "2026-10-22",
     meta: "7 min de leitura · GMN · One Thank Digital",
     lead: "Você já pesquisou o nome do seu próprio negócio no Google e ficou surpreso ao não encontrá-lo? Ou pior — encontrou um concorrente na sua frente? Esse é um problema mais comum do que parece, e a solução é mais estruturada do que a maioria imagina.\n\nA boa notícia: o Google não esconde as regras do jogo. Elas estão publicadas — poucos empresários as leem, e menos ainda as aplicam com consistência. É exatamente essa lacuna que este artigo fecha. Precisa de um diagnóstico rápido? <a href=\"/diagnostico/\" class=\"text-accent underline font-bold\">Avaliar Minha Estrutura</a>.",
     callout: "Se a sua empresa não aparece no Google Maps ou no Local Pack (os 3 primeiros resultados no mapa), você está invisível para clientes locais no momento exato da decisão de compra. Segundo a documentação oficial do Google, a classificação local é definida por três fatores: relevância, distância e destaque. Na prática, resolver a invisibilidade exige perfil verificado, categoria principal precisa, informações completas e consistentes, fotos reais e uma rotina viva de avaliações e respostas no Perfil da Empresa (antigo Google Meu Negócio).",
@@ -37,6 +39,10 @@ export const blogPosts = [
     ],
     faq: [
       {
+        pergunta: "Por que minha empresa não aparece no Google Maps?",
+        resposta: "Na maioria dos casos, por um destes motivos: perfil não verificado, categoria principal errada, informações incompletas (endereço, horário, serviços), poucas avaliações recentes ou dados diferentes entre o perfil, o site e outros cadastros. O Google ordena o mapa por relevância, distância e destaque — e cada um desses erros enfraquece pelo menos um dos três fatores. Se quiser que a gente analise o seu caso, conheça o <strong><a href=\"/servicos/google-meu-negocio/\">serviço de Google Meu Negócio da One Thank Digital</a></strong>."
+      },
+      {
         pergunta: "Por que minha empresa sumiu do Google Maps de repente?",
         resposta: "Suspensões ou sumiços costumam ocorrer por alteração brusca de endereço ou nome, conflito de categorias, denúncias de concorrentes ou falta de verificação oficial no painel do Google. O primeiro passo é verificar no painel se há aviso de suspensão — os caminhos de correção são diferentes para perfil suspenso e perfil apenas mal posicionado."
       },
@@ -59,7 +65,7 @@ export const blogPosts = [
     ],
     cta: "Quer saber como está a estrutura digital da sua empresa hoje?",
     ctaSub: "",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 2,
@@ -118,7 +124,7 @@ export const blogPosts = [
     ],
     cta: "Sua empresa está aproveitando todo o potencial do GMN e gerando leads diários?",
     ctaSub: "Descubra agora onde estão os gargalos da sua presença local em poucos cliques.",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 3,
@@ -477,7 +483,7 @@ Para obter um diagnóstico preciso acerca da estruturação de seus canais de at
     ],
     cta: "Sua empresa tem um site que converte ou apenas um cartão de visitas digital?",
     ctaSub: "Descubra agora onde estão os gargalos da sua estrutura digital e como blindar suas vendas no Google.",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 4,
@@ -803,7 +809,7 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
     ],
     cta: "Seu site está estruturado para ser encontrado ou está invisível no Google?",
     ctaSub: "Descubra agora onde estão os gargalos técnicos da sua presença digital em poucos cliques.",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 5,
@@ -1041,7 +1047,7 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
     ],
     cta: "Qual estratégia faz mais sentido para sua empresa agora?",
     ctaSub: "",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 6,
@@ -1270,7 +1276,7 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
     ],
     cta: "Descubra onde sua empresa está perdendo para a concorrência no Google.",
     ctaSub: "",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 7,
@@ -1555,7 +1561,7 @@ Se a sua empresa investe em anúncios, mas sente que boa parte dos contatos esfr
     ],
     cta: "Como está o tempo de resposta da sua empresa hoje?",
     ctaSub: "",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 8,
@@ -1840,7 +1846,7 @@ Se a sua diretoria comercial deseja estancar o vazamento oculto de oportunidades
     ],
     cta: "Sua empresa tem controle real do funil de vendas?",
     ctaSub: "",
-    ctaLink: "/quiz",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 9,
@@ -2124,7 +2130,7 @@ Para mapear com precisão os gargalos invisíveis de atração e recepção que 
     ],
     cta: "Sua empresa tem uma presença digital estruturada ou apenas perfis soltos na internet?",
     ctaSub: "Descubra o nível de maturidade e eficiência do seu ecossistema digital em menos de 5 minutos",
-    ctaLink: "/diagnostico",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 10,
@@ -2404,7 +2410,7 @@ Para determinar com precisão a maturidade atual dos seus canais digitais e iden
     ],
     cta: "Sua empresa possui os 4 pilares estruturados ou está perdendo clientes todos os dias?",
     ctaSub: "Descubra os gargalos ocultos da sua presença online em um diagnóstico de 5 minutos",
-    ctaLink: "/diagnostico",
+    ctaLink: "/diagnostico/",
   },
   {
     id: 11,
@@ -2704,7 +2710,7 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
     ],
     cta: "A One Thank Digital estrutura operações completas de captação e qualificação 24/7 no WhatsApp — com API oficial da Meta, IA conversacional com metodologia de vendas e integração total com o seu CRM. Tudo validado primeiro na nossa própria operação, antes de chegar ao seu negócio.",
     ctaSub: "Fale com a gente e receba um diagnóstico da sua estrutura de atendimento",
-    ctaLink: "/diagnostico",
+    ctaLink: "/diagnostico/",
   },
 ];
 

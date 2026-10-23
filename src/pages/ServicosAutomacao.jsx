@@ -690,6 +690,17 @@ export default function ServicosAutomacao() {
             </div>
 
             <div className="lp-other-services">
+              <div className="lp-other-services-title">APROFUNDE NO TEMA:</div>
+              <div className="lp-other-services-list">
+                <a href="/guia/automacao-digital/" className="lp-other-services-btn">GUIA DE AUTOMAÇÃO B2B</a>
+                <a href="/onehub/" className="lp-other-services-btn">ONEHUB: WHATSAPP + IA + CRM</a>
+                <a href="/insights/leads-perdidos-whatsapp-resposta-rapida/" className="lp-other-services-btn">LEADS PERDIDOS NO WHATSAPP</a>
+                <a href="/insights/como-organizar-leads-whatsapp-no-crm/" className="lp-other-services-btn">LEADS DO WHATSAPP NO CRM</a>
+                <a href="/insights/o-que-e-crm-pequenas-empresas/" className="lp-other-services-btn">O QUE É CRM</a>
+              </div>
+            </div>
+
+            <div className="lp-other-services">
               <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
               <div className="lp-other-services-list">
                 <a href="/servicos/google-meu-negocio/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>
