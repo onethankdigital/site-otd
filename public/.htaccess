@@ -11,6 +11,12 @@ RedirectMatch 301 ^/servicos/seo/?$ /servicos/seo-trafego-organico/
 RedirectMatch 301 ^/seo-local/?$ /servicos/seo-trafego-organico/
 RedirectMatch 301 ^/servicos/automacao/?$ /servicos/automacao-digital/
 RedirectMatch 301 ^/automacoes-inteligentes/?$ /servicos/automacao-digital/
+# Pastas sem página própria: evitam a listagem "Index of" do Apache
+RedirectMatch 301 ^/servicos/?$ /
+RedirectMatch 301 ^/insights/categoria/?$ /insights/
+
+# Nunca listar o conteúdo de pastas (ex.: /assets/)
+Options -Indexes
 
 ErrorDocument 404 /404.html
 
