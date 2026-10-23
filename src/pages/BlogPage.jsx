@@ -89,7 +89,7 @@ export default function Blog() {
   const [activecat, setActivecat] = useState("Todos");
 
   useEffect(() => {
-    document.title = "Insights | One Thank Digital - Somos Comunicação";
+    document.title = "Insights de SEO, Google e Automação | One Thank Digital";
   }, []);
 
   const featured = POSTS.find(p => p.featured);
@@ -410,6 +410,8 @@ export default function Blog() {
   return (
     <>
       <Helmet>
+        <title>Insights de SEO, Google e Automação | One Thank Digital</title>
+        <meta name="description" content="Artigos práticos sobre Google Meu Negócio, SEO, sites e automação com WhatsApp e CRM para empresas B2B do Grande ABC. Escritos por quem executa." />
         <link rel="canonical" href="https://onethank.com.br/insights/" />
       </Helmet>
       <style>{styles}</style>

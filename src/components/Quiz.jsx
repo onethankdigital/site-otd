@@ -879,7 +879,9 @@ export default function Quiz({ onClose }) {
   return (
     <div style={{ position: "fixed", inset: 0, zIndex: 9999, overflowY: "auto", background: "#080808" }}>
       <Helmet>
-        <link rel="canonical" href="https://onethank.com.br/diagnostico" />
+        <title>Diagnóstico Gratuito de Estrutura Digital | One Thank Digital</title>
+        <meta name="description" content="Diagnóstico gratuito de estrutura digital: 20 perguntas em 3 minutos mostram em qual dos 4 pilares sua empresa está perdendo clientes hoje." />
+        <link rel="canonical" href="https://onethank.com.br/diagnostico/" />
       </Helmet>
       <style>{styles}</style>
       <div className="noise" />
@@ -920,9 +922,9 @@ export default function Quiz({ onClose }) {
         {/* INTRO */}
         {phase === "intro" && (
           <div className="card fade-up">
-            <div className="intro-title">
+            <h1 className="intro-title">
               AVALIE SUA<br /><em>Estrutura Digital</em>
-            </div>
+            </h1>
             <p className="intro-sub">
               20 perguntas em 4 pilares estratégicos. Descubra com precisão onde sua empresa está e o que impede seu crescimento digital. <strong style={{ color: "white" }}>Resultado imediato.</strong>
             </p>

@@ -400,7 +400,9 @@ export default function Historia({ onClose, onOpenQuiz }) {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://onethank.com.br/historia" />
+        <title>Nossa História e Filosofia | One Thank Digital</title>
+        <meta name="description" content="Conheça a história da One Thank Digital, empresa de estrutura digital em Santo André que atende empresas B2B do Grande ABC com sites, SEO e automação." />
+        <link rel="canonical" href="https://onethank.com.br/historia/" />
       </Helmet>
       <style>{styles}</style>
       <div className="historia-wrap">
@@ -427,11 +429,11 @@ export default function Historia({ onClose, onOpenQuiz }) {
           <div className="historia-header">
             <div className="historia-header-left">
               <div className="historia-eyebrow">// Nossa História</div>
-              <div className="historia-title">
+              <h1 className="historia-title">
                 ANTES DE ESTRUTURAR<br />
                 O SEU NEGÓCIO<br />
                 <em>estruturamos o nosso.</em>
-              </div>
+              </h1>
             </div>
             <p className="historia-intro">
               Passamos por cada um desses momentos. Por isso sabemos exatamente onde sua empresa está — e o que precisa para avançar.

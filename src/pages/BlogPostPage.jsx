@@ -11,6 +11,12 @@ const CAT_COLORS = {
   OTD: "#D42B2B",
 };
 
+// Meta description: corta o lead em até 155 caracteres sem partir palavra
+function metaDescription(texto) {
+  if (texto.length <= 155) return texto;
+  return texto.slice(0, 154).replace(/\s+\S*$/, "").replace(/[\s,.;:—-]+$/, "") + "…";
+}
+
 function getSlugFromPath() {
   const cleanPath = window.location.pathname.replace(/\/$/, "");
   const parts = cleanPath.split("/");
@@ -25,7 +31,7 @@ export default function BlogPostPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
     if (post) {
-      document.title = `${post.titulo} | Insights One Thank Digital`;
+      document.title = `${post.titulo} | One Thank Digital`;
     }
   }, [slug, post]);
 
@@ -478,14 +484,15 @@ export default function BlogPostPage() {
   return (
     <>
       <Helmet>
-        <title>{`${post.titulo} | Insights One Thank Digital`}</title>
+        <title>{`${post.titulo} | One Thank Digital`}</title>
+        <meta name="description" content={metaDescription(post.lead)} />
         <link rel="canonical" href={`https://onethank.com.br/insights/${post.slug}/`} />
-        <meta property="og:title" content={`${post.titulo} | Insights One Thank Digital`} />
-        <meta property="og:description" content={post.lead.substring(0, 160)} />
+        <meta property="og:title" content={`${post.titulo} | One Thank Digital`} />
+        <meta property="og:description" content={metaDescription(post.lead)} />
         <meta property="og:url" content={`https://onethank.com.br/insights/${post.slug}/`} />
         {post.imagem && <meta property="og:image" content={`https://onethank.com.br${post.imagem}`} />}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content={`${post.titulo} | Insights One Thank Digital`} />
+        <meta property="twitter:title" content={`${post.titulo} | One Thank Digital`} />
         {post.imagem && <meta property="twitter:image" content={`https://onethank.com.br${post.imagem}`} />}
       </Helmet>
       {schemas && schemas.length > 0 && (

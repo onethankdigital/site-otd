@@ -33,6 +33,8 @@ export default function Termos() {
   return (
     <>
       <Helmet>
+        <title>Termos de Uso | One Thank Digital</title>
+        <meta name="description" content="Condições de uso do site onethank.com.br e dos conteúdos, ferramentas e diagnósticos oferecidos pela One Thank Digital." />
         <link rel="canonical" href="https://onethank.com.br/termos/" />
       </Helmet>
       <style>{css}</style>

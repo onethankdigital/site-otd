@@ -341,7 +341,9 @@ export default function Pilares({ onOpenQuiz, onClose }) {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://onethank.com.br/pilares" />
+        <title>Os 4 Pilares da Estrutura Digital | One Thank Digital</title>
+        <meta name="description" content="Presença Local, Presença Digital, Visibilidade e Automação: os 4 pilares que fazem uma empresa do Grande ABC ser encontrada no Google e converter clientes." />
+        <link rel="canonical" href="https://onethank.com.br/pilares/" />
       </Helmet>
       <style>{styles}</style>
       <div className="pilares-wrap">
@@ -365,11 +367,11 @@ export default function Pilares({ onOpenQuiz, onClose }) {
         <div className="pilares-header">
           <div>
             <div className="pilares-eyebrow">A Estrutura Certa</div>
-            <div className="pilares-title">
+            <h1 className="pilares-title">
               4 PILARES.<br />
               UM RESULTADO<br />
               <em>INEVITÁVEL.</em>
-            </div>
+            </h1>
           </div>
           <p className="pilares-subtitle">
             Toda empresa invisível falha em pelo menos um desses pilares. Clique em cada um para entender o impacto no seu negócio.

@@ -38,6 +38,8 @@ export default function Privacidade() {
   return (
     <>
       <Helmet>
+        <title>Política de Privacidade | One Thank Digital</title>
+        <meta name="description" content="Como a One Thank Digital coleta, usa e protege seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018)." />
         <link rel="canonical" href="https://onethank.com.br/privacidade/" />
       </Helmet>
       <style>{css}</style>

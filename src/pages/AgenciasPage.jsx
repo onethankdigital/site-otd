@@ -147,19 +147,19 @@ export default function AgenciasPage() {
         {/* Metadados SEO */}
         <title>Parceria e Engenharia White-Label para Agências | One Thank Digital</title>
         <meta name="description" content="Assumimos a infraestrutura web, SEO de alta performance e automações de WhatsApp e CRM dos seus clientes. Reduza o churn, elimine custos fixos e aumente a margem da sua agência." />
-        <link rel="canonical" href="https://onethank.com.br/agencias" />
+        <link rel="canonical" href="https://onethank.com.br/agencias/" />
         <meta name="robots" content="index, follow" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://onethank.com.br/agencias" />
+        <meta property="og:url" content="https://onethank.com.br/agencias/" />
         <meta property="og:title" content="Parceria e Engenharia White-Label para Agências | One Thank Digital" />
         <meta property="og:description" content="Assumimos a infraestrutura web, SEO de alta performance e automações de WhatsApp e CRM dos seus clientes. Reduza o churn, elimine custos fixos e aumente a margem da sua agência." />
         <meta property="og:image" content="https://onethank.com.br/hero-bg.webp" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://onethank.com.br/agencias" />
+        <meta property="twitter:url" content="https://onethank.com.br/agencias/" />
         <meta property="twitter:title" content="Parceria e Engenharia White-Label para Agências | One Thank Digital" />
         <meta property="twitter:description" content="Assumimos a infraestrutura web, SEO de alta performance e automações de WhatsApp e CRM dos seus clientes. Reduza o churn, elimine custos fixos e aumente a margem da sua agência." />
         <meta property="twitter:image" content="https://onethank.com.br/hero-bg.webp" />

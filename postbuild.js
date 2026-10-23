@@ -66,7 +66,7 @@ function processDirectory(dir) {
         if (normalizedPath.includes(path.normalize(`insights/${post.slug}/index.html`))) {
           const absImg = `https://onethank.com.br${post.imagem}`;
           const absUrl = `https://onethank.com.br/insights/${post.slug}/`;
-          const ogTitle = `${post.titulo} | Insights One Thank Digital`;
+          const ogTitle = `${post.titulo} | One Thank Digital`;
           html = html.replace(/<meta property="og:image" content="[^"]*">/g, `<meta property="og:image" content="${absImg}">`);
           html = html.replace(/<meta property="twitter:image" content="[^"]*">/g, `<meta property="twitter:image" content="${absImg}">`);
           html = html.replace(/<meta property="og:title" content="[^"]*">/g, `<meta property="og:title" content="${ogTitle}">`);

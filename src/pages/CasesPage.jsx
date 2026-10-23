@@ -465,6 +465,8 @@ export default function Cases() {
   return (
     <>
       <Helmet>
+        <title>Nossos Cases de Sucesso | One Thank Digital</title>
+        <meta name="description" content="Cases da One Thank Digital: projetos de Google Meu Negócio, sites, SEO e automação para escritórios, clínicas e empresas B2B do Grande ABC." />
         <link rel="canonical" href="https://onethank.com.br/cases/" />
       </Helmet>
       <style>{styles}</style>
