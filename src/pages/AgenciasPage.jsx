@@ -215,9 +215,9 @@ export default function AgenciasPage() {
 
       {/* Renders the global project header navigation */}
       <Navbar
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
 
       {/* Global page container in dark system */}
@@ -813,9 +813,9 @@ export default function AgenciasPage() {
 
       {/* Renders the global project footer */}
       <Footer
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
     </>
   );

@@ -497,9 +497,9 @@ export default function ServicosAutomacao() {
       `}</style>
 
       <Navbar
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
 
       <div className="lp-wrap">
@@ -645,7 +645,7 @@ export default function ServicosAutomacao() {
             </div>
 
             <p className="lp-internal-link">
-              A automação é mais poderosa quando integrada ao seu <a href="/servicos/criacao-de-sites/">site</a> e ao <a href="/servicos/google-meu-negocio/">Google Meu Negócio</a> — capturando e convertendo leads em todo o funil.
+              A automação é mais poderosa quando integrada ao seu <a href="/servicos/criacao-de-sites/">site</a> e ao <a href="/servicos/google-meu-negocio/">Google Meu Negócio</a> — capturando e convertendo leads em todo o funil. Para centralizar o WhatsApp da equipe com IA e CRM no mesmo número oficial, conheça o <a href="/onehub/">OneHub</a>.
             </p>
             <div style={{ textAlign: 'center', marginTop: '64px' }}>
               <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
@@ -747,9 +747,9 @@ export default function ServicosAutomacao() {
       </div>
 
       <Footer
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
     </>
   );

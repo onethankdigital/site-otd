@@ -27,6 +27,7 @@ ErrorDocument 404 /404.html
 
   # Apresentação comercial em PDF servida em URL limpa
   RewriteRule ^apresentacao-one-thank-digital/?$ /apresentacao-one-thank-digital.pdf [L]
+  RewriteRule ^apresentacao-onehub/?$ /apresentacao-onehub.pdf [L]
 
   # Serve static files as-is
   RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -38,6 +39,10 @@ ErrorDocument 404 /404.html
 <IfModule mod_headers.c>
   <FilesMatch "^apresentacao-one-thank-digital\.pdf$">
     Header set Content-Disposition 'inline; filename="Apresentacao-One-Thank-Digital.pdf"'
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+  <FilesMatch "^apresentacao-onehub\.pdf$">
+    Header set Content-Disposition 'inline; filename="Apresentacao-OneHub.pdf"'
     Header set X-Robots-Tag "noindex, nofollow"
   </FilesMatch>
 </IfModule>

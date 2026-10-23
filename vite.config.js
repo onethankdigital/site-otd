@@ -44,7 +44,8 @@ const sitemapPaths = [
   '/insights/categoria/automacao-crm/',
   '/agencias/',
   '/privacidade/',
-  '/termos/'
+  '/termos/',
+  '/onehub/'
 ]
 
 const prerenderPaths = [
@@ -79,7 +80,8 @@ const prerenderPaths = [
   '/insights/categoria/automacao-crm/',
   '/agencias/',
   '/privacidade/',
-  '/termos/'
+  '/termos/',
+  '/onehub/'
 ]
 
 export default defineConfig({

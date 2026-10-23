@@ -75,8 +75,8 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
   };
 
   const navLinks = [
-    { label: "Os 4 Pilares", href: "/pilares", onClick: (e) => { e.preventDefault(); onOpenPilares?.(); } },
-    { label: "Nossa História", href: "/historia", onClick: (e) => { e.preventDefault(); onOpenHistoria?.(); } },
+    { label: "Os 4 Pilares", href: "/pilares/", onClick: (e) => { e.preventDefault(); onOpenPilares?.(); } },
+    { label: "Nossa História", href: "/historia/", onClick: (e) => { e.preventDefault(); onOpenHistoria?.(); } },
     { 
       label: "FAQ", 
       href: "/#protocol", 
@@ -88,7 +88,7 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
         scrollToProtocol();
       } 
     },
-    { label: "Avaliar Estrutura", href: "/diagnostico", onClick: (e) => { e.preventDefault(); onOpenQuiz?.(); } },
+    { label: "Avaliar Estrutura", href: "/diagnostico/", onClick: (e) => { e.preventDefault(); onOpenQuiz?.(); } },
   ];
 
   const navigateTo = (path) => {
@@ -97,16 +97,17 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
   };
 
   const servicosLinks = [
-    { label: "Google Meu Negócio", href: "/servicos/google-meu-negocio", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/google-meu-negocio"); } },
-    { label: "Otimização SEO", href: "/servicos/seo-trafego-organico", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/seo-trafego-organico"); } },
-    { label: "Criação de Sites", href: "/servicos/criacao-de-sites", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/criacao-de-sites"); } },
-    { label: "Automações", href: "/servicos/automacao-digital", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/automacao-digital"); } },
+    { label: "Google Meu Negócio", href: "/servicos/google-meu-negocio/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/google-meu-negocio"); } },
+    { label: "Otimização SEO", href: "/servicos/seo-trafego-organico/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/seo-trafego-organico"); } },
+    { label: "Criação de Sites", href: "/servicos/criacao-de-sites/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/criacao-de-sites"); } },
+    { label: "Automações", href: "/servicos/automacao-digital/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/automacao-digital"); } },
+    { label: "OneHub (WhatsApp + IA)", href: "/onehub/", onClick: (e) => { e.preventDefault(); navigateTo("/onehub/"); } },
   ];
 
   const contentLinks = [
-    { label: "Cases", href: "/cases", onClick: (e) => { e.preventDefault(); navigateTo("/cases"); } },
-    { label: "Insights", href: "/insights", onClick: (e) => { e.preventDefault(); navigateTo("/insights"); } },
-    { label: "Guias", href: "/guia", onClick: (e) => { e.preventDefault(); navigateTo("/guia"); } },
+    { label: "Cases", href: "/cases/", onClick: (e) => { e.preventDefault(); navigateTo("/cases"); } },
+    { label: "Insights", href: "/insights/", onClick: (e) => { e.preventDefault(); navigateTo("/insights"); } },
+    { label: "Guias", href: "/guia/", onClick: (e) => { e.preventDefault(); navigateTo("/guia"); } },
     { label: "Contato", href: "mailto:contato@onethank.com.br" },
   ];
 

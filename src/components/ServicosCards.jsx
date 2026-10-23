@@ -458,7 +458,7 @@ const ServicosCards = () => {
               O diagnóstico aponta em qual desses pilares a sua estrutura digital precisa ser atualizada.
             </p>
             <a
-              href="/diagnostico"
+              href="/diagnostico/"
               className="px-6 py-3 md:px-10 md:py-4 bg-accent text-white font-heading font-bold text-xs md:text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(224,4,11,0.4)] active:scale-[0.98] inline-block"
             >
               DESCOBRIR AGORA

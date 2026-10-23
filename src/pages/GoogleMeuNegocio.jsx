@@ -498,9 +498,9 @@ export default function GoogleMeuNegocio() {
       `}</style>
 
       <Navbar
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
 
       <div className="lp-wrap">
@@ -779,9 +779,9 @@ export default function GoogleMeuNegocio() {
       </div>
 
       <Footer
-        onOpenQuiz={() => { window.location.href = '/diagnostico'; }}
-        onOpenPilares={() => { window.location.href = '/pilares'; }}
-        onOpenHistoria={() => { window.location.href = '/historia'; }}
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
     </>
   );

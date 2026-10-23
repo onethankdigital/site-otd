@@ -185,15 +185,15 @@ export default function OneHub() {
       <Helmet>
         <title>OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA | One Thank Digital</title>
         <meta name="description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
-        <link rel="canonical" href="https://onethank.com.br/onehub" />
+        <link rel="canonical" href="https://onethank.com.br/onehub/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://onethank.com.br/onehub" />
+        <meta property="og:url" content="https://onethank.com.br/onehub/" />
         <meta property="og:title" content="OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA" />
         <meta property="og:description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
         <meta property="og:image" content="https://onethank.com.br/onehub-transformacao-caos-ao-crm.webp" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://onethank.com.br/onehub" />
+        <meta property="twitter:url" content="https://onethank.com.br/onehub/" />
         <meta property="twitter:title" content="OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA" />
         <meta property="twitter:description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
         <meta property="twitter:image" content="https://onethank.com.br/onehub-transformacao-caos-ao-crm.webp" />
@@ -228,7 +228,7 @@ export default function OneHub() {
 
           {/* Header Alinhado: Logo OneHub Ampliada */}
           <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full flex items-center justify-between mb-8 sm:mb-12">
-            <a href="/onehub" className="nav-anim inline-block flex-shrink-0">
+            <a href="/onehub/" className="nav-anim inline-block flex-shrink-0">
               <img
                 src="/logo-onehub-black.svg"
                 alt="OneHub Logo"
