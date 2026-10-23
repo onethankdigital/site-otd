@@ -30,7 +30,7 @@ export default function LandingPage({ landing }) {
       "provider": { "@id": "https://onethank.com.br/#organization" },
       "areaServed": landing.cidade
         ? { "@type": "City", "name": landing.cidade }
-        : ["Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá"].map(name => ({ "@type": "City", "name": name })),
+        : (landing.municipios || ["Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá"]).map(name => ({ "@type": "City", "name": name })),
       ...(landing.publico ? { "audience": { "@type": "BusinessAudience", "audienceType": landing.publico } } : {})
     },
     {
@@ -611,7 +611,7 @@ export default function LandingPage({ landing }) {
             </div>
 
             <div className="lp-other-services">
-              <div className="lp-other-services-title">{landing.tipo === 'segmento' ? 'OUTROS SEGMENTOS:' : 'OUTRAS CIDADES DO ABC:'}</div>
+              <div className="lp-other-services-title">{landing.tipo === 'segmento' ? 'OUTROS SEGMENTOS:' : 'OUTRAS REGIÕES ATENDIDAS:'}</div>
               <div className="lp-other-services-list">
                 {vizinhas.map(l => (
                   <a key={l.path} href={l.path} className="lp-other-services-btn">{l.nomeCurto.toUpperCase()}</a>

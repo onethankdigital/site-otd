@@ -1,5 +1,5 @@
 // /src/data/landings.js
-// Páginas de segmento (público ideal da OTD) e de cidade (Grande ABC).
+// Páginas de segmento (público ideal da OTD) e de cidade/região (Grande ABC, capital e litoral).
 // Cada página tem conteúdo próprio: dores, contexto, regras do setor e FAQ específicos.
 // Renderizadas por src/pages/LandingPage.jsx; rotas registradas no vite.config.js.
 
@@ -328,6 +328,144 @@ const CIDADES = [
     ctaTexto: "PRONTO PARA SER ENCONTRADO <br /><em>EM MAUÁ</em>",
     servicoNome: "Sites, Google Meu Negócio e SEO em Mauá",
     cidade: "Mauá"
+  },
+  {
+    path: "/atendimento/sao-paulo/",
+    tipo: "cidade",
+    nomeCurto: "São Paulo",
+    titulo: "Marketing Digital, Sites e Google Meu Negócio em São Paulo (SP) | OTD",
+    descricao: "Sites, Google Meu Negócio, SEO e automação para empresas da capital paulista, com atendimento próximo a partir de Santo André, cidade na divisa com São Paulo.",
+    label: "// SÃO PAULO — CAPITAL",
+    h1: "Presença digital para empresas de São Paulo",
+    intro: "A One Thank Digital atende empresas da capital paulista a partir de Santo André, cidade que faz divisa com São Paulo: site profissional, perfil no Google, SEO e automação de atendimento para escritórios, clínicas e empresas B2B.",
+    dores: [
+      { titulo: "SOTERRADO PELA CONCORRÊNCIA", texto: "Para qualquer serviço há centenas de empresas na cidade, e as buscas genéricas ficam com os grandes players e os anúncios." },
+      { titulo: "INVISÍVEL FORA DO PRÓPRIO BAIRRO", texto: "O mapa favorece quem está perto de quem pesquisa — e a empresa não aparece nos bairros onde estão seus melhores clientes." },
+      { titulo: "INVESTIMENTO SEM RASTREIO", texto: "Site, anúncios e redes sociais funcionam separados, sem saber qual canal traz o contato que vira cliente." }
+    ],
+    contexto: {
+      titulo: "O MAIOR MERCADO DO PAÍS <span>SE DISPUTA POR NICHO E POR BAIRRO.</span>",
+      texto: "São Paulo concentra a maior economia do país e, por isso, as buscas genéricas estão entre as mais disputadas. A estratégia que funciona é ser específico: aparecer para o serviço certo, na região certa, para o público certo — com páginas por serviço, um perfil no Google forte na vizinhança do endereço e conteúdo que responde às dúvidas do cliente.<br/><br/>Para empresas B2B, o alcance é a cidade inteira: o comprador pesquisa pelo serviço, e um site técnico bem estruturado entra na lista de cotação independentemente do bairro.",
+      imagem: "/servico-seo.png",
+      alt: "Empresa de São Paulo bem posicionada no Google"
+    },
+    solucaoTitulo: "COMO ATENDEMOS A CAPITAL.",
+    solucoes: [
+      { titulo: "SEO DE NICHO E POR REGIÃO", texto: "Estrutura de busca para termos específicos do seu serviço e das regiões que você atende, onde a concorrência é menor e a intenção de compra é maior." },
+      { titulo: "GOOGLE MEU NEGÓCIO NA VIZINHANÇA", texto: "Perfil completo, categorias precisas, fotos reais e rotina de avaliações para dominar o mapa nos bairros próximos ao endereço." },
+      { titulo: "CONTATO QUE NÃO SE PERDE", texto: "Formulários e WhatsApp oficial centralizados no CRM, com origem de cada contato registrada para saber o que realmente traz clientes." }
+    ],
+    regras: {
+      titulo: "ATENDIMENTO NA CAPITAL",
+      texto: "Nossa base fica em Santo André, na Rua Monte Casseros, 281 — Centro, cidade que faz divisa com São Paulo. Fazemos reuniões presenciais com agendamento e acompanhamos os projetos também por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h."
+    },
+    links: [
+      { href: "/servicos/seo-trafego-organico/", texto: "SEO E TRÁFEGO ORGÂNICO" },
+      { href: "/servicos/google-meu-negocio/", texto: "GOOGLE MEU NEGÓCIO" },
+      { href: "/insights/concorrente-aparece-antes-no-google/", texto: "CONCORRENTE APARECE ANTES?" },
+      { href: "/insights/como-aparecer-no-chatgpt-e-na-ia-do-google/", texto: "APARECER NO CHATGPT E NA IA DO GOOGLE", publicaEm: "2026-11-10" }
+    ],
+    faqs: [
+      { q: "Uma agência de Santo André atende empresas de São Paulo?", a: "Sim. Santo André faz divisa com a capital, e fazemos reuniões presenciais com agendamento. O acompanhamento do dia a dia acontece por reuniões online e WhatsApp, como na maioria dos projetos digitais." },
+      { q: "Dá para aparecer no Google em São Paulo com tanta concorrência?", a: "Sim, com foco. Em vez de disputar termos genéricos, o trabalho mira buscas específicas de serviço e região, com páginas próprias para cada serviço, um perfil forte perto do endereço e reputação construída com avaliações. Os resultados vêm em meses, conforme a concorrência do setor." },
+      { q: "Minha empresa atende a cidade toda. Como aparecer em outros bairros?", a: "O mapa favorece a proximidade do endereço, então o alcance em regiões mais distantes vem principalmente do site: páginas de serviço e conteúdo que posicionam na busca orgânica. Para empresas que atendem no local do cliente, o perfil também pode indicar a área de atendimento." },
+      { q: "Vocês atendem empresas B2B da capital?", a: "Sim. Desenvolvemos sites técnicos, estrutura de busca para termos de fornecedor e organização comercial com CRM e WhatsApp oficial para empresas que vendem para outras empresas." }
+    ],
+    ctaTexto: "PRONTO PARA SER ENCONTRADO <br /><em>EM SÃO PAULO</em>",
+    servicoNome: "Sites, Google Meu Negócio e SEO em São Paulo",
+    cidade: "São Paulo"
+  },
+  {
+    path: "/atendimento/santos-e-baixada-santista/",
+    tipo: "cidade",
+    nomeCurto: "Santos e Baixada Santista",
+    titulo: "Marketing Digital, Sites e Google Meu Negócio em Santos e Baixada | OTD",
+    descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de Santos, São Vicente, Guarujá, Praia Grande e de toda a Baixada Santista, com atendimento online.",
+    label: "// SANTOS E BAIXADA SANTISTA",
+    h1: "Presença digital para empresas de Santos e da Baixada Santista",
+    intro: "A One Thank Digital atende empresas de Santos, São Vicente, Guarujá, Praia Grande, Cubatão e demais cidades da Baixada Santista: site profissional, perfil no Google, SEO e automação de atendimento para escritórios, clínicas, fornecedores do porto e negócios de turismo.",
+    dores: [
+      { titulo: "MOVIMENTO QUE VARIA COM A TEMPORADA", texto: "A demanda dispara no verão e nos feriados e cai no resto do ano — e a empresa não tem um canal que traga clientes fora da temporada." },
+      { titulo: "VISITANTE QUE NÃO ENCONTRA", texto: "Quem chega à cidade pesquisa \"perto de mim\" no celular, e perfis incompletos ou sem avaliações ficam fora da lista." },
+      { titulo: "FORNECEDOR DO PORTO SEM VITRINE", texto: "Empresas de logística, manutenção e serviços portuários vivem de contato pessoal e não aparecem quando o comprador pesquisa um fornecedor." }
+    ],
+    contexto: {
+      titulo: "PORTO, SERVIÇOS E TURISMO <span>NA MESMA REGIÃO.</span>",
+      texto: "A Baixada Santista reúne o maior porto do Brasil, o polo industrial de Cubatão, um setor de serviços que atende a população fixa e um turismo que multiplica a demanda em feriados e na temporada. Cada perfil de negócio pede uma estratégia diferente.<br/><br/>O fornecedor do porto precisa de um site técnico que entre na cotação; a clínica e o escritório precisam aparecer no mapa do bairro; o comércio e o turismo precisam ser encontrados no celular de quem acabou de chegar.",
+      imagem: "/servico-google-maps.png",
+      alt: "Empresa de Santos encontrada no Google Maps"
+    },
+    solucaoTitulo: "COMO ATENDEMOS A BAIXADA.",
+    solucoes: [
+      { titulo: "PERFIL PARA MORADOR E VISITANTE", texto: "Perfil no Google completo, com horários especiais de feriado, fotos recentes e avaliações respondidas, para aparecer tanto para quem mora quanto para quem está de passagem." },
+      { titulo: "SITES PARA SERVIÇOS E B2B", texto: "Do site institucional de escritórios e clínicas ao site técnico de fornecedores portuários, com páginas por serviço e estrutura de busca." },
+      { titulo: "ATENDIMENTO NO PICO DA TEMPORADA", texto: "WhatsApp oficial com respostas automáticas e triagem para absorver o volume de feriados sem deixar contato sem resposta." }
+    ],
+    regras: {
+      titulo: "ATENDIMENTO NA BAIXADA SANTISTA",
+      texto: "Atendemos a Baixada Santista principalmente por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h, a partir da nossa base em Santo André (Rua Monte Casseros, 281 — Centro). Encontros presenciais podem ser combinados conforme a etapa do projeto."
+    },
+    links: [
+      { href: "/servicos/google-meu-negocio/", texto: "GOOGLE MEU NEGÓCIO" },
+      { href: "/servicos/criacao-de-sites/", texto: "CRIAÇÃO DE SITES" },
+      { href: "/onehub/", texto: "WHATSAPP OFICIAL COM IA" },
+      { href: "/insights/empresa-nao-aparece-google-maps/", texto: "EMPRESA NÃO APARECE NO MAPS?" }
+    ],
+    faqs: [
+      { q: "Vocês atendem empresas da Baixada Santista sem escritório na região?", a: "Sim. Todo o projeto pode ser conduzido por reuniões online e WhatsApp, com aprovações por etapa. Quando a etapa do projeto pede, combinamos encontros presenciais." },
+      { q: "Como aproveitar a temporada no Google?", a: "Preparando o perfil antes do movimento: horários especiais de feriado, fotos recentes, publicações com novidades e respostas rápidas às avaliações. O WhatsApp também precisa estar pronto para o volume, com respostas automáticas às perguntas mais comuns." },
+      { q: "Empresa que atende o porto precisa de presença digital?", a: "Sim. Áreas de compras e suprimentos pesquisam fornecedores no Google antes de pedir cotação. Um site técnico com capacidade, certificações e contato direto coloca a empresa na disputa." },
+      { q: "Vocês atendem as outras cidades da Baixada além de Santos?", a: "Sim: São Vicente, Guarujá, Praia Grande, Cubatão, Bertioga, Mongaguá, Itanhaém e Peruíbe. A estratégia considera a cidade do endereço e a área que a empresa atende." }
+    ],
+    ctaTexto: "PRONTO PARA SER ENCONTRADO <br /><em>NA BAIXADA SANTISTA</em>",
+    servicoNome: "Sites, Google Meu Negócio e SEO em Santos e na Baixada Santista",
+    municipios: ["Santos", "São Vicente", "Guarujá", "Praia Grande", "Cubatão", "Bertioga", "Mongaguá", "Itanhaém", "Peruíbe"]
+  },
+  {
+    path: "/atendimento/litoral-norte/",
+    tipo: "cidade",
+    nomeCurto: "Litoral Norte",
+    titulo: "Marketing Digital, Sites e Google Meu Negócio no Litoral Norte de SP | OTD",
+    descricao: "Sites, Google Meu Negócio, SEO e WhatsApp automatizado para pousadas, restaurantes e prestadores de serviço de Ubatuba, Caraguatatuba, São Sebastião e Ilhabela.",
+    label: "// LITORAL NORTE DE SÃO PAULO",
+    h1: "Presença digital para empresas do Litoral Norte de São Paulo",
+    intro: "A One Thank Digital atende empresas de Ubatuba, Caraguatatuba, São Sebastião e Ilhabela: perfil no Google, site, SEO e atendimento automatizado pelo WhatsApp para pousadas, restaurantes, passeios, imobiliárias e prestadores de serviço.",
+    dores: [
+      { titulo: "RESERVA QUE DEPENDE DA PLATAFORMA", texto: "Sem canal próprio, quase toda reserva passa por plataformas que cobram comissão — inclusive a do cliente que já conhecia o negócio." },
+      { titulo: "WHATSAPP LOTADO NO FERIADO", texto: "Perguntas sobre disponibilidade, valores e como chegar chegam todas ao mesmo tempo, justamente quando a equipe está atendendo." },
+      { titulo: "BUSCA FEITA ANTES DA VIAGEM", texto: "O visitante decide de casa, semanas antes. Quem tem perfil fraco e poucas fotos perde a escolha antes de o cliente pegar a estrada." }
+    ],
+    contexto: {
+      titulo: "O CLIENTE PESQUISA <span>ANTES DE DESCER A SERRA.</span>",
+      texto: "No Litoral Norte, boa parte dos clientes não mora na região: o visitante planeja da capital, do Vale do Paraíba ou de outros estados, pesquisa no Google, olha fotos e avaliações e decide antes de viajar. Por isso, a presença digital precisa funcionar à distância — com perfil completo, um site que mostra a experiência e um canal direto de reserva ou orçamento.<br/><br/>Para quem atende os moradores — clínicas, escritórios, construção e manutenção — vale a lógica do mapa local: perfil bem posicionado na cidade e atendimento que responde rápido.",
+      imagem: "/servico-website.png",
+      alt: "Site de pousada do Litoral Norte com reserva direta"
+    },
+    solucaoTitulo: "COMO ATENDEMOS O LITORAL NORTE.",
+    solucoes: [
+      { titulo: "PERFIL NO GOOGLE QUE ATRAI VISITANTES", texto: "Fotos que mostram a experiência, atributos e serviços completos, horários de temporada e avaliações respondidas — o que o viajante confere antes de escolher." },
+      { titulo: "SITE COM CANAL DIRETO", texto: "Site rápido no celular, com fotos, informações da cidade e da praia e contato direto para reserva ou orçamento pelo WhatsApp." },
+      { titulo: "WHATSAPP QUE RESPONDE NO PICO", texto: "Respostas automáticas sobre disponibilidade, localização e horários, com passagem para a equipe quando o cliente está pronto para fechar." }
+    ],
+    regras: {
+      titulo: "ATENDIMENTO NO LITORAL NORTE",
+      texto: "Atendemos o Litoral Norte principalmente por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h, a partir da nossa base em Santo André (Rua Monte Casseros, 281 — Centro). Encontros presenciais podem ser combinados conforme a etapa do projeto."
+    },
+    links: [
+      { href: "/servicos/google-meu-negocio/", texto: "GOOGLE MEU NEGÓCIO" },
+      { href: "/servicos/criacao-de-sites/", texto: "CRIAÇÃO DE SITES" },
+      { href: "/onehub/", texto: "WHATSAPP OFICIAL COM IA" },
+      { href: "/insights/como-pedir-avaliacoes-no-google/", texto: "COMO PEDIR AVALIAÇÕES", publicaEm: "2026-11-03" }
+    ],
+    faqs: [
+      { q: "Vocês atendem pousadas e restaurantes do Litoral Norte?", a: "Sim. Estruturamos o perfil no Google, o site e o atendimento pelo WhatsApp de pousadas, restaurantes e passeios, com o projeto conduzido por reuniões online e aprovações por etapa." },
+      { q: "Ter site próprio ajuda a depender menos das plataformas de reserva?", a: "Ajuda. As plataformas continuam úteis para alcance, mas um site com canal direto e um perfil no Google com link de contato permitem que o cliente que já conhece o negócio reserve sem passar pela plataforma." },
+      { q: "Como aparecer para quem pesquisa de São Paulo antes de viajar?", a: "Quando a busca inclui o nome da cidade, como \"pousada em Ubatuba\", o Google mostra resultados daquele lugar, mesmo que a pessoa esteja longe. Para aparecer, o perfil precisa ser relevante e bem avaliado, e o site deve ter páginas com a cidade e a região atendidas." },
+      { q: "Atendem empresas que funcionam o ano todo, não só no turismo?", a: "Sim. Clínicas, escritórios, imobiliárias, construção e manutenção também precisam aparecer no mapa da cidade e responder rápido. A estratégia muda conforme o público, não a estrutura de trabalho." }
+    ],
+    ctaTexto: "PRONTO PARA SER ENCONTRADO <br /><em>ANTES DA VIAGEM</em>",
+    servicoNome: "Sites, Google Meu Negócio e SEO no Litoral Norte de São Paulo",
+    municipios: ["Ubatuba", "Caraguatatuba", "São Sebastião", "Ilhabela"]
   }
 ];
 
