@@ -8,7 +8,7 @@ const Prerenderer = PrerendererModule.default || PrerendererModule;
 const PuppeteerRenderer = PuppeteerRendererModule.default || PuppeteerRendererModule;
 
 const distDir = './dist';
-const EXPECTED_SITEMAP_URLS = 34; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
+const EXPECTED_SITEMAP_URLS = 33; // ATUALIZAR AO ADICIONAR ROTAS (deve bater com prerenderPaths no vite.config.js)
 
 // O Puppeteer executa o snippet inline do GTM durante o pré-render e grava no HTML
 // estático o <script src="gtm.js"> que ele injeta. No navegador, o snippet roda de novo

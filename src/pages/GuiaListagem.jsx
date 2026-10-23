@@ -30,7 +30,7 @@ export default function GuiaListagem() {
       title: "SEO Local & Google Meu Negócio: Domínio no Google Maps (Guia Prático)",
       excerpt: "Como estruturar o NAP semântico, gerenciar avaliações 5 estrelas em escala e posicionar sua empresa entre os 3 primeiros do Local Pack.",
       imagem: "/Blog/artigo-02-gmn-guia-completo.jpg",
-      readTime: "18 min de leitura",
+      readTime: "22 min de leitura",
       path: "/guia/google-meu-negocio",
       status: "ativo"
     },

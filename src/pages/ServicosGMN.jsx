@@ -686,7 +686,7 @@ export default function ServicosGMN() {
               <div className="lp-other-services-list">
                 <a href="/guia/google-meu-negocio/" className="lp-other-services-btn">GUIA DE SEO LOCAL E GOOGLE MAPS</a>
                 <a href="/insights/empresa-nao-aparece-google-maps/" className="lp-other-services-btn">EMPRESA NÃO APARECE NO GOOGLE MAPS?</a>
-                <a href="/insights/google-meu-negocio-guia-completo-2026/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO EM 2026</a>
+                <a href="/insights/concorrente-aparece-antes-no-google/" className="lp-other-services-btn">CONCORRENTE APARECE ANTES DE VOCÊ?</a>
               </div>
             </div>
 

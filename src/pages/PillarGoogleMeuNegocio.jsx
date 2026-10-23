@@ -35,6 +35,18 @@ export default function PillarGoogleMeuNegocio() {
     {
       q: "Como integrar a estratégia de Google Meu Negócio com o site institucional da empresa?",
       a: "O site institucional funciona como o validador de autoridade semântica do perfil. Incorporamos o mapa georreferenciado, estruturamos os dados da empresa via Schema JSON-LD LocalBusiness e garantimos consistência absoluta de NAP (Nome, Endereço e Telefone) entre o rodapé do site e o perfil do Google."
+    },
+    {
+      q: "Por que um perfil com nota 5 estrelas pode perder posição no mapa de repente?",
+      a: "Na maioria dos casos, por falta de recência. O Google valoriza um fluxo regular de avaliações novas mais do que uma nota alta parada no tempo. Quando o perfil para de receber avaliações, de publicar e de responder clientes, o algoritmo entende que o negócio perdeu atividade e reduz a relevância local."
+    },
+    {
+      q: "O que fazer em caso de ataque de avaliações negativas falsas?",
+      a: "Denuncie cada avaliação pelo próprio Perfil da Empresa e, se o volume for alto, abra um chamado no suporte oficial do Google relatando o padrão (contas criadas no mesmo dia, sem histórico ou de outras regiões). Responda de forma profissional e factual enquanto a análise acontece e nunca negocie com quem exige pagamento para retirar avaliações."
+    },
+    {
+      q: "Como as respostas com IA do Google (AI Overviews) afetam a visibilidade local?",
+      a: "As respostas geradas por IA também se apoiam nos sinais locais: consistência do NAP, menções da empresa em sites confiáveis e um site próprio que responda com clareza às dúvidas da região. Quem tem perfil completo e site bem estruturado tem mais chance de ser citado nessas respostas, além de aparecer no mapa."
     }
   ];
 
@@ -58,8 +70,8 @@ export default function PillarGoogleMeuNegocio() {
         }
       },
       "datePublished": "2026-07-08",
-      "dateModified": "2026-07-08",
-      "mainEntityOfPage": "https://onethank.com.br/guia/google-meu-negocio"
+      "dateModified": "2026-10-22",
+      "mainEntityOfPage": "https://onethank.com.br/guia/google-meu-negocio/"
     },
     {
       "@context": "https://schema.org",
@@ -495,9 +507,9 @@ export default function PillarGoogleMeuNegocio() {
             </p>
 
             <div className="gmn-meta">
-              <span>Leitura: <strong>18 minutos</strong></span>
+              <span>Leitura: <strong>22 minutos</strong></span>
               <span>Nível: <strong>Intermediário / Executivo</strong></span>
-              <span>Atualização: <strong>Julho/2026</strong></span>
+              <span>Atualização: <strong>Outubro/2026</strong></span>
             </div>
           </div>
         </section>
@@ -513,7 +525,9 @@ export default function PillarGoogleMeuNegocio() {
               <li><a href="#capitulo-2">2. NAP Semântico: Como Consolidar Nome, Endereço e Telefone na Web</a></li>
               <li><a href="#capitulo-3">3. O Algoritmo Local 2026: Proximidade, Relevância e Proeminência</a></li>
               <li><a href="#capitulo-4">4. Máquina de Avaliações 5 Estrelas via WhatsApp (Pós-Venda Ativo)</a></li>
-              <li><a href="#capitulo-5">5. Erros Técnicos Fatais que Causam Suspensão ou Sumiço do Perfil</a></li>
+              <li><a href="#capitulo-5">5. Postagens, Respostas e Sinais de Atividade do Perfil</a></li>
+              <li><a href="#capitulo-6">6. As Métricas do Perfil que Mostram Retorno Real</a></li>
+              <li><a href="#capitulo-7">7. Erros Técnicos Fatais que Causam Suspensão ou Sumiço do Perfil</a></li>
             </ul>
           </nav>
 
@@ -566,11 +580,55 @@ export default function PillarGoogleMeuNegocio() {
             <p>
               Através da integração de CRM com WhatsApp, enviamos uma mensagem curta e humanizada 24 horas após a entrega do serviço ou reunião de onboarding, contendo o link direto para avaliação de 5 estrelas no Google. Essa cadência recorrente sinaliza ao algoritmo que a empresa é ativa, próspera e confiável.
             </p>
+            <h3>Recência Vale Mais que Volume Acumulado</h3>
+            <p>
+              Um perfil com dezenas de avaliações antigas e nenhuma recente perde força para um concorrente que recebe avaliações toda semana. O cliente também percebe: avaliações dos últimos meses pesam mais na decisão do que uma nota alta construída anos atrás. Por isso o pedido de avaliação precisa ser um processo contínuo, e não uma campanha pontual.
+            </p>
+            <h3>As Palavras do Cliente Também Ranqueiam</h3>
+            <p>
+              Quando o cliente descreve espontaneamente o serviço que contratou (<em>"fizeram a abertura da minha empresa em uma semana"</em>), o Google lê esses termos e passa a associar o perfil a buscas mais específicas. Por isso vale orientar o pedido de avaliação com uma pergunta aberta sobre a experiência, sem nunca sugerir o texto ou oferecer vantagens em troca.
+            </p>
+            <h3>Responda Todas as Avaliações em até 24 Horas</h3>
+            <p>
+              Responder rápido, inclusive às críticas, mostra ao cliente e ao algoritmo que existe gestão ativa por trás do perfil. Uma resposta profissional a uma avaliação negativa costuma gerar mais confiança do que um perfil sem nenhuma crítica.
+            </p>
           </section>
 
           {/* CAPÍTULO 5 */}
           <section id="capitulo-5" className="gmn-section">
-            <h2>5. Erros Técnicos Fatais que Causam Suspensão ou Sumiço do Perfil</h2>
+            <h2>5. Postagens, Respostas e Sinais de Atividade do Perfil</h2>
+            <p>
+              O Google mede se o negócio está vivo pelas interações que acontecem no próprio perfil. Uma rotina simples mantém esse sinal aceso:
+            </p>
+            <p>
+              • <strong>Uma a duas postagens por semana:</strong> novidades, serviços, cases e perguntas frequentes, sempre com foto própria.<br/>
+              • <strong>Contato pelo botão oficial:</strong> não coloque telefone no texto da postagem. Posts com número de telefone são rejeitados automaticamente; use o botão de ação ligado ao canal cadastrado.<br/>
+              • <strong>Fotos atualizadas:</strong> fachada, equipe e ambiente reais ajudam o cliente a reconhecer o local e reforçam a legitimidade do perfil.<br/>
+              • <strong>Perguntas e respostas:</strong> responda às dúvidas publicadas no perfil e cadastre as perguntas que seus clientes mais fazem.
+            </p>
+          </section>
+
+          {/* CAPÍTULO 6 */}
+          <section id="capitulo-6" className="gmn-section">
+            <h2>6. As Métricas do Perfil que Mostram Retorno Real</h2>
+            <p>
+              Visualizações não pagam contas. O painel do Perfil da Empresa mostra quatro números que traduzem o mapa em resultado comercial:
+            </p>
+            <p>
+              • <strong>Visualizações do perfil:</strong> quantas pessoas da região descobriram sua empresa no período. É o termômetro de exposição.<br/>
+              • <strong>Cliques para ligar ou chamar no WhatsApp:</strong> o lead mais quente, que quer falar com a equipe agora.<br/>
+              • <strong>Cliques para o site:</strong> o visitante que quer conhecer melhor antes de decidir, e que o site precisa converter com portfólio, cases e formulário.<br/>
+              • <strong>Pedidos de rota:</strong> intenção de visita presencial ao escritório, clínica ou loja.
+            </p>
+            <div className="gmn-callout">
+              <div className="gmn-callout-title">Como a OTD acompanha</div>
+              <p>Comparamos esses números mês a mês com os contatos que chegaram de fato ao comercial. É essa conta que mostra se o perfil está gerando clientes ou só aparecendo.</p>
+            </div>
+          </section>
+
+          {/* CAPÍTULO 7 */}
+          <section id="capitulo-7" className="gmn-section">
+            <h2>7. Erros Técnicos Fatais que Causam Suspensão ou Sumiço do Perfil</h2>
             <p>
               O Google endureceu drasticamente as verificações de segurança em 2026. Os erros que mais causam suspensões imediatas de perfis comerciais são:
             </p>
@@ -601,15 +659,15 @@ export default function PillarGoogleMeuNegocio() {
               </a>
 
               <a
-                href="/insights/google-meu-negocio-guia-completo-2026/"
+                href="/servicos/google-meu-negocio/"
                 className="gmn-spoke-card"
-                onClick={(e) => { e.preventDefault(); navigateTo('/insights/google-meu-negocio-guia-completo-2026'); }}
+                onClick={(e) => { e.preventDefault(); navigateTo('/servicos/google-meu-negocio/'); }}
               >
                 <div>
-                  <div className="gmn-spoke-tag">Guia de Bolso</div>
-                  <div className="gmn-spoke-h4">Google Meu Negócio: o guia completo para pequenas empresas em 2026</div>
+                  <div className="gmn-spoke-tag">Serviço OTD</div>
+                  <div className="gmn-spoke-h4">Google Meu Negócio para empresas do Grande ABC: implementação e gestão</div>
                 </div>
-                <span className="gmn-spoke-link">Ler artigo satélite →</span>
+                <span className="gmn-spoke-link">Conhecer o serviço →</span>
               </a>
 
               <a
