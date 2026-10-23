@@ -17,6 +17,13 @@ RedirectMatch 301 ^/insights/google-meu-negocio-guia-completo-2026/?$ /guia/goog
 RedirectMatch 301 ^/servicos/?$ /
 RedirectMatch 301 ^/insights/categoria/?$ /insights/
 
+# Restos do WordPress antigo (tema de demonstração): 410 avisa o Google que sumiram de vez
+RedirectMatch 301 ^/home(-4)?/?$ /
+RedirectMatch 410 ^/(wp-admin|wp-content|wp-includes|wp-json|tag|category|portfolio|comments)(/.*)?$
+RedirectMatch 410 ^/(.+/)?feed/?$
+RedirectMatch 410 ^/(portfolio-grid|portfolio-no-gap|transforming-challenges-into|tackling-the-changes-of-retail-industry|how-to-make-your-ios-13-compatible|how-to-make-website-wcag-compliant|the-future-of-ecommerce-business|free-advertising-for-your-online|you-have-a-great-business-idea-2|design-inspiration-where-to-find|creating-new-working-in-the-digital(-3)?|non-sit-libero-viverra-mollis-non-ligula-tincidunt-congue-porta-attention-simply)/?$
+RedirectMatch 410 ^/cgi-sys/suspendedpage\.cgi$
+
 # Nunca listar o conteúdo de pastas (ex.: /assets/)
 Options -Indexes
 
@@ -26,6 +33,10 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Versão única do domínio: www.onethank.com.br -> onethank.com.br
+  RewriteCond %{HTTP_HOST} ^www\.onethank\.com\.br$ [NC]
+  RewriteRule ^(.*)$ https://onethank.com.br/$1 [R=301,L]
 
   # Apresentação comercial em PDF servida em URL limpa
   RewriteRule ^apresentacao-one-thank-digital/?$ /apresentacao-one-thank-digital.pdf [L]
