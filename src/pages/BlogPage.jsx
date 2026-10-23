@@ -5,6 +5,14 @@ import { Helmet } from "react-helmet-async";
 const CATEGORIES = ["Todos", "GMN", "Website", "SEO", "Automação", "OTD"];
 
 // Mapeia dados do blogPosts para o formato interno do componente
+// "2026-10-22" -> "Out 2026"; artigos sem data mantêm o mês de lançamento do blog
+const MESES = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+function dataCurta(iso) {
+  if (!iso) return "Jul 2026";
+  const [ano, mes] = iso.split("-");
+  return `${MESES[Number(mes) - 1]} ${ano}`;
+}
+
 const POSTS = [
   {
     id: 104,
@@ -49,7 +57,7 @@ const POSTS = [
     id: p.id,
     featured: false,
     category: p.categoria,
-    date: "Jul 2026",
+    date: dataCurta(p.dataPublicacao),
     title: p.titulo,
     excerpt: p.lead.slice(0, 145) + "...",
     imagem: p.imagem,
