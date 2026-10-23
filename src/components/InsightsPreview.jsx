@@ -121,6 +121,10 @@ export default function InsightsPreview({ navigateTo }) {
     }
 
     .ip-card {
+      color: inherit;
+      text-decoration: none;
+    }
+    .ip-card {
       display: flex;
       flex-direction: column;
       background: #0d0d0d;
@@ -280,29 +284,25 @@ export default function InsightsPreview({ navigateTo }) {
                 <em>&amp; GUIAS</em>
               </div>
             </div>
-            <span
+            <a
+              href="/insights/"
               className="ip-cta-link"
-              onClick={handleAllInsights}
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && handleAllInsights()}
+              onClick={(e) => { e.preventDefault(); handleAllInsights(); }}
             >
               Ver todos os insights →
-            </span>
+            </a>
           </div>
 
           <div className="ip-divider" />
 
           <div className="ip-grid">
             {INSIGHTS.map((item) => (
-              <div
+              <a
                 key={item.slug}
+                href={`/insights/${item.slug}/`}
                 className="ip-card"
-                onClick={() => handleNav(item.slug)}
-                role="link"
-                tabIndex={0}
                 aria-label={item.titulo}
-                onKeyDown={(e) => e.key === 'Enter' && handleNav(item.slug)}
+                onClick={(e) => { e.preventDefault(); handleNav(item.slug); }}
               >
                 {/* Image */}
                 <div className="ip-card-img">
@@ -327,7 +327,7 @@ export default function InsightsPreview({ navigateTo }) {
                     Ler artigo <span>→</span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 

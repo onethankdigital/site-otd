@@ -58,6 +58,7 @@ const POSTS = [
     featured: false,
     category: p.categoria,
     date: dataCurta(p.dataPublicacao),
+    publicado: p.dataPublicacao,
     title: p.titulo,
     excerpt: p.lead.slice(0, 145) + "...",
     imagem: p.imagem,
@@ -101,7 +102,9 @@ export default function Blog() {
   }, []);
 
   const featured = POSTS.find(p => p.featured);
-  const rest = POSTS.filter(p => !p.featured);
+  // Mais recentes primeiro; itens sem data ficam com o mês de lançamento do blog
+  const rest = POSTS.filter(p => !p.featured)
+    .sort((a, b) => (b.publicado || "2026-07-01").localeCompare(a.publicado || "2026-07-01"));
   const filtered = activecat === "Todos"
     ? rest
     : rest.filter(p => p.category === activecat);
@@ -204,6 +207,11 @@ export default function Blog() {
       padding: clamp(48px,6vw,80px) clamp(24px,5vw,96px);
     }
 
+    .featured-card, .post-card {
+      color: inherit;
+      text-decoration: none;
+    }
+    .post-card { display: block; }
     .featured-card {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -454,10 +462,10 @@ export default function Blog() {
 
           {/* FEATURED */}
           {featured && (
-            <div
+            <a
+              href={`${featured.path}/`}
               className="featured-card"
-              onClick={() => navigate(featured.slug)}
-              style={{ cursor: "pointer" }}
+              onClick={(e) => { e.preventDefault(); navigate(featured.slug); }}
             >
               <div className="featured-image">
                 <PostImage src={featured.imagem} alt={featured.title} />
@@ -474,13 +482,13 @@ export default function Blog() {
                     {featured.category}
                   </span>
                   <span className="post-date">{featured.date}</span>
-                  <span className="read-time">{featured.readTime} de leitura</span>
+                  <span className="read-time">{featured.readTime}</span>
                 </div>
                 <h2 className="featured-title">{featured.title}</h2>
                 <p className="featured-excerpt">{featured.excerpt}</p>
                 <span className="btn-read">LER ARTIGO →</span>
               </div>
-            </div>
+            </a>
           )}
 
           {/* FILTER */}
@@ -499,10 +507,11 @@ export default function Blog() {
           {/* GRID */}
           <div className="posts-grid">
             {filtered.map(post => (
-              <div
+              <a
                 key={post.id}
+                href={`${post.path}/`}
                 className="post-card"
-                onClick={() => navigate(post.slug)}
+                onClick={(e) => { e.preventDefault(); navigate(post.slug); }}
               >
                 <div className="post-image">
                   <PostImage src={post.imagem} alt={post.title} />
@@ -523,11 +532,11 @@ export default function Blog() {
                   <h3 className="post-title">{post.title}</h3>
                   <p className="post-excerpt">{post.excerpt}</p>
                   <div className="post-footer">
-                    <span className="post-readtime">{post.readTime} de leitura</span>
+                    <span className="post-readtime">{post.readTime}</span>
                     <span className="post-arrow">→</span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
