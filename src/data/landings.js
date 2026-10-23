@@ -380,7 +380,7 @@ const CIDADES = [
     tipo: "cidade",
     nomeCurto: "Santos e Baixada Santista",
     titulo: "Marketing Digital, Sites e Google Meu Negócio em Santos e Baixada | OTD",
-    descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de Santos, São Vicente, Guarujá, Praia Grande e de toda a Baixada Santista, com atendimento online.",
+    descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de Santos, São Vicente, Guarujá, Praia Grande e toda a Baixada Santista. Atendimento online e presencial.",
     label: "// SANTOS E BAIXADA SANTISTA",
     h1: "Presença digital para empresas de Santos e da Baixada Santista",
     intro: "A One Thank Digital atende empresas de Santos, São Vicente, Guarujá, Praia Grande, Cubatão e demais cidades da Baixada Santista: site profissional, perfil no Google, SEO e automação de atendimento para escritórios, clínicas, fornecedores do porto e negócios de turismo.",
@@ -403,7 +403,7 @@ const CIDADES = [
     ],
     regras: {
       titulo: "ATENDIMENTO NA BAIXADA SANTISTA",
-      texto: "Atendemos a Baixada Santista principalmente por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h, a partir da nossa base em Santo André (Rua Monte Casseros, 281 — Centro). Encontros presenciais podem ser combinados conforme a etapa do projeto."
+      texto: "Atendemos a Baixada Santista online e presencialmente. O acompanhamento do dia a dia acontece por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h — e, quando o projeto pede, vamos até a sua empresa. Nossa base fica em Santo André, na Rua Monte Casseros, 281 — Centro."
     },
     links: [
       { href: "/servicos/google-meu-negocio/", texto: "GOOGLE MEU NEGÓCIO" },
@@ -412,7 +412,7 @@ const CIDADES = [
       { href: "/insights/empresa-nao-aparece-google-maps/", texto: "EMPRESA NÃO APARECE NO MAPS?" }
     ],
     faqs: [
-      { q: "Vocês atendem empresas da Baixada Santista sem escritório na região?", a: "Sim. Todo o projeto pode ser conduzido por reuniões online e WhatsApp, com aprovações por etapa. Quando a etapa do projeto pede, combinamos encontros presenciais." },
+      { q: "Vocês atendem presencialmente na Baixada Santista?", a: "Sim. Atendemos online e presencialmente: o dia a dia do projeto corre por reuniões online e WhatsApp, e quando é preciso estar no local — reunião com a equipe, levantamento ou treinamento — vamos até a sua empresa." },
       { q: "Como aproveitar a temporada no Google?", a: "Preparando o perfil antes do movimento: horários especiais de feriado, fotos recentes, publicações com novidades e respostas rápidas às avaliações. O WhatsApp também precisa estar pronto para o volume, com respostas automáticas às perguntas mais comuns." },
       { q: "Empresa que atende o porto precisa de presença digital?", a: "Sim. Áreas de compras e suprimentos pesquisam fornecedores no Google antes de pedir cotação. Um site técnico com capacidade, certificações e contato direto coloca a empresa na disputa." },
       { q: "Vocês atendem as outras cidades da Baixada além de Santos?", a: "Sim: São Vicente, Guarujá, Praia Grande, Cubatão, Bertioga, Mongaguá, Itanhaém e Peruíbe. A estratégia considera a cidade do endereço e a área que a empresa atende." }
@@ -449,7 +449,7 @@ const CIDADES = [
     ],
     regras: {
       titulo: "ATENDIMENTO NO LITORAL NORTE",
-      texto: "Atendemos o Litoral Norte principalmente por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h, a partir da nossa base em Santo André (Rua Monte Casseros, 281 — Centro). Encontros presenciais podem ser combinados conforme a etapa do projeto."
+      texto: "Atendemos o Litoral Norte online e presencialmente. O acompanhamento do dia a dia acontece por reuniões online e WhatsApp, de segunda a sexta, das 9h às 18h — e, quando o projeto pede, vamos até a sua empresa. Nossa base fica em Santo André, na Rua Monte Casseros, 281 — Centro."
     },
     links: [
       { href: "/servicos/google-meu-negocio/", texto: "GOOGLE MEU NEGÓCIO" },
@@ -458,7 +458,7 @@ const CIDADES = [
       { href: "/insights/como-pedir-avaliacoes-no-google/", texto: "COMO PEDIR AVALIAÇÕES", publicaEm: "2026-11-03" }
     ],
     faqs: [
-      { q: "Vocês atendem pousadas e restaurantes do Litoral Norte?", a: "Sim. Estruturamos o perfil no Google, o site e o atendimento pelo WhatsApp de pousadas, restaurantes e passeios, com o projeto conduzido por reuniões online e aprovações por etapa." },
+      { q: "Vocês atendem pousadas e restaurantes do Litoral Norte?", a: "Sim. Estruturamos o perfil no Google, o site e o atendimento pelo WhatsApp de pousadas, restaurantes e passeios. Atendemos online e presencialmente: quando é preciso estar no local, vamos até a sua empresa." },
       { q: "Ter site próprio ajuda a depender menos das plataformas de reserva?", a: "Ajuda. As plataformas continuam úteis para alcance, mas um site com canal direto e um perfil no Google com link de contato permitem que o cliente que já conhece o negócio reserve sem passar pela plataforma." },
       { q: "Como aparecer para quem pesquisa de São Paulo antes de viajar?", a: "Quando a busca inclui o nome da cidade, como \"pousada em Ubatuba\", o Google mostra resultados daquele lugar, mesmo que a pessoa esteja longe. Para aparecer, o perfil precisa ser relevante e bem avaliado, e o site deve ter páginas com a cidade e a região atendidas." },
       { q: "Atendem empresas que funcionam o ano todo, não só no turismo?", a: "Sim. Clínicas, escritórios, imobiliárias, construção e manutenção também precisam aparecer no mapa da cidade e responder rápido. A estratégia muda conforme o público, não a estrutura de trabalho." }
