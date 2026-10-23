@@ -36,10 +36,11 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     .soc-name { font-size: clamp(18px, 1.5vw, 24px); color: #999; transition: color 0.2s; font-weight: 500; }
     .soc-item:hover .soc-name { color: #fff; }
 
-    .fatende { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 24px 0; border-top: 1px solid #111; }
-    .fatende-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #D42B2B; font-weight: 700; margin-right: 4px; }
-    .fatende a { font-size: 14px; color: #777; text-decoration: none; transition: color 0.2s; }
-    .fatende a:hover { color: #fff; }
+    .fg-areas { border-top: 1px solid #111; padding-top: clamp(40px,5vw,64px); margin-bottom: clamp(48px,6vw,72px); }
+    .fg-areas .fc-title { margin-bottom: 20px; }
+    .fg-areas .flinks { gap: 14px; }
+    .fg-areas .flinks a { font-size: clamp(15px, 1.15vw, 18px); color: #888; }
+    .fg-areas .flinks a:hover { color: #fff; }
     .fbot { border-top: 1px solid #111; padding: 28px 0 36px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .fstat { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #888; letter-spacing: 2px; text-transform: uppercase; }
     .fdot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: blink 2s infinite; flex-shrink: 0; }
@@ -54,10 +55,11 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
       .fb { flex-direction: column; align-items: flex-start; }
       .fb-stmt { text-align: left; }
       .fg { grid-template-columns: 1fr 1fr; }
-      .fg > div { justify-self: stretch; max-width: none; }
+      .fg > div, .fg > div:last-child { justify-self: stretch; max-width: none; }
     }
     @media (max-width: 540px) {
       .fg { grid-template-columns: 1fr; }
+      .fg-areas { grid-template-columns: 1fr 1fr; row-gap: 36px; }
       .fbot { flex-direction: column; align-items: flex-start; gap: 12px; }
       .fg > div:nth-child(1) { justify-self: stretch; }
       .fg > div:nth-child(2) { justify-self: stretch; }
@@ -106,7 +108,16 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
     { label: "Otimização SEO", href: "/servicos/seo-trafego-organico/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/seo-trafego-organico"); } },
     { label: "Criação de Sites", href: "/servicos/criacao-de-sites/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/criacao-de-sites"); } },
     { label: "Automações", href: "/servicos/automacao-digital/", onClick: (e) => { e.preventDefault(); navigateTo("/servicos/automacao-digital"); } },
-    { label: "OneHub (WhatsApp + IA)", href: "/onehub/", onClick: (e) => { e.preventDefault(); navigateTo("/onehub/"); } },
+    { label: "OneHub CRM", href: "/onehub/", onClick: (e) => { e.preventDefault(); navigateTo("/onehub/"); } },
+  ];
+
+  // Segunda linha do rodapé: segmentos e regiões atendidas, alinhados às colunas de cima
+  const areas = [
+    { titulo: "Segmentos", itens: segmentos },
+    ...["Grande ABC", "Capital", "Litoral"].map((regiao) => ({
+      titulo: regiao,
+      itens: cidades.filter((c) => c.regiao === regiao),
+    })),
   ];
 
   const contentLinks = [
@@ -224,10 +235,21 @@ export default function Footer({ onOpenQuiz, onOpenPilares, onOpenHistoria }) {
             </div>
           </div>
 
-          <nav className="fatende" aria-label="Segmentos e cidades atendidas">
-            <span className="fatende-title">Atendemos</span>
-            {[...segmentos, ...cidades].map((l) => (
-              <a key={l.path} href={l.path}>{l.nomeCurto}</a>
+          <nav className="fg fg-areas" aria-label="Segmentos e regiões atendidas">
+            {areas.map((a) => (
+              <div key={a.titulo}>
+                <div className="fc-title">{a.titulo}</div>
+                <ul className="flinks">
+                  {a.itens.map((l) => (
+                    <li key={l.path}>
+                      <a href={l.path}>
+                        <span className="farr">→</span>
+                        {l.nomeCurto}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </nav>
 
