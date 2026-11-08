@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\Robson\\Novo Site OTD\\site\\dist"
+publish = "C:\\Dev\\otd\\site-otd\\dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
 command = "npm run build"
