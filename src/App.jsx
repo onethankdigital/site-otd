@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState, useEffect, Suspense } from 'react';
+import { useLayoutEffect, useRef, useState, useEffect, startTransition } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
@@ -37,8 +37,10 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // Transição: se a página nova ainda não foi baixada (lazy), a atual fica na tela até ela chegar.
+    // Sem <Suspense> no App, a hidratação bate com o HTML pré-renderizado (que não tem marcadores de Suspense).
     const handleLocationChange = () => {
-      setCurrentPath(window.location.pathname);
+      startTransition(() => setCurrentPath(window.location.pathname));
     };
     window.addEventListener('popstate', handleLocationChange);
     return () => window.removeEventListener('popstate', handleLocationChange);
@@ -98,9 +100,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <Quiz onClose={handleCloseQuiz} />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -118,9 +118,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <Pilares onClose={handleClosePilares} onOpenQuiz={handleOpenQuiz} />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -138,9 +136,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <Historia onClose={handleCloseHistoria} onOpenQuiz={handleOpenQuiz} />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -152,9 +148,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <ServicosGMN />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -166,9 +160,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <GoogleMeuNegocio />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -187,9 +179,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <ServicosSite />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -208,9 +198,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <ServicosSEO />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -229,9 +217,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <ServicosAutomacao />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -243,9 +229,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <BlogPage />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -263,9 +247,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <BlogPostPage />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -277,9 +259,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <CasesPage />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -291,9 +271,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <PrivacidadePage />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -305,9 +283,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <TermosPage />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -319,9 +295,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <AgenciasPage />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -335,9 +309,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <LandingPage landing={landing} />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -360,9 +332,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <OneHub />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -377,9 +347,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <GuiaListagem />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -394,9 +362,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <PillarAutomacaoDigital />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -411,9 +377,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <PillarGoogleMeuNegocio />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -428,9 +392,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <PillarDesenvolvimentoWeb />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -445,9 +407,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <PillarSEOTrafego />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -459,9 +419,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <CategoriaInsights />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -476,9 +434,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <InsightAutomacaoComercial />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -493,9 +449,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <InsightAutomacaoProcessos />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -510,9 +464,7 @@ function App() {
         <CustomCursor />
         <CookieBanner />
         <div className="noise-overlay"></div>
-        <Suspense fallback={null}>
           <InsightWhatsAppCRM />
-        </Suspense>
         <WhatsAppButton />
       </div>
     );
@@ -553,7 +505,6 @@ function App() {
         onOpenHistoria={handleOpenHistoria}
       />
       <main className="w-full flex flex-col">
-        <Suspense fallback={<div className="min-h-screen bg-black"></div>}>
           <Hero onOpenQuiz={handleOpenQuiz} />
           <ServicosCards />
           {/* <div id="features" className="bg-white">
@@ -567,15 +518,12 @@ function App() {
           <Philosophy onOpenQuiz={handleOpenQuiz} />
           <Protocol onOpenQuiz={handleOpenQuiz} />
           <InsightsPreview navigateTo={(path) => { window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')); }} />
-        </Suspense>
       </main>
-      <Suspense fallback={null}>
         <Footer 
           onOpenQuiz={handleOpenQuiz} 
           onOpenPilares={handleOpenPilares}
           onOpenHistoria={handleOpenHistoria}
         />
-      </Suspense>
       <WhatsAppButton />
     </div>
   );

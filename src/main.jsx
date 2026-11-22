@@ -1,5 +1,5 @@
-import { StrictMode, Suspense } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App.jsx'
@@ -10,13 +10,31 @@ import PrerenderReady from './utils/PrerenderReady'
 const pagina = pageForPath(window.location.pathname)
 const pronto = pagina ? pagina.preload().catch(() => {}) : Promise.resolve()
 
-pronto.then(() => createRoot(document.getElementById('root')).render(
+// Mesmo conteúdo do app, usado pelo pré-render para gerar o HTML com renderToString.
+const conteudo = (
+  <HelmetProvider>
+    <App />
+  </HelmetProvider>
+)
+
+const app = (
   <StrictMode>
     <HelmetProvider>
-      <Suspense fallback={null}>
-        <App />
-      </Suspense>
-      <PrerenderReady />
+      <App />
+      <PrerenderReady snapshot={conteudo} />
     </HelmetProvider>
-  </StrictMode>,
-))
+  </StrictMode>
+)
+
+// Página pré-renderizada: hidrata o HTML que já chegou (sem redesenhar a tela).
+// Se algo não bater com o HTML, o React refaz a página no cliente, como antes.
+const container = document.getElementById('root')
+pronto.then(() => {
+  if (container.hasChildNodes()) {
+    hydrateRoot(container, app, {
+      onRecoverableError: (error) => console.warn('[hidratacao]', error?.message || error),
+    })
+  } else {
+    createRoot(container).render(app)
+  }
+})

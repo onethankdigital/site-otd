@@ -131,12 +131,18 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('gsap')) {
-              return 'vendor-gsap';
+          const caminho = id.split('\\').join('/');
+          if (caminho.includes('/node_modules/')) {
+            // react-dom/server: só o pré-render usa (import dinâmico no PrerenderReady). Sem grupo manual,
+            // ele fica sozinho no chunk do import dinâmico, fora do vendor-react que o visitante baixa.
+            if (/\/node_modules\/react-dom\/(server|cjs\/react-dom-server)/.test(caminho)) {
+              return undefined;
             }
-            if (id.includes('react-dom') || id.includes('react/')) {
+            if (/\/node_modules\/(react|react-dom|scheduler)\//.test(caminho)) {
               return 'vendor-react';
+            }
+            if (caminho.includes('gsap')) {
+              return 'vendor-gsap';
             }
             return 'vendor-others';
           }
