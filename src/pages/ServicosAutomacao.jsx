@@ -616,7 +616,7 @@ export default function ServicosAutomacao() {
                 </div>
               </div>
               <div className="lp-showcase-image-wrapper">
-                <img src="/servico-automacao.png" alt="Automação Digital OTD" />
+                <img src="/servico-automacao.webp" alt="Automação Digital OTD" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

@@ -601,7 +601,7 @@ export default function ServicosGMN() {
           <div className="lp-container">
             <div className="lp-showcase-grid reverse">
               <div className="lp-showcase-image-wrapper">
-                <img src="/servico-google-maps.png" alt="Google Meu Negócio OTD" />
+                <img src="/servico-google-maps.webp" alt="Google Meu Negócio OTD" loading="lazy" decoding="async" />
               </div>
               <div className="lp-showcase-content">
                 <h2 className="lp-showcase-content-title">O SEU BALCÃO <span>DE VENDAS LOCAL.</span></h2>

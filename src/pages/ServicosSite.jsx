@@ -608,7 +608,7 @@ export default function ServicosSite() {
                 </div>
               </div>
               <div className="lp-showcase-image-wrapper">
-                <img src="/servico-website.png" alt="Criação de Sites OTD" />
+                <img src="/servico-website.webp" alt="Criação de Sites OTD" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

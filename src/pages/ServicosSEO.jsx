@@ -601,7 +601,7 @@ export default function ServicosSEO() {
           <div className="lp-container">
             <div className="lp-showcase-grid reverse">
               <div className="lp-showcase-image-wrapper">
-                <img src="/servico-seo.png" alt="SEO Orgânico OTD" />
+                <img src="/servico-seo.webp" alt="SEO Orgânico OTD" loading="lazy" decoding="async" />
               </div>
               <div className="lp-showcase-content">
                 <h2 className="lp-showcase-content-title">A SUA CASA PRÓPRIA <span>VS ALUGUEL.</span></h2>
