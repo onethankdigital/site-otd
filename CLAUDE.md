@@ -51,6 +51,14 @@ O arquivo `public/.htaccess` é copiado automaticamente para `dist/` no build e 
 | Otimização de imagens | sharp (no postbuild) | ^0.34 |
 | 3D / Spline | @splinetool/react-spline | ^4.1 |
 
+### 3.1.1 Pré-render, hidratação e páginas sob demanda (nov/2026)
+
+- Páginas secundárias são carregadas sob demanda via `src/pages/registry.js` (`lazyPage`). **Página nova: registrar em `registry.js` e no `pageForPath`**, senão ela pisca ao abrir.
+- `main.jsx` usa `hydrateRoot` sobre o HTML pré-renderizado. O pré-render (Puppeteer) grava o HTML do `renderToString` (`src/utils/PrerenderReady.jsx`), que traz os marcadores de hidratação do React.
+- **Não colocar `<Suspense>` no App:** o HTML pré-renderizado não tem marcadores de Suspense e a hidratação falha. A troca de rota usa `startTransition`.
+- `react-dom/server` fica num chunk dinâmico que só o pré-render baixa; não incluir em `manualChunks`.
+- 10 artigos do blog ainda caem no render do cliente (HTML de `corpo` que o navegador reescreve); funciona, só não hidrata.
+
 ### 3.2 Roteamento Manual
 
 Este projeto usa **correspondência de caminho manual** — sem react-router-dom.  
