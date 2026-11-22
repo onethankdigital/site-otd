@@ -23,6 +23,7 @@ import PrivacidadePage from './pages/PrivacidadePage';
 import TermosPage from './pages/TermosPage';
 import BlogPostPage from './pages/BlogPostPage';
 import { Helmet } from 'react-helmet-async';
+import { faqHome } from './data/faqHome';
 
 import ServicosGMN from './pages/ServicosGMN';
 import ServicosSite from './pages/ServicosSite';
@@ -553,11 +554,20 @@ function App() {
     <div ref={appRef} className="relative w-full bg-background min-h-screen text-primary overflow-x-hidden text-white">
       <Helmet>
         <link rel="canonical" href="https://onethank.com.br/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqHome.map(f => ({
+            "@type": "Question",
+            "name": f.title,
+            "acceptedAnswer": { "@type": "Answer", "text": f.desc }
+          }))
+        })}</script>
       </Helmet>
       <CustomCursor />
       <CookieBanner />
       <div className="noise-overlay"></div>
-      <Navbar 
+      <Navbar
         onOpenQuiz={handleOpenQuiz} 
         onOpenPilares={handleOpenPilares}
         onOpenHistoria={handleOpenHistoria}

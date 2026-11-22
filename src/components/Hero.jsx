@@ -78,7 +78,7 @@ const Hero = ({ onOpenQuiz }) => {
         
         {/* Eyebrow */}
         <div className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-80 mb-6 text-center">
-          TECNOLOGIA E ESTRUTURA DIGITAL · SANTO ANDRÉ, GRANDE ABC
+          TECNOLOGIA E ESTRUTURA DIGITAL COM IA · SANTO ANDRÉ, GRANDE ABC
         </div>
 
         {/* H1 (Line 1 - Space Grotesk Font) */}
@@ -102,8 +102,8 @@ const Hero = ({ onOpenQuiz }) => {
         </div>
 
         {/* Support Line */}
-        <p className="text-xs sm:text-sm md:text-base opacity-75 max-w-xl text-center leading-relaxed mb-6 px-4">
-          Para empresas do Grande ABC que precisam ser encontradas e não podem perder o contato que chega.
+        <p className="text-xs sm:text-sm md:text-base opacity-75 max-w-2xl text-center leading-relaxed mb-6 px-4">
+          Estruturas digitais com inteligência artificial para empresas do Grande ABC que precisam ser encontradas e não podem perder o contato que chega.
         </p>
 
 

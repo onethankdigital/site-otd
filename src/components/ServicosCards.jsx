@@ -6,7 +6,7 @@ const SERVICOS = [
     title: 'GOOGLE MEU NEGÓCIO',
     dor: 'Seu concorrente aparece no Maps. Você não.',
     microTeste: 'busque no Google o que você vende + sua cidade. Sua empresa aparece no mapa?',
-    descricao: 'Otimizamos sua presença local para você aparecer nas buscas do Google Maps quando o cliente decide.',
+    descricao: 'Otimizamos sua presença local para você aparecer no Google Maps quando o cliente decide, inclusive em buscas por voz e por IA.',
     link: '/servicos/google-meu-negocio',
     image: '/servico-google-maps.png',
     imageAlt: 'Presença local no Google Maps',
@@ -22,7 +22,7 @@ const SERVICOS = [
     title: 'WEBSITE PROFISSIONAL',
     dor: 'Seu site tem visitas mas não gera clientes.',
     microTeste: 'abra seu site pelo celular, no 4G, e conte os segundos até o conteúdo aparecer.',
-    descricao: 'Sites de alta conversão que comunicam sua oferta e vendem 24 horas — com estrutura de busca desde o primeiro dia.',
+    descricao: 'Sites de alta conversão, desenvolvidos com IA, que comunicam sua oferta e vendem 24 horas — com estrutura de busca desde o primeiro dia.',
     link: '/servicos/criacao-de-sites',
     image: '/servico-website.png',
     imageAlt: 'Website profissional de alta conversão',
@@ -39,13 +39,13 @@ const SERVICOS = [
   },
   {
     number: '03',
-    title: 'SEO + TRÁFEGO ORGÂNICO',
+    title: 'SEO + BUSCA POR IA',
     dor: 'Você some do Google quando para de pagar anúncio.',
     microTeste: 'busque o que você vende e ignore os anúncios. Você aparece na primeira página?',
-    descricao: 'Rankeamento orgânico no Google e nos mecanismos de IA, sem depender de investimento pago.',
+    descricao: 'Seu negócio no Google e nas respostas do ChatGPT, Gemini e Perplexity (GEO/AEO), sem depender de anúncio.',
     link: '/servicos/seo-trafego-organico',
     image: '/servico-seo.png',
-    imageAlt: 'SEO e tráfego orgânico no Google',
+    imageAlt: 'SEO no Google e otimização para buscas por IA (GEO/AEO)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="14" cy="14" r="10" stroke="#E0040B" strokeWidth="2"/>
@@ -57,13 +57,13 @@ const SERVICOS = [
   },
   {
     number: '04',
-    title: 'AUTOMAÇÃO DIGITAL',
+    title: 'AUTOMAÇÃO COM IA',
     dor: 'Você perde leads que mandam mensagem fora do horário.',
     microTeste: 'mande uma mensagem no WhatsApp da sua empresa hoje às 21h. Cronometre a resposta.',
-    descricao: 'WhatsApp, CRM e funil automatizados para responder, qualificar e não perder contato nenhum.',
+    descricao: 'Agentes de IA no WhatsApp, CRM e funil automatizados para responder, qualificar e não perder contato nenhum, 24 horas por dia.',
     link: '/servicos/automacao-digital',
     image: '/servico-automacao.png',
-    imageAlt: 'Automação digital de WhatsApp e CRM',
+    imageAlt: 'Automação com agentes de IA no WhatsApp e CRM',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="16" cy="16" r="10" stroke="#E0040B" strokeWidth="2"/>
