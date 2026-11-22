@@ -94,10 +94,10 @@ const CATEGORIES = [
   },
   {
     id: "seo",
-    label: "SEO & Tráfego",
+    label: "SEO & Busca por IA",
     icon: "🔍",
     short: "SEO",
-    description: "Visibilidade orgânica e paga nos mecanismos de busca",
+    description: "Visibilidade no Google, nas respostas de IA e em anúncios",
     questions: [
       {
         q: "Sua empresa aparece na primeira página do Google para termos do seu segmento?",
@@ -106,9 +106,9 @@ const CATEGORIES = [
         scores: [2, 1, 0],
       },
       {
-        q: "Você tem palavras-chave estratégicas definidas para seu negócio?",
-        hint: "Palavras-chave certas determinam quem chega até você organicamente",
-        options: ["Sim, mapeadas", "Tenho algumas ideias", "Não sei o que são"],
+        q: "Quando alguém pergunta ao ChatGPT ou ao Gemini por um serviço como o seu na sua cidade, sua empresa é citada?",
+        hint: "Cada vez mais clientes pedem indicação para a IA antes de pesquisar no Google",
+        options: ["Sim, já vi ser citada", "Não sei, nunca testei", "Não aparece"],
         scores: [2, 1, 0],
       },
       {
@@ -133,10 +133,10 @@ const CATEGORIES = [
   },
   {
     id: "automacao",
-    label: "Automação",
+    label: "Automação com IA",
     icon: "⚙️",
     short: "Auto",
-    description: "Processos automáticos de atendimento, leads e operation",
+    description: "Atendimento, leads e operação automatizados, com agentes de IA",
     questions: [
       {
         q: "Você utiliza algum CRM para gerenciar leads, clientes e oportunidades?",
@@ -145,7 +145,7 @@ const CATEGORIES = [
         scores: [2, 1, 0],
       },
       {
-        q: "Seu WhatsApp tem respostas automáticas ou chatbot para atendimento inicial?",
+        q: "Seu WhatsApp tem respostas automáticas, chatbot ou agente de IA para o atendimento inicial?",
         hint: "Resposta em até 5 min aumenta em 21x a chance de conversão",
         options: ["Sim, automatizado", "Resposta rápida manual", "Sem automação"],
         scores: [2, 1, 0],
@@ -625,6 +625,26 @@ export default function Quiz({ onClose }) {
     }
     .pillar-desc { font-size: 15px; color: #aaa; margin-top: 6px; line-height: 1.5; }
 
+    .im { margin-top: 56px; padding-top: 40px; border-top: 1px solid #1e1e1e; }
+    .im-h {
+      font-family: 'Bebas Neue', sans-serif; font-weight: 400;
+      font-size: clamp(28px, 3vw, 40px); letter-spacing: 1.5px; color: ${BRAND.text};
+      margin: 0 0 18px;
+    }
+    .im-h:not(:first-child) { margin-top: 44px; }
+    .im-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 760px) { .im-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+    .im-item { background: #161616; border: 1px solid #222; border-radius: 12px; padding: 20px; }
+    .im-n { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: ${BRAND.red}; margin-bottom: 8px; }
+    .im-t { font-size: 18px; font-weight: 600; color: ${BRAND.text}; margin-bottom: 6px; }
+    .im-p { font-size: 15px; color: #aaa; line-height: 1.6; margin: 0; }
+    .im-wide { font-size: 16px; max-width: 860px; }
+    .im-wide strong { color: ${BRAND.text}; }
+    .im-steps { margin: 0; padding-left: 22px; color: #aaa; font-size: 16px; line-height: 1.7; }
+    .im-steps li { margin-bottom: 8px; }
+    .im-steps strong { color: ${BRAND.text}; }
+    .im-faq { display: grid; gap: 20px; margin-bottom: 32px; }
+
     .btn-primary {
       background: ${BRAND.red};
       color: white;
@@ -926,7 +946,7 @@ export default function Quiz({ onClose }) {
               AVALIE SUA<br /><em>Estrutura Digital</em>
             </h1>
             <p className="intro-sub">
-              20 perguntas em 4 pilares estratégicos. Descubra com precisão onde sua empresa está e o que impede seu crescimento digital. <strong style={{ color: "white" }}>Resultado imediato.</strong>
+              20 perguntas em 4 pilares, incluindo como sua empresa aparece nas buscas por IA. Descubra onde a sua estrutura digital está perdendo clientes hoje. <strong style={{ color: "white" }}>Resultado imediato.</strong>
             </p>
 
             <div className="pillars">
@@ -947,6 +967,36 @@ export default function Quiz({ onClose }) {
 
             <div style={{ marginTop: 24, fontSize: 14, color: "#999", display: "flex", alignItems: "center", gap: 8, fontWeight: 500 }}>
               🔒 Suas respostas são totalmente confidenciais
+            </div>
+
+            <div className="im">
+              <h2 className="im-h">O que você recebe</h2>
+              <div className="im-grid">
+                <div className="im-item"><div className="im-n">01</div><div className="im-t">Nível de maturidade na hora</div><p className="im-p">Ao terminar, você vê em qual nível de estrutura digital sua empresa está hoje.</p></div>
+                <div className="im-item"><div className="im-n">02</div><div className="im-t">Nota de cada pilar</div><p className="im-p">Google Meu Negócio, site, SEO e busca por IA, automação: onde está o maior vazamento de clientes.</p></div>
+                <div className="im-item"><div className="im-n">03</div><div className="im-t">Plano de prioridades</div><p className="im-p">Em uma call gratuita de 30 minutos, mostramos a análise completa e o que corrigir primeiro.</p></div>
+              </div>
+
+              <h2 className="im-h">Como funciona</h2>
+              <ol className="im-steps">
+                <li><strong>Responda as 20 perguntas.</strong> Três opções de resposta em cada uma. Leva cerca de 3 minutos.</li>
+                <li><strong>Veja seu nível na hora.</strong> Sem cadastro para ver o resultado inicial.</li>
+                <li><strong>Agende a call, se quiser.</strong> Você deixa nome, telefone e e-mail e escolhe o horário para receber a análise por pilar.</li>
+              </ol>
+
+              <h2 className="im-h">Quem faz a análise</h2>
+              <p className="im-p im-wide">A One Thank Digital, de Santo André, estrutura a presença digital de escritórios de advocacia, contabilidades, clínicas e empresas B2B do Grande ABC: Google Meu Negócio, sites, SEO para Google e para IAs e automação de atendimento com IA no WhatsApp. Tudo o que recomendamos foi testado antes na nossa própria operação. <strong>16 avaliações com nota 5,0 no Google.</strong></p>
+
+              <h2 className="im-h">Perguntas frequentes</h2>
+              <div className="im-faq">
+                <div><div className="im-t">É gratuito mesmo?</div><p className="im-p">Sim. A avaliação e a call de 30 minutos não têm custo e não obrigam a contratar nada.</p></div>
+                <div><div className="im-t">Preciso saber de tecnologia para responder?</div><p className="im-p">Não. As perguntas são sobre o dia a dia da empresa: como os clientes te encontram e como são atendidos.</p></div>
+                <div><div className="im-t">Para que tipo de empresa serve?</div><p className="im-p">Para empresas que dependem de serem encontradas no Google e de responder rápido no WhatsApp, como escritórios, clínicas e prestadores de serviço B2B.</p></div>
+              </div>
+
+              <button className="btn-primary" onClick={() => setPhase("quiz")} style={{ marginTop: 8 }}>
+                INICIAR AVALIAÇÃO →
+              </button>
             </div>
           </div>
         )}

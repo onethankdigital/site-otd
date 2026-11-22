@@ -16,6 +16,10 @@ export default function ServicosSite() {
 
   const FAQS = [
     {
+      q: "O site é feito com inteligência artificial?",
+      a: "A IA acelera o desenvolvimento, mas não substitui o trabalho técnico. Estrutura, textos e código são revisados por nós antes de ir ao ar, e o site sai preparado para o Google e para as buscas por IA."
+    },
+    {
       q: "Por que meu site tem visitas mas não gera clientes?",
       a: "Visitas sem conversão indicam problema de comunicação, não de tráfego. Se o site não fala a dor do cliente na primeira tela, não tem CTA claro ou carrega lento no celular, 70% dos visitantes vão embora antes de ler qualquer coisa."
     },
@@ -505,15 +509,15 @@ export default function ServicosSite() {
       <div className="lp-wrap">
         <Helmet>
           <title>Criação de Sites Profissionais B2B | One Thank Digital</title>
-          <meta name="description" content="Sites de alta conversão para escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista. Mobile-first, SEO desde o dia 1, performance acima de 90 no PageSpeed." />
+          <meta name="description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
           <meta property="og:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
-          <meta property="og:description" content="Site que converte visitantes em clientes. Mobile-first, SEO técnico e rápido para empresas B2B no ABC Paulista." />
+          <meta property="og:description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://onethank.com.br/servicos/criacao-de-sites/" />
           <meta property="og:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
-          <meta property="twitter:description" content="Site que converte visitantes em clientes. Mobile-first, SEO técnico e rápido para empresas B2B no ABC Paulista." />
+          <meta property="twitter:description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
           <meta property="twitter:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/criacao-de-sites/" />
           <script type="application/ld+json">
@@ -533,7 +537,7 @@ export default function ServicosSite() {
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "Criação de Sites B2B",
+                "name": "Criação de Sites B2B Desenvolvidos com IA",
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "One Thank Digital",
@@ -567,7 +571,7 @@ export default function ServicosSite() {
             <div className="lp-label">// DESENVOLVIMENTO DE SITES CORPORATIVOS DE ALTA PERFORMANCE</div>
             <h1 className="lp-h1">DESENVOLVIMENTO DE SITE PROFISSIONAL PARA EMPRESAS B2B EM SANTO ANDRÉ</h1>
             <p className="lp-intro">
-              A One Thank Digital desenvolve sites de alta conversão para escritórios contábeis, clínicas e empresas B2B no ABC Paulista. Sites rápidos, mobile-first, com estrutura SEO desde o primeiro dia — para que sua empresa seja encontrada no Google e converta visitantes em clientes sem depender de anúncio.
+              A One Thank Digital desenvolve sites de alta conversão para escritórios contábeis, clínicas e empresas B2B no ABC Paulista. Sites rápidos, mobile-first, com estrutura SEO desde o primeiro dia — para que sua empresa seja encontrada no Google e converta visitantes em clientes sem depender de anúncio. Desenvolvemos com IA, o que encurta o prazo de entrega sem abrir mão de revisão técnica em cada página.
             </p>
           </div>
         </section>
@@ -646,6 +650,30 @@ export default function ServicosSite() {
         </section>
 
 
+
+        {/* IA */}
+        <section className="lp-solucao-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">COMO A IA ENTRA NO SEU SITE.</h2>
+            <div className="lp-solucao-grid">
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">01</div>
+                <div className="lp-solucao-title">DESENVOLVIDO COM IA</div>
+                <div className="lp-solucao-desc">Usamos IA no desenvolvimento para entregar em semanas o que antes levava meses. Estrutura, textos e código passam por revisão nossa antes de ir ao ar.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">02</div>
+                <div className="lp-solucao-title">PRONTO PARA SER CITADO</div>
+                <div className="lp-solucao-desc">Dados estruturados (Schema), perguntas frequentes e textos objetivos fazem o site ser entendido e citado pelo Google, pelo ChatGPT e pelo Gemini.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">03</div>
+                <div className="lp-solucao-title">ATENDIMENTO CONECTADO</div>
+                <div className="lp-solucao-desc">O site pode se ligar a um agente de IA no WhatsApp, que responde e qualifica quem chega pelo site a qualquer hora.</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ROI */}
         <section className="lp-roi-section">

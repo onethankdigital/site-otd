@@ -16,6 +16,10 @@ export default function ServicosSEO() {
 
   const FAQS = [
     {
+      q: "O que é GEO e AEO?",
+      a: "São as otimizações para buscas feitas por IA. AEO (Answer Engine Optimization) prepara o conteúdo para virar resposta direta, como no AI Overview do Google. GEO (Generative Engine Optimization) trabalha para que ChatGPT, Gemini e Perplexity citem sua empresa como fonte. As duas partem de um SEO técnico bem feito."
+    },
+    {
       q: "Preciso parar de pagar anúncio para continuar aparecendo no Google?",
       a: "Sim. Tráfego pago some quando você para de investir. SEO orgânico é o oposto: você investe por 3 a 6 meses e continua aparecendo por anos sem pagar por cada clique. Para empresas B2B com ciclo de venda longo, o ROI do SEO é muito superior ao longo prazo."
     },
@@ -504,16 +508,16 @@ export default function ServicosSEO() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>SEO e Infraestrutura Digital B2B no ABC | One Thank Digital</title>
-          <meta name="description" content="Seu braço de tecnologia no Grande ABC. Infraestrutura digital e SEO estrutural para empresas que não podem perder clientes. Sem depender de anúncio pago." />
-          <meta property="og:title" content="SEO e Infraestrutura Digital para Empresas B2B | One Thank Digital" />
-          <meta property="og:description" content="Seu braço de tecnologia no Grande ABC. Infraestrutura digital e SEO estrutural para empresas que não podem perder clientes. Sem depender de anúncio pago." />
+          <title>SEO e Busca por IA para Empresas no ABC | One Thank Digital</title>
+          <meta name="description" content="SEO para o Google e para as respostas de IA (GEO/AEO): sua empresa no Google, no AI Overview, no ChatGPT e no Gemini, sem depender de anúncio." />
+          <meta property="og:title" content="SEO e Busca por IA (GEO/AEO) para Empresas B2B | One Thank Digital" />
+          <meta property="og:description" content="SEO para o Google e para as respostas de IA (GEO/AEO): sua empresa no Google, no AI Overview, no ChatGPT e no Gemini, sem depender de anúncio." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://onethank.com.br/servicos/seo-trafego-organico/" />
           <meta property="og:image" content="https://onethank.com.br/hero-seo-organico.webp" />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:title" content="SEO e Infraestrutura Digital para Empresas B2B | One Thank Digital" />
-          <meta property="twitter:description" content="Seu braço de tecnologia no Grande ABC. Infraestrutura digital e SEO estrutural para empresas que não podem perder clientes. Sem depender de anúncio pago." />
+          <meta property="twitter:title" content="SEO e Busca por IA (GEO/AEO) para Empresas B2B | One Thank Digital" />
+          <meta property="twitter:description" content="SEO para o Google e para as respostas de IA (GEO/AEO): sua empresa no Google, no AI Overview, no ChatGPT e no Gemini, sem depender de anúncio." />
           <meta property="twitter:image" content="https://onethank.com.br/hero-seo-organico.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/seo-trafego-organico/" />
           <script type="application/ld+json">
@@ -533,7 +537,7 @@ export default function ServicosSEO() {
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "SEO e Tráfego Orgânico B2B",
+                "name": "SEO e Otimização para Buscas por IA (GEO/AEO)",
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "One Thank Digital",
@@ -564,10 +568,10 @@ export default function ServicosSEO() {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">// SEU BRAÇO DE TECNOLOGIA: INFRAESTRUTURA E SEO ESTRUTURAL</div>
-            <h1 className="lp-h1">INFRAESTRUTURA DIGITAL E SEO PARA EMPRESAS B2B NO ABC PAULISTA</h1>
+            <div className="lp-label">// SEO PARA O GOOGLE E PARA AS IAs (GEO/AEO)</div>
+            <h1 className="lp-h1">SEO E BUSCA POR IA PARA EMPRESAS B2B NO ABC PAULISTA</h1>
             <p className="lp-intro">
-              A One Thank Digital atua como seu braço de tecnologia, construindo a infraestrutura digital e o rankeamento orgânico de escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista para aparecer no topo do Google e do AI Overview — sem depender de anúncio pago. Investimento único com resultado que cresce ao longo do tempo.
+              A One Thank Digital atua como seu braço de tecnologia, construindo a infraestrutura digital e o rankeamento orgânico de escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista para aparecer no topo do Google, no AI Overview e nas respostas do ChatGPT, do Gemini e do Perplexity — sem depender de anúncio pago. Investimento único com resultado que cresce ao longo do tempo.
             </p>
           </div>
         </section>
@@ -646,6 +650,33 @@ export default function ServicosSEO() {
         </section>
 
 
+
+        {/* IA */}
+        <section className="lp-solucao-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">SEO PARA AS IAs: GEO E AEO.</h2>
+            <div className="lp-solucao-grid">
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">01</div>
+                <div className="lp-solucao-title">SER CITADO, NÃO SÓ RANQUEADO</div>
+                <div className="lp-solucao-desc">Muita gente já pergunta à IA antes de pesquisar. GEO é preparar o conteúdo para ser a fonte que o ChatGPT, o Gemini e o Perplexity citam na resposta.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">02</div>
+                <div className="lp-solucao-title">RESPOSTAS DIRETAS E ESTRUTURADAS</div>
+                <div className="lp-solucao-desc">Perguntas reais do cliente, respostas objetivas e Schema.org em cada página: o formato que o AI Overview do Google e os assistentes conseguem ler e reaproveitar.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">03</div>
+                <div className="lp-solucao-title">LLMS.TXT E ENTIDADE CONSISTENTE</div>
+                <div className="lp-solucao-desc">Publicamos o llms.txt e mantemos nome, endereço e especialidades iguais no site, no Google e nas redes, para a IA reconhecer sua empresa sem confusão.</div>
+              </div>
+            </div>
+            <p className="lp-internal-link">
+              Quer ver na prática? Leia <a href="/insights/como-aparecer-no-chatgpt-e-na-ia-do-google/">como aparecer nas respostas do ChatGPT e da IA do Google</a>.
+            </p>
+          </div>
+        </section>
 
         {/* ROI */}
         <section className="lp-roi-section">

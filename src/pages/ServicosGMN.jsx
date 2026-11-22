@@ -16,6 +16,10 @@ export default function ServicosGMN() {
 
   const FAQS = [
     {
+      q: "O Google Meu Negócio ajuda minha empresa a aparecer no ChatGPT e no Gemini?",
+      a: "Ajuda. As respostas de IA sobre empresas locais se apoiam em fontes públicas como o Perfil da Empresa no Google, as avaliações e o site. Um perfil completo, com os mesmos dados do site e avaliações recentes, aumenta a chance de a sua empresa ser citada."
+    },
+    {
       q: "Por que minha empresa não aparece no Google Maps mesmo tendo cadastro?",
       a: "Ter cadastro não é suficiente. O Google Maps prioriza perfis verificados, com fotos atualizadas, avaliações recentes e informações 100% completas. Um perfil incompleto ou sem atividade fica invisível — mesmo na sua própria cidade."
     },
@@ -505,15 +509,15 @@ export default function ServicosGMN() {
       <div className="lp-wrap">
         <Helmet>
           <title>Google Meu Negócio em Santo André | One Thank Digital</title>
-          <meta name="description" content="Otimização de Google Meu Negócio para escritórios contábeis, clínicas e empresas B2B no ABC Paulista. Apareça no Google Maps antes do concorrente. Perfil verificado, avaliações e posts semanais." />
+          <meta name="description" content="Otimização do Google Meu Negócio para empresas do ABC Paulista: apareça no Google Maps, nas buscas por voz e nas respostas de IA quando o cliente decide." />
           <meta property="og:title" content="Google Meu Negócio para Empresas B2B | One Thank Digital" />
-          <meta property="og:description" content="Apareça no Google Maps quando seu cliente decide. Perfil verificado e otimizado para Santo André e ABC Paulista." />
+          <meta property="og:description" content="Otimização do Google Meu Negócio para empresas do ABC Paulista: apareça no Google Maps, nas buscas por voz e nas respostas de IA quando o cliente decide." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://onethank.com.br/servicos/google-meu-negocio/" />
           <meta property="og:image" content="https://onethank.com.br/hero-google-meu-negocio.webp" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:title" content="Google Meu Negócio para Empresas B2B | One Thank Digital" />
-          <meta property="twitter:description" content="Apareça no Google Maps quando seu cliente decide. Perfil verificado e otimizado para Santo André e ABC Paulista." />
+          <meta property="twitter:description" content="Otimização do Google Meu Negócio para empresas do ABC Paulista: apareça no Google Maps, nas buscas por voz e nas respostas de IA quando o cliente decide." />
           <meta property="twitter:image" content="https://onethank.com.br/hero-google-meu-negocio.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/google-meu-negocio/" />
           <script type="application/ld+json">
@@ -567,7 +571,7 @@ export default function ServicosGMN() {
             <div className="lp-label">// OTIMIZAÇÃO LOCAL PARA GOOGLE MAPS NO ABC</div>
             <h1 className="lp-h1">GOOGLE MEU NEGÓCIO PARA EMPRESAS B2B EM SANTO ANDRÉ E ABC PAULISTA</h1>
             <p className="lp-intro">
-              A One Thank Digital otimiza o Google Meu Negócio de escritórios contábeis, clínicas e empresas B2B no ABC Paulista para aparecer nas primeiras posições do Google Maps. Com perfil verificado, avaliações ativas e postagens semanais, sua empresa é encontrada quando o cliente decide — antes do concorrente.
+              A One Thank Digital otimiza o Google Meu Negócio de escritórios contábeis, clínicas e empresas B2B no ABC Paulista para aparecer nas primeiras posições do Google Maps. Com perfil verificado, avaliações ativas e postagens semanais, sua empresa é encontrada quando o cliente decide — antes do concorrente. O mesmo perfil é a fonte que o Google usa nas buscas por voz e nas respostas de IA sobre empresas da região.
             </p>
           </div>
         </section>
@@ -646,6 +650,30 @@ export default function ServicosGMN() {
         </section>
 
 
+
+        {/* IA */}
+        <section className="lp-solucao-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">O PERFIL NO GOOGLE TAMBÉM ALIMENTA A IA.</h2>
+            <div className="lp-solucao-grid">
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">01</div>
+                <div className="lp-solucao-title">BUSCA POR VOZ E POR IA</div>
+                <div className="lp-solucao-desc">Quando alguém pede ao assistente do celular ou ao Gemini um serviço por perto, a resposta sai dos perfis mais completos e bem avaliados.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">02</div>
+                <div className="lp-solucao-title">DADOS IGUAIS EM TODO LUGAR</div>
+                <div className="lp-solucao-desc">Nome, endereço, telefone e serviços idênticos no perfil, no site e nos diretórios. É essa consistência que faz a IA reconhecer e citar sua empresa.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">03</div>
+                <div className="lp-solucao-title">AVALIAÇÕES QUE VIRAM ARGUMENTO</div>
+                <div className="lp-solucao-desc">As IAs resumem o que os clientes dizem nas avaliações. Uma rotina de pedidos de avaliação após cada atendimento constrói esse resumo a seu favor.</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ROI */}
         <section className="lp-roi-section">

@@ -16,6 +16,10 @@ export default function ServicosAutomacao() {
 
   const FAQS = [
     {
+      q: "O agente de IA substitui minha equipe de atendimento?",
+      a: "Não. Ele cuida do primeiro contato, das perguntas repetidas e dos horários em que ninguém está disponível. Quando a conversa pede uma pessoa, o atendimento passa para a equipe com o histórico registrado no CRM."
+    },
+    {
       q: "Como parar de perder leads que mandam mensagem no WhatsApp fora do horário?",
       a: "Com automação de WhatsApp você configura resposta imediata 24h, qualificação automática por perguntas, agendamento direto no seu calendário e notificação para retorno no horário certo. O lead não espera, não some e já chega qualificado para a conversa."
     },
@@ -504,16 +508,16 @@ export default function ServicosAutomacao() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>Automação de Processos B2B e CRM | One Thank Digital</title>
-          <meta name="description" content="Seu braço de tecnologia no Grande ABC. Automação de processos B2B e integração de CRM para qualificação de leads 24h em escritórios e clínicas." />
-          <meta property="og:title" content="Automação de Processos B2B e CRM | One Thank Digital" />
-          <meta property="og:description" content="Seu braço de tecnologia no Grande ABC. Automação de processos B2B e integração de CRM para qualificação de leads 24h em escritórios e clínicas." />
+          <title>Automação com IA no WhatsApp e CRM | One Thank Digital</title>
+          <meta name="description" content="Agentes de IA no WhatsApp, CRM e funil automatizados para escritórios, clínicas e empresas B2B do ABC: responder, qualificar e não perder lead, 24 horas por dia." />
+          <meta property="og:title" content="Automação com IA: WhatsApp, CRM e Leads 24h | One Thank Digital" />
+          <meta property="og:description" content="Agentes de IA no WhatsApp, CRM e funil automatizados para escritórios, clínicas e empresas B2B do ABC: responder, qualificar e não perder lead, 24 horas por dia." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://onethank.com.br/servicos/automacao-digital/" />
           <meta property="og:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:title" content="Automação de Processos B2B e CRM | One Thank Digital" />
-          <meta property="twitter:description" content="Seu braço de tecnologia no Grande ABC. Automação de processos B2B e integração de CRM para qualificação de leads 24h em escritórios e clínicas." />
+          <meta property="twitter:title" content="Automação com IA: WhatsApp, CRM e Leads 24h | One Thank Digital" />
+          <meta property="twitter:description" content="Agentes de IA no WhatsApp, CRM e funil automatizados para escritórios, clínicas e empresas B2B do ABC: responder, qualificar e não perder lead, 24 horas por dia." />
           <meta property="twitter:image" content="https://onethank.com.br/hero-automacao-digital.webp" />
           <link rel="canonical" href="https://onethank.com.br/servicos/automacao-digital/" />
           <script type="application/ld+json">
@@ -533,7 +537,7 @@ export default function ServicosAutomacao() {
               {
                 "@context": "https://schema.org",
                 "@type": "Service",
-                "name": "Automação Digital de WhatsApp e CRM",
+                "name": "Automação com IA: Agentes no WhatsApp e CRM",
                 "provider": {
                   "@type": "LocalBusiness",
                   "name": "One Thank Digital",
@@ -564,10 +568,10 @@ export default function ServicosAutomacao() {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">// SEU BRAÇO DE TECNOLOGIA: AUTOMAÇÃO E CRM</div>
-            <h1 className="lp-h1">AUTOMAÇÃO DE PROCESSOS B2B E CRM PARA QUALIFICAÇÃO DE LEADS</h1>
+            <div className="lp-label">// SEU BRAÇO DE TECNOLOGIA: AUTOMAÇÃO COM IA E CRM</div>
+            <h1 className="lp-h1">AUTOMAÇÃO COM IA: WHATSAPP, CRM E QUALIFICAÇÃO DE LEADS</h1>
             <p className="lp-intro">
-              A One Thank Digital atua como seu braço de tecnologia, implementando automação de processos B2B, integração de CRM e funil de atendimento inteligente para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia. Quer entender o método a fundo antes de conversar? <a 
+              A One Thank Digital atua como seu braço de tecnologia, implementando agentes de IA no WhatsApp, automação de processos, integração de CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia. Quer entender o método a fundo antes de conversar? <a 
                 href="/guia/automacao-digital/" 
                 className="text-accent underline"
                 onClick={(e) => {
@@ -654,6 +658,33 @@ export default function ServicosAutomacao() {
         </section>
 
 
+
+        {/* IA */}
+        <section className="lp-solucao-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">ONDE A IA ENTRA NO ATENDIMENTO.</h2>
+            <div className="lp-solucao-grid">
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">01</div>
+                <div className="lp-solucao-title">AGENTE DE IA NO WHATSAPP</div>
+                <div className="lp-solucao-desc">Responde na hora, tira as dúvidas frequentes e coleta as informações do cliente a qualquer hora, inclusive à noite e nos fins de semana.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">02</div>
+                <div className="lp-solucao-title">QUALIFICAÇÃO E ENCAMINHAMENTO</div>
+                <div className="lp-solucao-desc">A IA identifica o que o contato precisa e passa a conversa para a pessoa certa da equipe, com o resumo registrado no CRM.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">03</div>
+                <div className="lp-solucao-title">HUMANO NO CONTROLE</div>
+                <div className="lp-solucao-desc">A equipe acompanha tudo e assume a conversa quando quiser. Tudo roda na API oficial do WhatsApp (Meta).</div>
+              </div>
+            </div>
+            <p className="lp-internal-link">
+              Conheça a <a href="/onehub/">OneHub</a>, a plataforma de atendimento e vendas com IA que usamos na API oficial do WhatsApp.
+            </p>
+          </div>
+        </section>
 
         {/* ROI */}
         <section className="lp-roi-section">
