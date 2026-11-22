@@ -504,7 +504,7 @@ export default function ServicosGMN() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>Google Meu Negócio para Empresas B2B em Santo André | One Thank Digital</title>
+          <title>Google Meu Negócio em Santo André | One Thank Digital</title>
           <meta name="description" content="Otimização de Google Meu Negócio para escritórios contábeis, clínicas e empresas B2B no ABC Paulista. Apareça no Google Maps antes do concorrente. Perfil verificado, avaliações e posts semanais." />
           <meta property="og:title" content="Google Meu Negócio para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="Apareça no Google Maps quando seu cliente decide. Perfil verificado e otimizado para Santo André e ABC Paulista." />

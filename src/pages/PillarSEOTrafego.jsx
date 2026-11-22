@@ -451,7 +451,7 @@ export default function PillarSEOTrafego() {
   return (
     <>
       <Helmet>
-        <title>Posicionamento Orgânico no Google e Estratégias de SEO B2B | Guia Prático OTD</title>
+        <title>SEO B2B e Posicionamento no Google | Guia OTD</title>
         <meta name="description" content="Guia prático definitivo de SEO B2B, palavras-chave de fundo de funil, autoridade semântica e sinergia inteligente entre tráfego orgânico e mídia paga." />
         <meta property="og:title" content="Posicionamento Orgânico no Google e Estratégias de SEO B2B | Guia Prático OTD" />
         <meta property="og:description" content="Guia prático de SEO B2B, palavras-chave de fundo de funil e autoridade semântica." />

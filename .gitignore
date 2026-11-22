@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Builds antigos e pacotes (ficam no Drive, não no repo)
+*.zip
+build-producao/

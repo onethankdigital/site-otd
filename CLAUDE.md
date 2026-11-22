@@ -28,10 +28,9 @@ npm run lint      # ESLint
 npm run preview   # Preview do build localmente
 ```
 
-**Deploy:** Enviar conteúdo de `dist/` para o cPanel da Napoleon Host.  
+**Deploy:** automático. Todo push na `main` dispara o GitHub Actions (`.github/workflows/deploy.yml`), que faz o build e envia `dist/` por FTPS para a Napoleon Host. O mesmo workflow roda todo dia às 08:00 (Brasília) para publicar artigos com `publishDate` do dia. Conferir com `gh run list`. Não há upload manual.  
 O arquivo `public/.htaccess` é copiado automaticamente para `dist/` no build e gerencia o roteamento SPA.
 
-> `build-producao/` na raiz é um artefato de build comprometido — não é código-fonte.
 
 ---
 

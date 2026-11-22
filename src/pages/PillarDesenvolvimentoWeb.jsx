@@ -451,7 +451,7 @@ export default function PillarDesenvolvimentoWeb() {
   return (
     <>
       <Helmet>
-        <title>Arquitetura Web & Criação de Sites B2B de Alta Conversão | Guia Prático OTD</title>
+        <title>Criação de Sites B2B de Alta Conversão | Guia OTD</title>
         <meta name="description" content="Manual prático de arquitetura web B2B, Core Web Vitals, AEO (Answer Engine Optimization para IAs) e design executivo para empresas que buscam escalabilidade." />
         <meta property="og:title" content="Arquitetura Web & Criação de Sites B2B | Guia Prático OTD" />
         <meta property="og:description" content="Manual prático de arquitetura web B2B, Core Web Vitals, AEO e design executivo para empresas." />

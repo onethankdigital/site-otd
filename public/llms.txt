@@ -1,57 +1,86 @@
 # One Thank Digital
 
-> Agência de tecnologia e estrutura digital especializada em presença digital local, automação de processos, CRM, desenvolvimento de sites premium e SEO semântico, com foco exclusivo em empresas do Grande ABC Paulista (Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá).
+> Empresa de tecnologia e estrutura digital com inteligência artificial em Santo André (SP). Desenvolve sites, sistemas (SaaS), apps e automações com IA para empresas B2B do Grande ABC Paulista: escritórios de advocacia, escritórios de contabilidade, clínicas e indústrias. Atua em quatro pilares: Google Meu Negócio, sites, SEO para Google e para buscas por IA (GEO/AEO) e automação de atendimento com agentes de IA no WhatsApp.
+
+Posicionamento: "Somos Presença. Somos Comunicação." Modelo LAB: toda solução oferecida ao cliente é testada antes na operação da própria One Thank Digital. Foco em ROI, sem depender de anúncio.
 
 ## Responsável
 
-**Robson Sant'Ana** — Fundador e Estrategista Digital  
-Contato: contato@onethank.com.br | +55 11 97867-9090
+**Robson Sant'Ana**, Fundador e Arquiteto de Soluções em IA da One Thank Digital. Formado em Telecomunicações, com mais de 20 anos em telecom e TI.
+LinkedIn: https://www.linkedin.com/in/robsonsantanaia
 
-## Endereço e Horário de Atendimento
+## Contato, endereço e horário
 
-- **Endereço:** Rua Monte Casseros, 281 — Centro, Santo André — SP, CEP 09015-020
-- **Atendimento:** Segunda a Sexta, das 09h às 18h (horário de Brasília)
-- **WhatsApp:** https://api.whatsapp.com/send?phone=5511978679090
+- **Endereço:** Rua Monte Casseros, 281, Centro, Santo André, SP, CEP 09015-020
+- **WhatsApp:** +55 11 97867-9090 (https://api.whatsapp.com/send?phone=5511978679090)
+- **E-mail:** contato@onethank.com.br
+- **Atendimento:** segunda a sexta, das 9h às 18h (horário de Brasília)
+- **Avaliações:** 16 avaliações com nota 5,0 no Google
 
-## Avaliações
+## Serviços
 
-16 avaliações com nota 5.0 estrelas no Google.
+- [Google Meu Negócio](https://onethank.com.br/servicos/google-meu-negocio/): otimização do Perfil da Empresa no Google para aparecer no Google Maps e no Local Pack, inclusive em buscas por voz e por IA.
+- [Criação de Sites](https://onethank.com.br/servicos/criacao-de-sites/): sites de alta conversão desenvolvidos com IA, rápidos, com SEO técnico e dados estruturados desde o primeiro dia.
+- [SEO e Busca por IA](https://onethank.com.br/servicos/seo-trafego-organico/): posicionamento orgânico no Google e preparação do site para ser citado nas respostas do ChatGPT, Gemini e Perplexity (GEO/AEO).
+- [Automação com IA](https://onethank.com.br/servicos/automacao-digital/): agentes de IA no WhatsApp, CRM e funil automatizados para responder, qualificar e não perder contato, 24 horas por dia.
+- [OneHub](https://onethank.com.br/onehub/): plataforma de atendimento e vendas na API oficial do WhatsApp (Meta), com CRM e IA, modelada pela One Thank Digital para empresas de serviços.
+- [Diagnóstico gratuito de estrutura digital](https://onethank.com.br/diagnostico/): 20 perguntas, cerca de 3 minutos, com resultado por pilar.
+- [Parceria white-label para agências](https://onethank.com.br/agencias/)
 
-## Serviços Oficiais
+## Segmentos atendidos
 
-As URLs abaixo representam a matriz atual de soluções entregues em produção. Todos os links utilizam caminhos limpos e protocolo seguro:
+- [Escritórios de advocacia](https://onethank.com.br/segmentos/escritorios-de-advocacia/)
+- [Escritórios de contabilidade](https://onethank.com.br/segmentos/escritorios-de-contabilidade/)
+- [Clínicas e consultórios](https://onethank.com.br/segmentos/clinicas-e-consultorios/)
 
-- [Google Meu Negócio](https://onethank.com.br/servicos/google-meu-negocio) — Otimização e posicionamento de perfis locais para domínio de busca em mapas e Local Pack.
-- [Criação de Sites](https://onethank.com.br/servicos/criacao-de-sites) — Desenvolvimento técnico de sites institucionais estáticos, rápidos e otimizados para conversão.
-- [SEO e Tráfego Orgânico](https://onethank.com.br/servicos/seo-trafego-organico) — Estruturação de rankeamento semântico de alta performance para aquisição de clientes sem dependência de tráfego pago.
-- [Automação Digital](https://onethank.com.br/servicos/automacao-digital) — Implementação de funis de atendimento via WhatsApp Business e integração estrutural com plataformas de CRM.
+## Área de atuação
 
-## Área de Atuação
+Santo André (sede) e Grande ABC, com páginas próprias por cidade:
 
-Atendemos empresas nas seguintes cidades do Grande ABC e região metropolitana de São Paulo:
+- [São Bernardo do Campo](https://onethank.com.br/atendimento/sao-bernardo-do-campo/)
+- [São Caetano do Sul](https://onethank.com.br/atendimento/sao-caetano-do-sul/)
+- [Diadema](https://onethank.com.br/atendimento/diadema/)
+- [Mauá](https://onethank.com.br/atendimento/maua/)
+- [São Paulo (capital)](https://onethank.com.br/atendimento/sao-paulo/)
+- [Santos e Baixada Santista](https://onethank.com.br/atendimento/santos-e-baixada-santista/)
+- [Litoral Norte de SP](https://onethank.com.br/atendimento/litoral-norte/)
 
-- Santo André (sede principal)
-- São Bernardo do Campo
-- São Caetano do Sul
-- Diadema
-- Mauá
-- São Paulo (projetos remotos)
+## Guias
 
-## Insights e Conteúdo Técnico B2B
+- [Google Meu Negócio e SEO Local](https://onethank.com.br/guia/google-meu-negocio/)
+- [Criação de sites B2B](https://onethank.com.br/guia/desenvolvimento-web/)
+- [SEO e posicionamento no Google](https://onethank.com.br/guia/seo-trafego-organico/)
+- [Automação digital](https://onethank.com.br/guia/automacao-digital/)
 
-- [Como Organizar os Leads do WhatsApp no CRM de Forma Automática](https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm) — Arquitetura de dados e sincronização em tempo real entre WhatsApp Business API e CRM para controle total de leads sem dependência de digitação manual.
-- [Automação Comercial: o Que É e Por Que Sua Empresa Precisa Agora](https://onethank.com.br/insights/automacao-comercial-o-que-e) — Entenda o que separa uma operação comercial manual de uma estrutura que vende enquanto você dorme.
-- [Automação de Processos para Empresas: Guia Prático para o ABC Paulista](https://onethank.com.br/insights/automacao-de-processos-para-empresas) — Como pequenas e médias empresas do Grande ABC estão reduzindo retrabalho e aumentando conversão com automação de processos.
+## Artigos (Insights)
 
-## Guias Técnicos
+- [Como aparecer nas respostas do ChatGPT e da IA do Google](https://onethank.com.br/insights/como-aparecer-no-chatgpt-e-na-ia-do-google/)
+- [Minha empresa não aparece no mapa do Google: como resolver](https://onethank.com.br/insights/empresa-nao-aparece-google-maps/)
+- [Por que seu site existe mas não aparece no Google](https://onethank.com.br/insights/por-que-site-nao-aparece-google/)
+- [Por que o concorrente aparece antes de você no Google](https://onethank.com.br/insights/concorrente-aparece-antes-no-google/)
+- [SEO orgânico ou tráfego pago: quando usar cada estratégia](https://onethank.com.br/insights/seo-organico-vs-trafego-pago/)
+- [Como pedir avaliações no Google sem constranger o cliente](https://onethank.com.br/insights/como-pedir-avaliacoes-no-google/)
+- [Google Meu Negócio para advogados: o que a OAB permite](https://onethank.com.br/insights/google-meu-negocio-para-advogados/)
+- [Quanto custa um site profissional](https://onethank.com.br/insights/quanto-custa-um-site-profissional/)
+- [Site ou Instagram: qual é o ativo digital mais importante](https://onethank.com.br/insights/site-ou-instagram-qual-mais-importante/)
+- [Presença digital estruturada na prática](https://onethank.com.br/insights/presenca-digital-estruturada/)
+- [Os 4 pilares para a empresa ser encontrada online](https://onethank.com.br/insights/4-pilares-empresa-encontrada-online/)
+- [Quantos leads você perde por não responder rápido no WhatsApp](https://onethank.com.br/insights/leads-perdidos-whatsapp-resposta-rapida/)
+- [Como atender leads no WhatsApp fora do horário comercial](https://onethank.com.br/insights/leads-fora-do-horario-como-atender-24h/)
+- [WhatsApp Business API oficial ou app comum](https://onethank.com.br/insights/whatsapp-business-api-oficial-ou-app/)
+- [O que é CRM e por que pequenas empresas precisam de um](https://onethank.com.br/insights/o-que-e-crm-pequenas-empresas/)
+- [Como organizar os leads do WhatsApp no CRM](https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm/)
+- [Automação comercial: o que é e como implementar](https://onethank.com.br/insights/automacao-comercial-o-que-e/)
+- [Automação de processos para empresas](https://onethank.com.br/insights/automacao-de-processos-para-empresas/)
 
-- [Automação Digital](https://onethank.com.br/guia/automacao-digital)
-- [Google Meu Negócio](https://onethank.com.br/guia/google-meu-negocio)
-- [Desenvolvimento Web](https://onethank.com.br/guia/desenvolvimento-web)
-- [SEO e Tráfego Orgânico](https://onethank.com.br/guia/seo-trafego-organico)
+## Institucional
 
-## Redes Sociais
+- [Nossa história](https://onethank.com.br/historia/)
+- [Os 4 pilares da estrutura digital](https://onethank.com.br/pilares/)
+- [Cases](https://onethank.com.br/cases/)
 
+## Redes sociais
+
+- LinkedIn (empresa): https://www.linkedin.com/company/one-thank-digital
 - Instagram: https://www.instagram.com/onethankdigital/
-- LinkedIn: https://www.linkedin.com/company/one-thank-digital
 - Facebook: https://www.facebook.com/onethankdigital

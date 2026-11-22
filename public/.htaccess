@@ -49,6 +49,15 @@ ErrorDocument 404 /404.html
   RewriteRule ^ - [L]
 </IfModule>
 
+# Cabeçalhos de segurança (sem includeSubDomains: app.onethank.com.br e outros subdomínios ficam de fora)
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+</IfModule>
+
 # Apresentação comercial: abrir no navegador (inline) e não indexar no Google
 <IfModule mod_headers.c>
   <FilesMatch "^apresentacao-one-thank-digital\.pdf$">

@@ -145,7 +145,7 @@ export default function AgenciasPage() {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
         
         {/* Metadados SEO */}
-        <title>Parceria e Engenharia White-Label para Agências | One Thank Digital</title>
+        <title>Engenharia White-Label para Agências | One Thank Digital</title>
         <meta name="description" content="Assumimos a infraestrutura web, SEO de alta performance e automações de WhatsApp e CRM dos seus clientes. Reduza o churn, elimine custos fixos e aumente a margem da sua agência." />
         <link rel="canonical" href="https://onethank.com.br/agencias/" />
         <meta name="robots" content="index, follow" />

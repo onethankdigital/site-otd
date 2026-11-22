@@ -313,7 +313,7 @@ export default function InsightAutomacaoComercial() {
     <>
       <style>{styles}</style>
       <Helmet>
-        <title>Automação Comercial: O Que É e Como Implementar | One Thank Digital</title>
+        <title>Automação Comercial: O Que É e Como Implementar | OTD</title>
         <meta name="description" content="Entenda o que é automação comercial (e por que não é automação de PDV), como ela captura e organiza cada oportunidade de venda e por onde começar a implementar." />
         <link rel="canonical" href="https://onethank.com.br/insights/automacao-comercial-o-que-e/" />
         <meta property="og:title" content="Automação Comercial: O Que É e Como Implementar | One Thank Digital" />

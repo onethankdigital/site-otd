@@ -71,6 +71,7 @@ export const blogPosts = [
     id: 3,
     imagem: "/Blog/artigo-03-site-vs-instagram.jpg",
     slug: "site-ou-instagram-qual-mais-importante",
+    seoTitle: "Site ou Instagram: qual é mais importante? | OTD",
     categoria: "Website",
     titulo: "Site ou Instagram: qual é o ativo digital mais importante para sua empresa",
     meta: "7 min de leitura · Website · One Thank Digital",
@@ -994,6 +995,7 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
     id: 6,
     imagem: "/Blog/artigo-06-concorrente-google.jpg",
     slug: "concorrente-aparece-antes-no-google",
+    seoTitle: "Por que o concorrente aparece antes no Google | OTD",
     categoria: "SEO",
     titulo: "Como seu concorrente aparece antes de você no Google: O Guia de Inteligência Competitiva e Engenharia de Posicionamento",
     meta: "7 min de leitura · SEO & Tráfego · One Thank Digital",
@@ -1223,6 +1225,7 @@ Para líderes e diretores que desejam erradicar de forma definitiva a invisibili
     id: 7,
     imagem: "/Blog/artigo-07-leads-whatsapp.jpg",
     slug: "leads-perdidos-whatsapp-resposta-rapida",
+    seoTitle: "Quantos leads você perde por demorar no WhatsApp | OTD",
     categoria: "Automação",
     titulo: "Quantos leads você perde por não responder rápido no WhatsApp",
     meta: "8 min de leitura · Automação · One Thank Digital",
@@ -1793,6 +1796,7 @@ Se a sua diretoria comercial deseja estancar o vazamento oculto de oportunidades
     id: 9,
     imagem: "/Blog/artigo-09-presenca-digital.jpg",
     slug: "presenca-digital-estruturada",
+    seoTitle: "Presença digital estruturada na prática | OTD",
     categoria: "OTD",
     titulo: "Presença digital estruturada: o que isso significa na prática",
     meta: "8 min de leitura · OTD · One Thank Digital",
@@ -2077,6 +2081,7 @@ Para mapear com precisão os gargalos invisíveis de atração e recepção que 
     id: 10,
     imagem: "/Blog/artigo-10-4-pilares.jpg",
     slug: "4-pilares-empresa-encontrada-online",
+    seoTitle: "Os 4 pilares para sua empresa ser encontrada online | OTD",
     categoria: "OTD",
     titulo: "Os 4 pilares que toda empresa precisa para ser encontrada online e converter todos os dias",
     meta: "8 min de leitura · OTD · One Thank Digital",
@@ -2358,6 +2363,7 @@ Para determinar com precisão a maturidade atual dos seus canais digitais e iden
     imagem: "/Blog/leads-qualificados-crm-organizado-automacao.webp",
     imagemAlt: "Quadro de vendas holográfico com leads sendo triados automaticamente em colunas sobre mesa de escritório ao amanhecer, com xícara de café ao lado, representando o funil organizado antes do expediente começar",
     slug: "leads-fora-do-horario-como-atender-24h",
+    seoTitle: "Leads no WhatsApp fora do horário: como atender 24h | OTD",
     categoria: "Automação",
     titulo: "Como Capturar e Triar Leads no WhatsApp Fora do Horário Comercial (Sem Atendente Humano)",
     meta: "8 min de leitura · Automação & CRM · One Thank Digital",
@@ -2657,6 +2663,7 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
     id: 12,
     imagem: "/onehub-whatsapp-brain.webp",
     slug: "whatsapp-business-api-oficial-ou-app",
+    seoTitle: "WhatsApp Business API ou app comum: quando migrar | OTD",
     categoria: "Automação",
     titulo: "WhatsApp Business API oficial ou app comum: diferenças, custos e quando migrar",
     metaDescricao: "Entenda a diferença entre o app WhatsApp Business e a API oficial da Meta: atendimento em equipe, cobrança, risco de bloqueio e quando vale migrar.",
@@ -2730,6 +2737,7 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
     id: 13,
     imagem: "/Blog/artigo-12-investimento-site.webp",
     slug: "quanto-custa-um-site-profissional",
+    seoTitle: "Quanto custa um site profissional | OTD",
     categoria: "Website",
     titulo: "Quanto custa um site profissional: o que define o investimento",
     metaDescricao: "O custo de um site depende do papel dele na sua operação. Veja os 4 níveis, do site de presença à plataforma integrada, e o que pesa em cada orçamento.",
@@ -3109,3 +3117,11 @@ export const getPostBySlug = (slug) =>
 
 export const getPostsByCategoria = (categoria) =>
   blogPosts.filter((p) => p.categoria === categoria && isPostPublished(p));
+
+// Title da aba/Google (até ~65 caracteres): usa seoTitle quando existir; senão a marca completa
+// se couber, ou a sigla OTD quando o título do artigo for longo.
+export const tituloSeo = (post) => {
+  if (post.seoTitle) return post.seoTitle;
+  const completo = `${post.titulo} | One Thank Digital`;
+  return completo.length <= 65 ? completo : `${post.titulo} | OTD`;
+};

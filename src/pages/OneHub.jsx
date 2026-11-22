@@ -183,7 +183,7 @@ export default function OneHub() {
   return (
     <>
       <Helmet>
-        <title>OneHub — WhatsApp API Oficial (Meta) · Atendimento + Vendas com IA | One Thank Digital</title>
+        <title>OneHub: WhatsApp API Oficial com IA | One Thank Digital</title>
         <meta name="description" content="O OneHub organiza seu WhatsApp num sistema só: a IA responde na hora, sua equipe atende no mesmo número oficial, e você vê cada negócio num painel." />
         <link rel="canonical" href="https://onethank.com.br/onehub/" />
         <meta name="robots" content="index, follow" />

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPostBySlug, getPublishedPosts } from "../data/blogPosts";
+import { getPostBySlug, getPublishedPosts, tituloSeo } from "../data/blogPosts";
 import { Helmet } from "react-helmet-async";
 
 const CAT_COLORS = {
@@ -42,7 +42,7 @@ export default function BlogPostPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
     if (post) {
-      document.title = `${post.titulo} | One Thank Digital`;
+      document.title = tituloSeo(post);
     }
   }, [slug, post]);
 
@@ -527,7 +527,7 @@ export default function BlogPostPage() {
   return (
     <>
       <Helmet>
-        <title>{`${post.titulo} | One Thank Digital`}</title>
+        <title>{tituloSeo(post)}</title>
         <meta name="description" content={metaDescription(post.metaDescricao || post.lead)} />
         <link rel="canonical" href={`https://onethank.com.br/insights/${post.slug}/`} />
         <meta property="og:title" content={`${post.titulo} | One Thank Digital`} />

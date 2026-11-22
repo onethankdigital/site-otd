@@ -504,7 +504,7 @@ export default function ServicosSite() {
 
       <div className="lp-wrap">
         <Helmet>
-          <title>Desenvolvimento de Site Profissional para Empresas B2B | One Thank Digital</title>
+          <title>Criação de Sites Profissionais B2B | One Thank Digital</title>
           <meta name="description" content="Sites de alta conversão para escritórios contábeis, clínicas e empresas B2B em Santo André e ABC Paulista. Mobile-first, SEO desde o dia 1, performance acima de 90 no PageSpeed." />
           <meta property="og:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
           <meta property="og:description" content="Site que converte visitantes em clientes. Mobile-first, SEO técnico e rápido para empresas B2B no ABC Paulista." />

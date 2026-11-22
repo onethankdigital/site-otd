@@ -281,7 +281,7 @@ export default function InsightAutomacaoProcessos() {
       <style>{styles}</style>
       
       <Helmet>
-        <title>Automação de Processos: O Que É e Como Implementar | One Thank Digital</title>
+        <title>Automação de Processos: O Que É e Como Implementar | OTD</title>
         <meta name="description" content="Entenda o que é automação de processos, a diferença para a automação comercial e o passo a passo para implementar nos bastidores da sua empresa sem inchar a equipe." />
         <link rel="canonical" href="https://onethank.com.br/insights/automacao-de-processos-para-empresas/" />
         <meta property="og:title" content="Automação de Processos: O Que É e Como Implementar | One Thank Digital" />

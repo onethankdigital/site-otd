@@ -314,7 +314,7 @@ export default function InsightWhatsAppCRM() {
       <style>{styles}</style>
       
       <Helmet>
-        <title>Como Organizar Leads do WhatsApp no CRM Automaticamente | One Thank Digital</title>
+        <title>Como Organizar Leads do WhatsApp no CRM | OTD</title>
         <meta name="description" content="Organizar leads do WhatsApp no CRM de forma automática exige conexão oficial via API, regras de captura no primeiro toque e criação automática no funil." />
         <link rel="canonical" href="https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm/" />
         <meta property="og:title" content="Como Organizar Leads do WhatsApp no CRM Automaticamente | One Thank Digital" />
