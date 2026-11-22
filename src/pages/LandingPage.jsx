@@ -564,7 +564,7 @@ export default function LandingPage({ landing }) {
           <div className="lp-container">
             <div className="lp-showcase-grid reverse">
               <div className="lp-showcase-image-wrapper">
-                <img src={landing.contexto.imagem} alt={landing.contexto.alt} loading="lazy" />
+                <img src={landing.contexto.imagem.replace(/\.png$/, '.webp')} alt={landing.contexto.alt} loading="lazy" />
               </div>
               <div className="lp-showcase-content">
                 <h2 className="lp-showcase-content-title" dangerouslySetInnerHTML={{ __html: landing.contexto.titulo }} />

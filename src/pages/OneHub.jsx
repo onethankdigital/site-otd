@@ -230,10 +230,10 @@ export default function OneHub() {
           <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 w-full flex items-center justify-between mb-8 sm:mb-12">
             <a href="/onehub/" className="nav-anim inline-block flex-shrink-0">
               <img
-                src="/logo-onehub-black.svg"
+                src="/logo-onehub-black.webp"
                 alt="OneHub Logo"
                 width={220}
-                height={58}
+                height={73}
                 loading="eager"
                 decoding="async"
                 className="h-14 sm:h-16 w-auto object-contain"
@@ -518,7 +518,7 @@ export default function OneHub() {
                     <div className="flex items-center justify-between pb-4 border-b border-[#3A352F] mb-4">
                       <div className="flex items-center gap-3">
                         <img
-                          src="/One Hub - Fundo Preto.svg"
+                          src="/onehub-avatar.webp"
                           alt="OneHub Logo"
                           width={40}
                           height={40}

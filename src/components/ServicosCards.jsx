@@ -8,7 +8,7 @@ const SERVICOS = [
     microTeste: 'busque no Google o que você vende + sua cidade. Sua empresa aparece no mapa?',
     descricao: 'Otimizamos sua presença local para você aparecer no Google Maps quando o cliente decide, inclusive em buscas por voz e por IA.',
     link: '/servicos/google-meu-negocio',
-    image: '/servico-google-maps.png',
+    image: '/servico-google-maps.webp',
     imageAlt: 'Presença local no Google Maps',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +24,7 @@ const SERVICOS = [
     microTeste: 'abra seu site pelo celular, no 4G, e conte os segundos até o conteúdo aparecer.',
     descricao: 'Sites de alta conversão, desenvolvidos com IA, que comunicam sua oferta e vendem 24 horas — com estrutura de busca desde o primeiro dia.',
     link: '/servicos/criacao-de-sites',
-    image: '/servico-website.png',
+    image: '/servico-website.webp',
     imageAlt: 'Website profissional de alta conversão',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@ const SERVICOS = [
     microTeste: 'busque o que você vende e ignore os anúncios. Você aparece na primeira página?',
     descricao: 'Seu negócio no Google e nas respostas do ChatGPT, Gemini e Perplexity (GEO/AEO), sem depender de anúncio.',
     link: '/servicos/seo-trafego-organico',
-    image: '/servico-seo.png',
+    image: '/servico-seo.webp',
     imageAlt: 'SEO no Google e otimização para buscas por IA (GEO/AEO)',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@ const SERVICOS = [
     microTeste: 'mande uma mensagem no WhatsApp da sua empresa hoje às 21h. Cronometre a resposta.',
     descricao: 'Agentes de IA no WhatsApp, CRM e funil automatizados para responder, qualificar e não perder contato nenhum, 24 horas por dia.',
     link: '/servicos/automacao-digital',
-    image: '/servico-automacao.png',
+    image: '/servico-automacao.webp',
     imageAlt: 'Automação com agentes de IA no WhatsApp e CRM',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

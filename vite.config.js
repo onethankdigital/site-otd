@@ -119,6 +119,9 @@ export default defineConfig({
         headless: true,
         inject: { isPrerender: true },
         injectProperty: '__PRERENDER_INJECTED',
+        // Espera o aviso do main.jsx: páginas carregadas sob demanda levam mais que o evento load.
+        renderAfterDocumentEvent: 'prerender-ready',
+        timeout: 30000,
         skipThirdPartyRequests: true
       })
     })

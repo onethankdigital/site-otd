@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState, useEffect, lazy, Suspense } from 'react';
+import { useLayoutEffect, useRef, useState, useEffect, Suspense } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
@@ -13,37 +13,17 @@ import InsightsPreview from './components/InsightsPreview';
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 
-// Componentes secundários
-import Quiz from './components/Quiz';
-import Pilares from './components/Pilares';
-import Historia from './components/Historia';
-import BlogPage from './pages/BlogPage';
-import CasesPage from './pages/CasesPage';
-import PrivacidadePage from './pages/PrivacidadePage';
-import TermosPage from './pages/TermosPage';
-import BlogPostPage from './pages/BlogPostPage';
+// Páginas secundárias: carregadas sob demanda (ver src/pages/registry.js)
+import {
+  Quiz, Pilares, Historia, BlogPage, CasesPage, PrivacidadePage, TermosPage, BlogPostPage,
+  ServicosGMN, ServicosSite, ServicosSEO, ServicosAutomacao, GoogleMeuNegocio,
+  InsightWhatsAppCRM, InsightAutomacaoProcessos, InsightAutomacaoComercial,
+  PillarAutomacaoDigital, PillarGoogleMeuNegocio, PillarDesenvolvimentoWeb, PillarSEOTrafego,
+  CategoriaInsights, GuiaListagem, AgenciasPage, OneHub, LandingPage, LinksPage,
+} from './pages/registry';
 import { Helmet } from 'react-helmet-async';
 import { faqHome } from './data/faqHome';
-
-import ServicosGMN from './pages/ServicosGMN';
-import ServicosSite from './pages/ServicosSite';
-import ServicosSEO from './pages/ServicosSEO';
-import ServicosAutomacao from './pages/ServicosAutomacao';
-import GoogleMeuNegocio from './pages/GoogleMeuNegocio';
-import InsightWhatsAppCRM from './pages/InsightWhatsAppCRM';
-import InsightAutomacaoProcessos from './pages/InsightAutomacaoProcessos';
-import InsightAutomacaoComercial from './pages/InsightAutomacaoComercial';
-import PillarAutomacaoDigital from './pages/PillarAutomacaoDigital';
-import PillarGoogleMeuNegocio from './pages/PillarGoogleMeuNegocio';
-import PillarDesenvolvimentoWeb from './pages/PillarDesenvolvimentoWeb';
-import PillarSEOTrafego from './pages/PillarSEOTrafego';
-import CategoriaInsights from './pages/CategoriaInsights';
-import GuiaListagem from './pages/GuiaListagem';
-import AgenciasPage from './pages/AgenciasPage';
-import OneHub from './pages/OneHub';
-import LandingPage from './pages/LandingPage';
 import { getLanding } from './data/landings';
-import LinksPage from './pages/LinksPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
