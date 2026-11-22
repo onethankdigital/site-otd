@@ -14,14 +14,19 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-WX72X49Q');
       }
-      // Load GTM when the browser is idle OR after 3.5s — whichever comes first.
-      // requestIdleCallback fires only during genuine idle time, never during
-      // Lighthouse-simulated pointer/keyboard events, so it does NOT penalise TBT.
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadGTM, { timeout: 3500 });
-      } else {
-        setTimeout(loadGTM, 3500);
-      }
+      // Carrega o GTM na primeira interação (toque, rolagem, clique, tecla) OU 5s depois do load,
+      // o que vier primeiro. Antes era no primeiro momento ocioso, que acontece logo após o load e
+      // competia com a renderização no celular. Eventos empurrados no dataLayer antes disso
+      // (Quiz, WhatsApp) ficam na fila e são enviados quando o GTM carrega.
+      (function () {
+        var eventos = ['pointerdown', 'touchstart', 'scroll', 'keydown', 'mousemove'];
+        function disparar() {
+          eventos.forEach(function (e) { window.removeEventListener(e, disparar, { passive: true }); });
+          loadGTM();
+        }
+        eventos.forEach(function (e) { window.addEventListener(e, disparar, { once: true, passive: true }); });
+        window.addEventListener('load', function () { setTimeout(disparar, 5000); });
+      })();
     </script>
     <!-- End Google Tag Manager -->
 
