@@ -44,11 +44,22 @@ function processDirectory(dir) {
       }
 
       // Remover tag title e description padrão da home para que cada página tenha apenas o seu title/description específico
-      const defaultTitle = '<title data-rh="true">One Thank Digital | Tecnologia e Estrutura Digital em Santo André</title>';
-      html = html.replace(defaultTitle, '');
+      // Por regex (não por texto exato), para não quebrar quando o title/description da home mudar no index.html.
+      if ((html.match(/<title[\s>]/g) || []).length > 1) {
+        html = html.replace(/<title data-rh="true">[^<]*<\/title>/, '');
+      }
+      if ((html.match(/<meta name="description"/g) || []).length > 1) {
+        html = html.replace(/<meta name="description" content="[^"]*" data-rh="true">/, '');
+      }
 
-      const defaultDesc = '<meta name="description" content="Presença no Google, sites com estrutura de busca semântica e automação de atendimento para empresas do Grande ABC. Implementação e manutenção diretas, por quem executa." data-rh="true">';
-      html = html.replace(defaultDesc, '');
+      // Open Graph / Twitter: o index.html traz as tags da home antes das da página.
+      // Quando a página define as suas, remove a primeira (a da home).
+      for (const prop of ['og:title', 'og:description', 'og:url', 'og:image', 'twitter:title', 'twitter:description', 'twitter:image']) {
+        const re = new RegExp(`<meta (?:property|name)="${prop}" content="[^"]*"[^>]*>`, 'g');
+        if ((html.match(re) || []).length > 1) {
+          html = html.replace(new RegExp(`<meta (?:property|name)="${prop}" content="[^"]*"[^>]*>`), '');
+        }
+      }
 
       // Injetar preconnects para Google Fonts no head
       const preconnects = `
