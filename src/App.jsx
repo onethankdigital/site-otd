@@ -26,6 +26,9 @@ import { faqHome } from './data/faqHome';
 import { getLanding } from './data/landings';
 
 gsap.registerPlugin(ScrollTrigger);
+// No celular, a barra de endereço some/aparece ao rolar e muda a altura da tela; sem isto o
+// ScrollTrigger recalcula todas as animações a cada vez.
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 function App() {
   const appRef = useRef(null);

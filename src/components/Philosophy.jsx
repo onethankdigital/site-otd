@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { shouldAnimate } from '../utils/animation';
+import { shouldAnimate, hasFinePointer } from '../utils/animation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,7 +43,7 @@ const Philosophy = ({ onOpenQuiz }) => {
         gsap.to(bgRef.current, { x: -xPos, y: -yPos, duration: 1.5, ease: 'power2.out' });
       };
 
-      window.addEventListener('mousemove', handleMouseMove);
+      if (hasFinePointer()) window.addEventListener('mousemove', handleMouseMove);
       return () => window.removeEventListener('mousemove', handleMouseMove);
     }, sectionRef);
 

@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
-import { shouldAnimate } from '../utils/animation';
+import { shouldAnimate, hasFinePointer } from '../utils/animation';
 
 
 const Hero = ({ onOpenQuiz }) => {
@@ -48,7 +48,7 @@ const Hero = ({ onOpenQuiz }) => {
         gsap.to(bgRef.current, { x: -xPos * 0.2, y: -yPos * 0.2, duration: 1.5, ease: 'power2.out' });
       };
 
-      window.addEventListener('mousemove', handleMouseMove);
+      if (hasFinePointer()) window.addEventListener('mousemove', handleMouseMove);
       return () => window.removeEventListener('mousemove', handleMouseMove);
     }, containerRef);
 

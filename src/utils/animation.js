@@ -6,3 +6,11 @@
 export function shouldAnimate() {
   return typeof window !== 'undefined' && !window.__PRERENDER_INJECTED;
 }
+
+/**
+ * Parallax de mouse só faz sentido com ponteiro fino (mouse/trackpad). Em celular e tablet
+ * não há mousemove útil, e o listener só gastaria CPU.
+ */
+export function hasFinePointer() {
+  return typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+}
