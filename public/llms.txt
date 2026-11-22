@@ -54,21 +54,7 @@ Santo André (sede) e Grande ABC, com páginas próprias por cidade:
 
 ## Artigos (Insights)
 
-- [Como aparecer nas respostas do ChatGPT e da IA do Google](https://onethank.com.br/insights/como-aparecer-no-chatgpt-e-na-ia-do-google/)
-- [Minha empresa não aparece no mapa do Google: como resolver](https://onethank.com.br/insights/empresa-nao-aparece-google-maps/)
-- [Por que seu site existe mas não aparece no Google](https://onethank.com.br/insights/por-que-site-nao-aparece-google/)
-- [Por que o concorrente aparece antes de você no Google](https://onethank.com.br/insights/concorrente-aparece-antes-no-google/)
-- [SEO orgânico ou tráfego pago: quando usar cada estratégia](https://onethank.com.br/insights/seo-organico-vs-trafego-pago/)
-- [Como pedir avaliações no Google sem constranger o cliente](https://onethank.com.br/insights/como-pedir-avaliacoes-no-google/)
-- [Google Meu Negócio para advogados: o que a OAB permite](https://onethank.com.br/insights/google-meu-negocio-para-advogados/)
-- [Quanto custa um site profissional](https://onethank.com.br/insights/quanto-custa-um-site-profissional/)
-- [Site ou Instagram: qual é o ativo digital mais importante](https://onethank.com.br/insights/site-ou-instagram-qual-mais-importante/)
-- [Presença digital estruturada na prática](https://onethank.com.br/insights/presenca-digital-estruturada/)
-- [Os 4 pilares para a empresa ser encontrada online](https://onethank.com.br/insights/4-pilares-empresa-encontrada-online/)
-- [Quantos leads você perde por não responder rápido no WhatsApp](https://onethank.com.br/insights/leads-perdidos-whatsapp-resposta-rapida/)
-- [Como atender leads no WhatsApp fora do horário comercial](https://onethank.com.br/insights/leads-fora-do-horario-como-atender-24h/)
-- [WhatsApp Business API oficial ou app comum](https://onethank.com.br/insights/whatsapp-business-api-oficial-ou-app/)
-- [O que é CRM e por que pequenas empresas precisam de um](https://onethank.com.br/insights/o-que-e-crm-pequenas-empresas/)
+{{ARTIGOS_BLOG}}
 - [Como organizar os leads do WhatsApp no CRM](https://onethank.com.br/insights/como-organizar-leads-whatsapp-no-crm/)
 - [Automação comercial: o que é e como implementar](https://onethank.com.br/insights/automacao-comercial-o-que-e/)
 - [Automação de processos para empresas](https://onethank.com.br/insights/automacao-de-processos-para-empresas/)

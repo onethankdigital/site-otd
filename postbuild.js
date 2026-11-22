@@ -106,6 +106,18 @@ console.log('Running post-build duplicate canonical cleanup and optimization...'
 if (fs.existsSync(distDir)) {
   processDirectory(distDir);
 
+  // llms.txt: a lista de artigos do blog é gerada a partir dos posts já publicados (publishDate),
+  // para cada artigo agendado entrar sozinho no dia da publicação.
+  const llmsPath = path.join(distDir, 'llms.txt');
+  if (fs.existsSync(llmsPath)) {
+    const posts = [...getPublishedPosts()].sort((x, y) => (y.publishDate || '').localeCompare(x.publishDate || ''));
+    const linhas = posts.map((p) => `- [${p.titulo}](https://onethank.com.br/insights/${p.slug}/)`).join('\n');
+    const llms = fs.readFileSync(llmsPath, 'utf-8');
+    if (!llms.includes('{{ARTIGOS_BLOG}}')) throw new Error('llms.txt sem o marcador {{ARTIGOS_BLOG}}');
+    fs.writeFileSync(llmsPath, llms.replace('{{ARTIGOS_BLOG}}', linhas), 'utf-8');
+    console.log(`llms.txt: ${posts.length} artigos publicados listados.`);
+  }
+
   const templatePath = path.join(distDir, 'template.html');
   if (fs.existsSync(templatePath)) {
     fs.unlinkSync(templatePath);

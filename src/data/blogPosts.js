@@ -3102,6 +3102,306 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
     ctaSub: "",
     ctaLink: "/diagnostico/",
   },
+  {
+    id: 19,
+    imagem: "/Blog/artigo-19-agente-ia-whatsapp.webp",
+    imagemAlt: "Ilustração de uma conversa de WhatsApp sendo respondida por um agente de inteligência artificial, com balões de mensagem e um painel de CRM ao lado",
+    slug: "agente-de-ia-no-whatsapp",
+    categoria: "Automação",
+    titulo: "Agente de IA no WhatsApp: o que ele faz, o que não faz e quando vale a pena",
+    seoTitle: "Agente de IA no WhatsApp: quando vale a pena | OTD",
+    metaDescricao: "O que um agente de IA no WhatsApp resolve no atendimento da empresa, onde ele não deve atuar sozinho e como saber se vale a pena implantar agora.",
+    publishDate: "2026-12-08",
+    dataPublicacao: "2026-12-08",
+    meta: "7 min de leitura · Automação · One Thank Digital",
+    lead: "A mensagem chega às 21h: \"Vocês atendem sábado? Quanto custa?\". Ninguém responde até o dia seguinte, e o cliente já fechou com quem respondeu primeiro. É para esse momento que existe o agente de IA no WhatsApp. Mas ele não é mágica, e um agente mal implantado irrita mais do que ajuda.",
+    callout: "Resposta direta: um agente de IA no WhatsApp responde na hora as perguntas frequentes, coleta as informações do cliente, qualifica o pedido e passa a conversa para a pessoa certa da equipe, com um resumo registrado no CRM. Ele não deve dar parecer, diagnóstico, orçamento de serviço sob medida nem tomar decisões que dependem de um profissional. Vale a pena quando a empresa recebe contatos fora do horário, repete as mesmas respostas todos os dias ou perde clientes pela demora.",
+    pillarUrl: "/guia/automacao-digital/",
+    pillarText: "Automação Digital B2B",
+    secoes: [
+      {
+        titulo: "Chatbot de menu e agente de IA não são a mesma coisa",
+        corpo: `O <strong>chatbot de menu</strong> é aquele que responde "Digite 1 para horários, 2 para endereço". Ele só entende números e caminhos pré-definidos. Se o cliente escreve "vocês fazem abertura de empresa para MEI?", o robô trava ou devolve o menu de novo.<br><br>O <strong>agente de IA</strong> entende a mensagem escrita do jeito que o cliente escreve, consulta uma base de informações da empresa e responde em linguagem natural. Ele mantém o contexto da conversa, faz perguntas para entender o pedido e sabe a hora de chamar uma pessoa.<br><br>Mas ele tem um limite claro: <strong>só sabe o que foi ensinado</strong>. Se a base de informações estiver incompleta ou desatualizada, a resposta também estará. Por isso o trabalho de implantar um agente é, antes de tudo, organizar o que a empresa responde todos os dias.`
+      },
+      {
+        titulo: "O que o agente faz bem",
+        corpo: `• <strong>Responde perguntas frequentes na hora:</strong> horário, endereço, documentos necessários, como funciona o primeiro atendimento, formas de pagamento.<br>• <strong>Coleta as informações do cliente:</strong> nome, cidade, tipo de demanda, melhor horário para retorno.<br>• <strong>Qualifica e encaminha:</strong> identifica se é um cliente novo, um cliente atual ou um fornecedor, e manda a conversa para quem resolve.<br>• <strong>Agenda:</strong> integrado à agenda da equipe, oferece horários livres e confirma.<br>• <strong>Lembra e confirma:</strong> envia lembrete de reunião ou consulta e reduz faltas.<br>• <strong>Registra tudo no CRM:</strong> a pessoa que assume a conversa já recebe o resumo, sem perguntar tudo de novo.<br><br>E faz isso às 21h de uma sexta, no domingo e no feriado. O cliente não fica sem resposta enquanto a equipe descansa.`
+      },
+      {
+        titulo: "Onde ele não deve atuar sozinho",
+        corpo: `Há decisões que dependem de um profissional, e o agente precisa reconhecer esses momentos:<br><br>• <strong>Parecer, diagnóstico ou orientação individual:</strong> jurídica, contábil, médica ou técnica.<br>• <strong>Orçamento de serviço sob medida:</strong> ele pode explicar como o valor é definido, mas o número fechado sai de quem avalia o caso.<br>• <strong>Negociação e reclamações delicadas:</strong> cliente insatisfeito quer falar com gente.<br>• <strong>Dados sensíveis:</strong> informações de saúde ou detalhes de um processo não devem ser pedidos além do necessário.<br><br>Duas regras valem para qualquer agente: <strong>avisar que é um assistente virtual</strong> e <strong>passar para uma pessoa</strong> sempre que o cliente pedir ou a conversa sair do que ele sabe responder.`
+      },
+      {
+        titulo: "API oficial e as regras da Meta",
+        corpo: `Um agente de IA precisa rodar na <strong>API oficial do WhatsApp</strong> (WhatsApp Business Platform), conectada a uma plataforma de atendimento. Ferramentas que simulam o aplicativo comum para automatizar mensagens são uma das principais causas de banimento de números. Veja mais em <a href="/insights/whatsapp-banido-como-evitar/">WhatsApp banido: por que acontece e como proteger o número</a>.<br><br>Na API oficial também há regras de uso:<br><br>• O agente deve atender ao <strong>propósito do negócio</strong> (atendimento, agendamento, suporte), não funcionar como um assistente genérico para qualquer assunto.<br>• Mensagens iniciadas pela empresa fora da janela de 24 horas usam <strong>modelos aprovados</strong> pela Meta.<br>• O cliente precisa ter dado permissão para receber mensagens da empresa.<br><br>Seguir as regras não é burocracia: é o que mantém o número funcionando.`
+      },
+      {
+        titulo: "Quando vale a pena (e quando ainda não)",
+        corpo: `Vale a pena se você marcar dois ou mais itens:<br><br>☐ Chegam contatos fora do horário de atendimento.<br>☐ A equipe responde as mesmas perguntas várias vezes por dia.<br>☐ Clientes já reclamaram da demora ou fecharam com outro.<br>☐ A equipe é pequena e o atendimento disputa tempo com o trabalho técnico.<br>☐ Você não sabe quantos contatos chegaram no mês nem quantos viraram cliente.<br><br><strong>Quando ainda não vale:</strong> se o volume de contatos é muito baixo ou se a empresa ainda não tem um processo de atendimento definido. Nesse caso, o primeiro passo é organizar os contatos num <a href="/insights/o-que-e-crm-pequenas-empresas/">CRM</a>. Automatizar um processo bagunçado só faz a bagunça andar mais rápido.<br><br>Na One Thank Digital, testamos tudo na nossa própria operação antes de oferecer: o atendimento com IA roda na <a href="/onehub/">OneHub</a>, na API oficial. Veja como funciona o serviço de <a href="/servicos/automacao-digital/">automação com IA</a> e como <a href="/insights/leads-fora-do-horario-como-atender-24h/">atender leads fora do horário</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "O cliente percebe que está falando com uma IA?",
+        resposta: "Deve perceber, porque o certo é avisar no início da conversa que ele está falando com um assistente virtual. A transparência evita frustração e deixa claro que uma pessoa pode assumir a qualquer momento."
+      },
+      {
+        pergunta: "A IA pode errar a resposta?",
+        resposta: "Pode, principalmente se a base de informações estiver incompleta. Por isso o agente é limitado ao que a empresa definiu, transfere para uma pessoa quando não sabe responder e as conversas são revisadas periodicamente para corrigir a base."
+      },
+      {
+        pergunta: "Preciso trocar o número de WhatsApp da empresa?",
+        resposta: "Na maioria dos casos, o mesmo número pode ser usado na API oficial. A forma de conexão muda de acordo com a configuração escolhida, então avaliamos o número atual antes de migrar para não interromper o atendimento."
+      },
+      {
+        pergunta: "Quanto tempo leva para implantar um agente de IA?",
+        resposta: "Depende do volume de informações e das integrações (agenda, CRM). A maior parte do tempo vai para montar a base de respostas e testar com conversas reais antes de colocar o agente para atender o público."
+      }
+    ],
+    cta: "Quer saber se um agente de IA faz sentido para o seu atendimento?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 20,
+    imagem: "/Blog/artigo-20-site-com-ia.webp",
+    imagemAlt: "Ilustração de uma janela de navegador com o código de um site sendo montado por inteligência artificial e um indicador de desempenho alto",
+    slug: "site-desenvolvido-com-ia",
+    categoria: "Website",
+    titulo: "Site desenvolvido com IA: o que muda no prazo e no custo, e o que não pode mudar",
+    seoTitle: "Site desenvolvido com IA: o que muda de verdade | OTD",
+    metaDescricao: "A IA encurta o prazo de desenvolvimento de sites, mas não substitui estratégia, revisão técnica e conteúdo verdadeiro. Veja o que muda e o que exigir.",
+    publishDate: "2026-12-15",
+    dataPublicacao: "2026-12-15",
+    meta: "7 min de leitura · Website · One Thank Digital",
+    lead: "Nunca foi tão fácil colocar um site no ar. Ferramentas de IA montam páginas em minutos, e a promessa de \"site pronto hoje\" está em todo lugar. Para uma empresa que depende de ser encontrada e de transformar visitas em contatos, a pergunta certa não é se o site foi feito com IA. É o que foi feito com ela.",
+    callout: "Resposta direta: a IA acelera a parte braçal do desenvolvimento (estrutura do código, variações de layout, ajustes e testes), o que reduz o prazo e permite mais rodadas de melhoria. O que não pode mudar é o que faz o site gerar resultado: estratégia de páginas, textos verdadeiros sobre a empresa, SEO técnico, desempenho no celular, segurança e revisão por quem entende do assunto. Um site gerado sem isso fica no ar, mas não aparece e não converte.",
+    pillarUrl: "/guia/desenvolvimento-web/",
+    pillarText: "Arquitetura Web e Criação de Sites B2B",
+    secoes: [
+      {
+        titulo: "O que a IA realmente acelera",
+        corpo: `No desenvolvimento de um site profissional, boa parte das horas sempre foi trabalho repetitivo: montar a estrutura das páginas, escrever componentes parecidos, ajustar espaçamentos, testar em vários tamanhos de tela. É aí que a IA ajuda de verdade:<br><br>• <strong>Estrutura e componentes:</strong> a base do código sai em horas, não em dias.<br>• <strong>Versões para comparar:</strong> dá para testar duas ou três propostas de layout antes de decidir.<br>• <strong>Ajustes rápidos:</strong> mudanças que levavam um dia ficam prontas na mesma conversa.<br>• <strong>Verificações:</strong> testes de links, títulos, imagens e desempenho rodam de forma automática.<br><br>O resultado é um prazo de semanas, não de meses. E o tempo que sobra vai para o que realmente diferencia o site: estratégia e conteúdo.`
+      },
+      {
+        titulo: "O que não pode mudar",
+        corpo: `• <strong>Estratégia:</strong> quais páginas existem, para quem, e para quais buscas. A IA não conhece o seu cliente nem a sua concorrência no ABC.<br>• <strong>Conteúdo verdadeiro:</strong> serviços, diferenciais, casos, equipe, endereço. A IA pode organizar e revisar o texto, mas a matéria-prima vem da empresa.<br>• <strong>SEO técnico:</strong> títulos, descrições, dados estruturados (Schema), perguntas frequentes, sitemap e links internos.<br>• <strong>Desempenho no celular:</strong> é no celular que o cliente pesquisa. Site lento perde visita antes de carregar.<br>• <strong>Acessibilidade e LGPD:</strong> contraste, navegação por teclado, aviso de cookies e formulários com finalidade clara.<br>• <strong>Revisão humana:</strong> cada página passa por alguém que entende de código, de busca e de conversão antes de ir ao ar.`
+      },
+      {
+        titulo: "Os riscos do \"site pronto em 5 minutos\"",
+        corpo: `• <strong>Texto genérico:</strong> o mesmo texto que a ferramenta entrega para mil outras empresas. O Google e os assistentes de IA não têm motivo para citar uma página que não diz nada específico.<br>• <strong>Plataforma presa:</strong> o site só funciona dentro da ferramenta, e sair dela significa refazer tudo.<br>• <strong>Código sem revisão:</strong> páginas pesadas, lentas no celular e com brechas de segurança.<br>• <strong>Sem estrutura de busca:</strong> sem títulos pensados, sem dados estruturados, sem páginas para os serviços e cidades que você atende.<br>• <strong>Sem integração:</strong> o contato chega e não vai para o WhatsApp nem para o CRM.<br><br>O site existe, mas não trabalha. É o que explicamos em <a href="/insights/por-que-site-nao-aparece-google/">por que um site existe mas não aparece no Google</a>.`
+      },
+      {
+        titulo: "Na prática: o site da própria One Thank Digital",
+        corpo: `O site da One Thank Digital é desenvolvido com IA e revisado por nós, página por página. Em novembro de 2026, numa rodada de otimização:<br><br>• O arquivo principal de código caiu de cerca de <strong>1 MB para 120 KB</strong>.<br>• As imagens dos serviços passaram de <strong>2,2 MB para 82 KB</strong>, sem perda visível.<br>• A nota de desempenho no teste do Google para celular subiu de <strong>48 para 86</strong> na página inicial e de <strong>59 para 94</strong> na página de criação de sites.<br><br>A IA fez em horas o que levaria dias. Mas cada mudança foi testada nas 48 páginas antes de ir ao ar, porque uma delas, sem revisão, teria publicado páginas vazias. É o modelo LAB: testamos na nossa operação antes de oferecer ao cliente.`
+      },
+      {
+        titulo: "O que perguntar antes de contratar",
+        corpo: `☐ Quem escreve os textos, e com base em quais informações da minha empresa?<br>☐ O código e o domínio ficam no meu nome?<br>☐ O site terá dados estruturados e perguntas frequentes para o Google e para as IAs?<br>☐ Qual a nota de desempenho no celular na entrega?<br>☐ O formulário e o botão de WhatsApp se integram ao meu atendimento e ao CRM?<br>☐ Quem revisa o que a IA produziu?<br>☐ Como funcionam as alterações depois que o site estiver no ar?<br><br>Para entender o que pesa no orçamento, veja <a href="/insights/quanto-custa-um-site-profissional/">quanto custa um site profissional</a>. E se o site vai receber contatos fora do horário, vale conhecer o <a href="/insights/agente-de-ia-no-whatsapp/">agente de IA no WhatsApp</a>. Conheça o serviço de <a href="/servicos/criacao-de-sites/">criação de sites da One Thank Digital</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Site feito com IA é pior para o Google?",
+        resposta: "Não pela ferramenta usada. O Google avalia se a página é útil, confiável e rápida. O problema é conteúdo genérico produzido em massa, sem informação real da empresa. Um site feito com IA, com conteúdo verdadeiro e SEO técnico revisado, pode performar melhor do que um site feito do jeito antigo."
+      },
+      {
+        pergunta: "A IA escreve os textos do site?",
+        resposta: "Ela ajuda a organizar, estruturar e revisar, mas a base vem das informações da empresa: serviços, diferenciais, casos e perguntas que os clientes fazem. Todo texto é revisado antes de publicar."
+      },
+      {
+        pergunta: "Um site feito com IA fica mais barato?",
+        resposta: "A IA reduz as horas de produção, mas o investimento depende do papel do site na operação: número de páginas, integrações, conteúdo e manutenção. O ganho maior costuma ser o prazo e o número de rodadas de melhoria."
+      },
+      {
+        pergunta: "Consigo atualizar o site depois?",
+        resposta: "Sim. Combinamos na proposta como funcionam as alterações e a manutenção. Como o desenvolvimento com IA é rápido, ajustes pequenos costumam ficar prontos no mesmo dia."
+      }
+    ],
+    cta: "Quer um site rápido, revisado e pronto para o Google e para as IAs?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 21,
+    imagem: "/Blog/artigo-21-gmn-busca-ia.webp",
+    imagemAlt: "Ilustração de um celular com um mapa e um pino de localização, cercado por balões de busca por voz e uma resposta gerada por inteligência artificial",
+    slug: "google-meu-negocio-busca-por-ia",
+    categoria: "GMN",
+    titulo: "Google Meu Negócio na era da IA: como o perfil alimenta as buscas por voz e as respostas do Gemini",
+    seoTitle: "Google Meu Negócio e IA: buscas por voz e Gemini | OTD",
+    metaDescricao: "Como o Perfil da Empresa no Google passou a alimentar buscas por voz, respostas com IA e resumos de avaliações, e o que ajustar para ser citado.",
+    publishDate: "2026-12-22",
+    dataPublicacao: "2026-12-22",
+    meta: "6 min de leitura · GMN · One Thank Digital",
+    lead: "\"Ok Google, contador perto de mim que abre sábado.\" \"Qual clínica de fisioterapia em Santo André tem boas avaliações?\" A busca local está virando pergunta, e a resposta vem pronta, com poucas empresas citadas. De onde a IA tira essas empresas? Em boa parte, do Perfil da Empresa no Google.",
+    callout: "Resposta direta: as respostas com IA do Google sobre empresas locais se apoiam em dados que o Google já tem e consegue confirmar: o Perfil da Empresa (categoria, serviços, horário, endereço), as avaliações e o que os clientes escrevem nelas, as fotos e o site. Para ser citado, o perfil precisa estar completo, coerente com o site e com avaliações recentes que descrevam o serviço com naturalidade.",
+    pillarUrl: "/guia/google-meu-negocio/",
+    pillarText: "SEO Local e Google Meu Negócio",
+    secoes: [
+      {
+        titulo: "A busca local virou conversa",
+        corpo: `Durante anos, a busca local foi uma lista: três empresas no mapa e dez links embaixo. Agora ela é cada vez mais uma <strong>resposta</strong>. O cliente pergunta em voz alta ao celular, digita uma pergunta completa no Google ou conversa com um assistente como o Gemini, e recebe um texto pronto com uma ou duas sugestões.<br><br>Isso muda a disputa. Antes, aparecer na terceira posição ainda gerava ligação. Numa resposta com IA, <strong>ou a empresa é citada, ou não existe</strong> para aquele cliente. E a IA tende a citar as empresas sobre as quais tem mais informação confiável.`
+      },
+      {
+        titulo: "O que a IA lê no seu perfil",
+        corpo: `• <strong>Categoria principal e adicionais:</strong> é o que diz ao Google o que a empresa é. Categoria errada tira a empresa das perguntas certas.<br>• <strong>Serviços com descrição:</strong> "abertura de empresa", "planejamento tributário", "fisioterapia pós-cirúrgica". Cada serviço cadastrado é uma pergunta que a empresa pode responder.<br>• <strong>Horários, inclusive especiais:</strong> "que abre sábado" e "aberto agora" dependem disso.<br>• <strong>Atributos:</strong> acessibilidade, atendimento on-line, estacionamento.<br>• <strong>Descrição:</strong> o resumo da empresa com as palavras que o cliente usa, sem exagero.<br>• <strong>Fotos e atualizações:</strong> sinais de que a empresa está ativa e é real.`
+      },
+      {
+        titulo: "Avaliações viraram argumento",
+        corpo: `O Google já usa IA para <strong>resumir o que os clientes dizem</strong> nas avaliações. Isso significa que não basta ter nota alta: o conteúdo das avaliações vira a descrição da sua empresa na resposta.<br><br>• <strong>Quantidade e frequência:</strong> avaliações recentes pesam mais do que muitas avaliações antigas.<br>• <strong>Conteúdo:</strong> quando o cliente cita o serviço ("resolveram a abertura da minha empresa em uma semana"), a IA tem material para recomendar você para esse serviço.<br>• <strong>Respostas da empresa:</strong> mostram cuidado e acrescentam contexto.<br><br>O cuidado é não induzir o texto da avaliação nem oferecer vantagem em troca: isso fere as regras do Google. Veja <a href="/insights/como-pedir-avaliacoes-no-google/">como pedir avaliações no Google sem constranger o cliente</a>.`
+      },
+      {
+        titulo: "Perfil, site e diretórios precisam dizer a mesma coisa",
+        corpo: `A IA confirma informações cruzando fontes. Se o perfil diz um endereço, o site diz outro e um diretório antigo mostra um terceiro telefone, a empresa perde confiança, e com ela a chance de ser citada.<br><br>• <strong>Nome, endereço e telefone idênticos</strong> no perfil, no rodapé do site e nos diretórios.<br>• <strong>Dados estruturados no site</strong> (Schema LocalBusiness) com as mesmas informações.<br>• <strong>As mesmas categorias e serviços</strong> no perfil e nas páginas do site.<br><br>É o mesmo princípio que explicamos em <a href="/insights/como-aparecer-no-chatgpt-e-na-ia-do-google/">como aparecer nas respostas do ChatGPT e da IA do Google</a>. E um site preparado para isso faz diferença, como mostramos em <a href="/insights/site-desenvolvido-com-ia/">site desenvolvido com IA</a>.`
+      },
+      {
+        titulo: "Checklist para o perfil ser citado",
+        corpo: `☐ Categoria principal correta e categorias adicionais para os outros serviços.<br>☐ Todos os serviços cadastrados, cada um com uma descrição curta.<br>☐ Horários atualizados, inclusive feriados.<br>☐ Descrição com as palavras que o cliente usa, sem lista de palavras-chave.<br>☐ Fotos reais da fachada, da equipe e do ambiente.<br>☐ Rotina de pedido de avaliação após cada atendimento.<br>☐ Respostas a todas as avaliações.<br>☐ Mesmos dados no site e nos diretórios.<br><br>Um alerta: colocar palavras-chave no nome do perfil ("Contabilidade Silva Abertura de Empresa Santo André") pode levar à suspensão. Saiba mais em <a href="/insights/perfil-google-suspenso-como-recuperar/">perfil do Google suspenso</a>. Conheça o serviço de <a href="/servicos/google-meu-negocio/">Google Meu Negócio da One Thank Digital</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Dá para pagar para aparecer nas respostas com IA do Google?",
+        resposta: "Não há como pagar para ser citado numa resposta orgânica. Anúncios aparecem em espaços marcados como patrocinados. Ser citado depende de informação completa, coerente e bem avaliada."
+      },
+      {
+        pergunta: "Empresa sem endereço de atendimento aparece nas buscas locais?",
+        resposta: "Sim, configurando o perfil como empresa de área de atuação, com as cidades atendidas. Ela aparece nas buscas da região, sem mostrar o endereço no mapa."
+      },
+      {
+        pergunta: "Com que frequência devo atualizar o perfil?",
+        resposta: "Sempre que algo mudar (horário, telefone, serviço). Além disso, publicar atualizações e fotos com regularidade, por exemplo uma vez por mês, mostra que a empresa está ativa."
+      },
+      {
+        pergunta: "O ChatGPT também usa o Google Meu Negócio?",
+        resposta: "O ChatGPT não acessa o seu painel do Google, mas consulta a web e fontes públicas, o que inclui seu site, diretórios e informações de mapas. Por isso a coerência entre perfil, site e diretórios vale para todas as IAs."
+      }
+    ],
+    cta: "Quer seu perfil no Google pronto para as buscas por IA?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 22,
+    imagem: "/Blog/artigo-22-ia-escritorios-clinicas.webp",
+    imagemAlt: "Ilustração de um escudo de proteção sobre balões de conversa, representando atendimento com inteligência artificial seguro para escritórios e clínicas",
+    slug: "ia-no-atendimento-escritorios-e-clinicas",
+    categoria: "Automação",
+    titulo: "IA no atendimento de escritórios e clínicas: cuidados com LGPD, OAB e CFM",
+    seoTitle: "IA no atendimento: cuidados com LGPD, OAB e CFM | OTD",
+    metaDescricao: "Como usar IA no atendimento de escritórios de advocacia, contabilidades e clínicas respeitando a LGPD, a ética da OAB e as regras do CFM.",
+    publishDate: "2027-01-05",
+    dataPublicacao: "2027-01-05",
+    meta: "8 min de leitura · Automação · One Thank Digital",
+    lead: "Advogados, contadores e médicos têm bons motivos para desconfiar de IA no atendimento: sigilo profissional, dados sensíveis, regras de publicidade. A boa notícia é que dá para usar IA com segurança. A condição é saber exatamente o que ela pode e o que não pode fazer.",
+    callout: "Resposta direta: em escritórios e clínicas, a IA no atendimento deve cuidar da recepção (responder dúvidas gerais, organizar o pedido, agendar e encaminhar) e nunca dar parecer jurídico, orientação contábil individual ou diagnóstico. Ela precisa avisar que é um assistente virtual, coletar só os dados necessários, tratar dados de saúde com cuidado redobrado e rodar em ferramentas com contrato e segurança adequados. Este artigo traz orientações gerais e não substitui a consulta ao seu conselho profissional ou a um especialista em proteção de dados.",
+    pillarUrl: "/guia/automacao-digital/",
+    pillarText: "Automação Digital B2B",
+    secoes: [
+      {
+        titulo: "O papel certo da IA: recepção, não profissional",
+        corpo: `A forma mais segura de pensar a IA no atendimento é como uma <strong>recepção digital</strong>. Uma boa recepcionista atende rápido, explica como o escritório ou a clínica funciona, anota o pedido, agenda e chama o profissional. Ela não dá parecer, não fecha diagnóstico e não promete resultado.<br><br>O agente de IA deve ter exatamente esse papel:<br><br>• Responder dúvidas gerais: horários, endereço, áreas de atuação, convênios, documentos para a primeira reunião.<br>• Entender o tipo de demanda e encaminhar para quem atende aquele assunto.<br>• Agendar, confirmar e lembrar.<br>• Registrar a conversa no CRM para o profissional não começar do zero.<br><br>Tudo o que exige avaliação de um profissional fica com o profissional. Veja como funciona um <a href="/insights/agente-de-ia-no-whatsapp/">agente de IA no WhatsApp</a>.`
+      },
+      {
+        titulo: "LGPD: o que vale para qualquer escritório ou clínica",
+        corpo: `A Lei Geral de Proteção de Dados (Lei 13.709/2018) se aplica a toda conversa que envolve dados pessoais, com ou sem IA. No atendimento automatizado, os pontos de atenção são:<br><br>• <strong>Necessidade:</strong> pedir só o que é preciso para atender. Nome, contato e o tipo de demanda costumam bastar no primeiro contato.<br>• <strong>Transparência:</strong> informar que é um assistente virtual e deixar acessível o aviso de privacidade da empresa.<br>• <strong>Dados sensíveis:</strong> informações de saúde têm proteção reforçada na LGPD. Na clínica, o chat não é lugar de prontuário.<br>• <strong>Fornecedores:</strong> a plataforma de atendimento e o modelo de IA tratam dados em nome da empresa. É preciso contrato com regras de segurança e confidencialidade.<br>• <strong>Uso dos dados:</strong> prefira soluções empresariais que não usam as conversas dos seus clientes para treinar modelos públicos.<br>• <strong>Acesso:</strong> só quem atende vê as conversas, com usuário próprio e registro de acesso.`
+      },
+      {
+        titulo: "Advocacia: sigilo e publicidade",
+        corpo: `Na advocacia, dois conjuntos de regras orientam o uso de IA no atendimento: o <strong>Código de Ética e Disciplina da OAB</strong> e o <strong>Provimento 205/2021</strong>, que trata da publicidade. O Conselho Federal da OAB também já publicou recomendações sobre o uso de IA generativa na prática jurídica.<br><br>Na prática:<br><br>• <strong>Nada de consulta pelo robô:</strong> a IA não analisa o caso nem diz se o cliente "tem direito".<br>• <strong>Sem promessa de resultado</strong> e sem linguagem de captação agressiva. O tom é informativo.<br>• <strong>Sigilo:</strong> o agente não deve pedir detalhes do caso além do necessário para encaminhar. Documentos e relatos completos vão para o advogado por um canal seguro.<br>• <strong>Responsabilidade:</strong> o que o assistente diz em nome do escritório é responsabilidade do escritório. As respostas precisam ser revisadas pelos advogados.<br><br>Para o Google Meu Negócio, valem cuidados parecidos: veja <a href="/insights/google-meu-negocio-para-advogados/">Google Meu Negócio para advogados: o que a OAB permite</a>.`
+      },
+      {
+        titulo: "Clínicas e consultórios: CFM e dados de saúde",
+        corpo: `Para médicos, a <strong>Resolução CFM nº 2.336/2023</strong> regula a publicidade médica, e o Código de Ética Médica proíbe consulta e diagnóstico sem a avaliação do profissional. Outras áreas da saúde (odontologia, fisioterapia, psicologia, nutrição) seguem as regras dos seus próprios conselhos, que também devem ser consultadas.<br><br>No atendimento com IA, isso significa:<br><br>• <strong>Sem diagnóstico, sem indicação de tratamento ou medicamento</strong> e sem interpretação de exames.<br>• <strong>Sem promessa de resultado</strong> de procedimento.<br>• <strong>Orientação de urgência:</strong> se o paciente descrever sintomas graves, o assistente orienta a procurar um pronto-socorro ou ligar para o 192, e avisa a equipe.<br>• <strong>Coleta mínima:</strong> para agendar, não é preciso saber a história clínica do paciente.<br><br>A IA cuida da agenda, das confirmações e das dúvidas sobre convênios e preparo de exames. A conduta clínica é do profissional.`
+      },
+      {
+        titulo: "Contabilidade e o checklist para implantar com segurança",
+        corpo: `Na contabilidade, o sigilo sobre dados fiscais e financeiros dos clientes está no Código de Ética Profissional do Contador (NBC PG 01). A IA pode explicar como funciona a abertura de empresa ou a troca de contador, mas <strong>não dá orientação tributária individual</strong>, e documentos fiscais devem ser enviados por canal seguro, não soltos no chat.<br><br>Antes de colocar um agente de IA para atender:<br><br>☐ O assistente se apresenta como virtual logo no início.<br>☐ Há uma lista clara do que ele responde e do que encaminha.<br>☐ O cliente pode falar com uma pessoa a qualquer momento.<br>☐ Só os dados necessários são coletados.<br>☐ O aviso de privacidade está acessível.<br>☐ A plataforma usa a API oficial do WhatsApp e tem contrato com regras de segurança.<br>☐ As conversas são revisadas periodicamente.<br>☐ Cada pessoa da equipe tem acesso próprio.<br><br>Veja como estruturamos a presença digital de <a href="/segmentos/escritorios-de-advocacia/">escritórios de advocacia</a>, <a href="/segmentos/escritorios-de-contabilidade/">contabilidades</a> e <a href="/segmentos/clinicas-e-consultorios/">clínicas</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Posso usar o ChatGPT gratuito para responder clientes?",
+        resposta: "Não é recomendado para conversas com dados de clientes. Versões gratuitas de uso pessoal não foram feitas para isso e podem usar as conversas para melhorar os modelos. Para atendimento, use soluções empresariais, com contrato, controle de acesso e regras claras sobre o uso dos dados."
+      },
+      {
+        pergunta: "A IA pode agendar consultas e reuniões?",
+        resposta: "Sim. Agendar, confirmar e lembrar são tarefas de recepção e estão entre os melhores usos da IA no atendimento de escritórios e clínicas."
+      },
+      {
+        pergunta: "Preciso de consentimento para atender pelo WhatsApp com IA?",
+        resposta: "Depende da base legal do tratamento. Ser transparente, avisando que é um assistente virtual e indicando o aviso de privacidade, é o mínimo. Em clínicas, que lidam com dados de saúde, vale avaliar o caso com um especialista em proteção de dados."
+      },
+      {
+        pergunta: "E se a IA responder algo errado ao cliente?",
+        resposta: "A responsabilidade é da empresa, por isso o agente deve ter respostas revisadas, limites claros e transferência para uma pessoa. Se acontecer, corrija a base de informações, fale com o cliente e registre o ajuste."
+      }
+    ],
+    cta: "Quer implantar IA no atendimento sem colocar sigilo e regras em risco?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
+  {
+    id: 23,
+    imagem: "/Blog/artigo-23-ia-estrutura-digital.webp",
+    imagemAlt: "Ilustração dos quatro pilares da estrutura digital (Google Meu Negócio, site, SEO e automação) conectados por uma rede de inteligência artificial",
+    slug: "ia-na-estrutura-digital-da-empresa",
+    categoria: "OTD",
+    titulo: "IA na estrutura digital da empresa: onde ela gera retorno de verdade",
+    seoTitle: "IA na estrutura digital: onde gera retorno de verdade | OTD",
+    metaDescricao: "Onde a inteligência artificial gera retorno na estrutura digital de uma empresa B2B: atendimento, visibilidade e entrega. E onde ainda é só promessa.",
+    publishDate: "2027-01-12",
+    dataPublicacao: "2027-01-12",
+    meta: "7 min de leitura · OTD · One Thank Digital",
+    lead: "Toda semana surge uma ferramenta de IA nova prometendo vender mais, atender melhor e trabalhar sozinha. Para quem toca uma empresa de serviços, sobra a dúvida: onde a IA dá retorno de verdade, e onde é só modismo? A resposta fica mais clara quando olhamos a estrutura digital por partes.",
+    callout: "Resposta direta: na estrutura digital de uma empresa B2B, a IA gera retorno em três frentes. No atendimento, com agentes que respondem e qualificam no WhatsApp a qualquer hora. Na visibilidade, preparando perfil e site para serem citados pelo Google e por assistentes como ChatGPT e Gemini. E na entrega, acelerando o desenvolvimento de sites e sistemas. Ela não substitui estratégia, conteúdo verdadeiro nem o profissional que atende o cliente.",
+    pillarUrl: "/guia/automacao-digital/",
+    pillarText: "Automação Digital B2B",
+    secoes: [
+      {
+        titulo: "Atendimento: responder na hora, sem aumentar a equipe",
+        corpo: `O retorno mais rápido da IA costuma estar no atendimento. Todo contato que chega fora do horário ou espera horas por resposta é um cliente que pode fechar com o concorrente. Um agente de IA no WhatsApp responde na hora, coleta as informações, agenda e passa a conversa para a equipe com o resumo no CRM.<br><br>Onde medir o retorno:<br><br>• Contatos fora do horário que viraram reunião ou consulta.<br>• Tempo da equipe que deixou de ir para perguntas repetidas.<br>• Faltas evitadas com confirmação e lembrete.<br><br>Detalhamos o que ele faz e o que não faz em <a href="/insights/agente-de-ia-no-whatsapp/">agente de IA no WhatsApp: quando vale a pena</a>.`
+      },
+      {
+        titulo: "Visibilidade: ser citado, não só encontrado",
+        corpo: `A busca está mudando de lista para resposta. Quando o cliente pergunta ao Google, ao ChatGPT ou ao Gemini por um serviço na região, poucas empresas são citadas. A IA escolhe as que consegue confirmar em várias fontes: perfil no Google completo, site que responde perguntas reais, dados estruturados e informações iguais em todo lugar.<br><br>Aqui a IA entra dos dois lados: ela é o novo canal de busca e também a ferramenta que ajuda a organizar o conteúdo e os dados estruturados que esse canal lê.<br><br>Veja <a href="/insights/como-aparecer-no-chatgpt-e-na-ia-do-google/">como aparecer nas respostas do ChatGPT e da IA do Google</a> e <a href="/insights/google-meu-negocio-busca-por-ia/">como o Google Meu Negócio alimenta as buscas por IA</a>.`
+      },
+      {
+        titulo: "Entrega: sites e sistemas em semanas",
+        corpo: `A terceira frente é menos visível para o cliente final, mas pesa no bolso: a IA acelera o desenvolvimento. Sites, páginas de serviço, automações e integrações que levavam meses ficam prontos em semanas, com mais rodadas de ajuste.<br><br>O ganho real não é só fazer mais rápido. É usar o tempo economizado em estratégia, conteúdo e testes, que são o que faz o site gerar contato. Explicamos o que muda e o que não pode mudar em <a href="/insights/site-desenvolvido-com-ia/">site desenvolvido com IA</a>.`
+      },
+      {
+        titulo: "Onde a IA ainda é promessa (ou risco)",
+        corpo: `• <strong>Conteúdo em massa:</strong> dezenas de artigos genéricos gerados por IA não fazem a empresa ser encontrada. Fazem a empresa parecer igual a todas.<br>• <strong>Robô que finge ser gente:</strong> esconder que o atendimento é automatizado gera desconfiança quando o cliente percebe.<br>• <strong>Decisões profissionais:</strong> parecer, diagnóstico e orientação individual continuam sendo do profissional.<br>• <strong>Ferramentas sem contrato:</strong> colocar dados de clientes em ferramentas de uso pessoal é um risco de sigilo e de LGPD. Veja os cuidados em <a href="/insights/ia-no-atendimento-escritorios-e-clinicas/">IA no atendimento de escritórios e clínicas</a>.<br>• <strong>Atalhos:</strong> desconfie de quem promete colocar sua empresa no ChatGPT em sete dias. Não existe botão para isso.`
+      },
+      {
+        titulo: "Por onde começar: um pilar de cada vez",
+        corpo: `Não é preciso fazer tudo de uma vez. O melhor começo é onde está o maior vazamento de clientes hoje:<br><br>• <strong>O cliente não te encontra?</strong> Comece pelo Google Meu Negócio e pelo SEO para Google e IAs.<br>• <strong>Ele encontra, mas não entra em contato?</strong> O problema costuma estar no site.<br>• <strong>Ele entra em contato, mas não vira cliente?</strong> Atendimento e automação.<br><br>Na One Thank Digital, tudo o que oferecemos foi testado antes na nossa operação: o site é desenvolvido com IA, o atendimento roda na <a href="/onehub/">OneHub</a> com IA na API oficial do WhatsApp e o funil de diagnóstico é automatizado. Entenda <a href="/insights/4-pilares-empresa-encontrada-online/">os 4 pilares da estrutura digital</a> ou descubra em 3 minutos onde está o seu vazamento no <a href="/diagnostico/">diagnóstico gratuito</a>.`
+      },
+    ],
+    faq: [
+      {
+        pergunta: "Preciso implantar IA em todos os pilares de uma vez?",
+        resposta: "Não. O melhor retorno vem de começar pelo pilar com o maior vazamento de clientes, medir o resultado e avançar para o próximo."
+      },
+      {
+        pergunta: "Empresa pequena tem retorno com IA?",
+        resposta: "Sim, principalmente no atendimento. Equipes pequenas são as que mais perdem clientes por demora e as que mais ganham tempo quando as perguntas repetidas deixam de depender de uma pessoa."
+      },
+      {
+        pergunta: "A IA vai substituir o atendimento humano?",
+        resposta: "Não. Ela tira da equipe o trabalho repetitivo e garante resposta fora do horário. As conversas que exigem avaliação, negociação ou cuidado continuam com as pessoas."
+      },
+      {
+        pergunta: "Como a One Thank Digital usa IA no dia a dia?",
+        resposta: "No desenvolvimento do nosso site e dos sistemas que entregamos, no atendimento pela OneHub e nas automações do nosso funil de diagnóstico. Só oferecemos ao cliente o que já funciona na nossa própria operação."
+      }
+    ],
+    cta: "Quer saber onde a IA traria mais retorno para a sua empresa?",
+    ctaSub: "",
+    ctaLink: "/diagnostico/",
+  },
 ];
 
 export const isPostPublished = (p) => {
