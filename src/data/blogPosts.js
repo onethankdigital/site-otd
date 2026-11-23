@@ -3193,7 +3193,7 @@ Para obter um mapeamento exaustivo acerca da maturidade técnica dos seus canais
       },
       {
         titulo: "Na prática: o site da própria One Thank Digital",
-        corpo: `O site da One Thank Digital é desenvolvido com IA e revisado por nós, página por página. Em novembro de 2026, numa rodada de otimização:<br><br>• O arquivo principal de código caiu de cerca de <strong>1 MB para 120 KB</strong>.<br>• As imagens dos serviços passaram de <strong>2,2 MB para 82 KB</strong>, sem perda visível.<br>• A nota de desempenho no teste do Google para celular subiu de <strong>48 para 86</strong> na página inicial e de <strong>59 para 94</strong> na página de criação de sites.<br><br>A IA fez em horas o que levaria dias. Mas cada mudança foi testada nas 48 páginas antes de ir ao ar, porque uma delas, sem revisão, teria publicado páginas vazias. É o modelo LAB: testamos na nossa operação antes de oferecer ao cliente.`
+        corpo: `O site da One Thank Digital é desenvolvido com IA e revisado por nós, página por página. Em novembro de 2026, numa rodada de otimização:<br><br>• O arquivo principal de código caiu de cerca de <strong>1 MB para 120 KB</strong>.<br>• As imagens dos serviços passaram de <strong>2,2 MB para 82 KB</strong>, sem perda visível.<br>• A nota de desempenho no celular, no PageSpeed Insights do Google, subiu de <strong>48 para 97</strong> na página inicial, com nota <strong>100 em SEO</strong>.<br><br>A IA fez em horas o que levaria dias. Mas cada mudança foi testada nas 48 páginas antes de ir ao ar, porque uma delas, sem revisão, teria publicado páginas vazias. É o modelo LAB: testamos na nossa operação antes de oferecer ao cliente.`
       },
       {
         titulo: "O que perguntar antes de contratar",
