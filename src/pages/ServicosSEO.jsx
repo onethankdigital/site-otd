@@ -176,10 +176,10 @@ function SimuladorIA() {
 }
 
 const PILARES = {
-  gmn: { role: 'Aparecer', t: 'Google Meu Negócio', d: 'no mapa e nas buscas por perto', leak: 'Quem procura no mapa encontra o concorrente.', href: '/servicos/google-meu-negocio/' },
-  seo: { role: 'Aparecer', t: 'SEO e busca por IA', d: 'no Google e nas respostas da IA', leak: 'Ninguém chega até o seu site pela pesquisa.', href: null },
-  site: { role: 'Convencer', t: 'Site', d: 'explica o serviço e gera confiança', leak: 'A visita chega, não entende o que você faz e vai embora.', href: '/servicos/criacao-de-sites/' },
-  auto: { role: 'Responder', t: 'Automação com IA', d: 'atende na hora, 24 horas por dia', leak: 'O contato chama às 21h, ninguém responde e ele fecha com outro.', href: '/servicos/automacao-digital/' }
+  gmn: { role: 'Presença Local', t: 'Google Meu Negócio', d: 'o cliente te encontra no mapa, perto dele', leak: 'Quem procura no mapa encontra o concorrente.', href: '/servicos/google-meu-negocio/' },
+  seo: { role: 'Visibilidade', t: 'SEO e busca por IA', d: 'o cliente te encontra no Google e é indicado pela IA', leak: 'Ninguém chega até o seu site pela pesquisa.', href: null },
+  site: { role: 'Presença Digital', t: 'Site', d: 'o cliente confia e decide entrar em contato', leak: 'A visita chega, não entende o que você faz e vai embora.', href: '/servicos/criacao-de-sites/' },
+  auto: { role: 'Automação', t: 'Automação com IA', d: 'o cliente é atendido na hora e vira venda', leak: 'O contato chama às 21h, ninguém responde e ele fecha com outro.', href: '/servicos/automacao-digital/' }
 };
 
 function Wire({ state }) {
@@ -223,7 +223,7 @@ function SimuladorEstrutura() {
       <div className="lk-head">
         <p className="eyebrow">A estrutura digital</p>
         <h2>SEO sozinho traz visita. <em>A estrutura traz cliente.</em></h2>
-        <p className="lead">Os quatro pilares trabalham juntos: aparecer, convencer e responder. Desligue um deles e veja onde o cliente escapa.</p>
+        <p className="lead">Os quatro pilares trabalham juntos: ser encontrado, gerar confiança e converter em cliente. Desligue um deles e veja onde o cliente escapa.</p>
       </div>
 
       <div className="lk-board">
@@ -234,6 +234,7 @@ function SimuladorEstrutura() {
           </div>
           <Wire state="flow" />
           <div className="lk-entry">
+            <span className="lk-doors">2 portas de entrada</span>
             <PilarNode k="gmn" ligado={on.gmn} onFlip={flip} />
             <PilarNode k="seo" cur ligado={on.seo} onFlip={flip} />
           </div>
@@ -465,6 +466,7 @@ export default function ServicosSEO() {
         @keyframes seo2flow{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
         @keyframes seo2leak{0%{left:0;top:50%;opacity:0}10%{opacity:1}45%{left:40%;top:50%;opacity:1}100%{left:48%;top:420%;opacity:0}}
         .seo2 .lk-entry{display:flex;flex-direction:column;gap:12px}
+        .seo2 .lk-doors{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:center;border-bottom:1px dashed rgba(224,4,11,.45);padding-bottom:6px}
         .seo2 .lk-node{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;width:100%;background:#111012;border:1px solid rgba(224,4,11,.55);border-radius:14px;padding:14px 14px 12px;color:var(--fg);font:inherit;cursor:pointer;transition:all .35s;box-shadow:0 0 0 0 rgba(224,4,11,0)}
         .seo2 .lk-node:hover{box-shadow:0 0 24px -6px rgba(224,4,11,.6)}
         .seo2 .lk-node.cur{background:linear-gradient(180deg,rgba(224,4,11,.18),#111012)}
@@ -475,7 +477,8 @@ export default function ServicosSEO() {
         .seo2 .lk-node .sw i{width:14px;height:14px}
         .seo2 .lk-node[aria-pressed="true"] .sw{background:var(--red);border-color:var(--red)}
         .seo2 .lk-node[aria-pressed="true"] .sw i{transform:translateX(14px);background:#fff}
-        .seo2 .lk-role{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+        .seo2 .lk-role{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--red);white-space:nowrap;font-weight:700}
+        .seo2 .lk-node .sw{flex:none}
         .seo2 .lk-node strong{font-family:var(--display);font-size:16px;line-height:1.2}
         .seo2 .lk-node small{color:var(--mute);font-size:12.5px;line-height:1.4}
         .seo2 .lk-alert{position:absolute;top:-10px;right:-10px;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px;box-shadow:0 0 0 4px rgba(224,4,11,.25)}
@@ -613,6 +616,7 @@ export default function ServicosSEO() {
           .seo2 .lk-track{grid-template-columns:1fr;justify-items:center}
           .seo2 .lk-track>.lk-entry,.seo2 .lk-track>.lk-node{width:100%;max-width:440px}
           .seo2 .lk-entry{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+          .seo2 .lk-doors{grid-column:1/-1}
           .seo2 .wire{width:4px;height:34px;margin:6px auto}
           .seo2 .wire.flow{background:linear-gradient(180deg,rgba(224,4,11,.35),rgba(224,4,11,.7))}
           .seo2 .wire.broken{background:linear-gradient(180deg,rgba(224,4,11,.7) 0 40%,transparent 40% 60%,rgba(255,255,255,.06) 60%)}
