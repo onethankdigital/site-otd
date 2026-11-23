@@ -2,26 +2,39 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Lupa, ComoFunciona, SimuladorIA, SimuladorEstrutura, Jornada, Prova, Investimento, FaqLinks, CtaFinal, PaginaServico } from '../components/servico2/blocos';
 
+// Perguntas validadas nas sugestões de busca do Google Brasil em 23/11/2026, na ordem de quem está mais perto de contratar
 const FAQS = [
   {
-    q: "Quanto tempo leva para ver resultado?",
+    q: "Quanto custa um serviço de SEO?",
+    a: "Depende de quantos concorrentes disputam as mesmas buscas no seu segmento e de como está o seu site hoje. Por isso não trabalhamos com pacote pronto: o valor é definido depois do diagnóstico gratuito, e a proposta traz escopo, prazo e valor por escrito."
+  },
+  {
+    q: "Quanto tempo o SEO leva para dar resultado?",
     a: "Os primeiros sinais aparecem entre 60 e 90 dias, quando o Google começa a mostrar suas páginas. Resultados consistentes chegam entre 4 e 6 meses de trabalho contínuo. Em buscas locais com pouca concorrência, pode ser mais rápido."
   },
   {
-    q: "Preciso parar de pagar anúncio?",
-    a: "Não. Anúncio e SEO funcionam juntos: o anúncio traz contato agora, enquanto o SEO é construído. Quando as páginas se firmam no Google, você pode reduzir o investimento em anúncio sem sumir das buscas."
+    q: "SEO ou Google Ads: qual vale mais a pena?",
+    a: "Os dois juntos. O Google Ads traz contato agora, enquanto o SEO é construído. Quando as páginas se firmam no Google, você pode reduzir o investimento em anúncio sem sumir das buscas, porque o SEO continua trazendo cliente sem pagar por clique."
   },
   {
-    q: "SEO funciona para empresa pequena no ABC?",
-    a: "Sim, e muitas vezes funciona melhor. Em buscas locais, como \"contador em Santo André\", a concorrência é menor do que nas buscas nacionais, e uma empresa bem estruturada consegue disputar as primeiras posições."
+    q: "SEO ainda vale a pena com a IA?",
+    a: "Sim. O ChatGPT, o Gemini e o modo IA do Google montam as respostas a partir de páginas bem posicionadas e bem organizadas. Uma empresa que não aparece no Google dificilmente é citada pela IA, então o SEO passou a ser a base para aparecer nos dois lugares."
   },
   {
-    q: "O que é GEO e AEO?",
-    a: "São os nomes técnicos do trabalho para as buscas feitas por IA. AEO prepara o conteúdo para virar resposta direta, como na visão geral criada por IA do Google. GEO trabalha para que o ChatGPT, o Gemini e o Perplexity citem sua empresa. Os dois dependem de um site bem estruturado."
+    q: "Como fazer minha empresa aparecer no ChatGPT e na IA do Google?",
+    a: "Com páginas que respondem perguntas reais do cliente de forma direta, dados organizados que o Google e as IAs conseguem ler e as mesmas informações da empresa no site, no Perfil do Google e nas redes. É isso que faz o ChatGPT e o modo IA do Google confiarem na sua empresa para citá-la."
   },
   {
-    q: "Como aparecer na resposta da IA do Google?",
-    a: "Com páginas que respondem perguntas reais do cliente de forma direta, dados organizados que o Google consegue ler e as mesmas informações da empresa no site, no Perfil do Google e nas redes."
+    q: "Qual a diferença entre SEO, GEO e AEO?",
+    a: "SEO é o trabalho para aparecer nos resultados do Google. AEO prepara o conteúdo para virar resposta direta, como na visão geral criada por IA do Google. GEO trabalha para que o ChatGPT, o Gemini e o Perplexity citem sua empresa. Os três dependem da mesma base: um site bem estruturado."
+  },
+  {
+    q: "Como aparecer no Google em primeiro lugar?",
+    a: "Ninguém sério pode garantir a primeira posição, porque quem decide a ordem é o Google. O que dá para garantir é o trabalho que leva até lá: base técnica corrigida, páginas que respondem às buscas certas do seu segmento e relatório todo mês mostrando a evolução das posições."
+  },
+  {
+    q: "SEO funciona para pequenas empresas?",
+    a: "Sim, e muitas vezes funciona melhor. Em buscas locais, como \"contador em Santo André\", a concorrência é menor do que nas buscas nacionais, e uma empresa bem estruturada do ABC consegue disputar as primeiras posições."
   }
 ];
 
