@@ -19,7 +19,8 @@ const ESTILOS = `
         .seo2 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
         .seo2 p{margin:0}
         .seo2 .lead{color:var(--mute);font-size:18px;max-width:62ch}
-        .seo2 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 14px;font-weight:700;line-height:1.5}
+        .seo2 .eyebrow{display:flex;align-items:center;gap:12px;font-family:'DM Sans','Manrope',system-ui,sans-serif;font-size:14px;letter-spacing:0;text-transform:none;color:var(--red);margin:0 0 14px;font-weight:700;line-height:1.4}
+        .seo2 .eyebrow::before{content:"";width:28px;height:1px;background:currentColor;flex:none}
         .seo2 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--display);font-weight:600;font-size:16px;padding:14px 22px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s}
         .seo2 .btn:hover{transform:translateY(-2px)}
         .seo2 button:focus-visible,.seo2 a:focus-visible,.seo2 summary:focus-visible{outline:2px solid #fff;outline-offset:3px}

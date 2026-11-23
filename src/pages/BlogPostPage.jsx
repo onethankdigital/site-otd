@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPostBySlug, getPublishedPosts, tituloSeo } from "../data/blogPosts";
 import { Helmet } from "react-helmet-async";
+import Faq from '../components/Faq';
 
 const CAT_COLORS = {
   GMN: "#D42B2B",
@@ -627,33 +628,7 @@ export default function BlogPostPage() {
 
           {/* FAQ ACORDEÃO E TEXTO INTEGRAL PARA SEO */}
           {post.faq && post.faq.length > 0 && (
-            <section className="satellite-faq-section">
-              <h2 className="satellite-faq-title">Perguntas frequentes</h2>
-              <div>
-                {post.faq.map((item, index) => {
-                  const isOpen = openFaq === index;
-                  return (
-                    <div className="satellite-faq-item" key={index}>
-                      <div
-                        className="satellite-faq-q"
-                        onClick={() => setOpenFaq(isOpen ? null : index)}
-                      >
-                        <span>{item.pergunta}</span>
-                        <span className="satellite-faq-icon">
-                          {isOpen ? "−" : "+"}
-                        </span>
-                      </div>
-                      <div
-                        className="satellite-faq-a"
-                        style={{ display: isOpen ? "block" : "none" }}
-                      >
-                        {item.resposta}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
+            <Faq itens={post.faq.map((i) => ({ q: i.pergunta, a: i.resposta }))} bloco />
           )}
 
           {/* CONTINUE NO TEMA: serviço do pilar + artigos da mesma categoria */}

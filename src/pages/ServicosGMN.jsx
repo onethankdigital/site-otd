@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function ServicosGMN() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -568,7 +569,7 @@ export default function ServicosGMN() {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">// OTIMIZAÇÃO LOCAL PARA GOOGLE MAPS NO ABC</div>
+            <div className="otd-rotulo">Otimização local para Google Maps no ABC</div>
             <h1 className="lp-h1">GOOGLE MEU NEGÓCIO PARA EMPRESAS B2B EM SANTO ANDRÉ E ABC PAULISTA</h1>
             <p className="lp-intro">
               A One Thank Digital otimiza o Google Meu Negócio de escritórios contábeis, clínicas e empresas B2B no ABC Paulista para aparecer nas primeiras posições do Google Maps. Com perfil verificado, avaliações ativas e postagens semanais, sua empresa é encontrada quando o cliente decide — antes do concorrente. O mesmo perfil é a fonte que o Google usa nas buscas por voz e nas respostas de IA sobre empresas da região.
@@ -738,31 +739,7 @@ export default function ServicosGMN() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="lp-faq-section">
-          <div className="lp-container lp-faq-grid">
-            <div>
-              <div className="lp-label">TIRE SUAS DÚVIDAS</div>
-              <h2 className="lp-faq-title">O que você <em>AINDA PERGUNTA.</em></h2>
-            </div>
-            <div>
-              {FAQS.map((faq, index) => (
-                <div
-                  key={index}
-                  className={"lp-faq-item " + (activeFaq === index ? "active" : "")}
-                >
-                  <h3 className="lp-faq-q" onClick={() => toggleFaq(index)}>
-                    {faq.q}
-                    <span className="lp-faq-icon">+</span>
-                  </h3>
-                  <div className="lp-faq-a">
-                    {faq.a}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Faq itens={FAQS} />
 
         {/* CTA */}
         <section className="lp-cta-section">

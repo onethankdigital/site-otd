@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { segmentos, cidades, linkPublicado } from '../data/landings';
+import Faq from '../components/Faq';
 
 // Página de segmento ou de cidade (dados em src/data/landings.js), no mesmo visual das páginas de serviço
 export default function LandingPage({ landing }) {
@@ -537,7 +538,7 @@ export default function LandingPage({ landing }) {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">{landing.label}</div>
+            <div className="otd-rotulo">{landing.label}</div>
             <h1 className="lp-h1">{landing.h1}</h1>
             <p className="lp-intro">{landing.intro}</p>
           </div>
@@ -630,31 +631,7 @@ export default function LandingPage({ landing }) {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="lp-faq-section">
-          <div className="lp-container lp-faq-grid">
-            <div>
-              <div className="lp-label">TIRE SUAS DÚVIDAS</div>
-              <h2 className="lp-faq-title">O que você <em>AINDA PERGUNTA.</em></h2>
-            </div>
-            <div>
-              {landing.faqs.map((faq, index) => (
-                <div
-                  key={faq.q}
-                  className={"lp-faq-item " + (activeFaq === index ? "active" : "")}
-                >
-                  <h3 className="lp-faq-q" onClick={() => toggleFaq(index)}>
-                    {faq.q}
-                    <span className="lp-faq-icon">+</span>
-                  </h3>
-                  <div className="lp-faq-a">
-                    {faq.a}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Faq itens={landing.faqs} />
 
         {/* CTA */}
         <section className="lp-cta-section">

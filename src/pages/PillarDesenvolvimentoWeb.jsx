@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function PillarDesenvolvimentoWeb() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -488,7 +489,7 @@ export default function PillarDesenvolvimentoWeb() {
               <span>Criação de Sites B2B</span>
             </nav>
 
-            <span className="web-tag">Guia Técnico · Pilar 02</span>
+            <span className="otd-rotulo">Guia técnico · Pilar 02</span>
             <h1 className="web-h1">Arquitetura Web & Criação de Sites B2B de Alta Conversão (Guia Prático)</h1>
             <p className="web-lead">
               Descubra por que 90% dos sites institucionais falham em converter decisores corporativos e aprenda a arquitetar um ativo digital proprietário que une Core Web Vitals de ponta, otimização para IAs (AEO) e experiência executiva de alta confiança.
@@ -588,7 +589,7 @@ export default function PillarDesenvolvimentoWeb() {
           {/* HUB DE SATÉLITES CONECTADOS */}
           <section className="web-hub-section">
             <div className="web-hub-header">
-              <span className="web-hub-eyebrow">Ecossistema Hub-and-Spoke</span>
+              <span className="otd-rotulo">Conteúdos relacionados</span>
               <h2 className="web-hub-title">Aprofunde seu Conhecimento com Nossos Artigos Satélites</h2>
             </div>
             <div className="web-spokes-grid">
@@ -630,31 +631,7 @@ export default function PillarDesenvolvimentoWeb() {
             </div>
           </section>
 
-          {/* FAQ ACORDEÃO */}
-          <section className="web-faq-section">
-            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 36, color: '#fff', marginBottom: 24 }}>
-              Perguntas Frequentes sobre Criação de Sites B2B
-            </h2>
-            <div>
-              {FAQS.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div className="web-faq-item" key={idx}>
-                    <div
-                      className="web-faq-q"
-                      onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    >
-                      <span>{faq.q}</span>
-                      <span className="web-faq-icon">{isOpen ? '−' : '+'}</span>
-                    </div>
-                    <div className="web-faq-a" style={{ display: isOpen ? 'block' : 'block' }}>
-                      {faq.a}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <Faq itens={FAQS} bloco titulo="O que você ainda pergunta sobre" destaque="criação de sites B2B" />
 
           {/* CTA FINAL */}
           <section className="web-cta">

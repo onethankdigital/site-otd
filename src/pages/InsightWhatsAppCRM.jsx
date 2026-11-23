@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function InsightWhatsAppCRM() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -521,26 +522,7 @@ export default function InsightWhatsAppCRM() {
             </p>
           </section>
 
-          {/* FAQ SECTION */}
-          <section className="insight-faq-section">
-            <h2 className="insight-faq-title">Perguntas Frequentes</h2>
-            <div>
-              {FAQS.map((faq, index) => (
-                <div 
-                  key={index} 
-                  className={`insight-faq-item ${activeFaq === index ? 'active' : ''}`}
-                >
-                  <div className="insight-faq-q" onClick={() => toggleFaq(index)}>
-                    <span>{faq.q}</span>
-                    <span className="insight-faq-icon">+</span>
-                  </div>
-                  <div className="insight-faq-a">
-                    {faq.a}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <Faq itens={FAQS} bloco />
 
           {/* CTA BOX */}
           <div className="insight-cta-box">

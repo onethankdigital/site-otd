@@ -283,7 +283,7 @@ export default function GuiaListagem() {
       <div className="guia-wrap">
         <main className="guia-container">
           <header className="guia-header">
-            <span className="guia-eyebrow">Materiais Educativos</span>
+            <span className="otd-rotulo">Materiais educativos</span>
             <h1 className="guia-h1">Guias Práticos B2B</h1>
             <p className="guia-desc">
               Manuais técnicos aprofundados para estruturar a presença digital, otimizar SEO local, desenhar sites de alta conversão e automatizar processos comerciais.

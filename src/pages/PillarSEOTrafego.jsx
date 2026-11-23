@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function PillarSEOTrafego() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -488,7 +489,7 @@ export default function PillarSEOTrafego() {
               <span>SEO & Tráfego Orgânico</span>
             </nav>
 
-            <span className="seo-tag">Guia Técnico · Pilar 03</span>
+            <span className="otd-rotulo">Guia técnico · Pilar 03</span>
             <h1 className="seo-h1">Posicionamento Orgânico no Google e Estratégias de SEO B2B (Guia Prático)</h1>
             <p className="seo-lead">
               Aprenda a estruturar a autoridade semântica da sua marca, conquistar as palavras-chave transacionais de maior valor comercial do seu segmento e transformar o Google em um canal previsível de aquisição B2B em 2026.
@@ -584,7 +585,7 @@ export default function PillarSEOTrafego() {
           {/* HUB DE SATÉLITES CONECTADOS */}
           <section className="seo-hub-section">
             <div className="seo-hub-header">
-              <span className="seo-hub-eyebrow">Ecossistema Hub-and-Spoke</span>
+              <span className="otd-rotulo">Conteúdos relacionados</span>
               <h2 className="seo-hub-title">Aprofunde seu Conhecimento com Nossos Artigos Satélites</h2>
             </div>
             <div className="seo-spokes-grid">
@@ -626,31 +627,7 @@ export default function PillarSEOTrafego() {
             </div>
           </section>
 
-          {/* FAQ ACORDEÃO */}
-          <section className="seo-faq-section">
-            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 36, color: '#fff', marginBottom: 24 }}>
-              Perguntas Frequentes sobre SEO Orgânico
-            </h2>
-            <div>
-              {FAQS.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div className="seo-faq-item" key={idx}>
-                    <div
-                      className="seo-faq-q"
-                      onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    >
-                      <span>{faq.q}</span>
-                      <span className="seo-faq-icon">{isOpen ? '−' : '+'}</span>
-                    </div>
-                    <div className="seo-faq-a" style={{ display: isOpen ? 'block' : 'block' }}>
-                      {faq.a}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <Faq itens={FAQS} bloco titulo="O que você ainda pergunta sobre" destaque="SEO orgânico" />
 
           {/* CTA FINAL */}
           <section className="seo-cta">

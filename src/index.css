@@ -113,3 +113,32 @@
   animation: whatsapp-pulse 2s infinite;
 }
 
+
+/* ===== Padrão do site: rótulo de seção e perguntas frequentes (23/11/2026) ===== */
+.otd-rotulo.otd-rotulo{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-family:'DM Sans','Manrope',system-ui,sans-serif;font-size:14px;line-height:1.4;font-weight:700;letter-spacing:0;text-transform:none;color:#e0040b}
+.otd-rotulo.otd-rotulo::before{content:"";width:28px;height:1px;background:currentColor;flex:none}
+.otd-rotulo.otd-rotulo.centro{justify-content:center}
+
+.otd-faq.otd-faq{background:#f3f1ec;color:#16181b;padding:80px max(16px,env(safe-area-inset-right,0px)) 88px max(16px,env(safe-area-inset-left,0px))}
+.otd-faq .otd-faq-wrap{max-width:1160px;margin:0 auto}
+.otd-faq .otd-faq-h{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;font-size:clamp(38px,5.2vw,68px);line-height:.95;letter-spacing:.01em;text-transform:uppercase;color:#16181b;margin:0;text-wrap:balance}
+.otd-faq .otd-faq-h span{color:#e0040b}
+.otd-faq .otd-faq-list{margin-top:32px;border-top:1px solid #d9d5cc;max-width:900px}
+.otd-faq .otd-faq-list details{border-bottom:1px solid #d9d5cc}
+.otd-faq .otd-faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px}
+.otd-faq .otd-faq-list summary::-webkit-details-marker{display:none}
+.otd-faq .otd-faq-list summary::after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;border:1px solid #d9d5cc;display:grid;place-items:center;color:#e0040b;font-size:20px;font-weight:700;background:#fff}
+.otd-faq .otd-faq-list details[open] summary::after{content:"–"}
+.otd-faq .otd-faq-list summary:focus-visible{outline:2px solid #e0040b;outline-offset:2px;border-radius:4px}
+.otd-faq .otd-faq-q{margin:0;font-family:'DM Sans','Manrope',system-ui,sans-serif;font-size:18px;line-height:1.35;font-weight:700;letter-spacing:0;text-transform:none;color:#16181b}
+.otd-faq .otd-faq-list summary:hover .otd-faq-q{color:#e0040b}
+.otd-faq .otd-faq-a{margin:0 0 20px;padding:0 48px 0 4px;color:#5b5f65;font-family:'DM Sans','Manrope',system-ui,sans-serif;font-size:16px;line-height:1.6;max-width:72ch}
+.otd-faq .otd-faq-a p{margin:0 0 10px}
+.otd-faq .otd-faq-a a{color:#e0040b;text-decoration:underline}
+.otd-faq .otd-faq-extra{margin-top:40px}
+.otd-faq.otd-faq.bloco{padding:32px 28px 36px;border-radius:16px;margin:48px 0}
+.otd-faq.otd-faq.bloco .otd-faq-h{font-size:clamp(30px,3.6vw,44px)}
+.otd-faq.otd-faq.bloco .otd-faq-list{margin-top:22px}
+@media (max-width:520px){.otd-faq .otd-faq-q{font-size:16px}.otd-faq .otd-faq-a{padding-right:4px}.otd-faq.otd-faq.bloco{padding:24px 18px 28px}}
+.otd-faq .otd-faq-cta{display:inline-flex;align-items:center;gap:10px;background:#e0040b;color:#fff;border:0;border-radius:8px;padding:15px 24px;font-family:'DM Sans','Manrope',system-ui,sans-serif;font-size:16px;font-weight:700;letter-spacing:0;text-transform:none;transition:transform .2s}
+.otd-faq .otd-faq-cta:hover{transform:translateY(-2px)}

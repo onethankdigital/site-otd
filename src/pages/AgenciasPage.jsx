@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 // Webhook URL para recebimento dos leads de agência (n8n)
 const WEBHOOK_URL = 'https://api.onethank.com.br/webhook/parceria-agencias';
@@ -771,43 +772,7 @@ export default function AgenciasPage() {
         </section>
 
 
-        {/* FAQs Accordion for semantic depth and SEO crawling */}
-        <section id="faq" className="relative py-16 md:py-24 border-t border-white/[0.05]">
-          <div className="max-w-4xl mx-auto px-6">
-            
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">TIRE SUAS DÚVIDAS</span>
-              <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-white mt-3">
-                Dúvidas Frequentes sobre a Parceria
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              {FAQs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="border border-white/[0.06] rounded bg-neutral-900/20 overflow-hidden transition-all duration-300"
-                >
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-white/[0.01] transition-colors focus:outline-none"
-                  >
-                    <span className="font-semibold text-sm md:text-base text-white">{faq.q}</span>
-                    <span className={`text-emerald-400 text-xl font-light transform transition-transform duration-300 ${activeFaq === index ? 'rotate-45' : ''}`}>
-                      +
-                    </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 overflow-hidden text-sm text-slate-400 leading-relaxed ${activeFaq === index ? 'max-h-[300px] border-t border-white/[0.05] p-6 bg-neutral-950/20' : 'max-h-0'}`}
-                  >
-                    {faq.a}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </section>
+        <Faq id="faq" itens={FAQs} titulo="O que você ainda pergunta sobre" destaque="a parceria" />
 
       </div>
 

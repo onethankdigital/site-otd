@@ -447,7 +447,7 @@ export default function Blog() {
         <div className="blog-header">
           <div className="blog-header-inner">
             <div>
-              <div className="blog-eyebrow">// Conteúdo OTD</div>
+              <div className="otd-rotulo">Conteúdo OTD</div>
               <h1 className="blog-title">
                 INSIGHTS<br /><em>Estrutura.</em>
               </h1>

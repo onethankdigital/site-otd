@@ -366,7 +366,7 @@ export default function Pilares({ onOpenQuiz, onClose }) {
         {/* HEADER */}
         <div className="pilares-header">
           <div>
-            <div className="pilares-eyebrow">A Estrutura Certa</div>
+            <div className="otd-rotulo">A estrutura certa</div>
             <h1 className="pilares-title">
               4 PILARES.<br />
               UM RESULTADO<br />
@@ -400,7 +400,7 @@ export default function Pilares({ onOpenQuiz, onClose }) {
         {/* CTA */}
         <div className="pilares-cta">
           <div className="cta-left">
-            <div className="cta-label">Diagnóstico Gratuito</div>
+            <div className="otd-rotulo">Diagnóstico gratuito</div>
             <div className="cta-text">
               DESCUBRA QUAL PILAR<br />
               ESTÁ FALHANDO NA<br />

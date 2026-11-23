@@ -351,7 +351,7 @@ export default function CategoriaInsights() {
         <main className="cat-container">
           {/* HEADER */}
           <header className="cat-header">
-            <span className="cat-eyebrow">Categoria Insights</span>
+            <span className="otd-rotulo">Categoria Insights</span>
             <h1 className="cat-h1">{categoryInfo.name}</h1>
             <p className="cat-desc">{categoryInfo.description}</p>
           </header>

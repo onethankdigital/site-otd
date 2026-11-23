@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function ServicosAutomacao() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -568,7 +569,7 @@ export default function ServicosAutomacao() {
         {/* HEADER */}
         <section className="lp-header">
           <div className="lp-container">
-            <div className="lp-label">// SEU BRAÇO DE TECNOLOGIA: AUTOMAÇÃO COM IA E CRM</div>
+            <div className="otd-rotulo">Seu braço de tecnologia: automação com IA e CRM</div>
             <h1 className="lp-h1">AUTOMAÇÃO COM IA: WHATSAPP, CRM E QUALIFICAÇÃO DE LEADS</h1>
             <p className="lp-intro">
               A One Thank Digital atua como seu braço de tecnologia, implementando agentes de IA no WhatsApp, automação de processos, integração de CRM e funil de atendimento para escritórios contábeis, clínicas e empresas B2B no ABC Paulista — para que seu negócio responda, qualifique e feche clientes 24 horas por dia. Quer entender o método a fundo antes de conversar? <a 
@@ -751,31 +752,7 @@ export default function ServicosAutomacao() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="lp-faq-section">
-          <div className="lp-container lp-faq-grid">
-            <div>
-              <div className="lp-label">TIRE SUAS DÚVIDAS</div>
-              <h2 className="lp-faq-title">O que você <em>AINDA PERGUNTA.</em></h2>
-            </div>
-            <div>
-              {FAQS.map((faq, index) => (
-                <div
-                  key={index}
-                  className={"lp-faq-item " + (activeFaq === index ? "active" : "")}
-                >
-                  <h3 className="lp-faq-q" onClick={() => toggleFaq(index)}>
-                    {faq.q}
-                    <span className="lp-faq-icon">+</span>
-                  </h3>
-                  <div className="lp-faq-a">
-                    {faq.a}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Faq itens={FAQS} />
 
         {/* CTA */}
         <section className="lp-cta-section">

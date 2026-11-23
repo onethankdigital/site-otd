@@ -10,7 +10,7 @@ const SEGMENTOS = [
     nomeCurto: "Advocacia",
     titulo: "Presença Digital para Escritórios de Advocacia no ABC | OTD",
     descricao: "Site, Google Meu Negócio e atendimento digital para escritórios de advocacia do Grande ABC, dentro das regras de publicidade do Provimento 205/2021 da OAB.",
-    label: "// ESCRITÓRIOS DE ADVOCACIA NO GRANDE ABC",
+    label: "Escritórios de advocacia no Grande ABC",
     h1: "Presença digital para escritórios de advocacia no Grande ABC",
     intro: "A One Thank Digital estrutura a presença digital de escritórios de advocacia de Santo André e região: site institucional, perfil no Google e atendimento organizado — com conteúdo informativo e sóbrio, dentro dos limites do Provimento 205/2021 da OAB.",
     dores: [
@@ -56,7 +56,7 @@ const SEGMENTOS = [
     nomeCurto: "Contabilidade",
     titulo: "Presença Digital para Escritórios de Contabilidade no ABC | OTD",
     descricao: "Site, Google Meu Negócio e automação de atendimento para escritórios de contabilidade do Grande ABC que querem atrair empresas e organizar a captação.",
-    label: "// ESCRITÓRIOS DE CONTABILIDADE NO GRANDE ABC",
+    label: "Escritórios de contabilidade no Grande ABC",
     h1: "Presença digital para escritórios de contabilidade no Grande ABC",
     intro: "A One Thank Digital ajuda escritórios contábeis de Santo André e região a serem encontrados por empresas que procuram contador, a explicar seus serviços com clareza e a organizar o atendimento — da primeira mensagem à proposta.",
     dores: [
@@ -102,7 +102,7 @@ const SEGMENTOS = [
     nomeCurto: "Clínicas",
     titulo: "Presença Digital para Clínicas e Consultórios no ABC | OTD",
     descricao: "Site, Google Meu Negócio e agendamento pelo WhatsApp para clínicas e consultórios do Grande ABC, com atenção às regras de publicidade dos conselhos de saúde.",
-    label: "// CLÍNICAS E CONSULTÓRIOS NO GRANDE ABC",
+    label: "Clínicas e consultórios no Grande ABC",
     h1: "Presença digital para clínicas e consultórios no Grande ABC",
     intro: "A One Thank Digital estrutura a presença digital de clínicas e consultórios de Santo André e região: perfil no Google que leva a agendamentos, site com informações claras e atendimento pelo WhatsApp que não deixa paciente sem resposta.",
     dores: [
@@ -152,7 +152,7 @@ const CIDADES = [
     regiao: "Grande ABC",
     titulo: "Marketing Digital e Sites em São Bernardo do Campo | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de São Bernardo do Campo. Atendimento próximo, a partir de Santo André, para empresas B2B e de serviços.",
-    label: "// SÃO BERNARDO DO CAMPO",
+    label: "São Bernardo do Campo",
     h1: "Presença digital para empresas de São Bernardo do Campo",
     intro: "A One Thank Digital atende empresas de São Bernardo do Campo a partir de Santo André, na cidade vizinha: site profissional, perfil no Google, SEO e automação de atendimento para empresas B2B, indústrias e prestadores de serviço.",
     dores: [
@@ -199,7 +199,7 @@ const CIDADES = [
     regiao: "Grande ABC",
     titulo: "Marketing Digital e Sites em São Caetano do Sul | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de São Caetano do Sul. Presença digital à altura de um público exigente, com atendimento próximo.",
-    label: "// SÃO CAETANO DO SUL",
+    label: "São Caetano do Sul",
     h1: "Presença digital para empresas de São Caetano do Sul",
     intro: "A One Thank Digital atende empresas de São Caetano do Sul a partir de Santo André, cidade vizinha: site profissional, perfil no Google, SEO e automação de atendimento para escritórios, clínicas, comércio e prestadores de serviço.",
     dores: [
@@ -246,7 +246,7 @@ const CIDADES = [
     regiao: "Grande ABC",
     titulo: "Marketing Digital e Sites em Diadema | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e automação para indústrias, distribuidores e prestadores de serviço de Diadema, com atendimento a partir de Santo André.",
-    label: "// DIADEMA",
+    label: "Diadema",
     h1: "Presença digital para empresas de Diadema",
     intro: "A One Thank Digital atende empresas de Diadema a partir de Santo André: sites que apresentam capacidade técnica, perfil no Google, SEO e automação comercial para pequenas e médias indústrias, distribuidores e prestadores de serviço.",
     dores: [
@@ -293,7 +293,7 @@ const CIDADES = [
     regiao: "Grande ABC",
     titulo: "Marketing Digital e Sites em Mauá | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de Mauá: indústria, comércio e serviços com presença digital estruturada e atendimento próximo.",
-    label: "// MAUÁ",
+    label: "Mauá",
     h1: "Presença digital para empresas de Mauá",
     intro: "A One Thank Digital atende empresas de Mauá a partir de Santo André, cidade vizinha: site profissional, perfil no Google, SEO e automação de atendimento para prestadores de serviço, comércio, clínicas e empresas ligadas à indústria.",
     dores: [
@@ -340,7 +340,7 @@ const CIDADES = [
     regiao: "Capital",
     titulo: "Marketing Digital e Sites em São Paulo (SP) | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e automação para empresas da capital paulista, com atendimento próximo a partir de Santo André, cidade na divisa com São Paulo.",
-    label: "// SÃO PAULO — CAPITAL",
+    label: "São Paulo, capital",
     h1: "Presença digital para empresas de São Paulo",
     intro: "A One Thank Digital atende empresas da capital paulista a partir de Santo André, cidade que faz divisa com São Paulo: site profissional, perfil no Google, SEO e automação de atendimento para escritórios, clínicas e empresas B2B.",
     dores: [
@@ -387,7 +387,7 @@ const CIDADES = [
     regiao: "Litoral",
     titulo: "Marketing Digital e Sites em Santos e Baixada | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e automação para empresas de Santos, São Vicente, Guarujá, Praia Grande e toda a Baixada Santista. Atendimento online e presencial.",
-    label: "// SANTOS E BAIXADA SANTISTA",
+    label: "Santos e Baixada Santista",
     h1: "Presença digital para empresas de Santos e da Baixada Santista",
     intro: "A One Thank Digital atende empresas de Santos, São Vicente, Guarujá, Praia Grande, Cubatão e demais cidades da Baixada Santista: site profissional, perfil no Google, SEO e automação de atendimento para escritórios, clínicas, fornecedores do porto e negócios de turismo.",
     dores: [
@@ -434,7 +434,7 @@ const CIDADES = [
     regiao: "Litoral",
     titulo: "Marketing Digital e Sites no Litoral Norte de SP | OTD",
     descricao: "Sites, Google Meu Negócio, SEO e WhatsApp automatizado para pousadas, restaurantes e prestadores de serviço de Ubatuba, Caraguatatuba, São Sebastião e Ilhabela.",
-    label: "// LITORAL NORTE DE SÃO PAULO",
+    label: "Litoral Norte de São Paulo",
     h1: "Presença digital para empresas do Litoral Norte de São Paulo",
     intro: "A One Thank Digital atende empresas de Ubatuba, Caraguatatuba, São Sebastião e Ilhabela: perfil no Google, site, SEO e atendimento automatizado pelo WhatsApp para pousadas, restaurantes, passeios, imobiliárias e prestadores de serviço.",
     dores: [

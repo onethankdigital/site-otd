@@ -486,7 +486,7 @@ export default function Cases() {
         <div className="cases-header">
           <div className="cases-header-inner">
             <div>
-              <div className="cases-eyebrow">// Portfólio OTD</div>
+              <div className="otd-rotulo">Portfólio OTD</div>
               <h1 className="cases-title">
                 CASES<br /><em>Reais.</em>
               </h1>
@@ -512,7 +512,7 @@ export default function Cases() {
           {/* ATIVOS */}
           {ativos.length > 0 && (
             <>
-              <h2 className="section-label">Sites Ativos — {ativos.length}</h2>
+              <h2 className="otd-rotulo">Sites ativos · {ativos.length}</h2>
               <div className="cases-grid">
                 {ativos.map(c => <CaseCard key={c.id} c={c} />)}
               </div>
@@ -522,7 +522,7 @@ export default function Cases() {
           {/* EM DESENVOLVIMENTO */}
           {emDev.length > 0 && (
             <>
-              <h2 className="section-label">Em Desenvolvimento — {emDev.length}</h2>
+              <h2 className="otd-rotulo">Em desenvolvimento · {emDev.length}</h2>
               <div className="cases-grid">
                 {emDev.map(c => <CaseCard key={c.id} c={c} />)}
               </div>

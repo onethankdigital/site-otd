@@ -73,8 +73,8 @@ const Philosophy = ({ onOpenQuiz }) => {
         {/* Block 1: Eyebrow + Bold Text Description */}
         <div className="mb-12 md:mb-24 overflow-hidden">
           <div ref={text1Ref} className="flex flex-col items-center">
-            <p className="font-mono text-xs md:text-sm text-white/50 uppercase tracking-widest mb-4">
-              O PRÓXIMO PASSO
+            <p className="otd-rotulo centro">
+              O próximo passo
             </p>
             <p className="font-heading font-bold text-2xl md:text-4xl text-white/80 max-w-2xl leading-tight whitespace-pre-line">
               O mercado não mudou.{"\n"}

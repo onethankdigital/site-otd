@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import ESTILOS from './estilos';
+import Faq from '../Faq';
 
 // Blocos compartilhados das páginas de serviço da OTD (SEO, Google Meu Negócio, Sites, Automação).
 
@@ -509,19 +510,11 @@ const SERVICOS = [
 
 export function FaqLinks({ faqs, aprofunde, atual }) {
   return (
+    <>
+    <Faq itens={faqs} />
     <section>
       <div className="wrap">
-        <p className="eyebrow">Perguntas frequentes</p>
-        <h2>O que você <em>ainda pergunta</em></h2>
-        <div className="faq-list">
-          {faqs.map((f) => (
-            <details key={f.q}>
-              <summary>{f.q}</summary>
-              <p>{f.a}</p>
-            </details>
-          ))}
-        </div>
-        <div className="links">
+        <div className="links" style={{ marginTop: 0 }}>
           <div>
             <h3>Aprofunde no tema</h3>
             <div className="row">{aprofunde.map(([h, t]) => <a key={h} href={h}>{t}</a>)}</div>
@@ -536,6 +529,7 @@ export function FaqLinks({ faqs, aprofunde, atual }) {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

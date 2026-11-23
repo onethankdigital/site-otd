@@ -278,7 +278,7 @@ export default function InsightsPreview({ navigateTo }) {
 
           <div className="ip-header">
             <div>
-              <div className="ip-eyebrow">// Conteúdo técnico</div>
+              <div className="otd-rotulo">Conteúdo técnico</div>
               <div className="ip-title">
                 INSIGHTS<br />
                 <em>&amp; GUIAS</em>

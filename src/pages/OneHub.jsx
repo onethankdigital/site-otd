@@ -9,6 +9,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import OneHubMotionSection from "../components/OneHubMotionSection";
+import Faq from '../components/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -381,8 +382,8 @@ export default function OneHub() {
 
             {/* Cabeçalho */}
             <div className="scene-problema-title max-w-3xl mb-14 md:mb-18">
-              <span className="text-xs uppercase font-bold tracking-[0.2em] text-[#BE212A] block mb-5">
-                O PREÇO DO QUE VOCÊ NÃO VÊ
+              <span className="otd-rotulo">
+                O preço do que você não vê
               </span>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-[46px] leading-[1.18] tracking-tight">
                 Você responde 50 mensagens por dia.{" "}
@@ -839,8 +840,8 @@ export default function OneHub() {
             
             {/* Cabeçalho Editorial & Diagnóstico */}
             <div className="max-w-3xl mb-12">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">
-                QUALIFICAÇÃO & SEGMENTOS
+              <span className="otd-rotulo">
+                Qualificação e segmentos
               </span>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
                 Desenhado para operações onde cada lead perdido <span className="text-[#BE212A]">custa caro.</span>
@@ -927,8 +928,8 @@ export default function OneHub() {
         <section className="scene-jornada relative z-10 px-5 sm:px-8 md:px-12 py-16 md:py-24 bg-[#F0EAE1] border-b border-[#E4DDD0]">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-2xl mb-12">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">
-                ESTEIRA DE EVOLUÇÃO · MATURAÇÃO
+              <span className="otd-rotulo">
+                Esteira de evolução · maturação
               </span>
               <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
                 Comece onde você está.
@@ -1120,26 +1121,8 @@ export default function OneHub() {
           </div>
         </section>
 
-        {/* 8. FAQ & TIRA-DÚVIDAS ESTRATÉGICO */}
-        <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 bg-[#FAF7F2] border-b border-[#E4DDD0]/60">
-          <div className="max-w-4xl mx-auto">
-            
-            {/* Cabeçalho do FAQ */}
-            <div className="text-center mb-14">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#D97757] block mb-2">
-                TIRA-DÚVIDAS COMERCIAL
-              </span>
-              <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-[#211E1B] leading-tight">
-                Perguntas Frequentes & Respostas Diretas
-              </h2>
-              <p className="mt-4 text-base sm:text-lg text-[#5C554E] max-w-2xl mx-auto leading-relaxed">
-                Tudo o que você precisa saber sobre a Meta Cloud API Oficial, integrações com ERPs, agentes de IA e segurança da sua operação.
-              </p>
-            </div>
-
-            {/* Lista de Perguntas e Respostas em Acordeão */}
-            <div className="space-y-4">
-              {[
+        {/* 8. FAQ (padrão do site) */}
+        <Faq titulo="O que você ainda pergunta sobre" destaque="o OneHub" itens={[
                 {
                   q: "O OneHub integra com ERPs e ferramentas como Bling, Tiny, HubSpot ou RD Station?",
                   a: "Sim. O OneHub conta com webhooks abertos e integração nativa para conectar com ERPs como o Bling e Tiny (sincronizando status de faturamento, emissão de notas e pedidos) e CRMs de mercado (HubSpot, RD Station, Pipedrive). Quando uma venda é fechada ou uma etapa avança no WhatsApp, o ecossistema atualiza seus sistemas automaticamente sem retrabalho manual.",
@@ -1164,46 +1147,8 @@ export default function OneHub() {
                   q: "O que acontece com o histórico das conversas e os dados dos clientes (LGPD)?",
                   a: "Todas as conversas, anexos, propostas e dados de clientes são armazenados em nuvem segura com criptografia ponta a ponta. A base pertence 100% à sua empresa — você nunca mais perde o histórico quando um funcionário sai da equipe, mantendo total governança comercial e conformidade com a LGPD.",
                 },
-              ].map((item, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div
-                    key={idx}
-                    className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                      isOpen
-                        ? "bg-[#211E1B] text-white border-[#3A352F] shadow-lg"
-                        : "bg-white text-[#211E1B] border-[#E4DDD0] hover:border-[#D97757]/40 shadow-sm"
-                    }`}
-                  >
-                    <button
-                      onClick={() => setOpenFaq(isOpen ? null : idx)}
-                      className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
-                    >
-                      <span className="font-display font-medium text-base sm:text-lg leading-snug">
-                        {item.q}
-                      </span>
-                      <span
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 transition-transform duration-200 ${
-                          isOpen
-                            ? "bg-[#BE212A] text-white rotate-45"
-                            : "bg-[#FAF7F2] text-[#211E1B] border border-[#E4DDD0]"
-                        }`}
-                      >
-                        +
-                      </span>
-                    </button>
-                    {isOpen && (
-                      <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#C9C3B8] leading-relaxed border-t border-[#3A352F]/60">
-                        {item.a}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Dúvida adicional CTA */}
-            <div className="mt-12 text-center">
+              ]}>
+          <div className="mt-12 text-center">
               <p className="text-xs sm:text-sm text-[#736B63] mb-3">
                 Tem uma dúvida técnica ou arquitetura específica na sua empresa?
               </p>
@@ -1216,9 +1161,7 @@ export default function OneHub() {
                 Falar diretamente com um especialista técnico via WhatsApp →
               </a>
             </div>
-
-          </div>
-        </section>
+        </Faq>
 
         {/* 9. CTA FINAL */}
         <section className="gsap-reveal relative z-10 px-5 sm:px-8 md:px-12 py-20 md:py-28 text-center bg-[#211E1B] text-white">

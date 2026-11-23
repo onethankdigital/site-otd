@@ -428,7 +428,7 @@ export default function Historia({ onClose, onOpenQuiz }) {
           {/* HEADER — stacked vertically on desktop */}
           <div className="historia-header">
             <div className="historia-header-left">
-              <div className="historia-eyebrow">// Nossa História</div>
+              <div className="otd-rotulo">Nossa história</div>
               <h1 className="historia-title">
                 ANTES DE ESTRUTURAR<br />
                 O SEU NEGÓCIO<br />
@@ -462,7 +462,7 @@ export default function Historia({ onClose, onOpenQuiz }) {
 
           {/* QUEM ESTÁ POR TRÁS */}
           <div className="robson-section">
-            <div className="robson-eyebrow">// Quem está por trás</div>
+            <div className="otd-rotulo">Quem está por trás</div>
             <div className="robson-card">
               <div className="robson-photo-wrap">
                 <img src="/robson-santana.jpg" alt="Robson Sant Ana — Fundador da One Thank Digital" className="robson-photo" />
@@ -485,7 +485,7 @@ export default function Historia({ onClose, onOpenQuiz }) {
           {/* CTA */}
           <div className="historia-cta">
             <div>
-              <div className="cta-label">Diagnóstico Gratuito</div>
+              <div className="otd-rotulo">Diagnóstico gratuito</div>
               <div className="cta-title">
                 SUA EMPRESA<br />
                 ESTÁ PRONTA PARA<br />

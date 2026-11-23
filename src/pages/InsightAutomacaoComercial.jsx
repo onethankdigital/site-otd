@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function InsightAutomacaoComercial() {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -591,26 +592,7 @@ export default function InsightAutomacaoComercial() {
             </p>
           </section>
 
-          <section className="insight-faq-section">
-            <h2 className="insight-faq-title">Perguntas frequentes</h2>
-            <div>
-              {FAQS.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className={`insight-faq-item ${activeFaq === idx ? 'active' : ''}`}
-                  onClick={() => toggleFaq(idx)}
-                >
-                  <div className="insight-faq-q">
-                    <span>{faq.q}</span>
-                    <span className="insight-faq-icon">{activeFaq === idx ? '−' : '+'}</span>
-                  </div>
-                  <div className="insight-faq-a">
-                    {faq.a}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <Faq itens={FAQS} bloco />
 
           <div className="insight-cta-box">
             <div className="insight-cta-title">QUER SABER COMO ESTÁ A ESTRUTURA DIGITAL DA SUA EMPRESA HOJE?</div>

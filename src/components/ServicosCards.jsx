@@ -428,7 +428,7 @@ const ServicosCards = () => {
       <section className="servicos-section">
         <div className="servicos-inner">
           {/* Header */}
-          <div className="servicos-eyebrow">ESTRUTURA DIGITAL</div>
+          <div className="otd-rotulo">Estrutura digital</div>
           <div className="servicos-title">Não é comunicar mais. É estrutura que converte.</div>
           <p className="servicos-intro">Cada pilar abaixo é um ponto de contato entre você e seu próximo cliente.</p>
 

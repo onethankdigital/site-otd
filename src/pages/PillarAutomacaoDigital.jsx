@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function PillarAutomacaoDigital() {
   useEffect(() => {
@@ -988,17 +989,7 @@ export default function PillarAutomacaoDigital() {
               >conheça a implementação completa da OTD</a>.
             </p>
 
-            {/* FAQ SECTION */}
-            <section className="pillar-faq-section">
-              <h2 className="pillar-faq-title">Perguntas Frequentes</h2>
-              
-              {FAQS.map((faq, index) => (
-                <article key={index} className="pillar-faq-item">
-                  <h3 className="pillar-faq-q">{faq.q}</h3>
-                  <p className="pillar-faq-a">{faq.a}</p>
-                </article>
-              ))}
-            </section>
+            <Faq itens={FAQS} bloco titulo="O que você ainda pergunta sobre" destaque="automação digital" />
 
             {/* TRIADA OTD */}
             <div className="pillar-callout">

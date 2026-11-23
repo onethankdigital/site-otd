@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 export default function PillarGoogleMeuNegocio() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -500,7 +501,7 @@ export default function PillarGoogleMeuNegocio() {
               <span>Google Meu Negócio & SEO Local</span>
             </nav>
 
-            <span className="gmn-tag">Guia Técnico · Pilar 01</span>
+            <span className="otd-rotulo">Guia técnico · Pilar 01</span>
             <h1 className="gmn-h1">SEO Local & Google Meu Negócio: Domínio no Google Maps (Guia Prático B2B)</h1>
             <p className="gmn-lead">
               Neste manual prático da One Thank Digital, você vai entender como funciona a arquitetura semântica do Google Maps, como construir autoridade georreferenciada e como transformar buscas locais de alta intenção em ligações, pedidos de rota e propostas comerciais em 2026.
@@ -642,7 +643,7 @@ export default function PillarGoogleMeuNegocio() {
           {/* HUB DE SATÉLITES CONECTADOS */}
           <section className="gmn-hub-section">
             <div className="gmn-hub-header">
-              <span className="gmn-hub-eyebrow">Ecossistema Hub-and-Spoke</span>
+              <span className="otd-rotulo">Conteúdos relacionados</span>
               <h2 className="gmn-hub-title">Aprofunde seu Conhecimento com Nossos Artigos Satélites</h2>
             </div>
             <div className="gmn-spokes-grid">
@@ -684,31 +685,7 @@ export default function PillarGoogleMeuNegocio() {
             </div>
           </section>
 
-          {/* FAQ ACORDEÃO */}
-          <section className="gmn-faq-section">
-            <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 36, color: '#fff', marginBottom: 24 }}>
-              Perguntas Frequentes sobre SEO Local
-            </h2>
-            <div>
-              {FAQS.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div className="gmn-faq-item" key={idx}>
-                    <div
-                      className="gmn-faq-q"
-                      onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    >
-                      <span>{faq.q}</span>
-                      <span className="gmn-faq-icon">{isOpen ? '−' : '+'}</span>
-                    </div>
-                    <div className="gmn-faq-a" style={{ display: isOpen ? 'block' : 'block' }}>
-                      {faq.a}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <Faq itens={FAQS} bloco titulo="O que você ainda pergunta sobre" destaque="SEO local" />
 
           {/* CTA FINAL */}
           <section className="gmn-cta">
