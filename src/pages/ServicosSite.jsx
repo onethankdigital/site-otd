@@ -1,352 +1,785 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ComoFunciona, SimuladorIA, SimuladorEstrutura, Jornada, Prova, Investimento, FaqLinks, CtaFinal, PaginaServico } from '../components/servico2/blocos';
-
-const FAQS = [
-  {
-    q: "O site é feito com inteligência artificial?",
-    a: "A IA acelera o desenvolvimento, mas não substitui o trabalho técnico. Estrutura, textos e código são revisados por nós antes de ir ao ar, e o site sai preparado para o Google e para as buscas por IA."
-  },
-  {
-    q: "Por que meu site tem visitas mas não gera clientes?",
-    a: "Visitas sem contato costumam indicar problema de comunicação, não de tráfego. Se a primeira tela não diz o que você resolve, se não há um botão claro para falar com você ou se o site demora no celular, a maioria das pessoas vai embora antes de ler."
-  },
-  {
-    q: "Vale mais ter site ou só Instagram para empresa B2B?",
-    a: "O Instagram é terreno alugado: o algoritmo muda, o alcance cai e a conta pode ser suspensa. O site é território próprio: você controla os dados, a experiência e o posicionamento no Google. O Instagram amplifica. O site converte."
-  },
-  {
-    q: "Quanto tempo leva para desenvolver um site profissional?",
-    a: "Entre 3 e 6 semanas, conforme a complexidade. Sites institucionais para escritórios e clínicas costumam ficar prontos em cerca de 3 semanas. Projetos com blog, área de membros ou e-commerce levam de 4 a 6 semanas."
-  },
-  {
-    q: "O site já vem otimizado para o Google?",
-    a: "Sim. Todo site entregue pela One Thank Digital inclui estrutura semântica, títulos e descrições, dados estruturados (Schema.org), sitemap, robots.txt e meta de 90 ou mais no PageSpeed para celular. O próprio site da OTD está com 97."
-  },
-  {
-    q: "Preciso pagar hospedagem separadamente?",
-    a: "A hospedagem é configurada e entregue por nós com o projeto. Usamos servidores com SSL, CDN e backups automáticos. O custo mensal de manutenção é discutido no diagnóstico conforme o escopo do projeto."
-  }
-];
-
-const PIECES = [
-  { n: 1, t: "Mensagem clara na primeira tela", w: "Em 3 segundos o cliente entende o que você resolve, para quem e onde. Nada de “Bem-vindo ao nosso site”.", tech: "proposta de valor e arquitetura de conversão" },
-  { n: 2, t: "Rápido no celular", w: "É no celular que o cliente pesquisa. Site leve abre antes de ele desistir, e o Google prefere páginas rápidas.", tech: "performance e Core Web Vitals" },
-  { n: 3, t: "Prova e confiança", w: "Avaliações reais, casos e quem está por trás da empresa. O cliente confia antes de chamar.", tech: "prova social e autoridade" },
-  { n: 4, t: "Contato sem atrito", w: "WhatsApp em um toque e formulário curto, ligados ao seu atendimento. Nenhum contato se perde.", tech: "CTA, integração e CRM" }
-];
-const CONV = ["0,4%", "1%", "1,8%", "2,7%", "3,5%"];
-const FILL = [8, 30, 55, 78, 100];
-
-const SEGMENTS = {
-  cont: { label: "Contabilidade", link: ["/segmentos/escritorios-de-contabilidade/", "Ver como atendemos escritórios de contabilidade"], q: [["Abertura de empresa", "Serviço"], ["Troca de contador", "Serviço"], ["Contabilidade para MEI", "Serviço"], ["Quanto custa abrir uma empresa?", "Dúvida"], ["Quando devo sair do MEI?", "Dúvida"], ["Clientes atendidos e equipe", "Confiança"]] },
-  adv: { label: "Advocacia", link: ["/segmentos/escritorios-de-advocacia/", "Ver como atendemos escritórios de advocacia"], q: [["Direito trabalhista", "Serviço"], ["Direito de família", "Serviço"], ["Direito previdenciário", "Serviço"], ["O que levar na primeira consulta?", "Dúvida"], ["Como funciona o inventário?", "Dúvida"], ["Equipe e registro na OAB", "Confiança"]] },
-  cli: { label: "Clínicas", link: ["/segmentos/clinicas-e-consultorios/", "Ver como atendemos clínicas e consultórios"], q: [["Especialidades e exames", "Serviço"], ["Convênios aceitos", "Serviço"], ["Agendamento on-line", "Serviço"], ["Como me preparar para o exame?", "Dúvida"], ["Quanto tempo dura o tratamento?", "Dúvida"], ["Corpo clínico e registros", "Confiança"]] },
-  b2b: { label: "Indústria e B2B", link: ["/diagnostico/", "Fazer o diagnóstico da sua empresa"], q: [["Linha de produtos", "Serviço"], ["Sob medida e lotes", "Serviço"], ["Pedido de orçamento", "Serviço"], ["Qual o prazo de produção?", "Dúvida"], ["Atendem lote pequeno?", "Dúvida"], ["Clientes, certificações e fábrica", "Confiança"]] }
-};
-const KIND = { 'Serviço': 'página de serviço', 'Dúvida': 'pergunta frequente', 'Confiança': 'prova de confiança' };
-
-const FASES = [
-  {
-    when: 'Semana 1', t: 'Estratégia', x0: 0, x1: 333,
-    resumo: 'Antes de qualquer código, definimos o que o site precisa dizer e para quem.',
-    entrega: ['Diagnóstico do site atual e dos concorrentes da região', 'Mapa das páginas e das buscas de cada serviço', 'Textos com base nas informações reais da sua empresa', 'Layout aprovado por você antes do desenvolvimento'],
-    ve: 'O mapa do site e o layout para você aprovar.'
-  },
-  {
-    when: 'Semanas 2 a 4', t: 'Desenvolvimento com IA', x0: 333, x1: 666,
-    resumo: 'A IA acelera o trabalho braçal; cada página é revisada por quem entende de código, busca e conversão.',
-    entrega: ['Site desenvolvido com IA e revisado página por página', 'Rápido no celular, com meta de 90 ou mais no PageSpeed', 'SEO técnico, dados estruturados e llms.txt', 'WhatsApp e formulário ligados ao seu atendimento'],
-    ve: 'Uma versão de teste para você navegar e pedir ajustes.'
-  },
-  {
-    when: 'Semana 5 em diante', t: 'No ar e evoluindo', x0: 666, x1: 1000,
-    resumo: 'O site entra no ar medido desde o primeiro dia, e melhora com o que os dados mostram.',
-    entrega: ['Publicação com domínio e SSL configurados', 'Google Search Console e Analytics ligados', 'Ajustes a partir das primeiras visitas e contatos', 'Manutenção e melhorias conforme o plano combinado'],
-    ve: 'Relatório com visitas, contatos e a nota de desempenho do site.'
-  }
-];
-
-const ST_CSS = `
-  .seo2 .phone{width:100%;max-width:330px;margin:0 auto;background:#111;border-radius:30px;padding:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7),inset 0 0 0 1px #2a2a2e}
-  .seo2 .phone-in{background:#fff;color:#202124;border-radius:22px;overflow:hidden;min-height:430px;display:flex;flex-direction:column;font-family:Arial,Helvetica,sans-serif}
-  .seo2 .ph-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f1f3f4;font-size:11px;color:#5f6368}
-  .seo2 .ph-url{flex:1;background:#fff;border-radius:999px;padding:3px 10px}
-  .seo2 .ph-score{flex:none;font-weight:700;border-radius:999px;padding:2px 8px;font-size:11px;color:#fff}
-  .seo2 .ph-score.bad{background:#d93025}
-  .seo2 .ph-score.ok{background:#f29900}
-  .seo2 .ph-score.good{background:#188038}
-  .seo2 .ph-load{flex:1;display:grid;place-items:center;align-content:center;gap:10px;color:#80868b;font-size:13px;padding:20px;text-align:center}
-  .seo2 .ph-spin{width:34px;height:34px;border-radius:50%;border:4px solid #e8eaed;border-top-color:#9aa0a6;animation:seo2spin 1s linear infinite}
-  @keyframes seo2spin{to{transform:rotate(360deg)}}
-  .seo2 .ph-hero{padding:18px 16px;background:linear-gradient(160deg,#1f2937,#111827);color:#fff}
-  .seo2 .ph-hero.old{background:#cfd8dc;color:#455a64}
-  .seo2 .ph-hero h4{margin:0 0 6px;font-size:19px;line-height:1.2;font-family:Arial,Helvetica,sans-serif}
-  .seo2 .ph-hero p{font-size:12.5px;opacity:.85;margin:0}
-  .seo2 .ph-cta{display:inline-block;margin-top:12px;background:#25d366;color:#fff;font-weight:700;font-size:13px;padding:8px 12px;border-radius:8px}
-  .seo2 .ph-sec{padding:12px 16px;border-bottom:1px solid #f1f3f4;font-size:12.5px}
-  .seo2 .ph-sec b{display:block;font-size:13px;margin-bottom:2px}
-  .seo2 .ph-trust{display:flex;align-items:center;gap:8px;font-size:12px;color:#5f6368}
-  .seo2 .ph-trust .st{color:#f5a623;letter-spacing:1px}
-  .seo2 .ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
-  .seo2 .ph-grid span{background:#f1f3f4;border-radius:6px;padding:6px 8px;font-size:11.5px}
-  .seo2 .ph-old{padding:14px 16px;font-size:12.5px;color:#5f6368}
-  .seo2 .ph-old .blk{height:8px;background:#e8eaed;border-radius:4px;margin:6px 0}
-  .seo2 .ph-wa{margin:auto 12px 12px;background:#25d366;color:#fff;border-radius:10px;padding:10px;text-align:center;font-weight:700;font-size:13px}
-  .seo2 .ph-form{margin:auto 12px 12px;border:1px dashed #dadce0;border-radius:10px;padding:10px;text-align:center;font-size:12px;color:#80868b}
-  .seo2 .lab4-preview .phone{max-width:300px}
-  .seo2 .lab4-preview .phone-in{min-height:400px}
-  @media (max-width:860px){
-    .seo2 .phone{max-width:280px}
-    .seo2 .phone-in,.seo2 .lab4-preview .phone-in{min-height:0}
-    .seo2 .lab4-preview .phone{max-width:240px}
-    .seo2 .lab4-preview .ph-sec:nth-of-type(n+3){display:none}
-  }
-`;
-
-function SiteHero() {
-  const [v, setV] = useState('hoje');
-  const [touched, setTouched] = useState(false);
-  useEffect(() => {
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce || touched) return undefined;
-    const t = setTimeout(() => setV('com'), 3000);
-    return () => clearTimeout(t);
-  }, [touched]);
-  const com = v === 'com';
-  return (
-    <div className="serp-box">
-      <div className="segc" role="tablist" aria-label="Comparar site">
-        <button type="button" role="tab" aria-selected={!com} onClick={() => { setTouched(true); setV('hoje'); }}>Site que só existe</button>
-        <button type="button" role="tab" aria-selected={com} onClick={() => { setTouched(true); setV('com'); }}>Site que trabalha</button>
-      </div>
-      <div className="phone" aria-live="polite">
-        <div className="phone-in">
-          <div className="ph-bar">
-            <span className="ph-url">suacontabilidade.com.br</span>
-            <span className={'ph-score ' + (com ? 'good' : 'bad')}>{com ? '97 · 1,2 s' : '31 · 8,4 s'}</span>
-          </div>
-          {com ? (
-            <>
-              <div className="ph-hero">
-                <h4>Abertura de empresa em Santo André em até 7 dias</h4>
-                <p>Contabilidade para MEI, Simples Nacional e prestadores de serviço.</p>
-                <span className="ph-cta">Falar no WhatsApp agora</span>
-              </div>
-              <div className="ph-sec ph-trust"><span className="st">★★★★★</span> 4,9 no Google · 87 avaliações</div>
-              <div className="ph-sec"><b>Como funciona</b>1. Conversa de 15 minutos · 2. Documentos · 3. CNPJ pronto</div>
-              <div className="ph-sec"><b>Perguntas frequentes</b>Quanto custa abrir uma empresa? ▾</div>
-            </>
-          ) : (
-            <>
-              <div className="ph-load"><span className="ph-spin" aria-hidden="true" />Carregando… a página ainda não abriu.<br />Muita gente já desistiu e voltou ao Google.</div>
-              <div className="ph-hero old"><h4>Bem-vindo ao nosso site</h4><p>Somos uma empresa séria e comprometida.</p></div>
-            </>
-          )}
-        </div>
-      </div>
-      <div className="cap">Exemplo ilustrativo · nota de desempenho no celular e tempo de carregamento</div>
-    </div>
-  );
-}
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function ServicosSite() {
-  const [on, setOn] = useState({ 1: true, 2: false, 3: false, 4: false });
-  const [seg, setSeg] = useState('cont');
-  const n = Object.values(on).filter(Boolean).length;
-  const toggle = (k) => setOn((o) => ({ ...o, [k]: !o[k] }));
-  const S = SEGMENTS[seg];
+  const [activeFaq, setActiveFaq] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const toggleFaq = (index) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
+
+  const FAQS = [
+    {
+      q: "O site é feito com inteligência artificial?",
+      a: "A IA acelera o desenvolvimento, mas não substitui o trabalho técnico. Estrutura, textos e código são revisados por nós antes de ir ao ar, e o site sai preparado para o Google e para as buscas por IA."
+    },
+    {
+      q: "Por que meu site tem visitas mas não gera clientes?",
+      a: "Visitas sem conversão indicam problema de comunicação, não de tráfego. Se o site não fala a dor do cliente na primeira tela, não tem CTA claro ou carrega lento no celular, 70% dos visitantes vão embora antes de ler qualquer coisa."
+    },
+    {
+      q: "Vale mais ter site ou só Instagram para empresa B2B?",
+      a: "Instagram é terreno alugado — o algoritmo muda, o alcance cai, a conta pode ser suspensa. Seu site é território próprio: você controla os dados, a experiência e o rankeamento no Google. O Instagram amplifica. O site converte."
+    },
+    {
+      q: "Quanto tempo leva para desenvolver um site profissional?",
+      a: "Entre 3 e 6 semanas dependendo da complexidade. Sites institucionais para escritórios e clínicas ficam prontos em 3 semanas. Projetos com blog, área de membros ou e-commerce levam de 4 a 6 semanas."
+    },
+    {
+      q: "O site desenvolvido já vem otimizado para o Google?",
+      a: "Sim. Todo site entregue pela One Thank Digital inclui estrutura semântica HTML, meta tags otimizadas, Schema.org, sitemap.xml, robots.txt e velocidade acima de 90 no PageSpeed — prontos para indexação."
+    },
+    {
+      q: "Preciso pagar hospedagem separadamente?",
+      a: "A hospedagem é configurada e entregue por nós com o projeto. Usamos servidores com SSL, CDN e backups automáticos. O custo mensal de manutenção é discutido no diagnóstico conforme o escopo do projeto."
+    }
+  ];
 
   return (
-    <PaginaServico>
-      <style>{ST_CSS}</style>
-      <Helmet>
-        <title>Criação de Sites Profissionais B2B | One Thank Digital</title>
-        <meta name="description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
-        <meta property="og:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
-        <meta property="og:description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://onethank.com.br/servicos/criacao-de-sites/" />
-        <meta property="og:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
-        <meta property="twitter:description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
-        <meta property="twitter:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
-        <link rel="canonical" href="https://onethank.com.br/servicos/criacao-de-sites/" />
-        <script type="application/ld+json">
-          {JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": FAQS.map(faq => ({ "@type": "Question", "name": faq.q, "acceptedAnswer": { "@type": "Answer", "text": faq.a } }))
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Criação de Sites B2B Desenvolvidos com IA",
-              "provider": { "@type": "LocalBusiness", "name": "One Thank Digital", "address": { "@type": "PostalAddress", "addressLocality": "Santo André", "addressRegion": "SP" } },
-              "areaServed": [{ "@type": "City", "name": "Santo André" }, { "@type": "City", "name": "São Bernardo do Campo" }, { "@type": "City", "name": "São Caetano do Sul" }],
-              "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceType": "https://schema.org/MinimumBasePrice" }, "availability": "https://schema.org/InStock" }
-            }
-          ])}
-        </script>
-      </Helmet>
+    <>
+      <style>{`
+        .lp-wrap {
+          background: #000000;
+          min-height: 100vh;
+          font-family: 'DM Sans', sans-serif;
+          color: #ffffff;
+          padding-top: 120px;
+        }
 
-      {/* TOPO com simulação do site */}
-      <section style={{ borderTop: 0, paddingTop: 40 }}>
-        <div className="wrap head-grid">
-          <div>
-            <h1 className="eyebrow">Criação de sites profissionais para empresas B2B no ABC Paulista</h1>
-            <p className="display">Seu site <em>traz cliente</em> ou só existe?</p>
-            <p className="lead">Desenvolvemos sites com IA, revisados página por página: rápidos no celular, claros na primeira tela e prontos para o Google e para as respostas das IAs.</p>
-            <div className="head-cta">
-              <a className="btn" href="/diagnostico/">Avaliar meu site atual →</a>
-              <small>Diagnóstico gratuito em 3 minutos</small>
+        .lp-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 24px;
+        }
+
+        /* HEADER */
+        .lp-header {
+          padding: 80px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .lp-label {
+          font-size: 12px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: #E0040B;
+          font-weight: 700;
+          margin-bottom: 24px;
+        }
+        .lp-h1 {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(48px, 6vw, 84px);
+          line-height: 1;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 32px;
+          max-width: 900px;
+        }
+        .lp-intro {
+          font-family: 'DM Sans', monospace;
+          font-size: clamp(14px, 1.1vw, 16px);
+          color: rgba(255,255,255,0.6);
+          line-height: 1.8;
+          max-width: 600px;
+        }
+
+        /* DOR */
+        .lp-dor-section {
+          padding: 100px 0;
+          background: #000000;
+        }
+        .lp-section-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(36px, 4vw, 56px);
+          line-height: 1;
+          letter-spacing: 1px;
+          margin-bottom: 64px;
+          color: #ffffff;
+        }
+        .lp-dor-list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 32px;
+        }
+        @media (max-width: 900px) {
+          .lp-dor-list {
+            grid-template-columns: 1fr;
+          }
+        }
+        .lp-dor-item {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 40px 32px;
+          background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(20,0,0,0.95) 100%), url('/hero-bg.webp') center/cover;
+          border: 1px solid rgba(224,4,11,0.2);
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          position: relative;
+          overflow: hidden;
+          text-align: center;
+        }
+        .lp-dor-number {
+          display: none; /* Números removidos pois confundiam com a solução */
+        }
+        .lp-dor-item-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(24px, 2.5vw, 32px);
+          color: #E0040B;
+          line-height: 1.1;
+          letter-spacing: 1px;
+        }
+        .lp-dor-text {
+          font-family: 'DM Sans', sans-serif;
+          font-style: normal;
+          font-size: clamp(15px, 1.1vw, 16px);
+          line-height: 1.6;
+          color: rgba(255,255,255,0.8);
+          font-weight: 400;
+        }
+
+        /* SHOWCASE */
+        .lp-showcase-section {
+          padding: 100px 0;
+          background: #000000;
+          position: relative;
+          overflow: hidden;
+        }
+        .lp-showcase-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+        @media (max-width: 900px) {
+          .lp-showcase-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+          .lp-showcase-grid.reverse {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+        }
+        .lp-showcase-content-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(36px, 4vw, 54px);
+          color: #ffffff;
+          margin-bottom: 24px;
+          line-height: 1;
+        }
+        .lp-showcase-content-title span {
+          color: #E0040B;
+        }
+        .lp-showcase-content-text {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 18px;
+          color: rgba(255,255,255,0.7);
+          line-height: 1.6;
+        }
+        .lp-showcase-image-wrapper {
+          position: relative;
+          border-radius: 12px;
+          padding: 8px;
+          background: rgba(255,255,255,0.02);
+          border: 1px solid rgba(255,255,255,0.05);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 0 80px rgba(224,4,11,0.15);
+        }
+        .lp-showcase-image-wrapper img {
+          width: 100%;
+          border-radius: 8px;
+          display: block;
+        }
+
+        /* SOLUCAO */
+        .lp-solucao-section {
+          padding: 100px 0;
+          background: #0a0a0a;
+        }
+        .lp-solucao-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
+        }
+        .lp-solucao-card {
+          position: relative;
+          padding: 40px 32px;
+          background: rgba(255,255,255,0.02);
+          border-radius: 8px;
+          border: 1px solid rgba(0, 200, 83, 0.4);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          overflow: hidden;
+        }
+        .lp-solucao-ghost {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: 120px;
+          line-height: 0.8;
+          color: rgba(255,255,255,0.03);
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          pointer-events: none;
+        }
+        .lp-solucao-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(24px, 2.5vw, 32px);
+          color: #ffffff;
+          line-height: 1.1;
+          letter-spacing: 1px;
+          margin-top: 80px;
+          margin-bottom: 0;
+          position: relative;
+          z-index: 1;
+        }
+        .lp-solucao-desc {
+          font-family: 'DM Sans', sans-serif;
+          font-size: clamp(15px, 1.1vw, 16px);
+          color: rgba(255,255,255,0.8);
+          line-height: 1.6;
+          position: relative;
+          z-index: 1;
+        }
+
+        .lp-internal-link {
+          margin-top: 56px;
+          font-family: 'DM Sans', monospace;
+          font-size: 15px;
+          color: rgba(255,255,255,0.6);
+          line-height: 1.7;
+          text-align: center;
+        }
+        .lp-internal-link a {
+          color: #e02020;
+          text-decoration: none;
+        }
+        .lp-internal-link a:hover {
+          text-decoration: underline;
+        }
+
+        /* ROI */
+        .lp-roi-section {
+          padding: 100px 0;
+          background: #000000;
+        }
+        .lp-roi-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
+        }
+        .lp-roi-number {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(64px, 8vw, 100px);
+          color: #E0040B;
+          line-height: 1;
+          margin-bottom: 16px;
+        }
+        .lp-roi-title {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: #ffffff;
+          margin-bottom: 16px;
+        }
+        .lp-roi-desc {
+          font-family: 'DM Sans', monospace;
+          font-size: 14px;
+          color: rgba(255,255,255,0.5);
+          line-height: 1.7;
+        }
+
+        /* INVESTIMENTO */
+        .lp-invest-section {
+          padding: 80px 0;
+          background: #000000;
+        }
+        .lp-invest-box {
+          border: 1px solid rgba(224, 4, 11, 0.3);
+          background: rgba(224, 4, 11, 0.02);
+          padding: 56px;
+          border-radius: 8px;
+          text-align: center;
+        }
+        .lp-invest-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(32px, 4vw, 48px);
+          letter-spacing: 1px;
+          margin-bottom: 24px;
+          color: #ffffff;
+        }
+        .lp-invest-text {
+          font-family: 'DM Sans', monospace;
+          font-size: clamp(15px, 1.5vw, 18px);
+          color: rgba(255,255,255,0.7);
+          line-height: 1.8;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        /* OUTROS SERVIÇOS PILLS */
+        .lp-other-services {
+          margin-top: 120px;
+          padding-top: 60px;
+          border-top: 1px solid rgba(255,255,255,0.05);
+          text-align: center;
+        }
+        .lp-other-services-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: 24px;
+          color: rgba(255,255,255,0.3);
+          margin-bottom: 32px;
+          letter-spacing: 1px;
+        }
+        .lp-other-services-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          justify-content: center;
+        }
+        .lp-other-services-btn {
+          border: 1px solid rgba(255,255,255,0.15);
+          color: rgba(255,255,255,0.7);
+          padding: 12px 24px;
+          border-radius: 40px;
+          text-decoration: none;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 13px;
+          letter-spacing: 1px;
+          transition: all 0.3s;
+        }
+        .lp-other-services-btn:hover {
+          border-color: #E0040B;
+          color: #ffffff;
+          background: rgba(224,4,11,0.1);
+        }
+
+        /* CASES CTA */
+        .lp-cases-section {
+          padding: 80px 0;
+          background: #050505;
+          border-top: 1px solid rgba(224,4,11,0.2);
+          border-bottom: 1px solid rgba(224,4,11,0.2);
+          text-align: center;
+        }
+        .lp-cases-title {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(32px, 4vw, 48px);
+          color: #ffffff;
+          margin-bottom: 16px;
+          letter-spacing: 1px;
+        }
+        .lp-cases-title span {
+          color: #E0040B;
+        }
+        .lp-cases-desc {
+          font-family: 'DM Sans', monospace;
+          font-size: 15px;
+          color: rgba(255,255,255,0.6);
+          max-width: 600px;
+          margin: 0 auto 32px auto;
+          line-height: 1.6;
+        }
+
+        /* FAQ */
+        .lp-faq-section {
+          padding: 100px 0;
+          background: #000000;
+        }
+        .lp-faq-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: flex-start;
+        }
+        @media (max-width: 900px) {
+          .lp-faq-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+        }
+        .lp-faq-title {
+          font-family: var(--font-drama, 'Playfair Display', serif);
+          font-style: italic;
+          font-size: clamp(32px, 4vw, 48px);
+          margin-bottom: 48px;
+        }
+        .lp-faq-title em {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-style: normal;
+          color: #E0040B;
+        }
+        .lp-faq-item {
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .lp-faq-q {
+          padding: 32px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          font-size: clamp(16px, 1.5vw, 20px);
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+        .lp-faq-q:hover {
+          color: #E0040B;
+        }
+        .lp-faq-icon {
+          font-size: 24px;
+          font-weight: 300;
+          color: #E0040B;
+          transition: transform 0.3s ease;
+        }
+        .lp-faq-a {
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.4s ease;
+          font-family: 'DM Sans', monospace;
+          color: rgba(255,255,255,0.6);
+          font-size: 15px;
+          line-height: 1.7;
+        }
+        .lp-faq-item.active .lp-faq-a {
+          max-height: 200px;
+          padding-bottom: 32px;
+        }
+        .lp-faq-item.active .lp-faq-icon {
+          transform: rotate(45deg);
+        }
+
+        /* CTA */
+        .lp-cta-section {
+          padding: 100px 0;
+          background: #050505;
+          text-align: center;
+          border-top: 1px solid rgba(224,4,11,0.2);
+        }
+        .lp-cta-text {
+          font-family: var(--font-heading, 'Bebas Neue', sans-serif);
+          font-size: clamp(36px, 4vw, 64px);
+          margin-bottom: 40px;
+        }
+        .lp-cta-text em {
+          color: #E0040B;
+          font-style: normal;
+        }
+        .lp-btn {
+          display: inline-block;
+          background: #E0040B;
+          color: #fff;
+          font-weight: 700;
+          font-size: 13px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          padding: 20px 40px;
+          border-radius: 4px;
+          text-decoration: none;
+          transition: background 0.3s, transform 0.3s;
+        }
+        .lp-btn:hover {
+          background: #b80309;
+          transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+          .lp-solucao-grid { grid-template-columns: 1fr; }
+          .lp-roi-grid { grid-template-columns: 1fr; }
+          .lp-dor-item { flex-direction: column; gap: 12px; }
+          .lp-faq-item.active .lp-faq-a { max-height: 400px; }
+          .lp-invest-box { padding: 32px 24px; }
+        }
+      `}</style>
+
+      <Navbar
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
+      />
+
+      <div className="lp-wrap">
+        <Helmet>
+          <title>Criação de Sites Profissionais B2B | One Thank Digital</title>
+          <meta name="description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
+          <meta property="og:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
+          <meta property="og:description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://onethank.com.br/servicos/criacao-de-sites/" />
+          <meta property="og:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:title" content="Site Profissional para Empresas B2B | One Thank Digital" />
+          <meta property="twitter:description" content="Sites de alta conversão desenvolvidos com IA para empresas B2B do ABC Paulista: rápidos, com SEO técnico e prontos para serem citados pelo Google e pelas IAs." />
+          <meta property="twitter:image" content="https://onethank.com.br/hero-desenvolvimento-web.webp" />
+          <link rel="canonical" href="https://onethank.com.br/servicos/criacao-de-sites/" />
+          <script type="application/ld+json">
+            {JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": FAQS.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.q,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.a
+                  }
+                }))
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "Criação de Sites B2B Desenvolvidos com IA",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "One Thank Digital",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Santo André",
+                    "addressRegion": "SP"
+                  }
+                },
+                "areaServed": [
+                  { "@type": "City", "name": "Santo André" },
+                  { "@type": "City", "name": "São Bernardo do Campo" },
+                  { "@type": "City", "name": "São Caetano do Sul" }
+                ],
+                "offers": {
+                  "@type": "Offer",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceType": "https://schema.org/MinimumBasePrice"
+                  },
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            ])}
+          </script>
+        </Helmet>
+
+        {/* HEADER */}
+        <section className="lp-header">
+          <div className="lp-container">
+            <div className="lp-label">// DESENVOLVIMENTO DE SITES CORPORATIVOS DE ALTA PERFORMANCE</div>
+            <h1 className="lp-h1">DESENVOLVIMENTO DE SITE PROFISSIONAL PARA EMPRESAS B2B EM SANTO ANDRÉ</h1>
+            <p className="lp-intro">
+              A One Thank Digital desenvolve sites de alta conversão para escritórios contábeis, clínicas e empresas B2B no ABC Paulista. Sites rápidos, mobile-first, com estrutura SEO desde o primeiro dia — para que sua empresa seja encontrada no Google e converta visitantes em clientes sem depender de anúncio. Desenvolvemos com IA, o que encurta o prazo de entrega sem abrir mão de revisão técnica em cada página.
+            </p>
+          </div>
+        </section>
+
+        {/* DOR */}
+        <section className="lp-dor-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">O PROBLEMA DE UM SITE ULTRAPASSADO.</h2>
+            <div className="lp-dor-list">
+              <div className="lp-dor-item">
+                <div className="lp-dor-number">01</div>
+                <h3 className="lp-dor-item-title">DESCONFIANÇA B2B</h3>
+                <div className="lp-dor-text">Seu site existe mas não gera contatos — os visitantes chegam e saem sem tomar nenhuma ação.</div>
+              </div>
+              <div className="lp-dor-item">
+                <div className="lp-dor-number">02</div>
+                <h3 className="lp-dor-item-title">REFÉM DE REDE SOCIAL</h3>
+                <div className="lp-dor-text">Você depende do Instagram para captar clientes, mas não controla o algoritmo nem os dados de quem te visita.</div>
+              </div>
+              <div className="lp-dor-item">
+                <div className="lp-dor-number">03</div>
+                <h3 className="lp-dor-item-title">VAZAMENTO DE TRÁFEGO</h3>
+                <div className="lp-dor-text">Seu site demora para carregar no celular e perde 70% dos visitantes antes de lerem a primeira linha.</div>
+              </div>
             </div>
           </div>
-          <SiteHero />
-        </div>
-      </section>
+        </section>
 
-      <ComoFunciona atual="site" />
-
-      {/* O QUE FAZEMOS (interativo) */}
-      <section>
-        <div className="wrap">
-          <p className="eyebrow">O que fazemos</p>
-          <h2>Ative cada etapa e veja <em>seu site virar vendedor</em></h2>
-          <p className="lead" style={{ marginTop: 14 }}>Um site que gera contato tem quatro partes. Toque em cada uma e veja, ao lado, o que o cliente passa a encontrar.</p>
-          <div className="lab4">
-            <div className="lab4-preview" aria-live="polite">
-              <div className="meter-top"><span>Visitas que viram contato (ilustrativo)</span><b>{CONV[n]}</b></div>
-              <div className="meter-bar"><i style={{ width: FILL[n] + '%' }} /></div>
-              <div className="chips">
-                <span className={'chip' + (on[2] ? ' on' : '')}>Rápido no celular</span>
-                <span className={'chip' + (on[3] ? ' on' : '')}>Passa confiança</span>
-                <span className={'chip' + (on[4] ? ' on' : '')}>Contato em 1 toque</span>
-              </div>
-              <div className="phone" style={{ marginTop: 16 }}>
-                <div className="phone-in">
-                  <div className="ph-bar">
-                    <span className="ph-url">suacontabilidade.com.br</span>
-                    <span className={'ph-score ' + (on[2] ? 'good' : 'bad')}>{on[2] ? '97 · 1,2 s' : '34 · 7,9 s'}</span>
-                  </div>
-                  {on[1] ? (
-                    <div className="ph-hero">
-                      <h4>Abertura de empresa em Santo André em até 7 dias</h4>
-                      <p>Contabilidade para MEI, Simples Nacional e prestadores de serviço.</p>
-                      {on[4] && <span className="ph-cta">Falar no WhatsApp agora</span>}
-                    </div>
-                  ) : (
-                    <div className="ph-hero old"><h4>Bem-vindo ao nosso site</h4><p>Somos uma empresa séria e comprometida com nossos clientes.</p></div>
-                  )}
-                  {on[3] ? (
-                    <>
-                      <div className="ph-sec ph-trust"><span className="st">★★★★★</span> 4,9 no Google · 87 avaliações</div>
-                      <div className="ph-sec"><b>Quem cuida da sua empresa</b><div className="ph-grid"><span>12 anos no ABC</span><span>+300 empresas abertas</span></div></div>
-                    </>
-                  ) : (
-                    <div className="ph-old"><div className="blk" style={{ width: '90%' }} /><div className="blk" style={{ width: '70%' }} /><div className="blk" style={{ width: '80%' }} /></div>
-                  )}
-                  {on[4] ? <div className="ph-wa">WhatsApp · resposta na hora</div> : <div className="ph-form">Formulário com 9 campos · “responderemos em breve”</div>}
+        {/* SHOWCASE B2B */}
+        <section className="lp-showcase-section">
+          <div className="lp-container">
+            <div className="lp-showcase-grid">
+              <div className="lp-showcase-content">
+                <h2 className="lp-showcase-content-title">O VENDEDOR QUE <span>NUNCA DORME.</span></h2>
+                <div className="lp-showcase-content-text">
+                  Você confiaria milhões a uma empresa B2B que não tem um site profissional? Seu site não é um "cartão de visitas digital". Ele é a infraestrutura principal do seu negócio na internet.<br /><br />
+                  Ele é o único vendedor da sua equipe que atende 1.000 pessoas simultaneamente, captura leads e trabalha 24 horas por dia, sábados e domingos, sem pedir aumento ou tirar férias. É o pilar inegociável da credibilidade.
                 </div>
               </div>
-              <div className="cap">Exemplo ilustrativo</div>
-            </div>
-            <div className="pieces" role="group" aria-label="Etapas do site">
-              {PIECES.map((p) => (
-                <button type="button" key={p.n} className="piece" aria-pressed={on[p.n]} onClick={() => toggle(p.n)}>
-                  <span className="sw" aria-hidden="true"><i /></span>
-                  <span className="pc">
-                    <span className="pn">Etapa {p.n}</span>
-                    <strong>{p.t}</strong>
-                    <span className="pw">{p.w}</span>
-                    <span className="pt">Termo técnico: {p.tech}</span>
-                  </span>
-                </button>
-              ))}
-              <div className="pieces-foot">
-                <button type="button" className="btn-ghost" onClick={() => setOn({ 1: true, 2: true, 3: true, 4: true })}>Ativar todas</button>
-                <button type="button" className="btn-ghost" onClick={() => setOn({ 1: false, 2: false, 3: false, 4: false })}>Recomeçar</button>
-                <span>{n} de 4 etapas ativas</span>
+              <div className="lp-showcase-image-wrapper">
+                <img src="/servico-website.webp" alt="Criação de Sites OTD" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
-          <div className="mid-cta">
-            <a className="btn" href="/diagnostico/">Quero um site assim →</a>
-            <small>Diagnóstico gratuito, resultado na hora</small>
+        </section>
+
+        {/* SOLUÇÃO */}
+        <section className="lp-solucao-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">COMO DESENVOLVEMOS SEU SITE B2B.</h2>
+            <div className="lp-solucao-grid">
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">01</div>
+                <div className="lp-solucao-title">ARQUITETURA DE CONVERSÃO</div>
+                <div className="lp-solucao-desc">Estruturamos cada página para comunicar a dor do cliente na primeira tela, guiar a leitura e converter com CTA claro — sem deixar dúvida sobre o próximo passo.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">02</div>
+                <div className="lp-solucao-title">SEO TÉCNICO DESDE O DIA 1</div>
+                <div className="lp-solucao-desc">Desenvolvemos com estrutura semântica correta, velocidade acima de 90 no PageSpeed, Schema.org e sitemap configurados para indexação imediata pelo Google e AI Overview.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">03</div>
+                <div className="lp-solucao-title">MOBILE-FIRST E PERFORMANCE</div>
+                <div className="lp-solucao-desc">Todo site é desenvolvido prioritariamente para mobile, onde mais de 70% das buscas B2B locais acontecem, com carregamento abaixo de 3 segundos em 4G.</div>
+              </div>
+            </div>
+
+            <p className="lp-internal-link">
+              Um site bem estruturado potencializa o <a href="/servicos/google-meu-negocio/">Google Meu Negócio</a> e é a base para o <a href="/servicos/seo-trafego-organico/">rankeamento orgânico</a> da sua empresa.
+            </p>
+            <div style={{ textAlign: 'center', marginTop: '64px' }}>
+              <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* PÁGINAS POR SEGMENTO */}
-      <section className="light">
-        <div className="wrap">
-          <p className="eyebrow">O que o seu site precisa ter</p>
-          <h2>Escolha o seu segmento e veja <em>as páginas que o cliente procura</em></h2>
-          <div className="tabs" role="tablist" aria-label="Segmento">
-            {Object.entries(SEGMENTS).map(([k, x]) => (
-              <button type="button" key={k} role="tab" aria-selected={seg === k} onClick={() => setSeg(k)}>{x.label}</button>
-            ))}
+
+
+        {/* IA */}
+        <section className="lp-solucao-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">COMO A IA ENTRA NO SEU SITE.</h2>
+            <div className="lp-solucao-grid">
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">01</div>
+                <div className="lp-solucao-title">DESENVOLVIDO COM IA</div>
+                <div className="lp-solucao-desc">Usamos IA no desenvolvimento para entregar em semanas o que antes levava meses. Estrutura, textos e código passam por revisão nossa antes de ir ao ar.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">02</div>
+                <div className="lp-solucao-title">PRONTO PARA SER CITADO</div>
+                <div className="lp-solucao-desc">Dados estruturados (Schema), perguntas frequentes e textos objetivos fazem o site ser entendido e citado pelo Google, pelo ChatGPT e pelo Gemini.</div>
+              </div>
+              <div className="lp-solucao-card">
+                <div className="lp-solucao-ghost">03</div>
+                <div className="lp-solucao-title">ATENDIMENTO CONECTADO</div>
+                <div className="lp-solucao-desc">O site pode se ligar a um agente de IA no WhatsApp, que responde e qualifica quem chega pelo site a qualquer hora.</div>
+              </div>
+            </div>
           </div>
-          <ul className="queries">
-            {S.q.map(([q, kind]) => (
-              <li key={q}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M8 8h8M8 12h8M8 16h5" /></svg>
-                <span>{q}</span>
-                <span className={'kind' + (kind === 'Dúvida' ? ' ia' : '')}>{KIND[kind]}</span>
-              </li>
-            ))}
-          </ul>
-          <a className="seg-link" href={S.link[0]}>{S.link[1]} →</a>
-        </div>
-      </section>
+        </section>
 
-      {/* BUSCA POR IA */}
-      <section className="aisec">
-        <SimuladorIA />
-      </section>
+        {/* ROI */}
+        <section className="lp-roi-section">
+          <div className="lp-container">
+            <h2 className="lp-section-title">O RETORNO DE UM SITE DE ALTA PERFORMANCE.</h2>
+            <div className="lp-roi-grid">
+              <div>
+                <div className="lp-roi-number">[90+]</div>
+                <div className="lp-roi-title">SCORE DE PERFORMANCE</div>
+                <div className="lp-roi-desc">Sites ultrarrápidos para evitar a fuga de visitantes em redes 4G.</div>
+              </div>
+              <div>
+                <div className="lp-roi-number">[70%]</div>
+                <div className="lp-roi-title">TRÁFEGO MOBILE-FIRST</div>
+                <div className="lp-roi-desc">Desenvolvido para a tela onde a maioria das decisões corporativas começam.</div>
+              </div>
+              <div>
+                <div className="lp-roi-number">[24H]</div>
+                <div className="lp-roi-title">VENDEDOR SILENCIOSO</div>
+                <div className="lp-roi-desc">Seu site apresenta portfólio, captura leads e trabalha incansavelmente fora do horário comercial.</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* ESTRUTURA DIGITAL */}
-      <section className="leaksec">
-        <SimuladorEstrutura atual="site" titulo={<>Site bonito não basta. <em>A estrutura traz o cliente.</em></>} />
-      </section>
+        {/* INVESTIMENTO */}
+        <section className="lp-invest-section">
+          <div className="lp-container">
+            <div className="lp-invest-box">
+              <h2 className="lp-invest-title">TRANSPARÊNCIA DE INVESTIMENTO</h2>
+              <div className="lp-invest-text">
+                Nós não montamos templates baratos. O investimento em Criação de Sites B2B é formatado após entender o tamanho do seu portfólio e complexidade da operação. O objetivo não é ser um custo estático, mas a construção do ativo digital mais importante da sua empresa, focado exclusivamente em conversão técnica.
+              </div>
+            </div>
 
-      {/* O QUE ESPERAR */}
-      <section>
-        <div className="wrap">
-          <Jornada fases={FASES} rotulo="CONTATOS PELO SITE (ILUSTRATIVO)" titulo={<>Do briefing ao site no ar. <em>Veja o que entregamos em cada fase</em></>} />
-        </div>
-      </section>
+            <div className="lp-other-services">
+              <div className="lp-other-services-title">APROFUNDE NO TEMA:</div>
+              <div className="lp-other-services-list">
+                <a href="/guia/desenvolvimento-web/" className="lp-other-services-btn">GUIA DE SITES B2B</a>
+                <a href="/insights/por-que-site-nao-aparece-google/" className="lp-other-services-btn">SITE NÃO APARECE NO GOOGLE?</a>
+                <a href="/insights/site-ou-instagram-qual-mais-importante/" className="lp-other-services-btn">SITE OU INSTAGRAM?</a>
+              </div>
+            </div>
 
-      <Prova />
+            <div className="lp-other-services">
+              <div className="lp-other-services-title">AVALIE OUTRAS ESTRUTURAS:</div>
+              <div className="lp-other-services-list">
+                <a href="/servicos/google-meu-negocio/" className="lp-other-services-btn">GOOGLE MEU NEGÓCIO</a>
+                <a href="/servicos/seo-trafego-organico/" className="lp-other-services-btn">SEO E TRÁFEGO ORGÂNICO</a>
+                <a href="/servicos/automacao-digital/" className="lp-other-services-btn">AUTOMAÇÃO E CRM</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <Investimento
-        titulo={<>Escopo fechado, <em>sem surpresa no meio do caminho</em></>}
-        texto="O valor depende do número de páginas, dos textos e das integrações. Depois do diagnóstico, você recebe a proposta com escopo, prazo e valor definidos, e aprova o layout antes de começarmos o desenvolvimento."
-        itens={[
-          ['Diagnóstico antes da proposta', 'Você sabe o que o site atual entrega antes de decidir.'],
-          ['Layout aprovado antes do código', 'Nada é desenvolvido sem a sua aprovação.'],
-          ['Meta de 90+ no celular', 'O site da própria OTD está com 97 no PageSpeed.']
-        ]}
+        {/* CASES CTA */}
+        <section className="lp-cases-section">
+          <div className="lp-container">
+            <h2 className="lp-cases-title">NÃO ACREDITE APENAS NA <span>NOSSA PALAVRA.</span></h2>
+            <div className="lp-cases-desc">Veja o padrão técnico dos projetos, sites e posicionamentos que já entregamos para escritórios, clínicas e indústrias do ABC Paulista.</div>
+            <a href="/cases/" className="lp-btn">VER PORTFÓLIO E CASES REAIS ↗</a>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="lp-faq-section">
+          <div className="lp-container lp-faq-grid">
+            <div>
+              <div className="lp-label">TIRE SUAS DÚVIDAS</div>
+              <h2 className="lp-faq-title">O que você <em>AINDA PERGUNTA.</em></h2>
+            </div>
+            <div>
+              {FAQS.map((faq, index) => (
+                <div
+                  key={index}
+                  className={"lp-faq-item " + (activeFaq === index ? "active" : "")}
+                >
+                  <h3 className="lp-faq-q" onClick={() => toggleFaq(index)}>
+                    {faq.q}
+                    <span className="lp-faq-icon">+</span>
+                  </h3>
+                  <div className="lp-faq-a">
+                    {faq.a}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="lp-cta-section">
+          <div className="lp-container">
+            <div className="lp-cta-text">
+              PRONTO PARA ESTRUTURAR <br /><em>O SEU SITE PROFISSIONAL</em>
+            </div>
+            <a href="/diagnostico/" className="lp-btn">AVALIAR MINHA ESTRUTURA →</a>
+          </div>
+        </section>
+      </div>
+
+      <Footer
+        onOpenQuiz={() => { window.location.href = '/diagnostico/'; }}
+        onOpenPilares={() => { window.location.href = '/pilares/'; }}
+        onOpenHistoria={() => { window.location.href = '/historia/'; }}
       />
-
-      <FaqLinks
-        atual="site"
-        faqs={FAQS}
-        aprofunde={[
-          ['/guia/desenvolvimento-web/', 'Guia de criação de sites B2B'],
-          ['/insights/quanto-custa-um-site-profissional/', 'Quanto custa um site profissional?'],
-          ['/insights/por-que-site-nao-aparece-google/', 'Por que o site não aparece no Google?'],
-          ['/insights/site-ou-instagram-qual-mais-importante/', 'Site ou Instagram?']
-        ]}
-      />
-
-      <CtaFinal
-        titulo={<>Seu site <em>trabalha</em> ou só existe?</>}
-        texto="Responda 20 perguntas em 3 minutos e receba o resultado por pilar, incluindo Presença Digital."
-        barra="Seu site traz cliente?"
-      />
-    </PaginaServico>
+    </>
   );
 }
