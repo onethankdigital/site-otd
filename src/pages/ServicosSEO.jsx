@@ -175,6 +175,121 @@ function SimuladorIA() {
   );
 }
 
+const PILARES = {
+  gmn: { role: 'Aparecer', t: 'Google Meu Negócio', d: 'no mapa e nas buscas por perto', leak: 'Quem procura no mapa encontra o concorrente.', href: '/servicos/google-meu-negocio/' },
+  seo: { role: 'Aparecer', t: 'SEO e busca por IA', d: 'no Google e nas respostas da IA', leak: 'Ninguém chega até o seu site pela pesquisa.', href: null },
+  site: { role: 'Convencer', t: 'Site', d: 'explica o serviço e gera confiança', leak: 'A visita chega, não entende o que você faz e vai embora.', href: '/servicos/criacao-de-sites/' },
+  auto: { role: 'Responder', t: 'Automação com IA', d: 'atende na hora, 24 horas por dia', leak: 'O contato chama às 21h, ninguém responde e ele fecha com outro.', href: '/servicos/automacao-digital/' }
+};
+
+function Wire({ state }) {
+  return (
+    <div className={'wire ' + state} aria-hidden="true">
+      <span className="p" /><span className="p" /><span className="p" />
+    </div>
+  );
+}
+
+function PilarNode({ k, cur, ligado, onFlip }) {
+  const p = PILARES[k];
+  return (
+    <button type="button" className={'lk-node' + (cur ? ' cur' : '')} aria-pressed={ligado} onClick={() => onFlip(k)}
+      aria-label={`${p.t}: ${ligado ? 'ligado' : 'desligado'}. Toque para ${ligado ? 'desligar' : 'ligar'}.`}>
+      {!ligado && <span className="lk-alert" aria-hidden="true">!</span>}
+      <span className="lk-top"><span className="lk-role">{p.role}</span><span className="sw" aria-hidden="true"><i /></span></span>
+      <strong>{p.t}</strong>
+      <small>{p.d}</small>
+    </button>
+  );
+}
+
+function SimuladorEstrutura() {
+  const [on, setOn] = useState({ gmn: true, seo: true, site: true, auto: true });
+  const flip = (k) => setOn((o) => ({ ...o, [k]: !o[k] }));
+
+  const entrada = (on.gmn ? 15 : 0) + (on.seo ? 25 : 0);
+  const contatos = Math.round(entrada * (on.site ? 0.45 : 0.08));
+  const clientes = Math.round(contatos * (on.auto ? 0.34 : 0.12));
+  const completo = on.gmn && on.seo && on.site && on.auto;
+  const leaks = Object.keys(PILARES).filter((k) => !on[k]);
+
+  const w2 = entrada === 0 ? 'dead' : (on.gmn && on.seo ? 'flow' : 'flow thin');
+  const w3 = entrada === 0 ? 'dead' : (on.site ? (w2.includes('thin') ? 'flow thin' : 'flow') : 'broken');
+  const w4 = entrada === 0 || !on.site ? 'dead' : (on.auto ? (w3.includes('thin') ? 'flow thin' : 'flow') : 'broken');
+
+
+  return (
+    <div className="wrap">
+      <div className="lk-head">
+        <p className="eyebrow">A estrutura digital</p>
+        <h2>SEO sozinho traz visita. <em>A estrutura traz cliente.</em></h2>
+        <p className="lead">Os quatro pilares trabalham juntos: aparecer, convencer e responder. Desligue um deles e veja onde o cliente escapa.</p>
+      </div>
+
+      <div className="lk-board">
+        <div className="lk-track">
+          <div className="lk-end">
+            <span className="dot"><Lupa c="#fff" s={22} /></span>
+            Pesquisa
+          </div>
+          <Wire state="flow" />
+          <div className="lk-entry">
+            <PilarNode k="gmn" ligado={on.gmn} onFlip={flip} />
+            <PilarNode k="seo" cur ligado={on.seo} onFlip={flip} />
+          </div>
+          <Wire state={w2} />
+          <PilarNode k="site" ligado={on.site} onFlip={flip} />
+          <Wire state={w3} />
+          <PilarNode k="auto" ligado={on.auto} onFlip={flip} />
+          <Wire state={w4} />
+          <div className={'lk-end' + (clientes > 0 ? ' win' : '') + (!completo ? ' low' : '')}>
+            <span className="dot"><b>{clientes}</b></span>
+            {clientes === 1 ? 'Cliente' : 'Clientes'}
+          </div>
+        </div>
+
+        <div className="lk-links">
+          {Object.entries(PILARES).map(([k, p]) => (
+            p.href
+              ? <a key={k} href={p.href}><b>{p.t} →</b>ver como funciona</a>
+              : <a key={k} href="#topo-seo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}><b>{p.t}</b>você está nesta página</a>
+          ))}
+        </div>
+
+        <div className="lk-out">
+          <div>
+            <div className="lk-funnel" aria-live="polite">
+              <div className="lk-f"><b>100</b><span>pesquisas</span></div>
+              <div className="lk-f"><b>{entrada}</b><span>encontram você</span></div>
+              <div className="lk-f"><b>{contatos}</b><span>entram em contato</span></div>
+              <div className={'lk-f last' + (!completo ? ' low' : '')}><b>{clientes}</b><span>viram clientes</span></div>
+            </div>
+            <p className="lk-note">Exemplo ilustrativo para mostrar a lógica. Os números reais dependem do segmento e da região.</p>
+          </div>
+          <div className={'lk-leaks' + (leaks.length ? ' bad' : '')} aria-live="polite">
+            {leaks.length ? (
+              <>
+                <h3>Onde o cliente está escapando</h3>
+                <ul>{leaks.map((k) => <li key={k}><b>Sem {PILARES[k].t}:</b> {PILARES[k].leak}</li>)}</ul>
+              </>
+            ) : (
+              <>
+                <h3>Estrutura completa</h3>
+                <p>Os quatro pilares ligados: quem pesquisa encontra, entende e é atendido na hora. Toque em um pilar para desligar e ver o vazamento.</p>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="lk-cta">
+        <p>O diagnóstico gratuito mostra o resultado de cada pilar na sua empresa.</p>
+        <a className="btn" href="/diagnostico/">Descobrir qual pilar está vazando →</a>
+      </div>
+    </div>
+  );
+}
+
 export default function ServicosSEO() {
   const [serp, setSerp] = useState('hoje');
   const [touched, setTouched] = useState(false);
@@ -318,15 +433,74 @@ export default function ServicosSEO() {
         .seo2 .pieces-foot span{font-family:var(--mono);font-size:12px;color:var(--mute);margin-left:auto}
         .seo2 .btn-ghost{border:1px solid var(--line);background:transparent;color:var(--fg);font-family:var(--display);font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px;cursor:pointer}
         .seo2 .btn-ghost:hover{border-color:var(--red)}
-        .seo2 .eco{margin-top:36px;border:1px dashed var(--line);border-radius:16px;padding:22px}
-        .seo2 .eco-t{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-        .seo2 .eco-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0}
-        .seo2 .eco-n{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-family:var(--display);font-weight:600;font-size:15px;display:flex;flex-direction:column;color:var(--fg);text-decoration:none}
-        .seo2 .eco-n small{font-family:var(--body);font-weight:500;font-size:12px;color:var(--mute)}
-        .seo2 .eco-n.on,.seo2 .eco.lit .eco-n{border-color:var(--red)}
-        .seo2 .eco-n.on{background:var(--red-soft)}
-        .seo2 .eco-a{color:var(--red);font-weight:700}
-        .seo2 .eco p{color:var(--mute);font-size:15px;max-width:70ch}
+
+        /* Simulador de vazamento: estrutura digital */
+        .seo2 section.leaksec{position:relative;padding-block:96px;border-top:0;background:
+          radial-gradient(ellipse 70% 55% at 50% 0%,rgba(224,4,11,.22),transparent 70%),
+          radial-gradient(ellipse 60% 50% at 50% 100%,rgba(224,4,11,.12),transparent 70%),#070606}
+        .seo2 section.leaksec::before,.seo2 section.leaksec::after{content:"";position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent)}
+        .seo2 section.leaksec::before{top:0}
+        .seo2 section.leaksec::after{bottom:0}
+        .seo2 .lk-head{text-align:center;max-width:820px;margin:0 auto}
+        .seo2 .lk-head h2{font-size:clamp(32px,4.6vw,56px);line-height:1.05}
+        .seo2 .lk-head .lead{margin:18px auto 0;text-align:center}
+        .seo2 .lk-board{margin-top:48px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));border:1px solid rgba(224,4,11,.35);border-radius:22px;padding:28px;box-shadow:0 40px 120px -40px rgba(224,4,11,.5)}
+        .seo2 .lk-track{display:grid;grid-template-columns:auto 1fr 1.25fr 1fr 1.1fr 1fr 1.1fr 1fr auto;align-items:center}
+        .seo2 .lk-end{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+        .seo2 .lk-end .dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--panel2);border:1px solid var(--line);color:#fff}
+        .seo2 .lk-end.win .dot{background:var(--ok);border-color:var(--ok);box-shadow:0 0 0 8px rgba(22,163,74,.15),0 0 40px rgba(22,163,74,.5)}
+        .seo2 .lk-end.win.low .dot{background:#3b2a12;border-color:#a16207;box-shadow:none}
+        .seo2 .lk-end b{font-family:var(--display);font-size:28px;letter-spacing:0;color:#fff;line-height:1}
+        .seo2 .wire{position:relative;height:4px;margin:0 6px;border-radius:2px;background:rgba(255,255,255,.08);overflow:visible}
+        .seo2 .wire.flow{background:linear-gradient(90deg,rgba(224,4,11,.35),rgba(224,4,11,.7))}
+        .seo2 .wire.broken{background:linear-gradient(90deg,rgba(224,4,11,.7) 0 40%,transparent 40% 60%,rgba(255,255,255,.06) 60%)}
+        .seo2 .wire .p{position:absolute;top:50%;left:0;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:#fff;box-shadow:0 0 10px #fff,0 0 18px var(--red);opacity:0}
+        .seo2 .wire.flow .p{animation:seo2flow 1.8s linear infinite}
+        .seo2 .wire.broken .p{animation:seo2leak 1.8s ease-in infinite;background:#ffb4b4}
+        .seo2 .wire.thin .p:nth-child(n+2){display:none}
+        .seo2 .wire .p:nth-child(2){animation-delay:.6s}
+        .seo2 .wire .p:nth-child(3){animation-delay:1.2s}
+        @keyframes seo2flowv{0%{top:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:100%;opacity:0}}
+        @keyframes seo2leakv{0%{top:0;left:50%;opacity:0}10%{opacity:1}45%{top:40%;left:50%;opacity:1}100%{top:48%;left:900%;opacity:0}}
+        @keyframes seo2flow{0%{left:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{left:100%;opacity:0}}
+        @keyframes seo2leak{0%{left:0;top:50%;opacity:0}10%{opacity:1}45%{left:40%;top:50%;opacity:1}100%{left:48%;top:420%;opacity:0}}
+        .seo2 .lk-entry{display:flex;flex-direction:column;gap:12px}
+        .seo2 .lk-node{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;width:100%;background:#111012;border:1px solid rgba(224,4,11,.55);border-radius:14px;padding:14px 14px 12px;color:var(--fg);font:inherit;cursor:pointer;transition:all .35s;box-shadow:0 0 0 0 rgba(224,4,11,0)}
+        .seo2 .lk-node:hover{box-shadow:0 0 24px -6px rgba(224,4,11,.6)}
+        .seo2 .lk-node.cur{background:linear-gradient(180deg,rgba(224,4,11,.18),#111012)}
+        .seo2 .lk-node[aria-pressed="false"]{border-style:dashed;border-color:#3a3a40;background:#0b0b0c;filter:saturate(.2)}
+        .seo2 .lk-node[aria-pressed="false"] strong{color:#8a8a90}
+        .seo2 .lk-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+        .seo2 .lk-node .sw{width:36px;height:22px;border-radius:11px;margin:0}
+        .seo2 .lk-node .sw i{width:14px;height:14px}
+        .seo2 .lk-node[aria-pressed="true"] .sw{background:var(--red);border-color:var(--red)}
+        .seo2 .lk-node[aria-pressed="true"] .sw i{transform:translateX(14px);background:#fff}
+        .seo2 .lk-role{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+        .seo2 .lk-node strong{font-family:var(--display);font-size:16px;line-height:1.2}
+        .seo2 .lk-node small{color:var(--mute);font-size:12.5px;line-height:1.4}
+        .seo2 .lk-alert{position:absolute;top:-10px;right:-10px;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px;box-shadow:0 0 0 4px rgba(224,4,11,.25)}
+        .seo2 .lk-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+        .seo2 .lk-links a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--mute);text-decoration:none;border-top:1px solid var(--line);padding-top:10px}
+        .seo2 .lk-links a b{color:var(--fg);font-family:var(--display);font-size:14px;letter-spacing:0;display:block;font-weight:600}
+        .seo2 .lk-links a:hover b{color:var(--red)}
+        .seo2 .lk-out{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:26px}
+        .seo2 .lk-out>*{min-width:0}
+        .seo2 .lk-funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+        .seo2 .lk-f{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:12px}
+        .seo2 .lk-f b{display:block;font-family:var(--display);font-size:30px;line-height:1.05;font-variant-numeric:tabular-nums;transition:color .3s}
+        .seo2 .lk-f span{font-size:12px;color:var(--mute)}
+        .seo2 .lk-f.last b{color:var(--ok)}
+        .seo2 .lk-f.last.low b{color:#f59e0b}
+        .seo2 .lk-note{font-family:var(--mono);font-size:10.5px;color:#7a7a80;margin-top:8px}
+        .seo2 .lk-leaks{border-radius:14px;padding:16px;border:1px solid rgba(22,163,74,.45);background:rgba(22,163,74,.07)}
+        .seo2 .lk-leaks.bad{border-color:rgba(224,4,11,.55);background:rgba(224,4,11,.08)}
+        .seo2 .lk-leaks h3{font-size:15px;margin-bottom:8px}
+        .seo2 .lk-leaks ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+        .seo2 .lk-leaks li{font-size:14px;color:#e5e5e3;padding-left:22px;position:relative}
+        .seo2 .lk-leaks li::before{content:"";position:absolute;left:4px;top:6px;width:9px;height:9px;background:var(--red);border-radius:50% 0 50% 50%;transform:rotate(-45deg)}
+        .seo2 .lk-leaks p{font-size:14px;color:#d7f5df}
+        .seo2 .lk-cta{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:36px;text-align:center}
+        .seo2 .lk-cta p{color:var(--mute);width:100%;font-size:15px}
         .seo2 .mid-cta{margin-top:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
         .seo2 .mid-cta small{color:var(--mute)}
 
@@ -434,6 +608,21 @@ export default function ServicosSEO() {
           .seo2{padding-top:96px}
           .seo2 section{padding-block:56px}
           .seo2 .aibody{min-height:0}
+          .seo2 section.leaksec{padding-block:64px}
+          .seo2 .lk-board{padding:18px 14px}
+          .seo2 .lk-track{grid-template-columns:1fr;justify-items:center}
+          .seo2 .lk-track>.lk-entry,.seo2 .lk-track>.lk-node{width:100%;max-width:440px}
+          .seo2 .lk-entry{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+          .seo2 .wire{width:4px;height:34px;margin:6px auto}
+          .seo2 .wire.flow{background:linear-gradient(180deg,rgba(224,4,11,.35),rgba(224,4,11,.7))}
+          .seo2 .wire.broken{background:linear-gradient(180deg,rgba(224,4,11,.7) 0 40%,transparent 40% 60%,rgba(255,255,255,.06) 60%)}
+          .seo2 .wire .p{left:50%;top:0}
+          .seo2 .wire.flow .p{animation-name:seo2flowv}
+          .seo2 .wire.broken .p{animation-name:seo2leakv}
+          .seo2 .lk-links{grid-template-columns:1fr 1fr}
+          .seo2 .lk-out{grid-template-columns:1fr}
+          .seo2 .lk-funnel{grid-template-columns:1fr 1fr}
+          .seo2 .lk-alert{top:-8px;right:-6px}
           .seo2 .head-grid,.seo2 .aigrid,.seo2 .lab4,.seo2 .inv,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
           .seo2 .queries,.seo2 .reviews,.seo2 .lab2{grid-template-columns:1fr}
           .seo2 .timeline{grid-template-columns:1fr;gap:28px}
@@ -642,16 +831,6 @@ export default function ServicosSEO() {
                 </div>
               </div>
             </div>
-            <div className={'eco' + (n === 4 ? ' lit' : '')}>
-              <div className="eco-t">Onde o SEO se encaixa na sua estrutura digital</div>
-              <div className="eco-row">
-                <a className="eco-n" href="/servicos/google-meu-negocio/">Google Meu Negócio<small>aparecer no mapa</small></a><span className="eco-a">+</span>
-                <span className="eco-n on">SEO e busca por IA<small>aparecer na pesquisa</small></span><span className="eco-a">→</span>
-                <a className="eco-n" href="/servicos/criacao-de-sites/">Site<small>convencer</small></a><span className="eco-a">→</span>
-                <a className="eco-n" href="/servicos/automacao-digital/">Automação com IA<small>responder na hora</small></a>
-              </div>
-              <p>Sem SEO, o site existe mas ninguém chega até ele. Com SEO, cada pesquisa vira uma visita, e a automação transforma a visita em conversa.</p>
-            </div>
             <div className="mid-cta">
               <a className="btn" href="/diagnostico/">Quero ver minha empresa assim →</a>
               <small>Diagnóstico gratuito, resultado na hora</small>
@@ -685,6 +864,11 @@ export default function ServicosSEO() {
         {/* BUSCA POR IA (simulador) */}
         <section className="aisec">
           <SimuladorIA />
+        </section>
+
+        {/* ESTRUTURA DIGITAL (simulador de vazamento) */}
+        <section className="leaksec">
+          <SimuladorEstrutura />
         </section>
 
         {/* O QUE ESPERAR */}
