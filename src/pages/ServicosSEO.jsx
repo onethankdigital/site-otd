@@ -280,15 +280,7 @@ export default function ServicosSEO() {
 
         <Prova />
 
-        <Investimento
-          titulo={<>Sem pacote de links, <em>sem promessa de 1º lugar</em></>}
-          texto="O valor é definido depois de olhar o seu segmento na região: quantos concorrentes disputam as mesmas buscas e o que o seu site já tem. O objetivo é trocar um gasto que nunca termina, o anúncio, por um ativo que continua trazendo cliente."
-          itens={[
-            ['Diagnóstico antes da proposta', 'Você sabe onde está antes de decidir.'],
-            ['Relatório todo mês', 'Buscas, posições e contatos que vieram do Google.'],
-            ['Funciona junto com anúncio', 'O anúncio traz resultado agora, o SEO reduz essa dependência com o tempo.']
-          ]}
-        />
+        <Investimento />
 
         <FaqLinks
           atual="seo"

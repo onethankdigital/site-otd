@@ -420,16 +420,81 @@ export function Prova() {
   );
 }
 
-export function Investimento({ titulo, texto, itens }) {
+const brl = (v) => 'R$ ' + v.toLocaleString('pt-BR');
+
+export function Investimento() {
+  const [gasto, setGasto] = useState(2000);
+  const [parar, setParar] = useState(true);
+  const meses = parar ? 12 : 24;
+  const celulas = Array.from({ length: 24 }, (_, i) => i);
   return (
-    <section>
-      <div className="wrap inv">
-        <div>
-          <p className="eyebrow">Investimento</p>
-          <h2>{titulo}</h2>
-          <p className="lead" style={{ marginTop: 16 }}>{texto}</p>
+    <section className="iv">
+      <div className="wrap">
+        <p className="eyebrow">Investimento</p>
+        <h2 className="display">Anúncio é aluguel.<br />SEO é <em>imóvel próprio.</em></h2>
+        <p className="lead" style={{ marginTop: 18 }}>O anúncio para de trazer cliente no dia em que você para de pagar. O SEO é construído uma vez e continua trabalhando. Faça a conta com o que você investe hoje.</p>
+
+        <div className="iv-grid">
+          <div className="iv-calc">
+            <label htmlFor="iv-gasto">Quanto você investe em anúncio por mês? <output>{brl(gasto)}</output></label>
+            <input id="iv-gasto" type="range" min="500" max="10000" step="250" value={gasto} onChange={(e) => setGasto(+e.target.value)} />
+            <div className="iv-ticks"><span>R$ 500</span><span>R$ 10.000</span></div>
+
+            <label className="iv-switch" htmlFor="iv-parar">
+              <input id="iv-parar" type="checkbox" checked={parar} onChange={(e) => setParar(e.target.checked)} />
+              E se o anúncio parar no mês 13?
+            </label>
+
+            <div className="iv-rows">
+              <div>
+                <div className="iv-rh"><strong>Só anúncio</strong><span>aparece enquanto paga</span></div>
+                <div className="iv-cells" aria-hidden="true">
+                  {celulas.map((i) => <i key={i} style={{ background: !parar || i < 12 ? 'var(--red)' : 'var(--panel2)' }} />)}
+                </div>
+              </div>
+              <div>
+                <div className="iv-rh"><strong>Com SEO</strong><span>sobe e fica</span></div>
+                <div className="iv-cells" aria-hidden="true">
+                  {celulas.map((i) => <i key={i} style={{ background: `rgba(74,222,128,${(Math.min(1, 0.12 + i / 11) * 0.85).toFixed(2)})` }} />)}
+                </div>
+              </div>
+              <div className="iv-months"><span>mês 1</span><span>mês 12</span><span>mês 24</span></div>
+            </div>
+
+            <div className="iv-res">
+              <div className="bad">
+                <b>{brl(gasto * meses)}</b>
+                <small>{parar
+                  ? 'pagos em anúncio em 12 meses. No mês 13, os contatos param no mesmo dia.'
+                  : 'pagos em anúncio em 24 meses, e o gasto continua enquanto você quiser aparecer.'}</small>
+              </div>
+              <div className="good">
+                <b>Continua</b>
+                <small>Páginas, posições e citações nas IAs seguem trazendo contato depois de construídas.</small>
+              </div>
+            </div>
+            <p className="cap" style={{ textAlign: 'left' }}>Exemplo ilustrativo. O ritmo do SEO varia com o segmento e a concorrência na região.</p>
+          </div>
+
+          <aside className="iv-close" aria-label="Como começar">
+            <div className="iv-in">
+              <span className="iv-pill">Primeiro passo sem custo</span>
+              <h3>Descubra quanto o Google está te devendo</h3>
+              <p className="iv-sub">O valor do SEO é definido depois de olhar o seu segmento no ABC. Você decide com os números na mão.</p>
+              <ol className="iv-steps">
+                <li><div><b>Diagnóstico <span className="iv-free">grátis</span></b><span>Onde você aparece hoje no Google, no mapa e nas IAs, e quem aparece no seu lugar.</span></div></li>
+                <li><div><b>Proposta clara</b><span>Escopo, prazo e valor por escrito, pensados para o seu segmento.</span></div></li>
+                <li><div><b>Mês 1 em andamento</b><span>Correções técnicas no site e o relatório inicial de onde sua empresa está.</span></div></li>
+              </ol>
+              <a className="iv-btn" href="/diagnostico/">Quero meu diagnóstico gratuito <span aria-hidden="true">→</span></a>
+              <p className="iv-micro">Sem compromisso. Você sai sabendo onde está, mesmo que não feche com a gente.</p>
+              <div className="iv-proof"><span><b>★ 5,0</b> · 16 avaliações no Google</span><span>PageSpeed 97 no nosso site</span></div>
+            </div>
+          </aside>
         </div>
-        <ul>{itens.map(([b, t]) => <li key={b}><b>{b}</b>{t}</li>)}</ul>
+
+        <div className="iv-nos"><span>Sem pacote de links</span><span>Sem promessa de 1º lugar</span><span>Sem relatório que ninguém entende</span></div>
+        <div className="iv-urg"><p><strong>SEO não se compra pronto: se constrói mês a mês.</strong> Cada mês que o concorrente começa antes é um mês que ele acumula na sua frente.</p></div>
       </div>
     </section>
   );

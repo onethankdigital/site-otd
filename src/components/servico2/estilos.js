@@ -281,11 +281,6 @@ const ESTILOS = `
         .seo2 .psi span{display:flex;align-items:center;gap:8px;border:1px solid rgba(22,163,74,.45);background:rgba(22,163,74,.08);border-radius:999px;padding:4px 12px 4px 4px;font-size:13px;color:var(--mute)}
         .seo2 .psi b{display:grid;place-items:center;min-width:34px;height:26px;padding:0 6px;border-radius:999px;background:var(--ok);color:#fff;font-family:var(--display);font-size:13px;font-variant-numeric:tabular-nums}
 
-        .seo2 .inv{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
-        .seo2 .inv>*{min-width:0}
-        .seo2 .inv ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-        .seo2 .inv li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--mute);font-size:15px}
-        .seo2 .inv li b{color:var(--fg);display:block;font-family:var(--display);font-size:16px}
 
         .seo2 .faq-list{margin-top:32px;border-top:1px solid var(--line)}
         .seo2 .faq-list details{border-bottom:1px solid var(--line)}
@@ -328,7 +323,7 @@ const ESTILOS = `
           .seo2 .lk-out{grid-template-columns:1fr}
           .seo2 .lk-funnel{grid-template-columns:1fr 1fr}
           .seo2 .lk-alert{top:-8px;right:-6px}
-          .seo2 .head-grid,.seo2 .aigrid,.seo2 .lab4,.seo2 .inv,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
+          .seo2 .head-grid,.seo2 .aigrid,.seo2 .lab4,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
           .seo2 .queries,.seo2 .reviews,.seo2 .lab2{grid-template-columns:1fr}
           .seo2 .jr-tabs button{padding:12px 10px 14px}
           .seo2 .jr-curve text{display:none}
@@ -350,6 +345,63 @@ const ESTILOS = `
           .seo2 .mbar a{background:var(--red);color:#fff;text-decoration:none;font-family:var(--display);font-weight:600;padding:10px 16px;border-radius:9px;font-size:14px;white-space:nowrap}
           .seo2{padding-bottom:72px}
         }
+        .seo2 .iv{position:relative;overflow:hidden}
+        .seo2 .iv::before{content:"";position:absolute;right:-10%;top:10%;width:620px;height:620px;max-width:90vw;background:radial-gradient(closest-side,rgba(224,4,11,.16),transparent);pointer-events:none}
+        .seo2 .iv .wrap{position:relative}
+        .seo2 .iv-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:44px;align-items:start}
+        .seo2 .iv-grid>*{min-width:0}
+        .seo2 .iv-calc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+        .seo2 .iv-calc label{font-family:var(--display);font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+        .seo2 .iv-calc output{font-family:var(--mono);font-size:15px}
+        .seo2 .iv-calc input[type=range]{width:100%;accent-color:var(--red);margin:12px 0 4px}
+        .seo2 .iv-ticks,.seo2 .iv-months{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#8a8a90}
+        .seo2 .iv-months{margin-top:6px}
+        .seo2 .iv-calc .iv-switch{display:flex;justify-content:flex-start;align-items:center;gap:10px;margin-top:18px;font-family:var(--body);font-weight:500;font-size:14px;color:var(--mute);cursor:pointer;user-select:none}
+        .seo2 .iv-switch input{appearance:none;-webkit-appearance:none;width:42px;height:24px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);position:relative;cursor:pointer;transition:background .2s;flex:none;margin:0}
+        .seo2 .iv-switch input::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--mute);transition:transform .2s,background .2s}
+        .seo2 .iv-switch input:checked{background:var(--red-soft);border-color:var(--red)}
+        .seo2 .iv-switch input:checked::after{transform:translateX(18px);background:var(--red)}
+        .seo2 .iv-switch input:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+        .seo2 .iv-rows{margin-top:22px;display:flex;flex-direction:column;gap:18px}
+        .seo2 .iv-rh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+        .seo2 .iv-rh strong{font-family:var(--display);font-size:16px}
+        .seo2 .iv-rh span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+        .seo2 .iv-cells{display:grid;grid-template-columns:repeat(24,1fr);gap:3px}
+        .seo2 .iv-cells i{display:block;height:30px;border-radius:3px;transition:background .35s}
+        .seo2 .iv-res{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+        .seo2 .iv-res>div{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#0b0b0c}
+        .seo2 .iv-res b{display:block;font-family:var(--display);font-size:clamp(22px,2.6vw,28px);line-height:1.1;font-variant-numeric:tabular-nums}
+        .seo2 .iv-res small{display:block;color:var(--mute);font-size:13.5px;margin-top:6px;line-height:1.45}
+        .seo2 .iv-res .bad b{color:#ff5a5f}
+        .seo2 .iv-res .good b{color:#4ade80}
+        .seo2 .iv-close{position:sticky;top:96px;border-radius:18px;padding:2px;background:linear-gradient(150deg,var(--red),rgba(224,4,11,.15) 45%,var(--line));box-shadow:0 0 60px rgba(224,4,11,.18)}
+        .seo2 .iv-in{background:linear-gradient(180deg,#140405,#0b0b0c 40%);border-radius:16px;padding:26px 24px}
+        .seo2 .iv-pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--red);border-radius:999px;padding:5px 12px}
+        .seo2 .iv-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:ivpulse 1.6s infinite}
+        @keyframes ivpulse{50%{opacity:.25}}
+        .seo2 .iv-in h3{font-family:var(--display);font-size:26px;line-height:1.15;margin:16px 0 6px}
+        .seo2 .iv-sub{color:var(--mute);margin:0 0 18px;font-size:15px}
+        .seo2 .iv-steps{list-style:none;margin:0 0 20px;padding:0;counter-reset:ivs}
+        .seo2 .iv-steps li{counter-increment:ivs;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+        .seo2 .iv-steps li::before{content:counter(ivs);width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--mono);font-size:13px;color:var(--mute)}
+        .seo2 .iv-steps li:first-child::before{background:var(--red);border-color:var(--red);color:#fff}
+        .seo2 .iv-steps b{display:block;font-family:var(--display);font-size:15.5px}
+        .seo2 .iv-steps span{color:var(--mute);font-size:14px;line-height:1.45}
+        .seo2 .iv-steps .iv-free{display:inline;font-family:var(--mono);font-size:10.5px;color:#4ade80;letter-spacing:.08em;text-transform:uppercase;margin-left:6px}
+        .seo2 .iv-btn{display:flex;justify-content:center;align-items:center;gap:10px;background:var(--red);color:#fff;font-family:var(--display);font-weight:700;font-size:17px;padding:17px 22px;border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px rgba(224,4,11,.35)}
+        .seo2 .iv-btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(224,4,11,.5)}
+        .seo2 .iv-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+        .seo2 .iv-micro{text-align:center;color:var(--mute);font-size:13px;margin:10px 0 0}
+        .seo2 .iv-proof{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 16px;margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+        .seo2 .iv-proof b{color:#fbbf24}
+        .seo2 .iv-nos{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+        .seo2 .iv-nos span{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--mute)}
+        .seo2 .iv-nos span::before{content:"✕ ";color:var(--red)}
+        .seo2 .iv-urg{margin-top:26px;border-left:3px solid var(--red);padding:4px 0 4px 16px;max-width:60ch}
+        .seo2 .iv-urg p{margin:0;font-size:17px;line-height:1.5}
+        .seo2 .iv-urg strong{font-family:var(--display)}
+        @media (max-width:880px){.seo2 .iv-grid{grid-template-columns:1fr}.seo2 .iv-close{position:static}}
+        @media (max-width:480px){.seo2 .iv-res{grid-template-columns:1fr}.seo2 .iv-cells i{height:24px}.seo2 .iv-cells{gap:2px}}
         @media (prefers-reduced-motion:reduce){.seo2 *{transition:none!important;animation:none!important}}
 `;
 
