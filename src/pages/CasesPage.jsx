@@ -103,7 +103,7 @@ const CASES = [
   {
     id: 9,
     name: "Ciclos da Prosperidade",
-    responsible: "Robson Sant'Ana",
+    responsible: "Robson Sant Ana",
     segment: "Desenvolvimento Humano",
     sector: "Saúde",
     url: "http://ciclosdaprosperidade.com.br",

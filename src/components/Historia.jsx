@@ -465,10 +465,10 @@ export default function Historia({ onClose, onOpenQuiz }) {
             <div className="robson-eyebrow">// Quem está por trás</div>
             <div className="robson-card">
               <div className="robson-photo-wrap">
-                <img src="/robson-santana.jpg" alt="Robson Sant'Ana — Fundador da One Thank Digital" className="robson-photo" />
+                <img src="/robson-santana.jpg" alt="Robson Sant Ana — Fundador da One Thank Digital" className="robson-photo" />
               </div>
               <div className="robson-content">
-                <div className="robson-name">Robson Sant'Ana</div>
+                <div className="robson-name">Robson Sant Ana</div>
                 <div className="robson-role">Fundador e Estrategista Digital</div>
                 <p className="robson-quote">
                   "Vi de perto empresas com produto excelente e equipe dedicada perdendo clientes para concorrentes piores — só porque não eram encontradas. O problema nunca foi o negócio. Foi a estrutura. A One Thank existe para resolver exatamente isso."
