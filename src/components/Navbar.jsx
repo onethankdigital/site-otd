@@ -8,6 +8,8 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   const overlayRef = useRef(null);
   const linksRef = useRef([]);
   const lastScrollY = useRef(0);
+  const logoRef = useRef(null);
+  const [fundoClaro, setFundoClaro] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,14 +75,47 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
     }
   }, [isOpen]);
 
+  // Descobre a cor do fundo que está atrás do logotipo (o primeiro elemento com cor de fundo sólida).
+  // Se for uma imagem ou vídeo, mantém o logotipo branco, que é o padrão do site.
+  useEffect(() => {
+    let quadro = 0;
+    const medir = () => {
+      cancelAnimationFrame(quadro);
+      quadro = requestAnimationFrame(() => {
+        const img = logoRef.current;
+        if (!img) return;
+        const r = img.getBoundingClientRect();
+        const pilha = document.elementsFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+        let claro = false;
+        for (const el of pilha) {
+          if (img.closest('div')?.parentElement?.contains(el)) continue;
+          if (/^(IMG|VIDEO|CANVAS|PICTURE)$/.test(el.tagName)) break;
+          const m = getComputedStyle(el).backgroundColor.match(/[\d.]+/g);
+          if (!m || (m.length > 3 && +m[3] < 0.5)) continue;
+          const [vr, vg, vb] = m.map(Number);
+          claro = (0.2126 * vr + 0.7152 * vg + 0.0722 * vb) / 255 > 0.6;
+          break;
+        }
+        setFundoClaro(claro);
+      });
+    };
+    const tempos = [0, 300, 1200].map((t) => setTimeout(medir, t));
+    window.addEventListener('scroll', medir, { passive: true });
+    window.addEventListener('resize', medir);
+    return () => {
+      tempos.forEach(clearTimeout); cancelAnimationFrame(quadro);
+      window.removeEventListener('scroll', medir); window.removeEventListener('resize', medir);
+    };
+  }, []);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <>
-      {/* Logo fixa sobre o conteúdo */}
+      {/* Logo fixa sobre o conteúdo: versão com letra escura quando o fundo atrás dela é claro */}
       <div className={`fixed top-0 left-0 z-[101] px-6 py-6 md:px-12 md:py-8 pointer-events-none transition-all duration-300 ${isOpen ? 'opacity-0' : isVisible ? 'opacity-100' : 'opacity-0 -translate-y-4'}`}>
         <div className="pointer-events-auto cursor-pointer flex items-center">
-          <a href="/"><img src="/logo.svg" alt="One Thank Digital" className="h-12 md:h-16 object-contain" /></a>
+          <a href="/"><img ref={logoRef} src={fundoClaro ? '/logowhite.svg' : '/logo.svg'} alt="One Thank Digital" className="h-12 md:h-16 object-contain" /></a>
         </div>
       </div>
 
