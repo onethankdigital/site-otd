@@ -421,8 +421,8 @@ export default function ServicosSEO() {
         <section>
           <div className="wrap">
             <p className="eyebrow">O que fazemos</p>
-            <h2>Ligue cada peça e veja <em>sua empresa subir no Google</em></h2>
-            <p className="lead" style={{ marginTop: 14 }}>SEO é montar quatro peças. Toque em cada uma e acompanhe, ao lado, o que muda para quem pesquisa.</p>
+            <h2>Ative cada etapa e veja <em>sua empresa subir no Google</em></h2>
+            <p className="lead" style={{ marginTop: 14 }}>O SEO acontece em quatro etapas. Toque em cada uma e acompanhe, ao lado, o que muda para quem pesquisa.</p>
             <div className="lab4">
               <div className="lab4-preview" aria-live="polite">
                 <div className="meter-top"><span>Onde sua empresa aparece</span><b>{POS[n]}</b></div>
@@ -455,12 +455,12 @@ export default function ServicosSEO() {
                 </div>
                 <div className="cap">Exemplo ilustrativo</div>
               </div>
-              <div className="pieces" role="group" aria-label="Peças do SEO">
+              <div className="pieces" role="group" aria-label="Etapas do SEO">
                 {PIECES.map((p) => (
                   <button type="button" key={p.n} className="piece" aria-pressed={on[p.n]} onClick={() => toggle(p.n)}>
                     <span className="sw" aria-hidden="true"><i /></span>
                     <span className="pc">
-                      <span className="pn">Peça {p.n}</span>
+                      <span className="pn">Etapa {p.n}</span>
                       <strong>{p.t}</strong>
                       <span className="pw">{p.w}</span>
                       <span className="pt">Termo técnico: {p.tech}</span>
@@ -468,9 +468,9 @@ export default function ServicosSEO() {
                   </button>
                 ))}
                 <div className="pieces-foot">
-                  <button type="button" className="btn-ghost" onClick={() => setOn({ 1: true, 2: true, 3: true, 4: true })}>Ligar todas</button>
+                  <button type="button" className="btn-ghost" onClick={() => setOn({ 1: true, 2: true, 3: true, 4: true })}>Ativar todas</button>
                   <button type="button" className="btn-ghost" onClick={() => setOn({ 1: false, 2: false, 3: false, 4: false })}>Recomeçar</button>
-                  <span>{n} de 4 peças ligadas</span>
+                  <span>{n} de 4 etapas ativas</span>
                 </div>
               </div>
             </div>
