@@ -291,6 +291,113 @@ function SimuladorEstrutura() {
   );
 }
 
+const FASES = [
+  {
+    when: 'Mês 1', t: 'Base arrumada', x0: 0, x1: 333,
+    resumo: 'Antes de publicar qualquer coisa, deixamos o terreno pronto para o Google confiar na sua empresa.',
+    entrega: ['Diagnóstico do site e do Perfil do Google, com as notas de partida', 'Correções técnicas e de velocidade aplicadas no site', 'Mapa das buscas do seu segmento na sua região', 'Plano das páginas e conteúdos dos próximos meses'],
+    ve: 'Relatório inicial: onde sua empresa está hoje e o que vai mudar.'
+  },
+  {
+    when: 'Meses 2 e 3', t: 'Primeiras posições', x0: 333, x1: 666,
+    resumo: 'Sua empresa passa a ter páginas que respondem exatamente o que o cliente pesquisa.',
+    entrega: ['Páginas de serviço criadas ou reescritas para as buscas certas', 'Artigos e perguntas frequentes publicados no site', 'Dados estruturados e llms.txt para o Google e as IAs lerem', 'Perfil do Google com serviços, fotos e atualizações'],
+    ve: 'As primeiras buscas em que sua empresa aparece, direto do Google Search Console.'
+  },
+  {
+    when: 'Meses 4 a 6', t: 'Contatos chegando', x0: 666, x1: 1000,
+    resumo: 'Com a base firme, reforçamos o que traz visita e ligamos a pesquisa ao seu atendimento.',
+    entrega: ['Ajustes nas páginas que mais trazem visita e contato', 'Novos conteúdos para as buscas que dão resultado', 'Preparação contínua para as respostas das IAs', 'Ligação com WhatsApp e CRM, para nenhum contato se perder'],
+    ve: 'Relatório mensal com buscas, posições e os contatos que vieram do Google.'
+  }
+];
+
+function JornadaSEO() {
+  const [f, setF] = useState(0);
+  const [touched, setTouched] = useState(false);
+  useEffect(() => {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || touched) return undefined;
+    const id = setInterval(() => setF((x) => (x + 1) % FASES.length), 6000);
+    return () => clearInterval(id);
+  }, [touched]);
+  const F = FASES[f];
+  const pick = (i) => { setTouched(true); setF(i); };
+
+  return (
+    <>
+      <p className="eyebrow">O que esperar</p>
+      <h2>SEO é construção. <em>Veja o que entregamos em cada fase</em></h2>
+
+      <div className="jr">
+        <svg className="jr-curve" viewBox="0 0 1000 144" role="img" aria-label="Curva ilustrativa de crescimento das visitas vindas do Google ao longo de 6 meses">
+          <defs>
+            <linearGradient id="seo2cg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#e0040b" stopOpacity=".35" /><stop offset="1" stopColor="#e0040b" stopOpacity="0" /></linearGradient>
+            <clipPath id="seo2clip"><rect x={F.x0} y="0" width={F.x1 - F.x0} height="144" /></clipPath>
+          </defs>
+          <rect className="jr-zone" x={F.x0} y="0" width={F.x1 - F.x0} height="140" />
+          <line x1="0" y1="140" x2="1000" y2="140" stroke="#26262a" />
+          <line x1="333" y1="0" x2="333" y2="140" stroke="#26262a" strokeDasharray="3 5" />
+          <line x1="666" y1="0" x2="666" y2="140" stroke="#26262a" strokeDasharray="3 5" />
+          <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18 L1000 140 L0 140Z" fill="url(#seo2cg)" opacity=".45" />
+          <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18" fill="none" stroke="#5a1a1c" strokeWidth="3" />
+          <g clipPath="url(#seo2clip)">
+            <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18 L1000 140 L0 140Z" fill="url(#seo2cg)" />
+            <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18" fill="none" stroke="#e0040b" strokeWidth="4" />
+          </g>
+          <text x="10" y="24">VISITAS VINDAS DO GOOGLE (ILUSTRATIVO)</text>
+        </svg>
+
+        <div className="jr-tabs" role="tablist" aria-label="Fases do trabalho">
+          {FASES.map((x, i) => (
+            <button type="button" role="tab" key={x.when} aria-selected={i === f} onClick={() => pick(i)}>
+              <span className="jr-when">{x.when}</span>
+              <strong>{x.t}</strong>
+              <i className="jr-prog" aria-hidden="true" />
+            </button>
+          ))}
+        </div>
+
+        <div className="jr-panel" role="tabpanel" aria-live="polite" key={f}>
+          <div className="jr-left">
+            <span className="jr-tag">Fase {f + 1} de 3 · {F.when}</span>
+            <h3>{F.t}</h3>
+            <p>{F.resumo}</p>
+            <div className="jr-ve"><b>O que você acompanha</b>{F.ve}</div>
+          </div>
+          <div className="jr-right">
+            <span className="jr-sub">O que a One Thank Digital entrega</span>
+            <ul>{F.entrega.map((e) => <li key={e}><span aria-hidden="true">✓</span>{e}</li>)}</ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="jr-know">
+        <div className="jr-k">
+          <span className="jr-kt">Quem conduz</span>
+          <b>Robson Sant Ana</b>
+          <span>Fundador e Arquiteto de Soluções em IA, com mais de 20 anos em telecom e TI.</span>
+        </div>
+        <div className="jr-k">
+          <span className="jr-kt">Método testado em casa</span>
+          <b>97 no celular · 100 em SEO</b>
+          <span>O site da própria OTD passou por todas essas fases antes de oferecermos ao cliente.</span>
+        </div>
+        <div className="jr-k">
+          <span className="jr-kt">Sem promessa vazia</span>
+          <b>Relatório todo mês</b>
+          <span>Prazos variam conforme a concorrência da região. Não prometemos 1º lugar: mostramos o que mudou e o que trouxe contato.</span>
+        </div>
+      </div>
+
+      <div className="jr-cta">
+        <a className="btn" href="/diagnostico/">Ver o plano para a minha empresa →</a>
+        <small>Começa pelo diagnóstico gratuito, em 3 minutos</small>
+      </div>
+    </>
+  );
+}
+
 export default function ServicosSEO() {
   const [serp, setSerp] = useState('hoje');
   const [touched, setTouched] = useState(false);
@@ -554,16 +661,38 @@ export default function ServicosSEO() {
         @keyframes seo2blink{50%{opacity:0}}
         .seo2 .aidisc{font-family:var(--mono);font-size:10.5px;color:#7a7a80;padding:0 20px 16px;line-height:1.5}
 
-        .seo2 .curve{width:100%;height:auto;display:block;margin-top:36px}
-        .seo2 .curve text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
-        .seo2 .timeline{display:grid;grid-template-columns:repeat(3,1fr);margin-top:28px}
-        .seo2 .tl{padding-right:22px}
-        .seo2 .when{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--red);text-transform:uppercase}
-        .seo2 .tl h3{margin:8px 0 12px}
-        .seo2 .tl ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
-        .seo2 .tl li{color:var(--mute);font-size:15px;padding-left:16px;position:relative}
-        .seo2 .tl li::before{content:"–";position:absolute;left:0;color:var(--red)}
-        .seo2 .honest{margin-top:32px;color:var(--mute);font-size:14px;max-width:70ch}
+        .seo2 .jr{margin-top:36px;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+        .seo2 .jr-curve{width:100%;height:auto;display:block;background:linear-gradient(180deg,#0c0c0d,var(--panel))}
+        .seo2 .jr-curve text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
+        .seo2 .jr-zone{fill:rgba(224,4,11,.08);transition:x .5s,width .5s}
+        .seo2 .jr-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+        .seo2 .jr-tabs button{position:relative;display:flex;flex-direction:column;gap:4px;text-align:left;background:transparent;border:0;border-right:1px solid var(--line);padding:16px 20px 18px;color:var(--mute);font:inherit;cursor:pointer;transition:background .3s,color .3s}
+        .seo2 .jr-tabs button:last-child{border-right:0}
+        .seo2 .jr-tabs button:hover{background:rgba(255,255,255,.02)}
+        .seo2 .jr-tabs button[aria-selected="true"]{background:rgba(224,4,11,.08);color:var(--fg)}
+        .seo2 .jr-when{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+        .seo2 .jr-tabs strong{font-family:var(--display);font-size:18px}
+        .seo2 .jr-prog{position:absolute;left:0;top:0;height:3px;width:0;background:var(--red)}
+        .seo2 .jr-tabs button[aria-selected="true"] .jr-prog{width:100%;transition:width .4s}
+        .seo2 .jr-panel{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;padding:28px;border-top:1px solid var(--line);animation:seo2fade .45s ease}
+        @keyframes seo2fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+        .seo2 .jr-panel>*{min-width:0}
+        .seo2 .jr-tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+        .seo2 .jr-left h3{font-size:clamp(24px,2.6vw,32px);margin:8px 0 10px}
+        .seo2 .jr-left p{color:var(--mute);font-size:16px}
+        .seo2 .jr-ve{margin-top:18px;border-left:3px solid var(--ok);background:rgba(22,163,74,.07);border-radius:0 10px 10px 0;padding:12px 14px;font-size:14px;color:#d7f5df}
+        .seo2 .jr-ve b{display:block;font-family:var(--display);color:#fff;margin-bottom:2px}
+        .seo2 .jr-sub{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+        .seo2 .jr-right ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+        .seo2 .jr-right li{display:flex;gap:12px;align-items:flex-start;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;color:#e7e7e5}
+        .seo2 .jr-right li span{flex:none;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:1px}
+        .seo2 .jr-know{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+        .seo2 .jr-k{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:16px;padding:20px;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
+        .seo2 .jr-kt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+        .seo2 .jr-k b{font-family:var(--display);font-size:20px;color:var(--fg)}
+        .seo2 .jr-k span:last-child{color:var(--mute);font-size:14px}
+        .seo2 .jr-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px}
+        .seo2 .jr-cta small{color:var(--mute)}
 
         .seo2 .score{display:flex;align-items:center;gap:14px;margin-top:36px;flex-wrap:wrap}
         .seo2 .score b{font-family:var(--display);font-size:44px;line-height:1}
@@ -632,7 +761,12 @@ export default function ServicosSEO() {
           .seo2 .lk-alert{top:-8px;right:-6px}
           .seo2 .head-grid,.seo2 .aigrid,.seo2 .lab4,.seo2 .inv,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
           .seo2 .queries,.seo2 .reviews,.seo2 .lab2{grid-template-columns:1fr}
-          .seo2 .timeline{grid-template-columns:1fr;gap:28px}
+          .seo2 .jr-tabs button{padding:12px 10px 14px}
+          .seo2 .jr-curve text{display:none}
+          .seo2 .jr-tabs strong{font-size:14px;line-height:1.2}
+          .seo2 .jr-when{font-size:9.5px;letter-spacing:.08em}
+          .seo2 .jr-panel{grid-template-columns:1fr;gap:20px;padding:20px 16px}
+          .seo2 .jr-know{grid-template-columns:1fr}
           .seo2 .fcards{grid-template-columns:1fr 1fr;gap:12px}
           .seo2 .fcard::after{display:none}
           .seo2 .fcard{padding:16px 14px}
@@ -881,25 +1015,7 @@ export default function ServicosSEO() {
         {/* O QUE ESPERAR */}
         <section>
           <div className="wrap">
-            <p className="eyebrow">O que esperar</p>
-            <h2>SEO é construção. <em>Veja o que acontece em cada fase</em></h2>
-            <svg className="curve" viewBox="0 0 1000 170" role="img" aria-label="Curva ilustrativa de crescimento das visitas vindas do Google ao longo de 6 meses">
-              <defs><linearGradient id="seo2cg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#e0040b" stopOpacity=".35" /><stop offset="1" stopColor="#e0040b" stopOpacity="0" /></linearGradient></defs>
-              <line x1="0" y1="140" x2="1000" y2="140" stroke="#26262a" />
-              <line x1="333" y1="10" x2="333" y2="140" stroke="#26262a" strokeDasharray="3 5" />
-              <line x1="666" y1="10" x2="666" y2="140" stroke="#26262a" strokeDasharray="3 5" />
-              <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18 L1000 140 L0 140Z" fill="url(#seo2cg)" />
-              <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18" fill="none" stroke="#e0040b" strokeWidth="3" />
-              <circle cx="994" cy="18" r="5" fill="#e0040b" />
-              <text x="6" y="160">MÊS 1</text><text x="339" y="160">MÊS 3</text><text x="672" y="160">MÊS 6</text>
-              <text x="6" y="24">VISITAS VINDAS DO GOOGLE (ILUSTRATIVO)</text>
-            </svg>
-            <div className="timeline">
-              <div className="tl"><div className="when">Mês 1</div><h3>Base arrumada</h3><ul><li>Diagnóstico do site e do Perfil do Google</li><li>Correções técnicas e de velocidade</li><li>Mapa das buscas do seu segmento</li></ul></div>
-              <div className="tl"><div className="when">Meses 2 e 3</div><h3>Primeiras posições</h3><ul><li>Páginas de serviço e artigos publicados</li><li>Google começa a mostrar suas páginas</li><li>Buscas locais aparecendo no relatório</li></ul></div>
-              <div className="tl"><div className="when">Meses 4 a 6</div><h3>Contatos chegando</h3><ul><li>Posições mais estáveis nas buscas certas</li><li>Primeiros contatos vindos do Google</li><li>Relatório mensal com o que trouxe cliente</li></ul></div>
-            </div>
-            <p className="honest">Prazos variam conforme a concorrência do seu segmento na região. Não prometemos primeira posição: mostramos todo mês o que mudou e o que trouxe contato.</p>
+            <JornadaSEO />
           </div>
         </section>
 
