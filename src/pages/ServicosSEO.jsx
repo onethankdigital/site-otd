@@ -53,16 +53,17 @@ const Lupa = ({ c = '#5f6368', s = 15 }) => (
 );
 
 const FLOW = [
-  { t: "Cliente pesquisa", p: <><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></> },
-  { t: "Sua empresa aparece", p: <><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></> },
-  { t: "Visita o site", p: <><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M3 9h18M8 21h8" /></> },
-  { t: "Chama no WhatsApp", p: <path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z" /> }
+  { t: "Cliente pesquisa", d: "No Google, no Maps ou perguntando ao ChatGPT e ao Gemini qual empresa resolve o problema dele.", otd: "SEO e busca por IA", href: null, p: <><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></> },
+  { t: "Sua empresa aparece", d: "Entre os primeiros resultados, no mapa ou citada na resposta da IA, no lugar do concorrente.", otd: "Google Meu Negócio", href: "/servicos/google-meu-negocio/", p: <><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></> },
+  { t: "Visita o site", d: "Cai na página do serviço que procurava, rápida no celular e com a resposta que queria.", otd: "Criação de sites", href: "/servicos/criacao-de-sites/", p: <><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M3 9h18M8 21h8" /></> },
+  { t: "Chama no WhatsApp", d: "O contato chega pronto para conversar, é respondido na hora e fica registrado no CRM.", otd: "Automação com IA", href: "/servicos/automacao-digital/", p: <path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z" /> }
 ];
 
 export default function ServicosSEO() {
   const [serp, setSerp] = useState('hoje');
   const [touched, setTouched] = useState(false);
   const [flowStep, setFlowStep] = useState(0);
+  const [flowTouched, setFlowTouched] = useState(false);
   const [on, setOn] = useState({ 1: true, 2: false, 3: false, 4: false });
   const [seg, setSeg] = useState('cont');
 
@@ -72,10 +73,10 @@ export default function ServicosSEO() {
 
   useEffect(() => {
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) return undefined;
-    const flow = setInterval(() => setFlowStep((s) => (s + 1) % FLOW.length), 1800);
+    if (reduce || flowTouched) return undefined;
+    const flow = setInterval(() => setFlowStep((s) => (s + 1) % FLOW.length), 2400);
     return () => clearInterval(flow);
-  }, []);
+  }, [flowTouched]);
 
   useEffect(() => {
     const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -139,14 +140,24 @@ export default function ServicosSEO() {
         .seo2 .missing{margin-top:12px;border:2px dashed #e8a5a5;border-radius:8px;padding:12px;color:#b3261e;font-size:13px;text-align:center}
         .seo2 .cap{margin-top:12px;font-family:var(--mono);font-size:11px;color:#9a9aa1;text-align:center}
 
-        .seo2 section.flowband{padding-block:28px;background:var(--panel)}
-        .seo2 .fb{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-        .seo2 .fb-t{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-right:8px}
-        .seo2 .fb-s{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:15px;color:var(--mute);transition:color .4s}
-        .seo2 .fb-s .ic{width:36px;height:36px;border-radius:10px;background:var(--panel2);display:grid;place-items:center;transition:background .4s}
-        .seo2 .fb-s.on{color:var(--fg)}
-        .seo2 .fb-s.on .ic{background:var(--red)}
-        .seo2 .fb-a{color:var(--red)}
+        .seo2 .fcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+        .seo2 .fcard{position:relative;display:flex;flex-direction:column;gap:10px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;color:var(--fg);font:inherit;cursor:pointer;box-shadow:0 1px 2px rgba(20,20,20,.04);transition:transform .35s,box-shadow .35s,border-color .35s}
+        .seo2 .fcard:not(:last-child)::after{content:"→";position:absolute;right:-14px;top:44px;color:var(--red);font-weight:700;z-index:1}
+        .seo2 .fcard.on{transform:translateY(-6px);border-color:var(--red);box-shadow:0 18px 40px -18px rgba(224,4,11,.45)}
+        .seo2 .fnum{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+        .seo2 .fcard.on .fnum{color:var(--red)}
+        .seo2 .fic{width:48px;height:48px;border-radius:12px;background:#f3f1ec;color:#141414;display:grid;place-items:center;transition:background .35s,color .35s}
+        .seo2 .fcard.on .fic{background:var(--red);color:#fff}
+        .seo2 .fcard strong{font-family:var(--display);font-size:19px;line-height:1.2}
+        .seo2 .fd{color:var(--mute);font-size:14px;line-height:1.5}
+        .seo2 .fotd{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mute)}
+        .seo2 .fotd b{color:var(--fg);font-weight:700}
+        .seo2 .fcard.on .fotd b{color:var(--red)}
+        .seo2 .fbar{height:4px;background:var(--line);border-radius:2px;margin-top:22px;overflow:hidden}
+        .seo2 .fbar i{display:block;height:100%;background:var(--red);border-radius:2px;transition:width .5s}
+        .seo2 .fout{margin-top:18px;color:var(--mute);font-size:15px}
+        .seo2 .fout b{color:var(--fg)}
+        .seo2 .fout a{color:var(--red);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
 
         .seo2 .lab4{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;align-items:start}
         .seo2 .lab4>*{min-width:0}
@@ -287,8 +298,11 @@ export default function ServicosSEO() {
           .seo2 .head-grid,.seo2 .chat-grid,.seo2 .lab4,.seo2 .inv,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
           .seo2 .queries,.seo2 .reviews,.seo2 .lab2{grid-template-columns:1fr}
           .seo2 .timeline{grid-template-columns:1fr;gap:28px}
-          .seo2 .fb-a{display:none}
-          .seo2 .fb{gap:14px}
+          .seo2 .fcards{grid-template-columns:1fr 1fr;gap:12px}
+          .seo2 .fcard::after{display:none}
+          .seo2 .fcard{padding:16px 14px}
+          .seo2 .fcard strong{font-size:16px}
+          .seo2 .fd{font-size:13px}
           .seo2 .lab4-preview{top:72px;z-index:2;padding:12px}
           .seo2 .mini-serp{min-height:0;padding:10px 12px;margin-top:10px}
           .seo2 .r-you .d,.seo2 .lab4 .cap{display:none}
@@ -399,21 +413,36 @@ export default function ServicosSEO() {
           </div>
         </section>
 
-        {/* COMO FUNCIONA (faixa) */}
-        <section className="flowband">
+        {/* COMO FUNCIONA (cards em fundo claro) */}
+        <section className="light flow2">
           <div className="wrap">
-            <div className="fb">
-              <span className="fb-t">Como funciona</span>
+            <p className="eyebrow">Como funciona na prática</p>
+            <h2>Do Google ao seu WhatsApp, <em>sem pagar anúncio</em></h2>
+            <div className="fcards">
               {FLOW.map((f, i) => (
-                <React.Fragment key={f.t}>
-                  <span className={'fb-s' + (i === flowStep ? ' on' : '')}>
-                    <span className="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" aria-hidden="true">{f.p}</svg></span>
-                    {f.t}
-                  </span>
-                  {i < FLOW.length - 1 && <span className="fb-a" aria-hidden="true">→</span>}
-                </React.Fragment>
+                <button
+                  type="button"
+                  key={f.t}
+                  className={'fcard' + (i === flowStep ? ' on' : '')}
+                  aria-pressed={i === flowStep}
+                  onClick={() => { setFlowTouched(true); setFlowStep(i); }}
+                  onMouseEnter={() => { setFlowTouched(true); setFlowStep(i); }}
+                >
+                  <span className="fnum">Passo {i + 1}</span>
+                  <span className="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">{f.p}</svg></span>
+                  <strong>{f.t}</strong>
+                  <span className="fd">{f.d}</span>
+                  <span className="fotd">Na OTD: <b>{f.otd}</b></span>
+                </button>
               ))}
             </div>
+            <div className="fbar" aria-hidden="true"><i style={{ width: ((flowStep + 1) / FLOW.length) * 100 + '%' }} /></div>
+            <p className="fout">
+              Resultado: <b>um contato que você não pagou por clique</b>. Para levar cada passo mais longe:{' '}
+              {FLOW.filter((f) => f.href).map((f, i, a) => (
+                <React.Fragment key={f.href}><a href={f.href}>{f.otd}</a>{i < a.length - 1 ? ', ' : '.'}</React.Fragment>
+              ))}
+            </p>
           </div>
         </section>
 
