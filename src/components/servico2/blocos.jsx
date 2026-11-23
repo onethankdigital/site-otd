@@ -254,7 +254,7 @@ export function SimuladorEstrutura({ atual = 'seo', titulo }) {
   );
 }
 
-export function Jornada({ fases, titulo }) {
+export function Jornada({ fases, titulo, rotulo = 'VISITAS VINDAS DO GOOGLE (ILUSTRATIVO)' }) {
   const [f, setF] = useState(0);
   const [touched, setTouched] = useState(false);
   useEffect(() => {
@@ -287,7 +287,7 @@ export function Jornada({ fases, titulo }) {
             <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18 L1000 140 L0 140Z" fill="url(#seo2cg)" />
             <path d="M0 136 C 200 134, 300 128, 400 112 S 650 60, 800 38 S 950 22, 1000 18" fill="none" stroke="#e0040b" strokeWidth="4" />
           </g>
-          <text x="10" y="24">VISITAS VINDAS DO GOOGLE (ILUSTRATIVO)</text>
+          <text x="10" y="24">{rotulo}</text>
         </svg>
 
         <div className="jr-tabs" role="tablist" aria-label="Fases do trabalho">
