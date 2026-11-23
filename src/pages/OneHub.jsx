@@ -239,6 +239,14 @@ export default function OneHub() {
                 className="h-14 sm:h-16 w-auto object-contain"
               />
             </a>
+            <a
+              href="/"
+              className="nav-anim inline-flex items-center gap-2 text-sm sm:text-base font-medium text-[#211E1B] hover:text-[#BE212A] transition-colors"
+            >
+              <span aria-hidden="true">←</span>
+              <span className="hidden sm:inline">Voltar para a One Thank Digital</span>
+              <span className="sm:hidden">One Thank Digital</span>
+            </a>
           </div>
 
           {/* Grid de 2 Colunas: Texto na Esquerda e Formulário Ponte na Direita */}
@@ -1253,7 +1261,12 @@ export default function OneHub() {
 
         {/* FOOTER */}
         <footer className="relative z-10 px-5 sm:px-8 md:px-12 py-8 border-t border-[#E4DDD0] text-center text-xs text-[#736B63]">
-          OneHub — um ecossistema One Thank Digital · onethank.com.br/onehub
+          OneHub — um ecossistema{' '}
+          <a href="/" className="underline underline-offset-2 hover:text-[#BE212A] transition-colors">One Thank Digital</a>
+          {' · '}
+          <a href="/servicos/automacao-digital/" className="underline underline-offset-2 hover:text-[#BE212A] transition-colors">Automação com IA</a>
+          {' · '}
+          <a href="/diagnostico/" className="underline underline-offset-2 hover:text-[#BE212A] transition-colors">Diagnóstico gratuito</a>
         </footer>
       </div>
     </>
