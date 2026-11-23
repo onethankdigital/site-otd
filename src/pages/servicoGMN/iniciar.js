@@ -151,6 +151,8 @@ export default function iniciarPaginaGMN() {
   _on(window, 'resize', () => posicionar(cen.classList.contains('on') ? 'on' : 'off'));
   estado('off');
   document.fonts && document.fonts.ready.then(() => posicionar(cen.classList.contains('on') ? 'on' : 'off'));
+  // reorganiza a lista sempre que um cartão muda de altura (ex.: quando a fonte termina de carregar)
+  if ('ResizeObserver' in window) { const ro = new ResizeObserver(() => posicionar(cen.classList.contains('on') ? 'on' : 'off')); lista.querySelectorAll('.res,.divisor').forEach(el => ro.observe(el)); }
 
   // a busca é digitada uma vez, quando o cenário aparece
   const termo = $('termo'), texto = termo.textContent, calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;

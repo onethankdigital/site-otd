@@ -9,6 +9,7 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   const linksRef = useRef([]);
   const lastScrollY = useRef(0);
   const logoRef = useRef(null);
+  const primeiraVez = useRef(true);
   const [fundoClaro, setFundoClaro] = useState(false);
 
   useEffect(() => {
@@ -44,13 +45,29 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
   ];
 
   useEffect(() => {
+    const overlay = overlayRef.current;
+    if (!overlay) return;
+    // O menu fechado fica 100% acima da tela (em porcentagem, nunca em pixels) e invisível.
+    // Antes a animação gravava a posição em pixels: quando a tela ficava mais alta
+    // (barra do navegador do celular, girar o aparelho, recarregar), a parte de baixo
+    // do menu aparecia no topo da página, com o "Avaliar estrutura".
     if (!shouldAnimate()) {
+      gsap.set(overlay, { y: 0, yPercent: isOpen ? 0 : -100, visibility: isOpen ? 'visible' : 'hidden' });
+      gsap.set(linksRef.current, { y: 0, opacity: 1 });
+      return;
+    }
+    // ao carregar a página o menu já nasce fechado: só posiciona, sem animar
+    if (primeiraVez.current) {
+      primeiraVez.current = false;
+      gsap.set(overlay, { y: 0, yPercent: -100, visibility: 'hidden' });
+      gsap.set(linksRef.current, { y: -30, opacity: 0 });
       return;
     }
 
     if (isOpen) {
-      gsap.to(overlayRef.current, {
-        yPercent: 100,
+      gsap.set(overlay, { y: 0, visibility: 'visible' });
+      gsap.to(overlay, {
+        yPercent: 0,
         duration: 0.8,
         ease: 'power4.inOut'
       });
@@ -59,11 +76,13 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
         { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.4 }
       );
     } else {
-      gsap.to(overlayRef.current, {
-        yPercent: 0,
+      gsap.set(overlay, { y: 0 });
+      gsap.to(overlay, {
+        yPercent: -100,
         duration: 0.8,
         ease: 'power4.inOut',
-        delay: 0.2
+        delay: 0.2,
+        onComplete: () => gsap.set(overlay, { visibility: 'hidden' })
       });
       gsap.to(linksRef.current, {
         y: -30,
@@ -133,7 +152,7 @@ const Navbar = ({ onOpenQuiz, onOpenPilares, onOpenHistoria }) => {
       <div
         ref={overlayRef}
         className="fixed inset-0 w-full h-screen bg-white text-dark z-[90] flex flex-col justify-center px-6 md:px-12 lg:px-24"
-        style={{ transform: 'translateY(-100%)' }}
+        style={{ transform: 'translateY(-100%)', visibility: 'hidden' }}
       >
         {/* Logo dentro do overlay (versão para fundo branco) */}
         <div className="absolute top-0 left-0 px-6 py-6 md:px-12 md:py-8">
