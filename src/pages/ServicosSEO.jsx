@@ -59,6 +59,122 @@ const FLOW = [
   { t: "Chama no WhatsApp", d: "O contato chega pronto para conversar, é respondido na hora e fica registrado no CRM.", otd: "Automação com IA", href: "/servicos/automacao-digital/", p: <path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z" /> }
 ];
 
+const AIS = [
+  { id: 'chatgpt', name: 'ChatGPT', color: '#10a37f', q: 'Qual contabilidade em Santo André atende MEI e abre aos sábados?', a: 'Encontrei algumas opções em Santo André. A Sua Contabilidade, no centro, atende MEI e Simples Nacional e abre aos sábados pela manhã. As avaliações destacam a rapidez na abertura de empresas.', src: ['suacontabilidade.com.br', 'Perfil no Google', 'Avaliações'] },
+  { id: 'gemini', name: 'Gemini', color: '#5b8cff', q: 'Preciso de um contador em Santo André que abra no sábado', a: 'Pelo Google Maps e pelos sites da região, a Sua Contabilidade aparece como opção: fica no centro de Santo André, abre aos sábados das 9h às 12h e tem nota 4,9 nas avaliações.', src: ['Google Maps', 'suacontabilidade.com.br'] },
+  { id: 'claude', name: 'Claude', color: '#d97757', q: 'Me indica uma contabilidade para MEI no ABC?', a: 'Pesquisei na web e uma opção bem documentada é a Sua Contabilidade, em Santo André. O site explica prazos e como funciona a abertura, e os dados batem com o perfil no Google.', src: ['suacontabilidade.com.br', 'Perfil no Google', 'Diretórios'] },
+  { id: 'perplexity', name: 'Perplexity', color: '#20b8cd', q: 'contabilidade para MEI santo andré sábado', a: 'A Sua Contabilidade (Santo André, centro) atende MEI e Simples Nacional e funciona aos sábados pela manhã [1][2]. Avaliações recentes citam atendimento rápido [3].', src: ['[1] suacontabilidade.com.br', '[2] Google Maps', '[3] Avaliações'] }
+];
+const AI_CHECKS = [
+  { t: 'Site da empresa', w: 'Site que responde perguntas reais', d: 'preços, prazos e como funciona, não só “somos referência”' },
+  { t: 'Perfil no Google', w: 'Perfil do Google completo', d: 'serviços, horários e endereço preenchidos' },
+  { t: 'Avaliações recentes', w: 'Avaliações que citam o serviço', d: 'clientes contando o que a empresa resolveu' },
+  { t: 'Diretórios e redes', w: 'Mesmos dados em todo lugar', d: 'nome, endereço e telefone iguais em toda a internet' }
+];
+const FINAL = 100000;
+
+function marcaEmpresa(texto) {
+  const partes = texto.split('Sua Contabilidade');
+  return partes.map((p, i) => (
+    <React.Fragment key={i}>{p}{i < partes.length - 1 && <b>Sua Contabilidade</b>}</React.Fragment>
+  ));
+}
+
+function SimuladorIA() {
+  const [ai, setAi] = useState(0);
+  const [step, setStep] = useState(FINAL);
+  const [running, setRunning] = useState(false);
+  const [touched, setTouched] = useState(false);
+  const ref = React.useRef(null);
+  const A = AIS[ai];
+
+  const s1 = Math.ceil(A.q.length / 2) + 6;
+  const s2 = s1 + 38;
+  const s3 = s2 + Math.ceil(A.a.length / 3);
+  const qShown = A.q.slice(0, Math.min(A.q.length, step * 2));
+  const checks = Math.max(0, Math.min(4, Math.floor((step - s1) / 8)));
+  const aShown = A.a.slice(0, Math.max(0, Math.min(A.a.length, (step - s2) * 3)));
+  const typing = step >= s2 && step < s3;
+  const done = step >= s3;
+
+  useEffect(() => {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !ref.current || typeof IntersectionObserver === 'undefined') return undefined;
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) { setStep(0); setRunning(true); io.disconnect(); }
+    }, { threshold: 0.35 });
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!running) return undefined;
+    const id = setInterval(() => setStep((s) => (s >= s3 + 70 ? s : s + 1)), 40);
+    return () => clearInterval(id);
+  }, [running, s3]);
+
+  useEffect(() => {
+    if (running && !touched && step >= s3 + 70) {
+      setAi((x) => (x + 1) % AIS.length);
+      setStep(0);
+    }
+  }, [running, touched, step, s3]);
+
+  const escolher = (i) => { setTouched(true); setAi(i); setStep(0); setRunning(true); };
+
+  return (
+    <div className="aisim" ref={ref}>
+      <div className="wrap aigrid">
+        <div>
+          <p className="eyebrow">Busca por IA</p>
+          <h2>Cada vez mais gente pergunta à IA <em>antes de pesquisar</em></h2>
+          <p className="lead" style={{ marginTop: 18 }}>A resposta vem pronta, com uma ou duas empresas. Antes de citar alguém, a IA confere a empresa em várias fontes. Veja o que ela consulta:</p>
+          <ol className="aichecks">
+            {AI_CHECKS.map((c, i) => (
+              <li key={c.t} className={i < checks ? 'on' : ''}>
+                <span className="ck" aria-hidden="true">{i < checks ? '✓' : i + 1}</span>
+                <span><b>{c.w}</b><small>{c.d}</small></span>
+              </li>
+            ))}
+          </ol>
+          <p className="aiwhy">Quanto mais fontes confirmam a mesma informação, maior a chance de a IA indicar sua empresa. É esse trabalho que fazemos.</p>
+        </div>
+
+        <div className="aiwin" style={{ '--ai': A.color }}>
+          <div className="aitabs" role="tablist" aria-label="Assistente de IA">
+            {AIS.map((x, i) => (
+              <button type="button" role="tab" key={x.id} aria-selected={i === ai} onClick={() => escolher(i)} style={{ '--c': x.color }}>
+                <i aria-hidden="true" />{x.name}
+              </button>
+            ))}
+          </div>
+          <div className="aibody" aria-live="polite">
+            <div className="aiq">{qShown}{step < s1 - 6 && <span className="caret" />}</div>
+            <div className="aime">
+              <span className="aiav" aria-hidden="true">{A.name[0]}</span>
+              <span className="ainame">{A.name}</span>
+              <span className="aistatus">{checks < 4 && step >= s1 ? 'consultando fontes…' : step >= s1 ? `confirmado em ${checks} fontes` : 'lendo a pergunta…'}</span>
+            </div>
+            <div className="aisrcs">
+              {AI_CHECKS.map((c, i) => (
+                <span key={c.t} className={i < checks ? 'on' : ''}>{i < checks ? '✓ ' : ''}{c.t}</span>
+              ))}
+            </div>
+            <div className="aians">
+              {step >= s2 ? marcaEmpresa(aShown) : <span className="aiph">A resposta aparece depois da checagem.</span>}
+              {typing && <span className="caret" />}
+            </div>
+            <div className={'aicite' + (done ? ' on' : '')}>
+              {A.src.map((s) => <span key={s} className={s.includes('suacontabilidade') ? 'me2' : ''}>{s}</span>)}
+            </div>
+          </div>
+          <p className="aidisc">Exemplo ilustrativo. ChatGPT, Gemini, Claude e Perplexity são marcas de seus donos; a One Thank Digital não tem vínculo com elas.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ServicosSEO() {
   const [serp, setSerp] = useState('hoje');
   const [touched, setTouched] = useState(false);
@@ -225,19 +341,41 @@ export default function ServicosSEO() {
         .seo2 .kind.ia{color:var(--red);border-color:var(--red)}
         .seo2 .seg-link{display:inline-flex;margin-top:18px;font-family:var(--display);font-weight:600;color:var(--red);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
 
-        .seo2 .chat-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
-        .seo2 .chat-grid>*{min-width:0}
-        .seo2 .chat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px}
-        .seo2 .bub{max-width:88%;padding:12px 16px;border-radius:16px;font-size:15px}
-        .seo2 .bub.me{align-self:flex-end;background:var(--panel2);border-bottom-right-radius:4px}
-        .seo2 .bub.ai{border:1px solid var(--line);border-bottom-left-radius:4px}
-        .seo2 .src{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-        .seo2 .src span{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--mute)}
-        .seo2 .src span.me2{border-color:var(--red);color:var(--fg)}
-        .seo2 .why-list{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:12px}
-        .seo2 .why-list li{display:flex;gap:12px;color:var(--mute)}
-        .seo2 .why-list li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--red);border-radius:2px}
-        .seo2 .why-list b{color:var(--fg)}
+        .seo2 section.aisec{background:radial-gradient(ellipse 60% 70% at 85% 30%,rgba(91,140,255,.10),transparent 70%),radial-gradient(ellipse 50% 60% at 10% 90%,rgba(224,4,11,.10),transparent 70%),var(--bg)}
+        .seo2 .aigrid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+        .seo2 .aigrid>*{min-width:0}
+        .seo2 .aichecks{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:10px}
+        .seo2 .aichecks li{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);transition:border-color .4s,background .4s}
+        .seo2 .aichecks li.on{border-color:rgba(22,163,74,.55);background:rgba(22,163,74,.08)}
+        .seo2 .aichecks .ck{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:12px;background:var(--panel2);color:var(--mute);transition:all .4s}
+        .seo2 .aichecks li.on .ck{background:var(--ok);color:#fff}
+        .seo2 .aichecks b{display:block;color:var(--fg);font-family:var(--display);font-weight:600}
+        .seo2 .aichecks small{color:var(--mute);font-size:13px}
+        .seo2 .aiwhy{margin-top:18px;color:var(--mute);font-size:15px;max-width:52ch}
+        .seo2 .aiwin{background:linear-gradient(180deg,#121214,#0b0b0c);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 80px -30px color-mix(in srgb,var(--ai) 45%,transparent);transition:box-shadow .6s}
+        .seo2 .aitabs{display:flex;gap:6px;padding:10px;border-bottom:1px solid var(--line);overflow-x:auto}
+        .seo2 .aitabs button{display:flex;align-items:center;gap:8px;flex:none;border:1px solid transparent;background:transparent;color:var(--mute);font-family:var(--display);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer;transition:all .3s}
+        .seo2 .aitabs button i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+        .seo2 .aitabs button[aria-selected="true"]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}
+        .seo2 .aibody{padding:20px;display:flex;flex-direction:column;gap:14px;min-height:360px}
+        .seo2 .aiq{align-self:flex-end;max-width:88%;background:var(--panel2);padding:12px 16px;border-radius:16px 16px 4px 16px;font-size:15px;min-height:46px}
+        .seo2 .aime{display:flex;align-items:center;gap:10px}
+        .seo2 .aiav{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--ai);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;transition:background .4s}
+        .seo2 .ainame{font-family:var(--display);font-weight:600}
+        .seo2 .aistatus{font-family:var(--mono);font-size:11px;color:var(--mute);margin-left:auto}
+        .seo2 .aisrcs{display:flex;flex-wrap:wrap;gap:6px}
+        .seo2 .aisrcs span{font-family:var(--mono);font-size:11px;border:1px dashed var(--line);border-radius:999px;padding:3px 10px;color:#6f6f76;transition:all .35s}
+        .seo2 .aisrcs span.on{border-style:solid;border-color:rgba(22,163,74,.6);color:#d7f5df;background:rgba(22,163,74,.12)}
+        .seo2 .aians{font-size:15px;line-height:1.6;color:#e7e7e5;min-height:96px}
+        .seo2 .aians b{color:#fff;background:color-mix(in srgb,var(--ai) 22%,transparent);padding:0 4px;border-radius:4px}
+        .seo2 .aiph{color:#6f6f76;font-size:14px}
+        .seo2 .aicite{display:flex;flex-wrap:wrap;gap:6px;opacity:0;transform:translateY(6px);transition:all .4s}
+        .seo2 .aicite.on{opacity:1;transform:none}
+        .seo2 .aicite span{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--mute)}
+        .seo2 .aicite span.me2{border-color:var(--red);color:#fff}
+        .seo2 .caret{display:inline-block;width:2px;height:1em;background:currentColor;margin-left:2px;vertical-align:-2px;animation:seo2blink .8s steps(1) infinite}
+        @keyframes seo2blink{50%{opacity:0}}
+        .seo2 .aidisc{font-family:var(--mono);font-size:10.5px;color:#7a7a80;padding:0 20px 16px;line-height:1.5}
 
         .seo2 .curve{width:100%;height:auto;display:block;margin-top:36px}
         .seo2 .curve text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
@@ -295,7 +433,8 @@ export default function ServicosSEO() {
         @media (max-width:860px){
           .seo2{padding-top:96px}
           .seo2 section{padding-block:56px}
-          .seo2 .head-grid,.seo2 .chat-grid,.seo2 .lab4,.seo2 .inv,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
+          .seo2 .aibody{min-height:0}
+          .seo2 .head-grid,.seo2 .aigrid,.seo2 .lab4,.seo2 .inv,.seo2 .links,.seo2 .rb{grid-template-columns:1fr}
           .seo2 .queries,.seo2 .reviews,.seo2 .lab2{grid-template-columns:1fr}
           .seo2 .timeline{grid-template-columns:1fr;gap:28px}
           .seo2 .fcards{grid-template-columns:1fr 1fr;gap:12px}
@@ -543,27 +682,9 @@ export default function ServicosSEO() {
           </div>
         </section>
 
-        {/* BUSCA POR IA */}
-        <section>
-          <div className="wrap chat-grid">
-            <div>
-              <p className="eyebrow">Busca por IA</p>
-              <h2>Cada vez mais gente pergunta à IA <em>antes de pesquisar</em></h2>
-              <p className="lead" style={{ marginTop: 18 }}>A resposta vem pronta, com uma ou duas empresas. A IA cita quem ela consegue confirmar em várias fontes.</p>
-              <ul className="why-list">
-                <li><span><b>Perfil do Google completo</b>, com serviços e avaliações recentes</span></li>
-                <li><span><b>Site que responde perguntas reais</b>, não só "somos referência"</span></li>
-                <li><span><b>Mesmos dados em todo lugar</b>: site, Google, redes e diretórios</span></li>
-              </ul>
-            </div>
-            <div className="chat">
-              <div className="bub me">Qual contabilidade em Santo André atende MEI e abre aos sábados?</div>
-              <div className="bub ai">Algumas opções em Santo André: a <b>Sua Contabilidade</b>, no centro, atende MEI e Simples Nacional e abre aos sábados pela manhã, segundo o site e o perfil no Google.
-                <div className="src"><span className="me2">suacontabilidade.com.br</span><span>Google Maps</span></div>
-              </div>
-              <div className="cap" style={{ textAlign: 'left', marginTop: 0 }}>Exemplo ilustrativo de resposta de assistente de IA</div>
-            </div>
-          </div>
+        {/* BUSCA POR IA (simulador) */}
+        <section className="aisec">
+          <SimuladorIA />
         </section>
 
         {/* O QUE ESPERAR */}
