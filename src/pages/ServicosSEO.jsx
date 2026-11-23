@@ -579,6 +579,9 @@ export default function ServicosSEO() {
         .seo2 .metric .v{font-family:var(--display);font-size:40px;font-weight:700;margin-top:10px;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
         .seo2 .metric .v s{font-size:20px;color:var(--mute);font-weight:500}
         .seo2 .metric p{color:var(--mute);font-size:14px;margin-top:8px}
+        .seo2 .psi{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+        .seo2 .psi span{display:flex;align-items:center;gap:8px;border:1px solid rgba(22,163,74,.45);background:rgba(22,163,74,.08);border-radius:999px;padding:4px 12px 4px 4px;font-size:13px;color:var(--mute)}
+        .seo2 .psi b{display:grid;place-items:center;min-width:34px;height:26px;padding:0 6px;border-radius:999px;background:var(--ok);color:#fff;font-family:var(--display);font-size:13px;font-variant-numeric:tabular-nums}
 
         .seo2 .inv{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
         .seo2 .inv>*{min-width:0}
@@ -916,7 +919,16 @@ export default function ServicosSEO() {
               ))}
             </div>
             <div className="lab2">
-              <div className="metric"><div className="k">Nota no celular · site da OTD</div><div className="v"><s>48</s> 86</div><p>Teste de desempenho do Google na página inicial, novembro de 2026.</p></div>
+              <div className="metric">
+                <div className="k">Desempenho no celular · site da OTD</div>
+                <div className="v"><s>48</s> 97</div>
+                <div className="psi">
+                  <span><b>95</b>Acessibilidade</span>
+                  <span><b>100</b>Boas práticas</span>
+                  <span><b>100</b>SEO</span>
+                </div>
+                <p>PageSpeed Insights do Google, página inicial, 23 de novembro de 2026.</p>
+              </div>
               <div className="metric"><div className="k">Imagens dos serviços · site da OTD</div><div className="v"><s>2,2 MB</s> 82 KB</div><p>Site mais leve carrega antes do cliente desistir.</p></div>
             </div>
           </div>
