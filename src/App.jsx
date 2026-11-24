@@ -3,13 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
-import Hero from './components/Hero';
-import ServicosCards from './components/ServicosCards';
-import HorizontalScroll from './components/HorizontalScroll';
-import Philosophy from './components/Philosophy';
-import Protocol from './components/Protocol';
+import HomeConteudo from './components/HomeConteudo';
 import Footer from './components/Footer';
-import InsightsPreview from './components/InsightsPreview';
 import CookieBanner from './components/CookieBanner';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -508,19 +503,7 @@ function App() {
         onOpenHistoria={handleOpenHistoria}
       />
       <main className="w-full flex flex-col">
-          <Hero onOpenQuiz={handleOpenQuiz} />
-          <ServicosCards />
-          {/* <div id="features" className="bg-white">
-            <Features />
-          </div> */}
-          <HorizontalScroll 
-            onOpenQuiz={handleOpenQuiz} 
-            onOpenPilares={handleOpenPilares}
-            onOpenHistoria={handleOpenHistoria}
-          />
-          <Philosophy onOpenQuiz={handleOpenQuiz} />
-          <Protocol onOpenQuiz={handleOpenQuiz} />
-          <InsightsPreview navigateTo={(path) => { window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')); }} />
+          <HomeConteudo onOpenQuiz={handleOpenQuiz} onOpenPilares={handleOpenPilares} onOpenHistoria={handleOpenHistoria} />
       </main>
         <Footer 
           onOpenQuiz={handleOpenQuiz} 
