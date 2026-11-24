@@ -28,7 +28,7 @@ export const faqHome = [
   {
     id: '06',
     title: 'Quantos leads perco por não responder rápido no WhatsApp?',
-    desc: 'Responder em até 5 minutos aumenta em 21x a chance de conversão. Depois de 1 hora essa chance cai 10 vezes. Seu lead não espera. Ele abre o próximo resultado e contrata quem respondeu primeiro.',
+    desc: 'Quanto mais rápida a resposta, maior a chance de o cliente continuar a conversa com você e não procurar outro. Seu lead não espera: ele abre o próximo resultado e contrata quem respondeu primeiro. Um agente de IA responde na hora, inclusive à noite e nos fins de semana.',
   },
   {
     id: '07',
